@@ -1,5 +1,11 @@
 # Igor: Objective Uikokahonia - ScummVM Re-implementation
 
+> **Planning note:** See [REIMPLEMENTATION_PLAN.md](REIMPLEMENTATION_PLAN.md) for the
+> verification-driven implementation plan. The recommended starting point is the
+> Spanish CD version and the archived cyxx translated-code interpreter, followed by a
+> floppy-format adapter. Some exploratory claims below predate validation and should
+> not be treated as confirmed format documentation.
+
 ## Project Goal
 
 Re-implement the adventure game **"Igor: Objetivo Uikokahonia"** (1994, Pendulo Studios)
