@@ -1,479 +1,548 @@
-# Igor: Objective Uikokahonia reimplementation plan
+# Native ScummVM reimplementation plan for Igor: Objective Uikokahonia
 
-## Decision
+## Goal and approach
 
-Start with the Spanish CD release and build a deterministic hybrid engine:
+The deliverable is a normal, native ScummVM engine under `engines/igor/`. The shipped
+engine will not interpret x86, recompiled x86, or cyxx bytecode, and it will not require
+`igor.bin`. Game rules, room actions, walking, dialogue, animation, audio, save/load,
+and cutscenes will be ordinary C++ using ScummVM services.
 
-1. parse the original NE executable and audio data exactly;
-2. revive Gregory Montoir's translated-code interpreter as the behavioral baseline;
-3. put all platform-dependent behavior behind a small host API;
-4. add record/replay, state snapshots, and differential tests;
-5. replace interpreted engine services with native implementations incrementally;
-6. keep room logic interpreted initially, then translate rooms only if a fully native
-   engine is still a worthwhile goal;
-7. add the Spanish floppy release through a second executable/resource adapter after
-   the CD game is playable and tested.
+The previous implementations still have important but limited roles:
 
-Do **not** begin by hand-porting every room from disassembly. That was the approach of
-the removed ScummVM engine; it produced useful documentation but stalled because the
-generated Pascal code is large and repetitive. Do **not** make unpacking the floppy
-executable the first blocker. The CD executable is already parseable, has known
-segment/function maps, and exercises the complete game.
+- The removed ScummVM Igor engine is the starting source and readable specification.
+  Port its useful C++ to current ScummVM, repair incomplete pieces, and refactor it as
+  behavior becomes understood.
+- The archived `cyxx/igor` interpreter is an **external oracle and disassembly tool**.
+  It may generate traces, reveal call graphs, and settle behavior questions, but none
+  of its VM/opcode implementation belongs in the production engine.
+- DOSBox-X running the original executable is the final black-box oracle.
 
-The first shipping target should be a small standalone C++ engine with a headless
-backend and an SDL backend. A ScummVM frontend can be added after the core is proven.
-Keeping the core independent makes automated testing much easier and avoids coupling
-reverse engineering to ScummVM APIs. If ScummVM inclusion is the final goal, keep the
-core's types, filesystem, audio, timing, and rendering boundaries simple enough to
-adapt rather than depending on SDL directly.
+Start with the Spanish CD release. Its complete game is directly accessible through a
+232-segment NE executable and the workspace already contains a 276-entry named resource
+map. Add Spanish floppy support after the native CD game is playable; otherwise DIET
+unpacking and FBOV mapping become an early blocker unrelated to implementing gameplay.
 
-## What is known in this workspace
+Development should happen in a fork or worktree of the current ScummVM repository. This
+workspace should remain the research corpus: original files, historical sources, format
+notes, extraction tools, traces, and test expectations. Do not build a separate SDL game
+and port it later; use ScummVM abstractions from the first engine skeleton.
 
-### Original releases
+## Confirmed facts and corrections
 
-| Release | Files | Structure | Initial role |
+### Original releases in this workspace
+
+| Release | Files | Confirmed structure | Role |
 |---|---|---|---|
-| Spanish CD | `IGOR-CD/IGOR.EXE` (9,115,648 bytes), `IGOR-CD/IGOR.DAT` (61,682,719 bytes) | `IGOR.EXE` is a 232-segment NE executable containing code and most assets. `IGOR.DAT` is concatenated VOC speech/sound data. | Primary implementation and oracle target |
-| Spanish floppy | `IGOR/IGOR.EXE` (39,537 bytes), `IGOR/IGOR.DAT` (11,199,335 bytes) | `IGOR.EXE` is DIET-packed. `IGOR.DAT` is a valid `FBOV` Borland overlay container and also contains VOC signatures. | Compatibility target after CD |
+| Spanish CD | `IGOR-CD/IGOR.EXE` (9,115,648 bytes), `IGOR-CD/IGOR.DAT` (61,682,719 bytes) | `IGOR.EXE` is a 232-segment NE executable containing code and most assets. `IGOR.DAT` is concatenated VOC speech/sound data. | First supported version |
+| Spanish floppy | `IGOR/IGOR.EXE` (39,537 bytes), `IGOR/IGOR.DAT` (11,199,335 bytes) | `IGOR.EXE` is DIET-packed. `IGOR.DAT` has a valid `FBOV` Borland overlay header and contains VOC signatures. | Second supported version |
 
-Record the SHA-256 values from the repository README or a generated manifest and make
-every tool reject unknown inputs unless `--force` is given. Size-only detection is not
-strong enough.
+Use complete-file hashes during research and the ScummVM advanced detector's normal
+MD5/size mechanism in the engine. Unknown variants should produce a useful detection
+report and must never silently select a known offset table.
 
-### Previous work
+### Historical ScummVM engine
 
-`reference/scummvm-igor-engine/` is approximately 15,000 lines of hand-translated
-engine and room code. It provides valuable names, formats, state layouts, and readable
-algorithms. The snapshot is incomplete: for example, `PART_MAIN()` is declared and
-called but not defined, and some behavior is marked unimplemented. It is a reference,
-not a buildable base.
+`reference/scummvm-igor-engine/` contains approximately 15,000 lines of native C++:
 
-`reference/scummvm-create-igortbl/` contains an immediately useful Spanish CD map:
-276 named resource ranges in `IGOR.EXE`, plus the sound-offset table for `IGOR.DAT`.
-These offsets should become test fixtures, not opaque generated constants.
+- `igor.cpp` and `igor.h`: engine state, input, rendering, resource access, text,
+  dialogue, walking helpers, inventory, actions, and animation;
+- `parts/part_*.cpp`: native room and cutscene implementations;
+- `staticres.cpp`: constant game data;
+- `saveload.cpp`, `menu.cpp`, and `midi.cpp`: supporting systems;
+- `detection.cpp` and `module.mk`: obsolete ScummVM integration that must be rewritten
+  for current APIs.
 
-The archived `cyxx/igor` project uses the stronger approach. Its tools parse NE
-segments and relocations, disassemble the subset of 16-bit x86 reached by the game,
-compile it to compact interpreter bytecode, and replace OS, VGA, audio, and Pascal
-runtime routines with native traps. Its decoder successfully recognizes the CD files
-in this workspace and currently emits 81 disassembly units. The runtime needs
-modernization, principally its SDL/OpenGL and Tremor audio integration, but the hard
-reverse-engineering work is substantially present.
+It is not buildable as stored. `PART_MAIN()` is declared and called but has no
+definition, part 17 has an explicitly unimplemented dialogue, only part 95 of the ending
+sequence is present, and several expected part files are absent. Treat every ported
+room as partially verified until its scenario tests pass.
 
-The existing `scripts/analyze_igor_dat.py` is exploratory. Its function-prologue and
-background scans are heuristics and produce false positives in pixels and audio. No
-offset discovered only by that script should be considered verified.
+### Historical resource generator
 
-## Architecture
+`reference/scummvm-create-igortbl/` contains:
 
-Keep these layers separate from the beginning:
+- 276 named CD resource ranges into `IGOR-CD/IGOR.EXE`;
+- a CD audio-offset table into `IGOR-CD/IGOR.DAT`;
+- tables for two English demos;
+- shared strings and the old `IGOR.TBL` writer.
 
-```text
-original files
-    |
-    +-- version detector (hash + structural checks)
-    +-- CD NE reader ---------+
-    +-- floppy FBOV reader ---+--> segment/resource catalog
-                               |
-                               +--> asset decoders
-                               +--> translated-code compiler
-                                        |
-                                        v
-                         deterministic game core
-                     +----------+----------+----------+
-                     |          |          |          |
-                   host      renderer    audio      saves
-                     |
-              headless / SDL / ScummVM
-```
+These tables are the basis of the native `ResourceManager`. During development, prefer
+checked, compile-time tables so missing external engine data cannot obscure engine
+work. Before upstreaming, decide with ScummVM maintainers whether these tables should
+remain compiled in or be generated as a packaged engine-data file.
 
-Recommended modules:
+### cyxx interpreter
 
-- `formats`: endian-safe readers, NE segment table and relocations, FBOV overlays,
-  Pascal strings, room data, animation frames, masks, boxes, palettes, and VOC blocks.
-- `catalog`: stable resource names and per-version locations. A logical resource ID
-  must not contain a raw CD or floppy offset.
-- `vm`: translated bytecode, registers/flags, segmented memory, calls, and traps.
-- `core`: game state, part dispatch, ticks, RNG, actions, inventory, dialogue, walking,
-  and save serialization.
-- `host`: monotonic ticks, input events, framebuffer presentation, palette updates,
-  audio events, logging, and filesystem access.
-- `tools`: inspect, extract, disassemble, catalog validation, replay, trace comparison,
-  screenshot comparison, and save inspection.
-- `tests`: format unit tests, golden assets, VM instruction tests, replay scenarios,
-  and differential checkpoints.
+The archived decoder recognizes the exact Spanish CD executable in this workspace,
+parses its NE segments and relocations, and emits 81 disassembly units. This proves it
+is a valuable source of control-flow information. Its translated opcode runtime is not
+the implementation target.
 
-The core must never read wall-clock time or global input directly. It receives a tick
-and a list of normalized input events. RNG seed/state must be serializable. Audio is
-an event stream from the core rather than a timing source. Those constraints are what
-make exact replay possible.
+### Current exploratory scripts
 
-## Verification strategy
+`scripts/analyze_igor_dat.py` scans for instruction prologues, palette-like runs, and
+strings. Those are heuristics and generate false positives in image and audio data.
+Only offsets supported by executable segment information, exports/call sites, known
+tables, or validated format structure should enter the engine.
 
-Use several independent oracles; no single one is sufficient.
+## Production ScummVM structure
 
-### 1. Structural verification
-
-For every parsed segment/resource, verify bounds, non-overlap rules where applicable,
-relocation targets, expected sizes, and format invariants. Validate all 276 known CD
-resource entries against `IGOR-CD/IGOR.EXE`. Compare independently parsed sound starts
-with the historical sound table. Emit a machine-readable catalog and fail the build
-on unexpected changes.
-
-### 2. Asset golden tests
-
-Decode representative assets to canonical, dependency-free forms:
-
-- indexed image bytes plus a 256-entry RGB palette;
-- mask/box arrays as JSON for inspection;
-- animation frames as indexed images with explicit offsets;
-- VOC as signed PCM with a fixed sample rate description;
-- text as raw bytes plus decoded CP850/CP437-compatible Unicode.
-
-Hash the canonical byte representation, not PNG/WAV container bytes whose metadata can
-vary. Keep a small, legally safe set of hashes and metadata in Git; generate proprietary
-decoded assets into an ignored build directory.
-
-### 3. VM conformance tests
-
-Give each translated opcode focused tests for registers, flags, stack behavior,
-signedness, far calls, and 16-bit overflow. Add regression tests for every instruction
-sequence that previously required a special trap. Unknown opcode, trap, relocation, or
-memory segment access must be a hard error containing `part`, `CS:IP`, and a short call
-stack.
-
-### 4. Deterministic replay
-
-Define a versioned replay file containing:
-
-- game/version hash;
-- initial part or save-state hash;
-- RNG seed;
-- tick number;
-- mouse position/button and key transitions;
-- named checkpoints.
-
-At a checkpoint, serialize a canonical digest containing current part, game variables,
-object states, inventory, dialogue state, actor position/facing, RNG state, active
-animation, palette hash, framebuffer hash, and queued audio events. Never compare raw
-C++ structs because padding and pointers are unstable.
-
-### 5. Differential execution
-
-The revived cyxx interpreter is the main semantic oracle. Add trace hooks to it before
-rewriting behavior. When a subsystem or room receives a native implementation, run the
-same replay against the interpreted and native backends and compare checkpoint digests.
-Allow explicit masks only for known nondeterministic presentation details; do not mask
-game state.
-
-### 6. Original DOS comparison
-
-Use DOSBox-X as an external black-box oracle for milestones and disputed behavior.
-Capture screenshots at scripted checkpoints, palette/frame timing, audio event order,
-and original saves where practical. Pixel comparison should report both an exact hash
-and an annotated difference image. The original executable is the final authority if
-the ScummVM port and cyxx interpreter disagree.
-
-### 7. Scenario coverage
-
-Maintain one scenario manifest per part. Each lists entrances, exits, room objects,
-verbs, inventory combinations, dialogue branches, cutscene skips, and relevant global
-state preconditions. A room is complete only when every listed transition has a replay
-and the interpreted/native state digests agree.
-
-## Repository layout to create
+Create the following in a current ScummVM checkout:
 
 ```text
-CMakeLists.txt
-docs/
-  architecture.md
-  formats/
-  parts.md
-  provenance.md
-src/
-  formats/
-  catalog/
-  vm/
-  core/
-  host/
-  app/
-tools/
-tests/
-  unit/
-  fixtures/          # metadata, tiny synthetic fixtures, and hashes only
-  replays/
-generated/           # ignored: disassembly, bytecode, extracted assets, traces
-third_party/
-  cyxx-igor/          # imported with license/history, or tracked as a documented fork
+engines/igor/
+  configure.engine
+  module.mk
+  detection.h
+  detection.cpp
+  metaengine.cpp
+  igor.h
+  igor.cpp
+  debugger.h/.cpp
+  resource.h/.cpp
+  graphics.h/.cpp
+  input.h/.cpp
+  actor.h/.cpp
+  walk.h/.cpp
+  action.h/.cpp
+  inventory.h/.cpp
+  dialogue.h/.cpp
+  animation.h/.cpp
+  sound.h/.cpp
+  savegame.h/.cpp
+  staticres.cpp
+  parts/
+    part.h
+    part_04.cpp ...
+devtools/create_igortbl/       # only if an external table remains necessary
+test/engines/igor/             # checked format and state tests
 ```
 
-Do not commit the original game files, extracted speech, backgrounds, or generated
-`igor.bin`. The current `IGOR/` and `IGOR-CD/` directories are untracked and should
-remain so. Add explicit ignore rules before the first implementation commit.
+The exact split can evolve, but enforce these boundaries:
 
-Before importing previous code, preserve copyright notices and document its license
-and origin in `docs/provenance.md`. Both prior implementations are GPL-family code;
-decide the new repository's compatible license before copying rather than after.
+- `IgorEngine`: lifecycle, owned subsystems, part dispatch, events, and game state.
+- `ResourceManager`: logical IDs to version-specific file ranges; checked reads only.
+- `Graphics`: 320x200 indexed framebuffer, 320x144 room layers, palette, dirty updates,
+  sprite/frame decoding, clipping, and text drawing.
+- `Actor`/`Walk`: Igor's position, facing, frames, scale/light, walk-box pathfinding.
+- `Action`/`Inventory`/`Dialogue`: reusable adventure-game semantics.
+- `Sound`: speech and effects through ScummVM's mixer/VOC decoder; CD or extracted
+  music through ScummVM audio APIs.
+- `Part`: native C++ setup, action dispatch, background updates, and transitions.
+- `Savegame`: explicit, endian-stable schema; never serialize raw structs.
+- `Debugger`: resource inspection, room jumps, state dumps, and controlled state setup.
 
-## Milestones and gates
+Use ScummVM facilities directly:
 
-### M0 - Reproducible evidence baseline
+- `Common::File`/archives for files;
+- `Graphics::Surface`, palette manager, and `OSystem` for indexed display;
+- `Common::EventManager` for input;
+- `Audio::Mixer`, VOC streams, MIDI/OPL, and audio-CD facilities for sound;
+- `Common::RandomSource` with a globally unique name so the Event Recorder tracks RNG;
+- `SaveFileManager` and the current meta-engine save APIs;
+- `AdvancedMetaEngineDetection` in a separate detection plugin;
+- debug channels and `GUI::Debugger` for research commands.
+
+Current ScummVM generates engine/plugin tables from each engine's `configure.engine`,
+loads object lists from `module.mk`, and separates detection registration from the engine
+plugin. Do not mechanically reuse the 2009 detector/plugin boilerplate.
+
+## Verification design
+
+Native hand translation needs stronger verification than an opcode interpreter because
+small omissions can appear much later in the game.
+
+### 1. Checked resource catalog
+
+For every table entry verify:
+
+- file identity and size;
+- `offset + length` without overflow and within file bounds;
+- unique logical ID;
+- expected size for fixed-size images, palettes, and boxes;
+- format invariants for text, masks, animation frames, and VOC blocks;
+- optional overlap only when explicitly documented.
+
+Add debugger commands such as `list_resources`, `dump_resource <id>`, `show_boxes`, and
+`show_mask`. These make visual verification possible inside the actual ScummVM engine.
+
+### 2. Canonical state digest
+
+In debug/test builds, expose a stable digest containing:
+
+- current/previous/next part;
+- game variables, counters, and object states;
+- inventory contents and selected verb/objects;
+- Igor position, facing, scale, animation, and walk path;
+- active action and dialogue state;
+- palette and indexed framebuffer hashes;
+- currently requested speech, effect, and music IDs;
+- RNG state where accessible through a test seam.
+
+Serialize fields explicitly in a fixed order. Never hash pointers, padding, timestamps,
+or mixer internals. The same helper should power `debug_state`, savegame tests, and
+replay checkpoints.
+
+### 3. ScummVM Event Recorder
+
+Build development configurations with the Event Recorder enabled. It already supports
+record/playback, fast and headless playback, periodic screenshots, and registered RNG
+sources. Record one input script per scenario and run it through ScummVM's existing
+event-recorder test runner in CI.
+
+Screen comparison should use the indexed room/UI framebuffer and palette separately.
+Container screenshots can vary due to scalers, aspect correction, or backend output.
+When pixels differ, generate an annotated diff rather than reporting only a hash.
+
+### 4. Unit tests
+
+Add focused tests for:
+
+- resource lookup and checked reads;
+- palette conversion and frame decompression;
+- mask, hotspot, and box decoding;
+- text parsing and line wrapping;
+- path construction, facing, scaling, and clipping;
+- inventory packing and combinations;
+- action lookup and prepositions;
+- dialogue matrix traversal;
+- save/load round trips and older-save migration.
+
+Prefer tiny synthetic fixtures. Keep hashes/metadata for original assets in Git, not
+copyrighted extracted images or speech.
+
+### 5. External oracle comparison
+
+Use cyxx and DOSBox-X outside the production build to obtain:
+
+- initial and final state for an action;
+- room-entry state and transitions;
+- actor coordinates and walk paths;
+- dialogue choices and resulting flags;
+- animation frame order and delays;
+- screenshot/palette checkpoints;
+- requested sound/music IDs;
+- call graphs for missing native rooms.
+
+Store the observation as a documented test expectation. Do not copy bytecode or make a
+runtime dependency on the oracle. If cyxx, the old ScummVM code, and DOS disagree, DOS
+is authoritative.
+
+### 6. Per-part scenario matrix
+
+For every part record:
+
+- all possible entrances and their preconditions;
+- all exits and state effects;
+- every hotspot and supported verb;
+- inventory-on-object and object-on-object combinations;
+- dialogue branches;
+- background animations and timed events;
+- cutscene skip points;
+- save/reload while stable in the room.
+
+A room is complete only when all rows have either an Event Recorder replay or a focused
+state-driven test.
+
+## Milestones
+
+### M0 - Establish the current ScummVM development tree
 
 Tasks:
 
-- Add a manifest command that reports file name, size, SHA-256, CRC32, detected format,
-  and version label for both releases.
-- Correct the current documentation: CD resources are primarily in `IGOR.EXE`; CD
-  `IGOR.DAT` is audio; the cyxx tree referenced by the README is currently absent.
-- Import or vendor a pinned cyxx commit with provenance.
-- Add CMake, formatting, warnings, unit-test runner, and CI on macOS/Linux.
-- Ignore all original and generated binary content.
+- Fork or clone current `scummvm/scummvm`; create an `igor` development branch.
+- Record the exact upstream commit in this research repository.
+- Decide whether the historical engine is imported as one provenance commit or ported
+  file by file; preserve all copyright and GPL notices.
+- Add explicit ignores for the original files, extracted assets, dumps, and oracle
+  outputs.
+- Create `docs/provenance.md` explaining both historical code sources.
 
-Gate: a fresh checkout plus locally supplied game files produces an identical manifest
-and builds all non-GUI tools with one documented command.
+Gate: the unmodified current ScummVM tree builds and its test suite runs on the primary
+development machine.
 
-### M1 - Exact CD executable and audio readers
-
-Tasks:
-
-- Reimplement the NE reader without assertions on untrusted bytes.
-- Parse the MZ/NE headers, 232 segment entries, allocation sizes, flags, and relocation
-  records using checked readers.
-- Model internal and imported relocations explicitly.
-- Scan VOC block boundaries using the VOC block format rather than splitting only on a
-  signature string.
-- Export `catalog.json` with provenance for every offset.
-- Ingest and validate the historical 276-entry resource table and sound table.
-
-Gate: every known offset is in bounds, all referenced segments load, all relocations
-resolve or have a documented import, and a second run is byte-for-byte reproducible.
-
-### M2 - Resource inspection tool
+### M1 - Minimal native engine plugin
 
 Tasks:
 
-- Implement `igor-inspect list/show/extract/verify`.
-- Decode palettes and 320x144 indexed backgrounds first.
-- Add mask and object/walk-box overlays on exported room images.
-- Decode frames/animations, room text, and room gameplay data next.
-- Decode VOC blocks to canonical PCM last.
+- Add `configure.engine`, `module.mk`, detector, meta-engine, engine class, and debugger.
+- Register Igor as disabled-by-default/unstable during development.
+- Add exact Spanish CD detection using current advanced-detector APIs.
+- Open the two game files with `Common::File` and report a clear unsupported-version
+  error for anything without a resource table.
+- Initialize 320x200 indexed graphics, process quit/debug events, and exit cleanly.
+- Add a `--boot-param` path for jumping to parts during development.
 
-Gate: one interactive room can be inspected as a background with its palette, walkable
-areas, hotspots, object names, and animation-frame contact sheet. Golden hashes cover
-at least one example of each format.
+Gate: current ScummVM detects the CD release, creates the engine through its normal
+plugin path, opens a blank indexed screen, enters the debugger, and shuts down cleanly.
 
-### M3 - Revived reference runtime
-
-Tasks:
-
-- Build the cyxx decoder/compiler/make pipeline from the pinned source.
-- Replace obsolete Tremor-only audio with a small audio interface; make audio optional
-  in headless mode.
-- Replace legacy SDL/OpenGL presentation with the new host boundary or an SDL adapter.
-- Remove fixed working-directory assumptions and make generated paths explicit.
-- Convert fatal `assert` paths into diagnostics where input can be invalid.
-- Boot arbitrary parts as the old runtime permits.
-
-Gate: the exact CD release boots part 900 and at least one interactive part on macOS and
-in headless mode. The full translated-code pipeline is reproducible from original files.
-
-### M4 - Trace, snapshot, and replay infrastructure
+### M2 - Native resource manager and inspection
 
 Tasks:
 
-- Make ticks and RNG deterministic.
-- Add versioned replay input and canonical checkpoint state.
-- Add framebuffer, palette, and audio-event hashes.
-- Add save-state inspection and a state constructor for room-specific tests.
-- Record reference traces for startup, intro skip, and one interactive room.
-- Build a trace comparator that prints the first differing field and call location.
+- Port resource IDs and the 276-entry CD table.
+- Implement bounds-checked lookup/read APIs.
+- Port palette, raw background, mask, box, frame, animation, and text decoding one at a
+  time, adding a unit test and debugger command for each.
+- Parse `IGOR.DAT` sound starts using the historical table and validate VOC headers.
+- Add visual walk-box/hotspot overlays.
 
-Gate: the same replay produces the same digest on repeated runs and in CI. A deliberate
-one-byte state mutation yields a useful minimal diff.
+Gate: from the ScummVM debugger, every known resource can be listed and representative
+rooms can be displayed with correct palette, masks, boxes, and frames. All catalog
+entries pass structural validation.
 
-### M5 - Native platform and resource services
+### M3 - Port the common engine kernel
 
-Replace traps in dependency order:
+Port from the historical engine in dependency order:
 
-1. Pascal memory/string/set/real helpers;
-2. palette and indexed framebuffer operations;
-3. cursor and normalized input;
-4. timers, yields, pause, and options hooks;
-5. VOC effects/speech and music event dispatch;
-6. room/action/dialogue data transfer helpers.
+1. game-state initialization and fixed timer/tick loop;
+2. layered indexed framebuffer and screen updates;
+3. input normalization, cursor, pause, and fast/debug modes;
+4. text tables, fonts, string drawing, and action sentence;
+5. generic animation frame decoding and scheduling;
+6. object state and room-data loading;
+7. native `PART_MAIN()` dispatch, reconstructed from cyxx's main-loop disassembly and
+   the known part map.
 
-Keep the old and new trap implementations selectable at runtime until their differential
-tests pass.
+Retain original function names initially when they help comparison. Refactor only after
+the corresponding tests exist.
 
-Gate: every trap has focused tests, and the initial reference replays are identical with
-the native service set enabled.
+Gate: `IgorEngine::run()` reaches native part dispatch with initialized UI/state and can
+enter/leave a test part without undefined symbols or placeholder VM behavior.
 
-### M6 - First vertical slice
+### M4 - Startup and intro
 
-Implement and verify this sequence:
+Tasks:
 
-- part 900 startup screens, for boot/palette/timing;
-- part 4 college map, for cursor, room loading, hotspots, and transitions;
-- parts 5 and 6 bridge/rock, for walking, actions, animation, inventory conditions,
-  dialogue, and a multi-room round trip;
-- save, exit, reload, and resume the slice.
+- Port/reconstruct parts 90-94 for startup/logo screens.
+- Port part 85 for the introduction.
+- Implement fades, timed animation, dialogue captions, input skipping, and transitions.
+- Compare frame/palette checkpoints and timing against DOSBox-X.
 
-Room logic may remain interpreted. The purpose is to prove the complete engine path,
-not to maximize native code.
+Gate: launching normally shows the startup sequence and intro and reaches the first
+interactive state; skipping works at every supported point; Event Recorder playback is
+deterministic and works headlessly.
 
-Gate: a replay can boot, enter the map, visit both bridge parts, exercise every listed
-hotspot/verb in the slice, save/reload, and return with matching state/frame digests.
+### M5 - Native adventure systems
 
-### M7 - Native common adventure systems
+Complete the shared systems before mass room work:
 
-Implement one system at a time behind a backend switch:
+- verbs and action lookup;
+- inventory display, selection, combination, scrolling, and global object names;
+- Igor animation, layering, clipping, lighting, and scaling;
+- walk-box pathfinding and movement;
+- room hotspots and default/use/give actions;
+- dialogue trees, choices, text/speech modes, and skipping;
+- cutscene dialogue and background-update callbacks.
 
-- verb selection and action-sentence formatting;
-- inventory display, selection, combination, and scrolling;
-- actor animation and layering;
-- walk-box path construction, scaling, clipping, facing, and lighting;
-- object state and hotspot resolution;
-- dialogue trees, speech/text modes, skipping, and text rendering;
-- cutscene scheduling and skipping;
-- save/load schema with explicit version migration.
+The historical ScummVM implementations are starting code, not unquestioned truth. Use
+focused tests and oracle observations to confirm edge cases.
 
-Use the readable ScummVM routines as hypotheses and the interpreter/original as the
-oracle. Avoid copying unexplained constants without naming their source and test.
+Gate: synthetic rooms exercise every shared system without part-specific code, and
+state-digest tests cover success, cancellation, invalid actions, and boundary cases.
 
-Gate: each system passes focused synthetic tests plus all accumulated game replays.
+### M6 - First complete interactive vertical slice
 
-### M8 - Full CD game coverage
+Implement in this order:
 
-Add scenario coverage in dependency-aware groups:
+1. part 4, college map;
+2. part 5, bridge;
+3. part 6, bridge rock;
+4. the transitions among them;
+5. save, exit, load, and resume in each stable room.
 
-1. campus navigation: 4, 5, 6, 17, 21, 23-28, 30, 31, 35-37;
+For each part complete its scenario matrix rather than merely reaching the room. Port
+native C++ from the historical `part_04.cpp`, `part_05.cpp`, and `part_06.cpp`, then
+verify every action and condition against an oracle run.
+
+Gate: a normal ScummVM Event Recorder test enters the map, visits both bridge rooms,
+exercises their hotspots/verbs/inventory conditions, makes a round trip, saves, reloads,
+and produces the expected state/frame digests.
+
+### M7 - Sound, speech, and music
+
+Tasks:
+
+- Play CD effects and speech from bounded `IGOR.DAT` substreams using ScummVM audio
+  decoders and mixer sound types.
+- Implement talk modes and subtitle timing without using mixer timing as game state.
+- Implement stop/skip and overlapping-sound rules.
+- Determine the CD music source and track mapping; use ScummVM's audio-CD/extracted-track
+  support.
+- Port floppy MIDI/AdLib only during the floppy milestone unless shared logic requires
+  its interface earlier.
+
+Gate: the vertical slice has correct speech/effects, independent mixer volume controls,
+subtitles in all talk modes, deterministic skip behavior, and clean stream ownership.
+
+### M8 - Campus and church/laboratory gameplay
+
+Implement rooms in dependency groups so shared mechanics are fixed once:
+
+1. campus navigation: 17, 21, 23-28, 30, 31, 35-37;
 2. church/laboratory arc: 12-16 and 22;
-3. bathrooms, office, library, and remaining puzzle-heavy rooms: 18, 19, 33;
-4. maze: 50-67;
-5. cutscenes and travel: 75, 76, 85;
-6. startup and ending sequence: 90-97.
+3. bathrooms and library: 18, 19, and 33.
 
-For every part, first capture interpreted replays, then fix shared systems, and only
-then add part-specific workarounds. Track entrances independently because rooms often
-initialize differently based on the previous part and global state.
+Most of these have historical native part files. For each group:
 
-Gate: a clean-start full-game replay reaches the ending; all alternate dialogue and
-important failure branches in the scenario manifests pass; sanitizer builds have no
-errors; save/reload works at a checkpoint in every group.
+- port only the rooms in the group;
+- compile with warnings enabled after every room;
+- fill the scenario matrices;
+- add Event Recorder paths through the group;
+- run all earlier regressions before proceeding.
 
-### M9 - Decide whether to translate room logic natively
+Gate: every entrance, action, dialogue branch, transition, and save/reload checkpoint in
+these parts is covered, including the previously unimplemented part 17 dialogue.
 
-At this point choose deliberately:
+### M9 - Missing native rooms and complete CD playthrough
 
-- **Hybrid release:** keep translated original room logic in the VM. This is the fastest
-  and safest compatibility path.
-- **Fully native release:** translate one part at a time behind the same `PartBackend`
-  interface. Use replay differential testing and delete VM code only after all scenarios
-  for that part pass.
+The stored ScummVM snapshot lacks important native implementations. Reconstruct them as
+ordinary C++ using cyxx disassembly/call graphs, nearby room patterns, and DOS behavior:
 
-If choosing native translation, start with parts 4, 5, and 6, then follow the M8 groups.
-Do not translate in numeric order and do not remove the oracle backend during the work.
+- maze parts 50-67;
+- part 76 plane sequence;
+- any missing portions of part 75;
+- ending parts 91-94 and 96-97;
+- any dispatch/helper functions absent from the snapshot.
 
-Gate: the chosen architecture is documented with measured runtime size, maintenance
-cost, remaining VM surface, and test coverage. There must be a compatibility reason to
-accept a behavior difference.
+Reverse engineer one behavior at a time:
 
-### M10 - Spanish floppy adapter
+1. identify entry function and resources;
+2. name state variables and calls;
+3. express the behavior as C++ pseudocode;
+4. record the DOS/cyxx observation;
+5. implement native C++;
+6. add its replay/checkpoint before continuing.
 
-Tasks:
+Gate: a clean-start native ScummVM playthrough reaches the ending without opcode
+interpretation or generated code. Alternate dialogue and major optional/failure paths
+also pass, and save/load works in every room group.
 
-- Obtain a reproducible unpacked `IGOR.EXE` using DIET restoration or a controlled
-  DOSBox-X memory dump; record both packed and unpacked hashes.
-- Fix the overlay parser: stubs are a 32-byte header followed by a 16-byte-aligned array
-  of five-byte far jumps, so stubs are not simply 32 bytes apart.
-- Parse the FBOV header, overlay code, relocations, and exported entry points exactly.
-- Build a logical-resource correspondence table between CD NE segments and floppy
-  overlays using named resources, dimensions, text, and content hashes.
-- Determine how the full floppy release stores/indexes its sounds; do not assume the
-  demo's separate `IGOR.FSD` layout.
-- Reuse the same core, VM, replay format, and logical resource IDs through a
-  `FloppyProvider`.
-
-Gate: the M6 vertical-slice replays have floppy equivalents and produce equal canonical
-game state where the releases are semantically the same. Version-specific presentation
-differences are documented rather than hidden.
-
-### M11 - Packaging and optional ScummVM frontend
+### M10 - Save/load, menus, and engine integration polish
 
 Tasks:
 
-- Add robust unknown-version reporting and user-supplied data discovery.
-- Package no copyrighted game data or generated translated code.
-- Add keyboard/controller mapping, aspect correction, volume modes, subtitles/speech
-  modes, and portable saves.
-- If desired, implement a thin ScummVM engine adapter only now: filesystem, events,
-  surfaces/palette, mixer, saves, detection, and meta-engine glue.
+- Implement a versioned, endian-safe save format through `SaveFileManager`.
+- Implement meta-engine save listing, descriptions, timestamps/thumbnails if appropriate,
+  deletion, and loading from the launcher.
+- Integrate the ScummVM Global Main Menu rather than recreating obsolete UI unnecessarily.
+- Add keymapper actions, speech/subtitle options, volume categories, and return-to-launcher.
+- Add engine debug channels and remove development-only room-state shortcuts from release
+  paths.
 
-Gate: release builds run with original files only, pass the full replay suite, and have
-documented controls, supported hashes, known differences, licenses, and data setup.
+Gate: saves work from launcher and in-game UI, corrupt/unknown saves fail safely, and
+engine behavior follows current ScummVM conventions.
 
-## Per-room workflow
+### M11 - Spanish floppy support
 
-Use the same checklist for every part:
+Tasks:
 
-1. List all resource segments and named entries used by the part.
-2. Export a debug room plate: background, palette, masks, walk boxes, hotspots, and
-   frame sheets.
-3. Identify all entry conditions and exits from the main dispatch and call graph.
-4. Enumerate actions as `(verb, object1, object2, precondition, effect)`.
-5. Enumerate dialogues and state-changing branches.
-6. Record an interpreted replay for every entrance and branch.
-7. Add the scenario manifest and expected canonical checkpoints.
-8. Implement the smallest shared missing primitive before adding a room special case.
-9. If translating natively, run interpreted and native backends side by side.
-10. Compare against DOSBox-X for any disagreement.
-11. Mark the part complete only when resources, actions, dialogue, exits, save/reload,
-    and cutscene skipping are covered.
+- Produce a reproducible unpacked `IGOR.EXE` with DIET restoration or a controlled
+  DOSBox-X dump; preserve packed/unpacked hashes and procedure.
+- Correctly parse Borland overlay stubs: each 32-byte header is followed by a
+  16-byte-aligned array of five-byte far jumps, so headers are not simply 32 bytes apart.
+- Parse the `FBOV` overlay entries, code/resource boundaries, relocations, and exported
+  resource pointers.
+- Build a logical CD-to-floppy resource correspondence table using resource semantics,
+  dimensions, text, and hashes—not assumed offsets.
+- Determine the full Spanish floppy sound indexing; do not assume the English demo's
+  separate `IGOR.FSD` arrangement.
+- Add a `FloppyResourceProvider`; keep all gameplay/room C++ shared unless observed
+  version behavior genuinely differs.
+- Port the historical MIDI/AdLib path to current ScummVM audio APIs.
+
+Gate: the M6 vertical slice and then the full native playthrough pass on floppy, with
+documented version differences and no CD offsets leaking into shared gameplay code.
+
+### M12 - Upstream readiness
+
+Tasks:
+
+- Run formatting, compiler-warning, unit, Event Recorder, ASan, and UBSan configurations.
+- Audit licenses, copyright headers, provenance, and packaged engine data.
+- Remove original/extracted assets from every commit and build artifact.
+- Document supported hashes, setup, controls, debug limitations, and known differences.
+- Split history into reviewable commits: scaffold, formats/resources, common systems,
+  rooms by group, audio, saves, and floppy support.
+- Follow maintainer feedback on engine-data packaging, naming, save format, and test
+  integration.
+
+Gate: the branch builds in current ScummVM configurations, detects only supported data,
+completes both versions, passes all automated scenarios, and contains no interpreter or
+generated original game code.
+
+## Native per-room workflow
+
+Use this checklist for every room or cutscene:
+
+1. Identify the native part entry point, all possible entrances, and exit parts.
+2. List logical resource IDs and validate their CD file ranges.
+3. Export a debug plate: background, palette, masks, boxes, hotspots, and frame sheets.
+4. Read the historical native C++ and mark every TODO, warning, magic constant, and
+   missing helper.
+5. Use cyxx disassembly only where the native source is missing or ambiguous.
+6. Enumerate `(verb, object1, object2, precondition, effect)` for every action.
+7. Enumerate dialogue branches and state changes.
+8. Observe uncertain behavior in DOSBox-X and write down the result.
+9. Port or write ordinary C++ against shared Igor systems.
+10. Add focused tests and an Event Recorder scenario for every entrance and branch.
+11. Verify state digest, indexed framebuffer/palette, animation timing, and audio IDs.
+12. Verify save/reload and cutscene skipping where applicable.
+
+Never add a room-specific workaround until the shared implementation has been checked.
+Never mark a part complete merely because `--boot-param` can display it.
 
 ## First implementation backlog
 
 Execute these issues in order:
 
-1. Add binary ignore rules and `docs/provenance.md`.
-2. Import the pinned cyxx source with history/license information.
-3. Add CMake targets for `igor-formats`, `igor-inspect`, `igor-vm-tests`, and a headless
-   `igor-run`.
-4. Implement checked binary reader and version manifest.
-5. Implement and test the CD NE segment/relocation reader.
-6. Convert the historical CD resource and sound tables into validated catalog fixtures.
-7. Implement palette/background export and a room overlay viewer.
-8. Make the translated-code generation pipeline reproducible under CMake.
-9. Decouple the legacy runtime from Tremor, SDL, OpenGL, and wall-clock time.
-10. Boot part 900 headlessly and emit a framebuffer/palette checkpoint.
-11. Define replay v1 and canonical state v1.
-12. Capture part 4, then parts 5/6, as the first differential vertical slice.
+1. Create/pin a current ScummVM fork and document provenance.
+2. Inventory undefined methods and missing part files in the historical engine.
+3. Scaffold `engines/igor/` with current `configure.engine`, `module.mk`, detector, and
+   meta-engine patterns.
+4. Detect the exact Spanish CD release and boot a blank 320x200 indexed engine.
+5. Port resource IDs and checked CD resource lookup.
+6. Add palette/background display and resource debugger commands.
+7. Port mask/box/frame/text decoding with focused tests.
+8. Port engine state, timer/input loop, screen layers, and native part dispatch.
+9. Implement startup part 90 and one deterministic Event Recorder test.
+10. Complete the intro and reach part 4 normally.
+11. Port and verify verbs, inventory, walking, actions, and dialogue.
+12. Complete parts 4, 5, and 6 as the first native vertical slice.
+13. Add speech/effects/music.
+14. Port remaining historical rooms by dependency group.
+15. Reconstruct missing rooms natively and complete the game.
+16. Add floppy resources/audio after CD regression coverage is strong.
 
 ## Risk register
 
 | Risk | Mitigation |
 |---|---|
-| Hand ports silently preserve old mistakes | Keep the interpreter and DOS original as independent oracles; require differential replays. |
-| Heuristic extraction creates false structure | Require segment/export/table provenance and format invariants for catalog entries. |
-| Timing makes tests flaky | Fixed ticks, serialized RNG, input replay, and event-based audio checks. |
-| A room works only from a debug boot | Test every entrance plus clean-start full-game paths and save/reload. |
-| CD-first design hardcodes offsets | Logical resource IDs and version-specific providers from day one. |
-| Floppy unpacking stalls progress | Defer it until the complete CD path and tooling are proven. |
-| Generated bytecode/assets are accidentally distributed | Explicit ignore rules, packaging allowlist, and CI artifact audit. |
-| Prior GPL code is mixed without provenance | Choose a compatible license and preserve source/history/notices before copying. |
-| Legacy runtime modernization becomes a rewrite | First add a headless shim and optional audio; change one boundary at a time under replay. |
+| Hand-translated rooms omit subtle state changes | Canonical state digests, per-action scenario matrices, and comparison with cyxx/DOS. |
+| The old engine no longer compiles with current ScummVM | Start with a new current scaffold and port subsystems incrementally; do not copy obsolete plugin boilerplate wholesale. |
+| Historical native code contains known gaps | Inventory undefined/TODO behavior first and give every room an explicit completeness checklist. |
+| Heuristic extraction creates false resources | Accept only table/segment/export-backed offsets with checked format invariants. |
+| Tests work only through `--boot-param` | Add clean-start Event Recorder playthroughs and test every room entrance and save/reload path. |
+| Timing or randomness makes playback flaky | Fixed engine ticks, named `Common::RandomSource`, Event Recorder, and canonical game-state checkpoints. |
+| CD-first code hardcodes physical offsets | Logical resource IDs and version-specific providers from the first resource-manager API. |
+| Missing maze/ending code causes another stall | Use the external disassembler systematically, translate one behavior at a time, and require a test before continuing. |
+| Floppy unpacking consumes the project early | Defer it until the native CD vertical slice and common systems are verified. |
+| Prior GPL code loses attribution | Preserve headers/history and maintain `docs/provenance.md`. |
+| Copyrighted data enters commits | Ignore original, extracted, generated, screenshot, and trace payloads; store only scripts, metadata, and hashes. |
 
 ## Definition of done
 
-The reimplementation is complete when:
+The ScummVM reimplementation is complete when:
 
-- known Spanish CD and floppy hashes are detected structurally and cryptographically;
-- the game can be completed from a clean start on the new runtime;
-- all parts have scenario manifests and deterministic replay coverage;
-- every shared system and trap has focused tests;
-- CD speech/effects/music behavior and floppy audio behavior are documented and work;
-- save/load is portable and tested throughout the game;
-- interpreted and native paths, if both remain, agree at canonical checkpoints;
-- disputed behavior has been checked against the DOS original;
-- no original or generated copyrighted game data is required from the repository or
-  shipped accidentally;
-- supported versions, controls, limitations, provenance, and licenses are documented.
+- the production code contains no x86/custom opcode interpreter and needs no `igor.bin`;
+- current ScummVM detects the supported Spanish CD and floppy releases correctly;
+- the full game can be completed from a clean start using native C++ room logic;
+- every part has a scenario matrix and automated replay or focused test coverage;
+- resource parsing, walking, inventory, actions, dialogue, animation, audio, and saves have
+  focused tests;
+- CD speech/effects/music and floppy sound/music work through ScummVM audio APIs;
+- save/load and launcher integration follow current ScummVM conventions;
+- ambiguous behavior has been compared to the DOS original;
+- sanitizer and Event Recorder test runs pass;
+- supported versions, controls, limitations, provenance, and licenses are documented;
+- no original or generated copyrighted game data is committed or distributed.
