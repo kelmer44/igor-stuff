@@ -1,5 +1,11 @@
 # Native ScummVM reimplementation plan for Igor: Objective Uikokahonia
 
+> **See [REVERSE_ENGINEERING_PLAN.md](REVERSE_ENGINEERING_PLAN.md)** for a detailed,
+> already-validated methodology for recovering the CD release's data formats, plus
+> [tools/igor_cd_extract/](tools/igor_cd_extract/), a proof-of-concept tool that
+> extracts every catalogued room's background, palette, walk mask, area table, room
+> text, and sprite frames straight out of `IGOR-CD/IGOR.EXE`.
+
 ## Goal and approach
 
 The deliverable is a normal, native ScummVM engine under `engines/igor/`. The shipped
@@ -33,7 +39,7 @@ and port it later; use ScummVM abstractions from the first engine skeleton.
 
 | Release | Files | Confirmed structure | Role |
 |---|---|---|---|
-| Spanish CD | `IGOR-CD/IGOR.EXE` (9,115,648 bytes), `IGOR-CD/IGOR.DAT` (61,682,719 bytes) | `IGOR.EXE` is a 232-segment NE executable containing code and most assets. `IGOR.DAT` is concatenated VOC speech/sound data. | First supported version |
+| Spanish CD | `IGOR-CD/IGOR.EXE` (9,115,648 bytes), `IGOR-CD/IGOR.DAT` (61,682,719 bytes) | `IGOR.EXE` is a 232-segment NE executable containing code and most assets. `IGOR.DAT` is concatenated VOC speech/sound data. All 276 entries of the historical CD resource table (backgrounds, palettes, masks, area tables, room text, sprites) resolve to byte ranges inside `IGOR.EXE`; `IGOR.DAT` holds only audio, indexed separately by `fsd_sp_cdrom.h`. Verified byte-for-byte in [REVERSE_ENGINEERING_PLAN.md](REVERSE_ENGINEERING_PLAN.md). | First supported version |
 | Spanish floppy | `IGOR/IGOR.EXE` (39,537 bytes), `IGOR/IGOR.DAT` (11,199,335 bytes) | `IGOR.EXE` is DIET-packed. `IGOR.DAT` has a valid `FBOV` Borland overlay header and contains VOC signatures. | Second supported version |
 
 Use complete-file hashes during research and the ScummVM advanced detector's normal

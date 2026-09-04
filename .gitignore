@@ -1,2 +1,8 @@
 
 reference/cyxx-igor
+
+# Generated/derived game assets - never commit extracted copyrighted content
+extracted_cd/
+extracted_cd_discovered/
+extracted/
+

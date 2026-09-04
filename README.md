@@ -1,11 +1,15 @@
 # Igor: Objective Uikokahonia - ScummVM Re-implementation
 
 > **Planning note:** See [REIMPLEMENTATION_PLAN.md](REIMPLEMENTATION_PLAN.md) for the
-> verification-driven native ScummVM implementation plan. The production engine uses
-> ordinary C++ room and engine logic; the archived cyxx opcode interpreter is only an
-> external reverse-engineering oracle. Start with Spanish CD support, then add a
-> floppy-format provider. Some exploratory claims below predate validation and should
-> not be treated as confirmed format documentation.
+> verification-driven native ScummVM implementation plan, and
+> [REVERSE_ENGINEERING_PLAN.md](REVERSE_ENGINEERING_PLAN.md) for the detailed,
+> already-validated methodology behind recovering the game's formats. The production
+> engine uses ordinary C++ room and engine logic; the archived cyxx opcode
+> interpreter is only an external reverse-engineering oracle. Start with Spanish CD
+> support (confirmed easier: no unpacking required, resource table already resolves
+> against the live EXE), then add a floppy-format provider. Some exploratory claims
+> below predate validation and should not be treated as confirmed format
+> documentation -- prefer REVERSE_ENGINEERING_PLAN.md where the two disagree.
 
 ## Project Goal
 
@@ -124,11 +128,29 @@ Located in `scripts/`:
 
 | Script | Purpose |
 |--------|---------|
-| `try_unpack_exe.py` | Identify packer type, attempt automated unpacking |
-| `parse_overlay_table.py` | Parse overlay stubs from unpacked EXE, map to DAT offsets |
-| `analyze_igor_dat.py` | Analyze DAT structure: functions, sounds, images, strings |
+| `try_unpack_exe.py` | Identify packer type, attempt automated unpacking (floppy only) |
+| `parse_overlay_table.py` | Parse overlay stubs from unpacked EXE, map to DAT offsets (floppy only) |
+| `analyze_igor_dat.py` | Heuristic DAT scanner: functions, sounds, images, strings (floppy only; superseded for CD by the table-driven tool below) |
 
-### Quick start
+Located in `tools/igor_cd_extract/` (Spanish CD, no unpacking required):
+
+| Script | Purpose |
+|--------|---------|
+| `extract_cd_assets.py` | Extracts every catalogued room's background, palette, mask, area table, room text, and sprite frames directly from `IGOR-CD/IGOR.EXE`. |
+| `discover_rooms.py` | Table-independent: scans the whole EXE for the IMG+PAL+MSK(+BOX) structural signature and finds rooms the historical table never catalogued (27 beyond the 276-entry table, including `ChurchMosaic` and candidates for the maze). Run this first. |
+
+See their own [README](tools/igor_cd_extract/README.md) and [REVERSE_ENGINEERING_PLAN.md](REVERSE_ENGINEERING_PLAN.md).
+
+### Quick start (Spanish CD)
+```bash
+python3 tools/igor_cd_extract/discover_rooms.py
+open extracted_cd_discovered/DISCOVERY_REPORT.md
+
+python3 tools/igor_cd_extract/extract_cd_assets.py
+open extracted_cd/EXTRACTION_REPORT.md
+```
+
+### Quick start (Spanish floppy, still blocked on unpacking)
 ```bash
 # 1. Analyze the packed EXE
 python3 scripts/try_unpack_exe.py /path/to/IGOR.EXE
@@ -145,32 +167,35 @@ python3 scripts/parse_overlay_table.py unpacked_IGOR.EXE /path/to/IGOR.DAT
 
 ## Roadmap
 
-### Phase 1: Understand the binary (current)
-- [x] Identify file formats (DIET-packed EXE, FBOV overlay DAT)
+### Phase 1: Understand the binary (CD release -- done for static assets)
+- [x] Identify file formats (NE-format CD EXE containing code+assets; separate VOC-only DAT)
 - [x] Recover old ScummVM engine code as reference
 - [x] Clone cyxx/igor interpreter as reference
 - [x] Create analysis scripts
-- [ ] Unpack IGOR.EXE using DOSBox-X debugger
-- [ ] Parse overlay stub table from unpacked EXE
-- [ ] Map all overlay segments to DAT offsets
-- [ ] Extract and catalog all resources (images, sounds, palettes)
+- [x] Validate the historical 276-entry CD resource table against the live `IGOR.EXE` (zero bounds violations)
+- [x] Decode background, palette, mask, area-table, and room-text formats (35/35, 31/31, 26/26, 25/25, 28/28 resources respectively)
+- [x] Decode the shared sparse-RLE sprite format and cross-validate it against the `AOF_*` offset tables
+- [x] Prove the historical table is incomplete and structurally rediscover what it misses (51 IMG+PAL+MSK chains found scanning the whole EXE with no table input; only 21 match the table, 4 confidently renamed via cross-version mask-length fingerprinting, 24 completely new -- see REVERSE_ENGINEERING_PLAN.md)
+- [ ] Name the 24 unnamed rooms found by structural discovery (DOSBox-X part number, or cyxx disassembly)
+- [ ] Decode the remaining per-room fixed-stride sprite formats (see REVERSE_ENGINEERING_PLAN.md Phase 3)
+- [ ] Unpack the floppy `IGOR.EXE` using DOSBox-X (deferred; see REIMPLEMENTATION_PLAN.md M11)
 
 ### Phase 2: Build resource pipeline
-- [ ] Create IGOR.TBL for floppy version (like old `create_igortbl`)
-- [ ] Map resource IDs to DAT offsets
-- [ ] Build image viewer for background verification
-- [ ] Verify extracted resources match room descriptions
+- [x] Proof-of-concept CD extraction tool (`tools/igor_cd_extract/`)
+- [ ] Extend it to the two special-cased text layouts (`TXT_MainTable`, `TXT_Library2`)
+- [ ] Extend it with a fixed-stride sprite decoder once a room's stride constants are read from its `part_XX.cpp`
+- [ ] Cross-check extracted backgrounds pixel-for-pixel against DOSBox-X screenshots
 
 ### Phase 3: ScummVM engine skeleton
 - [ ] Set up engine directory structure in `engines/igor/`
-- [ ] Implement detection entries for floppy version
-- [ ] Resource loader (read images, palettes, sounds from DAT)
+- [ ] Implement detection entries for the CD version
+- [ ] Resource loader (read images, palettes, sounds) built on the validated formats above
 - [ ] Main game loop and room dispatch
 
 ### Phase 4: Room implementation
 - [ ] Port room logic from old engine / reverse engineer missing parts
 - [ ] Implement verb/action system
-- [ ] Implement walk system with walkboxes
+- [ ] Implement the mask+area-table+transition-matrix walkable-area system (there is no classic SCUMM-style polygon walkbox format in this game -- see REVERSE_ENGINEERING_PLAN.md Phase 4)
 - [ ] Implement inventory
 - [ ] Implement dialog system
 
@@ -182,6 +207,9 @@ python3 scripts/parse_overlay_table.py unpacked_IGOR.EXE /path/to/IGOR.DAT
 
 ## Key Documentation
 
+- [REVERSE_ENGINEERING_PLAN.md](REVERSE_ENGINEERING_PLAN.md) — Detailed, validated methodology for recovering the CD release's formats
+- [REIMPLEMENTATION_PLAN.md](REIMPLEMENTATION_PLAN.md) — Native ScummVM engine plan and milestones
+- [tools/igor_cd_extract/](tools/igor_cd_extract/) — Proof-of-concept CD asset extraction tool and its README
 - [GUIDE_DOSBOX_UNPACKING.md](GUIDE_DOSBOX_UNPACKING.md) — Step-by-step guide to unpack IGOR.EXE using DOSBox-X debugger
-- [cyxx/igor RE.md](reference/cyxx-igor/docs/RE.md) — Detailed reverse engineering notes
-- [cyxx/igor README.TXT](reference/cyxx-igor/README.TXT) — Original project readme
+- [cyxx/igor RE.md](reference/cyxx/igor/docs/RE.md) — Detailed reverse engineering notes
+- [cyxx/igor README.TXT](reference/cyxx/igor/README.TXT) — Original project readme
