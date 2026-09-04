@@ -136,16 +136,13 @@ Located in `tools/igor_cd_extract/` (Spanish CD, no unpacking required):
 
 | Script | Purpose |
 |--------|---------|
-| `extract_cd_assets.py` | Extracts every catalogued room's background, palette, mask, area table, room text, and sprite frames directly from `IGOR-CD/IGOR.EXE`. |
-| `discover_rooms.py` | Table-independent: scans the whole EXE for the IMG+PAL+MSK(+BOX) structural signature and finds rooms the historical table never catalogued (27 beyond the 276-entry table, including `ChurchMosaic` and candidates for the maze). Run this first. |
+| `extract_cd_assets.py` | Main tool. Extracts every catalogued room's background, palette, mask, area table, room text, and sprite frames directly from `IGOR-CD/IGOR.EXE`, then (by default) also runs the structural discovery scan and merges rooms the historical table never catalogued into the same output (30 beyond the 276-entry table, including `ChurchMosaic` and candidates for the maze). |
+| `discover_rooms.py` | Thin standalone wrapper around just the discovery scan, for a discovery-only report without the full extraction. |
 
 See their own [README](tools/igor_cd_extract/README.md) and [REVERSE_ENGINEERING_PLAN.md](REVERSE_ENGINEERING_PLAN.md).
 
 ### Quick start (Spanish CD)
 ```bash
-python3 tools/igor_cd_extract/discover_rooms.py
-open extracted_cd_discovered/DISCOVERY_REPORT.md
-
 python3 tools/igor_cd_extract/extract_cd_assets.py
 open extracted_cd/EXTRACTION_REPORT.md
 ```
@@ -175,7 +172,8 @@ python3 scripts/parse_overlay_table.py unpacked_IGOR.EXE /path/to/IGOR.DAT
 - [x] Validate the historical 276-entry CD resource table against the live `IGOR.EXE` (zero bounds violations)
 - [x] Decode background, palette, mask, area-table, and room-text formats (35/35, 31/31, 26/26, 25/25, 28/28 resources respectively)
 - [x] Decode the shared sparse-RLE sprite format and cross-validate it against the `AOF_*` offset tables
-- [x] Prove the historical table is incomplete and structurally rediscover what it misses (51 IMG+PAL+MSK chains found scanning the whole EXE with no table input; only 21 match the table, 4 confidently renamed via cross-version mask-length fingerprinting, 24 completely new -- see REVERSE_ENGINEERING_PLAN.md)
+- [x] Prove the historical table is incomplete and structurally rediscover what it misses (51 IMG+PAL+MSK chains found scanning the whole EXE with no table input; only 21 match the table, 4 confidently renamed via cross-version mask-length fingerprinting, 24 completely new -- see REVERSE_ENGINEERING_PLAN.md); merged into the main extractor by default
+- [x] Resolve a second sprite format (Igor's own directional/head frames: fixed-stride raw 30x50/14x11 blocks, exact dimensions from `igor.h`/`igor.cpp`, not guessed) and a verified cross-room palette fallback for sprite-only resource groups
 - [ ] Name the 24 unnamed rooms found by structural discovery (DOSBox-X part number, or cyxx disassembly)
 - [ ] Decode the remaining per-room fixed-stride sprite formats (see REVERSE_ENGINEERING_PLAN.md Phase 3)
 - [ ] Unpack the floppy `IGOR.EXE` using DOSBox-X (deferred; see REIMPLEMENTATION_PLAN.md M11)

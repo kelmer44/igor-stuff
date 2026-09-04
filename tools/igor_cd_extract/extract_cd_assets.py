@@ -4,11 +4,15 @@
 Extracts room backgrounds, palettes, walk/area masks, area property tables,
 room text/strings, and sprite/animation frames directly from IGOR-CD/IGOR.EXE,
 using the 276-entry resource offset table recovered by the historical (2009)
-ScummVM Igor engine project. No game code is executed and no interpreter is
-involved: every format here is decoded from scratch in plain Python, from
-offsets/sizes read straight out of the original executable.
+ScummVM Igor engine project, *plus* a table-independent structural scan (see
+`find_chains`/`annotate_chains` below) that finds rooms the table never listed --
+including some belonging to already-ported rooms (`ChurchMosaic`) and candidates
+for rooms with no historical C++ at all (the maze, parts 50-67). No game code is
+executed and no interpreter is involved: every format here is decoded from
+scratch in plain Python, from offsets/sizes read straight out of the original
+executable.
 
-Formats implemented (see docs in ../../REIMPLEMENTATION_PLAN.md for the full
+Formats implemented (see docs in ../../REVERSE_ENGINEERING_PLAN.md for the full
 reverse-engineering plan and provenance of each format):
 
   IMG_*  raw 320x144 8bpp indexed background, exactly 46080 bytes, no compression.
@@ -18,10 +22,13 @@ reverse-engineering plan and provenance of each format):
   TXT_*  320 bytes walkXScale + 432 bytes walkYScale + two 0xF4/0xF6-delimited
          streams of Spanish-accented, XOR/offset-obfuscated strings (object
          names, then room-local dialogue text overrides).
-  FRM_*  ANM_*  concatenated, self-delimiting sparse-RLE sprite frames (see
-         decode_anim_blob). No frame count/table is required: each frame's
-         byte length is fully determined by its own contents, so frames are
-         recovered purely by sequential decode until the resource is exhausted.
+  FRM_*  ANM_*  either concatenated, self-delimiting sparse-RLE sprite frames
+         (see decode_anim_blob -- no frame count/table is required, since each
+         frame's byte length is fully determined by its own contents) or, for
+         resources named in FIXED_STRIDE_SPRITE_SHEETS, a plain concatenation
+         of fixed width*height raw pixel blocks (Igor's own directional/head
+         sprites; other rooms use their own bespoke fixed-stride layout not yet
+         mapped here -- see REVERSE_ENGINEERING_PLAN.md Phase 3).
   AOF_*  u16le "Animation Offset File": 1-based byte offsets into the sibling
          ANM_ resource of the same name, one per frame. Used here only to
          cross-validate the independent self-delimiting frame decode above.
@@ -31,6 +38,7 @@ reverse-engineering plan and provenance of each format):
 Usage:
     python3 extract_cd_assets.py [--exe PATH] [--table PATH] [--out DIR]
                                   [--rooms NAME[,NAME...]] [--list-rooms]
+                                  [--no-discover]
 """
 import argparse
 import json
@@ -611,7 +619,20 @@ def group_by_room(entries):
     return rooms
 
 
-def process_room(key, by_prefix, exe_bytes, out_dir):
+def find_default_palette(entries, exe_bytes, preferred_name="PAL_PhilipRoom"):
+    """Pick one full 256-color room palette to use as a fallback for resource
+    groups with no palette of their own (see process_room)."""
+    by_name = {e["name"]: e for e in entries}
+    pal_entry = by_name.get(preferred_name)
+    if pal_entry is None:
+        pal_entry = next((e for e in entries if e["name"].startswith("PAL_") and e["size"] == 768), None)
+    if pal_entry is None:
+        return None
+    raw = exe_bytes[pal_entry["offset"]:pal_entry["offset"] + pal_entry["size"]]
+    return decode_palette(raw), pal_entry["name"]
+
+
+def process_room(key, by_prefix, exe_bytes, out_dir, default_palette=None):
     manifest = {"room": key, "resources": [], "warnings": []}
     os.makedirs(out_dir, exist_ok=True)
 
@@ -623,6 +644,14 @@ def process_room(key, by_prefix, exe_bytes, out_dir):
         with open(os.path.join(out_dir, "palette.json"), "w") as f:
             json.dump({"source": pal_entry["name"], "colors": palette}, f)
         manifest["resources"].append({"name": pal_entry["name"], "type": "PAL", "status": "ok", "colorCount": len(palette)})
+    elif default_palette:
+        # This resource group has no palette of its own (e.g. Igor's own directional/
+        # head sprites, used across every room). Actor sprite color indices are
+        # consistent across room palettes -- confirmed by rendering IgorDirRight with
+        # PhilipRoom's palette and getting a correctly-colored, recognizable sprite --
+        # so any full 256-color room palette is a safe fallback for these.
+        palette, palette_source = default_palette
+        manifest["resources"].append({"name": "(none)", "type": "PAL", "status": "fallback", "paletteSource": palette_source, "colorCount": len(palette)})
 
     for img_entry in by_prefix.get("IMG", []):
         raw = exe_bytes[img_entry["offset"]:img_entry["offset"] + img_entry["size"]]
@@ -770,6 +799,7 @@ def main():
 
     exe_bytes = read_exe(args.exe)
     bounds_issues = validate_bounds(entries, len(exe_bytes))
+    default_palette = find_default_palette(entries, exe_bytes)
 
     wanted = set(args.rooms.split(",")) if args.rooms else None
 
@@ -783,7 +813,7 @@ def main():
             continue
         by_prefix = rooms[key]
         out_dir = os.path.join(args.out, sanitize_dirname(key))
-        manifest = process_room(key, by_prefix, exe_bytes, out_dir)
+        manifest = process_room(key, by_prefix, exe_bytes, out_dir, default_palette)
         room_reports.append(manifest)
         for r in manifest["resources"]:
             per_type_counts[r["type"]] += 1

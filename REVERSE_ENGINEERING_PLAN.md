@@ -83,19 +83,31 @@ reimplementation of each decoder in Python.** The result, as of this writing:
   original table's offsets exactly (see "ANM/AOF cross-validation" in the report).
   `ANM_PhilipVodka` frame 0, decoded and palette-composited purely from these two
   independently-verified formats, is a clean, recognizable sprite of a character.
-- The remaining 83 animation resources decode to zero frames under that codec --
+- A second, fixed-stride raw format was confirmed for 10 more (`FRM_IgorDirBack/
+  Front/Right/Left`, each `*2` variant, and `FRM_IgorHead`/`FRM_IgorHead2`): Igor's
+  own walk-cycle frames are 30x50 raw pixel blocks and his talking-head frames are
+  14x11, both concatenated with no header, exact dimensions read straight out of
+  `igor.h`'s buffer sizes (`malloc(13500)`/`malloc(3696)`) and the frame-indexing
+  arithmetic already in `part_05.cpp`/`part_06.cpp`/`animateIgorTalking()`. None of
+  these resources have a `PAL_` of their own; falling back to any other room's full
+  256-color palette renders them correctly (actor color indices are consistent
+  across every room's palette) -- confirmed by rendering `FRM_IgorDirRight` with
+  `PhilipRoom`'s palette and getting a properly colored, walking Igor sprite.
+- The remaining 73 animation resources decode to zero frames under either decoder --
   **not a bug**, but proof (confirmed by reading `parts/part_15.cpp`) that several
-  rooms' Pascal code uses a bespoke fixed-stride raw sprite sheet instead
-  (`_animFramesBuffer + frame*598 + i*26`-style indexing) and never calls
-  `decodeAnimFrame` at all. This is the single most important finding of this pass:
-  **animation formats are chosen per room in the original code, not globally**, and
-  the historical ported C++ is exactly where that per-room stride is recorded.
+  rooms' Pascal code uses a third, room-specific fixed-stride raw sprite sheet
+  (`_animFramesBuffer + frame*598 + i*26`-style indexing for `TobiasOffice`, its own
+  distinct constants) and never calls `decodeAnimFrame` at all. This is the single
+  most important finding of this pass: **animation formats are chosen per room in
+  the original code, not globally**, and the historical ported C++ is exactly where
+  each room's own stride is recorded.
 
 This means: every static-asset format needed to view and lay out a room (background,
 palette, walk/interaction mask, area properties, room text) is **fully solved and
 automatable** for the CD release. Sprite/animation formats are **partially solved
 generically** (~14%) and **solvable per room by reading already-ported C++** for the
-rest. Action/dialogue logic (`DAT_*`) is confirmed opaque and bespoke, exactly as
+rest (10 more resolved this session via a second, fixed-stride decoder -- see
+below). Action/dialogue logic (`DAT_*`) is confirmed opaque and bespoke, exactly as
 [REIMPLEMENTATION_PLAN.md](REIMPLEMENTATION_PLAN.md) already assumed.
 
 ## The historical table is incomplete, and format knowledge alone recovers what it misses
@@ -112,7 +124,9 @@ only 29.5% of the 9,115,648-byte EXE (2,690,473 bytes); 70.5% (6,425,175 bytes a
 both a room's logic and its assets), but not all of it -- some of it is more rooms.
 
 `tools/igor_cd_extract/discover_rooms.py` proves this directly, with no resource
-table as input at all. Every cataloged room shares one structural signature: a
+table as input at all (its scan is now also run by default inside
+`extract_cd_assets.py`, merging both room sets into one output directory -- see
+`--no-discover` to opt out). Every cataloged room shares one structural signature: a
 46,080-byte raw background, immediately followed by an all-<64 VGA palette,
 immediately followed by a run-length mask that decodes to exactly 320x144 pixels with
 zero leftover bytes. That triple constraint has a vanishingly small false-positive
@@ -357,23 +371,25 @@ has been demonstrated concretely:
 
 ## Immediate next steps
 
-1. Name the 24 `unnamed-new` chains `discover_rooms.py` found (see
-   `extracted_cd_discovered/DISCOVERY_REPORT.md`): walk each in DOSBox-X and read the
-   debugger's reported part number/state, or trace the segment with cyxx's
-   disassembly, and record the mapping. Prioritize the corridor-like backgrounds,
-   since parts 50-67 (the maze) have no historical C++ at all and are the most
-   likely source of a large cluster of these.
-2. Extend `discover_rooms.py` to also recover each new chain's `TXT_` (by scanning
+1. Name the 24 `unnamed-new` chains the structural scanner found (see
+   `extracted_cd/EXTRACTION_REPORT.md`, "Structurally discovered rooms" section):
+   walk each in DOSBox-X and read the debugger's reported part number/state, or trace
+   the segment with cyxx's disassembly, and record the mapping. Prioritize the
+   corridor-like backgrounds, since parts 50-67 (the maze) have no historical C++ at
+   all and are the most likely source of a large cluster of these.
+2. Extend the discovery scan to also recover each new chain's `TXT_` (by scanning
    backward from the `IMG_` start for a plausible 752-byte scale-table boundary) and
    attempt the `FRM_`/`ANM_` sparse-RLE decoder against the segment data preceding
    it, now that Phase 3 shows how to detect success (clean, zero-leftover decode).
 3. Extend `tools/igor_cd_extract/extract_cd_assets.py`'s text decoder to handle
    `TXT_MainTable` and `TXT_Library2`'s alternate layouts (Phase 2).
-4. Pick 2-3 rooms whose `FRM_*` decoded to zero frames, read their `part_XX.cpp`
-   rendering code, and add a second, fixed-stride decoder path to the tool, proving
-   Phase 3's methodology on a second format the way it was just proven for the first
-   (recommended: `CollegeLockers`, `Laboratory`, or `Park`, all with modest,
-   readable historical C++).
+4. Pick 2-3 more rooms whose `FRM_*` still decode to zero frames under both the
+   sparse-RLE and fixed-stride (Igor-sprite) decoders, read their `part_XX.cpp`
+   rendering code, and register their own fixed-stride constants in
+   `FIXED_STRIDE_SPRITE_SHEETS`, proving Phase 3's methodology on a third format the
+   way it was just proven for the second (`FRM_IgorDir*`/`FRM_IgorHead*`; recommend
+   `CollegeLockers`, `Laboratory`, or `Park` next, all with modest, readable
+   historical C++).
 5. Capture one DOSBox-X screenshot of a room already extracted here (e.g.
    `PhilipRoom` or `Park`) and pixel-diff it against `background.png` to close the
    loop on Phase 2's remaining validation step.
@@ -381,4 +397,5 @@ has been demonstrated concretely:
    setup). Do not start the engine scaffold before the asset pipeline above is this
    well understood for at least one full room group, per that plan's own risk
    register ("Tests work only through --boot-param").
+
 
