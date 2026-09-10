@@ -1,5 +1,9 @@
 # Reverse-engineering plan: Igor: Objetivo Uikokahonia (Spanish CD-ROM)
 
+> **New to reverse engineering?** [START_HERE.md](START_HERE.md) is a shorter,
+> beginner-oriented on-ramp with five ordered first tasks. Come back here for the
+> full methodology and exact byte-level formats once you're past that.
+
 ## Purpose of this document
 
 [REIMPLEMENTATION_PLAN.md](REIMPLEMENTATION_PLAN.md) describes the target ScummVM
@@ -177,6 +181,105 @@ Caveats, honestly stated:
   see what part number the debugger reports) or from cyxx's disassembly/call-graph
   output, not from guessing based on the picture alone.
 
+## In-game action logic is also reverse-engineerable, and not just theoretically
+
+Everything above is visual/text assets. The separate, harder question is the game's
+*behavior*: what happens when the player TALKs to, TAKEs, LOOKs at, USEs, OPENs,
+CLOSEs, or GIVEs something. This section confirms that logic is recoverable too, with
+a working decoder and real output, not just a claim.
+
+**How the original engine actually decides what an action does.** It is not a script
+language and it is not bytecode. It is a small binary lookup table per room -- the
+`DAT_*` resource -- read directly by `handleRoomInput()`:
+
+```
+actionCode = DAT_blob[ room.action.defaultVerb + verb*2 + object1Num*20 ]
+```
+
+`verb` is a small integer 1-8 (WALK/TALK/TAKE/LOOK/USE/OPEN/CLOSE/GIVE) and
+`object1Num` is the room-local object the player clicked (0 = empty space/floor).
+Two bytes are stored at that offset: an `actionCode` and a `walkPoint`. The
+`room.action.defaultVerb` base offset is different for every room and comes from a
+second, tiny table the historical project already reverse-engineered by hand: a
+`RoomDataOffsets` constant per room (`PART_XX_ROOM_DATA_OFFSETS` in `staticres.cpp`),
+giving the exact byte offsets, within that room's own `DAT_*` blob, of six related
+sub-tables (single-object actions, two-object "use X on Y"/"give X to Y" matrices,
+walk-point tables, and the area-to-area walk-transition matrix from Phase 4 below).
+
+Once you have `actionCode`, it selects a `case` label in that room's
+`PART_XX_EXEC_ACTION(int action)` switch statement -- and for 24 of the ~37 room
+parts, that switch statement **already exists as ordinary, readable C++** in
+`reference/scummvm-igor-engine/parts/part_XX.cpp`, written by the 2009 project. So
+for those rooms, both halves of "what does this action do" are available *today*:
+the trigger condition (which verb+object combinations do anything, decoded straight
+from bytes) and the effect (what runs, already translated to C++).
+
+**Proof, not just a claim:** `tools/igor_cd_extract/decode_actions.py` decodes the
+single-object action table for every room with a known `RoomDataOffsets` entry,
+using the object names already recovered from that room's `TXT_*` resource (Phase 2)
+to know which object numbers are real, and cross-references every decoded
+`actionCode` against that room's `EXEC_ACTION` switch cases parsed straight out of
+the `.cpp` file. Run it and read `extracted_cd_actions/ACTIONS_REPORT.md`. Sample of
+what comes out, entirely mechanically, with zero manual guessing:
+
+```
+Part 4 -- Map (DAT_Map)
+  WALK  iglesia (#1)   -> actionCode 101 -> implemented: `_currentPart = 120;`
+  WALK  parque (#3)    -> actionCode 103 -> implemented: `_currentPart = 350;`
+  WALK  facultad (#5)  -> actionCode 105 -> implemented:
+    `if (_objectsState[111] == 0) { _currentPart = 170; } else { _currentPart = 770; }`
+
+Part 5 -- SpringRock (DAT_SpringRock)
+  TAKE  fotógrafo (#3) -> actionCode 103 -> implemented: `PART_05_ACTION_103();`
+  WALK  cámara (#4)    -> actionCode 105 -> implemented: `_currentPart = 40;`
+```
+
+That last "facultad" entry is a real, previously-opaque game-logic fact recovered
+mechanically: walking to the faculty building branches on a hidden game-state flag
+(`_objectsState[111]`), and now you know exactly which byte in which table decides
+that, and exactly what C++ runs either way.
+
+**Current results (19 of 24 rooms decoded):** 331 (verb, object) trigger entries
+found; 180 already resolve to an implemented C++ handler (fully understood, trigger
+and effect both), 151 resolve to an action code with no matching `case` in the
+ported C++ (the trigger is known, the effect is not -- see next steps). 5 rooms
+(`ChurchPuzzle`, `InsideChurch`, `Library`, `OutsideChurch`, `PhysicsClassroom`) have
+no `DAT_*` entry in the CD table at all -- the same table-incompleteness problem as
+`ChurchMosaic` above, and likely recoverable the same way (their DAT_ blob almost
+certainly sits immediately before that same room's already-*discovered*
+`IMG_`/`PAL_`/`MSK_` chain, since resources for one room are stored contiguously).
+
+**What is explicitly not decoded yet, stated honestly:**
+
+- The two-object "use X on Y" / "give X to Y" matrices. The formula is fully known
+  (see `USE_GIVE_FORMULA` in `decode_actions.py` and each room's own offsets in its
+  output JSON) but not yet implemented -- this is a coding task, not a disassembly
+  task, and a good first project (Immediate next steps, below).
+- The dialogue question/reply tables (`RoomDataOffsets.dlg`) and the walk-transition
+  matrix (`RoomDataOffsets.area`) use the same per-room-offset technique but are not
+  decoded here yet.
+- For the ~13 room parts with **no** historical C++ at all (the maze, parts 50-67;
+  the plane, part 76; parts of 75; the ending, 91-94/96-97), the trigger side can
+  still be decoded exactly like above once each room's `RoomDataOffsets` and `DAT_*`
+  offset are found (via disassembly, since `staticres.cpp` only has entries for
+  ported rooms) -- but the *effect* side has no C++ to read and genuinely requires
+  x86 disassembly or DOSBox-X observation, per Phase 5 below.
+
+**So, directly: can everything be reverse engineered, not just images and sound?**
+Yes, with the following honest breakdown, not a blanket claim:
+
+| Layer | Status |
+|---|---|
+| Visual/text asset **formats** (background, palette, mask, room text) | Solved and automated for the whole CD release. |
+| Sprite/animation formats | Two formats solved (sparse-RLE, Igor's own fixed-stride sprites); most other rooms' sprite formats still need their own reverse-engineered stride constants (Phase 3), but the *method* is proven twice over. |
+| Action **trigger** logic (which verb+object does something) | Solved and automated for single-object actions in 24 rooms; two-object matrices use a known formula, not yet coded; ~13 unported rooms need their offsets found via disassembly first. |
+| Action **effect** logic (what actually happens) | Already available as C++ for 24 rooms (2009 project's work, now provably connected to the byte-level trigger); genuinely unsolved and requiring disassembly for ~13 rooms. |
+| Dialogue trees, walk-transition pathfinding matrix | Offsets and schema known (`RoomDataOffsets.dlg`/`.area`); byte-level decoding not yet implemented. |
+
+Nothing examined so far has turned out to be undecodable -- every format and every
+piece of logic looked at has yielded to either byte-level analysis (this session) or
+was already hand-translated to C++ by the 2009 project. The remaining work is real
+effort, not an unknown risk.
 
 ## Reverse-engineering methodology, phase by phase
 

@@ -1,5 +1,8 @@
 # Igor: Objective Uikokahonia - ScummVM Re-implementation
 
+> **New to reverse engineering? Start with [START_HERE.md](START_HERE.md)** -- an
+> ordered, beginner-friendly on-ramp with concrete first tasks.
+>
 > **Planning note:** See [REIMPLEMENTATION_PLAN.md](REIMPLEMENTATION_PLAN.md) for the
 > verification-driven native ScummVM implementation plan, and
 > [REVERSE_ENGINEERING_PLAN.md](REVERSE_ENGINEERING_PLAN.md) for the detailed,
@@ -205,9 +208,10 @@ python3 scripts/parse_overlay_table.py unpacked_IGOR.EXE /path/to/IGOR.DAT
 
 ## Key Documentation
 
-- [REVERSE_ENGINEERING_PLAN.md](REVERSE_ENGINEERING_PLAN.md) — Detailed, validated methodology for recovering the CD release's formats
+- [START_HERE.md](START_HERE.md) — Beginner-friendly on-ramp with ordered first tasks
+- [REVERSE_ENGINEERING_PLAN.md](REVERSE_ENGINEERING_PLAN.md) — Detailed, validated methodology for recovering the CD release's formats and in-game action logic
 - [REIMPLEMENTATION_PLAN.md](REIMPLEMENTATION_PLAN.md) — Native ScummVM engine plan and milestones
-- [tools/igor_cd_extract/](tools/igor_cd_extract/) — Proof-of-concept CD asset extraction tool and its README
+- [tools/igor_cd_extract/](tools/igor_cd_extract/) — Proof-of-concept CD asset/action extraction tools and their README
 - [GUIDE_DOSBOX_UNPACKING.md](GUIDE_DOSBOX_UNPACKING.md) — Step-by-step guide to unpack IGOR.EXE using DOSBox-X debugger
 - [cyxx/igor RE.md](reference/cyxx/igor/docs/RE.md) — Detailed reverse engineering notes
 - [cyxx/igor README.TXT](reference/cyxx/igor/README.TXT) — Original project readme
