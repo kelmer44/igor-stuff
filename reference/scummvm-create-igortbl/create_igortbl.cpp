@@ -30,7 +30,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <assert.h>
-#include "../../engines/igor/resource_ids.h"
+#include "../scummvm-igor-engine/resource_ids.h"
 
 /*
 	uint32 : 'ITBL'

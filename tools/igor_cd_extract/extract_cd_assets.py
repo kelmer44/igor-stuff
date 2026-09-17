@@ -245,7 +245,10 @@ def decode_room_string(raw, offset, length):
             code = {0xE8: 0xA0, 0xE9: 0x82, 0xEA: 0xA1, 0xEB: 0xA2,
                     0xEC: 0xA3, 0xED: 0xA4, 0xEE: 0xA5}.get(code, code)
         out.append(code)
-    return bytes(out).decode("latin-1", errors="replace")
+    # The special-cased target bytes (0xA0/0xA1/0xA2/0xA3/0xA4/0xA5) are DOS
+    # codepage 437 accented characters (a,i,o,u,n,N with tilde/accent), not
+    # Latin-1 -- confirmed by the values matching CP437 exactly.
+    return bytes(out).decode("cp437", errors="replace")
 
 
 def decode_room_strings_stream(raw, pos, terminator=0xF6, marker=0xF4):
