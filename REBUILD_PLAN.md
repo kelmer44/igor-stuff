@@ -180,7 +180,7 @@ GROUP_70_72:
     if (part == 91) { call(cseg190, 0x2F18); goto END_OF_FRAME; }
 GROUP_90_91:
 
-    // === Group 100-102 -> cseg175:0x2767 (Maze) ===
+    // === Group 100-102 -> cseg175:0x2767 (OutsideAdministrationBuilding street) ===
     if (part == 100) goto GROUP_100_102;
     if (part == 101) goto GROUP_100_102;
     if (part == 102) { call(cseg175, 0x2767); goto END_OF_FRAME; }
@@ -547,7 +547,7 @@ END_OF_FRAME:
 | 70-72 | 0x046-0x048 | cseg197:0x28D4 | Maze |
 | 80 | 0x050 | cseg189:0x3486 | Maze |
 | 90-91 | 0x05A-0x05B | cseg190:0x2F18 | Maze |
-| 100-102 | 0x064-0x066 | cseg175:0x2767 | Maze |
+| 100-102 | 0x064-0x066 | cseg175:0x2767 | OutsideAdministrationBuilding street (scrolling, 2 panels) |
 | 110 | 0x06E | cseg176:0x2813 | Maze |
 | 120-122 | 0x078-0x07A | cseg171:0x359A | Maze |
 | 130-131 | 0x082-0x083 | cseg169:0x237D | Maze |

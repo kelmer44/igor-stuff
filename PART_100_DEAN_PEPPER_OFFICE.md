@@ -1,4 +1,23 @@
-# Part 100 — Dean Pepper's Office (DeanPepperOffice)
+# Part 100 — CORRECTION: this document is mislabeled
+
+> **Latest findings (supersede the "Dean Pepper's Office" framing below):**
+> Part `100` is **not** Dean Pepper's Office. It is the **OutsideAdministrationBuilding
+> street** (the "decanato" **exterior**), a **scrolling two-panel room** (parts 100/101/102
+> via cseg175:0x2767, plus part 110 via cseg176:0x2813, which share the loaders
+> cseg177/cseg178/cseg179). `cseg175:2969` tests `s3:0x321A` for `0x64/0x65/0x66`
+> (100/101/102); cseg175's data is `DAT_OutsideAdministrationBuilding` + FRM1-5.
+> The doc's sole evidence (`cseg100:1644` pushing `0x64`) is a `createCodeSegment`
+> **segment number**, not the part number (cseg175 does the same with `0xAF`).
+> DeanPepperOffice (IDs 352-379) is a separate, later room.
+> Resources for the street were never in `resource_sp_cdrom.h` (IDs jump 351→352),
+> so the correct assets for part 100 were extracted manually — see
+> `extracted_cd/OutsideAdministrationBuilding/` and
+> `tools/igor_cd_extract/extract_outsideadmin.py`. The remainder of this document's
+> C-translation analysis, while well-built, applies to DeanPepperOffice, not part 100.
+
+---
+
+# Part 100 as originally documented — Dean Pepper's Office (DeanPepperOffice)
 
 Full reverse-engineering and C translation guide for a part that exists in neither
 the 2009 reference ScummVM port nor the current work-in-progress fork.
