@@ -4,6 +4,10 @@ Answers to four questions about the engine internals: what the `PART_06_ROOM_DAT
 /`PART_100_ROOM_DATA_OFFSETS` numbers mean, how `IGOR.TBL` is built, what the numbers in
 `resource_ids.h` mean, and what it would take to drop the TBL entirely.
 
+See also `SCENE_LAYERS_MASK_AREAS.md` for the layer buffers, the `MSK` region
+map and the `BOX` area table that sit in front of the `DAT_*` data described
+here.
+
 ---
 
 ## 1. What `RoomDataOffsets` means
