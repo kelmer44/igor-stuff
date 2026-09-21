@@ -1,227 +1,154 @@
-# SKILLS — recovering static data from unmapped parts (room DATs, offsets, actions)
+# SKILLS — decoding an Igor room from the DOS disassembly
 
-This file turns what was learned while reverse-engineering the **Decanato / Outside
-Administration Building street** (parts 100/101/102/110, the **Spring** bridge/rock
-area) (parts 5/6) into a repeatable procedure. If a future task needs "the statics"
-(spawn positions, walk targets, facings, action codes, gate rows, sentence names,
-scroll constants) of any room that has no ported C++ in
-`reference/scummvm-igor-engine/`, follow this.
+Use this procedure for missing `PART_*` implementations. `AGENTS.md` remains the
+authority: the disassembly is ground truth, every derived constant needs a source
+address, and unknown behavior stays a disabled TODO.
 
-Hard rules apply on top of everything here (see `AGENTS.md`):
-- ground truth is the DOS disassembly + the extracted blob, never a guess;
-- every constant you add to the fork is annotated with its source
-  (`csegNNN:0xOFFSET` / `code/NNN_OFFS.asm`);
-- anything not derivable stays a marked TODO placeholder, **never** an invented value.
+## 1. Establish the owning segment
 
----
+Start at the part dispatcher and find the overlay whose main loop compares the
+requested part numbers. Do not assume adjacent parts share a layout. For example:
 
-## 1. Materials (where the ground truth lives)
+- parts 100–102 are implemented by `code/175_2767.asm`; its loop bounds are at
+  `cseg175:29AA-29B5`;
+- part 110 is a different overlay (`code/176_2813.asm`) and therefore cannot reuse
+  cseg175's DAT offsets without a separate derivation.
 
-| what | where |
-| --- | --- |
-| Disassembled overlay (all segments) | `code/*.asm`, named `code/<cseg>_<offset>.asm` (e.g. street: `code/176_2813.asm`, `code/175_....asm`, sentence formatter `code/001_08B7.asm`) |
-| Extracted per-room blobs | `extracted_cd/<Room>/opaque/*.bin` (DAT_*, IMG_*, MSK_*, BOX_*, FRM_*) |
-| Auto-decoded action tables (19 rooms) | `extracted_cd_actions/<part>_<Room>_actions.json` + `extracted_cd_actions/ACTIONS_REPORT.md` |
-| Historical 2009 port (only rooms it has) | `reference/scummvm-igor-engine/parts/*.cpp` |
-| TBL generator catalogs (offsets/sizes of every resource) | `reference/scummvm-create-igortbl/resource_sp_cdrom.h` |
-| Where code changes go | `/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/` (verify with `make engines/igor/libigor.a`) |
-| Prior derived data for the street | `ROOMDATA_AND_TBL.md` sections 1a and 5 |
+Record the loader calls, initialization, entry helpers, loop bounds, action jump
+table, and exit cleanup before writing C++.
 
-The catalog tells you where each room's `DAT_*` sits inside `IGOR.EXE`
-(`{ DAT_OutsideAdministrationBuilding, 0x67949c, 6345 }`). The extracted blob is a
-verbatim copy of those bytes.
+## 2. Recover the DAT layout from accesses, not byte patterns
 
----
+Find the DAT allocation/copy and treat its destination as byte zero. For part 100,
+`cseg175:27C3-27D6` copies `0x18C9` bytes to segment offset `0x4E65`.
+Then translate every indexed read relative to that base.
 
-## 2. Reading a DAT access in the disassembly (the addressing model)
+Common shapes are:
 
-The room code loads its DAT exactly once and then indexes it repeatedly with *two*
-registers. Any sequence shaped like this means "read DAT[<base> + ... + N ]":
+- `DAT[base + object * 2]`: packed walk coordinate `x + 320*y`;
+- `DAT[base + object]`: facing or object mapping;
+- `DAT[base + verb * 2 + object * 20]`: plain action code;
+- the next byte at the same row: walk behavior;
+- `DAT[base + object1Index * objectSize + object2Index * 2]`: USE/GIVE matrix.
 
-```
-cseg176:2C51  mov.w     r7.w, 0x4DDC        ; base offset (exe offset of the loaded DAT)
-cseg176:2C54  mov.w     s0,  s3:0xFD18      ; far segment selector for the DAT
-cseg176:2C58  mov.w     r7.w, r7.w + r1     ; index accumulation
-cseg176:2C5E  add.w     r7.w, r3
-cseg176:2C60  mov.b     r0.b.l, s0:r7.w+28  ; DAT[<indexed> + 28]
-```
+For cseg175 these produce:
 
-Conventions:
-- `s3:` = exe data segment; `s0` = far selector loaded from `s3:0xFD18`;
-- the fixed base (`0x4DDC` on the street) is the **byte offset of the DAT inside the
-  exe segment**; `s0:r7.w+N` with `r7` built as above is `DAT[N + index]`;
-- to find the base for a *new* room: grep that room's asm for `s3:0xFD18`, then for
-  the `mov.w r7.w, imm` immediately before it. All subsequent `s0:r7.w+<N>` with that
-  `r7` are DAT reads; `N` is the byte offset inside the DAT.
-- `LE16(...)` little-endian reads sometimes wrap an address with a separate
-  `hexword` fetch + shuffle (`cseg176:1EE5` moves low, `1EF0` high).
+| `RoomDataOffsets` field | value | disassembly source |
+| --- | ---: | --- |
+| area | `{45, 3, 6, 2}` | `cseg175:17F9-1829` |
+| walk points | `77` | `cseg175:1E22-1E68` |
+| walk facing | `90` | `cseg175:1FBB-1FD3` |
+| plain actions | `95` | `cseg175:1DAC-1DD5`, `2C8B-2CBC` |
+| USE matrix | `303` | `cseg175:1C41-1CA7`, `2D0F-2D7A` |
+| GIVE matrix | `3319` | `cseg175:1CE9-1D4F`, `2D7F-2DEA` |
+| object2/object1 maps | `199` / `275` | `cseg175:2D0F-2DEA` |
+| matrix object stride | `84` (`0x54`) | `cseg175:2D5E-2D75` |
 
-Pointer arithmetic is explicit in the asm. Two index patterns cover nearly every read:
+Important: the byte at plain-action offset `95` is both the hover eligibility test
+and the action code. Offset `96` is the walk behavior. Do not invent a separate
+“gate at 95, action at 96” interpretation.
 
-- **single object / verb table**: `DAT[X + verb*2 + obj*20]`
-  (10 verbs × 2 bytes per row, 20-byte stride per object);
-- **two-object (use/give) matrix**: `DAT[X + obj1*82 + obj2*2]` (and `*0x52 = 82`
-  appears as an `imul`), with per-object descriptor arrays `DAT[object2 + type*38 + v]`
-  / `DAT[object1 + type*38 + v]`.
-
----
-
-## 3. Workflow for "extract the static stuff of a missing room"
-
-### Step 0 — identify the room's segments
-`engines/igor/part_main.cpp` shows which `PART_*` owns which parts. Each `PART_*`
-lives in one cseg (street = cseg176 logic, cseg175 entry/walk-in, cseg222 sentence
-formatter, cseg230 memcpy, cseg221 verb-bar). Find the room loop, then its input
-handler (see §5 for the street's layout as a template).
-
-### Step 1 — recover the DAT base and the read offsets
-Grep the room's asm for `s3:0xFD18`, note the fixed base, then collect every
-`s0:r7.w+<N>` read with the index expression built around it. This produces the
-`RoomDataOffsets` numbers directly:
-
-| group | read | meaning |
-| --- | --- | --- |
-| `obj.walkPoints` | `LE16(DAT[b + obj*2])` | packed target `x + 320*y`; unpack `x = v%320`, `y = v/320` (two reads + `div 0x140` per component) |
-| `obj.walkFacingPosition` | `DAT[b + obj]` | byte used with `WalkData::setNextFrame` (Back=1, Right=2, Front=3, Left=4) |
-| `action.defaultVerb` | `DAT[b + verb*2 + obj*20]` | action code (`==0` skip, `==1` walk-to-object, `==3` mask-walk, else EXEC_ACTION case) |
-| `defaultVerb-1` (gate) | `DAT[b-1 + verb*2 + obj*20]` | verbs/objects gate: `!=0` keeps the object, `0` collapses it to object 0 |
-| `defaultVerb`+1 | same index `+1` | walk behavior byte (what the fork calls `_actionWalkPoint`) |
-| `action.useVerb/giveVerb` | `DAT[b + obj1*82 + obj2*2]` | two-object action result |
-| `action.object1/object2` | `DAT[b + type*38 + obj]` | per-object descriptors feeding the two matrix offsets |
-
-### Step 2 — reconstruct the tables from the blob (python)
-Anchor each region from Step 1 against the extracted binary to see the actual values
-(a worked recipe for the street):
+Use a small read-only script to inspect the derived offsets, but verify every index
+formula against the assembly:
 
 ```python
 import struct
-d = open("extracted_cd/OutsideAdministrationBuilding/opaque/DAT_OutsideAdministrationBuilding.bin","rb").read()
-print("size", len(d))
-print("walkPoints +35:", [struct.unpack_from("<H", d, 35+o*2)[0] for o in range(10)])
-print("walkFacing +52:", list(d[52:62]))
-print("sentenceObj +28:", list(d[28:38]))
-for v in range(8):
-    print(f"gate/action verb{v}:",
-          [d[59+v*2+o*20] for o in range(10)],   # gate
-          [d[60+v*2+o*20] for o in range(10)])   # action
-print("useVerb+309 row0:", [d[309+o*82] for o in range(10)])
-print("giveVerb+3255 row0:", [d[3255+o*82] for o in range(10)])
+d = open("extracted_cd/OutsideAdministrationBuilding/opaque/"
+         "DAT_OutsideAdministrationBuilding.bin", "rb").read()
+print([struct.unpack_from("<H", d, 77 + obj * 2)[0] for obj in range(10)])
+print(list(d[90:100]))
+for verb in range(9):
+    print(verb, [(d[95 + verb * 2 + obj * 20],
+                  d[96 + verb * 2 + obj * 20]) for obj in range(10)])
 ```
 
-Rule for reading these dumps: object *strides by 20*, verb *by 2*, so a "row" is one
-verb across all objects. Verify each number against the asm's exact index expression
-before trusting it.
+## 3. Decode entry helpers and action dispatch separately
 
-### Step 3 — classify every constant: in-DAT vs static-exe vs unknown
-Reads that go through the `s3:0xFD18` base are **runtime DAT** (verifiable from the
-blob). Everything else is **static per-exe data** and is NOT recoverable from the DAT:
+An entry helper supplies observable spawn, facing, path destination, final frame,
+and timing. Preserve all of them. Part 100's two proven entries are:
 
-- accesses like `s3:0x<abs>` with no DAT base — e.g. the street's sentence-name tables
-  `s3:0xCC62` / `s3:0x5F10` (formatter `code/001_08B7.asm` ~line 3152), the verb-bar
-  button gate `s3:0x0546`, and the action dispatch table `s3:0x593C` (`call s3:r7.w+22844`);
-- sanity check: if `addr - DAT_base > DAT_size`, it cannot be inside the DAT
-  (`0xCC62 - 0x4DDC = 0x7F86 > 6345`). Leave a TODO citing the file — never synthesize
-  content. Sometimes the read is provably irrelevant to the task (e.g. the verb-bar
-  gate never fires for scene clicks) — then just note it and move on.
+- part 100: `(319,79)`, facing left, path to `(288,84)`,
+  `cseg175:056D-066A`;
+- part 101: `(136,86)`, facing right, path to `(171,97)`,
+  `cseg175:066B-076F`.
 
-Also note per-room *special cases*: the street packs coordinates with `x + 320*y`
-even when `y` lands under the drawn scene (`(185,187)` for the door), and its areas
-come from the panel `BOX` resource (a 5-byte-record table loaded separately), not
-from the DAT. When `area.boxSize == 0` the engine walks through the pixel mask, not
-an area-transition matrix.
+Part 102 has no entry assignment at `cseg175:2969-297C`; it reuses existing state.
+Do not add a plausible spawn.
 
-### Step 4 — annotate and implement in the fork
-Add the offsets to `static_walk.cpp::PART_XX_ROOM_DATA_OFFSETS` + declare in
-`igor.h`, load the room's DAT with `loadActionData(DAT_*)`, and record each constant
-with its `cseg` provenance in a comment (see `static_walk.cpp` street annotation and
-`ROOMDATA_AND_TBL.md` §1a for the format).
+Map action codes by combining the DAT values with the overlay's indirect dispatch.
+Port simple dialogue or part-change cases directly. Keep complex animation and
+scroll cases disabled until their complete loop, state changes, and final walk state
+are translated. For cseg175, actions 101–106 are local dialogue/animation routines,
+107 is the 41-step pan (`02F6-055A`), 108 returns to part 40 (`055B-056C`), and 109
+performs a scripted exit walk before part 70 (`0770-087C`).
 
-### Step 5 — verify
-`make engines/igor/libigor.a`; then check observable behavior (entry walk-in
-coordinates, one-step-per-16-tick cadence, hover/click sentences, walk targets). If a
-behavior can't be derived yet, leave it disabled with a TODO (do not approximate).
+## 4. Recover TXT resources adjacent to custom room loaders
 
----
+This is essential: Igor TXT resources begin with the room's walk-scale tables, not
+just strings. Passing `txt=0` can leave `_walkXScaleRoom` and `_walkYScaleRoom` from
+the previous room, which makes Igor render and move incorrectly.
 
-## 4. The "one blob, two panels" pattern (part_5/6 Spring + the street)
+For a custom loader:
 
-Both areas share a construction that is easy to misunderstand and useful everywhere:
+1. Determine the overlay's file base from the NE segment table.
+2. Translate each loader-relative pointer into a file offset.
+3. When TXT precedes IMG, use `IMG offset - TXT offset` as the candidate length.
+4. Validate the candidate with `decode_text_resource`: it must contain the
+   320-byte X-scale table, 432-byte Y-scale table, two `0xF6`-terminated streams,
+   and ideally zero trailing bytes.
+5. Add it to `resource_sp_cdrom.h` and `resource_ids.h`, rebuild `IGOR.TBL`, and
+   load it only through `loadRoomData`. Never add a runtime side channel.
 
-- `loadRoomData(A…)` decodes room A (IMG → `_screenLayer1`, MSK → `_screenLayer2`,
-  BOX → `_roomObjectAreasTable`, TXT → names) into the **shared** buffers;
-- the off-screen panel is then **photo'd into the ANM buffer before it gets
-  clobbered**:
-  - Spring: `memcpy(_animFramesBuffer + y*224, _screenLayer1 + y*320, 224)` ×144 rows
-    (the panel is 224 columns wide → the 224 stride is a byte-exact photo);
-  - street: full-width 320 panel → plain `memcpy` of 46080 bytes into the ANM slot
-    (`cseg175:2809`, `ANM_PANEL_A = 0x0000`);
-- a *second* `loadRoomData(B…)` **does overwrite** the first room in layer1 and in the
-  shared mask/area/name buffers. Nothing keeps both rooms "alive" — the first panel
-  survives only as its ANM photo;
-- actions are **not** part of `loadRoomData`. One `loadActionData(DAT_*)` +
-  `_roomDataOffsets` describe the whole two-panel area; both panels index the same
-  table;
-- during the scroll the *outgoing* strip is read from `_screenLayer1` (active room)
-  and the *incoming* from the ANM photo; Igor's position along the pan is not taken
-  from any room table — it is re-derived from the hand-authored `WLK_Bridge*` walk
-  sprite tables loaded ad hoc (`PART_06_ACTION_102` / `PART_05_ACTION_102`);
-- at pan end `_currentPart` flips (6→51 / 5→60, street 100↔101) and the *other*
-  `PART_*()` runs, which repeats the whole swap with the load order reversed (the
-  panel you land on is loaded last / active; the Spring photo also carries a `+96`
-  column offset because the rock panel sits at columns 96-319).
+This recovered two previously missed part-100 resources:
 
-So: to place Igor on a two-panel room, keep "photo off-screen first, then load the
-landed panel active" and drive transitions only through `_currentPart` — do not try
-to keep two rooms' masks alive at once.
+| panel | TXT file offset / size | proof |
+| --- | --- | --- |
+| left (cseg179) | `0x693BA2`, 1297 | seg179 base `0x693500`, TXT `+0x06A2`, IMG `+0x0BB3` |
+| right (cseg178) | `0x6864A2`, 1165 | seg178 base `0x685E00`, TXT `+0x06A2`, IMG `+0x0B2F` |
 
----
+Both decode with zero trailing bytes. They provide the scale tables, object names,
+and room dialogue overrides; the earlier conclusion that the street deliberately
+reused stale names was false.
 
-## 5. The street input state machine (a template for other unmapped scenes)
+## 5. Preserve multi-panel loader order
 
-The street's per-frame click handling is inlined in `cseg176` (not the generic
-`handleRoomInput`). This is the shape to look for in any unmapped scene:
+Do not choose the load order from the entry part unless the assembly does so. Part
+100 is unconditional:
 
-```
-cursor region checks (bottom strip 144..199 vs scene y<144)
-  scene: area = mask[cursorY*320+cursorX]         (mask ptr s3:0xD14E)
-         object = areasTable[area].object -> 3221  (5-byte records, s3:-9129)
-         sentenceObj 321F = DAT[28 + object]
-  verb-type gate: verbType != 0 -> USE/GIVE path; else plain walk
-         object gate: 3222 = (DAT[59 + verb*2 + obj*20] != 0) ? obj : 0
-  hover (click flag == 0): sentence slots 320A/320B/320C -> formatter (cseg222:1884)
-  click: walk dispatcher 1E45..1EC8
-         walkable? DAT[60 + verb*2 + obj*20]
-         obj==0 -> walk to click point (fixWalkPosition if area==0)
-         obj!=0 -> walk to LE16(DAT[35 + obj*2]) unpacked %320 /320
-         EB28 != 0 (already moving) -> skip walk-data setup
+1. load DAT (`cseg175:27C3-27D6`);
+2. load cseg179's left panel (`27DB`);
+3. load FRM1–FRM5 through cseg177 (`27E0`);
+4. copy 46080 bytes of the left image to ANM+0 (`2809-2818`);
+5. load cseg178's right panel active (`2845`).
+
+FRM1 starts at ANM `0xB400`, immediately after the 46080-byte panel snapshot;
+FRM2–FRM5 start at `0xBC0A`, `0xC5E2`, `0xC786`, and `0xC8AE`. Omitting FRM1 or
+conditionally reversing the panels contradicts the loader.
+
+## 6. Wire the generic scene loop carefully
+
+Before calling `runPartLoop()`:
+
+- load the DAT and set the verified `RoomDataOffsets`;
+- set the room walk bounds from the real mask dimensions;
+- install the room action callback;
+- load the active panel's TXT last so its scale and names are active;
+- initialize only entry states explicitly assigned by the original.
+
+For hover text, the original part-100 handler keeps the room object only when
+`DAT[95 + verb*2 + object*20] != 0` (`cseg175:2C8B-2CBC`). Apply that before
+formatting the sentence. On click, the next byte is the walk behavior and the packed
+target comes from DAT+77 (`cseg175:1DAC-1E68`).
+
+## 7. Verify and leave an audit trail
+
+Run:
+
+```sh
+make engines/igor/libigor.a
 ```
 
-Runtime slots worth dumping to a table (see `ROOMDATA_AND_TBL.md` §5): `EAAC/EAAE`
-cursor, `3218` click, `321D` verb under cursor, `320D` verb type, `320A/B/C` sentence
-slots, `3221` cursor content, `3222` gated object, `321F` sentence object, `3226`
-use/give result, `D94A/D94B` + `E15A/E15C` walk-state.
-
-When porting a scene like this to the generic fork pipeline: apply the +59 gate to
-`object1Num` for verbType 0, keep sentences verb-only when `DAT[28+obj]` is all
-zeros, and never walk to `y >= mask_height` targets (fork buffers are 320×144; the
-DOS targets can sit below the drawn scene).
-
----
-
-## 6. FAQs / two traps
-
-- **"Why is `obj.walkPoints` such a small number?"** Because it is a *byte offset* into
-  the DAT, never a count or a coordinate. Room 5's `253`/`262` are the start of the
-  walk-point and facing tables inside `DAT_SpringRock`.
-- **"Can I recover the sentence name strings?"** Only if they are in the DAT (a `+28`
-  style read). On the street they are NOT: the formatter reads static exe tables
-  (`s3:0x5F10` / `s3:0xCC62`, stride `verb*0x1F + obj*0x3E`, 30 bytes) that are not in
-  the disassembly. That stays a TODO; the correct placeholder is verb-only sentences
-  and an empty `_roomObjectNames` for the room.
-- **"The walk target y is 187 / the DAT packs (x,y) weirdly."** Coordinates are packed
-  `x + 320*y` and the DOS mask covers 200 rows; the fork's scene buffers only 144.
-  Verbatim DOS targets can be off-screen; clamp or gate rather than pretending the
-  DOS value was wrong.
-- **"A constant isn't in the blob and isn't in the asm."** That is the exact signal to
-  write `// TODO: derive from csegNNN:0xNOTHING-IS-THERE` and stop. Do not invent a
-  spawn, facing, frame count, or timing.
+Then verify at runtime: object names, hotspot filtering, both proven entry walks,
+Igor scale across Y positions, facing at object targets, and each implemented action.
+Every constant in code should cite `csegNNN:offset` (or the loader file); every
+unported branch should name the exact range that still needs translation.

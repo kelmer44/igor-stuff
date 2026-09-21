@@ -1,5 +1,12 @@
 # RoomDataOffsets and IGOR.TBL
 
+> **Part-100 correction (2026-09-21):** The older street analysis later in this
+> file mixed cseg176 (part 110) with cseg175 (parts 100–102) and incorrectly used
+> `txt=0`. Do not use those old street offsets. The verified cseg175 layout is
+> area `{45,3,6,2}`, walk `{77,90}`, actions `{95,303,3319,199,275,84}`. Its full
+> TXT blocks are `0x693BA2`/1297 (left) and `0x6864A2`/1165 (right). See
+> `SKILLS.md` for the corrected derivation.
+
 Answers to four questions about the engine internals: what the `PART_06_ROOM_DATA_OFFSETS`
 /`PART_100_ROOM_DATA_OFFSETS` numbers mean, how `IGOR.TBL` is built, what the numbers in
 `resource_ids.h` mean, and what it would take to drop the TBL entirely.

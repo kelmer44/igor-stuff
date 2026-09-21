@@ -31,6 +31,7 @@
 #include <string.h>
 #include <assert.h>
 #include "../scummvm-igor-engine/resource_ids.h"
+#include "resource_ids_extra.h"
 
 /*
 	uint32 : 'ITBL'

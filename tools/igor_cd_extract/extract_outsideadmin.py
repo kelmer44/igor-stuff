@@ -1,18 +1,17 @@
 #!/usr/bin/env python3
 """Extract part 100 (OutsideAdministrationBuilding / decanato street).
 
-Part 100-102 / 110 is the ONLY room in the game that loads two 320x144
+Part 100-102 is the ONLY room in the game that loads two 320x144
 backgrounds at once (cseg179 = left panel / PART100_bg, cseg178 = right
-panel / arrival "C1"). The stock table-driven extractor can't reach these
-because resource_sp_cdrom.h only lists DAT + FRM1-5 for this room.
+panel / arrival "C1"). The original catalog omitted these panel resources.
 
 All offsets below are exact file offsets into IGOR.EXE, verified against the
 NE overlay layout and the loader disassembly (cseg178:0002 / cseg179:0002):
 
-  cseg178 (seg 178, base 0x685E00): IMG@0x0B2F dims 320x144,
+  cseg178 (seg 178, base 0x685E00): TXT@0x06A2, IMG@0x0B2F dims 320x144,
       PAL@0xBF2F size 0x270, MSK@0xC19F, BOX@0xD0B1, extra DD:0x2373 -> E42E
-  cseg179 (seg 179, base 0x693500): IMG@0x0BB3, PAL@0xBFB3 (0x270),
-      MSK@0xC223, BOX@0xD8A9, extra B3:0x06A2 -> D966
+  cseg179 (seg 179, base 0x693500): TXT@0x06A2, IMG@0x0BB3,
+      PAL@0xBFB3 (0x270), MSK@0xC223, BOX@0xD8A9
   cseg177 (seg 177, base 0x683E00): FRM1-5
 """
 import argparse
@@ -31,13 +30,14 @@ PANELS = [
         "label": "PART100_bg (scrolled-left panel, loaded by cseg179, seg 179)",
         "img": 0x6940B3, "pal": 0x69F4B3, "msk": 0x69F723, "box": 0x6A0DA9,
         "mskSize": 5766,
-        "extra": (0x693BA2, 320, "B3:0x06A2 -> s3:0xD966 (cseg179)"),
+        "txt": (0x693BA2, 1297),
     },
     {
         "key": "panel_right",
         "label": "C1 arrival panel (right, loaded by cseg178, seg 178)",
         "img": 0x68692F, "pal": 0x691D2F, "msk": 0x691F9F, "box": 0x692EB1,
         "mskSize": 3858,
+        "txt": (0x6864A2, 1165),
         "extra": (0x85F373, 48, "DD:0x2373 -> s3:0xE42E (cseg178)"),
     },
 ]
@@ -85,6 +85,18 @@ def process_panel(panel, exe, out_dir):
     with open(os.path.join(pdir, "boxes.json"), "w") as f:
         json.dump({"source": "BOX@0x%X" % panel["box"], "entries": boxes, "warnings": bwarn}, f)
     manifest["resources"].append({"name": "BOX@0x%X" % panel["box"], "type": "BOX", "entryCount": len(boxes) if boxes else 0, "warnings": bwarn})
+
+    txt_off, txt_size = panel["txt"]
+    txt_raw = exe[txt_off:txt_off + txt_size]
+    decoded_txt = E.decode_text_resource(txt_raw)
+    with open(os.path.join(pdir, "text.json"), "w") as f:
+        json.dump({"source": "TXT@0x%X" % txt_off, **decoded_txt}, f, indent=1)
+    raw_dir = os.path.join(pdir, "opaque")
+    os.makedirs(raw_dir, exist_ok=True)
+    with open(os.path.join(raw_dir, "TXT_0x%X.bin" % txt_off), "wb") as f:
+        f.write(txt_raw)
+    manifest["resources"].append({"name": "TXT@0x%X" % txt_off, "type": "TXT", "size": txt_size,
+                                  "trailingBytes": decoded_txt["trailingBytes"]})
 
     if panel.get("extra"):
         off, size, where = panel["extra"]
@@ -136,7 +148,7 @@ def main():
     exe = E.read_exe(args.exe)
     os.makedirs(args.out, exist_ok=True)
 
-    manifest = {"room": "OutsideAdministrationBuilding", "parts": [100, 101, 102, 110],
+    manifest = {"room": "OutsideAdministrationBuilding", "parts": [100, 101, 102],
                 "note": "Two-panel scrolling street (decanato exterior): panel_left = PART100_bg (cseg179), "
                         "panel_right = C1 arrival (cseg178). Walk mask/box are per-panel 320x144.",
                 "discoveryStatus": "verified-fixed-offsets", "panels": [], "resources": []}

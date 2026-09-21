@@ -282,3 +282,5 @@
 { IMG_OutsideAdministrationBuildingB, 0x68692f, 46080 },
 { MSK_OutsideAdministrationBuildingB, 0x691f9f, 3858 },
 { BOX_OutsideAdministrationBuildingB, 0x692eb1, 1280 },
+{ TXT_OutsideAdministrationBuildingA, 0x693ba2, 1297 }, // cseg179:0002, seg179:06A2..0BB2
+{ TXT_OutsideAdministrationBuildingB, 0x6864a2, 1165 }, // cseg178:0002, seg178:06A2..0B2E
