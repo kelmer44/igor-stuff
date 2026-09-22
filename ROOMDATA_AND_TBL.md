@@ -105,16 +105,17 @@ runs: `if (_roomDataOffsets.area.boxSize == 0) buildWalkPathSimple(); else build
 (Note: this project's `buildWalkPath()` currently uses the simple method only — the matrix
 indexing is still commented out at `engines/igor/walk.cpp`.)
 
-### 1a. Part 100 — the street's offsets, annotated
+### 1a. Part 110 — the left street panel's offsets, annotated
 
-The street (`cseg176`, source `code/176_2813.asm`, DAT 6345 B loaded at runtime
+The left-panel overlay (`cseg176`, source `code/176_2813.asm`,
+`DAT_OutsideAdministrationBuildingPart110`, 6209 B loaded at runtime into
 `_roomActionsTable`, exe segment `s3:0xFD18`, DAT base `s3:0x4DDC`):
 
 ```cpp
 const RoomDataOffsets IgorEngine::PART_100_ROOM_DATA_OFFSETS = {
     { 0, 0, 0, 0 },     // area    — no area-box transition matrix used
     { 35, 52 },         // obj     — walkPoints, walkFacingPosition
-    { 60, 309, 3255, 203, 279, 82 },  // action
+    { 59, 309, 3255, 203, 279, 82 },  // action
     { 0, 0, 0, 0, 0 }   // dlg     — no dialogue tables in this DAT
 };
 ```
@@ -126,9 +127,10 @@ All reads below are `DAT[base + ...]` with base in `_roomActionsTable` and `verb
   `y = u16 / 320` (two identical reads + `div 0x140` at `cseg176:1EE5 / 1EF0` and
   `1F0A / 1F15`).
 - `obj.walkFacingPosition` = 52 — byte per object (`cseg176:207C`).
-- `action.defaultVerb` = 60 — `DAT[60 + verb*2 + object*20]` is the action code
-  (checked `!= 0` at `cseg176:1E7B`; `== 3` mask-walk at `2026`; `== 1` walk-to-object
-  at `2061`).
+- `action.defaultVerb` = 59 — `DAT[59 + verb*2 + object*20]` is the action code
+  (`cseg176:2CBC-2CE5`). The following byte at `DAT[60 + ...]` is the walk behavior
+  (checked `!= 0` at `cseg176:1E7B`; `== 3` mask-walk at `2026`; `== 1`
+  walk-to-object at `2061`).
 - `action.object2/object1/objectSize` = 203 / 279 / 82 — the two-object descriptor
   arrays (`DAT[203 + type*38 + obj]` on the use path `2D40..2DA6`, give path `2DB0..2E16`;
   `DAT[279 + type*38 + obj]` likewise). `objectSize` 82 = the `0x52` multiplier.

@@ -14,6 +14,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 RESOURCE_IDS = ROOT / "reference/scummvm-igor-engine/resource_ids.h"
+RESOURCE_IDS_EXTRA = ROOT / "reference/scummvm-create-igortbl/resource_ids_extra.h"
 RESOURCE_TABLE = ROOT / "reference/scummvm-create-igortbl/resource_sp_cdrom.h"
 EXE = ROOT / "igor-cd/IGOR.EXE"
 OUTPUT = ROOT / "patterns/igor_spanish_cd.hexpat"
@@ -59,7 +60,11 @@ def discovered_entries(entries: list[tuple[str, int, int]]) -> list[dict]:
 def id_enum() -> str:
     seen_names: set[str] = set()
     lines = ["enum IgorId : u16 {"]
-    for name, value in ID_RE.findall(RESOURCE_IDS.read_text(encoding="utf-8")):
+    id_text = "\n".join(
+        path.read_text(encoding="utf-8")
+        for path in (RESOURCE_IDS, RESOURCE_IDS_EXTRA)
+    )
+    for name, value in ID_RE.findall(id_text):
         if name in seen_names:
             continue
         seen_names.add(name)
@@ -82,6 +87,18 @@ def action_layouts() -> dict[str, dict[str, int]]:
         name = parts.get(part, {}).get("datName")
         if name:
             result[name.lower()] = layout["action"]
+    # These two overlays were absent from the historical engine. Their layouts
+    # are recovered directly from the DOS accesses relative to each DAT base:
+    # cseg175:1DAC-1DD5,1C41-1D4F,2D0F-2DEA and
+    # cseg176:1E7B-207C,2D40-2E16.
+    result["dat_outsideadministrationbuilding"] = {
+        "defaultVerb": 95, "useVerb": 303, "giveVerb": 3319,
+        "object2": 199, "object1": 275, "objectSize": 84,
+    }
+    result["dat_outsideadministrationbuildingpart110"] = {
+        "defaultVerb": 59, "useVerb": 309, "giveVerb": 3255,
+        "object2": 203, "object1": 279, "objectSize": 82,
+    }
     return result
 
 
@@ -99,12 +116,29 @@ def resource_type(name: str, size: int, actions: dict[str, dict[str, int]]) -> s
         return f"RoomText<{size}>"
     if prefix == "AOF":
         return f"AnimationOffsets<{size}>"
+    if prefix == "WLK":
+        return f"WalkLineTable<{size}>"
     if prefix == "DAT" and name.lower() in actions:
         a = actions[name.lower()]
         return (
             f"RoomActionData<{size}, {a['defaultVerb']}, {a['useVerb']}, "
             f"{a['giveVerb']}, {a['object2']}, {a['object1']}, {a['objectSize']}>"
         )
+    outside_administration_frames = {
+        # cseg176:06F8-076D
+        "FRM_OutsideAdministrationBuilding1": (21, 49),
+        # cseg176:00F2-0167
+        "FRM_OutsideAdministrationBuilding2": (30, 28),
+        # cseg175/cseg176:0052-00F1
+        "FRM_OutsideAdministrationBuilding3": (14, 15),
+        # cseg175/cseg176:0002-0051
+        "FRM_OutsideAdministrationBuilding4": (37, 8),
+        # cseg176:01C7-023C
+        "FRM_OutsideAdministrationBuilding5": (30, 28),
+    }
+    if name in outside_administration_frames:
+        width, height = outside_administration_frames[name]
+        return f"FixedSpriteSheet<{size}, {width}, {height}>"
     if name.startswith("FRM_IgorDir"):
         return f"FixedSpriteSheet<{size}, 30, 50>"
     if name.startswith("FRM_IgorHead"):
@@ -199,6 +233,10 @@ def generate() -> str:
         "struct AnimationOffsets<auto Size> {",
         "    u16 one_based_frame_offsets[Size / 2];",
         "};",
+        "",
+        "struct WalkLineTable<auto Size> {",
+        "    u8 y_by_x[Size];",
+        '} [[comment("One walk-line Y coordinate per indexed X coordinate")]];',
         "",
         "struct SingleObjectAction {",
         "    u8 action_code;",
@@ -309,12 +347,14 @@ def generate() -> str:
         "    DOSHeader dos_header @ 0x000000;",
         "    NEIdentity ne_identity @ dos_header.ne_header_offset;",
         "",
-        "    // 276 resources catalogued by the historical Spanish-CD table.",
+            f"    // {len(entries)} resources catalogued by the Spanish-CD table.",
     ]
 
     lines.extend(placement(*entry, actions) for entry in entries)
     lines.extend(
         [
+            "",
+            "    u8 PART_100_bin_frame_selectors[4] @ 0x8B01D2; // cseg175:01CE-01D8; s3:0x1D2-0x1D5",
             "",
             f"    // {len(discovered)} additional IMG+PAL+MSK chains absent from that table.",
             "    // likely-named/ambiguous labels are fingerprint inferences, not confirmed names.",
@@ -360,7 +400,7 @@ def generate() -> str:
             "    // All physically present VOC files are contiguous. The 1,400 logical",
             "    // sound IDs (including zero entries and aliases) are exposed by IGOR.TBL.",
             "    VocArchive archive @ 0x000000;",
-            "} else if (std::mem::size() == 17065 && std::mem::read_string(0, 4) == \"ITBL\") {",
+            "} else if (std::mem::size() == 17195 && std::mem::read_string(0, 4) == \"ITBL\") {",
             "    IgorTableHeader header @ 0x000000;",
             "    TableResourceList resources_demo_100 @ header.versions[0].resource_table_offset;",
             "    TableResourceList resources_demo_110 @ header.versions[1].resource_table_offset;",

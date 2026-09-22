@@ -459,6 +459,19 @@ enum IgorId : u16 {
     STR_SharewarePenduloAddress4 = 446,
     STR_SharewarePenduloAddress5 = 447,
     STR_SharewarePenduloAddress6 = 448,
+    PAL_OutsideAdministrationBuildingA = 900,
+    IMG_OutsideAdministrationBuildingA = 901,
+    MSK_OutsideAdministrationBuildingA = 902,
+    BOX_OutsideAdministrationBuildingA = 903,
+    PAL_OutsideAdministrationBuildingB = 904,
+    IMG_OutsideAdministrationBuildingB = 905,
+    MSK_OutsideAdministrationBuildingB = 906,
+    BOX_OutsideAdministrationBuildingB = 907,
+    TXT_OutsideAdministrationBuildingA = 908,
+    TXT_OutsideAdministrationBuildingB = 909,
+    WLK_OutsideAdministrationBuildingA = 910,
+    WLK_OutsideAdministrationBuildingB = 911,
+    DAT_OutsideAdministrationBuildingPart110 = 912,
 };
 
 enum ResourceLanguage : u8 { Any = 0, English = 1, Spanish = 2 };
@@ -515,6 +528,10 @@ struct RoomText<auto Size> {
 struct AnimationOffsets<auto Size> {
     u16 one_based_frame_offsets[Size / 2];
 };
+
+struct WalkLineTable<auto Size> {
+    u8 y_by_x[Size];
+} [[comment("One walk-line Y coordinate per indexed X coordinate")]];
 
 struct SingleObjectAction {
     u8 action_code;
@@ -625,7 +642,7 @@ if (std::mem::size() == 9115648 && std::mem::read_string(0, 2) == "MZ") {
     DOSHeader dos_header @ 0x000000;
     NEIdentity ne_identity @ dos_header.ne_header_offset;
 
-    // 276 resources catalogued by the historical Spanish-CD table.
+    // 289 resources catalogued by the Spanish-CD table.
     Blob<3100> FRM_PhysicsClassroom1 @ 0x19D541;
     Blob<24175> ANM_PhilipVodka @ 0x19E46F;
     AnimationOffsets<80> AOF_PhilipVodka @ 0x1A42DE;
@@ -811,18 +828,21 @@ if (std::mem::size() == 9115648 && std::mem::read_string(0, 2) == "MZ") {
     VgaPalette<624> PAL_BellChurch @ 0x5D9224;
     AreaMask<861> MSK_BellChurch @ 0x5D9494;
     AreaTable<1280> BOX_BellChurch @ 0x5D97F1;
-    Blob<6345> DAT_OutsideAdministrationBuilding @ 0x67949C;
-    Blob<2058> FRM_OutsideAdministrationBuilding1 @ 0x683F0D;
-    Blob<2520> FRM_OutsideAdministrationBuilding2 @ 0x684717;
-    Blob<420> FRM_OutsideAdministrationBuilding3 @ 0x6850EF;
-    Blob<296> FRM_OutsideAdministrationBuilding4 @ 0x685293;
-    Blob<2520> FRM_OutsideAdministrationBuilding5 @ 0x6853BB;
+    RoomActionData<6345, 95, 303, 3319, 199, 275, 84> DAT_OutsideAdministrationBuilding @ 0x67949C;
+    FixedSpriteSheet<2058, 21, 49> FRM_OutsideAdministrationBuilding1 @ 0x683F0D;
+    FixedSpriteSheet<2520, 30, 28> FRM_OutsideAdministrationBuilding2 @ 0x684717;
+    FixedSpriteSheet<420, 14, 15> FRM_OutsideAdministrationBuilding3 @ 0x6850EF;
+    FixedSpriteSheet<296, 37, 8> FRM_OutsideAdministrationBuilding4 @ 0x685293;
+    FixedSpriteSheet<2520, 30, 28> FRM_OutsideAdministrationBuilding5 @ 0x6853BB;
+    WalkLineTable<120> WLK_OutsideAdministrationBuildingA @ 0x67C62E;
+    WalkLineTable<120> WLK_OutsideAdministrationBuildingB @ 0x68351D;
+    RoomActionData<6209, 59, 309, 3255, 203, 279, 82> DAT_OutsideAdministrationBuildingPart110 @ 0x68049B;
     RoomActionData<6017, 87, 259, 3135, 151, 227, 80> DAT_SpringBridge @ 0x6A54A6;
-    Blob<134> WLK_Bridge1 @ 0x6A83A8;
-    Blob<2546> WLK_Bridge2 @ 0x6A842E;
+    WalkLineTable<134> WLK_Bridge1 @ 0x6A83A8;
+    WalkLineTable<2546> WLK_Bridge2 @ 0x6A842E;
     RoomActionData<6195, 265, 437, 3313, 329, 405, 80> DAT_SpringRock @ 0x6B60ED;
-    Blob<134> WLK_Bridge3 @ 0x6B9153;
-    Blob<2546> WLK_Bridge4 @ 0x6B91D9;
+    WalkLineTable<134> WLK_Bridge3 @ 0x6B9153;
+    WalkLineTable<2546> WLK_Bridge4 @ 0x6B91D9;
     Blob<84> FRM_SpringRock1 @ 0x6BA53E;
     Blob<759> FRM_SpringRock2 @ 0x6BA592;
     Blob<5145> FRM_SpringRock3 @ 0x6BA889;
@@ -902,6 +922,18 @@ if (std::mem::size() == 9115648 && std::mem::read_string(0, 2) == "MZ") {
     RoomText<28028> TXT_MainTable @ 0x8499E0;
     IndexedImage<9600> IMG_InventoryPanel @ 0x89A298;
     IndexedImage<48000> IMG_Objects @ 0x89C818;
+    VgaPalette<624> PAL_OutsideAdministrationBuildingA @ 0x69F4B3;
+    IndexedImage<46080> IMG_OutsideAdministrationBuildingA @ 0x6940B3;
+    AreaMask<5766> MSK_OutsideAdministrationBuildingA @ 0x69F723;
+    AreaTable<1280> BOX_OutsideAdministrationBuildingA @ 0x6A0DA9;
+    VgaPalette<624> PAL_OutsideAdministrationBuildingB @ 0x691D2F;
+    IndexedImage<46080> IMG_OutsideAdministrationBuildingB @ 0x68692F;
+    AreaMask<3858> MSK_OutsideAdministrationBuildingB @ 0x691F9F;
+    AreaTable<1280> BOX_OutsideAdministrationBuildingB @ 0x692EB1;
+    RoomText<1297> TXT_OutsideAdministrationBuildingA @ 0x693BA2;
+    RoomText<1165> TXT_OutsideAdministrationBuildingB @ 0x6864A2;
+
+    u8 PART_100_bin_frame_selectors[4] @ 0x8B01D2; // cseg175:01CE-01D8; s3:0x1D2-0x1D5
 
     // 30 additional IMG+PAL+MSK chains absent from that table.
     // likely-named/ambiguous labels are fingerprint inferences, not confirmed names.
@@ -1029,7 +1061,7 @@ if (std::mem::size() == 9115648 && std::mem::read_string(0, 2) == "MZ") {
     // All physically present VOC files are contiguous. The 1,400 logical
     // sound IDs (including zero entries and aliases) are exposed by IGOR.TBL.
     VocArchive archive @ 0x000000;
-} else if (std::mem::size() == 17065 && std::mem::read_string(0, 4) == "ITBL") {
+} else if (std::mem::size() == 17195 && std::mem::read_string(0, 4) == "ITBL") {
     IgorTableHeader header @ 0x000000;
     TableResourceList resources_demo_100 @ header.versions[0].resource_table_offset;
     TableResourceList resources_demo_110 @ header.versions[1].resource_table_offset;
