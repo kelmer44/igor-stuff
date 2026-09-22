@@ -75,12 +75,24 @@ and timing. Preserve all of them. Part 100's two proven entries are:
 Part 102 has no entry assignment at `cseg175:2969-297C`; it reuses existing state.
 Do not add a plausible spawn.
 
-Map action codes by combining the DAT values with the overlay's indirect dispatch.
+Map action codes from the table-construction routine, never from the order in which
+the disassembler prints discovered functions. For cseg175, `08B2-09EA` proves:
+
+| action | function | behavior |
+| ---: | --- | --- |
+| 101 | `00F2` | dialogue 201 |
+| 102 | `0770` | scripted door exit, then part 70 |
+| 103 | `011F` | dialogue 202 |
+| 104 | `014C` | state-dependent bin animation |
+| 105 | `026F` | dialogue 206 |
+| 106 | `02C9` | dialogue 208 |
+| 107 | `029C` | dialogue 207 |
+| 108 | `02F6` | 41-step horizontal pan, then part 110 |
+| 109 | `055B` | return to part 40/map |
+
 Port simple dialogue or part-change cases directly. Keep complex animation and
 scroll cases disabled until their complete loop, state changes, and final walk state
-are translated. For cseg175, actions 101–106 are local dialogue/animation routines,
-107 is the 41-step pan (`02F6-055A`), 108 returns to part 40 (`055B-056C`), and 109
-performs a scripted exit walk before part 70 (`0770-087C`).
+are translated.
 
 ## 4. Recover TXT resources adjacent to custom room loaders
 
@@ -125,7 +137,63 @@ FRM1 starts at ANM `0xB400`, immediately after the 46080-byte panel snapshot;
 FRM2–FRM5 start at `0xBC0A`, `0xC5E2`, `0xC786`, and `0xC8AE`. Omitting FRM1 or
 conditionally reversing the panels contradicts the loader.
 
-## 6. Wire the generic scene loop carefully
+## 6. Recover pointer-only WLK tables from an NE segment
+
+Some walk-line tables are read directly through a far pointer and therefore have no
+ordinary room-loader call to search for. Resolve those pointers through the NE
+segment table; do not locate the resource by visually scanning for plausible Y
+coordinates.
+
+For the administration-building pan, the two consumers prove the pointer and index
+formula:
+
+| resource | pointer | access | source |
+| --- | --- | --- | --- |
+| `WLK_DecanatoA` | segment 175, offset `0x672E` | `table[x - 260]` | `cseg175:03E7-0409` |
+| `WLK_DecanatoB` | segment 176, offset `0x661D` | `table[x - 260]` | `cseg176:0584-05A6` |
+
+The historical loader confirms both extents: `game.cpp` reads each pointer into a
+120-byte array declared in `memory.h`. Preserve all 120 bytes. Do not crop a table
+to the subset of indices observed in one animation path.
+
+An NE segment-table entry is eight bytes. For this executable, its first little-
+endian word multiplied by 256 is the segment's file base
+(`reference/cyxx/igor/segment_exe.cpp:35-50`). Thus:
+
+| resource | segment file base | pointer offset | EXE file offset | size |
+| --- | ---: | ---: | ---: | ---: |
+| `WLK_DecanatoA` | `0x675F00` | `0x672E` | `0x67C62E` | 120 |
+| `WLK_DecanatoB` | `0x67CF00` | `0x661D` | `0x68351D` | 120 |
+
+Extract and compare them with exact byte offsets:
+
+```sh
+dd if=IGOR-CD/IGOR.EXE of=/tmp/WLK_DecanatoA.bin \
+  bs=1 skip=$((0x67c62e)) count=120 status=none
+dd if=IGOR-CD/IGOR.EXE of=/tmp/WLK_DecanatoB.bin \
+  bs=1 skip=$((0x68351d)) count=120 status=none
+wc -c /tmp/WLK_DecanatoA.bin /tmp/WLK_DecanatoB.bin
+cmp /tmp/WLK_DecanatoA.bin /tmp/WLK_DecanatoB.bin
+shasum -a 256 /tmp/WLK_DecanatoA.bin /tmp/WLK_DecanatoB.bin
+```
+
+For the Spanish CD image in this workspace, both files are byte-identical and have
+SHA-256 `9af62047a5eb07f1b571ad0bb6426bb0ba211d25e98d3c4d43df0b5aa283241c`.
+Equality is only a cross-check; the two independently resolved far pointers are the
+proof of their locations.
+
+Finally, follow the single-load-path rule: define resource IDs, add both exact
+`{id, offset, size}` rows to `resource_sp_cdrom.h`, rebuild `IGOR.TBL`, and install
+the result as both `IGOR.TBL` and `IGOR-CD/IGOR.TBL`. Load the tables through
+`loadData()` only. A useful failure check is the first byte: it must be `132` at
+both resolved offsets. Starting at `0x67C659` or `0x683548` instead yields `125`,
+which exposes the known 43-byte truncation error.
+
+For another pointer-only table, repeat the full derivation. If neither the
+disassembly nor the historical reference proves its extent, leave a sourced TODO;
+do not infer the end from a smooth-looking byte sequence or the next catalog row.
+
+## 7. Wire the generic scene loop carefully
 
 Before calling `runPartLoop()`:
 
@@ -140,7 +208,7 @@ For hover text, the original part-100 handler keeps the room object only when
 formatting the sentence. On click, the next byte is the walk behavior and the packed
 target comes from DAT+77 (`cseg175:1DAC-1E68`).
 
-## 7. Verify and leave an audit trail
+## 8. Verify and leave an audit trail
 
 Run:
 

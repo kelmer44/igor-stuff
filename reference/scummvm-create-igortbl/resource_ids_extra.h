@@ -10,3 +10,6 @@
 #define BOX_OutsideAdministrationBuildingB 907
 #define TXT_OutsideAdministrationBuildingA 908
 #define TXT_OutsideAdministrationBuildingB 909
+#define WLK_OutsideAdministrationBuildingA 910
+#define WLK_OutsideAdministrationBuildingB 911
+#define DAT_OutsideAdministrationBuildingPart110 912

@@ -189,6 +189,9 @@
 { FRM_OutsideAdministrationBuilding3, 0x6850ef, 420 },
 { FRM_OutsideAdministrationBuilding4, 0x685293, 296 },
 { FRM_OutsideAdministrationBuilding5, 0x6853bb, 2520 },
+{ WLK_OutsideAdministrationBuildingA, 0x67c62e, 120 }, /* cseg175:03E7-0409; segment 175:672E */
+{ WLK_OutsideAdministrationBuildingB, 0x68351d, 120 }, /* cseg176:0584-05A6; segment 176:661D */
+{ DAT_OutsideAdministrationBuildingPart110, 0x68049b, 6209 }, /* cseg176:286F-2882 (recovered gap) */
 { DAT_SpringBridge, 0x6a54a6, 6017 },
 { WLK_Bridge1, 0x6a83a8, 134 },
 { WLK_Bridge2, 0x6a842e, 2546 },
