@@ -13,3 +13,6 @@
 #define WLK_OutsideAdministrationBuildingA 910
 #define WLK_OutsideAdministrationBuildingB 911
 #define DAT_OutsideAdministrationBuildingPart110 912
+#define FRM_IgorIntroLogo 913
+#define IMG_IgorIntroLogo 914
+#define PAL_IgorIntroLogo 915

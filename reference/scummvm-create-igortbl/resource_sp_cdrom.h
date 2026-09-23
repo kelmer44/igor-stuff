@@ -287,3 +287,6 @@
 { BOX_OutsideAdministrationBuildingB, 0x692eb1, 1280 },
 { TXT_OutsideAdministrationBuildingA, 0x693ba2, 1297 }, // cseg179:0002, seg179:06A2..0BB2
 { TXT_OutsideAdministrationBuildingB, 0x6864a2, 1165 }, // cseg178:0002, seg178:06A2..0B2E
+{ FRM_IgorIntroLogo, 0x7c09be, 2678 }, // cseg209:13BE; 206x13 logo subtitle mask
+{ IMG_IgorIntroLogo, 0x7c1434, 39040 }, // cseg209:1E34; 320x122 indexed image
+{ PAL_IgorIntroLogo, 0x7cacb4, 768 }, // cseg209:B6B4; 256-color VGA palette
