@@ -42,3 +42,11 @@ This folder contains the ground-truth materials for writing `engines/igor` code 
    (`cc reference/scummvm-create-igortbl/create_igortbl.cpp` + run it; unmodified it must
    reproduce the shipped `IGOR.TBL` byte-for-byte), and install it into `IGOR.TBL` and
    `IGOR-CD/IGOR.TBL`.
+
+8. **Never confuse a runtime state code with a room/part number.** `_currentPart` stores a
+   state code; the logical part is `_currentPart / 10`, exactly as `getPart()` defines it.
+   Therefore states 70–72 belong to `PART_07`/`part_7.cpp`, states 100–102 to
+   `PART_10`/`part_10.cpp`, and state 110 to `PART_11`/`part_11.cpp`. Keep the raw state
+   codes in transitions and dispatcher cases. Before naming or adding a part, verify its
+   complete state group in `code/001_08B7.asm` and follow the established filename style
+   (`part_7.cpp`, but `PART_07`).

@@ -307,3 +307,22 @@
 { PAL_AdministrationCorridor, 0x75b590, 624 }, // cseg199:C090-C2FF
 { MSK_AdministrationCorridor, 0x75b800, 2388 }, // cseg199:C300-CC53
 { BOX_AdministrationCorridor, 0x75c154, 1280 }, // cseg199:CC54-D153
+{ DAT_OutsideChurch, 0x653b61, 6017 }, // cseg171:35F2-3615; seg171:4461..5BE1
+{ DLG_OutsideChurch, 0x6599e6, 5314 }, // cseg172:0D31-0D54; seg172:24E6..39A7
+{ FRM_OutsideChurch8, 0x65b469, 27365 }, // cseg173:016A-0198; seg173:0269..6D4D
+{ FRM_OutsideChurch9, 0x661f4e, 58 }, // cseg173:019D-01CA; seg173:6D4E..6D87
+{ FRM_OutsideChurch1, 0x661f88, 1869 }, // cseg173:000C-0036; seg173:6D88..74D4
+{ FRM_OutsideChurch2, 0x6626d5, 20 }, // cseg173:003B-0068; seg173:74D5..74E8
+{ FRM_OutsideChurch3, 0x6626e9, 2472 }, // cseg173:006D-009B; seg173:74E9..7E90
+{ FRM_OutsideChurch4, 0x663091, 16 }, // cseg173:00A0-00CD; seg173:7E91..7EA0
+{ FRM_OutsideChurch5, 0x6630a1, 5147 }, // cseg173:00D2-0100; seg173:7EA1..92BB
+{ FRM_OutsideChurch6, 0x6644bc, 14 }, // cseg173:0105-0132; seg173:92BC..92C9
+{ FRM_OutsideChurch7, 0x6644ca, 5145 }, // cseg173:0137-0165; seg173:92CA..A6E2
+{ FRM_OutsideChurch10, 0x6658e3, 6805 }, // cseg173:01CF-01FD; seg173:A6E3..C177
+{ FRM_OutsideChurch11, 0x667378, 14 }, // cseg173:0202-022F; seg173:C178..C185
+{ FRM_OutsideChurch12, 0x667386, 5145 }, // cseg173:0234-0262; seg173:C186..D59E
+{ TXT_OutsideChurch, 0x668f73, 1442 }, // cseg174:01AB-0672; seg174:0673..0C14
+{ IMG_OutsideChurch, 0x669515, 46080 }, // cseg174:006B-0095; seg174:0C15..C014
+{ PAL_OutsideChurch, 0x674915, 624 }, // cseg174:0010-0039; seg174:C015..C284
+{ MSK_OutsideChurch, 0x674b85, 3264 }, // cseg174:00D7-01A8; seg174:C285..CF44
+{ BOX_OutsideChurch, 0x675845, 1280 }, // cseg174:009A-00C3; seg174:CF45..D444
