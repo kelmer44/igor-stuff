@@ -4,14 +4,51 @@ Use this procedure for missing `PART_*` implementations. `AGENTS.md` remains the
 authority: the disassembly is ground truth, every derived constant needs a source
 address, and unknown behavior stays a disabled TODO.
 
+> **Critical translation warning:** Do not replace an assembly initialization block
+> with `setDefaultScale()` (or another convenience helper) until every field written
+> by the original has been compared. Derive DAT table bases from the generic indexed
+> consumer, not from a one-off scripted access. Treat the historical C++ reference as
+> a navigation aid: it contains transcription errors, so edge-clipping formulas and
+> room epilogues must be checked against `code/*.asm`. Port conditional palette fades
+> and other exit cleanup, not just the main loop. See
+> [WALK_RENDERING_PORTING_WARNINGS.md](WALK_RENDERING_PORTING_WARNINGS.md) for the
+> failure record and required boundary checks.
+
+## Naming invariant: part number versus runtime state
+
+Never name a C++ part directly from `_currentPart`. The original dispatcher stores
+runtime **state codes** in that variable, while `getPart()` defines the logical room as
+`_currentPart / 10`. One overlay may therefore own several adjacent state codes.
+
+| original dispatcher states | logical part | C++ symbol | active-fork filename | proof |
+| --- | ---: | --- | --- | --- |
+| 70, 71, 72 | 7 | `PART_07` | `part_7.cpp` | `cseg001:093F-0953` |
+| 100, 101, 102 | 10 | `PART_10` | `part_10.cpp` | `cseg001:0975-0989` |
+| 110 | 11 | `PART_11` | `part_11.cpp` | `cseg001:098C-0996` |
+
+The raw values remain unchanged in `_currentPart` assignments and dispatcher cases.
+Only the room-level symbol, source filename, helper names, and room-data constants use
+the logical part number. Low single-digit source filenames follow the active tree's
+existing unpadded style (`part_4.cpp`, `part_5.cpp`, `part_6.cpp`), while C++ symbols
+retain two digits (`PART_04`, `PART_05`, `PART_06`).
+
+Before implementing or renaming any part:
+
+1. Find every state routed to the same overlay in `code/001_08B7.asm`.
+2. Divide those state codes by ten and confirm they yield one logical part.
+3. Keep exact state codes in control flow; use the logical part only for names.
+4. Audit declarations, definitions, build lists, resource symbols, tools, and docs with
+   `rg` so a raw-state-derived name cannot survive the rename.
+5. Build `engines/igor/libigor.a` and inspect its member names after a source rename.
+
 ## 1. Establish the owning segment
 
 Start at the part dispatcher and find the overlay whose main loop compares the
 requested part numbers. Do not assume adjacent parts share a layout. For example:
 
-- parts 100–102 are implemented by `code/175_2767.asm`; its loop bounds are at
+- `PART_10` states 100–102 are implemented by `code/175_2767.asm`; its loop bounds are at
   `cseg175:29AA-29B5`;
-- part 110 is a different overlay (`code/176_2813.asm`) and therefore cannot reuse
+- `PART_11` state 110 is a different overlay (`code/176_2813.asm`) and therefore cannot reuse
   cseg175's DAT offsets without a separate derivation.
 
 Record the loader calls, initialization, entry helpers, loop bounds, action jump
@@ -19,7 +56,7 @@ table, and exit cleanup before writing C++.
 
 ## 2. Recover the DAT layout from accesses, not byte patterns
 
-Find the DAT allocation/copy and treat its destination as byte zero. For part 100,
+Find the DAT allocation/copy and treat its destination as byte zero. For `PART_10`,
 `cseg175:27C3-27D6` copies `0x18C9` bytes to segment offset `0x4E65`.
 Then translate every indexed read relative to that base.
 
@@ -65,14 +102,14 @@ for verb in range(9):
 ## 3. Decode entry helpers and action dispatch separately
 
 An entry helper supplies observable spawn, facing, path destination, final frame,
-and timing. Preserve all of them. Part 100's two proven entries are:
+and timing. Preserve all of them. `PART_10`'s two proven entries are:
 
-- part 100: `(319,79)`, facing left, path to `(288,84)`,
+- state 100: `(319,79)`, facing left, path to `(288,84)`,
   `cseg175:056D-066A`;
-- part 101: `(136,86)`, facing right, path to `(171,97)`,
+- state 101: `(136,86)`, facing right, path to `(171,97)`,
   `cseg175:066B-076F`.
 
-Part 102 has no entry assignment at `cseg175:2969-297C`; it reuses existing state.
+State 102 has no entry assignment at `cseg175:2969-297C`; it reuses existing state.
 Do not add a plausible spawn.
 
 Map action codes from the table-construction routine, never from the order in which
@@ -81,13 +118,13 @@ the disassembler prints discovered functions. For cseg175, `08B2-09EA` proves:
 | action | function | behavior |
 | ---: | --- | --- |
 | 101 | `00F2` | dialogue 201 |
-| 102 | `0770` | scripted door exit, then part 70 |
+| 102 | `0770` | scripted door exit, then `PART_07` state 70 |
 | 103 | `011F` | dialogue 202 |
 | 104 | `014C` | state-dependent bin animation |
 | 105 | `026F` | dialogue 206 |
 | 106 | `02C9` | dialogue 208 |
 | 107 | `029C` | dialogue 207 |
-| 108 | `02F6` | 41-step horizontal pan, then part 110 |
+| 108 | `02F6` | 41-step horizontal pan, then `PART_11` state 110 |
 | 109 | `055B` | return to part 40/map |
 
 Port simple dialogue or part-change cases directly. Keep complex animation and
@@ -111,7 +148,7 @@ For a custom loader:
 5. Add it to `resource_sp_cdrom.h` and `resource_ids.h`, rebuild `IGOR.TBL`, and
    load it only through `loadRoomData`. Never add a runtime side channel.
 
-This recovered two previously missed part-100 resources:
+This recovered two previously missed `PART_10` resources:
 
 | panel | TXT file offset / size | proof |
 | --- | --- | --- |
@@ -124,8 +161,8 @@ reused stale names was false.
 
 ## 5. Preserve multi-panel loader order
 
-Do not choose the load order from the entry part unless the assembly does so. Part
-100 is unconditional:
+Do not choose the load order from the entry state unless the assembly does so.
+`PART_10` initialization is unconditional:
 
 1. load DAT (`cseg175:27C3-27D6`);
 2. load cseg179's left panel (`27DB`);
@@ -203,7 +240,7 @@ Before calling `runPartLoop()`:
 - load the active panel's TXT last so its scale and names are active;
 - initialize only entry states explicitly assigned by the original.
 
-For hover text, the original part-100 handler keeps the room object only when
+For hover text, the original `PART_10` handler keeps the room object only when
 `DAT[95 + verb*2 + object*20] != 0` (`cseg175:2C8B-2CBC`). Apply that before
 formatting the sentence. On click, the next byte is the walk behavior and the packed
 target comes from DAT+77 (`cseg175:1DAC-1E68`).
@@ -218,5 +255,9 @@ make engines/igor/libigor.a
 
 Then verify at runtime: object names, hotspot filtering, both proven entry walks,
 Igor scale across Y positions, facing at object targets, and each implemented action.
+For walking, exercise both horizontal directions at x=0 and x=319 with increasing,
+decreasing, and unchanged Y; a sprite fragment on the opposite edge means a path
+record failed to clip to its scanline. Exercise every exit and verify whether its
+fade is full, partial, or deliberately absent in the overlay epilogue.
 Every constant in code should cite `csegNNN:offset` (or the loader file); every
 unported branch should name the exact range that still needs translation.

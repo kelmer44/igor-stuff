@@ -95,7 +95,7 @@ def action_layouts() -> dict[str, dict[str, int]]:
         "defaultVerb": 95, "useVerb": 303, "giveVerb": 3319,
         "object2": 199, "object1": 275, "objectSize": 84,
     }
-    result["dat_outsideadministrationbuildingpart110"] = {
+    result["dat_outsideadministrationbuildingpart11"] = {
         "defaultVerb": 59, "useVerb": 309, "giveVerb": 3255,
         "object2": 203, "object1": 279, "objectSize": 82,
     }
@@ -354,7 +354,7 @@ def generate() -> str:
     lines.extend(
         [
             "",
-            "    u8 PART_100_bin_frame_selectors[4] @ 0x8B01D2; // cseg175:01CE-01D8; s3:0x1D2-0x1D5",
+            "    u8 PART_10_bin_frame_selectors[4] @ 0x8B01D2; // cseg175:01CE-01D8; s3:0x1D2-0x1D5",
             "",
             f"    // {len(discovered)} additional IMG+PAL+MSK chains absent from that table.",
             "    // likely-named/ambiguous labels are fingerprint inferences, not confirmed names.",

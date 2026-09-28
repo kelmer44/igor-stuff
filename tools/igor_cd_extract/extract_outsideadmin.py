@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Extract part 100 (OutsideAdministrationBuilding / decanato street).
+"""Extract PART_10 states 100-102 (OutsideAdministrationBuilding / decanato street).
 
-Part 100-102 is the ONLY room in the game that loads two 320x144
-backgrounds at once (cseg179 = left panel / PART100_bg, cseg178 = right
+PART_10 is the ONLY room in the game that loads two 320x144
+backgrounds at once (cseg179 = left panel / PART10_bg, cseg178 = right
 panel / arrival "C1"). The original catalog omitted these panel resources.
 
 All offsets below are exact file offsets into IGOR.EXE, verified against the
@@ -27,7 +27,7 @@ BG_W, BG_H = E.BG_WIDTH, E.BG_HEIGHT
 PANELS = [
     {
         "key": "panel_left",
-        "label": "PART100_bg (scrolled-left panel, loaded by cseg179, seg 179)",
+        "label": "PART10_bg (scrolled-left panel, loaded by cseg179, seg 179)",
         "img": 0x6940B3, "pal": 0x69F4B3, "msk": 0x69F723, "box": 0x6A0DA9,
         "mskSize": 5766,
         "txt": (0x693BA2, 1297),
@@ -148,8 +148,8 @@ def main():
     exe = E.read_exe(args.exe)
     os.makedirs(args.out, exist_ok=True)
 
-    manifest = {"room": "OutsideAdministrationBuilding", "parts": [100, 101, 102],
-                "note": "Two-panel scrolling street (decanato exterior): panel_left = PART100_bg (cseg179), "
+    manifest = {"room": "OutsideAdministrationBuilding", "states": [100, 101, 102],
+                "note": "Two-panel scrolling street (decanato exterior): panel_left = PART10_bg (cseg179), "
                         "panel_right = C1 arrival (cseg178). Walk mask/box are per-panel 320x144.",
                 "discoveryStatus": "verified-fixed-offsets", "panels": [], "resources": []}
 

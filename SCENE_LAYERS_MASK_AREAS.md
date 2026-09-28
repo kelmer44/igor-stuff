@@ -296,7 +296,7 @@ only entry point:
 `decodeRoomStrings` (`room.cpp:89-129`) fills `_roomObjectNames[20]` and
 `_globalDialogueTexts[200..249]`; it only runs when `txt != 0`, so a room loaded
 with `txt = 0` (e.g. the street panels) must clear its names explicitly or leak
-the previous room's (`part_100.cpp:129-131`).
+the previous room's (`part_10.cpp`).
 
 ### Depth scale
 
@@ -311,7 +311,7 @@ depth.
 ## 6. Presentation
 
 1. Copy the background: `memcpy(_screenVGA, _screenLayer1, 46080)`
-   (e.g. `part_85.cpp:53`, `part_100.cpp:168`).
+   (e.g. `part_85.cpp:53`, `part_10.cpp`).
 2. Draw actors with `moveIgor(pos, frame)` (`walk.cpp:85-211`). For every
    on-screen Igor pixel it looks up the mask region under that pixel and the
    `BOX` record:
@@ -350,12 +350,13 @@ loaded at a per-part base (street: `s3:0x4DDC` in `cseg176`, `s3:0x4E65` in
 
 ## 8. Two-panel rooms
 
-For the bridge/rock (parts 5/6) and the street (parts 100/101/102/110) the room
+For the bridge/rock (`PART_05`/`PART_06`) and the street (`PART_10` states
+100/101/102 plus `PART_11` state 110) the room
 is two images wide. `loadRoomData` is called once per panel; the second call
 overwrites `_screenLayer1`, `_screenLayer2` (mask) and
 `_roomObjectAreasTable`, so **only the active panel's mask/area table exists**.
 The off-screen panel survives only as a photo in `_animFramesBuffer`. See
-`SKILLS.md` §4 and `part_100.cpp:25-62`. During a pan the mask buffer is
+`SKILLS.md` §4 and `part_10.cpp`. During a pan the mask buffer is
 recycled as the composition target (§1), so walking across a pan is driven by
 the room's own ad-hoc code, not by `_screenLayer2`.
 

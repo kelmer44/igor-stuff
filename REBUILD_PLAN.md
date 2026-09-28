@@ -186,7 +186,7 @@ GROUP_90_91:
     if (part == 102) { call(cseg175, 0x2767); goto END_OF_FRAME; }
 GROUP_100_102:
 
-    // === Part 110 -> cseg176:0x2813 (Maze) ===
+    // === PART_11 state 110 -> cseg176:0x2813 (Maze) ===
     if (part == 110) { call(cseg176, 0x2813); goto END_OF_FRAME; }
 
     // === Group 120-122 -> cseg171:0x359A (Maze) ===
@@ -403,7 +403,7 @@ GROUP_680_681:
     // === Part 690 -> cseg051:0x2715 (Maze entrance) ===
     if (part == 690) { call(cseg051, 0x2715); goto END_OF_FRAME; }
 
-    // === Part 700 -> cseg046:0x117B ===
+    // === PART_70 state 700 -> cseg046:0x117B ===
     if (part == 700) { call(cseg046, 0x117B); goto END_OF_FRAME; }
 
     // === Part 710 -> cseg060:0x167D ===
@@ -507,7 +507,7 @@ END_OF_FRAME:
     if (partLow == 0x33) needsDialogue = true;   // part 51
     if (partLow == 0x3C) needsDialogue = true;   // part 60
     if (partLow == 0x66) needsDialogue = true;   // part 102
-    if (partLow == 0x6E) needsDialogue = true;   // part 110
+    if (partLow == 0x6E) needsDialogue = true;   // PART_11 state 110
     if (_currentPart == 0x154) needsDialogue = true;  // part 340
     if (_currentPart == 0x15F) needsDialogue = true;  // part 351
     if (_currentPart == 0x2EE) needsDialogue = true;  // part 750

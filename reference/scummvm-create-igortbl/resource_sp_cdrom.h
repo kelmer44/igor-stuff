@@ -189,9 +189,10 @@
 { FRM_OutsideAdministrationBuilding3, 0x6850ef, 420 },
 { FRM_OutsideAdministrationBuilding4, 0x685293, 296 },
 { FRM_OutsideAdministrationBuilding5, 0x6853bb, 2520 },
+{ ANM_DecanatoHamburger, 0x4efcee, 0x1386 }, /* cseg134:21AF-21ED */
 { WLK_OutsideAdministrationBuildingA, 0x67c62e, 120 }, /* cseg175:03E7-0409; segment 175:672E */
 { WLK_OutsideAdministrationBuildingB, 0x68351d, 120 }, /* cseg176:0584-05A6; segment 176:661D */
-{ DAT_OutsideAdministrationBuildingPart110, 0x68049b, 6209 }, /* cseg176:286F-2882 (recovered gap) */
+{ DAT_OutsideAdministrationBuildingPart11, 0x68049b, 6209 }, /* PART_11 state 110; cseg176:286F-2882 */
 { DAT_SpringBridge, 0x6a54a6, 6017 },
 { WLK_Bridge1, 0x6a83a8, 134 },
 { WLK_Bridge2, 0x6a842e, 2546 },
@@ -237,6 +238,15 @@
 { PAL_DeanPepperOffice, 0x74404e, 624 },
 { MSK_DeanPepperOffice, 0x7442be, 2745 },
 { BOX_DeanPepperOffice, 0x744d77, 1280 },
+{ ANM_AdministrationSecretaryRoom1, 0x7057d5, 0x0d38 }, /* cseg192:000C-0036 */
+{ ANM_AdministrationSecretaryRoom2, 0x70650d, 0x01fb }, /* cseg192:003B-0069 */
+{ ANM_AdministrationSecretaryRoom3, 0x706708, 0x4dd8 }, /* cseg192:006E-009C */
+{ ANM_AdministrationSecretaryRoom4, 0x70b4e0, 0x0930 }, /* cseg192:00A1-00CF */
+{ ANM_AdministrationSecretaryRoom5, 0x70be10, 0x07d0 }, /* cseg192:00D4-0102 */
+{ ANM_AdministrationSecretaryRoom6, 0x70c5e0, 0x18e4 }, /* cseg192:0107-0135 */
+{ ANM_AdministrationSecretaryRoom7, 0x70dec4, 0x14b4 }, /* cseg192:013A-0168 */
+{ ANM_AdministrationSecretaryRoom8, 0x70f378, 0x0870 }, /* cseg192:016D-019B */
+{ ANM_AdministrationSecretaryRoom9, 0x70fbe8, 0x399d }, /* cseg192:01A0-01CE */
 { DAT_StudentDormitoryRoom, 0x7a446d, 6673 },
 { TXT_StudentDormitoryRoom, 0x7b18a2, 1476 },
 { IMG_StudentDormitoryRoom, 0x7b1e66, 46080 },
@@ -290,3 +300,10 @@
 { FRM_IgorIntroLogo, 0x7c09be, 2678 }, // cseg209:13BE; 206x13 logo subtitle mask
 { IMG_IgorIntroLogo, 0x7c1434, 39040 }, // cseg209:1E34; 320x122 indexed image
 { PAL_IgorIntroLogo, 0x7cacb4, 768 }, // cseg209:B6B4; 256-color VGA palette
+{ DAT_AdministrationCorridor, 0x748b32, 6745 }, // cseg197:3732-518A; copied at cseg197:2920-2943
+{ ANM_AdministrationCorridor, 0x74c8d6, 11085 }, // cseg198:00D6-2C22; loaded at cseg198:0002-00D5
+{ TXT_AdministrationCorridor, 0x74fba2, 1518 }, // cseg199:06A2-0C8F
+{ IMG_AdministrationCorridor, 0x750190, 46080 }, // cseg199:0C90-C08F
+{ PAL_AdministrationCorridor, 0x75b590, 624 }, // cseg199:C090-C2FF
+{ MSK_AdministrationCorridor, 0x75b800, 2388 }, // cseg199:C300-CC53
+{ BOX_AdministrationCorridor, 0x75c154, 1280 }, // cseg199:CC54-D153

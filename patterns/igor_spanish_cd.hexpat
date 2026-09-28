@@ -471,7 +471,7 @@ enum IgorId : u16 {
     TXT_OutsideAdministrationBuildingB = 909,
     WLK_OutsideAdministrationBuildingA = 910,
     WLK_OutsideAdministrationBuildingB = 911,
-    DAT_OutsideAdministrationBuildingPart110 = 912,
+    DAT_OutsideAdministrationBuildingPart11 = 912,
 };
 
 enum ResourceLanguage : u8 { Any = 0, English = 1, Spanish = 2 };
@@ -836,7 +836,7 @@ if (std::mem::size() == 9115648 && std::mem::read_string(0, 2) == "MZ") {
     FixedSpriteSheet<2520, 30, 28> FRM_OutsideAdministrationBuilding5 @ 0x6853BB;
     WalkLineTable<120> WLK_OutsideAdministrationBuildingA @ 0x67C62E;
     WalkLineTable<120> WLK_OutsideAdministrationBuildingB @ 0x68351D;
-    RoomActionData<6209, 59, 309, 3255, 203, 279, 82> DAT_OutsideAdministrationBuildingPart110 @ 0x68049B;
+    RoomActionData<6209, 59, 309, 3255, 203, 279, 82> DAT_OutsideAdministrationBuildingPart11 @ 0x68049B;
     RoomActionData<6017, 87, 259, 3135, 151, 227, 80> DAT_SpringBridge @ 0x6A54A6;
     WalkLineTable<134> WLK_Bridge1 @ 0x6A83A8;
     WalkLineTable<2546> WLK_Bridge2 @ 0x6A842E;
@@ -933,7 +933,7 @@ if (std::mem::size() == 9115648 && std::mem::read_string(0, 2) == "MZ") {
     RoomText<1297> TXT_OutsideAdministrationBuildingA @ 0x693BA2;
     RoomText<1165> TXT_OutsideAdministrationBuildingB @ 0x6864A2;
 
-    u8 PART_100_bin_frame_selectors[4] @ 0x8B01D2; // cseg175:01CE-01D8; s3:0x1D2-0x1D5
+    u8 PART_10_bin_frame_selectors[4] @ 0x8B01D2; // cseg175:01CE-01D8; s3:0x1D2-0x1D5
 
     // 30 additional IMG+PAL+MSK chains absent from that table.
     // likely-named/ambiguous labels are fingerprint inferences, not confirmed names.

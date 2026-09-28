@@ -1,14 +1,14 @@
 # RoomDataOffsets and IGOR.TBL
 
-> **Part-100 correction (2026-09-21):** The older street analysis later in this
-> file mixed cseg176 (part 110) with cseg175 (parts 100–102) and incorrectly used
+> **PART_10 correction (2026-09-21):** The older street analysis later in this
+> file mixed cseg176 (`PART_11`, state 110) with cseg175 (`PART_10`, states 100–102) and incorrectly used
 > `txt=0`. Do not use those old street offsets. The verified cseg175 layout is
 > area `{45,3,6,2}`, walk `{77,90}`, actions `{95,303,3319,199,275,84}`. Its full
 > TXT blocks are `0x693BA2`/1297 (left) and `0x6864A2`/1165 (right). See
 > `SKILLS.md` for the corrected derivation.
 
 Answers to four questions about the engine internals: what the `PART_06_ROOM_DATA_OFFSETS`
-/`PART_100_ROOM_DATA_OFFSETS` numbers mean, how `IGOR.TBL` is built, what the numbers in
+/`PART_10_ROOM_DATA_OFFSETS` numbers mean, how `IGOR.TBL` is built, what the numbers in
 `resource_ids.h` mean, and what it would take to drop the TBL entirely.
 
 See also `SCENE_LAYERS_MASK_AREAS.md` for the layer buffers, the `MSK` region
@@ -105,14 +105,14 @@ runs: `if (_roomDataOffsets.area.boxSize == 0) buildWalkPathSimple(); else build
 (Note: this project's `buildWalkPath()` currently uses the simple method only — the matrix
 indexing is still commented out at `engines/igor/walk.cpp`.)
 
-### 1a. Part 110 — the left street panel's offsets, annotated
+### 1a. `PART_11` state 110 — the left street panel's offsets, annotated
 
 The left-panel overlay (`cseg176`, source `code/176_2813.asm`,
-`DAT_OutsideAdministrationBuildingPart110`, 6209 B loaded at runtime into
+`DAT_OutsideAdministrationBuildingPart11`, 6209 B loaded at runtime into
 `_roomActionsTable`, exe segment `s3:0xFD18`, DAT base `s3:0x4DDC`):
 
 ```cpp
-const RoomDataOffsets IgorEngine::PART_100_ROOM_DATA_OFFSETS = {
+const RoomDataOffsets IgorEngine::PART_11_ROOM_DATA_OFFSETS = {
     { 0, 0, 0, 0 },     // area    — no area-box transition matrix used
     { 35, 52 },         // obj     — walkPoints, walkFacingPosition
     { 59, 309, 3255, 203, 279, 82 },  // action
@@ -160,8 +160,8 @@ immediately followed (byte 265) by the action table base (`defaultVerb` = 265,
 of the room's byte blob (see `extracted_cd_actions/part_05_SpringRock_actions.json` and
 `ACTIONS_REPORT.md`, which decode the single-object action table starting at byte 265).
 
-For Part 100 the offsets are derived and committed in
-`PART_100_ROOM_DATA_OFFSETS` (`static_walk.cpp:235`): `obj{35,52}`, `action{60,309,3255,
+For `PART_11` state 110 the offsets are derived and committed in
+`PART_11_ROOM_DATA_OFFSETS` (`static_walk.cpp`): `obj{35,52}`, `action{59,309,3255,
 203,279,82}`, the `area` and `dlg` groups are 0 (see §1a below for why). See §5 for the
 street's scene input flow.
 
@@ -304,7 +304,7 @@ midi/sfx). `IGOR.TBL` becomes unused.
 
 ---
 
-## 5. Part 100 — the street's scene input flow (verb / click mapping)
+## 5. `PART_11` state 110 — the street's scene input flow (verb / click mapping)
 
 The street does **not** run through the generic `handleRoomInput()` pipeline. Its
 per-frame input logic is inlined in `cseg176` (`cseg176:2B0C` onward of
