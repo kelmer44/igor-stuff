@@ -28,6 +28,11 @@
 { FRM_Park2, 0x3f4881, 62 },
 { FRM_Park3, 0x3f48bf, 3969 },
 { FRM_Park4, 0x3f5840, 3150 },
+{ TXT_ParkRight, 0x3dffa2, 1160 }, // cseg104:01AB-0244; seg104:06A2..0B29
+{ IMG_ParkRight, 0x3e042a, 46080 }, // cseg104:006B-0095; seg104:0B2A..BF29
+{ PAL_ParkRight, 0x3eb82a, 624 }, // cseg104:0010-0039; seg104:BF2A..C199
+{ MSK_ParkRight, 0x3eba9a, 3972 }, // cseg104:00D7-01A8; seg104:C19A..D11D
+{ BOX_ParkRight, 0x3eca1e, 1280 }, // cseg104:009A-00C3; seg104:D11E..D61D
 { TXT_Park, 0x3f6ba2, 1691 },
 { IMG_Park, 0x3f723d, 46080 },
 { PAL_Park, 0x40263d, 624 },

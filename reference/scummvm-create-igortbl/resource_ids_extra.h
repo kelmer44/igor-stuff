@@ -33,3 +33,8 @@
 #define ANM_AdministrationSecretaryRoom8 930
 #define ANM_AdministrationSecretaryRoom9 931
 #define ANM_DecanatoHamburger 932
+#define TXT_ParkRight 933
+#define IMG_ParkRight 934
+#define PAL_ParkRight 935
+#define MSK_ParkRight 936
+#define BOX_ParkRight 937

@@ -230,7 +230,59 @@ For another pointer-only table, repeat the full derivation. If neither the
 disassembly nor the historical reference proves its extent, leave a sourced TODO;
 do not infer the end from a smooth-looking byte sequence or the next catalog row.
 
-## 7. Wire the generic scene loop carefully
+## 7. Translate timer state to the engine's tick quantum
+
+Do not copy an original assignment to `s3:0xEACA` literally into `_gameTicks`.
+The DOS loop advances `EACA` by one after each hardware tick and wraps `0x3F` to
+zero. The port instead advances `_gameTicks` by `kTimerTicksCount == 8` and resets
+it only when it is exactly 64 (`engines/igor/input.cpp`, `engines/igor/igor.h`). An
+initial value outside the port's reachable eight-tick states can therefore make an
+otherwise faithful loop non-terminating.
+
+The park scrolls are the required regression example:
+
+| direction | original initialization | timing predicate | original increment/wrap |
+| --- | --- | --- | --- |
+| Part 34 reverse scroll | `EACA = 15`, `cseg100:021A` | `(EACA + 1) % 16 == 0`, `cseg100:021F-0230` | `cseg100:03C0-03DD` |
+| Part 35 forward scroll (action 107) | `EACA = 15`, `cseg101:0BD1` | `(EACA + 1) % 16 == 0`, `cseg101:0BD6-0BE7` | `cseg101:0D73-0D90` |
+
+Assigning `_gameTicks = 15` is wrong. The engine then visits
+`15, 23, 31, 39, 47, 55, 63, 71, ...`: it never satisfies the modulo-16 gate and
+never equals the engine's reset value of 64. Map the original counter into the
+engine's representable tick phase before assigning it:
+
+```cpp
+_gameTicks = originalValue & ~(kTimerTicksCount - 1);
+```
+
+Thus the verified translation of the original value 15 is 8, not 15. This mapping
+matches the normalization already performed by `compareGameTick()` in
+`engines/igor/igor.h`; cite both the original assignment address and the engine
+adaptation when using it. Do not use guessed rounding or apply the formula to a
+different timer representation without first deriving that representation.
+
+For every ported loop that reads or writes `EAC8`, `EAC9`, or `EACA`, validation
+must prove liveness, not merely compare constants:
+
+1. Record the original initialization, predicate, increment, wrap, and exit
+   condition with their disassembly addresses.
+2. Record the port's timer quantum and exact wrap behavior from the current engine
+   implementation.
+3. Enumerate the reachable counter states from the translated initialization for at
+   least one complete period. Confirm every timing predicate becomes true and the
+   loop's progress/exit variable reaches its terminal value.
+4. Add that state trace as a deterministic validator or unit test. For the park,
+   `tools/validate_park_parts.py` proves that `8, 16, 24, ..., 0` makes the
+   modulo-16 body execute every other wait and completes all 21 steps.
+5. Audit the inverse direction and sibling actions that reproduce the same assembly
+   idiom. The Part 35 defect also existed in Part 34; testing only action 107 would
+   have left the reverse scroll broken.
+
+Any direct `_gameTicks` assignment that is not a multiple of
+`kTimerTicksCount` must be treated as a failed translation until the disassembly and
+a reachable-state proof demonstrate otherwise.
+
+## 8. Wire the generic scene loop carefully
 
 Before calling `runPartLoop()`:
 
@@ -245,7 +297,7 @@ For hover text, the original `PART_10` handler keeps the room object only when
 formatting the sentence. On click, the next byte is the walk behavior and the packed
 target comes from DAT+77 (`cseg175:1DAC-1E68`).
 
-## 8. Verify and leave an audit trail
+## 9. Verify and leave an audit trail
 
 Run:
 
