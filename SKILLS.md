@@ -232,6 +232,10 @@ do not infer the end from a smooth-looking byte sequence or the next catalog row
 
 ## 7. Translate timer state to the engine's tick quantum
 
+See [GAME_TICKS_DOS_VS_SCUMMVM.md](GAME_TICKS_DOS_VS_SCUMMVM.md) for the complete
+model, including the distinct `EAC8`/`EAC9` hardware-wait state, the `EACA`
+logical phase, and the two modes of `waitForTimer()`.
+
 Do not copy an original assignment to `s3:0xEACA` literally into `_gameTicks`.
 The DOS loop advances `EACA` by one after each hardware tick and wraps `0x3F` to
 zero. The port instead advances `_gameTicks` by `kTimerTicksCount == 8` and resets

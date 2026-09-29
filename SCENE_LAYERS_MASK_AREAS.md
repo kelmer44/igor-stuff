@@ -322,6 +322,9 @@ depth.
    vertical extents, `deltaLum` its darkening.
    `enableLight == 2` instead re-tints the Igor palette range 192..207 using
    `y2Lum` (`walk.cpp:112-127`).
+   For the full `enableLight` / `handleRoomLight` / `updateRoomLight` reference,
+   including the `scaleHeight == 50` flicker guard and the unresolved `s3:0xEACA`
+   gate, see [ROOM_LIGHTING.md](ROOM_LIGHTING.md).
 3. Draw the UI: `drawActionSentence` at row 144 (`input.cpp:417-421`),
    `drawVerbsPanel` at row 156 (`input.cpp:129-147`).
 4. `copyRectToScreen` (`palette.cpp:83,104`).
