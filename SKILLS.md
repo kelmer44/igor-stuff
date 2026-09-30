@@ -301,7 +301,51 @@ For hover text, the original `PART_10` handler keeps the room object only when
 formatting the sentence. On click, the next byte is the walk behavior and the packed
 target comes from DAT+77 (`cseg175:1DAC-1E68`).
 
-## 9. Verify and leave an audit trail
+## 9. Recover every dialogue layout offset
+
+Do not assume all DLG resources place their reply descriptors or speech tables at
+the same relative offsets. The DOS game compiles a separate dialogue routine into
+each room overlay; the shared C++ helpers must therefore take these values from
+`RoomDataOffsets::dlg`, not branch on a part number or dialogue resource ID.
+
+First find the DLG allocation and far copy. Treat the copy destination as DLG byte
+zero and record the exact copied size. Then derive these four additional fields from
+the room's dialogue routines:
+
+| field | assembly pattern | C++ representation |
+| --- | --- | --- |
+| `replyDataOffset` | count byte read at `DLG + reply + K` | `K + 1`, because `dialogueReplyToQuestion()` reads `data[offset - 1]` |
+| `questionSoundsOffset` | word read at `DLG + question*2 + K` | `K`; the resource loader applies the original 1-based index |
+| `replySoundsOffset` | word read at `DLG + replyIndex*2 + K` | `K`; the resource loader applies the original 1-based index |
+| `replySoundsSize` | highest defined reply-speech slot | derive from the copied extent and every original consumer; do not substitute the reply-text count |
+
+The two verified layouts demonstrate why this is required:
+
+| part | reply data | question sounds | reply sounds | reply-sound slots | proof |
+| --- | ---: | ---: | ---: | ---: | --- |
+| 6 | 240 | 15458 | 15518 | 35 | `cseg181:0F2F-0F41`, `0771-0783`, `0FCE-0FEF`, `11CB` |
+| 12 | 60 | 5230 | 5260 | 25 | `cseg172:09C5-09D6`, `043B-0452`, `0A59-0A82`, `0A4A-0A92` |
+
+Part 6's `matSize` is 60, but its reply descriptors start at 240; the former generic
+formula would have read them at 90 and interpreted control data as a 23-group reply.
+Part 12 happens to match the old `30 + matSize` reply formula, but still record its
+explicit value. A coincidental match is not a derivation for another room.
+
+Before enabling a dialogue, validate the extracted bytes directly:
+
+1. Enumerate every nonzero reply pointer in the dialogue-choice records.
+2. Read its group count at `replyDataOffset + reply - 1` and ensure it does not
+   exceed `MAX_DIALOGUE_TEXTS`.
+3. Walk every `(firstReplyText, lineCount)` pair and prove its text and speech
+   indices fit the derived tables.
+4. Bounds-check both 1-based speech tables against the exact copied DLG size.
+5. Add every constant to that part's `RoomDataOffsets` with its `cseg` source.
+
+If any offset or table extent is not proven by the room's disassembly, leave that
+dialogue disabled with a sourced TODO. Do not add a new conditional to the shared
+text or resource loaders.
+
+## 10. Verify and leave an audit trail
 
 Run:
 

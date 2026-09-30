@@ -201,6 +201,7 @@
 { DAT_SpringBridge, 0x6a54a6, 6017 },
 { WLK_Bridge1, 0x6a83a8, 134 },
 { WLK_Bridge2, 0x6a842e, 2546 },
+{ DLG_SpringPhotographer, 0x6ae94e, 0x3ce6 }, /* cseg181:11AB-11CE; segment 181:514E */
 { DAT_SpringRock, 0x6b60ed, 6195 },
 { WLK_Bridge3, 0x6b9153, 134 },
 { WLK_Bridge4, 0x6b91d9, 2546 },
