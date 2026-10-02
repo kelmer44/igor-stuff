@@ -48,6 +48,7 @@
 { MSK_CollegeStairsSecondFloor, 0x41cc3f, 4128 },
 { BOX_CollegeStairsSecondFloor, 0x41dc5f, 1280 },
 { DAT_CollegeStairsFirstFloor, 0x4219b4, 6017 },
+{ DLG_OutsideCollege, 0x4283b5, 965 }, // cseg111:2CE8-2D08 loads resource 111; seg111:32B5..367A
 { FRM_CollegeStairsFirstFloor1, 0x428c70, 48790 },
 { FRM_CollegeStairsFirstFloor2, 0x434b06, 140 },
 { TXT_CollegeStairsFirstFloor, 0x4352b3, 1226 },
