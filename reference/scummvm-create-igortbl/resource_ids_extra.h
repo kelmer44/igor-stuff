@@ -38,3 +38,4 @@
 #define PAL_ParkRight 935
 #define MSK_ParkRight 936
 #define BOX_ParkRight 937
+#define DLG_DeanPepperOffice 938
