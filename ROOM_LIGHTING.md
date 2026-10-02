@@ -243,3 +243,61 @@ prop edge gets one pixel written and one left alone.
 5. Any new `enableLight` write needs a source address in the comment, per
    `AGENTS.md` rule 3. Prefer setting it in the room's enter function alongside
    `loadRoomData`, as every existing room does.
+
+
+## so this is called "lighting" and "lum" but really is a depth map?
+
+Partly — it's one field doing two jobs, not a depth map.
+Per region the table stores a vertical span, and walk.cpp:196-203 uses it as three bands on Igor's wd->y:
+
+- `wd->y <= y1Lum` → draw the background pixel. That's a z-order test: Igor is behind the object.
+- `y1Lum < wd->y <= y2Lum` → draw Igor darkened by deltaLum. That's shading, inside the object's span.
+- `wd->y > y2Lum` → draw Igor at full colour: in front of and past the object.
+
+So `y1Lum` really is the near edge (a depth-sort threshold) and y2Lum/deltaLum are the far edge plus its shadow. The `Lum` naming is the original author's: same band, two uses.
+
+What it is not: a general depth map. There's no z-buffer — only Igor is sorted against the table (plus the talking-animation pixels in `text.cpp:407` and the `scaleHeight == 50` sprite in `igor.cpp:305`). Room objects are drawn in explicit code order, not via this table.
+
+The strongest evidence the field is overloaded rather than a depth value: with `enableLight == 2, walk.cpp:157` reads `y2Lum` as a signed palette offset and adds it to entries 192..207 — a small number, not a scanline. Same byte, two meanings depending on `enableLight`. The mode-1 comparison treats it as an unsigned scanline (`cmp.w` against a zero-extended byte, per `ROOM_LIGHTING.md`).
+
+## what is wd->y
+
+`wd` is a `WalkData *` (`igor.h:252`), Igor's position record for the current step — `wd->y` is his *foot scanline*, the bottom row of his sprite block on the 320x144 scene floor.
+
+Derivable from `walk.cpp:144`:
+
+```
+_walkDataDrawOffset = (wd->y - wd->scaleWidth + 1) * 320;
+```
+
+
+so his sprite occupies scanlines `y - scaleWidth + 1 .. y`, and `y` is the last one. Same arithmetic in i`gor.cpp:302 (320 * (wd->y + 1 - wd->scaleWidth))`.
+
+That's why it's the value compared against `y1Lum`/`y2Lum` — both are floor lines, so the depth test is "is Igor's feet above or below this object's near/far edge". It's set by the walk paths (`buildWalkPath(41, 86, ...), walk.cpp:364/402` etc.), which is why the y values sit in the 0..143 scene range, same as `y1Lum` up to 143 in the street `BOX` example.
+
+Note `y` is _not_ per-pixel: one scalar per step, so every pixel of Igor gets the same band decision against whatever mask region that pixel lands in.
+
+## what is delta then
+
+`deltaLum` is not a depth value at all — it's a count of palette steps.
+
+`walk.cpp:201` does `color -= deltaLum` on the _palette index_ of an Igor sprite pixel. So it only darkens Igor if lower indices in the sprite's colour range are darker. I checked the shipped palettes, and they are:
+
+192 (53,31,23)  36.7   <- base
+193 (48,26,16)  31.4
+194 (37,19,11)  23.5
+195 (29,14,5)   17.5
+196 (6,6,6)      6.0
+197 (62,62,62)  62.0   <- white highlight
+
+That 192..196 block is monotonically darkening and is *byte-identical* across `PAL_PhysicsClassroom`, `PAL_ChemistryClassroom` and `PAL_ParkRight` — it's a shared light ramp, not room artwork. Same for the 198..202 and 203..206 sub-ramps (the 203..206 blue one is 10.5 → 7.5 → 4.6 → 1.9).
+
+So the room palette already bakes N darkening steps, and `deltaLum` says "take `deltaLum` steps down the ramp" for the band between `y1Lum` and `y2Lum`. Nothing is computed at runtime — it's an index subtraction into a pre-authored ramp. Observed values are 0..15 (`part_10.cpp:62` sets 3), which is exactly the 16-entry range `setPaletteRange(192, 207)` covers.
+
+Two corroborations:
+
+- `igor.cpp:304` — the flicker writes 196 or 195 into `_screenVGA`, i.e. the base shade or one step down. Same ramp, hand-picked.
+
+- `part_8.cpp:122` — the only call site with an explicit guard, `if (color >= 0xC0 && color <= 0xCF)`, restricting the subtraction to that16-entry ramp. `walk.cpp` has no such guard, so it relies on Igor frame pixels already living in 0xC0..0xCF.
+
+So: `y1Lum/y2Lum` are depth edges, `deltaLum` is a shading step count. The `Lum` suffix covers all three because the original author treated "which side of the object" and "how dark while there" as one lighting feature.
