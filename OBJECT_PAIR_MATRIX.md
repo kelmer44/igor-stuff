@@ -18,11 +18,9 @@ rows at all.
 **"Default" is per-cell, not global.** The generic lines exist and are reachable
 — but only from cells that are non-zero. A zero cell is silent.
 
-**Nothing happening is the shipped data, not a porting bug.** Measured across
-three rooms, the `object1` map's *room-object* rows are **all zero everywhere**,
-and the `GIVE` room-object eligibility array is **all zero everywhere**. So a
-room object can never be the first object of a two-object action, in any of the
-three rooms checked. The GIVE matrix in `DAT_OutsideCollege` is 35x40 zeros.
+**Nothing happening on USE + Philip y Jimmy is a fork bug, not shipped data.**
+The cell resolves to action 2 and the fork computes it correctly; the response
+is lost further down the chain. See [section 9](#9-investigation-use--philip-and-jimmy-returns-nothing).
 
 ---
 
@@ -207,27 +205,23 @@ authored per cell rather than defaulted.
 
 ## 4. Why a zero cell is silent
 
-`input.cpp:332-341`:
+`input.cpp:355-358`:
 
 ```cpp
-if (actionHovering) {                 // mouse move, not a click
-    formatActionSentence(0);
-    _currentAction.object2Num = 0;
-    _actionCode = 0;
-    return;
-}
 if (_actionCode == 0) {
-    clearAction();                    // <-- silent: no sentence, no sound
+    clearAction();
     return;
 }
 ```
 
-`clearAction()` (`input.cpp:406-412`) only redraws the verb button and zeroes the
+`clearAction()` (`input.cpp:421-427`) only redraws the verb button and zeroes the
 `Action` struct. Nothing is printed and no dialogue starts.
 
 The historical reference engine has the identical branch at
-`reference/scummvm-igor-engine/igor.cpp:1612`, so the silence is inherited, not
-introduced by this port.
+`reference/scummvm-igor-engine/igor.cpp:1612`, so *for a genuinely unpopulated
+cell* the silence is inherited rather than introduced by this port. That is a
+different thing from losing a response to a **populated** cell, which is the
+bug in section 9.
 
 ---
 
@@ -311,17 +305,34 @@ inventory object does nothing** — by design the game wants two objects.
 
 ## 7. Diagnosing a specific pair
 
-The reference engine logs the resolved code and the fork dropped the line. To
-see what any given pair resolves to, restore it at `input.cpp:338`, before the
-zero test:
+`input.cpp:340` now carries the reference engine's own log line
+(`reference/scummvm-igor-engine/igor.cpp:1611`), which the fork had dropped:
 
 ```cpp
-debugC(9, kDebugEngine, "handleRoomInput() verb %d type %d obj %d  type %d obj %d -> actionCode %d",
-       _currentAction.verb, _currentAction.object1Type, _currentAction.object1Num,
-       _currentAction.object2Type, _currentAction.object2Num, _actionCode);
+// verbatim from reference/scummvm-igor-engine/igor.cpp:1611
+debugC(9, kDebugEngine, "handleRoomInput() actionCode %d", _actionCode);
 ```
 
-This matches `reference/scummvm-igor-engine/igor.cpp:1611`.
+plus an expanded line printing everything the two clicks resolved to, the two
+map lookups, the computed `offset` and the resolved action code:
+
+```
+$ scummvm --debug=9 -d9 igor
+handleRoomInput() actionCode 2
+  verb 1 verbType 1 | obj1: type 1 num 1 (row 1) | obj2: type 2 num 2 (col 38) | verbBase 1019 offset 156 -> 2
+```
+
+Reading it:
+
+| field | healthy value | what a wrong value means |
+| --- | --- | --- |
+| `verbType` | `1` = USE, `2` = GIVE | `0` means the first click never passed the eligibility gate at `input.cpp:262`/`:269`, so no pair was ever formed |
+| `obj1: type 1 num N (row R)` | `R == N` for inventory | `R == 0` or `R == -1` means the `object1` map lookup missed |
+| `obj2: type 2 num 2 (col 38)` | `38` for Philip y Jimmy | `0` means the mask region resolved to a different object than expected |
+| `offset` | `col * 2 + row * objectSize` | a mismatch here means `objectSize` is not what `static_walk.cpp` claims for this part |
+| `actionCode` | `2` for a populated cell | `0` sends control to `clearAction()` — the silent path |
+
+Enable it with `-d9` / `--debug=9` on channel `kDebugEngine`.
 
 For a full picture of a room without running it, read the `DAT` directly: the
 maps are at `object1 + type * 38` and `object2 + type * 38`, the gate arrays at
@@ -349,3 +360,191 @@ concatenation in `IGOR-CD/IGOR.EXE`.
   `IgorEngine::decodeRoomStrings()`, `engines/igor/room.cpp:89`.
 - Disassembly of the lookup: `code/175_2767.asm`, `cseg175:2C8B-2DEA`.
 - Companion: `OBJECT_ACTION_HANDLING.md`.
+
+---
+
+## 9. Investigation: USE + Philip and Jimmy returns nothing
+
+**Symptom.** In the original DOS game, `USE <any inventory object>` on Philip
+and Jimmy answers "No parece funcionar." In the fork nothing happens.
+
+**Expected value.** `DAT_OutsideCollege` maps room object 2 to column 38, and
+inventory rows 1-35 against column 38 hold action code `2` for most rows, so the
+response is present in the shipped data.
+
+**Runtime trace** (inventory object first, then the room object — the order the
+game requires, since the `object1` room rows are zero):
+
+```
+handleRoomInput() actionCode 2
+  verb 5 verbType 1 | obj1: type 1 num 4 (row 4) | obj2: type 2 num 2 (col 38) | verbBase 1019 offset 396 -> 2
+```
+
+| stage | result | status |
+| --- | --- | --- |
+| `object2` map lookup | col 38 | correct |
+| `object1` map lookup | row 4 | correct |
+| `offset` = 38*2 + 4*80 | 396 | correct |
+| cell at `useVerb + 396` | action 2 | correct |
+| `clearAction()` path | **not taken** (`_actionCode != 0`) | ruled out |
+
+So the failure is strictly downstream of the lookup.
+
+**Verified identical to the reference implementation:**
+
+- `EXEC_MAIN_ACTION()`, `part_main.cpp:24-82` vs
+  `reference/.../parts/part_main.cpp:57-115` — byte-for-byte identical for
+  actions 0-10, including the `34/69/94` random split and
+  `ADD_DIALOGUE_TEXT(num, 1, num)`.
+- `executeAction()`, `igor.cpp:537-545` — identical, including its
+  `debugC(9, ..., "executeAction %d")`.
+- `loadMainTexts()`, `resource.cpp:180-225` — identical, including
+  `src = &p[0x8BA] + _language * 51` with stride `51 * 2` and `_language = 0`
+  (`igor.cpp:123`).
+
+**Text data confirmed correct** by replicating `decodeMainString()`
+(`resource.cpp:80-90`) over `TXT_MainTable` (offset/size from
+`resource_sp_cdrom.h`):
+
+| index | decoded |
+| --- | --- |
+| 11 | `No va a funcionar.` |
+| 12 | `No parece funcionar.` |
+| 13 | `No creo que vaya a funcionar.` |
+| 14 | `No, mejor no.` |
+| 15 | `No tiene sentido.` |
+
+**Ruled out along the way:** the trace never reaches `executeAction 2` at all, so
+the dialogue-bubble positioning in `fixIgorDialogueTextPosition()`
+(`text.cpp:258-263`) — which reads a possibly stale
+`_walkData[_walkDataLastIndex - 1]` for a non-walking action — is *not*
+implicated here. It remains worth checking separately for two-object actions
+that do produce output.
+
+### 9.1 Root cause: `executeAction()` was gated on `verbType == 0`
+
+The suspect above was wrong. The real cause is a misplaced brace in the port.
+
+In both the fork and `reference/scummvm-igor-engine/igor.cpp:1618-1678` the
+block reads:
+
+```cpp
+formatActionSentence(1);
+if (_currentAction.verbType == 0) {          // <-- opens here
+        if (_currentAction.object1Type == kObjectTypeRoom) {
+                if (_actionWalkPoint > 0) {
+                        /* walk setup */
+                        return;              // walk first, act later
+                }
+        }
+        hideCursor();                       // <-- still INSIDE verbType == 0
+        executeAction(_actionCode);
+        clearAction();
+        return;
+}                                             // <-- verbType == 0 closes HERE
+```
+
+`executeAction()` therefore never runs for `verbType` 1 (USE) or 2 (GIVE). The
+resolution computes the correct action code, prints it, and then falls out of
+the bottom of the function without dispatching anything. The misleading
+indentation makes the block *look* like `executeAction()` is outside the `if`;
+counting the braces shows otherwise.
+
+**The disassembly settles it.** `s3:0x3221` is `verbType` and `s3:0x3222` is
+`_actionCode`:
+
+| address | instruction | meaning |
+| --- | --- | --- |
+| `cseg175:1A9B` | `cmp.b s3:0x3221, 0x0` | test verbType on the click path |
+| `cseg175:1AA2` | `jmp.r 3263` → `0x2767` | verbType == 0 goes to the walk routine — **first click only** |
+| `cseg175:2F4D` | `mov.b r0.b.l, s0:r7.w+303` | resolved USE action code |
+| `cseg175:2F55` | `jmp.r 110` → `0x2FC2` | USE falls into the shared tail |
+| `cseg175:2FBD` | `mov.b r0.b.l, s0:r7.w+3319` | resolved GIVE action code |
+| `cseg175:2FC5` | `cmp.b s3:0x3226, 0x0` | verbType tested again — but only to choose between two bookkeeping stores (`0x3221` vs `0x3223`) |
+| `cseg175:2FD9` | `cmp.b s3:0x3218, 0x0` | hover check, then on to the action |
+
+Both resolution paths converge on `0x2FC2` and continue to the action. The only
+branch back to the walk is at `0x1AA2`, gated on `verbType == 0`. So the walk
+is a *first-click* behaviour and `executeAction()` is unconditional — the port
+hoisted it into the `verbType == 0` block by one brace too few.
+
+**Fix** (`engines/igor/input.cpp`): close the `verbType == 0` block after the
+walk-return and move `hideCursor()` / `executeAction()` / `clearAction()` out
+to function scope, so they run for `verbType` 0, 1 and 2. The walk path still
+returns early via the `return` at `input.cpp:423`, so single-object
+walk-then-act ordering is unchanged.
+
+### 9.2 Do two-object actions make Igor walk first?
+
+**No.** The walk stays gated on `verbType == 0`; only the *dispatch* is
+unconditional. This is worth stating explicitly because the `DAT` looks as if it
+should walk, and because the two questions are easy to conflate.
+
+`s3:0x320D` is `verbType`, confirmed by its writers:
+
+| address | instruction | meaning |
+| --- | --- | --- |
+| `cseg175:1A4C` | `mov.b s3:0x320D, 0x1` | USE gate passed → verbType 1 |
+| `cseg175:1A7E` | `mov.b s3:0x320D, 0x2` | GIVE gate passed → verbType 2 |
+| `cseg175:1CCD`, `1D75`, `314A` | `mov.b s3:0x320D, 0x0` | cleared by `clearAction()` |
+
+The gate on the walk decision is `cseg175:2C84`:
+
+```
+cseg175:2C81  mov.b     s3:0x321F, r0.b.l
+cseg175:2C84  cmp.b     s3:0x320D, 0x0      ; verbType
+cseg175:2C89  jnz.r     114                 ; verbType != 0 -> skip the whole block
+cseg175:2C8B  shl.w     r0.w, 0x1           ;   verb * 2
+cseg175:2C99  imul.w    r0.w, r0.w, 0x14     ;   object * 20
+cseg175:2CAD  cmp.b     s0:r7.w+95, 0x0     ;   roomActions[defaultVerb + ...]
+cseg175:2CB2  jz.r      8
+...
+cseg175:2CBD  mov.b     s3:0x3222, 0x0      ; no action -> silent
+```
+
+`+95` is `PART_10_ROOM_DATA_OFFSETS.action.defaultVerb`, so `2C8B-2CAD` is the
+single-object action-code read, and the whole thing is behind
+`verbType == 0`. With `verbType` 1 or 2 the jump lands at `~0x2CFD`, which
+runs straight into
+
+```
+cseg175:2D08  cmp.b     s3:0x320D, 0x1      ; USE?
+cseg175:2D0D  jnz.r     112                 ; -> GIVE
+cseg175:2D0F  ...                          ; USE resolution (+303)
+cseg175:2F52  jmp.r     110 -> 0x2FC2       ; converge with GIVE (+3319)
+```
+
+No walk-point byte is read anywhere on that path. So a pair resolves and
+dispatches in place, with Igor stationary — which is exactly the immediate
+generic reply the original gives for USE + Philip and Jimmy.
+
+**Record layout** at `defaultVerb + object * 20 + verb * 2`, 2 bytes, from
+`DAT_OutsideCollege`:
+
+| object | v1 | v2 | v3 | v4 | v5 |
+| --- | --- | --- | --- | --- | --- |
+| puerta | `[101, 3]` | `[0, 0]` | `[7, 1]` | `[102, 1]` | `[2, 1]` |
+| Philip y Jimmy | `[103, 1]` | `[103, 1]` | `[0, 0]` | `[103, 1]` | `[0, 0]` |
+| carpeta | `[104, 0]` | `[0, 0]` | `[104, 0]` | `[104, 0]` | `[104, 0]` |
+| camino | `[105, 3]` | `[0, 0]` | `[0, 0]` | `[0, 0]` | `[0, 0]` |
+
+**byte 0 = action code** (`101`-`105` are room actions) and **byte 1 = walk
+point** (small mode flags: `0` don't walk, `1` walk and face, `3` walk keeping
+the current frame). This matches the port, which reads `+1` into
+`_actionWalkPoint`.
+
+The nonzero walk points on room objects are therefore **not** pair-walk data.
+They belong to the *single-object* case: pick USE, click the room object once,
+and Igor walks over and performs the action — the block at `input.cpp:371`,
+correctly gated on `verbType == 0`. `obj.walkPoints` is likewise nonzero only for
+room objects (part 17: `puerta` → `(194, 1)`, `Philip y Jimmy` → `(257, 0)`,
+`carpeta` → `(2, 0)`, `camino` → `(0, 0)`; inventory objects all zero),
+confirming it is the room-object walk-target table.
+
+Caveat: the exact landing address of `jnz.r 114` is `0x2CFB` or `0x2CFD`
+depending on whether the disassembler's relative offset is measured from the
+instruction or the next one. Both land inside the `verbType` dispatch
+immediately preceding the USE resolution, and neither reads a walk point, so the
+conclusion does not depend on which. The walk setup itself for `verbType == 0`
+lives elsewhere in the listing and was not traced; it is pre-existing code that
+this fix does not touch.
