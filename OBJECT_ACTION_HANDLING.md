@@ -4,6 +4,10 @@ The central input and action-selection logic is implemented in
 `IgorEngine::handleRoomInput()` in
 `/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/input.cpp`.
 
+For the data behind the pair lookup — the per-room 2-D action matrix, the
+eligibility gate, why unsupported pairs are silent, and measured per-room
+contents — see `OBJECT_PAIR_MATRIX.md`.
+
 ## Selecting the objects
 
 When the player clicks an inventory object, `handleRoomInput()` stores its
