@@ -92,6 +92,7 @@
 { IMG_CollegeCorridorCaroline, 0x49c49d, 46080 },
 { PAL_CollegeCorridorCaroline, 0x4a789d, 624 },
 { MSK_CollegeCorridorCaroline, 0x4a7b0d, 2151 },
+{ BOX_CollegeCorridorCaroline, 0x4a8374, 1280 }, // seg125 stub at seg125:2, block 5: src 0xcd74 len 0x500; follows MSK contiguously
 { DAT_CollegeCorridorLucas, 0x4ab255, 6109 },
 { FRM_CollegeCorridorLucas1, 0x4ae9d6, 2592 }, // seg127 stub at seg127:2, block 0: src 0xd6 len 0xa20
 { FRM_CollegeCorridorLucas2, 0x4af3f6, 1225 }, // block 1: src 0xaf6 len 0x4c9, dest +0xa20

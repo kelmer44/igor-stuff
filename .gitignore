@@ -7,3 +7,5 @@ extracted_cd_discovered/
 extracted_cd_actions/
 extracted/
 
+.part8*
+.part*
