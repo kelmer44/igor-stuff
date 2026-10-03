@@ -47,7 +47,8 @@
 { PAL_CollegeStairsSecondFloor, 0x41c9cf, 624 },
 { MSK_CollegeStairsSecondFloor, 0x41cc3f, 4128 },
 { BOX_CollegeStairsSecondFloor, 0x41dc5f, 1280 },
-{ DAT_CollegeStairsFirstFloor, 0x4219b4, 6017 },
+{ DAT_CollegeStairsFirstFloor, 0x4219b4, 6017 }, // cseg110:28F7-291A copies 0x1781 bytes from seg110:36B4
+{ DLG_CollegeStairsFirstFloor, 0x425fcd, 2753 }, // seg111:ECD..198E; byte-identical post-load image at src+2753 = seg111:198E
 { DLG_OutsideCollege, 0x4283b5, 965 }, // cseg111:2CE8-2D08 loads resource 111; seg111:32B5..367A
 { FRM_CollegeStairsFirstFloor1, 0x428c70, 48790 },
 { FRM_CollegeStairsFirstFloor2, 0x434b06, 140 },
@@ -92,6 +93,10 @@
 { PAL_CollegeCorridorCaroline, 0x4a789d, 624 },
 { MSK_CollegeCorridorCaroline, 0x4a7b0d, 2151 },
 { DAT_CollegeCorridorLucas, 0x4ab255, 6109 },
+{ FRM_CollegeCorridorLucas1, 0x4ae9d6, 2592 }, // seg127 stub at seg127:2, block 0: src 0xd6 len 0xa20
+{ FRM_CollegeCorridorLucas2, 0x4af3f6, 1225 }, // block 1: src 0xaf6 len 0x4c9, dest +0xa20
+{ FRM_CollegeCorridorLucas3, 0x4af8bf, 6480 }, // block 2: src 0xfbf len 0x1950, dest +0xee9
+{ FRM_CollegeCorridorLucas4, 0x4b120f, 1140 }, // block 3: src 0x290f len 0x474, dest +0x2839
 { FRM_SpringBridge1, 0x4b16f4, 24 },
 { FRM_SpringBridge2, 0x4b170c, 4410 },
 { TXT_CollegeCorridorLucas, 0x4b2fa2, 1333 },
