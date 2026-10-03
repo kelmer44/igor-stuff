@@ -106,6 +106,7 @@
 { MSK_CollegeCorridorLucas, 0x4beb47, 3297 },
 { BOX_CollegeCorridorLucas, 0x4bf828, 1280 },
 { DAT_CollegeCorridorMargaret, 0x4c2ff1, 6273 },
+{ DLG_CollegeCorridorMargaret, 0x4c7973, 6980 }, // cseg130+0x0F73 (offset literal repeated 30x in cseg130's dialogue loader, same role as 0x0ECD x29 in cseg111 for part 30). Size 6980: replySoundsOffset(6878) + (50 + 1) * 2 == 6980 exactly, with questionSoundsOffset = 6980 - (10 + 50 + 1) * 2 = 6858 giving questions 1199..1207,0 and replies 1208..1216 at 6878. NOTE: an earlier note here claimed 6982 -- that came from resource.cpp's off-by-one-word derived formula (now fixed); 6980 is correct. The 64-byte duplicate head at src+6980 confirms the end only coincidentally (trailing slots are zero)
 { FRM_CollegeCorridorMargaret1, 0x4cb3d6, 5346 },
 { FRM_CollegeCorridorMargaret2, 0x4cc8b8, 44247 },
 { FRM_CollegeCorridorMargaret3, 0x4d758f, 7800 },
