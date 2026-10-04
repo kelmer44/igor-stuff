@@ -39,3 +39,14 @@
 #define MSK_ParkRight 936
 #define BOX_ParkRight 937
 #define DLG_DeanPepperOffice 938
+#define ANM_StudentDormitoryRoom1 939
+#define ANM_StudentDormitoryRoom2 940
+#define ANM_StudentDormitoryRoom3 941
+#define ANM_StudentDormitoryRoom4 942
+#define ANM_StudentDormitoryRoom5 943
+#define ANM_StudentDormitoryRoom6 944
+#define ANM_StudentDormitoryRoom7 945
+#define ANM_StudentDormitoryRoom8 946
+#define ANM_StudentDormitoryRoom9 947
+#define ANM_StudentDormitoryRoom10 948
+#define ANM_StudentDormitoryRoom11 949
