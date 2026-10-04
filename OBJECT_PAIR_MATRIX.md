@@ -9,7 +9,7 @@ This document answers three specific questions:
 
 ## 0. TL;DR
 
-**No `if` anywhere.** A two-object action is one byte in a per-room 2-D matrix
+**No `if` anywhere.** A two-object action is a two-byte cell in a per-room 2-D matrix
 stored in that room's `DAT_*` resource. There is no default: the room author
 filled the USE matrix densely with the generic action codes `2` and `3`, but
 left the GIVE matrix almost entirely zero, and never filled the room-object
@@ -279,13 +279,12 @@ inventory object does nothing** — by design the game wants two objects.
    semantic meaning — what a non-zero byte there asserts — is **TODO**;
    `cseg175:2CAD cmp.b s0:r7.w+95, 0x0` is a candidate but unproven.
 
-3. **The second byte of every 2-byte cell is never read.** Across the 2800 cells
-   of the Outside college USE and GIVE matrices, only 5 non-zero values exist
-   (USE at row 15 col 22, row 20 col 39, row 31 col 32, row 32 col 31; GIVE at
-   row 15 col 22). The single-object `defaultVerb` records are also 2 bytes and
-   the fork *does* read their byte 1 as `_actionWalkPoint` (`input.cpp:345`), so
-   the pair matrices probably carry a second field of some kind. **TODO: identify
-   it before assuming it is padding.**
+3. **The second byte of a pair cell selects the object to approach.** The
+   original reads the USE byte at `cseg175:237D` and the GIVE byte at
+   `cseg175:245C`. Values greater than 1 index the six-byte `Action` record via
+   `s3:0x3209 + selector`; selector 2 is `object1Num` and selector 5 is
+   `object2Num`. It then reads that object's walk point and facing at
+   `cseg175:246E-25F1`. Zero and one do not start a pair walk.
 
 4. **Whether the original produces any output for action code 0 is unresolved.**
    A structurally similar zero-check exists at
@@ -450,23 +449,11 @@ the bottom of the function without dispatching anything. The misleading
 indentation makes the block *look* like `executeAction()` is outside the `if`;
 counting the braces shows otherwise.
 
-**The disassembly settles it.** `s3:0x3221` is `verbType` and `s3:0x3222` is
-`_actionCode`:
-
-| address | instruction | meaning |
-| --- | --- | --- |
-| `cseg175:1A9B` | `cmp.b s3:0x3221, 0x0` | test verbType on the click path |
-| `cseg175:1AA2` | `jmp.r 3263` → `0x2767` | verbType == 0 goes to the walk routine — **first click only** |
-| `cseg175:2F4D` | `mov.b r0.b.l, s0:r7.w+303` | resolved USE action code |
-| `cseg175:2F55` | `jmp.r 110` → `0x2FC2` | USE falls into the shared tail |
-| `cseg175:2FBD` | `mov.b r0.b.l, s0:r7.w+3319` | resolved GIVE action code |
-| `cseg175:2FC5` | `cmp.b s3:0x3226, 0x0` | verbType tested again — but only to choose between two bookkeeping stores (`0x3221` vs `0x3223`) |
-| `cseg175:2FD9` | `cmp.b s3:0x3218, 0x0` | hover check, then on to the action |
-
-Both resolution paths converge on `0x2FC2` and continue to the action. The only
-branch back to the walk is at `0x1AA2`, gated on `verbType == 0`. So the walk
-is a *first-click* behaviour and `executeAction()` is unconditional — the port
-hoisted it into the `verbType == 0` block by one brace too few.
+**The disassembly settles the dispatch bug.** `s3:0x320D` is `verbType`, while
+`s3:0x3224` is the resolved action code on the click path. USE and GIVE resolve
+at `cseg175:229F-2461`, optionally walk at `2464-26C8`, and both reach the
+indirect action call at `26D7-26E1`. The legacy port omitted that pair path and
+accidentally left its `executeAction()` call inside `verbType == 0`.
 
 **Fix** (`engines/igor/input.cpp`): close the `verbType == 0` block after the
 walk-return and move `hideCursor()` / `executeAction()` / `clearAction()` out
@@ -476,75 +463,24 @@ walk-then-act ordering is unchanged.
 
 ### 9.2 Do two-object actions make Igor walk first?
 
-**No.** The walk stays gated on `verbType == 0`; only the *dispatch* is
-unconditional. This is worth stating explicitly because the `DAT` looks as if it
-should walk, and because the two questions are easy to conflate.
+**Yes, when byte 1 of the pair cell selects an action field.** This is a
+separate path from the single-object walk logic:
 
-`s3:0x320D` is `verbType`, confirmed by its writers:
+| address | meaning |
+| --- | --- |
+| `cseg175:230F` / `23EE` | read the USE/GIVE action code (cell byte 0) |
+| `cseg175:237D` / `245C` | read the USE/GIVE walk selector (cell byte 1) |
+| `cseg175:2464` | selectors 0 and 1 skip walking |
+| `cseg175:246E-2479` | select a byte from `Action` (`5` = `object2Num`) |
+| `cseg175:248C-24C4` | read the selected object's walk point |
+| `cseg175:259B-25AB` | build the path |
+| `cseg175:25C2-25F1` | apply the selected object's facing |
+| `cseg175:26D7-26E1` | execute the resolved action |
 
-| address | instruction | meaning |
-| --- | --- | --- |
-| `cseg175:1A4C` | `mov.b s3:0x320D, 0x1` | USE gate passed → verbType 1 |
-| `cseg175:1A7E` | `mov.b s3:0x320D, 0x2` | GIVE gate passed → verbType 2 |
-| `cseg175:1CCD`, `1D75`, `314A` | `mov.b s3:0x320D, 0x0` | cleared by `clearAction()` |
-
-The gate on the walk decision is `cseg175:2C84`:
-
-```
-cseg175:2C81  mov.b     s3:0x321F, r0.b.l
-cseg175:2C84  cmp.b     s3:0x320D, 0x0      ; verbType
-cseg175:2C89  jnz.r     114                 ; verbType != 0 -> skip the whole block
-cseg175:2C8B  shl.w     r0.w, 0x1           ;   verb * 2
-cseg175:2C99  imul.w    r0.w, r0.w, 0x14     ;   object * 20
-cseg175:2CAD  cmp.b     s0:r7.w+95, 0x0     ;   roomActions[defaultVerb + ...]
-cseg175:2CB2  jz.r      8
-...
-cseg175:2CBD  mov.b     s3:0x3222, 0x0      ; no action -> silent
-```
-
-`+95` is `PART_10_ROOM_DATA_OFFSETS.action.defaultVerb`, so `2C8B-2CAD` is the
-single-object action-code read, and the whole thing is behind
-`verbType == 0`. With `verbType` 1 or 2 the jump lands at `~0x2CFD`, which
-runs straight into
-
-```
-cseg175:2D08  cmp.b     s3:0x320D, 0x1      ; USE?
-cseg175:2D0D  jnz.r     112                 ; -> GIVE
-cseg175:2D0F  ...                          ; USE resolution (+303)
-cseg175:2F52  jmp.r     110 -> 0x2FC2       ; converge with GIVE (+3319)
-```
-
-No walk-point byte is read anywhere on that path. So a pair resolves and
-dispatches in place, with Igor stationary — which is exactly the immediate
-generic reply the original gives for USE + Philip and Jimmy.
-
-**Record layout** at `defaultVerb + object * 20 + verb * 2`, 2 bytes, from
-`DAT_OutsideCollege`:
-
-| object | v1 | v2 | v3 | v4 | v5 |
-| --- | --- | --- | --- | --- | --- |
-| puerta | `[101, 3]` | `[0, 0]` | `[7, 1]` | `[102, 1]` | `[2, 1]` |
-| Philip y Jimmy | `[103, 1]` | `[103, 1]` | `[0, 0]` | `[103, 1]` | `[0, 0]` |
-| carpeta | `[104, 0]` | `[0, 0]` | `[104, 0]` | `[104, 0]` | `[104, 0]` |
-| camino | `[105, 3]` | `[0, 0]` | `[0, 0]` | `[0, 0]` | `[0, 0]` |
-
-**byte 0 = action code** (`101`-`105` are room actions) and **byte 1 = walk
-point** (small mode flags: `0` don't walk, `1` walk and face, `3` walk keeping
-the current frame). This matches the port, which reads `+1` into
-`_actionWalkPoint`.
-
-The nonzero walk points on room objects are therefore **not** pair-walk data.
-They belong to the *single-object* case: pick USE, click the room object once,
-and Igor walks over and performs the action — the block at `input.cpp:371`,
-correctly gated on `verbType == 0`. `obj.walkPoints` is likewise nonzero only for
-room objects (part 17: `puerta` → `(194, 1)`, `Philip y Jimmy` → `(257, 0)`,
-`carpeta` → `(2, 0)`, `camino` → `(0, 0)`; inventory objects all zero),
-confirming it is the room-object walk-target table.
-
-Caveat: the exact landing address of `jnz.r 114` is `0x2CFB` or `0x2CFD`
-depending on whether the disassembler's relative offset is measured from the
-instruction or the next one. Both land inside the `verbType` dispatch
-immediately preceding the USE resolution, and neither reads a walk point, so the
-conclusion does not depend on which. The walk setup itself for `verbType == 0`
-lives elsewhere in the listing and was not traced; it is pre-existing code that
-this fix does not touch.
+For the folder swap, the `DAT_OutsideCollege` USE cell is `{106, 5}` at matrix
+offset `0x68E`. Selector 5 chooses `object2Num`; the second object is the room
+folder (object 3) beside Philip and Jimmy. Its walk-point word at DAT offset
+841 is `0x6D28`, or `(104, 87)`, and its facing byte at offset 847 is 2
+(right). Igor therefore walks over to Philip and Jimmy before action 106. The
+action's animation then uses its original fixed screen offset `0x311F`
+(`cseg141:0A89`, `0AEE`).
