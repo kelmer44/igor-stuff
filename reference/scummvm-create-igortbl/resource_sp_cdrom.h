@@ -279,6 +279,40 @@
 { ANM_StudentDormitoryRoom9, 0x7aea61, 0x15e0 }, // cseg207:01A0-01D3
 { ANM_StudentDormitoryRoom10, 0x7b0041, 0x080a }, // cseg207:01D3-0206
 { ANM_StudentDormitoryRoom11, 0x7b084b, 0x080a }, // cseg207:0206-0239
+{ DAT_OutsideStudentDormitory, 0x75ef8f, 0x17dd }, // cseg200:1853-186A; source cseg200:278F
+{ TXT_OutsideStudentDormitory, 0x76f9ad, 0x0549 }, // cseg202:0002; cseg202:06AD-0BF5
+{ IMG_OutsideStudentDormitory, 0x76fef6, 0xb400 }, // cseg202:0002; cseg202:0BF6-BFF5
+{ PAL_OutsideStudentDormitory, 0x77b2f6, 0x0270 }, // cseg202:0002; cseg202:BFF6-C265
+{ MSK_OutsideStudentDormitory, 0x77b566, 0x05f4 }, // cseg202:0002; cseg202:C266-C859
+{ BOX_OutsideStudentDormitory, 0x77bb5a, 0x0500 }, // cseg202:0002; cseg202:C85A-CD59
+{ ANM_OutsideStudentDormitory1, 0x7627a1, 0x00d8 }, // cseg201:000C-0039
+{ ANM_OutsideStudentDormitory2, 0x762879, 0x0e1c }, // cseg201:003E-006B
+{ ANM_OutsideStudentDormitory3, 0x763695, 0x07b0 }, // cseg201:0070-009D
+{ ANM_OutsideStudentDormitory4, 0x763e45, 0x01b5 }, // cseg201:00A2-00CF
+{ ANM_OutsideStudentDormitory5, 0x763ffa, 0x00d0 }, // cseg201:00D4-0101
+{ ANM_OutsideStudentDormitory6, 0x7640ca, 0x8e80 }, // cseg201:0106-0133
+{ ANM_OutsideStudentDormitory7, 0x76cf4a, 0x0050 }, // cseg201:0138-0165
+{ ANM_OutsideStudentDormitory8, 0x76cf9a, 0x2210 }, // cseg201:016A-0197
+{ DAT_StudentDormitoryAttic, 0x7814d7, 0x1ea3 }, // cseg203:41ED-4204; source cseg203:52D7
+{ TXT_StudentDormitoryAttic, 0x7926a2, 0x0744 }, // cseg205:0002; cseg205:06A2-0DE5
+{ IMG_StudentDormitoryAttic, 0x792de6, 0xb400 }, // cseg205:0002; cseg205:0DE6-C1E5
+{ PAL_StudentDormitoryAttic, 0x79e1e6, 0x0270 }, // cseg205:0002; cseg205:C1E6-C455
+{ MSK_StudentDormitoryAttic, 0x79e456, 0x11c1 }, // cseg205:0002; cseg205:C456-D616
+{ BOX_StudentDormitoryAttic, 0x79f617, 0x0500 }, // cseg205:0002; cseg205:D617-DB16
+{ ANM_StudentDormitoryAttic1, 0x7860d3, 0x02bc }, // cseg204:000C-0039
+{ ANM_StudentDormitoryAttic2, 0x78638f, 0x00dc }, // cseg204:003E-006B
+{ ANM_StudentDormitoryAttic3, 0x78646b, 0x0028 }, // cseg204:0070-009D
+{ ANM_StudentDormitoryAttic4, 0x786493, 0x153f }, // cseg204:00A2-00CF
+{ ANM_StudentDormitoryAttic5, 0x7879d2, 0x153f }, // cseg204:00D4-0101
+{ ANM_StudentDormitoryAttic6, 0x788f11, 0x057c }, // cseg204:0106-0133
+{ ANM_StudentDormitoryAttic7, 0x78948d, 0x0e10 }, // cseg204:0138-0165
+{ ANM_StudentDormitoryAttic8, 0x78a29d, 0x1308 }, // cseg204:016A-0197
+{ ANM_StudentDormitoryAttic9, 0x78b5a5, 0x080a }, // cseg204:019C-01C9
+{ ANM_StudentDormitoryAttic10, 0x78bdaf, 0x0ce4 }, // cseg204:01CE-01FB
+{ ANM_StudentDormitoryAttic11, 0x78ca93, 0x160b }, // cseg204:0200-022D
+{ ANM_StudentDormitoryAttic12, 0x78e09e, 0x0240 }, // cseg204:0232-025F
+{ ANM_StudentDormitoryAttic13, 0x78e2de, 0x327d }, // cseg204:0264-0291
+{ ANM_StudentDormitoryAttic14, 0x79155b, 0x0960 }, // cseg204:0296-02C3
 { ANM_PhilipLauraIntro, 0x7cb4d4, 29824 },
 { AOF_PhilipLauraIntro, 0x7d2954, 74 },
 { ANM_LauraIntro, 0x7d299e, 12793 },
