@@ -13,12 +13,13 @@ This folder contains the ground-truth materials for writing `engines/igor` code 
 2. **If the disassembly does not answer the question, leave a TODO. Do not guess.**
    Never place an unverified value because it "looks right": no invented spawn positions,
    walk targets, facing values, action codes, offsets, frame counts, or timings. Prefer a
-   marked placeholder + `// TODO: derive from csegXXXX:0xNNNN` that does nothing, over a
-   plausible guess that does something invented.
+   marked placeholder that does nothing over a plausible guess that does something invented.
 
-3. **Annotate every derived constant with its source address**
-   (e.g. `// cseg175:0x2767` / `// see code/175_2767.asm`). Unsourced numbers must carry a
-   TODO naming the file that will provide them.
+3. **Never put disassembly addresses or source filenames in source-code comments.**
+   In particular, do not add comments such as `// cseg...` or `// see code/...`. Keep
+   disassembly provenance in investigation notes or the change report outside the C++ source.
+   Source comments should explain behavior only. Unverified values must remain disabled behind
+   a plain behavioral TODO rather than an address-bearing comment.
 
 4. **The reference tree is read-only** (`reference/scummvm-igor-engine/` has no `common/`
    tree and cannot compile). All code changes go to the fork
