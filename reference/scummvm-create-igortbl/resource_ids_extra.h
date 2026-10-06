@@ -84,3 +84,4 @@
 #define ANM_StudentDormitoryAttic12 981
 #define ANM_StudentDormitoryAttic13 982
 #define ANM_StudentDormitoryAttic14 983
+#define DLG_AdministrationSecretaryRoom 984

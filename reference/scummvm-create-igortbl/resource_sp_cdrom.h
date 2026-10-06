@@ -226,6 +226,7 @@
 { BOX_SpringBridge, 0x6cd50a, 1280 },
 { DAT_DeanPepperOffice, 0x6f3a2e, 6417 },
 { DLG_DeanPepperOffice, 0x7256fe, 0x3d86 },
+{ DLG_AdministrationSecretaryRoom, 0x702a78, 0x27c5 },
 { DAT_AdministrationSecretaryRoom, 0x6fb56a, 6417 },
 { TXT_AdministrationSecretaryRoom, 0x713da2, 1624 },
 { IMG_AdministrationSecretaryRoom, 0x7143fa, 46080 },
