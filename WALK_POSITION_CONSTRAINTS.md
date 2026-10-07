@@ -142,3 +142,18 @@ EOF
 (`cseg230:0x1686` memcpy ~1969, `cseg230:0x05CD` frame setup ~1887, `cseg230:0x1558` 472).
 `cseg222` is disassembled only up to `0x2261`, so the room-entry animation at `cseg222:0x2264`
 and roughly 2 KB after it are absent. Any animation that needs either cannot be transcribed yet.
+## Part 11 (state 110, left street panel) — area matrix
+
+`PART_11_ROOM_DATA_OFFSETS.area` was `{0,0,0,0}` ("walks go through the room mask"), so clicks used
+`buildWalkPathSimple` (one straight line) and Igor cut across the grass. The original routes every
+walk through `sub_176_1777`, the same area-graph walker part 10 uses:
+
+- next area = `DAT[20 + srcArea*2 + dstArea + step]` (`cseg176:18C7-18D6`), step starting at 1;
+  bytes 25/26 of the loaded DAT are 2 and 1 (areas 1 and 2 of the left panel's BOX).
+- transition points = 3 words at `DAT + ((next-1) + (cur-1)*2) * 6` (`sub_176_0B48`, `-18` bias
+  in `cseg176:0B84`/`0BE4`); the DAT holds them at (254..266, 125..127).
+- engine mapping: `{ box 20, boxSize 2, boxSrcSize 2, boxDstSize 1 }`.
+
+Left-panel BOX/MSK shows only a diagonal band (areas 1 and 2) as walkable; everything else is area 0.
+The click-fix routine for the room is `sub_176_0AB3` (clamp y to 143, scan down then up), which
+matches the generic `fixWalkPosition` with bounds (0,0,319,143).
