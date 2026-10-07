@@ -85,3 +85,9 @@
 #define ANM_StudentDormitoryAttic13 982
 #define ANM_StudentDormitoryAttic14 983
 #define DLG_AdministrationSecretaryRoom 984
+#define DLG_ParkLady 985
+#define DLG_ParkLaura 986
+#define FRM_ParkLaura1 987
+#define FRM_ParkLaura2 988
+#define FRM_ParkLaura3 989
+#define FRM_ParkRight1 990

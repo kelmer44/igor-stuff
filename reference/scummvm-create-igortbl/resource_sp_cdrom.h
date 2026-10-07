@@ -227,6 +227,12 @@
 { DAT_DeanPepperOffice, 0x6f3a2e, 6417 },
 { DLG_DeanPepperOffice, 0x7256fe, 0x3d86 },
 { DLG_AdministrationSecretaryRoom, 0x702a78, 0x27c5 },
+{ DLG_ParkLady, 0x390a6a, 1581 }, // cseg094:2498 loads resource 94; cseg094:24DE-24F1 copies seg94:2E6A (0x62D bytes) to seg94:283D
+{ DLG_ParkLaura, 0x3d3597, 2900 }, // cseg102:0D22 loads resource 102; cseg102:0D64-0D7B copies seg102:1E97 (0xB54 bytes) to seg102:1343
+{ FRM_ParkLaura1, 0x3d58a5, 40622 }, // cseg103:000C-003A copies seg103:00A5..9F52 to ANM+0x5A00
+{ FRM_ParkLaura2, 0x3df753, 114 }, // cseg103:003F-006C copies seg103:9F53..9FC4 to ANM+0xF8AE
+{ FRM_ParkLaura3, 0x3df7c5, 48 }, // cseg103:0071-009E copies seg103:9FC5..9FF4 to ANM+0xF920
+{ FRM_ParkRight1, 0x2053b6, 3969 }, // cseg049:2981-29AF copies seg49:29B6..3936 to ANM+0x5A00; byte-identical to FRM_Park3
 { DAT_AdministrationSecretaryRoom, 0x6fb56a, 6417 },
 { TXT_AdministrationSecretaryRoom, 0x713da2, 1624 },
 { IMG_AdministrationSecretaryRoom, 0x7143fa, 46080 },

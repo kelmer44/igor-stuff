@@ -54,6 +54,17 @@ requested part numbers. Do not assume adjacent parts share a layout. For example
 Record the loader calls, initialization, entry helpers, loop bounds, action jump
 table, and exit cleanup before writing C++.
 
+Enumerate **every** helper the overlay calls before trusting any constant:
+
+```sh
+grep -ho "call      cseg[0-9]*:0x[0-9A-F]*" code/<overlay>.asm | sort | uniq -c
+```
+
+Small helpers outside the main loop can swap data that the rest of the code then reads. In the
+park, `cseg049:2977` copies a second set of pick up frames to ANM+0x5A00 right after the right
+panel loads; without it `cseg100:0102` looks like it reads garbage
+(see [PARK_PORT_NOTES.md](PARK_PORT_NOTES.md)).
+
 ## 2. Recover the DAT layout from accesses, not byte patterns
 
 Find the DAT allocation/copy and treat its destination as byte zero. For `PART_10`,
