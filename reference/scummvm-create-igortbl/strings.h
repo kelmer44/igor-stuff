@@ -12,7 +12,7 @@
 { STR_Reward, STR_LANG_ENG, " reward" },
 
 { STR_BottleOfWhisky, STR_LANG_SPA, " botella de whisky" },
-{ STR_EmptyBottle, STR_LANG_SPA, " botella vacía" },
+{ STR_EmptyBottle, STR_LANG_SPA, " botella vac¡a" },
 { STR_BottleOfWater, STR_LANG_SPA, " botella con agua" },
 { STR_Lizard, STR_LANG_SPA, " lagarto" },
 { STR_FatLizard, STR_LANG_SPA, " lagarto cebado" },
