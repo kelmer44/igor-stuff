@@ -233,6 +233,13 @@
 { FRM_ParkLaura2, 0x3df753, 114 }, // cseg103:003F-006C copies seg103:9F53..9FC4 to ANM+0xF8AE
 { FRM_ParkLaura3, 0x3df7c5, 48 }, // cseg103:0071-009E copies seg103:9FC5..9FF4 to ANM+0xF920
 { FRM_ParkRight1, 0x2053b6, 3969 }, // cseg049:2981-29AF copies seg49:29B6..3936 to ANM+0x5A00; byte-identical to FRM_Park3
+{ DAT_UndergroundCorridor, 0x28509b, 5617 }, // cseg062:16ED loads resource 62; the DAT is the segment tail seg62:279B..3D8B, used in place
+{ FRM_UndergroundCorridor1, 0x38dc70, 6061 }, // cseg094:000C-0069 copies seg94:0070 (0x227 bytes) and seg94:0297 (0x1586 bytes) to ANM+0
+{ TXT_UndergroundCorridor, 0x34a8b3, 1279 }, // cseg086:01BC; seg86:06B3, ends where the picture starts
+{ IMG_UndergroundCorridor, 0x34adb2, 46080 }, // cseg086:0079-00A6 copies seg86:0BB2 (0xB400 bytes) to layer 1
+{ PAL_UndergroundCorridor, 0x3561b2, 576 }, // cseg086:0010-0039 copies seg86:BFB2 (0x240 bytes); colors 192..207 come from the Igor palette
+{ MSK_UndergroundCorridor, 0x356422, 1884 }, // cseg086:00E8 decodes seg86:C222; ends where the area table starts
+{ BOX_UndergroundCorridor, 0x356b7e, 1280 }, // cseg086:00AB-00D4 copies seg86:C97E (0x500 bytes)
 { DAT_AdministrationSecretaryRoom, 0x6fb56a, 6417 },
 { TXT_AdministrationSecretaryRoom, 0x713da2, 1624 },
 { IMG_AdministrationSecretaryRoom, 0x7143fa, 46080 },

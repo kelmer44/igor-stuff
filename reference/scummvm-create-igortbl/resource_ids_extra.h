@@ -91,3 +91,10 @@
 #define FRM_ParkLaura2 988
 #define FRM_ParkLaura3 989
 #define FRM_ParkRight1 990
+#define DAT_UndergroundCorridor 991
+#define FRM_UndergroundCorridor1 992
+#define TXT_UndergroundCorridor 993
+#define IMG_UndergroundCorridor 994
+#define PAL_UndergroundCorridor 995
+#define MSK_UndergroundCorridor 996
+#define BOX_UndergroundCorridor 997
