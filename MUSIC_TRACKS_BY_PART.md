@@ -72,10 +72,10 @@ Every part plays its track once, at room/part entry (before the scene setup), un
 | 90 (900–904) | 9 | 14 |
 | 91–97 (910…970) | 1 | 9 |
 
-Park formula (parts 51–65, identical in all 15 segments):
+Maze formula (parts 51–65, identical in all 15 segments):
 
 ```
-t = ED26            // park location index
+t = ED26            // maze location index
 while (t > 21) t -= 21
 t = t - 1
 track = t / 7 + 5   // locations 1–7 -> 5, 8–14 -> 6, 15–21 -> 7
