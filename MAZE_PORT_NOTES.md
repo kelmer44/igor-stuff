@@ -9,8 +9,8 @@ python3 tools/gen_maze_data.py ../scummvm-fork/engines/igor --apply-resources
 ```
 
 Every local function of the 17 overlays is matched against the template of its class (same instructions apart from
-constants, `maze_asm.CLASSES`); an unknown function stops the run. Parts 50 and 68..72 are outdoor scenes with their own
-logic and are not part of this port.
+constants, `maze_asm.CLASSES`); an unknown function stops the run. Part 50 is an outdoor room that leads into the maze (see below); parts 68..72 are other outdoor scenes and are not part
+of this port.
 
 ## What the rooms are
 
@@ -43,7 +43,7 @@ picture with one to four ways out; the rooms differ in the constants below.
 | flicker + wait for Igor's moves; parts 64 and 65 have no flames, no flicker and use the generic wait | wait clones | `waitForIgorMove(tick)` |
 | birds/screams (1 in 25, phase 61, sounds 55..59) | main loop | `PART_MAZE_UPDATE_ROOM_BACKGROUND` |
 | entry by state: spawn, facing, destination | entry | `MazeEntry` walk |
-| entry walking in from below, scaled 23..41 in ten steps (x = 105..164) | stairs entry | `MAZE_ENTER_STAIRS` |
+| entry walking in from below, scaled 23..50 in ten steps (height = 23 + 3 * step) (x = 105..164) | stairs entry | `MAZE_ENTER_STAIRS` |
 | exit: path, side | exit | `MazeAction` |
 | exit walking out toward the viewer (side south) | stairs exit | `MAZE_EXIT_STAIRS` |
 | look at: text 201 (2 lines, sound 1149); part 66 has four texts (203; 204/206/208 showing only the third; 209) | dialogue | `MazeDialogueLine` |
@@ -65,10 +65,34 @@ picture with one to four ways out; the rooms differ in the constants below.
   text has a different name for that object in the first language and nothing in the second.
 * Part 66 exits: south-west door to location 105 (state 562); west door to state 500 setting `objectsState[70] = 1`.
 
+## Part 50, outside the maze (states 500 / 501)
+
+`parts/part_50.cpp`, hand written; its resources (`*_OutsideMaze`, ids 1089..1094) are added by `tools/gen_maze_data.py`.
+It is not one of the maze templates: it is a normal outdoor room with several areas.
+
+| asm (`code/054_20DA.asm`) | meaning | C++ |
+| --- | --- | --- |
+| 054:20DA-2176 | music 4, `EB1C = 2`, DAT = resource 54 (6205 bytes, moved inside the overlay; the file DAT starts at seg54:48F1), loader `cseg055` (same loader as the maze rooms: 576 byte palette + Igor palette + `PAL_48_1`) | `PART_50` |
+| 054:2176-2203 | palette buffer colors 1..207 darkened by 5 (one pass, no gap at 184..191) | loop in `PART_50` |
+| 054:1029, 03FA, 08DE | the generic area path builder, with the room's table offsets: 508 and 781 instruction functions are instruction-identical to the ones of 33 other overlays (the real-number routines) | `buildWalkPath` (area box `{245, 7, 42, 6}`) |
+| 054:002F | state 500: Igor at (264,89) facing left, default scale; area 7 on that pixel while the path (264,89)->(222,102) is built | `PART_50_ENTER_FROM_DOOR` |
+| 054:00EB | state 501: Igor at (45,22) facing front, tiny (clip 5, scale 9); path (45,22)->(84,111), last facing right | `PART_50_ENTER_FROM_HILL` |
+| 054:0172 | action 101: path (222,102)->(264,89) with area 7 on the door, state 663, `objectsState[71] = 1` | `PART_50_ACTION_101_enterMaze` |
+| 054:0002 | action 102: text 201 (1 line, sound 1083) | `PART_50_EXEC_ACTION` |
+| 054:01D2 | action 103: `objectsState[90] = 0`, state 700 | `PART_50_EXEC_ACTION` |
+| 054:3027 | 1 in 50 at phase 61: sound 44 | `PART_50_UPDATE_ROOM_BACKGROUND` |
+| 054:0269 | click fix | `fixWalkPosition` (`getPart() == 50`) |
+
+`RoomDataOffsets`: walk 589, facing 594, default verb 595, use 731, give 3467, object2 619, object1 695, stride 76;
+the walk points (45,22) and (222,102) match the entries and the door action. The room has no Escape exit.
+
+Click fix (part 50): x clamped to [49,224], y to [22,119]. If x > 144 the scan goes down (starting one row below, at most
+to row 143) and, if that is not walkable, up. Otherwise it goes right (starting one column to the right, until column 144)
+and, if not walkable, left. At column 144 the original scan never stops by itself and runs over the following rows; the
+port bounds it at the end of the picture.
+
 ## Not ported
 
-* State 500 (part 50, the cave in front of the maze) is not ported: part 66's west door and Escape with the flags set lead
-  there (`PART_MAIN() Unhandled part 500`).
 * `_mazeLocation` is stored in the padding after the state in savegames (the DOS position of `ED26` is not derived).
 * The exit stores `3212 = 9` and friends of the generic exit are not modelled (as in the other rooms).
 
@@ -76,5 +100,5 @@ picture with one to four ways out; the rooms differ in the constants below.
 
 `make engines/igor/libigor.a` (no warnings). A temporary headless harness (reverted) ran every entry state (34) of
 parts 51..67 for 30 loop iterations with the flicker and every exit action (36), printing the resulting state and location;
-all end in a state some room accepts. Screenshots of all 34 entries show the right picture, flames, darkness and Igor
+all end in a state some room accepts. Part 50 was run the same way (both entries, actions 101..103, click fix samples). Screenshots of all 34 entries show the right picture, flames, darkness and Igor
 at the entry (stairs entries show him small at the bottom). Not played by hand.

@@ -65,6 +65,12 @@ def main():
 				nextId += 1
 		for k in order:
 			idsOf[p][k] = "%s_%s" % (k, setNames[loader])
+	# part 50, outside the maze: hand written (parts/part_50.cpp), only its resources are listed here
+	info50, res50, exe50 = room50_resources()
+	for k in ["DAT"] + order:
+		off, sz = res50[k]
+		rows.append(("%s_OutsideMaze" % k, nextId, off, sz))
+		nextId += 1
 	return rooms, nodes, rows, idsOf, setNames
 
 
@@ -234,7 +240,7 @@ def apply_resources(rows):
 	patch(os.path.join(tool, "resource_sp_cdrom.h"), "// MAZE ROOMS BEGIN", "// MAZE ROOMS END",
 	      ["{ %s, 0x%x, %d }," % (n, o, z) for n, i, o, z in rows], anchor_after="{ BOX_MazeEntrance", encoding="latin-1")
 	patch(os.path.join(FORK, "resource_ids.h"), "// MAZE ROOMS BEGIN", "// MAZE ROOMS END",
-	      ["#define %s %d // IGOR.EXE:0x%X, 0x%04X bytes" % (n, i, o, z) for n, i, o, z in rows], anchor_after="#define BOX_MazeEntrance")
+	      ["#define %s %d" % (n, i) for n, i, o, z in rows], anchor_after="#define BOX_MazeEntrance")
 
 
 if __name__ == "__main__":

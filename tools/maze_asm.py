@@ -208,6 +208,32 @@ def room_resources(part):
 	return info, res, exe, datBase
 
 
+def room50_resources():
+	"""Part 50 (cseg054) moves its DAT inside the overlay before use: the DAT starts where the move reads it."""
+	o = Overlay("054_20DA")
+	info = parse_main(o, 54)
+	exe, nseg = ne_segments()
+	pairs = loader_resources(o, info["loader"])
+	lbase, lsize = nseg(info["loader"])
+	pal, _, img, box, msk, txt = [p[1] for p in pairs]
+	res = {
+		"PAL": (lbase + pal, 0x240),
+		"IMG": (lbase + img, 0xB400),
+		"BOX": (lbase + box, 0x500),
+		"MSK": (lbase + msk, box - msk),
+		"TXT": (lbase + txt, img - txt),
+	}
+	m = o.main
+	i = [k for k, (a, t) in enumerate(m) if t.startswith("call      cseg230:0x1686")][0]
+	size = num(m[i - 1][1])
+	src = num(m[i - 5][1]) if m[i - 5][1].startswith("mov.w     r7.w") else None
+	moves = [(k, t) for k, (a, t) in enumerate(m) if t.startswith("mov.w     r7.w, 0x48F1")]
+	sbase, ssize = nseg(54)
+	res["DAT"] = (sbase + 0x48F1, size)
+	assert ssize - 0x48F1 == size, (ssize, size)
+	return info, res, exe
+
+
 def decode_mask(exe, off):
 	n = 0
 	p = off

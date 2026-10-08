@@ -332,6 +332,12 @@
 { PAL_Maze66, 0x2972b2, 576 },
 { MSK_Maze66, 0x297522, 2364 },
 { BOX_Maze66, 0x297e5e, 1280 },
+{ DAT_OutsideMaze, 0x23b5f1, 6205 },
+{ TXT_OutsideMaze, 0x23dbb3, 1001 },
+{ IMG_OutsideMaze, 0x23df9c, 46080 },
+{ PAL_OutsideMaze, 0x24939c, 576 },
+{ MSK_OutsideMaze, 0x24960c, 2511 },
+{ BOX_OutsideMaze, 0x249fdb, 1280 },
 // MAZE ROOMS END
 { DAT_AdministrationSecretaryRoom, 0x6fb56a, 6417 },
 { TXT_AdministrationSecretaryRoom, 0x713da2, 1624 },
