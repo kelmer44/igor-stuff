@@ -1,5 +1,8 @@
 # Underground corridor (states 670 / 671) — port notes
 
+> Part 67 is now one of the maze rooms: see `MAZE_PORT_NOTES.md`. `part_67.cpp` was replaced by `part_maze.cpp` and the
+> generated data; the notes below describe the original room code and still apply.
+
 Provenance for `engines/igor/parts/part_67.cpp` (AGENTS.md rule 3: addresses live here).
 Dispatcher (`code/001_08B7.asm`, `cseg001:0C99-0CA8`): 0x29E / 0x29F -> `code/062_16A1.asm` (`PART_67`, logical
 part 67; the dispatch tables in older notes call this "maze"). The room is reached from the church puzzle room
