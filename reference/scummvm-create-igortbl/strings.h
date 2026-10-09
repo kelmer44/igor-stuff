@@ -20,6 +20,7 @@
 { STR_PhilipFolder, STR_LANG_SPA, " carpeta de Philip" },
 { STR_Statuette, STR_LANG_SPA, " estatuilla" },
 { STR_Reward, STR_LANG_SPA, " recompensa" },
+{ STR_ShinyThing, STR_LANG_SPA, " cosa reluciente" },
 
 { STR_Talk, STR_LANG_SPA, "Hablar" },
 { STR_Take, STR_LANG_SPA, "Coger" },

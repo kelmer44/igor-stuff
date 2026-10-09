@@ -241,3 +241,24 @@
 #define IMG_Part74 1128
 #define TXT_Part74 1129
 #define ANM_Part74 1130
+
+// State 710 (PART_71)
+#define DAT_Part71 1131
+#define ANM_Part71 1132
+#define TXT_Part71 1133
+#define IMG_Part71 1134
+#define PAL_Part71 1135
+#define MSK_Part71 1136
+#define BOX_Part71 1137
+
+// State 690 (PART_69)
+#define DAT_Part69 1138
+#define ANM_Part69 1139
+#define TXT_Part69 1140
+#define IMG_Part69 1141
+#define PAL_Part69 1142
+#define MSK_Part69 1143
+#define BOX_Part69 1144
+
+// Name of the object of room 71 before it is examined
+#define STR_ShinyThing 449
