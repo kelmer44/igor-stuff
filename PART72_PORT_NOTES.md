@@ -9,7 +9,7 @@ instructions) are instruction-identical apart from constants.
 | --- | --- | --- |
 | 048:22E3-2323 | music 4, `EB1C = 2`, `EB2C = 1` (current star) | `playMusic(4)`, `enableLight = 2`, `_part72StarIndex = 1` |
 | 048:2334-2357 | DAT = resource 48, moved from 33C9 to 4BEE (6181 bytes; file source 0x1ff1c9) | `loadActionData(DAT_Part72)` |
-| 050:0002 | loader: PAL (624, 50:BF01), colors 240..255, IMG (50:0B01), BOX (50:D63E), MSK (50:C171, 5325, decodes to the BOX), TXT (50:06B3, 1102) | `loadRoomData`, `SET_PAL_240_48_1` |
+| 050:0002 | loader: PAL (624, 50:BF01), colors 192..207 from Igor's palette (DS EA5E), colors 240..255, IMG (50:0B01), BOX (50:D63E), MSK (50:C171, 5325, decodes to the BOX), TXT (50:06B3, 1102) | `loadRoomData`, `SET_PAL_240_48_1` |
 | 049:0002 | animation: 0x5A bytes from 49:006F + 0x1419 from 49:00C9 (contiguous, 5235 bytes) | `loadAnimData` |
 | 048:0433 | action pointers 101..106 -> 0210 / 0125 / 0002 / 002F / 005C / 0222 | `PART_72_EXEC_ACTION` |
 | 048:050B, 0089, 00D5 | `objectsState[102]` (DS 8A2) 0: 9x5 patch at (133,84) from the animation start, else the second patch and the object of areas 42, 44, 50, 56, 61 cleared | `PART_72_APPLY_OBJECT_STATE` |

@@ -12,7 +12,7 @@ Skeleton: click handler 1263 instr. (`018:25E3`), area path builders 508 / 781, 
 | --- | --- | --- |
 | 018:346E-34BA | music 4, `EB1C = 2` | `playMusic(4)`, `enableLight = 2` |
 | 018:34BF-34E2 | DAT = resource 18, moved 446B -> 5C64 (6137 bytes, file source 0xdcd6b) | `loadActionData(DAT_Part81)` |
-| 023:0002 | loader: PAL (624, 23:C2E7), colors 240..255, IMG (23:0EE7), BOX (23:CFF5), MSK (23:C557, 2718), TXT (23:06B3, 2100) | `PART_81_LOAD_ROOM` |
+| 023:0002 | loader: PAL (624, 23:C2E7), colors 192..207 from Igor's palette (DS EA5E), colors 240..255, IMG (23:0EE7), BOX (23:CFF5), MSK (23:C557, 2718), TXT (23:06B3, 2100) | `PART_81_LOAD_ROOM` |
 | 022:0002 | animation: five contiguous blocks 22:0109.. (53065 bytes; the 160x144 picture of the scroll at ANM+0x6075) | `PART_81_LOAD_ANIMATION` |
 | 018:13DD | action pointers 101 1226, 102 1172, 103 0002, 104 0103, 106 004A, 107 0077, 108 00A4, 109 0C77, 110 0496 | `PART_81_EXEC_ACTION` |
 | 018:152B | apply state: `objectsState[105]` (DS 8A5) 1: head frame 1 into layer 1, DAT +30 = 2, +99..102 = 0; else DAT +30 = 4, +91 = +92 = 0, +99..102 = 0x68 1 0x0E 1, DAT[82*i+j+3258] = 0 (i 1..35, j 1..2), area 7 `y2Lum` = 0xEC. (The 30 byte string copied to DS CCDE is not read by the room.) | `PART_81_APPLY_OBJECT_STATE` |
