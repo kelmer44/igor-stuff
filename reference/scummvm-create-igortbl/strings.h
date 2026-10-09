@@ -29,6 +29,9 @@
 { STR_Close, STR_LANG_SPA, "Cerrar" },
 { STR_Give, STR_LANG_SPA, "Dar" },
 
+{ STR_PushStone, STR_LANG_SPA, "Empujar piedra" },
+{ STR_Exit, STR_LANG_SPA, "Salir" },
+
 { STR_PushStone, STR_LANG_ENG, "Push stone" },
 { STR_Exit, STR_LANG_ENG, "Exit" },
 
