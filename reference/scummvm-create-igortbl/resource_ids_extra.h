@@ -280,3 +280,64 @@
 
 // Name of the object of room 71 before it is examined
 #define STR_ShinyThing 449
+
+// State 770 (PART_77)
+#define DAT_Part77 1161
+#define ANM_Part77 1162
+#define TXT_Part77 1163
+#define IMG_Part77 1164
+#define PAL_Part77 1165
+#define MSK_Part77 1166
+#define BOX_Part77 1167
+
+// State 780 (PART_78)
+#define ANM_Part78 1168
+#define TXT_Part78 1169
+#define IMG_Part78 1170
+#define PAL_Part78 1171
+#define BOX_Part78 1172
+#define IMG_Part78Layer2 1173
+#define ANM_Part78Frames 1174
+#define IMG_Part78MinutesLater 1175
+#define IMG_Part78NextDay 1176
+
+// State 730 (PART_73)
+#define ANM_Part73 1177
+#define TXT_Part73 1178
+#define IMG_Part73 1179
+#define PAL_Part73 1180
+#define MSK_Part73 1181
+#define BOX_Part73 1182
+#define IMG_Part73Card 1183
+
+// State 800 (PART_80), played inside state 730
+#define ANM_Part80 1184
+#define TXT_Part80 1185
+#define IMG_Part80 1186
+#define PAL_Part80 1187
+#define MSK_Part80 1188
+#define BOX_Part80 1189
+
+// State 760 (PART_76)
+#define DAT_Part76 1190
+#define ANM_Part76 1191
+#define TXT_Part76 1192
+#define IMG_Part76 1193
+#define PAL_Part76 1194
+#define MSK_Part76 1195
+#define BOX_Part76 1196
+#define IMG_Part76Card 1197
+
+// States 790 / 791 (PART_79)
+#define PAL_Part79 1198
+#define IMG_Part79 1199
+#define TXT_Part79 1200
+#define IMG_Part79Layer2 1201
+#define ANM_Part79 1202
+#define ANM_Part79Frames 1203
+#define IMG_Part79b 1204
+#define TXT_Part79b 1205
+#define ANM_Part79bFrames 1206
+#define ANM_Part79bLayer2 1207
+#define ANM_Part79bScenes 1208
+#define TXT_Part79bMain 1209
