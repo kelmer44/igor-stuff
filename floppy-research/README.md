@@ -104,8 +104,12 @@ the CD animation routines, action-table layouts, UI dimensions, text encoding,
 palette choices, or dialogue logic can consume them unchanged.
 
 The supplied folder contains no `IGOR.FSD`. The historical floppy sound code opens
-that separate file. No sound-offset catalog has been fabricated, no empty sound
-table has been installed, and no floppy version has been enabled in the TBL.
+that separate file. No sound-offset catalog has been fabricated. The generator
+now includes the verified floppy resource catalog, keyed by the 11,199,335-byte
+DAT, and emits a zero-entry sound section until the original sound offsets are
+derived. The resulting `IGOR/IGOR.TBL` is a partial resource dictionary, not a
+complete implementation of floppy playback support. The 43 unresolved resource
+identifiers remain omitted.
 
 ## Reproduction and verification
 
@@ -137,7 +141,19 @@ Verified:
 * The emitted header compiles as a ResourceEntry array with existing resource IDs.
 * Building/running the unmodified TBL generator in a temporary directory reproduces
   all three existing shipped TBL copies byte-for-byte.
+* After integrating the floppy catalog, the generated version-4 TBL has four game
+  records, 582 sorted unique floppy resources and a zero-entry floppy sound table.
+  Existing resource/sound sections and shared strings match the shipped dictionary
+  byte-for-byte. Only `IGOR/IGOR.TBL` was installed; existing CD dictionaries remain
+  untouched.
+
+To rebuild the installed dictionary from the workspace root:
+
+```
+c++ reference/scummvm-create-igortbl/create_igortbl.cpp -o /tmp/create_igortbl
+(cd IGOR && /tmp/create_igortbl)
+```
 
 No engine C++ was changed, so an engine library rebuild is not needed for this
-catalog-only investigation. Generator integration and runtime testing remain
-part of the subsequent floppy implementation work.
+catalog-only investigation. Runtime loading, changed native asset formats and
+sound support remain part of the subsequent floppy implementation work.

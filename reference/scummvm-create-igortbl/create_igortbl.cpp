@@ -91,6 +91,10 @@ static struct ResourceEntry _resourceEntriesSpaCd[] = {
 #include "resource_sp_cdrom.h"
 };
 
+static struct ResourceEntry _resourceEntriesSpaFloppy[] = {
+#include "resource_sp_floppy.h"
+};
+
 static struct {
 	struct ResourceEntry *p;
 	int count;
@@ -98,6 +102,7 @@ static struct {
 	{ _resourceEntriesEngDemo100, TABLE_SIZE(_resourceEntriesEngDemo100) },
 	{ _resourceEntriesEngDemo110, TABLE_SIZE(_resourceEntriesEngDemo110) },
 	{ _resourceEntriesSpaCd,      TABLE_SIZE(_resourceEntriesSpaCd) },
+	{ _resourceEntriesSpaFloppy,  TABLE_SIZE(_resourceEntriesSpaFloppy) },
 	{ 0, 0 }
 };
 
@@ -115,6 +120,7 @@ static struct {
 } _soundEntriesList[] = {
 	{ _soundEntriesEngDemo, TABLE_SIZE(_soundEntriesEngDemo) },
 	{ _soundEntriesSpaCd,   TABLE_SIZE(_soundEntriesSpaCd) },
+	// TODO: Derive the original floppy sound offsets.
 	{ 0, 0 }
 };
 
@@ -143,7 +149,8 @@ struct GameVersion {
 static const struct GameVersion _gameVersions[] = {
 	{ 4086790, _resourceEntriesEngDemo100, _soundEntriesEngDemo },
 	{ 4094103, _resourceEntriesEngDemo110, _soundEntriesEngDemo },
-	{ 9115648, _resourceEntriesSpaCd,      _soundEntriesSpaCd   }
+	{ 9115648, _resourceEntriesSpaCd,      _soundEntriesSpaCd   },
+	{ 11199335, _resourceEntriesSpaFloppy, 0 }
 };
 
 static const uint32 ITBL_TAG = 0x4954424C;
@@ -262,7 +269,7 @@ static void createTableFile(FILE *fp) {
 	}
 
 	/* sounds tables */
-	for (i = 0; _soundEntriesList[i].p; ++i) {
+	for (i = 0; i < (int)TABLE_SIZE(_soundEntriesList); ++i) {
 		addPtrOffset(fp, _soundEntriesList[i].p);
 		writeSoundEntriesTable(fp, _soundEntriesList[i].p, _soundEntriesList[i].count);
 	}
