@@ -2,7 +2,8 @@
 
 **Date:** 11 October 2026. **Port snapshot:** `ab438ae6a718e59452f205fba1f61b69529d2ed7`.
 **Scope:** the Spanish CD executable represented by this repository's disassembly, all original dispatcher groups, room action registrations, and shared game systems.
-**Disposition:** report only. No engine source, game assets, resource catalogs, or historical reference files were changed.
+**Disposition:** the initial audit was report-only. Subsequent code fixes are tracked here; the finding descriptions preserve the original audit snapshot.
+**Current remediation status:** F01–F08 fixed; 9 findings remain open. Fixes have build/static verification; runtime behavior remains unverified.
 
 The port represents every explicitly registered room action and global action found in the supplied units. That is a substantial coverage result, but it does **not** establish behavioral equivalence. This audit found missing speech, missing animation updates, incorrect sound and blit dimensions, differences in the Margaret scheduler and startup sequence, and significant save/load integration problems. The strongest conclusion is that the rooms are broadly present, while some original behavior remains missing or different.
 
@@ -23,29 +24,31 @@ Disassembly is authoritative for original behavior; the historical engine is sup
 
 ## Findings at a glance
 
-| ID | Priority | Confidence | Difference |
-|---|---|---|---|
-| [F01](#f01) | P2 | High | PART_02 trunk merges two dialogue records and omits speech 110 |
-| [F02](#f02) | P2 | High | PART_14 puzzle success omits text 227 / speech 1292 |
-| [F03](#f03) | P2 | High | PART_19 slug cutscene waits for eight frames without drawing them |
-| [F04](#f04) | P2 | High | PART_27 locker closing plays sound 14 instead of 4 |
-| [F05](#f05) | P2 | High | PART_27 flask animation copies 49 rows instead of 30 |
-| [F06](#f06) | P2 | High | Margaret scheduler compares full state instead of its low byte |
-| [F07](#f07) | P2 | High | Margaret title card starts under music 11 instead of 8 |
-| [F08](#f08) | P2 | High | Margaret title-card hold has six waits instead of five |
-| [F09](#f09) | P2 | Mixed | Normal startup bypasses implemented logo sequence |
-| [F10](#f10) | P2 | High | PART_90 omits timed progression and its options invocation |
-| [F11](#f11) | P2 | High | Dispatcher lacks original entries 62, 91, 740 and 800 |
-| [F12](#f12) | P1 | High | Fourteen ordinary room implementations lack reload restoration |
-| [F13](#f13) | P1 | High | Save/load advertised during scripts without serialized continuation |
-| [F14](#f14) | P2 | High | Loading music number before playMusic suppresses playback restart |
-| [F15](#f15) | P3 | High | Palette update paths map the same DAC values differently |
-| [F16](#f16) | P2 | High | Escape-skipped walks add an unverified timer wait per remaining step |
-| [F17](#f17) | P2 | High | Unmodified TBL generator no longer reproduces installed TBL bytes |
+| ID | Status | Priority | Confidence | Difference |
+|---|---|---|---|---|
+| [F01](#f01) | **Fixed** | P2 | High | PART_02 trunk merges two dialogue records and omits speech 110 |
+| [F02](#f02) | **Fixed** | P2 | High | PART_14 puzzle success omits text 227 / speech 1292 |
+| [F03](#f03) | **Fixed** | P2 | High | PART_19 slug cutscene waits for eight frames without drawing them |
+| [F04](#f04) | **Fixed** | P2 | High | PART_27 locker closing plays sound 14 instead of 4 |
+| [F05](#f05) | **Fixed** | P2 | High | PART_27 flask animation copies 49 rows instead of 30 |
+| [F06](#f06) | **Fixed** | P2 | High | Margaret scheduler compares full state instead of its low byte |
+| [F07](#f07) | **Fixed** | P2 | High | Margaret title card starts under music 11 instead of 8 |
+| [F08](#f08) | **Fixed** | P2 | High | Margaret title-card hold has six waits instead of five |
+| [F09](#f09) | Open | P2 | Mixed | Normal startup bypasses implemented logo sequence |
+| [F10](#f10) | Open | P2 | High | PART_90 omits timed progression and its options invocation |
+| [F11](#f11) | Open | P2 | High | Dispatcher lacks original entries 62, 91, 740 and 800 |
+| [F12](#f12) | Open | P1 | High | Fourteen ordinary room implementations lack reload restoration |
+| [F13](#f13) | Open | P1 | High | Save/load advertised during scripts without serialized continuation |
+| [F14](#f14) | Open | P2 | High | Loading music number before playMusic suppresses playback restart |
+| [F15](#f15) | Open | P3 | High | Palette update paths map the same DAC values differently |
+| [F16](#f16) | Open | P2 | High | Escape-skipped walks add an unverified timer wait per remaining step |
+| [F17](#f17) | Open | P2 | High | Unmodified TBL generator no longer reproduces installed TBL bytes |
 
 ## Confirmed differences and integration defects
 
 ### F01
+
+**Status: fixed** (commit `e8118a52437`). All three affected branches now queue `{202, 1, 109}` followed by `{203, 1, 110}`, matching the original records and order. `make engines/igor/libigor.a` and `git diff --check` passed. In-game caption/voice playback has not been tested. The description below records the original finding.
 
 **PART_02: attic trunk dialogue loses the second speech record — P2, high confidence.**
 
@@ -55,6 +58,8 @@ The text may still cover both source strings because the count is two, but the s
 
 ### F02
 
+**Status: fixed** (commit `afa0a314703`). [The success path](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_14.cpp:104) now calls `igorSay(227, 1, 1292)` after `stopSound()` and before `_objectsState[50] = 1`, matching `165:0175–019B`. It uses the existing nonblocking dialogue starter, preserving the original flag/update sequence. `make engines/igor/libigor.a` rebuilt PART_14 successfully, and `git diff --check` passed. In-game caption/voice playback has not been tested. The description below records the original finding.
+
 **PART_14: successful church puzzle omits Igor's response — P2, high confidence.**
 
 [part_14.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_14.cpp:89) handles the success animation and sets object state 50, but does not enqueue the success line. The original explicitly stores text 227, line count 1, and sound `0x50C` (1292), then starts dialogue before setting the success flag: [165_33D7.asm](/Users/gabriel/Desktop/source/igor-stuff/code/165_33D7.asm:4379), `165:017A–019B`.
@@ -62,6 +67,8 @@ The text may still cover both source strings because the count is two, but the s
 Later correction should restore that record at its original position in the success path. Validation scenario: complete the mosaic and verify response, voice, and completion-flag ordering.
 
 ### F03
+
+**Status: fixed** (commit `81813d8b214`). [The frame loop](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_19.cpp:139) now calls `decodeAnimFrame(src, _screenVGA, true)` for each frame 2 through 9 before its existing 60-unit wait. The original loop at `137:087E–08DC` calls the decoder for each frame with the screen destination; the decoder at [222:236E](/Users/gabriel/Desktop/source/igor-stuff/code/001_08B7.asm:4096) preserves destination pixels with text/shadow colors `0xF0` and `0xF1`, establishing the text-preserving mode. `make engines/igor/libigor.a` rebuilt PART_19 successfully, and `git diff --check` passed. In-game animation playback has not been tested. The description below records the original finding.
 
 **PART_19: eight slug-cutscene animation frames are not rendered — P2, high confidence.**
 
@@ -71,6 +78,8 @@ Eight waits survive while their visual updates do not. Later correction should r
 
 ### F04
 
+**Status: fixed by the user** (commit `b5566d0eabf`). The closing handler now calls `playSound(4, 1)` on its first frame, matching `133:0393–0397`. The corrected call was verified in the source; the subsequent F05 build rebuilt the same PART_27 unit successfully. Runtime sound playback has not been tested in this session. The description below records the original finding.
+
 **PART_27: closing Philip's locker uses the wrong SFX — P2, high confidence.**
 
 The first frame of action 107's closing loop calls `playSound(14, 1)` in [part_27.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_27.cpp:115). The original closing handler pushes sound 4 and type 1: [133_192B.asm](/Users/gabriel/Desktop/source/igor-stuff/code/133_192B.asm:3729), `133:0393–0397`.
@@ -79,6 +88,8 @@ Validation scenario: open and close this locker and compare the closing sound. T
 
 ### F05
 
+**Status: fixed** (commit `ba8e250861c`). [The flask animation](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_27.cpp:147) now draws a 21 × 30 rectangle for each frame. The original copy loop at `133:0533–057C` copies 21 bytes for rows 0 through 29 inclusive; its frame stride is 630 bytes. The height now matches that loop and avoids copying the 19 extra rows. `make engines/igor/libigor.a` rebuilt PART_27 successfully, and `git diff --check` passed. In-game rendering has not been tested. The description below records the original finding.
+
 **PART_27: flask animation reads and paints 19 extra rows per frame — P2, high confidence.**
 
 Action 110 calls `drawAnimRect(offset, 0x19AA + i * 630, 21, 49)` in [part_27.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_27.cpp:147). The original row loop copies 21 bytes per row and terminates at row 29 inclusive: [133_192B.asm](/Users/gabriel/Desktop/source/igor-stuff/code/133_192B.asm:3889), with the copy loop at `133:0533–057C`. The source frame stride is 630, exactly `21 × 30`.
@@ -86,6 +97,8 @@ Action 110 calls `drawAnimRect(offset, 0x19AA + i * 630, 21, 49)` in [part_27.cp
 The port reads 399 bytes beyond that frame's intended rectangle and writes 19 additional screen rows. This proves a rectangle mismatch, not necessarily an allocation overrun. The adjacent action 108 already uses 21 × 30. Validation scenario: use the flask and compare the whole region below the intended animation, not just the actor.
 
 ### F06
+
+**Status: fixed** (commit `9d25bf3ef1e`). [The scheduler](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/part_main.cpp:748) now converts `_currentPart` to an unsigned low byte for the exclusions at 10–24, 51, 60, 102 and 110, matching the byte load/comparisons in `001:0F34–0F4D`. The subsequent full-state exclusions at 340, 351, 750, 122 and 255 retain their original word-width comparisons. `make engines/igor/libigor.a` rebuilt `part_main` successfully, and `git diff --check` passed. Runtime interlude scheduling has not been tested. The description below records the original finding.
 
 **Global Margaret scheduler: byte-width semantics changed — P2, high confidence.**
 
@@ -97,6 +110,8 @@ Later correction should preserve the exact byte and word comparisons. Replacing 
 
 ### F07
 
+**Status: fixed** (current working tree). [The scheduled interlude](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/part_main.cpp:773) now calls `playMusic(8)` before `PART_MEANWHILE()`, matching the original music-before-card ordering at `145:0804–0837`. The existing audio helper handles an already-selected track; obsolete commented-out music-11 bookkeeping was removed. `make engines/igor/libigor.a` rebuilt `part_main` successfully, and `git diff --check` passed. Runtime music playback has not been tested. The description below records the original finding.
+
 **Margaret's title card plays under the wrong music — P2, high confidence.**
 
 The scheduler selects music 11 before `PART_MEANWHILE()` in [part_main.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/part_main.cpp:771); [part_margaret.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_margaret.cpp:52) selects 8 only when entering the following room cutscene. The original selects 8 before calling the title-card routine: [145_07FA.asm](/Users/gabriel/Desktop/source/igor-stuff/code/145_07FA.asm:5), `145:0804–0837`, subject to the original music-enable/status checks.
@@ -104,6 +119,8 @@ The scheduler selects music 11 before `PART_MEANWHILE()` in [part_main.cpp](/Use
 Validation scenario: trigger a scheduled Margaret interlude with music enabled and compare the card itself. The original card-suppression flag used by the laboratory path is not reported missing: that port path invokes the cutscene directly.
 
 ### F08
+
+**Status: fixed** (current working tree). [The shared card hold](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/part_main.cpp:887) now performs five `waitForTimer(250)` calls. It no longer checks or clears Escape: the original card routines do neither. Before changing the shared helper, all original counterparts were inspected: Margaret/PART_75 (`148:0093–00AC`, in `145_07FA.asm` and `037_0786.asm`), PART_73 (`045:0093–00AC`, in `001_3866.asm`), PART_76 (`034:0093–00AC`, in `033_2C59.asm`), and both PART_78 cards (`028:0093–00AC` and `029:0093–00AC`, in `024_0D8B.asm`). Each uses local counter 1 through 5 and the same timer threshold, without Escape access. The existing timer conversion remains subject to U01; this fixes iteration count and input handling without claiming exact DOS wall-clock equivalence. `make engines/igor/libigor.a` and `git diff --check` passed. Runtime card playback has not been tested. The description below records the original finding.
 
 **Margaret's title-card hold has an extra wait and an added Escape path — P2, high confidence.**
 
@@ -228,10 +245,9 @@ The table below accounts for every original dispatcher entry group. State number
 
 | Logical part | Raw main states | Original entry unit / routine | Port implementation | Registered actions | Audit result / special mapping |
 |---|---|---|---|---|---|
-
 | PART_00 | 0–1 | [206_3929.asm](/Users/gabriel/Desktop/source/igor-stuff/code/206_3929.asm) / `206:3929` | [part_0.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_0.cpp) | 101–118 | Labels present; shareware end path exists; outside normal CD progression. |
 | PART_01 | 10–12 | [200_17FB.asm](/Users/gabriel/Desktop/source/igor-stuff/code/200_17FB.asm) / `200:17FB` | [part_1.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_1.cpp) | 101–108 | Labels present; no additional confirmed finding from targeted checks. |
-| PART_02 | 20–24 | [203_4195.asm](/Users/gabriel/Desktop/source/igor-stuff/code/203_4195.asm) / `203:4195` | [part_2.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_2.cpp) | 101–121 | Labels present; F01. Entry/restoration present. |
+| PART_02 | 20–24 | [203_4195.asm](/Users/gabriel/Desktop/source/igor-stuff/code/203_4195.asm) / `203:4195` | [part_2.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_2.cpp) | 101–121 | Labels present; F01 fixed. Entry/restoration present. |
 | PART_04 | 40 | [151_113B.asm](/Users/gabriel/Desktop/source/igor-stuff/code/151_113B.asm) / `151:113B` | [part_4.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_4.cpp) | 101–106 | Labels present; no additional confirmed finding from targeted checks. |
 | PART_05 | 50–52 | [182_2867.asm](/Users/gabriel/Desktop/source/igor-stuff/code/182_2867.asm) / `182:2867` | [part_5.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_5.cpp) | 101–105 | Labels present; no additional confirmed finding from targeted checks. |
 | PART_06 | 60–62 | [180_31FE.asm](/Users/gabriel/Desktop/source/igor-stuff/code/180_31FE.asm) / `180:31FE` | [part_6.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_6.cpp) | 101–108 | Labels present; F11 alias 62; ordinary original loop also excludes 62. |
@@ -242,20 +258,20 @@ The table below accounts for every original dispatcher entry group. State number
 | PART_11 | 110 | [176_2813.asm](/Users/gabriel/Desktop/source/igor-stuff/code/176_2813.asm) / `176:2813` | [part_11.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_11.cpp) | 101–114 | Labels present; no additional confirmed finding from targeted checks. |
 | PART_12 | 120–122 | [171_359A.asm](/Users/gabriel/Desktop/source/igor-stuff/code/171_359A.asm) / `171:359A` | [part_12.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_12.cpp) | 101–108 | Labels present; no additional confirmed finding from targeted checks. |
 | PART_13 | 130–131 | [169_237D.asm](/Users/gabriel/Desktop/source/igor-stuff/code/169_237D.asm) / `169:237D` | [part_13.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_13.cpp) | 101–105 | Labels present; F12 reload handling. |
-| PART_14 | 140–142 | [165_33D7.asm](/Users/gabriel/Desktop/source/igor-stuff/code/165_33D7.asm) / `165:33D7` | [part_14.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_14.cpp) | 101–108 | Labels present; F02, F12; internal mosaic states are not main rooms. |
+| PART_14 | 140–142 | [165_33D7.asm](/Users/gabriel/Desktop/source/igor-stuff/code/165_33D7.asm) / `165:33D7` | [part_14.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_14.cpp) | 101–108 | Labels present; F02 fixed, F12 open; internal mosaic states are not main rooms. |
 | PART_15 | 150 | [153_2315.asm](/Users/gabriel/Desktop/source/igor-stuff/code/153_2315.asm) / `153:2315` | [part_15.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_15.cpp) | 101–116 | Labels present; F12; actor callbacks accounted for. |
-| PART_16 | 160 | [144_28BC.asm](/Users/gabriel/Desktop/source/igor-stuff/code/144_28BC.asm) / `144:28BC` | [part_16.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_16.cpp) | 101–103 | Labels present; F12; laboratory Margaret path suppresses card by direct call. |
+| PART_16 | 160 | [144_28BC.asm](/Users/gabriel/Desktop/source/igor-stuff/code/144_28BC.asm) / `144:28BC` | [part_16.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_16.cpp) | 101–103 | Labels present; F12; laboratory Margaret path suppresses card by direct call; F07/F08 fixed in shared scheduler/card helper. |
 | PART_17 | 170–171 | [141_37DA.asm](/Users/gabriel/Desktop/source/igor-stuff/code/141_37DA.asm) / `141:37DA` | [part_17.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_17.cpp) | 101–106 | Labels present; no additional confirmed finding from targeted checks. |
 | PART_18 | 180–181 | [136_2551.asm](/Users/gabriel/Desktop/source/igor-stuff/code/136_2551.asm) / `136:2551` | [part_18.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_18.cpp) | 101–111 | Labels present; F12. |
-| PART_19 | 190–191 | [137_2D59.asm](/Users/gabriel/Desktop/source/igor-stuff/code/137_2D59.asm) / `137:2D59` | [part_19.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_19.cpp) | 101–109 | Labels present; F03, F12; state 191 is special slug sequence. |
+| PART_19 | 190–191 | [137_2D59.asm](/Users/gabriel/Desktop/source/igor-stuff/code/137_2D59.asm) / `137:2D59` | [part_19.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_19.cpp) | 101–109 | Labels present; F03 fixed, F12 open; state 191 is special slug sequence. |
 | PART_21 | 210–212 | [129_22FC.asm](/Users/gabriel/Desktop/source/igor-stuff/code/129_22FC.asm) / `129:22FC` | [part_21.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_21.cpp) | 101–113 | Labels present; no additional confirmed finding from targeted checks. |
 | PART_22 | 220–221 | [157_14A7.asm](/Users/gabriel/Desktop/source/igor-stuff/code/157_14A7.asm) / `157:14A7` | [part_22.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_22.cpp) | 101–102 | Labels present; no additional confirmed finding from targeted checks. |
 | PART_23 | 230–232 | [126_1AA0.asm](/Users/gabriel/Desktop/source/igor-stuff/code/126_1AA0.asm) / `126:1AA0` | [part_23.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_23.cpp) | 101–102, 105–113 | Labels present; no additional confirmed finding from targeted checks. |
 | PART_24 | 240–242 | [120_1C01.asm](/Users/gabriel/Desktop/source/igor-stuff/code/120_1C01.asm) / `120:1C01` | [part_24.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_24.cpp) | 101–112 | Labels present; F12. |
 | PART_25 | 250–252 | [117_23EB.asm](/Users/gabriel/Desktop/source/igor-stuff/code/117_23EB.asm) / `117:23EB` | [part_25.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_25.cpp) | 101–109 | Labels present; F12. |
 | PART_26 | 260–261 | [114_2712.asm](/Users/gabriel/Desktop/source/igor-stuff/code/114_2712.asm) / `114:2712` | [part_26.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_26.cpp) | 101–111 | Labels present; F12. |
-| PART_27 | 270–271 | [133_192B.asm](/Users/gabriel/Desktop/source/igor-stuff/code/133_192B.asm) / `133:192B` | [part_27.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_27.cpp) | 101–113 | Labels present; F04–F06, F12. |
-| PART_28 | 280–281 | [123_2C8A.asm](/Users/gabriel/Desktop/source/igor-stuff/code/123_2C8A.asm) / `123:2C8A` | [part_28.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_28.cpp) | 101–113 | Labels present; F06 at 280; actor callbacks accounted for. |
+| PART_27 | 270–271 | [133_192B.asm](/Users/gabriel/Desktop/source/igor-stuff/code/133_192B.asm) / `133:192B` | [part_27.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_27.cpp) | 101–113 | Labels present; F04/F05/F06 fixed, F12 open. |
+| PART_28 | 280–281 | [123_2C8A.asm](/Users/gabriel/Desktop/source/igor-stuff/code/123_2C8A.asm) / `123:2C8A` | [part_28.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_28.cpp) | 101–113 | Labels present; F06 fixed (state 280); actor callbacks accounted for. |
 | PART_30 | 300–303 | [110_28A6.asm](/Users/gabriel/Desktop/source/igor-stuff/code/110_28A6.asm) / `110:28A6` | [part_30.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_30.cpp) | 101–106 | Labels present; no additional confirmed finding from targeted checks. |
 | PART_31 | 310–313 | [107_2C7A.asm](/Users/gabriel/Desktop/source/igor-stuff/code/107_2C7A.asm) / `107:2C7A` | [part_31.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_31.cpp) | 101–116 | Labels present; F12. |
 | PART_32 | 320 | [160_147A.asm](/Users/gabriel/Desktop/source/igor-stuff/code/160_147A.asm) / `160:147A` | [part_32.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_32.cpp) | 101–106 | Labels present; no additional confirmed finding from targeted checks. |
@@ -267,7 +283,7 @@ The table below accounts for every original dispatcher entry group. State number
 | PART_50 | 500–501 | [054_20DA.asm](/Users/gabriel/Desktop/source/igor-stuff/code/054_20DA.asm) / `054:20DA` | [part_50.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_50.cpp) | 101–103 | Labels present; outside-maze entry remains separate. |
 | PART_51 | 510 | [093_157A.asm](/Users/gabriel/Desktop/source/igor-stuff/code/093_157A.asm) / `093:157A` | [part_maze.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_maze.cpp) | 101–102 | Generated data matches disassembly; labels represented by maze data. |
 | PART_52 | 521 | [091_1580.asm](/Users/gabriel/Desktop/source/igor-stuff/code/091_1580.asm) / `091:1580` | [part_maze.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_maze.cpp) | 101–102 | Generated data matches disassembly; labels represented by maze data. |
-| PART_53 | 532 | [089_16DA.asm](/Users/gabriel/Desktop/source/igor-stuff/code/089_16DA.asm) / `089:16DA` | [part_maze.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_maze.cpp) | 101–102 | Generated data matches; F06 scheduler at 532. |
+| PART_53 | 532 | [089_16DA.asm](/Users/gabriel/Desktop/source/igor-stuff/code/089_16DA.asm) / `089:16DA` | [part_maze.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_maze.cpp) | 101–102 | Generated data matches; F06 scheduler fixed (state 532). |
 | PART_54 | 543 | [087_1553.asm](/Users/gabriel/Desktop/source/igor-stuff/code/087_1553.asm) / `087:1553` | [part_maze.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_maze.cpp) | 101–102 | Generated data matches disassembly; labels represented by maze data. |
 | PART_55 | 550–551 | [085_169D.asm](/Users/gabriel/Desktop/source/igor-stuff/code/085_169D.asm) / `085:169D` | [part_maze.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_maze.cpp) | 101–103 | Generated data matches disassembly; labels represented by maze data. |
 | PART_56 | 560, 562 | [083_1A62.asm](/Users/gabriel/Desktop/source/igor-stuff/code/083_1A62.asm) / `083:1A62` | [part_maze.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_maze.cpp) | 101–103 | Generated data matches disassembly; labels represented by maze data. |
@@ -276,7 +292,7 @@ The table below accounts for every original dispatcher entry group. State number
 | PART_59 | 591, 593 | [077_16A8.asm](/Users/gabriel/Desktop/source/igor-stuff/code/077_16A8.asm) / `077:16A8` | [part_maze.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_maze.cpp) | 101–103 | Generated data matches disassembly; labels represented by maze data. |
 | PART_60 | 602–603 | [075_1A53.asm](/Users/gabriel/Desktop/source/igor-stuff/code/075_1A53.asm) / `075:1A53` | [part_maze.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_maze.cpp) | 101–103 | Generated data matches disassembly; labels represented by maze data. |
 | PART_61 | 610–612 | [073_1BB8.asm](/Users/gabriel/Desktop/source/igor-stuff/code/073_1BB8.asm) / `073:1BB8` | [part_maze.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_maze.cpp) | 101–104 | Generated data matches disassembly; labels represented by maze data. |
-| PART_62 | 621–623 | [071_1C09.asm](/Users/gabriel/Desktop/source/igor-stuff/code/071_1C09.asm) / `071:1C09` | [part_maze.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_maze.cpp) | 101–104 | Generated data matches; F06 scheduler at 622. |
+| PART_62 | 621–623 | [071_1C09.asm](/Users/gabriel/Desktop/source/igor-stuff/code/071_1C09.asm) / `071:1C09` | [part_maze.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_maze.cpp) | 101–104 | Generated data matches; F06 scheduler fixed (state 622). |
 | PART_63 | 630, 632–633 | [069_1BB8.asm](/Users/gabriel/Desktop/source/igor-stuff/code/069_1BB8.asm) / `069:1BB8` | [part_maze.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_maze.cpp) | 101–104 | Generated data matches disassembly; labels represented by maze data. |
 | PART_64 | 640–641, 643 | [067_148C.asm](/Users/gabriel/Desktop/source/igor-stuff/code/067_148C.asm) / `067:148C` | [part_maze.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_maze.cpp) | 101–104 | Generated data matches disassembly; labels represented by maze data. |
 | PART_65 | 650–653 | [065_1641.asm](/Users/gabriel/Desktop/source/igor-stuff/code/065_1641.asm) / `065:1641` | [part_maze.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_maze.cpp) | 101–105 | Generated data matches disassembly; labels represented by maze data. |
@@ -287,14 +303,14 @@ The table below accounts for every original dispatcher entry group. State number
 | PART_70 | 700 | [046_117B.asm](/Users/gabriel/Desktop/source/igor-stuff/code/046_117B.asm) / `046:117B` | [part_70.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_70.cpp) | 101–104 | Labels present; map destinations 501/680/720/810 represented. |
 | PART_71 | 710 | [060_167D.asm](/Users/gabriel/Desktop/source/igor-stuff/code/060_167D.asm) / `060:167D` | [part_71.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_71.cpp) | 101–107 | Labels present; no additional confirmed finding from targeted checks. |
 | PART_72 | 720–721 | [048_22E3.asm](/Users/gabriel/Desktop/source/igor-stuff/code/048_22E3.asm) / `048:22E3` | [part_72.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_72.cpp) | 101–106 | Labels present; no additional confirmed finding from targeted checks. |
-| PART_73 | 730 | [001_3866.asm](/Users/gabriel/Desktop/source/igor-stuff/code/001_3866.asm) / `001:3866` | [part_73.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_73.cpp) | — | Cutscene present; calls PART_80, then state 40. |
+| PART_73 | 730 | [001_3866.asm](/Users/gabriel/Desktop/source/igor-stuff/code/001_3866.asm) / `001:3866` | [part_73.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_73.cpp) | — | Cutscene present; calls PART_80, then state 40; F08 shared card hold fixed. |
 | PART_74 | 740 | [001_3061.asm](/Users/gabriel/Desktop/source/igor-stuff/code/001_3061.asm) / `001:3061` | [part_74.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_74.cpp) | — | Cutscene present nested in PART_81; F11 main re-entry absent. |
-| PART_75 | 750 | [037_0786.asm](/Users/gabriel/Desktop/source/igor-stuff/code/037_0786.asm) / `037:0786` | [part_75.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_75.cpp) | — | Cutscene present; transition to 122 represented. |
-| PART_76 | 760 | [033_2C59.asm](/Users/gabriel/Desktop/source/igor-stuff/code/033_2C59.asm) / `033:2C59` | [part_76.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_76.cpp) | 101–108 | Labels present; beach-frame load exists; not reported missing. |
+| PART_75 | 750 | [037_0786.asm](/Users/gabriel/Desktop/source/igor-stuff/code/037_0786.asm) / `037:0786` | [part_75.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_75.cpp) | — | Cutscene present; transition to 122 represented; F08 shared card hold fixed. |
+| PART_76 | 760 | [033_2C59.asm](/Users/gabriel/Desktop/source/igor-stuff/code/033_2C59.asm) / `033:2C59` | [part_76.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_76.cpp) | 101–108 | Labels present; beach-frame load exists; not reported missing; F08 shared card hold fixed. |
 | PART_77 | 770–771 | [030_2EDC.asm](/Users/gabriel/Desktop/source/igor-stuff/code/030_2EDC.asm) / `030:2EDC` | [part_77.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_77.cpp) | 101–106 | Labels present; F16 skipped-walk timing. |
-| PART_78 | 780 | [024_0D8B.asm](/Users/gabriel/Desktop/source/igor-stuff/code/024_0D8B.asm) / `024:0D8B` | [part_78.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_78.cpp) | — | Cutscene present; transition to 281; F06 scheduler. |
-| PART_79 | 790 | [014_04A5.asm](/Users/gabriel/Desktop/source/igor-stuff/code/014_04A5.asm) / `014:04A5` | [part_79.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_79.cpp) | — | Both original units consolidated; progression 790 → 791 → 910; F06. |
-| PART_79 | 791 | [009_0BCD.asm](/Users/gabriel/Desktop/source/igor-stuff/code/009_0BCD.asm) / `009:0BCD` | [part_79.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_79.cpp) | — | Both original units consolidated; progression 790 → 791 → 910; F06. |
+| PART_78 | 780 | [024_0D8B.asm](/Users/gabriel/Desktop/source/igor-stuff/code/024_0D8B.asm) / `024:0D8B` | [part_78.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_78.cpp) | — | Cutscene present; transition to 281; F06 scheduler and F08 shared card holds fixed. |
+| PART_79 | 790 | [014_04A5.asm](/Users/gabriel/Desktop/source/igor-stuff/code/014_04A5.asm) / `014:04A5` | [part_79.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_79.cpp) | — | Both original units consolidated; progression 790 → 791 → 910; F06 fixed. |
+| PART_79 | 791 | [009_0BCD.asm](/Users/gabriel/Desktop/source/igor-stuff/code/009_0BCD.asm) / `009:0BCD` | [part_79.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_79.cpp) | — | Both original units consolidated; progression 790 → 791 → 910; F06 fixed. |
 | PART_80 | 800 | [009_388D.asm](/Users/gabriel/Desktop/source/igor-stuff/code/009_388D.asm) / `009:388D` | [part_80.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_80.cpp) | — | Nested cutscene present from PART_73; F11 main re-entry absent. |
 | PART_81 | 810 | [018_346E.asm](/Users/gabriel/Desktop/source/igor-stuff/code/018_346E.asm) / `018:346E` | [part_81.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_81.cpp) | 101–104, 106–110 | Labels present; PART_74 and actor callbacks accounted for; frame-offset arrays match. |
 | PART_85 | 850 | [209_0DA4.asm](/Users/gabriel/Desktop/source/igor-stuff/code/209_0DA4.asm) / `209:0DA4` | [part_85.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_85.cpp) | — | Intro present; transition to 61; F09 startup begins here. |
@@ -313,8 +329,8 @@ There is no original dispatcher group for every integer part number. Absent name
 
 | Original unit / root | Port counterpart | Result |
 |---|---|---|
-| [001_08B7.asm](/Users/gabriel/Desktop/source/igor-stuff/code/001_08B7.asm) / `001:08B7` | [part_main.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/part_main.cpp) | Main dispatch, scheduled interludes, credits and nested scripts; F06–F11. |
-| [145_07FA.asm](/Users/gabriel/Desktop/source/igor-stuff/code/145_07FA.asm) / `145:07FA` | [part_margaret.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_margaret.cpp) | Margaret scenes plus shared title card; F07–F08. |
+| [001_08B7.asm](/Users/gabriel/Desktop/source/igor-stuff/code/001_08B7.asm) / `001:08B7` | [part_main.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/part_main.cpp) | Main dispatch, scheduled interludes, credits and nested scripts; F06–F08 fixed, F09–F11 open. |
+| [145_07FA.asm](/Users/gabriel/Desktop/source/igor-stuff/code/145_07FA.asm) / `145:07FA` | [part_margaret.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_margaret.cpp) | Margaret scenes plus shared title card; F07–F08 fixed. |
 | [221_273B.asm](/Users/gabriel/Desktop/source/igor-stuff/code/221_273B.asm) / `221:273B` | [igor.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/igor.cpp) | Original shutdown / device cleanup; platform equivalents in engine lifecycle. Hardware equivalence unresolved. |
 | [222_2A6A.asm](/Users/gabriel/Desktop/source/igor-stuff/code/222_2A6A.asm) / `222:2A6A` | [part_main.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/part_main.cpp) | Shared action dispatch and inventory lookup; original global registrations represented. |
 
@@ -323,7 +339,7 @@ There is no original dispatcher group for every integer part number. Absent name
 | System | Port source | Checks / conclusion |
 |---|---|---|
 | Global actions and object combinations | [part_main.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/part_main.cpp) | All 67 explicit registrations present: 1–46, 48, 50–69. No original registrations for 47 or 49 were found. Dialogue/flag candidates followed through helper calls. Labels alone do not certify every combination. |
-| Scheduler and cards | [part_main.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/part_main.cpp), [part_margaret.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_margaret.cpp) | Byte-width exclusions and ordering checked; F06–F08. Laboratory card suppression accounted for. |
+| Scheduler and cards | [part_main.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/part_main.cpp), [part_margaret.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_margaret.cpp) | Byte-width exclusions and ordering checked; F06–F08 fixed. Laboratory card suppression accounted for. |
 | Initialization / room lifecycle | [igor.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/igor.cpp) | F09, F12–F14; shared enter/leave does not substitute for each original loaded-entry branch. |
 | Room decoding / shared room setup | [room.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/room.cpp) | Reviewed room resource decoding and setup of masks, hotspots, names, scale data and room strings. Reload control-flow gaps are tracked separately in F12; parser correctness is not certified solely by resource coverage. |
 | Inventory dispatch and drawing | [text.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/text.cpp), [part_main.cpp](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/part_main.cpp) | 740-byte action table and eight-byte offset table match initialized executable data. Shared inventory add/remove sounds resolve apparent missing per-room sound calls. |
@@ -393,7 +409,7 @@ The three common generator/installed variants have identical resource and sound 
 | Installed TBL range / ID checks | Pass | Sorted unique CD IDs; resource bounds; matching maze catalog rows |
 | Unmodified TBL generator in temporary directory | Installed-byte comparison fails | F17; CD resource/sound/string content still matches |
 
-No game executable was launched for runtime verification. No source correction was made and no test was added. The focused validators can pass while the findings above remain; their actual coverage is narrower than their success messages may suggest.
+No game executable was launched for runtime verification in this session during the initial audit or remediation through F08. The initial audit made no source corrections; subsequent corrections and their validation are recorded in each finding’s status. No test was added. The focused validators can pass while the findings above remain; their actual coverage is narrower than their success messages may suggest.
 
 ## Recommended correction order and original-grounded verification
 
@@ -422,5 +438,5 @@ SHA-256 of original inputs:
 | `IGOR-CD/IGOR.DAT` | `fc34b0e092cb6cc2e10a5112fa272cf1389acf62831a571e41e08629338e675e` |
 | Temporary unmodified-generator TBL | `659eb70352394a0dda0da9b20c05042fd9710a027f6d2aea7c952f4a883269a2` |
 
-The fork was clean at audit start. The research workspace already contained unrelated untracked investigation artifacts and reference-submodule state; those were preserved. Only the audit document and companion evidence files were intentionally written to the workspace.
+The fork was clean at audit start. The research workspace already contained unrelated untracked investigation artifacts and reference-submodule state; those were preserved. At the initial audit, only the audit document and companion evidence files were intentionally written to the workspace. Subsequent changes to engine source are recorded in the finding statuses above. Companion coverage tables retain the initial audit evidence; this document is authoritative for remediation status.
 
