@@ -1,0 +1,488 @@
+{
+  "interpretation": "Direct initialized-byte match candidates only. Duplicate matches, transformed data and unused one-based dummy values require manual interpretation. No match does not establish a defect.",
+  "records": [
+    {
+      "file": "input.cpp",
+      "name": "kSentenceColorIndex",
+      "count": 3,
+      "DS_full": "0x82c",
+      "DS_tail": ""
+    },
+    {
+      "file": "static_walk.cpp",
+      "name": "_walkWidthScaleTable",
+      "count": 50,
+      "DS_full": "0x1258",
+      "DS_tail": "0x1259"
+    },
+    {
+      "file": "static_walk.cpp",
+      "name": "_walkScaleTable",
+      "count": 2356,
+      "DS_full": "0x924",
+      "DS_tail": "0x925"
+    },
+    {
+      "file": "text.cpp",
+      "name": "_talkDelays",
+      "count": 7,
+      "DS_full": "0x401",
+      "DS_tail": "0x402"
+    },
+    {
+      "file": "text.cpp",
+      "name": "_inventoryOffsetTable",
+      "count": 8,
+      "DS_full": "0x834",
+      "DS_tail": "0x835"
+    },
+    {
+      "file": "text.cpp",
+      "name": "_inventoryActionsTable",
+      "count": 740,
+      "DS_full": "0x548",
+      "DS_tail": "0x549"
+    },
+    {
+      "file": "text.cpp",
+      "name": "_dialogueColor",
+      "count": 3,
+      "DS_full": "0x830",
+      "DS_tail": ""
+    },
+    {
+      "file": "text.cpp",
+      "name": "_sentenceColorIndex",
+      "count": 3,
+      "DS_full": "0x82c",
+      "DS_tail": ""
+    },
+    {
+      "file": "static_cursor.cpp",
+      "name": "_mouseCursorMask",
+      "count": 96,
+      "DS_full": "0x1416",
+      "DS_tail": "0x1417"
+    },
+    {
+      "file": "static_cursor.cpp",
+      "name": "_mouseCursorData",
+      "count": 48,
+      "DS_full": "",
+      "DS_tail": ""
+    },
+    {
+      "file": "static_cursor.cpp",
+      "name": "PAL_IGOR_1",
+      "count": 48,
+      "DS_full": "0x13b6",
+      "DS_tail": "0x13b7"
+    },
+    {
+      "file": "static_cursor.cpp",
+      "name": "PAL_IGOR_2",
+      "count": 48,
+      "DS_full": "0x13e6",
+      "DS_tail": "0x13e7"
+    },
+    {
+      "file": "static_cursor.cpp",
+      "name": "PAL_96_1",
+      "count": 96,
+      "DS_full": "",
+      "DS_tail": ""
+    },
+    {
+      "file": "static_cursor.cpp",
+      "name": "PAL_48_1",
+      "count": 48,
+      "DS_full": "",
+      "DS_tail": ""
+    },
+    {
+      "file": "static_cursor.cpp",
+      "name": "INVENTORY_IMG_INIT",
+      "count": 36,
+      "DS_full": "0x8b6",
+      "DS_tail": "0x8b7"
+    },
+    {
+      "file": "debug.cpp",
+      "name": "kDebugOverlayPalette",
+      "count": 48,
+      "DS_full": "",
+      "DS_tail": ""
+    },
+    {
+      "file": "parts/part_69.cpp",
+      "name": "kPart69StepFirstFireflyFrameA",
+      "count": 7,
+      "DS_full": "0xf5",
+      "DS_tail": "0xf6"
+    },
+    {
+      "file": "parts/part_69.cpp",
+      "name": "kPart69StepLastFireflyFrameA",
+      "count": 7,
+      "DS_full": "0xf9",
+      "DS_tail": "0xfa"
+    },
+    {
+      "file": "parts/part_69.cpp",
+      "name": "kPart69StepNext",
+      "count": 7,
+      "DS_full": "0xff",
+      "DS_tail": "0x100"
+    },
+    {
+      "file": "parts/part_69.cpp",
+      "name": "kPart69StepFirstFireflyFrameB",
+      "count": 4,
+      "DS_full": "0x105",
+      "DS_tail": "0x106"
+    },
+    {
+      "file": "parts/part_69.cpp",
+      "name": "kPart69StepLastFireflyFrameB",
+      "count": 4,
+      "DS_full": "0x109",
+      "DS_tail": "0x10a"
+    },
+    {
+      "file": "parts/part_69.cpp",
+      "name": "kPart69StepAreas",
+      "count": 4,
+      "DS_full": "0x10d",
+      "DS_tail": "0x10e"
+    },
+    {
+      "file": "parts/part_69.cpp",
+      "name": "kPart69SecondFireflyAreas",
+      "count": 4,
+      "DS_full": "0x111",
+      "DS_tail": "0x112"
+    },
+    {
+      "file": "parts/part_81.cpp",
+      "name": "kPart81FigureFrames",
+      "count": 4,
+      "DS_full": "0x62",
+      "DS_tail": "0x63"
+    },
+    {
+      "file": "parts/part_81.cpp",
+      "name": "kPart81EndFrames",
+      "count": 10,
+      "DS_full": "0x44",
+      "DS_tail": "0x45"
+    },
+    {
+      "file": "parts/part_81.cpp",
+      "name": "kPart81EndHold",
+      "count": 10,
+      "DS_full": "0x4e",
+      "DS_tail": "0x4f"
+    },
+    {
+      "file": "parts/part_81.cpp",
+      "name": "kPart81EndFinalHold",
+      "count": 10,
+      "DS_full": "0x58",
+      "DS_tail": "0x59"
+    },
+    {
+      "file": "parts/part_79.cpp",
+      "name": "kPart79PatchSteps",
+      "count": 8,
+      "DS_full": "0x3c",
+      "DS_tail": "0x3d"
+    },
+    {
+      "file": "parts/part_79.cpp",
+      "name": "kPart79FadeColors",
+      "count": 6,
+      "DS_full": "",
+      "DS_tail": ""
+    },
+    {
+      "file": "parts/part_78.cpp",
+      "name": "kPart78StepFrames",
+      "count": 45,
+      "DS_full": "0x987",
+      "DS_tail": "0x66"
+    },
+    {
+      "file": "parts/part_8.cpp",
+      "name": "frames",
+      "count": 28,
+      "DS_full": "0x1e5",
+      "DS_tail": "0x1e6"
+    },
+    {
+      "file": "parts/part_8.cpp",
+      "name": "deanFrames",
+      "count": 4,
+      "DS_full": "0x148",
+      "DS_tail": "0x9b"
+    },
+    {
+      "file": "parts/part_8.cpp",
+      "name": "igorFrames",
+      "count": 4,
+      "DS_full": "0x3c",
+      "DS_tail": "0x3d"
+    },
+    {
+      "file": "parts/part_23.cpp",
+      "name": "PART_23_ANIM_DATA_1",
+      "count": 3,
+      "DS_full": "0x15f",
+      "DS_tail": ""
+    },
+    {
+      "file": "parts/part_22.cpp",
+      "name": "PART_22_PICK_UP_FRAMES",
+      "count": 3,
+      "DS_full": "0x44",
+      "DS_tail": ""
+    },
+    {
+      "file": "parts/part_9.cpp",
+      "name": "frames",
+      "count": 7,
+      "DS_full": "0x1ba",
+      "DS_tail": "0x1bb"
+    },
+    {
+      "file": "parts/part_9.cpp",
+      "name": "frames",
+      "count": 9,
+      "DS_full": "0x117",
+      "DS_tail": "0x118"
+    },
+    {
+      "file": "parts/part_9.cpp",
+      "name": "frames",
+      "count": 18,
+      "DS_full": "0x216",
+      "DS_tail": "0x217"
+    },
+    {
+      "file": "parts/part_9.cpp",
+      "name": "beginFrames",
+      "count": 4,
+      "DS_full": "0x3d",
+      "DS_tail": "0x3e"
+    },
+    {
+      "file": "parts/part_9.cpp",
+      "name": "endFrames",
+      "count": 4,
+      "DS_full": "0x22c",
+      "DS_tail": "0x22d"
+    },
+    {
+      "file": "parts/part_34.cpp",
+      "name": "kOldLadyIdleFrames",
+      "count": 6,
+      "DS_full": "0x120",
+      "DS_tail": "0x121"
+    },
+    {
+      "file": "parts/part_34.cpp",
+      "name": "kPickUpFrames",
+      "count": 10,
+      "DS_full": "0x116",
+      "DS_tail": "0x117"
+    },
+    {
+      "file": "parts/part_34.cpp",
+      "name": "kOldLadyPetFrames",
+      "count": 11,
+      "DS_full": "0x130",
+      "DS_tail": "0x131"
+    },
+    {
+      "file": "parts/part_34.cpp",
+      "name": "kOldLadyBagFrames",
+      "count": 6,
+      "DS_full": "0x13c",
+      "DS_tail": "0x13d"
+    },
+    {
+      "file": "parts/part_21.cpp",
+      "name": "PART_21_ANIM_DATA_1",
+      "count": 7,
+      "DS_full": "",
+      "DS_tail": "0x162"
+    },
+    {
+      "file": "parts/part_21.cpp",
+      "name": "PART_21_ANIM_DATA_2",
+      "count": 11,
+      "DS_full": "0x14b",
+      "DS_tail": "0x14c"
+    },
+    {
+      "file": "parts/part_31.cpp",
+      "name": "PART_31_ANIM_DATA_1",
+      "count": 10,
+      "DS_full": "0x14b",
+      "DS_tail": "0x14c"
+    },
+    {
+      "file": "parts/part_31.cpp",
+      "name": "PART_31_ANIM_DATA_2",
+      "count": 10,
+      "DS_full": "",
+      "DS_tail": "0x142"
+    },
+    {
+      "file": "parts/part_32.cpp",
+      "name": "kPart32FinalFrames",
+      "count": 13,
+      "DS_full": "0x1a4",
+      "DS_tail": "0x1a5"
+    },
+    {
+      "file": "parts/part_26.cpp",
+      "name": "PART_26_ANIM_DATA_1",
+      "count": 12,
+      "DS_full": "0x154",
+      "DS_tail": "0x155"
+    },
+    {
+      "file": "parts/part_33.cpp",
+      "name": "PART_33_ANIM_DATA_4",
+      "count": 4,
+      "DS_full": "0x9d",
+      "DS_tail": "0x44"
+    },
+    {
+      "file": "parts/part_33.cpp",
+      "name": "PART_33_ANIM_DATA_5",
+      "count": 5,
+      "DS_full": "0x1d9",
+      "DS_tail": "0x1da"
+    },
+    {
+      "file": "parts/part_1.cpp",
+      "name": "windowFrames",
+      "count": 4,
+      "DS_full": "0x9d",
+      "DS_tail": "0x44"
+    },
+    {
+      "file": "parts/part_2.cpp",
+      "name": "postExplosionFrames",
+      "count": 20,
+      "DS_full": "0x260",
+      "DS_tail": "0x261"
+    },
+    {
+      "file": "parts/part_15.cpp",
+      "name": "PART_15_ANIM_DATA_1",
+      "count": 8,
+      "DS_full": "0x16f",
+      "DS_tail": "0x170"
+    },
+    {
+      "file": "parts/part_15.cpp",
+      "name": "PART_15_ANIM_DATA_2",
+      "count": 8,
+      "DS_full": "0x177",
+      "DS_tail": "0x178"
+    },
+    {
+      "file": "parts/part_15.cpp",
+      "name": "PART_15_ANIM_DATA_3",
+      "count": 12,
+      "DS_full": "0x17f",
+      "DS_tail": "0x180"
+    },
+    {
+      "file": "parts/part_15.cpp",
+      "name": "PART_15_ANIM_DATA_4",
+      "count": 8,
+      "DS_full": "0x18b",
+      "DS_tail": "0x18c"
+    },
+    {
+      "file": "parts/part_15.cpp",
+      "name": "PART_15_ANIM_DATA_5",
+      "count": 12,
+      "DS_full": "0x17f",
+      "DS_tail": "0x180"
+    },
+    {
+      "file": "parts/part_14.cpp",
+      "name": "PART_14_ANIM_DATA_1",
+      "count": 6,
+      "DS_full": "0x1b1",
+      "DS_tail": "0x1b2"
+    },
+    {
+      "file": "parts/part_10.cpp",
+      "name": "frameSelectors",
+      "count": 4,
+      "DS_full": "0x1d2",
+      "DS_tail": "0x1d3"
+    },
+    {
+      "file": "parts/part_12.cpp",
+      "name": "PART_12_DATA_ANIM_1",
+      "count": 10,
+      "DS_full": "0x1b7",
+      "DS_tail": "0x1b8"
+    },
+    {
+      "file": "parts/part_12.cpp",
+      "name": "PART_12_DATA_ANIM_2",
+      "count": 16,
+      "DS_full": "0x1c1",
+      "DS_tail": "0x1c2"
+    },
+    {
+      "file": "parts/part_75.cpp",
+      "name": "PART_75_ANIM_DATA_1",
+      "count": 18,
+      "DS_full": "",
+      "DS_tail": "0xb6"
+    },
+    {
+      "file": "parts/part_75.cpp",
+      "name": "PART_75_ANIM_DATA_2",
+      "count": 37,
+      "DS_full": "0xc7",
+      "DS_tail": "0xc8"
+    },
+    {
+      "file": "parts/part_76.cpp",
+      "name": "kPart76SequenceFrames",
+      "count": 5,
+      "DS_full": "0x98",
+      "DS_tail": "0x99"
+    },
+    {
+      "file": "parts/part_76.cpp",
+      "name": "kPart76SpriteOrder",
+      "count": 3,
+      "DS_full": "0x44",
+      "DS_tail": ""
+    },
+    {
+      "file": "parts/part_76.cpp",
+      "name": "kPart76EndFrames",
+      "count": 20,
+      "DS_full": "0xa2",
+      "DS_tail": "0xa3"
+    },
+    {
+      "file": "parts/part_77.cpp",
+      "name": "kPart77CutsceneFrames",
+      "count": 6,
+      "DS_full": "0x92",
+      "DS_tail": "0x93"
+    }
+  ]
+}
