@@ -682,3 +682,4 @@
 { PAL_Credits6, 0x25d6e, 768 },
 { IMG_Credits7, 0x656e, 64000 },
 { PAL_Credits7, 0x15f6e, 768 },
+{ DLG_Part8Intercom, 0x550339, 467 },

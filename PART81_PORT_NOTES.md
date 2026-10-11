@@ -54,3 +54,13 @@ Not derived / differences:
 * Loading a game saved in the conversation (original `EB2E == 1` calls `018:1172` again): the fork restores the room only.
 * The 24 pixels of the original text drawing (table DS 14D4/1505) that `0180` patches belong to its text drawing.
 * The standalone state 740 is not routed (its animation base is loaded by the previous scenes).
+
+Hover rule (every room overlay, e.g. `018:3AE7-3B60`): a room object's name is part of the hover sentence only when the
+default-verb action byte (`DAT[47 + object*20 + verb*2]`) is non-zero; otherwise the sentence is verb-only. In state
+`objectsState[105] == 0` the keeper (object 2) has no Talk action, so "Talk to ..." shows no name. Implemented
+generically in `handleRoomInput` (it used to be restricted to states 100..102 / 110).
+
+End-scene frame table fix: in `018:0B72-0BBC` the frame offset is the word at `buf + 2*frame - 15610` (16-bit wrap, = `buf + 0xC306 + 2*frame`)
+and the frame data is `buf + 0xBAE0 + offset - 1`. The table is the 16-byte third piece loaded by `021:0002` at `buf + 0xC308`,
+so relative to the 0xBAE0 base it is 0x828 (the port had 0x808, which read the 0x80-filled tail of the tall picture and
+went far outside the 64K animation buffer).

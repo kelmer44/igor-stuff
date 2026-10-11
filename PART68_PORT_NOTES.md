@@ -23,7 +23,7 @@ choices 283, select 284, ...), already in `text.cpp`; 057:1109 is this room's co
 | 056:04C6 | wait for NPC speech: sentence end frame 4, middle frames 4..8 | `PART_68_UPDATE_DIALOGUE_NPC` |
 | 056:0C12 / 0C90 / 0D0B | entries: 680 with `objectsState[90]` 0: (319,143) facing left, path to (259,143); 680 with 1: (0,143) facing right, skip 16, path to (60,143); 681: (193,115) facing right, clip 25, scale 42, path to (253,138) | `PART_68_ENTER_*` |
 | 056:0D88 / 0D9F | actions 101 / 109: `objectsState[90]` 1 / 0, state 700 | `PART_68_EXEC_ACTION` |
-| 056:0952 | action 102 (once, `objectsState[93] == 0`): pose picture (23x50 at (170,83)), NPC lines 202..205, Igor turns right, lines 206/207, NPC 208..211, pose frames 0/1 (120 ticks), inventory object 34 at index 69, `objectsState[91] = 1` | `PART_68_ACTION_102_takeObject` |
+| 056:0952 | action 102 (take): `objectsState[93] == 0`: pose picture (23x50 at (170,83)), NPC lines 202..205, Igor turns right, lines 206/207, NPC 208..211, nothing is taken; `objectsState[93] != 0` (jump to 0B57): pose frames 0/1 (120 ticks each), inventory object 34 at index 69, `objectsState[91] = 1`, state applied | `PART_68_ACTION_102_takeObject` |
 | 056:071A | action 108 (give): inventory index 40 removed, picture 52x30 at (244,86), text 214 / NPC 215..218 / frames 1..3 (40 ticks) / NPC 219..222, `objectsState[93] = 1` | `PART_68_ACTION_108_giveObject` |
 | 056:0DB6 | action 106: `objectsState[92] == 0`: Igor text 223 (2 lines) and the conversation; else state 710 | `PART_68_ACTION_106` |
 | 056:0697 / 06C4 | actions 103 / 105: texts 201 / 212 (2 lines) | `igorSay` |
