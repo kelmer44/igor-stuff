@@ -683,3 +683,10 @@
 { IMG_Credits7, 0x656e, 64000 },
 { PAL_Credits7, 0x15f6e, 768 },
 { DLG_Part8Intercom, 0x550339, 467 },
+
+{ TXT_OptionsButtons, 0x850a93, 34 },
+{ TXT_OptionsSettings, 0x850ce5, 351 },
+{ TXT_OptionsTitle, 0x851279, 9 },
+{ TXT_OptionsQuit, 0x8515e5, 27 },
+{ TXT_OptionsSaveTitle, 0x85202a, 32 },
+{ TXT_OptionsLoadTitle, 0x85220e, 61 },
