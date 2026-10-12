@@ -8164,6 +8164,20 @@
       "context-identical",
       153,
       64
+    ],
+    "PAL_VerbsPanel": [
+      10648812,
+      48,
+      "native-palette-copy",
+      290,
+      10778
+    ],
+    "PAL_InventoryPanel": [
+      11199215,
+      96,
+      "native-palette-copy",
+      301,
+      58205
     ]
   },
   "missing": [

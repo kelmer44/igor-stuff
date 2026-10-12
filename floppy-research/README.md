@@ -1,11 +1,13 @@
 # Spanish floppy resource investigation
 
-The current catalog contains **584 verified resources** (582 DAT records and two
+The current catalog contains **586 verified resources** (584 DAT records and two
 resident EXE text records), with 48 unresolved CD counterparts left as TODOs.
 The fork now unpacks resident EXE data at runtime through metadata-only version-5
 TBL entries and the existing resource loader. Legacy version-4 dictionaries remain
 readable. See [runtime implementation and validation](UNPACKING_AND_RUNTIME_SUPPORT.md).
 Startup reaches the intro; complete native gameplay and audio remain unvalidated.
+The native verb borders, eight-slot inventory, palettes and paging are now
+implemented and compared against the original routines; see [UI implementation](UI_IMPLEMENTATION.md).
 
 ## Original files and layout
 

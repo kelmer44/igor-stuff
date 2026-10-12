@@ -84,9 +84,9 @@ was older than those two; it has been replaced with the same current generated
 catalog plus the two resident text entries.
 
 The new generated dictionary preserves all existing IDs, offsets and sizes,
-sound-offset sections and shared strings from the current baseline. Only the two
-resident entries and their source identifiers were added. The complete current
-floppy catalog has 584 records and 48 unresolved CD resource counterparts, covering
+sound-offset sections and shared strings from the current baseline. The two
+resident entries and two native UI palette entries were added. The complete current
+floppy catalog has 586 records and 48 unresolved CD resource counterparts, covering
 all 301 DAT overlays plus the verified resident resources.
 
 To reproduce the metadata dictionary:
@@ -114,6 +114,9 @@ Validation completed:
   sound and shared-string sections compare unchanged at the logical-record level.
 
 These are startup and resource-loading checks, not complete gameplay validation.
+The subsequent [native UI implementation](UI_IMPLEMENTATION.md) records verified
+verb borders, eight-slot inventory rendering, hit regions, paging and palettes,
+including comparisons of production methods with the original x86 routines.
 
 ## Remaining work: shared logic, native assets
 

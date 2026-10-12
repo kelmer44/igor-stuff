@@ -582,4 +582,6 @@ IMG_Credits6,0x77252,64000,13,0x299,loader-reference-range,64000,24ad627f11fab70
 PAL_Credits6,0x86c52,768,13,0xfc99,loader-reference-tail,768,0a14489c4197f961ce865dccb500abf6e618e27608fda92a6420c6c001fbec51
 IMG_Credits7,0x6728f,64000,12,0x2da,loader-reference-range,64000,26c6ca447f69e8b5053002caefddd6c1fd569dcd640a50fb2891b9936d86c946
 PAL_Credits7,0x76c8f,768,12,0xfcda,loader-reference-tail,768,0a14489c4197f961ce865dccb500abf6e618e27608fda92a6420c6c001fbec51
+PAL_InventoryPanel,0xaae2ef,96,301,0xe35d,native-palette-copy,,bac485270da8d6178cca095fd096b825e562b6307a31eb6927fc35b93d6fea4a
+PAL_VerbsPanel,0xa27cec,48,290,0x2a1a,native-palette-copy,,d8e2d05a8d9b300957a21f269209bbeb54391185433d729164cf7aafa3bf4874
 TXT_MainVerbs,0x1785e,192,resident,0x1785e,resident-verb-text,,c4cdfc081b76bbb4001b44dfac7f647c21319e7ec919ead4bac0b95941859274

@@ -14,12 +14,14 @@ overlays, their export entry points and relocation boundaries, and a partial
 correspondence with CD routines. The overlay spans cover the entire DAT after
 its eight-byte header.
 
-The floppy resource catalog contains 584 verified rows: 582 in DAT and two
+The floppy resource catalog contains 586 verified rows: 584 in DAT and two
 resident EXE text resources. The engine now reads source-tagged version-5 TBL
 records through its existing loader, unpacks the original EXE in memory and
 loads the native main texts. Startup reaches the intro in sanitizer launch checks.
 The dictionary still has an empty floppy sound section. Complete native gameplay
 and audio remain unvalidated. See [integration details](UNPACKING_AND_RUNTIME_SUPPORT.md).
+Native verb/inventory rendering, hit geometry, palettes and paging are implemented;
+see [UI evidence and validation](UI_IMPLEMENTATION.md).
 
 There are 48 unresolved CD resource counterparts:
 
