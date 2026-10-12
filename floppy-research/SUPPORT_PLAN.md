@@ -14,23 +14,25 @@ overlays, their export entry points and relocation boundaries, and a partial
 correspondence with CD routines. The overlay spans cover the entire DAT after
 its eight-byte header.
 
-The floppy resource catalog contains 582 verified rows. The installed
-`IGOR/IGOR.TBL` includes those rows and an empty floppy sound section. It is a
-partial dictionary and does not by itself enable floppy support in the engine.
+The floppy resource catalog contains 584 verified rows: 582 in DAT and two
+resident EXE text resources. The engine now reads source-tagged version-5 TBL
+records through its existing loader, unpacks the original EXE in memory and
+loads the native main texts. Startup reaches the intro in sanitizer launch checks.
+The dictionary still has an empty floppy sound section. Complete native gameplay
+and audio remain unvalidated. See [integration details](UNPACKING_AND_RUNTIME_SUPPORT.md).
 
-There are 43 unresolved CD resource identifiers:
+There are 48 unresolved CD resource counterparts:
 
 | Group | Count | Remaining investigation |
 | --- | ---: | --- |
 | College animation resources | 26 | Trace differently organized native arrays and establish their purposes. |
 | Intro/title images, palettes and animation | 12 | Establish the original loading paths and any native counterparts. |
-| Text resources | 3 | Locate the main text table and two auxiliary text blocks. |
+| Text resources | 8 | Locate auxiliary text blocks and classify newer CD UI text identifiers. |
 | Dialogue resources | 2 | Trace Tobias's office and intercom dialogue loading. |
 
 These are unresolved mappings, not evidence that the original floppy assets are
-absent. The supplied game folder also lacks `IGOR.FSD`, the separate sound-effect
-archive. Its absence does not block code or graphics investigation, but it does
-block validation of the original sound effects.
+absent. This Spanish floppy stores VOC effects and CMF music in DAT; it does not require
+IGOR.FSD. The native effect-ID mapping and music playback still need implementation.
 
 ## 1. Build a reproducible floppy disassembler
 
@@ -72,7 +74,7 @@ routine index, with unresolved references clearly identified.
 ## 3. Complete the resource investigation
 
 Use the new units to trace the unresolved college animation loaders, intro
-loaders, main text table and dialogue routines. Establish each native array's
+loaders, remaining auxiliary text blocks and dialogue routines. Establish each native array's
 purpose, offset and length from its original use.
 
 Do not force a one-to-one mapping onto CD identifiers when the floppy version
@@ -91,8 +93,8 @@ sound offsets to fill the currently empty section.
 
 Audit the fork's CD assumptions before enabling the floppy version:
 
-* Detection, version flags and filenames: floppy resources are in `IGOR.DAT`,
-  while sound effects use `IGOR.FSD`.
+* Detection, version flags and filenames: floppy resources and effects are in `IGOR.DAT`;
+  resident main texts come from the unpacked EXE through source-tagged TBL records.
 * Startup, intro and initial state selection.
 * Animation array organization, frame interpretation and copy lengths.
 * Room action data, text encoding and dialogue layouts.
@@ -118,8 +120,8 @@ Include save/load restoration and state dispatch in validation. Keep raw runtime
 state codes distinct from logical part numbers, which are the state divided by
 ten.
 
-Validate sound effects when the original `IGOR.FSD` is available. Until then,
-report the sound limitation explicitly and do not claim full playback support.
+Derive and validate the embedded VOC effect-ID mapping and CMF/AdLib music path.
+Until then, keep these paths disabled behind TODOs and report the audio limitation.
 
 ## Completion criteria
 

@@ -34,6 +34,6 @@ Native consumer disassembly was checked against the recovered bytes. Evidence ad
 
 The existing version-4 TBL resource records contain only an offset and size into the resource container, which is DAT for Spanish floppy. A resident-memory address would not work there. An offset-only catalog change cannot fix this failure.
 
-A complete fix must preserve the single dictionary load path: extract verified resident text data when generating the dictionary, store it in the generated TBL, and let the same resource lookup deliver it to a decoder that understands the native floppy layout. The native dialogue extent and numbering also need to be established; treating 250 CD-sized records as floppy text already runs into unrelated resident data.
+The fix preserves the single dictionary load path: source-tagged offset/size records address the executable image, which is unpacked from the user’s original EXE at runtime. The dictionary contains no resident text bytes. The same resource lookup delivers those ranges to the native floppy decoder. Subsequent disassembly established 171 dialogue slots, ending at the next independent scaling array; the CD count of 250 would include unrelated resident data.
 
-No catalog row or engine change was made for this investigation. TXT_MainTable remains unresolved in the installed dictionary until that representation is implemented.
+This was the initial investigation. The verified ranges are now installed as source-tagged, metadata-only dictionary entries, and the engine reads them from its unpacked EXE buffer. See [the completed integration](UNPACKING_AND_RUNTIME_SUPPORT.md).

@@ -1,9 +1,11 @@
 # Spanish floppy resource investigation
 
-The output is `reference/scummvm-create-igortbl/resource_sp_floppy.h`: **582 verified
-resource rows, with 43 unresolved CD identifiers left as disabled TODOs**. It is
-an investigation catalog, not a finished floppy-support patch. The engine, table
-generator, shipped dictionaries and game files have not been changed.
+The current catalog contains **584 verified resources** (582 DAT records and two
+resident EXE text records), with 48 unresolved CD counterparts left as TODOs.
+The fork now unpacks resident EXE data at runtime through metadata-only version-5
+TBL entries and the existing resource loader. Legacy version-4 dictionaries remain
+readable. See [runtime implementation and validation](UNPACKING_AND_RUNTIME_SUPPORT.md).
+Startup reaches the intro; complete native gameplay and audio remain unvalidated.
 
 ## Original files and layout
 
@@ -83,17 +85,17 @@ check this distinction.
 
 ## Remaining work and compatibility
 
-The 43 disabled identifiers comprise 27 FRM, 6 IMG, 5 PAL, 3 TXT and 2 DLG rows.
+The 48 disabled identifiers comprise 27 FRM, 6 IMG, 5 PAL, 8 TXT and 2 DLG rows.
 Most unresolved FRM rows are college animations whose floppy loaders expose a
 different number and organization of arrays. The header does not assign CD frame
 names to those different arrays by position. The complete floppy exports remain
 available in `map.json` for further disassembly.
 
-The unresolved title/logo assets, global text table, two auxiliary text blocks,
+The unresolved title/logo assets, auxiliary text blocks,
 Tobias dialogue and intercom dialogue also need their native loading/format paths
 traced individually. A missing CD match does not establish that a floppy asset is
-absent. In particular, the packed resident executable has not been converted into
-a second asset loading path.
+absent. Resident main texts are now accessed through the same dictionary lookup as DAT
+resources, using a source identifier and the verified executable unpacker.
 
 Many resolved resources differ in size or contents. Examples include the second
 floor stairs DAT (6,393 -> 6,137 bytes), the first floor stairs animation
@@ -103,13 +105,10 @@ buffer. A table row identifies those original bytes; it does not establish that
 the CD animation routines, action-table layouts, UI dimensions, text encoding,
 palette choices, or dialogue logic can consume them unchanged.
 
-The supplied folder contains no `IGOR.FSD`. The historical floppy sound code opens
-that separate file. No sound-offset catalog has been fabricated. The generator
-now includes the verified floppy resource catalog, keyed by the 11,199,335-byte
-DAT, and emits a zero-entry sound section until the original sound offsets are
-derived. The resulting `IGOR/IGOR.TBL` is a partial resource dictionary, not a
-complete implementation of floppy playback support. The 43 unresolved resource
-identifiers remain omitted.
+The Spanish floppy's sound effects and CMF music are embedded in DAT. The
+historical separate FSD archive applies to the English demo, not this copy.
+The dictionary still has an empty floppy sound-offset section until its native
+sound-ID mapping is derived. Runtime effects remain disabled behind a TODO.
 
 ## Reproduction and verification
 
@@ -139,13 +138,14 @@ Verified:
   exactly 46,080 pixels. Regular room text arrays parse fully, including their two
   terminators and the preceding walk tables.
 * The emitted header compiles as a ResourceEntry array with existing resource IDs.
-* Building/running the unmodified TBL generator in a temporary directory reproduces
-  all three existing shipped TBL copies byte-for-byte.
-* After integrating the floppy catalog, the generated version-4 TBL has four game
-  records, 582 sorted unique floppy resources and a zero-entry floppy sound table.
+* Before the format change, the unmodified TBL generator reproduced the current
+  root and CD dictionaries byte-for-byte; the previously installed floppy copy
+  was older. The rebuilt version-5 dictionary now reproduces all three copies.
+* After integrating resident resources, the generated version-5 TBL has four game
+  records, 584 sorted unique floppy resources and a zero-entry floppy sound table.
   Existing resource/sound sections and shared strings match the shipped dictionary
-  byte-for-byte. Only `IGOR/IGOR.TBL` was installed; existing CD dictionaries remain
-  untouched.
+  byte-for-byte. The rebuilt metadata dictionary was installed in all three locations; existing
+  logical resource/sound records and shared strings remain unchanged.
 
 To rebuild the installed dictionary from the workspace root:
 
@@ -154,6 +154,6 @@ c++ reference/scummvm-create-igortbl/create_igortbl.cpp -o /tmp/create_igortbl
 (cd IGOR && /tmp/create_igortbl)
 ```
 
-No engine C++ was changed, so an engine library rebuild is not needed for this
-catalog-only investigation. Runtime loading, changed native asset formats and
+Engine resource loading and unpacking have been implemented and verified with
+`make engines/igor/libigor.a`. Changed native formats, unresolved assets and
 sound support remain part of the subsequent floppy implementation work.
