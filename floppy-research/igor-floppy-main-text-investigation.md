@@ -1,14 +1,56 @@
-# Spanish floppy TXT_MainTable investigation
+# Why the floppy game originally failed to find its main text
 
-## Result
+The initial launch failure was caused by looking for text in the wrong place.
+`TXT_MainTable` is the engine's name for the main prepositions, object names and
+dialogue text. In Spanish floppy, that text is packed inside `IGOR.EXE`, rather
+than stored at an ordinary position in `IGOR.DAT`.
 
-Resource 323 (`TXT_MainTable`) is absent from the Spanish floppy resource section in all three current dictionaries: `IGOR/IGOR.TBL`, `IGOR.TBL`, and `IGOR-CD/IGOR.TBL`. Each Spanish floppy section is selected by the 11,199,335-byte DAT and contains 582 entries. Its catalog leaves TXT_MainTable as an unresolved TODO.
+The fix is implemented now. The current TBL tells the existing loader to read
+the verified text from the **unpacked EXE image**. The game no longer needs a
+made-up DAT offset or a shipped copy of the recovered text.
 
-The Spanish floppy main texts are resident data unpacked from `IGOR.EXE`. There is no verified DAT offset that can be inserted as a standard TXT_MainTable entry. The CD resource at EXE offset `0x8499E0`, size 28,028, does not describe the Spanish floppy layout.
+If unpacking is unfamiliar, start with the [beginner guide](BEGINNER_GUIDE.md).
+It means restoring the bytes the original EXE reconstructs during startup;
+it does not mean recovering the author's source code.
 
-## Verified native text bases
+## What the investigation found
 
-These offsets describe the executable **after unpacking**, not physical offsets into the packed EXE or DAT. The resident DS base is `0x27550`; the unpacked module begins at `0x10100`.
+The old floppy catalog had 582 entries and no main-text entry. Its version-4
+records could point only into DAT. Copying the CD entry would also have been
+wrong, because the two editions store the text differently.
+
+We ran the original EXE's unpacking instructions in a controlled CPU emulator,
+called Unicorn, and saved its reconstructed memory. The EXE-only run recovered
+the texts without reading DAT, establishing where they came from. A fresh run
+matched the existing research snapshot exactly.
+
+The recovered records contain Spanish and English strings side by side. Their
+first byte gives the text length, followed by the text; this is called a Pascal
+string. The CD loader uses a different encoding, so it could not simply read
+these records unchanged. The floppy's verb labels are stored in a separate area.
+
+Following the original text-reading instructions established 171 dialogue
+records. Using the CD count of 250 would have read into unrelated data.
+
+## How the fix works
+
+The version-5 dictionary adds a source field to each resource entry. It can say
+“read from the unpacked EXE” as well as “read from the original container”. The
+engine reconstructs EXE into memory when first needed and then uses the same
+resource lookup it already uses for DAT.
+
+The dictionary holds the new locations and lengths, not copies of these texts.
+See [resource-loading implementation](UNPACKING_AND_RUNTIME_SUPPORT.md) for the
+integration, and [font/language/timing fixes](TEXT_FONT_LANGUAGE_TIMING.md) for
+later behavior changes.
+
+## Developer evidence (optional)
+
+These are positions **after unpacking**, not physical offsets in the smaller
+packed EXE or in DAT. The investigation snapshot's DS data-segment base is
+`0x27550`; the reconstructed module begins at `0x10100`. The last column gives
+positions relative to that module, which the TBL can use independently of where
+DOS loaded the program.
 
 | Text data | DS offset | Linear unpacked address | Offset into unpacked module |
 | --- | --- | --- | --- |
@@ -18,22 +60,25 @@ These offsets describe the executable **after unpacking**, not physical offsets 
 | First dialogue (index 1) | `0x119E` | `0x286EE` | `0x185EE` |
 | First verb label (index 1) | `0x040E` | `0x2795E` | `0x1785E` |
 
-The native action-sentence routine references object names at DS:08A8 with a 62-byte stride and prepositions at DS:087E with a 14-byte stride. The native dialogue routine references DS:1138 with a 102-byte stride. Verb names use the indexed base DS:03F6 with a 24-byte stride; the first used label is index 1 at DS:040E. Each entry contains Spanish and English Pascal strings side by side. Widths per language are 31, 7, 51 and 12 bytes respectively.
+The action-sentence routine reads object names with a 62-byte record spacing
+and prepositions with a 14-byte spacing. Dialogue uses 102 bytes per pair of
+languages. Verbs use the indexed base DS:03F6 with a 24-byte spacing. The
+per-language slots are therefore 31, 7, 51 and 12 bytes respectively.
 
-The extracted strings are plain Pascal strings: the first byte is the length, followed by the text. Examples are `boomerang`, `cartera`, `Hablar con ` and the first native greeting. The CD loader instead subtracts `0x6D` from its encoded lengths and characters. The floppy verbs are also stored separately from the prepositions/object/dialogue region.
+The CD loader subtracts `0x6D` from encoded lengths and characters. The floppy
+records are plain Pascal strings, including object names such as `boomerang`
+and `cartera`, and labels such as `Hablar con `.
 
-## Reproduction
+The rejected CD entry was resource 323 at EXE offset `0x8499E0`, size 28,028.
+The implemented floppy rows are `TXT_MainTable` at module offset `0x17CCE`,
+size 19,676, and `TXT_MainVerbs` at `0x1785E`, size 192, both with source 1.
 
-Executed the existing Unicorn unpacker directly against the supplied floppy EXE, writing a fresh dump in the chat's scratch directory. The fresh two-megabyte dump matches `floppy-research/unpacked-memory.bin` byte for byte. The unpacker reads only EXE and stops at the first DOS runtime interrupt; it does not read DAT. The resident text data therefore comes from EXE itself.
+Original consumer instructions were checked against recovered bytes. Evidence
+addresses include `0x179C7` and `0x17A2C` for objects, `0x17AC5` for prepositions,
+`0x1677E` and `0x1679C` for dialogue, and `0x17A96` for verbs.
 
-EXE SHA-256: `57ebe031e3a32daffe8a6c5a09d0af17b485dc2e0306fa78941d36823591e78e`.
-
-Native consumer disassembly was checked against the recovered bytes. Evidence addresses include linear `0x179C7` and `0x17A2C` for objects, `0x17AC5` for prepositions, `0x1677E` and `0x1679C` for dialogue, and `0x17A96` for verbs.
-
-## Implication for the launch failure
-
-The existing version-4 TBL resource records contain only an offset and size into the resource container, which is DAT for Spanish floppy. A resident-memory address would not work there. An offset-only catalog change cannot fix this failure.
-
-The fix preserves the single dictionary load path: source-tagged offset/size records address the executable image, which is unpacked from the user’s original EXE at runtime. The dictionary contains no resident text bytes. The same resource lookup delivers those ranges to the native floppy decoder. Subsequent disassembly established 171 dialogue slots, ending at the next independent scaling array; the CD count of 250 would include unrelated resident data.
-
-This was the initial investigation. The verified ranges are now installed as source-tagged, metadata-only dictionary entries, and the engine reads them from its unpacked EXE buffer. See [the completed integration](UNPACKING_AND_RUNTIME_SUPPORT.md).
+EXE SHA-256 fingerprint:
+`57ebe031e3a32daffe8a6c5a09d0af17b485dc2e0306fa78941d36823591e78e`.
+The locally recovered two-megabyte emulator snapshot is
+`floppy-research/unpacked-memory.bin`. The extra memory beyond the reconstructed
+module is emulator state, not the size of the EXE program itself.

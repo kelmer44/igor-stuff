@@ -635,4 +635,12 @@
 // TODO: Identify the floppy counterpart for TXT_OptionsQuit.
 // TODO: Identify the floppy counterpart for TXT_OptionsSaveTitle.
 // TODO: Identify the floppy counterpart for TXT_OptionsLoadTitle.
+{ PAL_InventoryPanel, 0xaae2ef, 96 },
+{ PAL_VerbsPanel, 0xa27cec, 48 },
+{ DAT_FloppyDialogueWidths, 0x177fc, 91, Igor::kResourceSourceUnpackedExe },
+{ DAT_FloppyFontMap, 0x176a0, 256, Igor::kResourceSourceUnpackedExe },
+{ DAT_FloppySentenceColors, 0x17bee, 3, Igor::kResourceSourceUnpackedExe },
+{ DAT_FloppySentenceWidths, 0x177a0, 92, Igor::kResourceSourceUnpackedExe },
+{ IMG_FloppyDialogueFont, 0x97fa, 9009, Igor::kResourceSourceUnpackedExe },
+{ IMG_FloppySentenceFont, 0xbb2b, 7007, Igor::kResourceSourceUnpackedExe },
 { TXT_MainVerbs, 0x1785e, 192, Igor::kResourceSourceUnpackedExe },

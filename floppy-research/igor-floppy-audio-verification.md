@@ -1,9 +1,46 @@
-# Spanish floppy audio verification
+# What sounds are in the Spanish floppy game?
 
-Verified directly against the supplied `IGOR/IGOR.DAT` (11,199,335 bytes).
-SHA-256: `b526832e73000f9e91de525faf8ec8a41e969e63b821beae854bcb55758dea0d`.
+This Spanish floppy copy stores its effects and music in `IGOR.DAT`. It does
+not need the separate `IGOR.FSD` used by the historical English demo.
 
-The Spanish floppy copy contains its sound effects inside DAT overlays. It does not need the separate `IGOR.FSD` used by the historical English shareware build.
+**There are digital sampled effects in this copy, even though there is no speech.**
+The investigation found 51 VOC sound-effect records and 15 CMF music records.
+The earlier suggestion that this copy required FSD was incorrect and has been
+corrected in the detector.
+
+## Effects and music use different kinds of data
+
+A sampled effect is a recorded waveform, like a very short audio recording.
+VOC is the container format used here, and PCM describes the waveform samples.
+These effect records are not AdLib instrument definitions and do not establish
+that the floppy has spoken dialogue.
+
+CMF music contains music/instrument data for FM synthesis, associated here with
+AdLib playback. Rather than playing a recorded waveform, the sound hardware
+synthesizes the music from that data.
+
+The [beginner glossary](BEGINNER_GUIDE.md#glossary) explains these terms and the
+file/container terminology used in the technical evidence below.
+
+## What finding the sounds does and does not finish
+
+Finding the records establishes that the audio bytes are present. Following
+original loader code also showed that they come from DAT.
+
+The engine still needs to establish which effect or music record to select for
+each request, and implement the original music playback. Its floppy sound-offset
+table is currently empty, and unverified audio paths remain disabled behind TODOs.
+Correcting the filename removed a wrong file requirement; it did not complete
+audio support. See the [support plan](SUPPORT_PLAN.md).
+
+## Developer evidence (optional)
+
+The original verification used the 11,199,335-byte DAT with SHA-256
+`b526832e73000f9e91de525faf8ec8a41e969e63b821beae854bcb55758dea0d`.
+A later one-byte code change in the user's DAT is documented separately in the
+[text investigation](TEXT_FONT_LANGUAGE_TIMING.md); `fingerprints.json` records
+the current input fingerprint. The fingerprint above identifies the original
+audio investigation input.
 
 ## Digital effects
 
@@ -27,8 +64,8 @@ The recovered resident playback routine at linear address `0x15AE4` retrieves th
 
 Found 15 CTMF/Creative Music Format headers in DAT, with version 1.01 and valid instrument/data offsets. CMF is the FM/AdLib music format handled by the historical Igor MIDI implementation. The recovered music loader also copies DAT overlay data into its buffer.
 
-## Correction and remaining work
 
-The previous FSD claim was an incorrect generalization from the English demo: the historical research document explicitly lists `IGORDEMO.ZIP` with a separate FSD archive. The Spanish floppy executable has a different layout.
-
-Corrected the Spanish floppy detector's sound filename to `IGOR.DAT`. This fixes the erroneous external-file requirement. It does not implement the remaining native sound selection: the floppy dictionary still has no populated sound-offset table, and the engine still needs verified sound-ID mappings and FM music support.
+The historical separate-FSD evidence concerned `IGORDEMO.ZIP`, the English
+shareware build, rather than this Spanish floppy revision. The Spanish detector
+now selects `IGOR.DAT` as its sound file. The offset and playback findings above
+are evidence to use when completing the native sound-ID and music-track mapping.

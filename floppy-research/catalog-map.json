@@ -8244,6 +8244,48 @@
       "resident-verb-text",
       0,
       96350
+    ],
+    "DAT_FloppyFontMap": [
+      95904,
+      256,
+      "resident-sentence-renderer",
+      0,
+      95904
+    ],
+    "DAT_FloppySentenceWidths": [
+      96160,
+      92,
+      "resident-sentence-renderer",
+      0,
+      96160
+    ],
+    "IMG_FloppySentenceFont": [
+      47915,
+      7007,
+      "resident-sentence-renderer",
+      0,
+      47915
+    ],
+    "DAT_FloppySentenceColors": [
+      97262,
+      3,
+      "resident-sentence-renderer",
+      0,
+      97262
+    ],
+    "DAT_FloppyDialogueWidths": [
+      96252,
+      91,
+      "resident-dialogue-renderer",
+      0,
+      96252
+    ],
+    "IMG_FloppyDialogueFont": [
+      38906,
+      9009,
+      "resident-dialogue-renderer",
+      0,
+      38906
     ]
   }
 }

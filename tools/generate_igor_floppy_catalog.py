@@ -86,12 +86,27 @@ def main():
                       f'0x{offset-overlay["offset"]:x}', method, cd_size,
                       hashlib.sha256(payload).hexdigest()])
     original_names = {name for name, _, _ in original}
-    assert set(resolved) <= original_names
-    assert set(resident) <= original_names | {'TXT_MainVerbs'}
+    assert set(resolved) <= original_names | {'PAL_VerbsPanel', 'PAL_InventoryPanel'}
+    assert set(resident) <= original_names | {'TXT_MainVerbs', 'DAT_FloppyFontMap',
+                                            'DAT_FloppySentenceWidths', 'IMG_FloppySentenceFont',
+                                            'DAT_FloppySentenceColors', 'DAT_FloppyDialogueWidths',
+                                            'IMG_FloppyDialogueFont'}
+    for name in sorted(set(resolved) - original_names):
+        offset, size, method, number, relative = resolved[name]
+        overlay = overlays[number - 1]
+        assert offset == overlay['offset'] + relative
+        assert overlay['offset'] <= offset < offset + size <= overlay['offset'] + overlay['size'], name
+        payload = floppy[offset:offset + size]
+        assert name.startswith('PAL_') and size % 3 == 0 and max(payload) <= 63, name
+        lines.append(f'{{ {name}, 0x{offset:x}, {size} }},')
+        audit.append([name, f'0x{offset:x}', size, number, f'0x{relative:x}',
+                      method, '', hashlib.sha256(payload).hexdigest()])
     for name in sorted(set(resident) - original_names):
         offset, size, method, _, _ = resident[name]
         payload = image[offset:offset + size]
         assert len(payload) == size
+        if name in ('IMG_FloppySentenceFont', 'IMG_FloppyDialogueFont'):
+            assert set(payload) <= {0, 1, 2}, name
         lines.append(f'{{ {name}, 0x{offset:x}, {size}, Igor::kResourceSourceUnpackedExe }},')
         audit.append([name, f'0x{offset:x}', size, 'resident', f'0x{offset:x}',
                       method, '', hashlib.sha256(payload).hexdigest()])
@@ -111,7 +126,7 @@ def main():
                     for p in [ROOT / 'IGOR/IGOR.EXE', ROOT / 'IGOR/IGOR.DAT',
                               ROOT / 'IGOR-CD/IGOR.EXE', TABLES / 'resource_sp_cdrom.h']}
     (RESEARCH / 'fingerprints.json').write_text(json.dumps(fingerprints, indent=2) + '\n')
-    print(f'{len(audit)} verified resources; {len(original)-len(resolved)-len(set(resident) & original_names)} disabled TODOs; '
+    print(f'{len(audit)} verified resources; {len(original)-len(set(resolved) & original_names)-len(set(resident) & original_names)} disabled TODOs; '
           f'{len(overlays)} overlays cover the complete DAT.')
 
 

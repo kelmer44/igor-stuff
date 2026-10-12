@@ -1,140 +1,127 @@
-# Spanish floppy support plan
+# What remains to support the Spanish floppy game
 
-## Objective
+The goal is to reproduce the original Spanish floppy game in ScummVM: its
+pictures, actions, walking, dialogue, timing, music and effects. We keep shared
+CD/floppy code where the originals agree and implement verified differences.
 
-Support the original Spanish floppy version in `engines/igor`, preserving its
-observable behavior and loading all resources through the generated `IGOR.TBL`.
-Derive changes from the original binaries and disassembly. Leave unresolved
-values as disabled TODOs rather than substituting plausible CD values.
+If a behavior cannot yet be established from the original instructions, it stays
+marked as a disabled TODO. We do not fill gaps with values that merely look right.
+The [beginner guide](BEGINNER_GUIDE.md) explains the investigation terms used here.
 
-## Current evidence
+## Starting point
 
-The investigation has recovered the unpacked resident executable, all 301 DAT
-overlays, their export entry points and relocation boundaries, and a partial
-correspondence with CD routines. The overlay spans cover the entire DAT after
-its eight-byte header.
+The EXE unpacker is integrated. The layout of all 301 DAT blocks is mapped.
+The resource catalog has 592 verified entries, and startup reaches the intro.
+The floppy panel, inventory, fonts, language selection and text-only timing have
+been implemented and compared against selected original routines.
 
-The floppy resource catalog contains 586 verified rows: 584 in DAT and two
-resident EXE text resources. The engine now reads source-tagged version-5 TBL
-records through its existing loader, unpacks the original EXE in memory and
-loads the native main texts. Startup reaches the intro in sanitizer launch checks.
-The dictionary still has an empty floppy sound section. Complete native gameplay
-and audio remain unvalidated. See [integration details](UNPACKING_AND_RUNTIME_SUPPORT.md).
-Native verb/inventory rendering, hit geometry, palettes and paging are implemented;
-see [UI evidence and validation](UI_IMPLEMENTATION.md).
+Those results prove the checked functions, not a complete playthrough. Floppy
+effect selection and music playback are still unfinished. There are also 48
+CD resource names whose floppy equivalents have not been established.
 
-There are 48 unresolved CD resource counterparts:
-
-| Group | Count | Remaining investigation |
+| Unresolved group | Count | What we need to find out |
 | --- | ---: | --- |
-| College animation resources | 26 | Trace differently organized native arrays and establish their purposes. |
-| Intro/title images, palettes and animation | 12 | Establish the original loading paths and any native counterparts. |
-| Text resources | 8 | Locate auxiliary text blocks and classify newer CD UI text identifiers. |
-| Dialogue resources | 2 | Trace Tobias's office and intercom dialogue loading. |
+| College animations | 26 | How the original floppy stores and draws the corresponding sequences. |
+| Intro/title pictures, colors and animations | 12 | Which original floppy data and loading routines supply them. |
+| Text resources | 8 | Where the remaining text is and whether newer CD menu text has a floppy equivalent. |
+| Dialogue resources | 2 | How Tobias's office and intercom conversations load their data. |
 
-These are unresolved mappings, not evidence that the original floppy assets are
-absent. This Spanish floppy stores VOC effects and CMF music in DAT; it does not require
-IGOR.FSD. The native effect-ID mapping and music playback still need implementation.
+“Unresolved” does not mean absent from the original game. Floppy can organize
+an equivalent scene differently, and some CD-only features may have no equivalent.
 
-## 1. Build a reproducible floppy disassembler
+## 1. Make the original instructions easier to inspect
 
-The existing CD tool reads an NE executable. The floppy version has a packed
-resident executable and Borland overlays, so it needs a separate binary reader.
-Reuse the byte-accurate 16-bit instruction decoder where appropriate.
+Unpacking has restored the EXE bytes. The next tool-level task is a fuller
+**disassembly**: readable listings of the original processor instructions.
+We already have repeatable listings for selected UI/text functions; the whole
+game still needs systematic coverage.
 
-The reader should:
+The reader must follow actual code paths and resolve references between DAT
+blocks. It must distinguish instructions from pictures, fonts and text. Simply
+treating every byte as an instruction would produce misleading listings.
 
-* Read the recovered resident code and original DAT overlay bytes.
-* Interpret exports and relocation records using the original overlay format.
-* Resolve far calls through the recovered overlay stubs, distinguishing
-  module-relative references from relocated resident references.
-* Retain original instruction bytes, overlay-local offsets and DAT offsets so
-  every listing can be checked against the binaries.
-* Record input fingerprints and make generation deterministic.
+Keep floppy listings in `code-floppy/`, separate from the CD listings in `code/`.
+Record the original byte positions and file fingerprints so another developer
+can reproduce and check each finding. An index should show which floppy routine
+corresponds to which CD routine, and clearly mark unknown relationships.
 
-Verify overlay coverage, reference resolution and representative decoded routines
-against the original bytes before using the listings for engine changes.
+Developer requirements: interpret overlay exports and relocation records;
+resolve far calls (calls across program sections); retain original instruction
+bytes; preserve unclassified code/data regions; check suspect CD decoder output
+against a byte-accurate reader. The existing CD reader handles an NE executable,
+a different file format from the packed floppy EXE and its Borland overlays.
+The [glossary](BEGINNER_GUIDE.md#glossary) explains the underlying terms.
 
-## 2. Generate a separate disassembly tree
+## 2. Finish identifying the needed resources
 
-Create `code-floppy/` without replacing the CD listings. Produce individual units
-for confirmed routines and an index containing overlay numbers, exports, callers
-and verified CD counterparts.
+For each unresolved scene or conversation, follow the original routine that
+loads it. Establish what data it requests, where that data starts and how much
+it reads. The original use must establish the purpose of each block.
 
-Discover code from verified entry points and control flow. An exported address
-can identify data as well as code; do not disassemble every exported array as a
-function. Preserve unclassified bytes explicitly as data or unresolved regions.
-Handle indirect control flow as unresolved until its targets are established.
+For example, several floppy animation arrays may play the role of a differently
+organized CD array. We must understand that arrangement instead of assigning
+CD names to floppy blocks just because they appear in the same order.
 
-The existing curated CD listings have known decoder inaccuracies. Use the
-byte-accurate CD reader when checking corresponding routines rather than copying
-those inaccuracies into the new tree.
+Put verified locations and lengths into the source catalogs, regenerate the TBL,
+and install that dictionary in the root, `IGOR/` and `IGOR-CD/`. Every resource
+must continue through the existing `loadData()` function and dictionary lookup.
+Do not bypass missing entries with direct asset reads or runtime-added rows.
 
-The first deliverable is the reader, generated assembly units and a CD-to-floppy
-routine index, with unresolved references clearly identified.
+For audio, establish which original effect or music record corresponds to each
+game request. Finding 51 VOC effects and 15 CMF music records in DAT was the
+first step; it did not establish that selection logic.
 
-## 3. Complete the resource investigation
+## 3. Compare the behavior, not just the resource locations
 
-Use the new units to trace the unresolved college animation loaders, intro
-loaders, remaining auxiliary text blocks and dialogue routines. Establish each native array's
-purpose, offset and length from its original use.
+A correct resource location is only useful if the engine interprets it correctly.
+We learned this with the inventory: the pictures were identified, but floppy
+needed eight slots and different paging controls from CD.
 
-Do not force a one-to-one mapping onto CD identifiers when the floppy version
-organizes arrays differently. Add native resource identifiers where the original
-loading behavior requires them. Establish whether an asset has a floppy
-counterpart before classifying it as CD-only.
+Compare the originals for startup, room entry, actions, walking/facing,
+animation frames, dialogue numbering, menus, text and audio. Keep common code
+when the behavior agrees. Add a small edition-specific branch when the original
+instructions demonstrate a difference.
 
-Update the catalog and its evidence manifest, then rebuild the dictionary through
-the existing table generator. Preserve the single resource-loading path; do not
-introduce direct reads or runtime additions to bypass missing catalog rows.
+Keep addresses and source evidence in research notes, not C++ comments.
+Engine changes belong in `scummvm-fork/engines/igor`, and must build there with:
 
-Trace the original sound loader and offset table separately. Do not fabricate
-sound offsets to fill the currently empty section.
+```sh
+make engines/igor/libigor.a
+```
 
-## 4. Audit and implement engine differences
+## 4. Validate one playable path, then expand
 
-Audit the fork's CD assumptions before enabling the floppy version:
+Compare the intro and one initial playable room with the DOS floppy game.
+Check what the player sees and does: entering, walking, hovering over objects,
+selecting verbs, examining/using items, talking, leaving and returning.
+Compare save/load restoration and less common actions as well as the normal path.
 
-* Detection, version flags and filenames: floppy resources and effects are in `IGOR.DAT`;
-  resident main texts come from the unpacked EXE through source-tagged TBL records.
-* Startup, intro and initial state selection.
-* Animation array organization, frame interpretation and copy lengths.
-* Room action data, text encoding and dialogue layouts.
-* UI resource dimensions and drawing behavior.
-* Original music and sound playback paths.
+For each subsequent room, check its changed graphics and behavior against DOS.
+After changes to shared code, check CD too. A screenshot alone cannot verify
+dialogue flow or timing; a successful launch cannot verify a later puzzle.
 
-A verified resource offset does not prove that the CD consumer can interpret
-the native bytes unchanged. Derive each necessary difference from the original
-floppy routine and retain shared code where the evidence supports it.
+Keep raw game states distinct from logical part numbers. States 70–72 belong to
+part 7, for example; the engine calculates the logical part as state divided by
+ten. Do not use a code-unit number or resource ID as a room/part number.
 
-Place engine changes in the fork, keep disassembly provenance in investigation
-notes rather than source comments, and verify changes with
-`make engines/igor/libigor.a`.
+## 5. Complete audio and the whole-game checks
 
-## 5. Validate incrementally against the original
+Implement and compare the original selection of sampled VOC effects and
+CMF/AdLib music. The absence of speech in floppy does not mean it lacks digital
+sound effects. Keep any unverified audio behavior disabled until it is derived.
 
-Start with startup and one room whose resource formats and behavior have been
-fully traced. Expand through room entrances, walking, transitions, animations,
-inventory use and dialogue. Compare the implementation with the original floppy
-executable and check CD behavior after changes to shared engine paths.
+Work through the full game path, checking scene transitions, animations,
+dialogue, input timing and saves. Keep detection labelled unstable until this
+broader compatibility work has been completed.
 
-Include save/load restoration and state dispatch in validation. Keep raw runtime
-state codes distinct from logical part numbers, which are the state divided by
-ten.
+## When we can call support complete
 
-Derive and validate the embedded VOC effect-ID mapping and CMF/AdLib music path.
-Until then, keep these paths disabled behind TODOs and report the audio limitation.
+- Required code and data have been identified from the original, with reproducible evidence.
+- Every required resource has a verified catalog entry or an evidence-based explanation of its absence.
+- Original format and behavior differences are implemented, including audio.
+- Gameplay, timing and save/load have been compared with the original across the game.
+- Changes to shared behavior have been checked for CD regressions.
 
-## Completion criteria
-
-* The disassembly workflow is reproducible and references can be checked against
-  original bytes.
-* All assets required by the native floppy paths have verified catalog entries;
-  remaining CD-only identifiers are classified from evidence.
-* Detection and resource selection use the floppy dictionary through the existing
-  load path.
-* Native format and behavior differences are implemented from the disassembly.
-* Gameplay and save/load behavior have been compared with the original, and shared
-  changes have been checked against CD behavior.
-* Original music and sound-effect support are implemented and validated before
-  declaring floppy support complete.
+The unpacker makes this work possible; it does not automatically satisfy these
+conditions. Current evidence is in the [resource-loading](UNPACKING_AND_RUNTIME_SUPPORT.md),
+[UI](UI_IMPLEMENTATION.md) and [text](TEXT_FONT_LANGUAGE_TIMING.md) notes.

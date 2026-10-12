@@ -378,3 +378,11 @@
 #define TXT_Credits7 1239
 
 #define TXT_MainVerbs 1240
+#define PAL_VerbsPanel 1241
+#define PAL_InventoryPanel 1242
+#define DAT_FloppyFontMap 1243
+#define DAT_FloppySentenceWidths 1244
+#define IMG_FloppySentenceFont 1245
+#define DAT_FloppySentenceColors 1246
+#define DAT_FloppyDialogueWidths 1247
+#define IMG_FloppyDialogueFont 1248

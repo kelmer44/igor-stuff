@@ -1,161 +1,83 @@
-# Spanish floppy resource investigation
+# Spanish floppy support: start here
 
-The current catalog contains **586 verified resources** (584 DAT records and two
-resident EXE text records), with 48 unresolved CD counterparts left as TODOs.
-The fork now unpacks resident EXE data at runtime through metadata-only version-5
-TBL entries and the existing resource loader. Legacy version-4 dictionaries remain
-readable. See [runtime implementation and validation](UNPACKING_AND_RUNTIME_SUPPORT.md).
-Startup reaches the intro; complete native gameplay and audio remain unvalidated.
-The native verb borders, eight-slot inventory, palettes and paging are now
-implemented and compared against the original routines; see [UI implementation](UI_IMPLEMENTATION.md).
+These notes explain how we are adapting ScummVM to the original Spanish floppy
+edition of Igor. They separate what has been proved from work that remains.
+You do not need reverse-engineering experience to read the overview.
 
-## Original files and layout
+**Unpacking restores program bytes that were packed away inside the original
+EXE. It does not recover the author's original source code or automatically
+implement the game.** The [beginner guide](BEGINNER_GUIDE.md) explains this process, how it
+differs from disassembly/decompilation, and what the game files contain.
 
-The supplied executable is 39,537 bytes; its CRC32 is `8edcfa28`, identified as
-Spanish Floppy by the historical decoder's detection table. The supplied DAT is
-11,199,335 bytes and begins with the Borland FBOV header. SHA256 fingerprints of
-both inputs, the Spanish CD executable, and the CD catalog are in
-`fingerprints.json`.
+## What works now
 
-Executing the executable's own unpacker under Unicorn recovered **301 overlay
-stubs**. Their code and relocation spans partition every byte after the eight-byte
-FBOV header, ending exactly at EOF. `overlays.json` records the recovered original
-stub fields. `map.json` adds all original export entry points. This is a complete
-map of the overlay container; it includes executable code as well as resources.
+The engine detects this Spanish floppy copy and reads its own data rather than
+assuming the Spanish CD filenames and layouts. It can reconstruct the EXE data
+needed for text and fonts, and startup reaches the intro.
 
-The unpacked module starts at memory `10100h`; its resident dispatcher starts at
-`10500h`. DAT far references use module-relative stub segments; the relocated
-resident dispatcher uses absolute stub segments. The runtime begins executing at
-`25f8:0000`. The unpacker probe stops on the first DOS interrupt in that runtime.
-The decompression uses the original interrupt handlers, including the original
-self-modifying protection code, and does not run room gameplay.
+The original floppy verb panel, inventory, fonts, sentence colors and paging
+have been implemented from the original instructions. Room text now selects
+Spanish instead of letting English overwrite it. Text without speech uses the
+original timer, including on CD when speech is disabled; clicks can still skip.
 
-## How the named rows were derived
+These functions have been compared with the original code. This is substantial
+progress, but it is **not a completed whole-game compatibility test**.
 
-* Full, unique binary matches establish 321 rows directly, including their exact
-  lengths. Duplicate binary payloads are resolved only when a corresponding loader
-  establishes their identity. Their contents are still checked against the CD bytes.
-* The two original dispatchers map raw state codes to their room entry routines.
-  The room entry routines then identify their graphics and animation loaders.
-* Relocation records restore original pointers in CD code. The floppy stub export
-  table resolves the corresponding pointers in floppy code. Matching source
-  references in the corresponding loaders identify resource starts.
-* Export boundaries identify individual array lengths. When a CD resource spans
-  multiple exported arrays, the corresponding end reference or the overlay tail
-  supplies the end. Complete identical matches retain the full original row length.
-* Room action data is the room's exported data array. Spring walk data and outside
-  administration walk data are separate subsequent exports; they are excluded from
-  the preceding DAT row.
-* Dialogue arrays are identified by the dialogue entry routines reached from the
-  corresponding room actions and their original data exports.
-* Screen resources are identified by their original uses and copy lengths. The
-  floppy verbs panel copies 3,520 bytes. The options button and menu occupy arrays
-  of 2,568 and 33,920 bytes. Inventory panel and object arrays are 9,600 and 48,000
-  bytes. The newspaper image/palette arrays are 46,080 and 624 bytes.
+## What remains
 
-`resources.csv` records every emitted row's original overlay, local offset, evidence
-method, size, CD size, and payload SHA256. `catalog-map.json` preserves the
-intermediate resource associations and unresolved identifier list.
+The catalog identifies 592 resources: 584 in DAT and eight in the reconstructed
+EXE. A catalog entry records where a resource is and how much to read. It does
+not, by itself, prove the engine uses that resource correctly.
 
-Additional associations confirmed through original calls:
+There are 48 CD resource identifiers whose floppy equivalents remain unresolved.
+They are investigation tasks, not 48 files missing from your folder. Different
+animation arrangements, dialogue numbering and other edition differences still
+need to be traced. Floppy effect selection and music playback remain unfinished.
 
-| CD routine / loader | Floppy routine / loader | Evidence |
-| --- | --- | --- |
-| room 144, action routine 145 | overlays 200, 204 | intercom action call; cutscene loads 147/146 and 206/205 |
-| room 141, dialogue 111:2CB2 | overlays 195, 196 | outside-college dialogue action |
-| room 101, dialogue 94:2498 | overlays 149, 151 | park-lady dialogue action |
-| room 101, dialogue 102:0D22 | overlays 149, 150 | park-Laura dialogue action |
-| room 18, dialogue 19:0D4E | overlays 25, 26 | same conversation after cutscene |
-| room 56, dialogue 57:1109 | overlays 69, 71 | corresponding conversation entry |
-| room 110, dialogue 111:0BD7 | overlays 160, 161 | stairs conversation entry |
-| room 129, dialogue 130:0C40 | overlays 181, 182 | Margaret conversation entry |
-| room 171, dialogue 172:0CFB | overlays 231, 232 | outside-church conversation entry |
-| room 185, dialogue 186:0D59 | overlays 249, 250 | library conversation entry |
-| state 791, routine 9:0BCD | overlay 1:0975 | loads CD 13/12/11 and floppy 7/5/4; scene sequence loads 10 and 3 |
-| states 910..970, loaders 8..2 | overlays 18..12 | original credit-page dispatcher and image/palette loaders |
-| room 24:0D8B and later card | overlay 31:059A and later card | loads CD 28/29 and floppy 284/287 |
-| room 33:2C59 | overlay 39:3058 | loads CD card 34 and floppy card 285 |
-| cutscene calling card 45 | overlay 49 | card loader 286 before following scene |
+The original floppy contains 51 sampled sound-effect records and 15 CMF music
+records in DAT. It has no speech and does not require `IGOR.FSD`. Finding the
+sounds does not yet tell the engine which sound to play for each action.
 
-The initial candidate association of `IMG_Meanwhile` with overlay 197 was rejected:
-197 is reached as an outside-college animation loader and does not supply that
-image. The final header leaves `IMG_Meanwhile` disabled. No candidate offset from
-that association is emitted. The initial newspaper export indices were likewise
-corrected before emitting the header: the image and palette are exports 2 and 3,
-not the preceding callable function export. Palette and code-prefix validation
-check this distinction.
+## Reading order
 
-## Remaining work and compatibility
+1. [Beginner guide](BEGINNER_GUIDE.md): unpacking, file roles, examples and glossary.
+2. [Unpacker location](igor-unpacker-readme.md): what the integrated utility does.
+3. [Resource loading](UNPACKING_AND_RUNTIME_SUPPORT.md): how recovered data reaches ScummVM through the TBL.
+4. [Verb panel and inventory](UI_IMPLEMENTATION.md): what differs from CD and what was verified.
+5. [Fonts, language and timing](TEXT_FONT_LANGUAGE_TIMING.md): the recent fixes and their evidence.
+6. [Audio findings](igor-floppy-audio-verification.md): why this copy has sampled effects but no FSD file.
+7. [Support plan](SUPPORT_PLAN.md): the remaining steps toward a faithful implementation.
 
-The 48 disabled identifiers comprise 27 FRM, 6 IMG, 5 PAL, 8 TXT and 2 DLG rows.
-Most unresolved FRM rows are college animations whose floppy loaders expose a
-different number and organization of arrays. The header does not assign CD frame
-names to those different arrays by position. The complete floppy exports remain
-available in `map.json` for further disassembly.
+The [main-text investigation](igor-floppy-main-text-investigation.md) explains
+the earlier launch failure and why a DAT offset alone could not fix it.
+[Container and resource evidence](TECHNICAL_REFERENCE.md) is the optional
+developer reference with addresses and CD/floppy code correspondences.
 
-The unresolved title/logo assets, auxiliary text blocks,
-Tobias dialogue and intercom dialogue also need their native loading/format paths
-traced individually. A missing CD match does not establish that a floppy asset is
-absent. Resident main texts are now accessed through the same dictionary lookup as DAT
-resources, using a source identifier and the verified executable unpacker.
+## Where the work is saved
 
-Many resolved resources differ in size or contents. Examples include the second
-floor stairs DAT (6,393 -> 6,137 bytes), the first floor stairs animation
-(48,790 -> 40,882 bytes), and the options menu (36,800 -> 33,920 bytes). The native
-Tobias animation loader copies four differently sized arrays into its animation
-buffer. A table row identifies those original bytes; it does not establish that
-the CD animation routines, action-table layouts, UI dimensions, text encoding,
-palette choices, or dialogue logic can consume them unchanged.
+Research notes, disassembly listings and investigation tools live in `igor-stuff`.
+Production engine code lives in the neighboring `scummvm-fork/engines/igor` tree.
+The historical engine reference is read-only.
 
-The Spanish floppy's sound effects and CMF music are embedded in DAT. The
-historical separate FSD archive applies to the English demo, not this copy.
-The dictionary still has an empty floppy sound-offset section until its native
-sound-ID mapping is derived. Runtime effects remain disabled behind a TODO.
+New dictionary entries store IDs, source locations and lengths. They do not
+embed the recovered font/text/audio bytes. The dictionary's existing shared-string
+section is unchanged. Resources are read from the player's original files
+through one engine loading path.
 
-## Reproduction and verification
+## Developer commands (optional)
 
-Run from the workspace root, using Python with Capstone and Unicorn available:
+You do not need these commands to understand the investigation or run the game.
+They rebuild or check the research results. Paths below are relative to the
+`igor-stuff` root, not this documentation folder.
 
-```
-python3 floppy-research/unpack_probe.py
-python3 floppy-research/map_probe.py
-python3 floppy-research/dispatcher_probe.py
-python3 floppy-research/catalog_probe.py
+```sh
+python3 tools/disassemble_igor_floppy_ui.py
+python3 tools/validate_igor_floppy_ui.py
+python3 tools/validate_igor_floppy_text.py
 python3 tools/generate_igor_floppy_catalog.py
 ```
 
-The Unicorn wheel used here is installed in `/tmp/igor-floppy-python`; the probe
-includes that directory on its import path. The emulator's JIT needed execution
-outside the macOS sandbox. The final generator itself does not execute DOS code.
-The binary memory dump is an intermediate investigation artifact.
-
-Verified:
-
-* All 301 overlay code/relocation spans cover the complete DAT without gaps.
-* All 582 rows fit within the original overlay code/data spans, avoiding relocation
-  trailers; no row starts at a Pascal function prologue.
-* Complete identical payloads match exactly; symbolic IDs are unique and already
-  defined in the existing ID headers.
-* All emitted palettes contain six-bit RGB values; all emitted masks decode to
-  exactly 46,080 pixels. Regular room text arrays parse fully, including their two
-  terminators and the preceding walk tables.
-* The emitted header compiles as a ResourceEntry array with existing resource IDs.
-* Before the format change, the unmodified TBL generator reproduced the current
-  root and CD dictionaries byte-for-byte; the previously installed floppy copy
-  was older. The rebuilt version-5 dictionary now reproduces all three copies.
-* After integrating resident resources, the generated version-5 TBL has four game
-  records, 584 sorted unique floppy resources and a zero-entry floppy sound table.
-  Existing resource/sound sections and shared strings match the shipped dictionary
-  byte-for-byte. The rebuilt metadata dictionary was installed in all three locations; existing
-  logical resource/sound records and shared strings remain unchanged.
-
-To rebuild the installed dictionary from the workspace root:
-
-```
-c++ reference/scummvm-create-igortbl/create_igortbl.cpp -o /tmp/create_igortbl
-(cd IGOR && /tmp/create_igortbl)
-```
-
-Engine resource loading and unpacking have been implemented and verified with
-`make engines/igor/libigor.a`. Changed native formats, unresolved assets and
-sound support remain part of the subsequent floppy implementation work.
+The disassembly and original-code comparison tools require the Capstone and/or
+Unicorn Python libraries. They also require the original game files and the
+locally recovered memory snapshot. The production engine needs neither library.
+See the individual notes for what each check actually proves.

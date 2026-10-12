@@ -1,0 +1,18 @@
+{
+  "exe_sha256": "57ebe031e3a32daffe8a6c5a09d0af17b485dc2e0306fa78941d36823591e78e",
+  "dat_sha256": "717d7abcf222d3a17089765dd3a1b52a42059215c96941abfc6d9c3e15456b55",
+  "relocated_image_sha256": "8ee0e7f322b9d227ec65a9b540a62905e7728e3936549f8b75c02a825e9c830a",
+  "inventory_mapping_sha256": "cf0f39a5eafacc5f54233269079a6e8bd4bc75dfd8b848be7a3da2a87c18bc06",
+  "palettes": {
+    "verbs": {
+      "offset": 10648812,
+      "size": 48,
+      "sha256": "d8e2d05a8d9b300957a21f269209bbeb54391185433d729164cf7aafa3bf4874"
+    },
+    "inventory": {
+      "offset": 11199215,
+      "size": 96,
+      "sha256": "bac485270da8d6178cca095fd096b825e562b6307a31eb6927fc35b93d6fea4a"
+    }
+  }
+}

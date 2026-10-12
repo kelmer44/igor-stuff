@@ -1,33 +1,104 @@
-# Spanish floppy runtime resource support
+# How ScummVM loads the recovered floppy data
 
-## What is implemented
+The engine can now read the Spanish floppy's main text and fonts from its
+original files. The important change is that the resource dictionary can point
+to data inside the reconstructed EXE, as well as to data already stored in DAT.
 
-The production unpacker is in the active fork at
-`../scummvm-fork/engines/igor/unpack.cpp` and `unpack.h`. It uses ScummVM's array,
-string, endian and CRC facilities. It has no emulator dependency and executes no
-DOS game code. It reconstructs an unrelocated 120,864-byte resident image from the
-verified 39,537-byte Spanish floppy executable (CRC32 `8edcfa28`). Unsupported
-revisions and changed/truncated files are rejected.
+**Unpacking** means restoring program/data bytes from the packed EXE. It is
+explained in the [beginner guide](BEGINNER_GUIDE.md); it does not produce C++
+source. The integrated unpacker reads the verified 39,537-byte EXE and creates
+a 120,864-byte memory image without executing the original DOS startup code.
 
-The engine now reads both legacy version-4 and new version-5 dictionaries.
-Version 5 adds one byte to each resource record:
+## What happens when the game needs a resource
 
-```
+1. Engine code requests a named resource, such as the verb labels.
+2. `loadData()` looks up its entry in `IGOR.TBL`.
+3. The entry identifies the source, starting byte position and length.
+4. If the source is DAT, the loader reads those original file bytes. If it is the
+   reconstructed EXE, the loader first unpacks EXE into memory when needed.
+5. The engine interprets the returned bytes as text, font pixels or another
+   resource type. Later EXE requests reuse the same reconstructed memory buffer.
+
+The Spanish CD edition uses its original EXE as the resource container. The
+lookup selects entries for that edition instead. Every resource uses the same
+`loadData()`/dictionary route; no missing resources are inserted at runtime.
+
+## Why the dictionary changed
+
+Older version-4 entries identified only a position and length in the edition's
+resource container. For Spanish floppy that container is DAT, but its main text
+is actually inside the packed EXE. A DAT offset could never identify it correctly.
+
+Version 5 adds a source field: “original container” or “unpacked EXE image”. The
+engine still understands version-4 dictionaries. New entries describe where to
+read the player's data; they do not contain extracted pictures, text or fonts.
+The dictionary's existing shared-string section is unchanged.
+
+The main-text fix found 171 original dialogue records, rather than using the
+CD count of 250. The eight verb labels are stored separately. The floppy also
+uses a shorter verb-panel image: 11 screen rows rather than CD's 12. The engine
+now uses the verified floppy sizes and layouts.
+
+## What was checked
+
+The integrated unpacker restored exactly the same 120,864 bytes as the original
+unpacker at the comparison point. Tests also rejected shortened, corrupted and
+null input. This implementation supports the verified EXE revision; these checks
+do not establish support for other revisions.
+
+The engine library and executable build. Floppy, CD and older version-4 CD
+startup checks reached the intro. Tests used tools that detect invalid memory
+access and certain undefined operations, called sanitizers. A startup check is
+not a complete gameplay test.
+
+Before changing the dictionary format, the original generator reproduced the
+root/CD version-4 dictionary exactly. The newer generator preserves the existing
+resource IDs, offsets and sizes, sound tables and shared strings, while adding
+verified floppy entries. Regenerating the current dictionary reproduces the
+installed copies byte for byte.
+
+The current catalog has 592 entries: 584 in DAT and eight in the reconstructed
+EXE. The remaining 48 unresolved CD identifiers are explained in the
+[support plan](SUPPORT_PLAN.md). Later [UI](UI_IMPLEMENTATION.md) and
+[text](TEXT_FONT_LANGUAGE_TIMING.md) checks verified selected drawing, input,
+language and timing functions against original instructions.
+
+## What this does not finish
+
+Recovering bytes and knowing their positions does not establish every room's
+behavior. A different floppy picture can use the same resource name with a
+floppy-specific dictionary entry. A different animation organization or action
+needs a verified change to the code that interprets it.
+
+Four investigated intro animation arrays match CD exactly and can share that
+decoder. Other animations still need investigation. The original VOC effect
+selection and CMF/AdLib music playback remain unfinished. See the
+[support plan](SUPPORT_PLAN.md) for the next work.
+
+## Developer reference (optional)
+
+The production code is [unpack.cpp](../../scummvm-fork/engines/igor/unpack.cpp)
+and [unpack.h](../../scummvm-fork/engines/igor/unpack.h). It uses ScummVM's existing
+memory arrays, strings, byte-order helpers and CRC32 file check. It requires no
+Unicorn emulator.
+
+The version-5 resource record is stored as:
+
+```text
 uint16 BE resource ID
 uint32 BE offset
 uint32 BE size
 uint8 source (0 = original resource container; 1 = unpacked EXE image)
 ```
 
-The dictionary remains metadata-only. No extracted executable, text, image or
-sound bytes are embedded in it or in the new engine source. Its existing shared
-string section is unchanged.
+`uint16`, `uint32` and `uint8` mean unsigned numbers stored in two, four and one
+bytes respectively. `BE` means big-endian byte order: the most significant byte
+comes first. These are file-format details, not settings for the player.
 
-All resources still go through `loadData()`. A source-1 dictionary entry lazily
-unpacks the executable identified by detection into an engine-owned buffer;
-subsequent reads use the same dictionary lookup and bounds checks. Source-0 reads
-continue to use the original DAT or CD EXE container. No runtime resource rows are
-appended.
+Unsupported sources, invalid resource bounds and short reads are checked by the
+loader. EXE data is unpacked once when first needed and retained in the engine.
+The local research memory dump contains recovered game bytes and is not a
+resource to distribute with the engine.
 
 ## Verified native text metadata
 
@@ -76,71 +147,23 @@ with that checkpoint. The static image SHA-256 is:
 Relocation records are validated but not applied; the dictionary's resident
 resource addresses remain independent of DOS load addresses.
 
-## Dictionary generation and verification
 
-The unmodified generator reproduced the current root and CD version-4 TBL files
-byte for byte before any format changes. The previously installed floppy copy
-was older than those two; it has been replaced with the same current generated
-catalog plus the two resident text entries.
+## Rebuilding the dictionary (developer-only)
 
-The new generated dictionary preserves all existing IDs, offsets and sizes,
-sound-offset sections and shared strings from the current baseline. The two
-resident entries and two native UI palette entries were added. The complete current
-floppy catalog has 586 records and 48 unresolved CD resource counterparts, covering
-all 301 DAT overlays plus the verified resident resources.
+From the `igor-stuff` root, compile the metadata generator:
 
-To reproduce the metadata dictionary:
-
-```
+```sh
 c++ reference/scummvm-create-igortbl/create_igortbl.cpp -o /tmp/create_igortbl
 ```
 
-Run the tool in a scratch directory, then install its `IGOR.TBL` in the root,
-`IGOR-CD/` and `IGOR/`. The tool produces metadata and needs no unpacked game
-resources as build input. `tools/generate_igor_floppy_catalog.py` is the separate
-research validator that regenerates the offset catalogs from recorded evidence.
+Run `/tmp/create_igortbl` in a scratch directory such as `work/`. It writes
+`IGOR.TBL` in that directory. Compare the generated result and install the same
+file in the root, `IGOR/` and `IGOR-CD/`. This generator needs the source catalogs,
+not extracted font/image data.
 
-Validation completed:
-
-- `make engines/igor/libigor.a` and the ScummVM executable link succeed.
-- The adapted engine unpacker matches the entire independent native checkpoint;
-  eight truncations, corrupted input and null input are rejected. This check was
-  compiled with AddressSanitizer and UndefinedBehaviorSanitizer.
-- Version-5 floppy and CD launch checks reach the intro without assertions or
-  AddressSanitizer errors; floppy logs confirm 171 dialogue records and eight verb
-  labels loaded through the dictionary.
-- The legacy version-4 CD dictionary also reaches the intro.
-- The dictionary reproduces byte for byte when regenerated, and existing resource,
-  sound and shared-string sections compare unchanged at the logical-record level.
-
-These are startup and resource-loading checks, not complete gameplay validation.
-The subsequent [native UI implementation](UI_IMPLEMENTATION.md) records verified
-verb borders, eight-slot inventory rendering, hit regions, paging and palettes,
-including comparisons of production methods with the original x86 routines.
-
-## Remaining work: shared logic, native assets
-
-Retain shared room/action logic where the two originals agree. A different
-background or palette can use the same symbolic resource ID with an edition-specific
-catalog entry. A different animation organization, text numbering, UI geometry or
-copy length needs a small native loader/rendering branch derived from the floppy
-code. Do not duplicate the full game engine or substitute CD assets for unresolved
-floppy mappings.
-
-The four intro animation arrays are byte-identical across these editions, so
-that portion uses the existing shared decoder. Other unresolved college animations
-have different native array organizations and still require disassembly-based
-mapping. The eight unresolved TXT records include newly cataloged CD-only UI text
-identifiers whose native floppy counterparts remain unclassified.
-
-The supplied Spanish floppy has 51 PCM VOC records and 15 CMF music records
-embedded in DAT. It does not require IGOR.FSD. Its native sound-ID mapping and
-CMF/AdLib playback remain unimplemented. The zero-entry floppy sound table now
-keeps effects disabled behind a TODO instead of asserting; no offsets were
-fabricated and no sounds were substituted. Complete sound support is still a
-separate milestone.
-
-Next validation should compare the intro and first playable room with DOS, then
-work through rooms whose graphics differ, native dialogue numbering, UI behavior,
-transitions and save/load. Keep the detection entry unstable until those paths
-have been validated.
+`tools/generate_igor_floppy_catalog.py` is a different research tool: it checks
+catalog evidence against the local original files and recovered memory, then
+regenerates the floppy catalog header. The historical probes used for the initial
+investigation are `unpack_probe.py`, `map_probe.py`, `dispatcher_probe.py` and
+`catalog_probe.py` in `floppy-research/`. Their intermediate output includes
+recovered game bytes and is for local investigation only.
