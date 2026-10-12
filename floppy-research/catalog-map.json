@@ -8202,13 +8202,34 @@
     "IMG_Presents",
     "PAL_OptikSoftware",
     "IMG_OptikSoftware",
-    "TXT_MainTable",
     "FRM_IgorIntroLogo",
     "IMG_IgorIntroLogo",
     "PAL_IgorIntroLogo",
     "DLG_TobiasOffice",
     "TXT_Library2",
     "TXT_Part79bMain",
-    "DLG_Part8Intercom"
-  ]
+    "DLG_Part8Intercom",
+    "TXT_OptionsButtons",
+    "TXT_OptionsSettings",
+    "TXT_OptionsTitle",
+    "TXT_OptionsQuit",
+    "TXT_OptionsSaveTitle",
+    "TXT_OptionsLoadTitle"
+  ],
+  "resident": {
+    "TXT_MainTable": [
+      97486,
+      19676,
+      "resident-pascal-text",
+      0,
+      97486
+    ],
+    "TXT_MainVerbs": [
+      96350,
+      192,
+      "resident-verb-text",
+      0,
+      96350
+    ]
+  }
 }

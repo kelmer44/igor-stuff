@@ -9,3 +9,13 @@ extracted/
 
 .part8*
 .part*
+
+# Local investigation scratch and recovered images
+work/
+tools/__pycache__
+scripts/__pycache__
+.vscode
+.shared-input-fix
+.shared-helpers-refactor
+.inventory-part2-fix
+.palette-range-fix
