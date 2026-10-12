@@ -32,10 +32,11 @@
 #include <assert.h>
 #include "resource_ids.h"
 #include "resource_ids_extra.h"
+#include "../../../scummvm-fork/engines/igor/resource_format.h"
 
 /*
 	uint32 : 'ITBL'
-	uint32 : version/tag
+	uint32 : version/tag (5; engine also reads legacy version 4)
 	uint32 : offset to strings table
 	uint8  : number of game versions
 	repeat (number of game versions) {
@@ -49,6 +50,7 @@
 			uint16 : id
 			uint32 : offset
 			uint32 : length
+			uint8  : source (0:resource container, 1:unpacked executable)
 		}
 	}
 	repeat (number of sounds tables) {
@@ -77,6 +79,7 @@ struct ResourceEntry {
 	int id;
 	uint32 offs;
 	uint32 size;
+	uint8 source;
 };
 
 static struct ResourceEntry _resourceEntriesEngDemo100[] = {
@@ -165,7 +168,7 @@ static const struct GameVersion _gameVersions[] = {
 };
 
 static const uint32 ITBL_TAG = 0x4954424C;
-static const uint32 CURRENT_VERSION = 4;
+static const uint32 CURRENT_VERSION = Igor::kCurrentTableVersion;
 static const uint32 DEFAULT_OFFSET = 0x12345678;
 
 struct TablePtrOffset {
@@ -224,6 +227,7 @@ static void writeResourceEntriesTable(FILE *fp, struct ResourceEntry *re, int co
 		writeUint16BE(fp, re->id);
 		writeUint32BE(fp, re->offs);
 		writeUint32BE(fp, re->size);
+		writeByte(fp, re->source);
 	}
 }
 

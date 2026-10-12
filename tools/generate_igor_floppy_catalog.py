@@ -19,6 +19,9 @@ def main():
     investigation = json.loads((RESEARCH / 'catalog-map.json').read_text())
     overlays = json.loads((RESEARCH / 'map.json').read_text())['overlays']
     resolved = investigation['resolved']
+    resident = investigation.get('resident', {})
+    memory = (RESEARCH / 'unpacked-memory.bin').read_bytes()
+    image = memory[0x10100:0x10100 + 120864]
     original = [(n, int(o, 16), int(s)) for n, o, s in
                 ROW_RE.findall((TABLES / 'resource_sp_cdrom.h').read_text())]
     assert len(resolved) == len(set(resolved))
@@ -33,11 +36,20 @@ def main():
     assert previous == len(floppy)
 
     lines = ['// Spanish floppy resource catalog.',
-             '// Offsets refer to the original overlay data file.',
+             '// Container offsets refer to the original overlay data file.',
+             '// Resident offsets refer to the unrelocated executable image.',
              '// This catalog is incomplete; unresolved resources remain disabled.',
              '// Changed resource layouts require corresponding engine support.', '']
     audit = []
     for name, cd_offset, cd_size in original:
+        if name in resident:
+            offset, size, method, _, _ = resident[name]
+            payload = image[offset:offset + size]
+            assert len(payload) == size
+            lines.append(f'{{ {name}, 0x{offset:x}, {size}, Igor::kResourceSourceUnpackedExe }},')
+            audit.append([name, f'0x{offset:x}', size, 'resident', f'0x{offset:x}',
+                          method, cd_size, hashlib.sha256(payload).hexdigest()])
+            continue
         if name not in resolved:
             lines.append('// TODO: Identify the floppy counterpart for ' + name + '.')
             continue
@@ -73,7 +85,22 @@ def main():
         audit.append([name, f'0x{offset:x}', size, number,
                       f'0x{offset-overlay["offset"]:x}', method, cd_size,
                       hashlib.sha256(payload).hexdigest()])
-    assert set(resolved) <= {name for name, _, _ in original}
+    original_names = {name for name, _, _ in original}
+    assert set(resolved) <= original_names
+    assert set(resident) <= original_names | {'TXT_MainVerbs'}
+    for name in sorted(set(resident) - original_names):
+        offset, size, method, _, _ = resident[name]
+        payload = image[offset:offset + size]
+        assert len(payload) == size
+        lines.append(f'{{ {name}, 0x{offset:x}, {size}, Igor::kResourceSourceUnpackedExe }},')
+        audit.append([name, f'0x{offset:x}', size, 'resident', f'0x{offset:x}',
+                      method, '', hashlib.sha256(payload).hexdigest()])
+    assert resident['TXT_MainTable'][0:2] == [0x17cce, 19676]
+    assert resident['TXT_MainVerbs'][0:2] == [0x1785e, 192]
+    for offset, count, width in [(0x17cce, 3, 7), (0x17cf8, 37, 31),
+                                 (0x18588, 171, 51), (0x1785e, 8, 12)]:
+        assert all(image[offset + i * width * 2 + lang * width] < width
+                   for i in range(count) for lang in range(2))
     (TABLES / 'resource_sp_floppy.h').write_text('\n'.join(lines) + '\n')
     with (RESEARCH / 'resources.csv').open('w') as fp:
         writer = csv.writer(fp)
@@ -84,7 +111,7 @@ def main():
                     for p in [ROOT / 'IGOR/IGOR.EXE', ROOT / 'IGOR/IGOR.DAT',
                               ROOT / 'IGOR-CD/IGOR.EXE', TABLES / 'resource_sp_cdrom.h']}
     (RESEARCH / 'fingerprints.json').write_text(json.dumps(fingerprints, indent=2) + '\n')
-    print(f'{len(audit)} verified resources; {len(original)-len(audit)} disabled TODOs; '
+    print(f'{len(audit)} verified resources; {len(original)-len(resolved)-len(set(resident) & original_names)} disabled TODOs; '
           f'{len(overlays)} overlays cover the complete DAT.')
 
 

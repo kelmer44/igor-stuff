@@ -376,3 +376,5 @@
 #define TXT_Credits5 1237
 #define TXT_Credits6 1238
 #define TXT_Credits7 1239
+
+#define TXT_MainVerbs 1240

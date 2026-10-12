@@ -1,5 +1,6 @@
 // Spanish floppy resource catalog.
-// Offsets refer to the original overlay data file.
+// Container offsets refer to the original overlay data file.
+// Resident offsets refer to the unrelocated executable image.
 // This catalog is incomplete; unresolved resources remain disabled.
 // Changed resource layouts require corresponding engine support.
 
@@ -402,7 +403,7 @@
 { FRM_IgorDirLeft, 0xa6a54a, 13500 },
 { FRM_IgorHead, 0xa6da06, 3696 },
 { IMG_VerbsPanel, 0xa27d1c, 3520 },
-// TODO: Identify the floppy counterpart for TXT_MainTable.
+{ TXT_MainTable, 0x17cce, 19676, Igor::kResourceSourceUnpackedExe },
 { IMG_InventoryPanel, 0xaa01ef, 9600 },
 { IMG_Objects, 0xaa276f, 48000 },
 { PAL_DecanatoLeft, 0x87b049, 624 },
@@ -628,3 +629,10 @@
 { IMG_Credits7, 0x6728f, 64000 },
 { PAL_Credits7, 0x76c8f, 768 },
 // TODO: Identify the floppy counterpart for DLG_Part8Intercom.
+// TODO: Identify the floppy counterpart for TXT_OptionsButtons.
+// TODO: Identify the floppy counterpart for TXT_OptionsSettings.
+// TODO: Identify the floppy counterpart for TXT_OptionsTitle.
+// TODO: Identify the floppy counterpart for TXT_OptionsQuit.
+// TODO: Identify the floppy counterpart for TXT_OptionsSaveTitle.
+// TODO: Identify the floppy counterpart for TXT_OptionsLoadTitle.
+{ TXT_MainVerbs, 0x1785e, 192, Igor::kResourceSourceUnpackedExe },
