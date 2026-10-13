@@ -30,7 +30,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <assert.h>
-#include "../scummvm-igor-engine/resource_ids.h"
+#include "resource_ids.h"
 #include "resource_ids_extra.h"
 
 /*

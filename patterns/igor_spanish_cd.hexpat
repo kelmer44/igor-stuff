@@ -356,12 +356,12 @@ enum IgorId : u16 {
     PAL_Park = 343,
     MSK_Park = 344,
     BOX_Park = 345,
-    DAT_OutsideAdministrationBuilding = 346,
-    FRM_OutsideAdministrationBuilding1 = 347,
-    FRM_OutsideAdministrationBuilding2 = 348,
-    FRM_OutsideAdministrationBuilding3 = 349,
-    FRM_OutsideAdministrationBuilding4 = 350,
-    FRM_OutsideAdministrationBuilding5 = 351,
+    DAT_Decanato = 346,
+    FRM_Decanato1 = 347,
+    FRM_Decanato2 = 348,
+    FRM_Decanato3 = 349,
+    FRM_Decanato4 = 350,
+    FRM_Decanato5 = 351,
     DAT_DeanPepperOffice = 352,
     DAT_AdministrationSecretaryRoom = 353,
     TXT_AdministrationSecretaryRoom = 354,
@@ -459,19 +459,19 @@ enum IgorId : u16 {
     STR_SharewarePenduloAddress4 = 446,
     STR_SharewarePenduloAddress5 = 447,
     STR_SharewarePenduloAddress6 = 448,
-    PAL_OutsideAdministrationBuildingA = 900,
-    IMG_OutsideAdministrationBuildingA = 901,
-    MSK_OutsideAdministrationBuildingA = 902,
-    BOX_OutsideAdministrationBuildingA = 903,
-    PAL_OutsideAdministrationBuildingB = 904,
-    IMG_OutsideAdministrationBuildingB = 905,
-    MSK_OutsideAdministrationBuildingB = 906,
-    BOX_OutsideAdministrationBuildingB = 907,
-    TXT_OutsideAdministrationBuildingA = 908,
-    TXT_OutsideAdministrationBuildingB = 909,
-    WLK_OutsideAdministrationBuildingA = 910,
-    WLK_OutsideAdministrationBuildingB = 911,
-    DAT_OutsideAdministrationBuildingPart11 = 912,
+    PAL_DecanatoLeft = 900,
+    IMG_DecanatoLeft = 901,
+    MSK_DecanatoLeft = 902,
+    BOX_DecanatoLeft = 903,
+    PAL_DecanatoRight = 904,
+    IMG_DecanatoRight = 905,
+    MSK_DecanatoRight = 906,
+    BOX_DecanatoRight = 907,
+    TXT_DecanatoLeft = 908,
+    TXT_DecanatoRight = 909,
+    WLK_DecanatoLeft = 910,
+    WLK_DecanatoRight = 911,
+    DAT_DecanatoPart11 = 912,
 };
 
 enum ResourceLanguage : u8 { Any = 0, English = 1, Spanish = 2 };
@@ -828,15 +828,15 @@ if (std::mem::size() == 9115648 && std::mem::read_string(0, 2) == "MZ") {
     VgaPalette<624> PAL_BellChurch @ 0x5D9224;
     AreaMask<861> MSK_BellChurch @ 0x5D9494;
     AreaTable<1280> BOX_BellChurch @ 0x5D97F1;
-    RoomActionData<6345, 95, 303, 3319, 199, 275, 84> DAT_OutsideAdministrationBuilding @ 0x67949C;
-    FixedSpriteSheet<2058, 21, 49> FRM_OutsideAdministrationBuilding1 @ 0x683F0D;
-    FixedSpriteSheet<2520, 30, 28> FRM_OutsideAdministrationBuilding2 @ 0x684717;
-    FixedSpriteSheet<420, 14, 15> FRM_OutsideAdministrationBuilding3 @ 0x6850EF;
-    FixedSpriteSheet<296, 37, 8> FRM_OutsideAdministrationBuilding4 @ 0x685293;
-    FixedSpriteSheet<2520, 30, 28> FRM_OutsideAdministrationBuilding5 @ 0x6853BB;
-    WalkLineTable<120> WLK_OutsideAdministrationBuildingA @ 0x67C62E;
-    WalkLineTable<120> WLK_OutsideAdministrationBuildingB @ 0x68351D;
-    RoomActionData<6209, 59, 309, 3255, 203, 279, 82> DAT_OutsideAdministrationBuildingPart11 @ 0x68049B;
+    RoomActionData<6345, 95, 303, 3319, 199, 275, 84> DAT_Decanato @ 0x67949C;
+    FixedSpriteSheet<2058, 21, 49> FRM_Decanato1 @ 0x683F0D;
+    FixedSpriteSheet<2520, 30, 28> FRM_Decanato2 @ 0x684717;
+    FixedSpriteSheet<420, 14, 15> FRM_Decanato3 @ 0x6850EF;
+    FixedSpriteSheet<296, 37, 8> FRM_Decanato4 @ 0x685293;
+    FixedSpriteSheet<2520, 30, 28> FRM_Decanato5 @ 0x6853BB;
+    WalkLineTable<120> WLK_DecanatoLeft @ 0x67C62E;
+    WalkLineTable<120> WLK_DecanatoRight @ 0x68351D;
+    RoomActionData<6209, 59, 309, 3255, 203, 279, 82> DAT_DecanatoPart11 @ 0x68049B;
     RoomActionData<6017, 87, 259, 3135, 151, 227, 80> DAT_SpringBridge @ 0x6A54A6;
     WalkLineTable<134> WLK_Bridge1 @ 0x6A83A8;
     WalkLineTable<2546> WLK_Bridge2 @ 0x6A842E;
@@ -922,16 +922,16 @@ if (std::mem::size() == 9115648 && std::mem::read_string(0, 2) == "MZ") {
     RoomText<28028> TXT_MainTable @ 0x8499E0;
     IndexedImage<9600> IMG_InventoryPanel @ 0x89A298;
     IndexedImage<48000> IMG_Objects @ 0x89C818;
-    VgaPalette<624> PAL_OutsideAdministrationBuildingA @ 0x69F4B3;
-    IndexedImage<46080> IMG_OutsideAdministrationBuildingA @ 0x6940B3;
-    AreaMask<5766> MSK_OutsideAdministrationBuildingA @ 0x69F723;
-    AreaTable<1280> BOX_OutsideAdministrationBuildingA @ 0x6A0DA9;
-    VgaPalette<624> PAL_OutsideAdministrationBuildingB @ 0x691D2F;
-    IndexedImage<46080> IMG_OutsideAdministrationBuildingB @ 0x68692F;
-    AreaMask<3858> MSK_OutsideAdministrationBuildingB @ 0x691F9F;
-    AreaTable<1280> BOX_OutsideAdministrationBuildingB @ 0x692EB1;
-    RoomText<1297> TXT_OutsideAdministrationBuildingA @ 0x693BA2;
-    RoomText<1165> TXT_OutsideAdministrationBuildingB @ 0x6864A2;
+    VgaPalette<624> PAL_DecanatoLeft @ 0x69F4B3;
+    IndexedImage<46080> IMG_DecanatoLeft @ 0x6940B3;
+    AreaMask<5766> MSK_DecanatoLeft @ 0x69F723;
+    AreaTable<1280> BOX_DecanatoLeft @ 0x6A0DA9;
+    VgaPalette<624> PAL_DecanatoRight @ 0x691D2F;
+    IndexedImage<46080> IMG_DecanatoRight @ 0x68692F;
+    AreaMask<3858> MSK_DecanatoRight @ 0x691F9F;
+    AreaTable<1280> BOX_DecanatoRight @ 0x692EB1;
+    RoomText<1297> TXT_DecanatoLeft @ 0x693BA2;
+    RoomText<1165> TXT_DecanatoRight @ 0x6864A2;
 
     u8 PART_10_bin_frame_selectors[4] @ 0x8B01D2; // cseg175:01CE-01D8; s3:0x1D2-0x1D5
 

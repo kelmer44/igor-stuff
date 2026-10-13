@@ -1,18 +1,18 @@
 /* Resource ids absent from the historical 2009 header. These must match the
  * active fork's engines/igor/resource_ids.h. */
-#define PAL_OutsideAdministrationBuildingA 900
-#define IMG_OutsideAdministrationBuildingA 901
-#define MSK_OutsideAdministrationBuildingA 902
-#define BOX_OutsideAdministrationBuildingA 903
-#define PAL_OutsideAdministrationBuildingB 904
-#define IMG_OutsideAdministrationBuildingB 905
-#define MSK_OutsideAdministrationBuildingB 906
-#define BOX_OutsideAdministrationBuildingB 907
-#define TXT_OutsideAdministrationBuildingA 908
-#define TXT_OutsideAdministrationBuildingB 909
-#define WLK_OutsideAdministrationBuildingA 910
-#define WLK_OutsideAdministrationBuildingB 911
-#define DAT_OutsideAdministrationBuildingPart11 912
+#define PAL_DecanatoLeft 900
+#define IMG_DecanatoLeft 901
+#define MSK_DecanatoLeft 902
+#define BOX_DecanatoLeft 903
+#define PAL_DecanatoRight 904
+#define IMG_DecanatoRight 905
+#define MSK_DecanatoRight 906
+#define BOX_DecanatoRight 907
+#define TXT_DecanatoLeft 908
+#define TXT_DecanatoRight 909
+#define WLK_DecanatoLeft 910
+#define WLK_DecanatoRight 911
+#define DAT_DecanatoPart11 912
 #define FRM_IgorIntroLogo 913
 #define IMG_IgorIntroLogo 914
 #define PAL_IgorIntroLogo 915
@@ -274,9 +274,9 @@
 #define ANM_Part32Tower 1155
 #define TXT_Part32Tower 1156
 #define PAL_Part32Tower 1157
-#define IMG_Part32Final 1158
-#define PAL_Part32Final 1159
-#define ANM_Part32Final 1160
+#define IMG_Part32Girl 1158
+#define PAL_Part32Girl 1159
+#define ANM_Part32Girl 1160
 
 // Name of the object of room 71 before it is examined
 #define STR_ShinyThing 449

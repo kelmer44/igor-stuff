@@ -13,7 +13,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-RESOURCE_IDS = ROOT / "reference/scummvm-igor-engine/resource_ids.h"
+RESOURCE_IDS = ROOT / "reference/scummvm-create-igortbl/resource_ids.h"
 RESOURCE_IDS_EXTRA = ROOT / "reference/scummvm-create-igortbl/resource_ids_extra.h"
 RESOURCE_TABLE = ROOT / "reference/scummvm-create-igortbl/resource_sp_cdrom.h"
 EXE = ROOT / "igor-cd/IGOR.EXE"
@@ -91,11 +91,11 @@ def action_layouts() -> dict[str, dict[str, int]]:
     # are recovered directly from the DOS accesses relative to each DAT base:
     # cseg175:1DAC-1DD5,1C41-1D4F,2D0F-2DEA and
     # cseg176:1E7B-207C,2D40-2E16.
-    result["dat_outsideadministrationbuilding"] = {
+    result["dat_decanato"] = {
         "defaultVerb": 95, "useVerb": 303, "giveVerb": 3319,
         "object2": 199, "object1": 275, "objectSize": 84,
     }
-    result["dat_outsideadministrationbuildingpart11"] = {
+    result["dat_decanatopart11"] = {
         "defaultVerb": 59, "useVerb": 309, "giveVerb": 3255,
         "object2": 203, "object1": 279, "objectSize": 82,
     }
@@ -126,15 +126,15 @@ def resource_type(name: str, size: int, actions: dict[str, dict[str, int]]) -> s
         )
     outside_administration_frames = {
         # cseg176:06F8-076D
-        "FRM_OutsideAdministrationBuilding1": (21, 49),
+        "FRM_Decanato1": (21, 49),
         # cseg176:00F2-0167
-        "FRM_OutsideAdministrationBuilding2": (30, 28),
+        "FRM_Decanato2": (30, 28),
         # cseg175/cseg176:0052-00F1
-        "FRM_OutsideAdministrationBuilding3": (14, 15),
+        "FRM_Decanato3": (14, 15),
         # cseg175/cseg176:0002-0051
-        "FRM_OutsideAdministrationBuilding4": (37, 8),
+        "FRM_Decanato4": (37, 8),
         # cseg176:01C7-023C
-        "FRM_OutsideAdministrationBuilding5": (30, 28),
+        "FRM_Decanato5": (30, 28),
     }
     if name in outside_administration_frames:
         width, height = outside_administration_frames[name]

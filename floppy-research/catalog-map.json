@@ -5267,63 +5267,63 @@
       214,
       null
     ],
-    "DAT_OutsideAdministrationBuilding": [
+    "DAT_Decanato": [
       8745808,
       6345,
       "dispatcher-data-export",
       236,
       15658
     ],
-    "FRM_OutsideAdministrationBuilding1": [
+    "FRM_Decanato1": [
       8780430,
       2058,
       "identical",
       239,
       null
     ],
-    "FRM_OutsideAdministrationBuilding2": [
+    "FRM_Decanato2": [
       8782488,
       2520,
       "identical",
       239,
       null
     ],
-    "FRM_OutsideAdministrationBuilding3": [
+    "FRM_Decanato3": [
       8785008,
       420,
       "identical",
       239,
       null
     ],
-    "FRM_OutsideAdministrationBuilding4": [
+    "FRM_Decanato4": [
       8785428,
       296,
       "identical",
       239,
       null
     ],
-    "FRM_OutsideAdministrationBuilding5": [
+    "FRM_Decanato5": [
       8785724,
       2520,
       "identical",
       239,
       null
     ],
-    "WLK_OutsideAdministrationBuildingA": [
+    "WLK_DecanatoLeft": [
       8752153,
       120,
       "loader-reference-tail",
       236,
       22003
     ],
-    "WLK_OutsideAdministrationBuildingB": [
+    "WLK_DecanatoRight": [
       8779484,
       120,
       "loader-reference-tail",
       238,
       21587
     ],
-    "DAT_OutsideAdministrationBuildingPart11": [
+    "DAT_DecanatoPart11": [
       8773275,
       6209,
       "dispatcher-data-export",
@@ -6590,70 +6590,70 @@
       295,
       null
     ],
-    "PAL_OutsideAdministrationBuildingA": [
+    "PAL_DecanatoLeft": [
       8892489,
       624,
       "loader-reference-range",
       241,
       49240
     ],
-    "IMG_OutsideAdministrationBuildingA": [
+    "IMG_DecanatoLeft": [
       8846409,
       46080,
       "identical",
       241,
       null
     ],
-    "MSK_OutsideAdministrationBuildingA": [
+    "MSK_DecanatoLeft": [
       8893113,
       5766,
       "identical",
       241,
       null
     ],
-    "BOX_OutsideAdministrationBuildingA": [
+    "BOX_DecanatoLeft": [
       8898879,
       1280,
       "identical",
       241,
       null
     ],
-    "PAL_OutsideAdministrationBuildingB": [
+    "PAL_DecanatoRight": [
       8837429,
       624,
       "loader-reference-range",
       240,
       49163
     ],
-    "IMG_OutsideAdministrationBuildingB": [
+    "IMG_DecanatoRight": [
       8791349,
       46080,
       "identical",
       240,
       null
     ],
-    "MSK_OutsideAdministrationBuildingB": [
+    "MSK_DecanatoRight": [
       8838053,
       3858,
       "identical",
       240,
       null
     ],
-    "BOX_OutsideAdministrationBuildingB": [
+    "BOX_DecanatoRight": [
       8841911,
       1280,
       "identical",
       240,
       null
     ],
-    "TXT_OutsideAdministrationBuildingA": [
+    "TXT_DecanatoLeft": [
       8844955,
       1454,
       "loader-reference-range",
       241,
       1706
     ],
-    "TXT_OutsideAdministrationBuildingB": [
+    "TXT_DecanatoRight": [
       8789972,
       1377,
       "loader-reference-range",
@@ -7591,21 +7591,21 @@
       219,
       null
     ],
-    "IMG_Part32Final": [
+    "IMG_Part32Girl": [
       8072859,
       46080,
       "identical",
       218,
       null
     ],
-    "PAL_Part32Final": [
+    "PAL_Part32Girl": [
       8118939,
       768,
       "identical",
       218,
       null
     ],
-    "ANM_Part32Final": [
+    "ANM_Part32Girl": [
       8119707,
       2907,
       "identical",

@@ -196,16 +196,16 @@
 { PAL_BellChurch, 0x5d9224, 624 },
 { MSK_BellChurch, 0x5d9494, 861 },
 { BOX_BellChurch, 0x5d97f1, 1280 },
-{ DAT_OutsideAdministrationBuilding, 0x67949c, 6345 },
-{ FRM_OutsideAdministrationBuilding1, 0x683f0d, 2058 },
-{ FRM_OutsideAdministrationBuilding2, 0x684717, 2520 },
-{ FRM_OutsideAdministrationBuilding3, 0x6850ef, 420 },
-{ FRM_OutsideAdministrationBuilding4, 0x685293, 296 },
-{ FRM_OutsideAdministrationBuilding5, 0x6853bb, 2520 },
+{ DAT_Decanato, 0x67949c, 6345 },
+{ FRM_Decanato1, 0x683f0d, 2058 },
+{ FRM_Decanato2, 0x684717, 2520 },
+{ FRM_Decanato3, 0x6850ef, 420 },
+{ FRM_Decanato4, 0x685293, 296 },
+{ FRM_Decanato5, 0x6853bb, 2520 },
 { ANM_DecanatoHamburger, 0x4efcee, 0x1386 }, /* cseg134:21AF-21ED */
-{ WLK_OutsideAdministrationBuildingA, 0x67c62e, 120 }, /* cseg175:03E7-0409; segment 175:672E */
-{ WLK_OutsideAdministrationBuildingB, 0x68351d, 120 }, /* cseg176:0584-05A6; segment 176:661D */
-{ DAT_OutsideAdministrationBuildingPart11, 0x68049b, 6209 }, /* PART_11 state 110; cseg176:286F-2882 */
+{ WLK_DecanatoLeft, 0x67c62e, 120 }, /* cseg175:03E7-0409; segment 175:672E */
+{ WLK_DecanatoRight, 0x68351d, 120 }, /* cseg176:0584-05A6; segment 176:661D */
+{ DAT_DecanatoPart11, 0x68049b, 6209 }, /* PART_11 state 110; cseg176:286F-2882 */
 { DAT_SpringBridge, 0x6a54a6, 6017 },
 { WLK_Bridge1, 0x6a83a8, 134 },
 { WLK_Bridge2, 0x6a842e, 2546 },
@@ -460,16 +460,16 @@
 { TXT_MainTable, 0x8499e0, 28028 },
 { IMG_InventoryPanel, 0x89a298, 9600 },
 { IMG_Objects, 0x89c818, 48000 },
-{ PAL_OutsideAdministrationBuildingA, 0x69f4b3, 624 },
-{ IMG_OutsideAdministrationBuildingA, 0x6940b3, 46080 },
-{ MSK_OutsideAdministrationBuildingA, 0x69f723, 5766 },
-{ BOX_OutsideAdministrationBuildingA, 0x6a0da9, 1280 },
-{ PAL_OutsideAdministrationBuildingB, 0x691d2f, 624 },
-{ IMG_OutsideAdministrationBuildingB, 0x68692f, 46080 },
-{ MSK_OutsideAdministrationBuildingB, 0x691f9f, 3858 },
-{ BOX_OutsideAdministrationBuildingB, 0x692eb1, 1280 },
-{ TXT_OutsideAdministrationBuildingA, 0x693ba2, 1297 }, // cseg179:0002, seg179:06A2..0BB2
-{ TXT_OutsideAdministrationBuildingB, 0x6864a2, 1165 }, // cseg178:0002, seg178:06A2..0B2E
+{ PAL_DecanatoLeft, 0x69f4b3, 624 },
+{ IMG_DecanatoLeft, 0x6940b3, 46080 },
+{ MSK_DecanatoLeft, 0x69f723, 5766 },
+{ BOX_DecanatoLeft, 0x6a0da9, 1280 },
+{ PAL_DecanatoRight, 0x691d2f, 624 },
+{ IMG_DecanatoRight, 0x68692f, 46080 },
+{ MSK_DecanatoRight, 0x691f9f, 3858 },
+{ BOX_DecanatoRight, 0x692eb1, 1280 },
+{ TXT_DecanatoLeft, 0x693ba2, 1297 }, // cseg179:0002, seg179:06A2..0BB2
+{ TXT_DecanatoRight, 0x6864a2, 1165 }, // cseg178:0002, seg178:06A2..0B2E
 { FRM_IgorIntroLogo, 0x7c09be, 2678 }, // cseg209:13BE; 206x13 logo subtitle mask
 { IMG_IgorIntroLogo, 0x7c1434, 39040 }, // cseg209:1E34; 320x122 indexed image
 { PAL_IgorIntroLogo, 0x7cacb4, 768 }, // cseg209:B6B4; 256-color VGA palette
@@ -617,9 +617,9 @@
 { ANM_Part32Tower, 0x5ec04e, 34105 },
 { TXT_Part32Tower, 0x5ebcc9, 901 },
 { PAL_Part32Tower, 0x5f4587, 624 },
-{ IMG_Part32Final, 0x5df6d0, 46080 },
-{ PAL_Part32Final, 0x5eaad0, 768 },
-{ ANM_Part32Final, 0x5eadd0, 2907 },
+{ IMG_Part32Girl, 0x5df6d0, 46080 },
+{ PAL_Part32Girl, 0x5eaad0, 768 },
+{ ANM_Part32Girl, 0x5eadd0, 2907 },
 { DAT_Part77, 0x15a5c2, 6777 },
 { ANM_Part77, 0x15e36f, 26666 },
 { TXT_Part77, 0x1652a2, 1445 },
