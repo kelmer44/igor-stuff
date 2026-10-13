@@ -579,6 +579,7 @@
 { DLG_Part81, 0xe335c, 6940 },
 { ANM_Part81, 0xf6809, 53065 },
 { TXT_Part81, 0x103eb3, 2100 },
+{ TXT_Part81ObjectNames, 0xd9e1b, 16 },
 { IMG_Part81, 0x1046e7, 46080 },
 { PAL_Part81, 0x10fae7, 624 },
 { MSK_Part81, 0x10fd57, 2718 },

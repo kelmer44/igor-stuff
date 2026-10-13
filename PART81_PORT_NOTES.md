@@ -15,7 +15,7 @@ Skeleton: click handler 1263 instr. (`018:25E3`), area path builders 508 / 781, 
 | 023:0002 | loader: PAL (624, 23:C2E7), colors 192..207 from Igor's palette (DS EA5E), colors 240..255, IMG (23:0EE7), BOX (23:CFF5), MSK (23:C557, 2718), TXT (23:06B3, 2100) | `PART_81_LOAD_ROOM` |
 | 022:0002 | animation: five contiguous blocks 22:0109.. (53065 bytes; the 160x144 picture of the scroll at ANM+0x6075) | `PART_81_LOAD_ANIMATION` |
 | 018:13DD | action pointers 101 1226, 102 1172, 103 0002, 104 0103, 106 004A, 107 0077, 108 00A4, 109 0C77, 110 0496 | `PART_81_EXEC_ACTION` |
-| 018:152B | apply state: `objectsState[105]` (DS 8A5) 1: head frame 1 into layer 1, DAT +30 = 2, +99..102 = 0; else DAT +30 = 4, +91 = +92 = 0, +99..102 = 0x68 1 0x0E 1, DAT[82*i+j+3258] = 0 (i 1..35, j 1..2), area 7 `y2Lum` = 0xEC. (The 30 byte string copied to DS CCDE is not read by the room.) | `PART_81_APPLY_OBJECT_STATE` |
+| 018:152B | apply state: `objectsState[105]` (DS 8A5) 1: head frame 1 into layer 1, DAT +30 = 2, +99..102 = 0; else DAT +30 = 4, +91 = +92 = 0, +99..102 = 0x68 1 0x0E 1, DAT[82*i+j+3258] = 0 (i 1..35, j 1..2), area 7 `y2Lum` = 0xEC. (The short-string copy to DS CCDE updates room object name 2: ` farero` when present, ` puerta` when absent.) | `PART_81_APPLY_OBJECT_STATE` |
 | 018:34FD | colors 192..207 minus 20 | loop in `PART_81` |
 | 018:12B8 | entry: the room picture slides in over the 160x144 picture (21 steps of 8 columns, 16 ticks, fade in after the first) | `PART_81_SCROLL_IN` |
 | 018:123D | Igor at (0,138) facing right, skip 15, clip 15, scale 50; path (0,138)->(30,138) | `PART_81_ENTER` |
@@ -64,3 +64,5 @@ End-scene frame table fix: in `018:0B72-0BBC` the frame offset is the word at `b
 and the frame data is `buf + 0xBAE0 + offset - 1`. The table is the 16-byte third piece loaded by `021:0002` at `buf + 0xC308`,
 so relative to the 0xBAE0 base it is 0x828 (the port had 0x808, which read the 0x80-filled tail of the tall picture and
 went far outside the 64K animation buffer).
+
+Hotspot name fix: `018:1550-155C` and `018:15B4-15C0` copy the Pascal strings at segment 18 offsets 0x151B and 0x1523 into DS 0xCCDE. The room-name array starts at DS 0xCC62 with a stride of 62, so this is object 2. Segment 18 has file base 0xD8900 (verified against the executable segment table); the two strings occupy 16 bytes at 0xD9E1B: `\x07 farero\x07 puerta`. Resource `TXT_Part81ObjectNames` loads these bytes through the TBL. The name switches alongside the existing state-dependent action changes. The absent keeper hotspot remains usable as a door; Talk is cleared and Open is enabled. The unmodified generator reproduced the installed TBL byte-for-byte before adding the row.

@@ -65,3 +65,19 @@ Not derived / open:
 
 Verified in the running game (headless, temporary harness, removed): 790 text and talk animation, small piece changes,
 slide, 791 scenes (beach, three persons, Igor's head, texts), up to the final fade.
+
+## Red pixels when entering 791 directly (2026-10-13)
+
+State 760 dispatches to `cseg033:2C59` (`code/001_08B7.asm`), which loads
+`cseg217:0002` at `033:2CB1` (`code/033_2C59.asm`). That loader copies the
+beach head from segment 217 (0xD9):BD43 into D15A, 3696 bytes. State 791
+uses that inherited head; `009:00FE` adds 0x20 to its nonzero pixels.
+The normal frames are restored only at `009:1F4B` through `cseg218:0002`.
+
+Direct entry can retain the normal head loaded at engine startup. In the
+Spanish floppy resources, its left-facing head contains 30 pixels of 0xCC,
+6 of 0xCD, and 24 of 0xCE across six frames. Adding 0x20 maps them to
+scene palette entries 236..238: (37,0,0), (41,1,1), and (46,2,2). The
+beach head has none of those pixels. `PART_79_beachScene` now explicitly
+loads the existing beach frame resources through the TBL load path to
+establish the original inherited prerequisite on direct entry as well.
