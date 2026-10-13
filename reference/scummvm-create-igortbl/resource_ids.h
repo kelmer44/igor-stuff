@@ -477,4 +477,31 @@
 #define STR_SharewarePenduloAddress5 447
 #define STR_SharewarePenduloAddress6 448
 
+#define STR_DemoOptionsSave 1300
+#define STR_DemoOptionsLoad 1301
+#define STR_DemoOptionsQuit 1302
+#define STR_DemoOptionsCtrl 1303
+#define STR_DemoOptionsPlay 1304
+#define STR_DemoOptionsSoundOff 1305
+#define STR_DemoOptionsSoundOn 1306
+#define STR_DemoOptionsSoundUnavailable 1307
+#define STR_DemoOptionsSpeechUnavailable 1308
+#define STR_DemoOptionsMusicOff 1309
+#define STR_DemoOptionsMusicOn 1310
+#define STR_DemoOptionsMusicUnavailable 1311
+#define STR_DemoOptionsSpeedVerySlow 1312
+#define STR_DemoOptionsSpeedSlow 1313
+#define STR_DemoOptionsSpeedNormal 1314
+#define STR_DemoOptionsSpeedFast 1315
+#define STR_DemoOptionsSpeedVeryFast 1316
+#define STR_DemoOptionsCtrlTitle 1317
+#define STR_DemoOptionsQuitTitle 1318
+#define STR_DemoOptionsQuitQuestion 1319
+#define STR_DemoOptionsQuitKeys 1320
+#define STR_DemoOptionsSaveTitle 1321
+#define STR_DemoOptionsLoadTitle 1322
+#define STR_DemoOptionsUnavailable 1323
+
+#define STR_DemoOptionsLoadTitle110 1324
+
 #endif
