@@ -705,6 +705,13 @@
 { TXT_OptionsSaveTitle, 0x7e0929, 29 },
 { TXT_OptionsLoadTitle, 0x7e0bec, 22 },
 { TXT_Part81ObjectNames, 0xd2f90, 11 },
+{ TXT_Credits1, 0x6007d, 82 },
+{ TXT_Credits2, 0x50033, 61 },
+{ TXT_Credits3, 0x4005c, 26 },
+{ TXT_Credits4, 0x3007f, 32 },
+{ TXT_Credits5, 0x20094, 46 },
+{ TXT_Credits6, 0x100bd, 26 },
+{ TXT_Credits7, 0x8, 82 },
 
 // TODO: Verify the English floppy counterpart for FRM_IgorIntroLogo.
 // TODO: Verify the English floppy counterpart for IMG_IgorIntroLogo.

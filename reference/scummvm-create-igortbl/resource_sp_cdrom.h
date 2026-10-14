@@ -691,3 +691,11 @@
 { TXT_OptionsQuit, 0x8515e5, 27 },
 { TXT_OptionsSaveTitle, 0x85202a, 32 },
 { TXT_OptionsLoadTitle, 0x85220e, 61 },
+
+{ TXT_Credits1, 0x3aab, 124 },
+{ TXT_Credits2, 0x36cf, 173 },
+{ TXT_Credits3, 0x3347, 137 },
+{ TXT_Credits4, 0x3099, 64 },
+{ TXT_Credits5, 0x2dde, 77 },
+{ TXT_Credits6, 0x2a89, 134 },
+{ TXT_Credits7, 0x27c2, 69 },
