@@ -401,10 +401,12 @@
 { PAL_ParkRight, 0x39ed42, 624 },
 { MSK_ParkRight, 0x39efb2, 3972 },
 { BOX_ParkRight, 0x39ff36, 1280 },
+{ DLG_ParkLady, 0x38772d, 1555 },
 { DLG_ParkLaura, 0x3858fa, 2854 },
 { FRM_ParkLaura1, 0x387eb8, 40622 },
 { FRM_ParkLaura2, 0x391d66, 114 },
 { FRM_ParkLaura3, 0x391dd8, 48 },
+{ FRM_ParkRight1, 0x391e56, 3969 },
 { DAT_MazeEntrance, 0x23e7c5, 5617 },
 { FRM_MazeEntrance1, 0x3473ce, 6061 },
 { TXT_MazeEntrance, 0x303ee5, 1313 },
@@ -636,8 +638,6 @@
 { TXT_OptionsSaveTitle, 0x7e0929, 29 },
 { TXT_OptionsLoadTitle, 0x7e0bec, 22 },
 
-// TODO: Verify the English floppy counterpart for DLG_ParkLady.
-// TODO: Verify the English floppy counterpart for FRM_ParkRight1.
 // TODO: Verify the English floppy counterpart for FRM_IgorIntroLogo.
 // TODO: Verify the English floppy counterpart for IMG_IgorIntroLogo.
 // TODO: Verify the English floppy counterpart for PAL_IgorIntroLogo.
