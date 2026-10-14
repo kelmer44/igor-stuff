@@ -411,3 +411,4 @@
 #define TXT_OptionsSaveTitle 1229
 #define TXT_OptionsLoadTitle 1230
 #define TXT_Part81ObjectNames 1231
+#define TXT_OptionsUnavailable 1232
