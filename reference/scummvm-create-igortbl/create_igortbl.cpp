@@ -87,6 +87,10 @@ static struct ResourceEntry _resourceEntriesEngDemo110[] = {
 #include "resource_en_demo110.h"
 };
 
+static struct ResourceEntry _resourceEntriesEngFloppy[] = {
+#include "resource_en_floppy.h"
+};
+
 static struct ResourceEntry _resourceEntriesSpaCd[] = {
 #include "resource_sp_cdrom.h"
 };
@@ -101,6 +105,7 @@ static struct {
 } _resourceEntriesList[] = {
 	{ _resourceEntriesEngDemo100, TABLE_SIZE(_resourceEntriesEngDemo100) },
 	{ _resourceEntriesEngDemo110, TABLE_SIZE(_resourceEntriesEngDemo110) },
+	{ _resourceEntriesEngFloppy, TABLE_SIZE(_resourceEntriesEngFloppy) },
 	{ _resourceEntriesSpaCd,      TABLE_SIZE(_resourceEntriesSpaCd) },
 	{ _resourceEntriesSpaFloppy,  TABLE_SIZE(_resourceEntriesSpaFloppy) },
 	{ 0, 0 }
@@ -108,6 +113,10 @@ static struct {
 
 static const uint32 _soundEntriesEngDemo[] = {
 #include "fsd_en_demo.h"
+};
+
+static const uint32 _soundEntriesEngFloppy[] = {
+#include "fsd_en_floppy.h"
 };
 
 static const uint32 _soundEntriesSpaCd[] = {
@@ -119,6 +128,7 @@ static struct {
 	int count;
 } _soundEntriesList[] = {
 	{ _soundEntriesEngDemo, TABLE_SIZE(_soundEntriesEngDemo) },
+	{ _soundEntriesEngFloppy, TABLE_SIZE(_soundEntriesEngFloppy) },
 	{ _soundEntriesSpaCd,   TABLE_SIZE(_soundEntriesSpaCd) },
 	// TODO: Derive the original floppy sound offsets.
 	{ 0, 0 }
@@ -150,7 +160,8 @@ static const struct GameVersion _gameVersions[] = {
 	{ 4086790, _resourceEntriesEngDemo100, _soundEntriesEngDemo },
 	{ 4094103, _resourceEntriesEngDemo110, _soundEntriesEngDemo },
 	{ 9115648, _resourceEntriesSpaCd,      _soundEntriesSpaCd   },
-	{ 11199335, _resourceEntriesSpaFloppy, 0 }
+	{ 11199335, _resourceEntriesSpaFloppy, 0 },
+	{ 8819339, _resourceEntriesEngFloppy, _soundEntriesEngFloppy }
 };
 
 static const uint32 ITBL_TAG = 0x4954424C;
