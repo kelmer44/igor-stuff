@@ -701,6 +701,21 @@
 // TODO: Identify the floppy counterpart for TXT_Credits5.
 // TODO: Identify the floppy counterpart for TXT_Credits6.
 // TODO: Identify the floppy counterpart for TXT_Credits7.
+{ CMF_1, 0xa48344, 306 },
+{ CMF_10, 0xa41122, 5982 },
+{ CMF_11, 0xa44da9, 12793 },
+{ CMF_12, 0xa35d11, 22275 },
+{ CMF_2_1, 0xa49013, 4111 },
+{ CMF_2_2, 0xa4ac4f, 4303 },
+{ CMF_2_3, 0xa4c969, 4343 },
+{ CMF_3, 0xa4eb37, 5898 },
+{ CMF_4, 0xa50a7b, 3133 },
+{ CMF_7_1, 0xa523f3, 4671 },
+{ CMF_7_2, 0xa537d3, 646 },
+{ CMF_7_3, 0xa53fd2, 2014 },
+{ CMF_7_4, 0xa54b61, 1369 },
+{ CMF_8, 0xa3c31f, 4926 },
+{ CMF_9, 0xa3e7e8, 6249 },
 { FRM_CollegeCorridorAnnouncementBoardFloppy1, 0x640288, 3422 },
 { FRM_CollegeCorridorAnnouncementBoardFloppy2, 0x640fe6, 7560 },
 { FRM_CollegeCorridorCarolineFloppy1, 0x679e12, 6720 },

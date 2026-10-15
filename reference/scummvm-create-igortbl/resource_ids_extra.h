@@ -413,3 +413,4 @@
 #define FRM_CollegeLockersFloppy2 1272
 #define FRM_CollegeStairsSecondFloorFloppy1 1273
 #define FRM_CollegeStairsSecondFloorFloppy2 1274
+#define CMF_1 1275
