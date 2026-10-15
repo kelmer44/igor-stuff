@@ -40,9 +40,8 @@ table and the shared strings are byte-identical to the previous dictionary.
 
 An earlier attempt bumped the format to version 5 with a per-row source byte.
 It was replaced so that existing dictionaries and readers stay unchanged.
-**Engine status:** the `floppy-support` reader in the fork still implements the
-version-5 layout; it must be adapted to the two-table lookup before Spanish
-floppy starts again (see [the plan](SPANISH_FLOPPY_PLAN.md), phase 0).
+**Engine status:** the `floppy-support` reader in the fork implements this
+two-table lookup (see [the plan](SPANISH_FLOPPY_PLAN.md), phase 0).
 New entries describe where to read the player's data; they do not contain
 extracted pictures, text or fonts.
 

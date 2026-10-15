@@ -46,16 +46,27 @@ Pre-rebase heads are kept as `backup/extracr2-pre-rebase` and
 
 ## Phase 0 — Finish the integration
 
-1. Adapt the `floppy-support` resource reader to the two-table TBL: when the game
-   is Spanish floppy, also read the table keyed by the unpacked image size
-   (120,864), and let `loadData()` read an ID from the unpacked image when that
-   table holds it. Drop `resource_format.h` and the version-5 reading path. The
-   other editions need no engine change: their rows are byte-identical, and the
-   unchanged engine produced the same resource-load trace with the old and new
-   TBL for CD, English floppy and both demos.
-2. Re-run the Spanish floppy startup check up to the intro.
-3. Obtain an unmodified `IGOR.DAT` for research (or record the patched byte in
-   every investigation manifest, as the text investigation already does).
+1. **Done (fork `1ea2ed78824`):** the `floppy-support` reader uses the
+   two-table TBL. For Spanish floppy it merges the DAT table and the table keyed
+   by the unpacked image size (120,864) into one sorted lookup, rejecting
+   duplicate IDs; `loadData()` reads EXE-table rows from the unpacked image.
+   `resource_format.h` and the version-5 path are gone.
+2. **Done:** startup checks with that build. CD, English floppy and both demos
+   load exactly the same resources up to the intro as the unchanged
+   `igor-stuff` engine. Spanish floppy unpacks the EXE, loads 171 dialogue
+   records and 8 verb labels, then stops at the first logo (state 900) on
+   `PAL_OptikSoftware`, one of the 12 unresolved intro/logo resources (Phase 5).
+   Started at state 850 with a temporary override, it plays the intro without
+   errors. The earlier "reaches the intro" result also started at 850.
+3. **Fixed while rebasing:** the floppy commit set the text language slot to 1
+   for English editions, which emptied English object names and verbs now that
+   English editions are supported; every edition uses slot 0 again. The rebased
+   engine also starts the English floppy music player for every floppy edition;
+   Spanish floppy music is disabled behind a TODO until its CMF records and
+   their selection are identified (Phase 6), as before the rebase.
+4. Open: obtain an unmodified `IGOR.DAT` for research (or keep recording the
+   patched byte in every investigation manifest). Also check which `IGOR.DAT`
+   the detection MD5 was taken from.
 
 ## Phase 1 — Native disassembly of the whole game
 
