@@ -12,7 +12,7 @@ disabled TODOs, and every resource goes through `IGOR.TBL`.
 | Area | Status |
 | --- | --- |
 | Detection, EXE unpacker | Done on fork branch `floppy-support` |
-| Resource catalog | 584 DAT rows + 8 EXE rows; 48 CD identifiers unresolved |
+| Resource catalog | 676 DAT rows + 8 EXE rows; 50 CD identifiers open (6 have no floppy counterpart); see [SPLASH_AND_RESOURCE_TRACE.md](SPLASH_AND_RESOURCE_TRACE.md) |
 | TBL | Version 4, second Spanish floppy table for EXE resources (this change) |
 | Verb panel, inventory (8 slots), fonts, language, text timing | Implemented, compared with selected routines |
 | Room behaviour | Not started: every room runs the CD code |
@@ -123,12 +123,14 @@ spot check. Re-run the CD smoke checks after any change to shared code.
 
 ## Phase 5 — Remaining resources and features
 
-- The 12 intro/logo resources (Pendulo, Optik, "Graphic adventure", "presents",
-  Igor logo), traced through the floppy intro routine.
-- `DLG_TobiasOffice`, `DLG_Part8Intercom`, `TXT_Library2`, `TXT_Part79bMain`.
+- The startup is two states (900, 980); the engine's splash code still follows the
+  CD's five. Spanish floppy needs its own handling (see the trace notes) before it
+  gets past the first screen.
+- Verify the weaker catalog rows (`DLG_Part8Intercom`, `TXT_Library2`,
+  `TXT_Part79bMain`) when their rooms are ported.
+- `DLG_TobiasOffice`, the intro logo, `TXT_Options*`, credits text.
 - The options menu: establish whether the floppy has a native equivalent of the
   CD menu texts; if not, keep the ScummVM menus for this edition.
-- `IMG_Meanwhile`: the earlier candidate was rejected; trace the real card.
 
 ## Phase 6 — Audio
 

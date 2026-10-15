@@ -10,7 +10,7 @@ import struct
 ROOT = Path(__file__).resolve().parents[1]
 RESEARCH = ROOT / 'floppy-research'
 TABLES = ROOT / 'reference/scummvm-create-igortbl'
-ROW_RE = re.compile(r'\{\s*(\w+),\s*(0x[\da-f]+),\s*(\d+)\s*\}')
+ROW_RE = re.compile(r'\{\s*(\w+),\s*(0x[\da-fA-F]+),\s*(0x[\da-fA-F]+|\d+)\s*\}')
 
 
 def main():
@@ -22,7 +22,7 @@ def main():
     resident = investigation.get('resident', {})
     memory = (RESEARCH / 'unpacked-memory.bin').read_bytes()
     image = memory[0x10100:0x10100 + 120864]
-    original = [(n, int(o, 16), int(s)) for n, o, s in
+    original = [(n, int(o, 16), int(s, 0)) for n, o, s in
                 ROW_RE.findall((TABLES / 'resource_sp_cdrom.h').read_text())]
     assert len(resolved) == len(set(resolved))
     assert len(floppy) == 11199335
@@ -56,7 +56,11 @@ def main():
                           method, cd_size, hashlib.sha256(payload).hexdigest()])
             continue
         if name not in resolved:
-            lines.append('// TODO: Identify the floppy counterpart for ' + name + '.')
+            if name in investigation.get('absent', {}):
+                lines.append('// No Spanish floppy counterpart for ' + name + ': ' + investigation['absent'][name])
+            else:
+                lines.append('// TODO: Identify the floppy counterpart for ' + name + '.' +
+                             (' ' + investigation['notes'][name] if name in investigation.get('notes', {}) else ''))
             continue
         offset, size, method, number, relative = resolved[name]
         overlay = overlays[number - 1]
@@ -91,7 +95,11 @@ def main():
                       f'0x{offset-overlay["offset"]:x}', method, cd_size,
                       hashlib.sha256(payload).hexdigest()])
     original_names = {name for name, _, _ in original}
-    assert set(resolved) <= original_names | {'PAL_VerbsPanel', 'PAL_InventoryPanel'}
+    # Names that only exist in the floppy catalog: panel palettes and the
+    # title screen palette/image, plus the arrangements that differ from CD.
+    floppy_only = {'PAL_VerbsPanel', 'PAL_InventoryPanel', 'PAL_TitleScreen',
+                   'IMG_TitleScreen'} | set(investigation.get('floppy_only', []))
+    assert set(resolved) <= original_names | floppy_only
     assert set(resident) <= original_names | {'TXT_MainVerbs', 'DAT_FloppyFontMap',
                                             'DAT_FloppySentenceWidths', 'IMG_FloppySentenceFont',
                                             'DAT_FloppySentenceColors', 'DAT_FloppyDialogueWidths',
@@ -102,7 +110,12 @@ def main():
         assert offset == overlay['offset'] + relative
         assert overlay['offset'] <= offset < offset + size <= overlay['offset'] + overlay['size'], name
         payload = floppy[offset:offset + size]
-        assert name.startswith('PAL_') and size % 3 == 0 and max(payload) <= 63, name
+        if name.startswith('PAL_'):
+            assert size % 3 == 0 and max(payload) <= 63, name
+        elif name.startswith('IMG_'):
+            assert size in (46080, 64000), name
+        else:
+            assert name.startswith('FRM_'), name
         lines.append(f'{{ {name}, 0x{offset:x}, {size} }},')
         audit.append([name, f'0x{offset:x}', size, number, f'0x{relative:x}',
                       method, '', hashlib.sha256(payload).hexdigest()])

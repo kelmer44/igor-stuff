@@ -8178,6 +8178,650 @@
       "native-palette-copy",
       301,
       58205
+    ],
+    "ANM_DecanatoHamburger": [
+      8752893,
+      4998,
+      "identical",
+      237,
+      null
+    ],
+    "ANM_AdministrationSecretaryRoom1": [
+      9277355,
+      3384,
+      "identical",
+      257,
+      null
+    ],
+    "ANM_AdministrationSecretaryRoom2": [
+      9280739,
+      507,
+      "identical",
+      257,
+      null
+    ],
+    "ANM_AdministrationSecretaryRoom3": [
+      9281246,
+      19928,
+      "identical",
+      257,
+      null
+    ],
+    "ANM_AdministrationSecretaryRoom4": [
+      9301174,
+      2352,
+      "identical",
+      257,
+      null
+    ],
+    "ANM_AdministrationSecretaryRoom5": [
+      9303526,
+      2000,
+      "identical",
+      257,
+      null
+    ],
+    "ANM_AdministrationSecretaryRoom6": [
+      9305526,
+      6372,
+      "identical",
+      257,
+      null
+    ],
+    "ANM_AdministrationSecretaryRoom7": [
+      9311898,
+      5300,
+      "identical",
+      257,
+      null
+    ],
+    "ANM_AdministrationSecretaryRoom8": [
+      9317198,
+      2160,
+      "identical",
+      257,
+      null
+    ],
+    "ANM_AdministrationSecretaryRoom9": [
+      9319358,
+      14749,
+      "identical",
+      257,
+      null
+    ],
+    "ANM_StudentDormitoryRoom1": [
+      10054867,
+      4608,
+      "identical",
+      277,
+      null
+    ],
+    "ANM_StudentDormitoryRoom2": [
+      10059475,
+      1144,
+      "identical",
+      277,
+      null
+    ],
+    "ANM_StudentDormitoryRoom3": [
+      10060619,
+      7104,
+      "identical",
+      277,
+      null
+    ],
+    "ANM_StudentDormitoryRoom4": [
+      10067723,
+      3472,
+      "identical",
+      277,
+      null
+    ],
+    "ANM_StudentDormitoryRoom5": [
+      10071195,
+      3234,
+      "identical",
+      277,
+      null
+    ],
+    "ANM_StudentDormitoryRoom6": [
+      10074429,
+      288,
+      "identical",
+      277,
+      null
+    ],
+    "ANM_StudentDormitoryRoom7": [
+      10074717,
+      3000,
+      "identical",
+      277,
+      null
+    ],
+    "ANM_StudentDormitoryRoom8": [
+      10077717,
+      3300,
+      "identical",
+      277,
+      null
+    ],
+    "ANM_StudentDormitoryRoom9": [
+      10081017,
+      5600,
+      "identical",
+      277,
+      null
+    ],
+    "ANM_StudentDormitoryRoom10": [
+      10086617,
+      2058,
+      "identical",
+      277,
+      null
+    ],
+    "ANM_StudentDormitoryRoom11": [
+      10088675,
+      2058,
+      "identical",
+      277,
+      null
+    ],
+    "DAT_OutsideStudentDormitory": [
+      9648011,
+      6109,
+      "dispatcher-data-export",
+      267,
+      11149
+    ],
+    "TXT_OutsideStudentDormitory": [
+      9733416,
+      1700,
+      "loader-reference-range",
+      270,
+      1706
+    ],
+    "IMG_OutsideStudentDormitory": [
+      9735116,
+      46080,
+      "identical",
+      270,
+      null
+    ],
+    "PAL_OutsideStudentDormitory": [
+      9781196,
+      624,
+      "identical",
+      270,
+      null
+    ],
+    "MSK_OutsideStudentDormitory": [
+      9781820,
+      1524,
+      "identical",
+      270,
+      null
+    ],
+    "BOX_OutsideStudentDormitory": [
+      9783344,
+      1280,
+      "identical",
+      270,
+      null
+    ],
+    "ANM_OutsideStudentDormitory1": [
+      9679955,
+      216,
+      "identical",
+      269,
+      null
+    ],
+    "ANM_OutsideStudentDormitory2": [
+      9680171,
+      3612,
+      "identical",
+      269,
+      null
+    ],
+    "ANM_OutsideStudentDormitory3": [
+      9683783,
+      1968,
+      "identical",
+      269,
+      null
+    ],
+    "ANM_OutsideStudentDormitory4": [
+      9685751,
+      437,
+      "identical",
+      269,
+      null
+    ],
+    "ANM_OutsideStudentDormitory5": [
+      9686188,
+      208,
+      "identical",
+      269,
+      null
+    ],
+    "ANM_OutsideStudentDormitory6": [
+      9686396,
+      36480,
+      "identical",
+      269,
+      null
+    ],
+    "ANM_OutsideStudentDormitory7": [
+      9722876,
+      80,
+      "identical",
+      269,
+      null
+    ],
+    "ANM_OutsideStudentDormitory8": [
+      9722956,
+      8720,
+      "identical",
+      269,
+      null
+    ],
+    "DAT_StudentDormitoryAttic": [
+      9807768,
+      7843,
+      "dispatcher-data-export",
+      271,
+      23086
+    ],
+    "TXT_StudentDormitoryAttic": [
+      9923647,
+      2752,
+      "loader-reference-range",
+      274,
+      1706
+    ],
+    "IMG_StudentDormitoryAttic": [
+      9926399,
+      46080,
+      "identical",
+      274,
+      null
+    ],
+    "PAL_StudentDormitoryAttic": [
+      9972479,
+      624,
+      "identical",
+      274,
+      null
+    ],
+    "MSK_StudentDormitoryAttic": [
+      9973103,
+      4545,
+      "identical",
+      274,
+      null
+    ],
+    "BOX_StudentDormitoryAttic": [
+      9977648,
+      1280,
+      "identical",
+      274,
+      null
+    ],
+    "ANM_StudentDormitoryAttic1": [
+      9873267,
+      700,
+      "identical",
+      273,
+      null
+    ],
+    "ANM_StudentDormitoryAttic2": [
+      9873967,
+      220,
+      "identical",
+      273,
+      null
+    ],
+    "ANM_StudentDormitoryAttic3": [
+      9874187,
+      40,
+      "identical",
+      273,
+      null
+    ],
+    "ANM_StudentDormitoryAttic4": [
+      9874227,
+      5439,
+      "identical",
+      273,
+      null
+    ],
+    "ANM_StudentDormitoryAttic5": [
+      9879666,
+      5439,
+      "identical",
+      273,
+      null
+    ],
+    "ANM_StudentDormitoryAttic6": [
+      9885105,
+      1404,
+      "identical",
+      273,
+      null
+    ],
+    "ANM_StudentDormitoryAttic7": [
+      9886509,
+      3600,
+      "identical",
+      273,
+      null
+    ],
+    "ANM_StudentDormitoryAttic8": [
+      9890109,
+      4872,
+      "identical",
+      273,
+      null
+    ],
+    "ANM_StudentDormitoryAttic9": [
+      9894981,
+      2058,
+      "identical",
+      273,
+      null
+    ],
+    "ANM_StudentDormitoryAttic10": [
+      9897039,
+      3300,
+      "identical",
+      273,
+      null
+    ],
+    "ANM_StudentDormitoryAttic11": [
+      9900339,
+      5643,
+      "identical",
+      273,
+      null
+    ],
+    "ANM_StudentDormitoryAttic12": [
+      9905982,
+      576,
+      "identical",
+      273,
+      null
+    ],
+    "ANM_StudentDormitoryAttic13": [
+      9906558,
+      12925,
+      "identical",
+      273,
+      null
+    ],
+    "ANM_StudentDormitoryAttic14": [
+      9919483,
+      2400,
+      "identical",
+      273,
+      null
+    ],
+    "IMG_PenduloStudios": [
+      881433,
+      64000,
+      "splash-loader-export",
+      20,
+      110
+    ],
+    "PAL_PenduloStudios": [
+      945433,
+      768,
+      "splash-loader-export",
+      20,
+      64110
+    ],
+    "IMG_FloppyTitleBackdrop": [
+      1030700,
+      64000,
+      "splash-loader-export",
+      24,
+      110
+    ],
+    "PAL_TitleScreen": [
+      1094700,
+      768,
+      "splash-loader-export",
+      24,
+      64110
+    ],
+    "IMG_TitleScreen": [
+      966584,
+      64000,
+      "splash-loader-export",
+      23,
+      60
+    ],
+    "IMG_Meanwhile": [
+      10550616,
+      46080,
+      "screen-loader",
+      288,
+      283
+    ],
+    "DLG_SpringPhotographer": [
+      8931969,
+      15460,
+      "dialogue-data-export",
+      243,
+      5168
+    ],
+    "DLG_DeanPepperOffice": [
+      9395879,
+      15490,
+      "dialogue-data-export",
+      260,
+      4182
+    ],
+    "DLG_AdministrationSecretaryRoom": [
+      9266672,
+      10031,
+      "dialogue-data-export",
+      256,
+      4819
+    ],
+    "DLG_Part8Intercom": [
+      9391126,
+      461,
+      "dialogue-data-export",
+      259,
+      2899
+    ],
+    "TXT_Library2": [
+      9156851,
+      239,
+      "text-data-export",
+      252,
+      592
+    ],
+    "TXT_Part79bMain": [
+      184677,
+      330,
+      "text-data-export",
+      6,
+      591
+    ],
+    "FRM_CollegeStairsSecondFloorFloppy1": [
+      6276627,
+      1566,
+      "animation-loader-export",
+      158,
+      112
+    ],
+    "FRM_CollegeStairsSecondFloorFloppy2": [
+      6278193,
+      9920,
+      "animation-loader-export",
+      158,
+      1678
+    ],
+    "FRM_CollegeCorridorMissBarrymoreFloppy1": [
+      6477464,
+      1742,
+      "animation-loader-export",
+      165,
+      112
+    ],
+    "FRM_CollegeCorridorMissBarrymoreFloppy2": [
+      6479206,
+      5427,
+      "animation-loader-export",
+      165,
+      1854
+    ],
+    "FRM_CollegeCorridorAnnouncementBoardFloppy1": [
+      6554248,
+      3422,
+      "animation-loader-export",
+      168,
+      112
+    ],
+    "FRM_CollegeCorridorAnnouncementBoardFloppy2": [
+      6557670,
+      7560,
+      "animation-loader-export",
+      168,
+      3534
+    ],
+    "FRM_CollegeCorridorSharonMichaelFloppy1": [
+      6703331,
+      3422,
+      "animation-loader-export",
+      173,
+      112
+    ],
+    "FRM_CollegeCorridorSharonMichaelFloppy2": [
+      6706753,
+      7812,
+      "animation-loader-export",
+      173,
+      3534
+    ],
+    "FRM_CollegeCorridorCarolineFloppy1": [
+      6790674,
+      6720,
+      "animation-loader-export",
+      176,
+      268
+    ],
+    "FRM_CollegeCorridorCarolineFloppy2": [
+      6797394,
+      3038,
+      "animation-loader-export",
+      176,
+      6988
+    ],
+    "FRM_CollegeCorridorCarolineFloppy3": [
+      6800432,
+      5673,
+      "animation-loader-export",
+      176,
+      10026
+    ],
+    "FRM_CollegeCorridorCarolineFloppy4": [
+      6806105,
+      156,
+      "animation-loader-export",
+      176,
+      15699
+    ],
+    "FRM_CollegeCorridorCarolineFloppy5": [
+      6806261,
+      3248,
+      "animation-loader-export",
+      176,
+      15855
+    ],
+    "FRM_CollegeCorridorLucasFloppy1": [
+      6880275,
+      3480,
+      "animation-loader-export",
+      179,
+      112
+    ],
+    "FRM_CollegeCorridorLucasFloppy2": [
+      6883755,
+      6048,
+      "animation-loader-export",
+      179,
+      3592
+    ],
+    "FRM_CollegeCorridorMargaretFloppy1": [
+      6978923,
+      3480,
+      "animation-loader-export",
+      183,
+      424
+    ],
+    "FRM_CollegeCorridorMargaretFloppy2": [
+      6982403,
+      6138,
+      "animation-loader-export",
+      183,
+      3904
+    ],
+    "FRM_CollegeCorridorMargaretFloppy3": [
+      6988541,
+      6235,
+      "animation-loader-export",
+      183,
+      10042
+    ],
+    "FRM_CollegeCorridorMargaretFloppy4": [
+      6994776,
+      4320,
+      "animation-loader-export",
+      183,
+      16277
+    ],
+    "FRM_CollegeCorridorMargaretFloppy5": [
+      6999096,
+      1920,
+      "animation-loader-export",
+      183,
+      20597
+    ],
+    "FRM_CollegeCorridorMargaretFloppy6": [
+      7001016,
+      7128,
+      "animation-loader-export",
+      183,
+      22517
+    ],
+    "FRM_CollegeCorridorMargaretFloppy7": [
+      7008144,
+      3200,
+      "animation-loader-export",
+      183,
+      29645
+    ],
+    "FRM_CollegeCorridorMargaretFloppy8": [
+      7011344,
+      910,
+      "animation-loader-export",
+      183,
+      32845
+    ],
+    "FRM_CollegeLockersFloppy1": [
+      7082656,
+      8568,
+      "animation-loader-export",
+      186,
+      112
+    ],
+    "FRM_CollegeLockersFloppy2": [
+      7091224,
+      3584,
+      "animation-loader-export",
+      186,
+      8680
     ]
   },
   "missing": [
@@ -8287,5 +8931,44 @@
       0,
       38906
     ]
+  },
+  "floppy_only": [
+    "FRM_CollegeCorridorAnnouncementBoardFloppy1",
+    "FRM_CollegeCorridorAnnouncementBoardFloppy2",
+    "FRM_CollegeCorridorCarolineFloppy1",
+    "FRM_CollegeCorridorCarolineFloppy2",
+    "FRM_CollegeCorridorCarolineFloppy3",
+    "FRM_CollegeCorridorCarolineFloppy4",
+    "FRM_CollegeCorridorCarolineFloppy5",
+    "FRM_CollegeCorridorLucasFloppy1",
+    "FRM_CollegeCorridorLucasFloppy2",
+    "FRM_CollegeCorridorMargaretFloppy1",
+    "FRM_CollegeCorridorMargaretFloppy2",
+    "FRM_CollegeCorridorMargaretFloppy3",
+    "FRM_CollegeCorridorMargaretFloppy4",
+    "FRM_CollegeCorridorMargaretFloppy5",
+    "FRM_CollegeCorridorMargaretFloppy6",
+    "FRM_CollegeCorridorMargaretFloppy7",
+    "FRM_CollegeCorridorMargaretFloppy8",
+    "FRM_CollegeCorridorMissBarrymoreFloppy1",
+    "FRM_CollegeCorridorMissBarrymoreFloppy2",
+    "FRM_CollegeCorridorSharonMichaelFloppy1",
+    "FRM_CollegeCorridorSharonMichaelFloppy2",
+    "FRM_CollegeLockersFloppy1",
+    "FRM_CollegeLockersFloppy2",
+    "FRM_CollegeStairsSecondFloorFloppy1",
+    "FRM_CollegeStairsSecondFloorFloppy2",
+    "IMG_FloppyTitleBackdrop"
+  ],
+  "absent": {
+    "PAL_GraphicAdventure": "its startup shows only the Pendulo logo and the title screen.",
+    "IMG_GraphicAdventure": "its startup shows only the Pendulo logo and the title screen.",
+    "PAL_Presents": "its startup shows only the Pendulo logo and the title screen.",
+    "IMG_Presents": "its startup shows only the Pendulo logo and the title screen.",
+    "PAL_OptikSoftware": "its startup shows only the Pendulo logo and the title screen.",
+    "IMG_OptikSoftware": "its startup shows only the Pendulo logo and the title screen."
+  },
+  "notes": {
+    "DLG_TobiasOffice": "The Tobias office room code references no dialogue data."
   }
 }
