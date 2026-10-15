@@ -1,0 +1,413 @@
+{
+ "057E:0204": {
+  "cd": "221:082F",
+  "votes": 6,
+  "total": 6,
+  "confidence": "high",
+  "candidates": {
+   "221:082F": 6
+  }
+ },
+ "057E:0257": {
+  "cd": "220:1D48",
+  "votes": 1,
+  "total": 2,
+  "confidence": "none",
+  "candidates": {
+   "220:1D48": 1,
+   "221:094A": 1
+  },
+  "hand_checked": true,
+  "resolved_cd": null,
+  "relation": "no match",
+  "reason": "Floppy routine tests a flag and calls through a stored far pointer; neither candidate has this body."
+ },
+ "0641:01FA": {
+  "cd": "222:01DE",
+  "votes": 49,
+  "total": 56,
+  "confidence": "high",
+  "candidates": {
+   "222:01DE": 49,
+   "230:05CD": 3,
+   "229:57B2": 2
+  }
+ },
+ "0641:0BEB": {
+  "cd": "222:0C5B",
+  "votes": 1,
+  "total": 1,
+  "confidence": "medium",
+  "candidates": {
+   "222:0C5B": 1
+  },
+  "hand_checked": true,
+  "resolved_cd": "222:0C5B",
+  "relation": "revised",
+  "reason": "Same frame, same argument copy and same decrement/table lookup; CD reads a 3-byte table entry where floppy reads 2-byte, and argument offsets moved by 4."
+ },
+ "0641:0F72": {
+  "cd": "230:1686",
+  "votes": 44,
+  "total": 48,
+  "confidence": "high",
+  "candidates": {
+   "230:1686": 44,
+   "230:1558": 1,
+   "221:2315": 1
+  }
+ },
+ "0641:1182": {
+  "cd": "222:122E",
+  "votes": 46,
+  "total": 46,
+  "confidence": "high",
+  "candidates": {
+   "222:122E": 46
+  }
+ },
+ "0641:1487": {
+  "cd": "222:1884",
+  "votes": 138,
+  "total": 233,
+  "confidence": "medium",
+  "candidates": {
+   "222:1884": 138,
+   "222:01DE": 44,
+   "221:20B9": 43
+  },
+  "hand_checked": true,
+  "resolved_cd": "222:1884",
+  "relation": "revised",
+  "reason": "Same frame size and the same 0x1f/0x3e row-stride lookup; CD adds a check on [0xeaae] and a second flag test before it."
+ },
+ "0641:15F2": {
+  "cd": "222:19D4",
+  "votes": 46,
+  "total": 52,
+  "confidence": "high",
+  "candidates": {
+   "222:19D4": 46,
+   "230:05CD": 6
+  }
+ },
+ "0641:1A76": {
+  "cd": "222:2264",
+  "votes": 103,
+  "total": 103,
+  "confidence": "high",
+  "candidates": {
+   "222:2264": 103
+  }
+ },
+ "0641:1AB6": {
+  "cd": "222:229F",
+  "votes": 86,
+  "total": 86,
+  "confidence": "high",
+  "candidates": {
+   "222:229F": 86
+  }
+ },
+ "0641:1B25": {
+  "cd": "222:230C",
+  "votes": 42,
+  "total": 45,
+  "confidence": "high",
+  "candidates": {
+   "222:230C": 42,
+   "222:1884": 2,
+   "221:1FA6": 1
+  }
+ },
+ "0641:1B7A": {
+  "cd": "222:236E",
+  "votes": 1,
+  "total": 1,
+  "confidence": "high",
+  "candidates": {
+   "222:236E": 1
+  },
+  "hand_checked": true,
+  "resolved_cd": "222:236E",
+  "relation": "identical",
+  "reason": "Instruction-for-instruction identical prologue and argument handling."
+ },
+ "0641:1FFA": {
+  "cd": "222:2770",
+  "votes": 2,
+  "total": 3,
+  "confidence": "medium",
+  "candidates": {
+   "222:2770": 2,
+   "230:1686": 1
+  },
+  "hand_checked": true,
+  "resolved_cd": "222:2770",
+  "relation": "revised",
+  "reason": "Same flag test, call and (x+0x13) mod 0x20 step; CD adds two checks before it."
+ },
+ "0641:2197": {
+  "cd": "222:29DC",
+  "votes": 7,
+  "total": 9,
+  "confidence": "medium",
+  "candidates": {
+   "222:29DC": 7,
+   "222:01DE": 1,
+   "222:1884": 1
+  },
+  "hand_checked": true,
+  "resolved_cd": "222:29DC",
+  "relation": "revised",
+  "reason": "Same copies and mod-16 counter test; only data addresses differ."
+ },
+ "0D78:0159": {
+  "cd": "230:05CD",
+  "votes": 2,
+  "total": 2,
+  "confidence": "none",
+  "candidates": {
+   "230:05CD": 2
+  },
+  "hand_checked": true,
+  "resolved_cd": null,
+  "relation": "no match",
+  "reason": "Floppy routine is a real function (flag test, pointer copy); 230:05CD is the stack check. Votes were noise."
+ },
+ "0D78:01F0": {
+  "cd": "222:2264",
+  "votes": 1,
+  "total": 1,
+  "confidence": "none",
+  "candidates": {
+   "222:2264": 1
+  },
+  "hand_checked": true,
+  "resolved_cd": null,
+  "relation": "no match",
+  "reason": "Floppy sets a word to 7 and calls another overlay routine; 222:2264 does not."
+ },
+ "0D78:0414": {
+  "cd": "222:1884",
+  "votes": 1,
+  "total": 1,
+  "confidence": "none",
+  "candidates": {
+   "222:1884": 1
+  },
+  "hand_checked": true,
+  "resolved_cd": null,
+  "relation": "no match",
+  "reason": "Floppy routine is a nested counting loop; 222:1884 is unrelated."
+ },
+ "0DD9:0000": {
+  "cd": "221:1FA6",
+  "votes": 93,
+  "total": 143,
+  "confidence": "medium",
+  "candidates": {
+   "221:1FA6": 93,
+   "222:1884": 43,
+   "230:1686": 1
+  },
+  "hand_checked": true,
+  "resolved_cd": "221:1FA6",
+  "relation": "revised",
+  "reason": "First of a pair of routines with the same shape (byte argument range check, then a row/column loop). Floppy accepts 1..8 with stride 0x28, CD accepts 2..8 with stride 0x2e and a larger frame."
+ },
+ "0DD9:00BF": {
+  "cd": "230:0C6C",
+  "votes": 43,
+  "total": 87,
+  "confidence": "medium",
+  "candidates": {
+   "230:0C6C": 43,
+   "221:20B9": 42,
+   "222:2264": 1
+  },
+  "hand_checked": true,
+  "resolved_cd": "221:20B9",
+  "relation": "revised",
+  "reason": "Second of the same pair; the 230:0C6C candidate is only a memory-copy helper that matched by its repeated-move pattern."
+ },
+ "0DF6:6438": {
+  "cd": "229:5781",
+  "votes": 40,
+  "total": 46,
+  "confidence": "high",
+  "candidates": {
+   "229:5781": 40,
+   "229:5ABB": 6
+  }
+ },
+ "0DF6:6469": {
+  "cd": "229:57B2",
+  "votes": 46,
+  "total": 46,
+  "confidence": "high",
+  "candidates": {
+   "229:57B2": 46
+  }
+ },
+ "0DF6:67B8": {
+  "cd": "229:5ABB",
+  "votes": 92,
+  "total": 102,
+  "confidence": "high",
+  "candidates": {
+   "229:5ABB": 92,
+   "229:5781": 6,
+   "229:4915": 2
+  }
+ },
+ "14B0:0000": {
+  "cd": "221:21DA",
+  "votes": 4,
+  "total": 4,
+  "confidence": "high",
+  "candidates": {
+   "221:21DA": 4
+  },
+  "hand_checked": true,
+  "resolved_cd": "221:21DA",
+  "relation": "identical",
+  "reason": "Palette upload with vertical-retrace wait; identical apart from the palette buffer address."
+ },
+ "14B0:0020": {
+  "cd": "221:21FA",
+  "votes": 1,
+  "total": 1,
+  "confidence": "high",
+  "candidates": {
+   "221:21FA": 1
+  },
+  "hand_checked": true,
+  "resolved_cd": "221:21FA",
+  "relation": "identical",
+  "reason": "Identical loop structure; only the table address differs."
+ },
+ "14B0:0082": {
+  "cd": "221:225B",
+  "votes": 95,
+  "total": 95,
+  "confidence": "high",
+  "candidates": {
+   "221:225B": 95
+  }
+ },
+ "14B0:00CB": {
+  "cd": "221:22A2",
+  "votes": 93,
+  "total": 95,
+  "confidence": "high",
+  "candidates": {
+   "221:22A2": 93,
+   "221:225B": 1,
+   "228:0002": 1
+  }
+ },
+ "14B0:0115": {
+  "cd": "221:2315",
+  "votes": 91,
+  "total": 91,
+  "confidence": "high",
+  "candidates": {
+   "221:2315": 91
+  }
+ },
+ "14C8:04A3": {
+  "cd": "221:2859",
+  "votes": 44,
+  "total": 44,
+  "confidence": "high",
+  "candidates": {
+   "221:2859": 44
+  }
+ },
+ "15E8:0530": {
+  "cd": "230:05CD",
+  "votes": 60,
+  "total": 82,
+  "confidence": "high",
+  "candidates": {
+   "230:05CD": 60,
+   "230:1686": 9,
+   "001:3E48": 9
+  },
+  "hand_checked": true,
+  "resolved_cd": "230:05CD",
+  "relation": "same role",
+  "reason": "Compiler stack check on function entry; CD compares against the stack segment bound, floppy against a data word."
+ },
+ "15E8:0B4F": {
+  "cd": "230:0C6C",
+  "votes": 92,
+  "total": 99,
+  "confidence": "high",
+  "candidates": {
+   "230:0C6C": 92,
+   "230:05CD": 6,
+   "229:57B2": 1
+  }
+ },
+ "15E8:0B67": {
+  "cd": "230:0C84",
+  "votes": 12,
+  "total": 12,
+  "confidence": "high",
+  "candidates": {
+   "230:0C84": 12
+  }
+ },
+ "15E8:1416": {
+  "cd": "230:152E",
+  "votes": 24,
+  "total": 24,
+  "confidence": "high",
+  "candidates": {
+   "230:152E": 24
+  }
+ },
+ "15E8:141A": {
+  "cd": "230:1532",
+  "votes": 12,
+  "total": 12,
+  "confidence": "high",
+  "candidates": {
+   "230:1532": 12
+  }
+ },
+ "15E8:1440": {
+  "cd": "230:1558",
+  "votes": 197,
+  "total": 200,
+  "confidence": "high",
+  "candidates": {
+   "230:1558": 197,
+   "230:05CD": 2,
+   "222:01DE": 1
+  }
+ },
+ "15E8:156E": {
+  "cd": "230:1686",
+  "votes": 49,
+  "total": 51,
+  "confidence": "high",
+  "candidates": {
+   "230:1686": 49,
+   "222:01DE": 2
+  }
+ },
+ "15E8:1592": {
+  "cd": "230:16AA",
+  "votes": 52,
+  "total": 54,
+  "confidence": "high",
+  "candidates": {
+   "230:16AA": 52,
+   "229:57B2": 1,
+   "213:0002": 1
+  }
+ }
+}

@@ -95,6 +95,13 @@ does not map raw state codes to room routines, which everything else needs.
    rewritten.
 4. Identify the shared library routines (dialogue, walking, drawing, inventory)
    once, as was done for the CD, so room listings read in engine terms.
+   **First pass done:** `resident-map.json` maps 36 resident functions called
+   from the state overlays to CD `segment:offset` by aligning each floppy
+   state overlay with its CD segment on shared immediates and counting the
+   calls that line up, then checking the 14 uncertain ones by hand. Result:
+   26 high, 6 medium (same routine, revised in the CD build) and 4 with no CD
+   equivalent. The floppy build is older, so "revised" routines must not be
+   assumed to behave like the CD ones. Names are not assigned yet.
 
 ## Phase 2 — Global data before any room
 
