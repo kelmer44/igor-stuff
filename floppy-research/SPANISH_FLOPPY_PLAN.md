@@ -72,12 +72,23 @@ Pre-rebase heads are kept as `backup/extracr2-pre-rebase` and
 The current `dispatcher.json` only links CD code units to floppy overlays. It
 does not map raw state codes to room routines, which everything else needs.
 
-1. Decode both floppy dispatchers into a complete state → routine table, and
-   compare its state set with the CD's (`code/001_08B7.asm`). Keep raw state
-   codes; the part number is the state divided by ten (AGENTS.md rule 8).
-2. Produce one listing per state in `code-floppy/es/part_NN_state_N.asm`, with
-   overlay numbers, byte positions and file fingerprints, following the English
-   floppy audit's `native/` listings.
+1. **Done:** the floppy dispatcher is decoded into `dispatcher-states.json`
+   (state → overlay, with the CD segment alongside). It has 147 states, all
+   entered at overlay offset 0x20. Compared with the CD's 148: floppy-only
+   states 151, 200, 201 (college) and 980 (end of startup); CD-only states 271
+   (college) and 901–904 (extra logos). Every CD segment that maps to a floppy
+   overlay agrees with `dispatcher.json`. The per-state routine entry points
+   inside each overlay are still to be listed (step 2).
+   Keep raw state codes; the part number is the state divided by ten
+   (AGENTS.md rule 8).
+2. **Done (first pass):** `tools/generate_igor_floppy_state_listings.py`
+   writes `code-floppy/es/part_NN_state_N.asm` (147 states, 79 unique overlays)
+   plus `INDEX.md`. Each listing is a linear disassembly of the state
+   overlay's export 0 with overlay number, file position, size, fixup count,
+   code hash, and far calls resolved to overlay/export or marked resident.
+   States sharing an overlay point to the first listing. Data embedded in
+   code appears as `db`; the shared resident library (segments such as
+   15E8, 14B0) is not yet listed or named (step 4).
 3. Retarget the English-floppy audit tools (`audit/2026-10-15/english-floppy/`:
    `audit.py`, `behavior_audit.py`, `data_audit.py`) to the Borland overlay
    format. Their output sorts each room into: same as CD / differs in places /
