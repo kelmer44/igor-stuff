@@ -18,8 +18,8 @@ which the existing implementation was compared.
 
 | ID | Priority | Confirmed difference | Current status |
 | --- | --- | --- | --- |
-| F01 | P1 | Administration entrance follows a CD-only walk and narration | Open |
-| F02 | P2 | Reusing resin after taking the lizard selects an empty CD text slot | Open; reproduced in port |
+| F01 | P1 | Administration entrance follows a CD-only walk and narration | Fixed; entry regression checks below |
+| F02 | P2 | Reusing resin after taking the lizard selects an empty CD text slot | Fixed; response regression checks below |
 | F03 | P2 | Attic trunk responses use CD page boundaries | Open |
 | F04 | P2 | Native removal of empty dialogue lines is missing | Open; reproduced in port |
 | F05 | P2 | Floppy music sequencing/repetition is absent | Open; previously documented limitation, now traced to native timer |
@@ -28,6 +28,21 @@ which the existing implementation was compared.
 | F08 | P2 | Credits start CMF 12 despite the native timer excluding selector 12 from playback | Open; native static evidence, original audio playback unmeasured |
 
 ### F01 — Administration entrance
+
+**Remediation:** `part7EnterFromOutside()` now excludes `kIdEngFloppy` from
+the first-visit notice-board branch. English floppy always uses the existing
+verified `(109,143)` → `(129,138)` walk and does not read or update the CD
+first-visit flag. The condition is specific to English floppy; no unverified
+Spanish floppy behavior was introduced. The description below records the
+original finding.
+
+Validation: `make engines/igor/libigor.a scummvm -j4` and diff checks passed.
+A fresh runtime harness invoked the real entry routine twice for each version
+under AddressSanitizer. English first/repeat entries both ended at `(129,138)`,
+facing right with a standing frame, queued no narration, and preserved the
+pre-existing visit flag. CD first entry retained `(180,129)` and narration; its
+repeat entry retained `(129,138)` without narration. Both runs exited normally.
+[Harness and results](f01-runtime/results.log) are retained beside the audit.
 
 Native entry `047B:0793–0884` selects music 3, draws Igor entering at
 `(109,143)`, then unconditionally walks from `(109,143)` to `(129,138)`.
@@ -45,6 +60,21 @@ Evidence: [native room 7](native/part_07_state_70.asm), particularly
 70–72 to this room. No inference from a room name or asset offset is involved.
 
 ### F02 — Resin response after the lizard has been taken
+
+**Remediation:** the already-taken branch now queues `(216,2)` with no speech
+for `kIdEngFloppy`, as the native instructions specify. Other versions retain
+`(219,1,801)`. The existing one-page playback and early return are preserved.
+The description below records the original finding.
+
+Validation: `make engines/igor/libigor.a scummvm -j4` and diff checks passed.
+A freshly built runtime harness invoked action 105 with the lizard already taken
+under AddressSanitizer for English floppy and Spanish CD. English queued
+`(216,2,0)` as one page, using the two populated native lines; CD retained
+`(219,1,801)`. Both presentations finished normally. Dirty-rectangle height
+matched each line count, and inventory, object flags and current room state
+were unchanged. [Harness results](f02-runtime/results.log) and source are
+retained alongside the audit. The general loader harness now checks the corrected
+English record; its earlier output below remains the historical reproduction.
 
 Native action 105 is registered to `03EC:0A18`. When the lizard flag is 1,
 `03EC:0A2D–0A4F` queues `(216,2)` and returns. The English lines are
