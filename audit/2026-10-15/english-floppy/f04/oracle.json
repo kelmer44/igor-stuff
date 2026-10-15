@@ -1,0 +1,106 @@
+[
+  {
+    "pattern": [
+      1,
+      1,
+      1
+    ],
+    "effective_count": 3,
+    "copy_size": 9920,
+    "delay": 102,
+    "npc": false
+  },
+  {
+    "pattern": [
+      1,
+      0,
+      0
+    ],
+    "effective_count": 1,
+    "copy_size": 3520,
+    "delay": 34,
+    "npc": false
+  },
+  {
+    "pattern": [
+      1,
+      0,
+      1
+    ],
+    "effective_count": 2,
+    "copy_size": 6720,
+    "delay": 68,
+    "npc": false
+  },
+  {
+    "pattern": [
+      0,
+      0
+    ],
+    "effective_count": 0,
+    "copy_size": 320,
+    "delay": 0,
+    "npc": false
+  },
+  {
+    "pattern": [
+      0
+    ],
+    "effective_count": 0,
+    "copy_size": 320,
+    "delay": 0,
+    "npc": false
+  },
+  {
+    "pattern": [
+      1,
+      1,
+      1
+    ],
+    "effective_count": 3,
+    "copy_size": 9920,
+    "delay": 102,
+    "npc": true
+  },
+  {
+    "pattern": [
+      1,
+      0,
+      0
+    ],
+    "effective_count": 1,
+    "copy_size": 3520,
+    "delay": 34,
+    "npc": true
+  },
+  {
+    "pattern": [
+      1,
+      0,
+      1
+    ],
+    "effective_count": 2,
+    "copy_size": 6720,
+    "delay": 68,
+    "npc": true
+  },
+  {
+    "pattern": [
+      0,
+      0
+    ],
+    "effective_count": 0,
+    "copy_size": 320,
+    "delay": 0,
+    "npc": true
+  },
+  {
+    "pattern": [
+      0
+    ],
+    "effective_count": 0,
+    "copy_size": 320,
+    "delay": 0,
+    "npc": true
+  }
+]

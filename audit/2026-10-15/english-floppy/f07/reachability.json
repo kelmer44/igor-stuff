@@ -1,0 +1,39 @@
+{
+  "english-floppy": {
+    "action_table_offset": "0x601d1c",
+    "action_table_size": 6209,
+    "action_table_sha256": "7bff128bd767c45b4e539b5604f93353e7ba1997b16da9c746a3d86dbcf2e61c",
+    "action_114_occurrences": 0,
+    "close_window_action": 102,
+    "empty_text_212": {
+      "TXT_DecanatoLeft": {
+        "offset": "0x613988",
+        "bytes": "F4 00 F5 00"
+      },
+      "TXT_DecanatoRight": {
+        "offset": "0x6062f4",
+        "bytes": "F4 00 F5 00"
+      }
+    },
+    "global_text_29": "I don%t think that%s a good idea."
+  },
+  "spanish-cd": {
+    "action_table_offset": "0x68049b",
+    "action_table_size": 6209,
+    "action_table_sha256": "7bff128bd767c45b4e539b5604f93353e7ba1997b16da9c746a3d86dbcf2e61c",
+    "action_114_occurrences": 0,
+    "close_window_action": 102,
+    "empty_text_212": {
+      "TXT_DecanatoLeft": {
+        "offset": "0x694066",
+        "bytes": "F4 00 F5 00"
+      },
+      "TXT_DecanatoRight": {
+        "offset": "0x6868e2",
+        "bytes": "F4 00 F5 00"
+      }
+    },
+    "global_text_29": "No creo que sea una buena idea."
+  },
+  "action_tables_identical": true
+}

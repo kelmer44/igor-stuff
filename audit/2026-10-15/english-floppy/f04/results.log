@@ -1,0 +1,48 @@
+english-floppy exit 0 nonzero audio bytes 775744
+partMain _currentPart 900
+partMain _currentPart 901
+partMain _currentPart 902
+partMain _currentPart 903
+partMain _currentPart 904
+partMain _currentPart 850
+playMusic() 2
+partMain _currentPart 61
+F04_NATIVE_ORACLE_PASSED npc=0 pattern=111
+F04_NATIVE_ORACLE_PASSED npc=0 pattern=100
+F04_NATIVE_ORACLE_PASSED npc=0 pattern=101
+F04_NATIVE_ORACLE_PASSED npc=0 pattern=00
+F04_NATIVE_ORACLE_PASSED npc=0 pattern=0
+F04_NATIVE_ORACLE_PASSED npc=1 pattern=111
+F04_NATIVE_ORACLE_PASSED npc=1 pattern=100
+F04_NATIVE_ORACLE_PASSED npc=1 pattern=101
+F04_NATIVE_ORACLE_PASSED npc=1 pattern=00
+F04_NATIVE_ORACLE_PASSED npc=1 pattern=0
+F04_PAGE_CONTINUATION_PASSED
+F04_BOARD_BRANCHES_PASSED
+F04_NOTE_BRANCH_PASSED
+F04_LADY_BRANCH_PASSED
+cd exit 0 nonzero audio bytes 3093615
+partMain _currentPart 900
+playMusic() 14
+partMain _currentPart 901
+partMain _currentPart 902
+partMain _currentPart 903
+partMain _currentPart 850
+playMusic() 10
+partMain _currentPart 61
+playMusic() 10
+F04_NATIVE_ORACLE_PASSED npc=0 pattern=111
+F04_NATIVE_ORACLE_PASSED npc=0 pattern=100
+F04_NATIVE_ORACLE_PASSED npc=0 pattern=101
+F04_NATIVE_ORACLE_PASSED npc=0 pattern=00
+F04_NATIVE_ORACLE_PASSED npc=0 pattern=0
+F04_NATIVE_ORACLE_PASSED npc=1 pattern=111
+F04_NATIVE_ORACLE_PASSED npc=1 pattern=100
+F04_NATIVE_ORACLE_PASSED npc=1 pattern=101
+F04_NATIVE_ORACLE_PASSED npc=1 pattern=00
+F04_NATIVE_ORACLE_PASSED npc=1 pattern=0
+F04_PAGE_CONTINUATION_PASSED
+F04_BOARD_BRANCHES_PASSED
+F04_NOTE_BRANCH_PASSED
+F04_LADY_BRANCH_PASSED
+F04 native-oracle, page continuation and script checks passed for English floppy and Spanish CD

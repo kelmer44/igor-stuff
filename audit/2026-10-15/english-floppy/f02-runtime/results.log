@@ -1,0 +1,22 @@
+english-floppy exit 0 nonzero audio bytes 0
+partMain _currentPart 900
+partMain _currentPart 901
+partMain _currentPart 902
+partMain _currentPart 903
+partMain _currentPart 904
+partMain _currentPart 850
+playMusic() 2
+partMain _currentPart 61
+F02_RESIN_RESPONSE_PASSED num=216 lines=2 sound=0
+cd exit 0 nonzero audio bytes 1659883
+partMain _currentPart 900
+playMusic() 14
+partMain _currentPart 901
+partMain _currentPart 902
+partMain _currentPart 903
+partMain _currentPart 850
+playMusic() 10
+partMain _currentPart 61
+playMusic() 10
+F02_RESIN_RESPONSE_PASSED num=219 lines=1 sound=801
+F02 resin response checks passed for English floppy and Spanish CD

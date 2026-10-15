@@ -1,0 +1,11 @@
+// Expected values from executing the native instruction ranges.
+{ "111", false, 3, 9920, 102 },
+{ "100", false, 1, 3520, 34 },
+{ "101", false, 2, 6720, 68 },
+{ "00", false, 0, 320, 0 },
+{ "0", false, 0, 320, 0 },
+{ "111", true, 3, 9920, 102 },
+{ "100", true, 1, 3520, 34 },
+{ "101", true, 2, 6720, 68 },
+{ "00", true, 0, 320, 0 },
+{ "0", true, 0, 320, 0 },

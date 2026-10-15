@@ -20,12 +20,12 @@ which the existing implementation was compared.
 | --- | --- | --- | --- |
 | F01 | P1 | Administration entrance follows a CD-only walk and narration | Fixed; entry regression checks below |
 | F02 | P2 | Reusing resin after taking the lizard selects an empty CD text slot | Fixed; response regression checks below |
-| F03 | P2 | Attic trunk responses use CD page boundaries | Open |
-| F04 | P2 | Native removal of empty dialogue lines is missing | Open; reproduced in port |
-| F05 | P2 | Floppy music sequencing/repetition is absent | Open; previously documented limitation, now traced to native timer |
-| F06 | P2 | Monkey-to-plane transition omits the native stop selection | Open |
-| F07 | P2 | Decanato action 114 substitutes a visible generic response | Open |
-| F08 | P2 | Credits start CMF 12 despite the native timer excluding selector 12 from playback | Open; native static evidence, original audio playback unmeasured |
+| F03 | P2 | Attic trunk responses use CD page boundaries | Fixed; three-branch regression checks below |
+| F04 | P2 | Native removal of empty dialogue lines is missing | Stashed; not applied |
+| F05 | P2 | Floppy music sequencing/repetition is absent | Fixed in `f21826ef077`; native comparison and runtime completion tests passed |
+| F06 | P2 | Monkey-to-plane transition omits the native stop selection | Fixed in `f21826ef077`; full cutscene and stop regression checks passed |
+| F07 | — | Decanato callback 114 differs when invoked directly | Withdrawn: no shipped room action selects 114; patch reverted |
+| F08 | — | Credits start CMF 12 outside the native timer | Withdrawn: native first credits page explicitly starts CMF 12 |
 
 ### F01 — Administration entrance
 
@@ -94,6 +94,21 @@ Evidence: [action registrations](action-anchors.json),
 
 ### F03 — Attic trunk dialogue paging
 
+**Remediation:** all three action-106 refusal branches now use a single
+`(202,2)` record for `kIdEngFloppy`, with no speech. Other versions retain the
+CD pair `(202,1,109)` / `(203,1,110)`. The inventory and puzzle conditions
+selecting each branch are unchanged. The description below records the original
+finding.
+
+Validation: `make engines/igor/libigor.a scummvm -j4` and diff checks passed.
+A fresh runtime harness invoked action 106 under all three refusal conditions
+for English floppy and Spanish CD under AddressSanitizer. English displayed
+one two-line page in each branch; CD retained two one-line pages with speech
+IDs 109 and 110. All six presentations completed normally. The harness checked
+line layout, page advancement, and unchanged inventory, puzzle flags and room
+state. [Harness results](f03-runtime/results.log) and source are retained beside
+the audit.
+
 In native action 106, `0499:0B57`, the three “not ready to search” branches
 queue one `(202,2)` record. CD uses `(202,1)` followed by `(203,1)`.
 The port retains that CD pair in
@@ -109,6 +124,33 @@ Evidence: [native room 2](native/part_02_state_20.asm),
 `203:0A87`; [paired behavior facts](behavior-comparison.json).
 
 ### F04 — Empty dialogue lines
+
+**Remediation (stashed):** fork stash `da7f2368cda08ac964ecc361fc7f4d0351e7fb94`
+(`IGOR: defer F04 English floppy empty dialogue handling`) contains the six
+engine files. The engine working tree is clean; the investigation and test
+artifacts remain here. The following describes that deferred implementation.
+
+Both dialogue starters use the native effective line count
+and copy height for English full-floppy. Queued records remain intact, including
+all-empty pages with zero reading delay. Native blank records were restored in
+the announcement-board, missing-note and unfed-lizard responses; the English
+mosaic-return path omits the CD-only comment. Other versions retain their existing
+presentation behavior.
+
+The original English DAT contains explicit zero-length entries requested by its
+own scripts, including announcement-board 206 and park 214–215. The raw bytes,
+native NPC trace, instruction-execution oracle, and reproduction steps are in
+[F04 remediation notes](f04/README.md).
+
+Validation: the engine library and executable builds and diff checks passed.
+The fresh AddressSanitizer runtime harness passed for English floppy and Spanish
+CD: ten cases per version covering Igor/NPC count, rectangle and reading delay;
+blank-page continuation; all three random board branches; the note response; and
+the actual unfed-lizard scene. English also completed the five-empty-page board
+action. F02/F03 regression harnesses passed with the native English copy height.
+The interactive mosaic was checked against native code and the guarded source;
+it was not played through. [Runtime results](f04/results.log) are retained beside
+the audit. The description below records the original finding.
 
 The native Igor-dialogue routine `051A:024F–028F` scans the requested line
 range backwards and decrements its local line count for every zero-length
@@ -137,8 +179,9 @@ Evidence: [native dialogue routine](native/start-igor-dialogue.asm),
 The native scan decrements a count; it does not establish a general algorithm
 that compacts arbitrary internal empty strings. Any repair must reproduce the
 actual copy and zero-line continuation behavior rather than inventing a generic
-“skip blanks” policy. The full native cutscene counterpart still needs a separate
-trace before applying the same change to NPC dialogue.
+“skip blanks” policy. At the initial audit, the native cutscene counterpart still needed a separate
+trace. The remediation above resolves that boundary with the NPC count scan at
+`051A:0D1B–0D5E` and its zero-delay continuation.
 
 ### F05 — Music sequencing and repetition
 
@@ -152,16 +195,26 @@ The resident interrupt handler contains the native music scheduler:
 * `0000:011E–0137` repeats selections 3, 4, 8, 9, and 10 with delay byte 50;
   selection 11 uses 5 at `0156–015F`.
 
-The current [playMusic](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/sound.cpp:78)
-selects only `CMF_2_1` and `CMF_7_1`. The engine saves
-`musicSequenceIndex` but has no corresponding scheduler that advances it.
-[MidiPlayer::updateTimer](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/midi.cpp:354)
-only advances the parser. Loading and producing audio from the first segment
-does not validate completion/restart behavior.
+Resolved by `f21826ef077` (`IGOR: Fix midi music scheduling`), verified
+against the English floppy interrupt handler and driver. `updateMusic()` now
+advances the sequence after parser completion, applies the native 5/50 tick
+restart counters, and derives scheduler ticks from the PIT frequency/divisor,
+independently of game fast mode. `MidiPlayer::isPlaying()` exposes parser
+completion to the scheduler.
 
-All fifteen native CMF resources are already in TBL; no alternate asset path is
-needed. This was acknowledged as deferred in the earlier music report. This audit
-adds the timer and selector evidence and does not propose guessed wall-clock delays.
+Runtime checks on the rebuilt engine passed: 16 cue-2 transitions reached all
+four resources without an immediate repeat, cue 7 completed two full cycles,
+and cues 3, 4, 8, 9, 10 and 11 restarted with their respective delay counters.
+The test advanced actual CMF parser callbacks to end-of-track, then used the
+normal engine timer to schedule the next resource. It compared each loaded
+resource with its TBL entry. Both `make engines/igor/libigor.a` and the executable
+build passed. See [F05 verification](f05/README.md) and
+[runtime results](f05/english-floppy-output.log).
+
+All fifteen native CMF resources already use the existing TBL loading path.
+No engine changes were needed during this verification. Subsequent F08 review
+confirmed that the original first credits page explicitly starts selector 12;
+that finding is withdrawn below.
 
 Evidence: [native interrupt handler](native/timer.asm),
 [music selector](native/music-selector.asm),
@@ -174,10 +227,24 @@ assigns state 760. The selector updates the selected number and requests the
 driver's fade/stop path. The interrupt handler subsequently excludes selection
 0 from starting a stream.
 
-The port's [part77MonkeyCageCutscene](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_77.cpp:79)
-blacks those colors and changes state without making that selection. Moreover,
-adding `playMusic(0)` alone would not repair it: the current mapping returns
-without stopping the existing MIDI player for unsupported entries.
+Resolved by `f21826ef077` (`IGOR: Fix midi music scheduling`). The current
+`part77MonkeyCageCutscene()` selects 0 for floppy versions after the final wait,
+before blacking colors 240–255 and assigning state 760. `playMusic(0)` now
+accepts selection 0, stops the MIDI player, and arms the restart counter. The
+scheduler finishes that counter without starting a resource because selection
+0 is excluded from playback.
+
+Runtime verification executed the full action-106 cutscene with the original
+English floppy assets. It reached state 760 with selection 0, sequence index 1,
+no active AdLib voices/key-on bits, and no restart during a further second of
+normal timer updates. A separate pending-track cancellation check and subsequent
+nonzero-track playback also passed. The same cutscene retained CD selection 1
+in the CD regression run. See [F06 verification](f06/README.md).
+
+No additional production changes were required. The original driver can use a
+hardware-mixer fade before stopping; this finding and its resolution concern
+the missing stop selection and the engine's AdLib stop path, not fidelity of
+those additional hardware-mixer modes.
 
 Evidence: [native room 77](native/part_77_state_770.asm),
 `0168:0626–0660`; selector `04F9:002D–0062`; timer
@@ -185,40 +252,59 @@ Evidence: [native room 77](native/part_77_state_770.asm),
 `022D–0267`. This is a state/control-flow finding; no original audio recording
 was made.
 
-### F07 — Decanato action 114
+### F07 — Withdrawn: unused Decanato callback
 
-The native callback registration `0409:0A2C` maps action 114 to `0409:030B`.
-That routine queues `(212,1)`. English `TXT_DecanatoRight` slot 212 is empty.
-The current [action 114](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_11.cpp:174)
-instead queues global `(29,1)`, a visible generic refusal.
+The native registration `0409:0A2C` does map callback 114 to `0409:030B`,
+which requests `(212,1)`. Both English Decanato resources explicitly contain
+an empty slot 212 (`F4 00 F5 00`), despite there being no visible text for it.
+These observations alone did not establish an observable gameplay difference.
 
-The native callback identity was checked explicitly; this is not a similarity
-match to another short “say a line” routine. Faithful support should preserve
-the native response together with the shared empty-line behavior, even if the
-generic refusal seems more useful.
+**Correction:** the entire shipped `DAT_DecanatoPart11` action table contains
+no byte 114. Its English floppy and supplied Spanish CD copies are identical
+(6,209 bytes, SHA256 `7bff128bd767c45b4e539b5604f93353e7ba1997b16da9c746a3d86dbcf2e61c`).
+The room input dispatcher obtains the action code from these tables. No direct
+call to the native response was found in the room code, and the port has no
+scripted call to action 114. There is no established normal gameplay trigger.
 
-Evidence: [action registrations](action-anchors.json),
-[native room 11](native/part_11_state_110.asm), and
-[decoded room strings](data-validation.json).
+The previous runtime tests forced `part11ExecuteAction(114)` directly, bypassing
+input dispatch. They verified the changed branch, not its reachability. Treating
+those tests as evidence of a gameplay fix was incorrect. The English-specific
+patch has been reverted and this finding withdrawn.
 
-### F08 — Credits selection 12
+A real refusal path is **Close window**: the shipped table maps verb 7 and room
+object 1 to action 102, whose native callback `0409:03D7–0408` requests global
+text 29. The English text is “I don't think that's a good idea.” This response
+exists in the floppy too; it does not require room text 212.
 
-The English credit routines select 12, but the native interrupt handler refuses
-to start a music stream when the current selection is **greater than or equal to
-12** (`0000:0098–009D`). Together with the selector's fade/stop path, this means
-that selecting 12 does not establish native CMF-12 playback. The prior music work
-mapped a valid CMF asset to that number without auditing this scheduler gate.
+Evidence: [reproducible asset checks](f07/verify_trace.py),
+[reachability and raw empty-entry results](f07/reachability.json),
+[action registrations](action-anchors.json), and
+[native room 11](native/part_11_state_110.asm).
 
-The current [partCredits](/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_credits.cpp:83)
-calls `playMusic(12)`, whose map directly starts `CMF_12`. Thus the port starts a
-stream on a selection the native scheduler excludes. The asset's existence and
-its correspondence to a demo resource are insufficient to establish native use.
+### F08 — Withdrawn: credits explicitly start CMF 12
 
-Evidence: the credit-page selector calls in
-`work/english-floppy/music-loaders.asm`, [native timer](native/timer.asm),
-and [native selector](native/music-selector.asm). The original hardware/audio
-outcome should be checked under DOS before treating a proposed repair as audibly
-verified. The static gate and current port stream-start difference are confirmed.
+The timer gate at `0000:0098–009D` excludes selector 12 from automatic starts.
+The initial audit missed the separate direct start in the first credits page.
+It incorrectly treated the timer as the only playback entry point.
+
+Native state 910 (`0118:0052`) checks the credits pass and current music
+selection at `0060–006C`. On the first pass, if cue 12 is not already selected,
+it selects 12 at `0071`, waits for any mixer fade to finish at `0076–007B`,
+copies the selected music buffer, and explicitly calls the driver start routine
+`0E78:017F` at `0118:00C5`. It then sets the restart counter to FF at `00CA`.
+
+Selector 12's loader resolves the overlay export to DAT offset `0x7F2CA5`,
+size `0x5703`, exactly the existing `CMF_12` TBL resource. Its first-page direct
+start is therefore intentional. Later pages normally keep the selected track;
+the timer gate prevents it from being automatically replayed after completion.
+The current `playMusic(12)` direct-start path and same-selection guard implement
+this behavior for the normal credits sequence. No source repair is required.
+
+Evidence: [native first credits page](native/part_91_state_910.asm),
+[native timer](native/timer.asm), [music loaders](../../../work/english-floppy/music-loaders.asm),
+and [reproducible native checks](f08/verify_native.py).
+See [F08 verification](f08/README.md) for the engine runtime check. This does not
+certify the original hardware-mixer fade or synthesized audio fidelity.
 
 ## Other native differences and open questions
 
@@ -372,7 +458,7 @@ verified. The native source for each row is its corresponding file in `native/`.
 | 08 | 80 | `044D:3CCD` | `part_8.cpp` | Indexed |
 | 09 | 90, 91 | `0454:37B0` | `part_9.cpp` | Indexed |
 | 10 | 100, 101, 102 | `0400:2EE5` | `part_10.cpp` | Indexed |
-| 11 | 110 | `0409:2F7E` | `part_11.cpp` | Callback 114 traced; F07 |
+| 11 | 110 | `0409:2F7E` | `part_11.cpp` | Callback 114 has no action-table trigger; F07 withdrawn |
 | 12 | 120, 121, 122 | `03EC:3FB0` | `part_12.cpp` | Action 105 traced; F02 |
 | 13 | 130, 131 | `03E4:2A93` | `part_13.cpp` | Indexed |
 | 14 | 140, 141, 142 | `03CC:3B9E` | `part_14.cpp` | Puzzle-return difference under F04 |
@@ -432,10 +518,10 @@ verified. The native source for each row is its corresponding file in `native/`.
 | 81 | 810 | `0142:3D9D` | `part_81.cpp` | Line number anomaly requires live tracing |
 | 85 | 850 | `04C1:09A7` | `part_85.cpp` | Indexed |
 | 90 | 900, 901, 902, 903, 904 | `04D0:002E` | `part_90.cpp` | Indexed |
-| 91 | 910 | `0118:0052` | `part_credits.cpp` | Native selector/timer reviewed; F08 |
-| 92 | 920 | `0112:003D` | `part_credits.cpp` | Native selector/timer reviewed; F08 |
-| 93 | 930 | `010C:001A` | `part_credits.cpp` | Native selector/timer reviewed; F08 |
-| 94 | 940 | `0106:0020` | `part_credits.cpp` | Native selector/timer reviewed; F08 |
-| 95 | 950 | `0100:002E` | `part_95.cpp` | Native selector/timer reviewed; F08 |
-| 96 | 960 | `00FA:001A` | `part_credits.cpp` | Native selector/timer reviewed; F08 |
-| 97 | 970 | `00F4:0052` | `part_credits.cpp` | Native selector/timer reviewed; F08 |
+| 91 | 910 | `0118:0052` | `part_credits.cpp` | Native direct start/continuation reviewed; F08 withdrawn |
+| 92 | 920 | `0112:003D` | `part_credits.cpp` | Native direct start/continuation reviewed; F08 withdrawn |
+| 93 | 930 | `010C:001A` | `part_credits.cpp` | Native direct start/continuation reviewed; F08 withdrawn |
+| 94 | 940 | `0106:0020` | `part_credits.cpp` | Native direct start/continuation reviewed; F08 withdrawn |
+| 95 | 950 | `0100:002E` | `part_95.cpp` | Native direct start/continuation reviewed; F08 withdrawn |
+| 96 | 960 | `00FA:001A` | `part_credits.cpp` | Native direct start/continuation reviewed; F08 withdrawn |
+| 97 | 970 | `00F4:0052` | `part_credits.cpp` | Native direct start/continuation reviewed; F08 withdrawn |

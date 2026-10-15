@@ -1,0 +1,164 @@
+Using configuration file: /Users/gabriel/Desktop/source/igor-stuff/audit/2026-10-15/english-floppy/f05/english-floppy.ini
+Debuglevel (from command line): 9
+Using SDL Video Driver "dummy"
+SDL Video Detecting OpenGL Features...
+SDL Video Detecting Anti-aliasing Support...
+Checking SDL Antialiasing Support With 2 Samples... No Window
+Checking SDL Antialiasing Support With 4 Samples... No Window
+Checking SDL Antialiasing Support With 8 Samples... No Window
+Checking SDL Antialiasing Support With 16 Samples... No Window
+Checking SDL Antialiasing Support With 32 Samples... No Window
+SDL Video OpenGL Feature Detection Complete
+Invalid joystick: 0
+creating SurfaceSDL graphics manager
+creating OpenGL graphics manager
+creating SurfaceSDL graphics manager
+Using SDL Audio Driver "dummy"
+Output sample rate: 44100 Hz
+Output buffer size: 1024 samples
+Output channels: 2
+HardwareInput with ID 'JOY_START' not known
+HardwareInput with ID 'JOY_LEFT_STICK_Y-' not known
+HardwareInput with ID 'JOY_LEFT_STICK_Y+' not known
+HardwareInput with ID 'JOY_LEFT_STICK_X-' not known
+HardwareInput with ID 'JOY_LEFT_STICK_X+' not known
+HardwareInput with ID 'JOY_RIGHT_SHOULDER' not known
+CPU extensions:
+SSE2(not supported) AVX2(not supported) NEON(enabled)
+User picked target 'test' (engine ID 'igor', game ID 'igor')...
+Running Igor: Objective Uikokahonia (Floppy/DOS/English)
+IGOR.DAT: dbbac4257430da5d616ae946a37750ef, 8819339 bytes.
+IGOR.FSD: d081e286da14913379f0d7f58a6a5686, 1324850 bytes.
+HardwareInput with ID 'JOY_A' not known
+HardwareInput with ID 'JOY_B' not known
+HardwareInput with ID 'JOY_LEFT_SHOULDER' not known
+HardwareInput with ID 'JOY_Y' not known
+HardwareInput with ID 'JOY_X' not known
+HardwareInput with ID 'JOY_UP' not known
+HardwareInput with ID 'JOY_DOWN' not known
+HardwareInput with ID 'JOY_LEFT' not known
+HardwareInput with ID 'JOY_RIGHT' not known
+Setting 640 x 480 -> 640 x 480 -- 1
+generateZipSet: Loaded pack file: gui-icons.dat
+Opening hashed: THEMERC
+Opening hashed: THEMERC
+Opening hashed: THEMERC
+Opening hashed: THEMERC
+Loading theme gui/themes/scummremastered.zip
+Opening hashed: THEMERC
+Finished loading theme gui/themes/scummremastered.zip
+FSDirectory::createReadStreamForMember('IGOR.DAT') -> '/Users/gabriel/Desktop/source/igor-stuff/igor-en/IGOR.DAT'
+Opening hashed: IGOR.DAT
+FSDirectory::createReadStreamForMember('IGOR.FSD') -> '/Users/gabriel/Desktop/source/igor-stuff/igor-en/IGOR.FSD'
+Opening hashed: IGOR.FSD
+FSDirectory::createReadStreamForMember('IGOR.TBL') -> '/Users/gabriel/Desktop/source/igor-stuff/igor-en/IGOR.TBL'
+Opening hashed: IGOR.TBL
+partMain _currentPart 900
+Ctrl+F: fast mode 4 (6 ms per tick)
+partMain _currentPart 901
+partMain _currentPart 902
+partMain _currentPart 903
+partMain _currentPart 904
+partMain _currentPart 850
+playMusic() 2
+partMain _currentPart 61
+Entering part6
+showCursor()
+playMusic() 2
+SdlEventSource: corrected stale mouse position (320,173) to (128,29)
+startMusic() cue 2 segment 1 resource 307
+F05_NATURAL_END callbacks=8648
+startMusic() cue 2 segment 3 resource 309
+F05_NATURAL_END callbacks=8648
+startMusic() cue 2 segment 4 resource 310
+F05_NATURAL_END callbacks=8648
+startMusic() cue 2 segment 3 resource 309
+F05_NATURAL_END callbacks=8648
+startMusic() cue 2 segment 4 resource 310
+F05_NATURAL_END callbacks=8648
+startMusic() cue 2 segment 2 resource 308
+F05_NATURAL_END callbacks=8648
+startMusic() cue 2 segment 3 resource 309
+F05_NATURAL_END callbacks=8648
+startMusic() cue 2 segment 4 resource 310
+F05_NATURAL_END callbacks=8648
+startMusic() cue 2 segment 3 resource 309
+F05_NATURAL_END callbacks=8648
+startMusic() cue 2 segment 4 resource 310
+F05_NATURAL_END callbacks=8648
+startMusic() cue 2 segment 2 resource 308
+F05_NATURAL_END callbacks=8648
+startMusic() cue 2 segment 3 resource 309
+F05_NATURAL_END callbacks=8648
+startMusic() cue 2 segment 2 resource 308
+F05_NATURAL_END callbacks=8648
+startMusic() cue 2 segment 3 resource 309
+F05_NATURAL_END callbacks=8648
+startMusic() cue 2 segment 1 resource 307
+F05_NATURAL_END callbacks=8648
+startMusic() cue 2 segment 2 resource 308
+F05_NATURAL_END callbacks=8648
+startMusic() cue 2 segment 1 resource 307
+F05_CUE2_PASSED allFourSegments=1 noAdjacentRepeats=1
+playMusic() 7
+startMusic() cue 7 segment 1 resource 313
+F05_NATURAL_END callbacks=27897
+startMusic() cue 7 segment 2 resource 314
+F05_NATURAL_END callbacks=6000
+startMusic() cue 7 segment 3 resource 315
+F05_NATURAL_END callbacks=13500
+startMusic() cue 7 segment 4 resource 316
+F05_NATURAL_END callbacks=6000
+startMusic() cue 7 segment 1 resource 313
+F05_NATURAL_END callbacks=27897
+startMusic() cue 7 segment 2 resource 314
+F05_NATURAL_END callbacks=6000
+startMusic() cue 7 segment 3 resource 315
+F05_NATURAL_END callbacks=13500
+startMusic() cue 7 segment 4 resource 316
+F05_NATURAL_END callbacks=6000
+startMusic() cue 7 segment 1 resource 313
+F05_CUE7_PASSED twoCycles=1
+playMusic() 3
+startMusic() cue 3 segment 1 resource 311
+F05_NATURAL_END callbacks=58497
+startMusic() cue 3 segment 1 resource 311
+F05_REPEAT_PASSED cue=3 delay=50
+playMusic() 4
+startMusic() cue 4 segment 1 resource 312
+WARNING: Unhandled adlibControlChange 0xA 0!
+WARNING: Unhandled adlibControlChange 0xA 127!
+WARNING: Unhandled adlibControlChange 0xA 0!
+WARNING: Unhandled adlibControlChange 0xA 127!
+WARNING: Unhandled adlibControlChange 0xA 0!
+WARNING: Unhandled adlibControlChange 0xA 127!
+WARNING: Unhandled adlibControlChange 0xA 0!
+WARNING: Unhandled adlibControlChange 0xA 127!
+WARNING: Unhandled adlibControlChange 0xA 0!
+WARNING: Unhandled adlibControlChange 0xA 127!
+F05_NATURAL_END callbacks=31798
+startMusic() cue 4 segment 1 resource 312
+F05_REPEAT_PASSED cue=4 delay=50
+playMusic() 8
+startMusic() cue 8 segment 1 resource 302
+F05_NATURAL_END callbacks=42349
+startMusic() cue 8 segment 1 resource 302
+F05_REPEAT_PASSED cue=8 delay=50
+playMusic() 9
+startMusic() cue 9 segment 1 resource 303
+F05_NATURAL_END callbacks=31998
+startMusic() cue 9 segment 1 resource 303
+F05_REPEAT_PASSED cue=9 delay=50
+playMusic() 10
+startMusic() cue 10 segment 1 resource 304
+F05_NATURAL_END callbacks=28467
+startMusic() cue 10 segment 1 resource 304
+F05_REPEAT_PASSED cue=10 delay=50
+playMusic() 11
+startMusic() cue 11 segment 1 resource 305
+F05_NATURAL_END callbacks=18064
+startMusic() cue 11 segment 1 resource 305
+F05_REPEAT_PASSED cue=11 delay=5
+F05_ALL_PASSED
+hideCursor()
+MUSIC_NONZERO_BYTES=73298

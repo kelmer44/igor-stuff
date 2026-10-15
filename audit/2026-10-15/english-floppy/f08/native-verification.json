@@ -1,0 +1,10 @@
+{
+  "first_credits_overlay_offset": "0x6007d",
+  "selector_call": "0118:0071 -> 04F9:0000",
+  "direct_driver_start": "0118:00C5 -> 0E78:017F",
+  "restart_counter_disabled": "0118:00CA sets 482D to FF",
+  "timer_gate": "0000:0098 excludes selector >= 12 from automatic playback",
+  "cmf_resource_offset": "0x7f2ca5",
+  "cmf_resource_size": 22275,
+  "cmf_resource_sha256": "537d2ea3e39af8db17ff876e2b5b82045d4bed610c7f26f23e2d9955a0d7cbb3"
+}

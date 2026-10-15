@@ -1,0 +1,26 @@
+english-floppy exit 0 nonzero audio bytes 0
+partMain _currentPart 900
+partMain _currentPart 901
+partMain _currentPart 902
+partMain _currentPart 903
+partMain _currentPart 904
+partMain _currentPart 850
+playMusic() 2
+partMain _currentPart 61
+playMusic() 3
+playMusic() 3
+F01_ENTRY_PASSED visit=0 x=129 y=138 facing=2 narration=0 flag=0
+F01_ENTRY_PASSED visit=1 x=129 y=138 facing=2 narration=0 flag=1
+cd exit 0 nonzero audio bytes 1806019
+partMain _currentPart 900
+playMusic() 14
+partMain _currentPart 901
+partMain _currentPart 902
+partMain _currentPart 903
+partMain _currentPart 850
+playMusic() 10
+partMain _currentPart 61
+playMusic() 10
+F01_ENTRY_PASSED visit=0 x=180 y=129 facing=2 narration=1 flag=1
+F01_ENTRY_PASSED visit=1 x=129 y=138 facing=2 narration=0 flag=1
+F01 first-entry and repeat-entry checks passed for English floppy and Spanish CD

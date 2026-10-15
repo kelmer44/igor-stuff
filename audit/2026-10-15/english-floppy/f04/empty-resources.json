@@ -1,0 +1,142 @@
+[
+  {
+    "resource": "TXT_CollegeCorridorAnnouncementBoard",
+    "text": 206,
+    "tag": "0xf4",
+    "length": 0,
+    "dat_offset": "0x40ff17"
+  },
+  {
+    "resource": "TXT_CollegeCorridorAnnouncementBoard",
+    "text": 206,
+    "tag": "0xf5",
+    "length": 0,
+    "dat_offset": "0x40ff19"
+  },
+  {
+    "resource": "TXT_CollegeCorridorAnnouncementBoard",
+    "text": 212,
+    "tag": "0xf4",
+    "length": 0,
+    "dat_offset": "0x40ff9a"
+  },
+  {
+    "resource": "TXT_CollegeCorridorAnnouncementBoard",
+    "text": 212,
+    "tag": "0xf5",
+    "length": 0,
+    "dat_offset": "0x40ff9c"
+  },
+  {
+    "resource": "TXT_CollegeCorridorAnnouncementBoard",
+    "text": 213,
+    "tag": "0xf4",
+    "length": 0,
+    "dat_offset": "0x40ff9e"
+  },
+  {
+    "resource": "TXT_CollegeCorridorAnnouncementBoard",
+    "text": 213,
+    "tag": "0xf5",
+    "length": 0,
+    "dat_offset": "0x40ffa0"
+  },
+  {
+    "resource": "TXT_CollegeCorridorAnnouncementBoard",
+    "text": 214,
+    "tag": "0xf4",
+    "length": 0,
+    "dat_offset": "0x40ffa2"
+  },
+  {
+    "resource": "TXT_CollegeCorridorAnnouncementBoard",
+    "text": 214,
+    "tag": "0xf5",
+    "length": 0,
+    "dat_offset": "0x40ffa4"
+  },
+  {
+    "resource": "TXT_CollegeCorridorAnnouncementBoard",
+    "text": 215,
+    "tag": "0xf4",
+    "length": 0,
+    "dat_offset": "0x40ffa6"
+  },
+  {
+    "resource": "TXT_CollegeCorridorAnnouncementBoard",
+    "text": 215,
+    "tag": "0xf5",
+    "length": 0,
+    "dat_offset": "0x40ffa8"
+  },
+  {
+    "resource": "TXT_CollegeCorridorAnnouncementBoard",
+    "text": 216,
+    "tag": "0xf4",
+    "length": 0,
+    "dat_offset": "0x40ffaa"
+  },
+  {
+    "resource": "TXT_CollegeCorridorAnnouncementBoard",
+    "text": 216,
+    "tag": "0xf5",
+    "length": 0,
+    "dat_offset": "0x40ffac"
+  },
+  {
+    "resource": "TXT_CollegeCorridorAnnouncementBoard",
+    "text": 217,
+    "tag": "0xf4",
+    "length": 0,
+    "dat_offset": "0x40ffae"
+  },
+  {
+    "resource": "TXT_CollegeCorridorAnnouncementBoard",
+    "text": 217,
+    "tag": "0xf5",
+    "length": 0,
+    "dat_offset": "0x40ffb0"
+  },
+  {
+    "resource": "TXT_Park",
+    "text": 214,
+    "tag": "0xf4",
+    "length": 0,
+    "dat_offset": "0x3aa3ac"
+  },
+  {
+    "resource": "TXT_Park",
+    "text": 214,
+    "tag": "0xf5",
+    "length": 0,
+    "dat_offset": "0x3aa3ae"
+  },
+  {
+    "resource": "TXT_Park",
+    "text": 215,
+    "tag": "0xf4",
+    "length": 0,
+    "dat_offset": "0x3aa3b0"
+  },
+  {
+    "resource": "TXT_Park",
+    "text": 215,
+    "tag": "0xf5",
+    "length": 0,
+    "dat_offset": "0x3aa3b2"
+  },
+  {
+    "resource": "TXT_CollegeCorridorMargaret",
+    "text": 225,
+    "tag": "0xf4",
+    "length": 0,
+    "dat_offset": "0x47bd4b"
+  },
+  {
+    "resource": "TXT_CollegeCorridorMargaret",
+    "text": 225,
+    "tag": "0xf5",
+    "length": 0,
+    "dat_offset": "0x47bd4d"
+  }
+]
