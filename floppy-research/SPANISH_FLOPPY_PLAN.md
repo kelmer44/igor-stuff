@@ -93,6 +93,14 @@ does not map raw state codes to room routines, which everything else needs.
    `audit.py`, `behavior_audit.py`, `data_audit.py`) to the Borland overlay
    format. Their output sorts each room into: same as CD / differs in places /
    rewritten.
+   **First pass done:** `tools/audit_igor_floppy_functions.py` pairs 1,267
+   floppy functions with the best CD function in the matching segment
+   (`function-comparison.json`/`.md`). Different codegen puts a noise floor of
+   about 0.70 on the shape similarity, so only the parts flagged "low" are
+   real signals: 15, 21, 24, 26, 28, 71, 73, 75, 78, 80, 81 (and 19). Part 15
+   (median 0.54) is outside College and was not expected. Credits overlays
+   (9x) are data-heavy and not meaningful here. Operand-level diffs for the
+   "revised" functions are still to do.
 4. Identify the shared library routines (dialogue, walking, drawing, inventory)
    once, as was done for the CD, so room listings read in engine terms.
    **First pass done:** `resident-map.json` maps 36 resident functions called
