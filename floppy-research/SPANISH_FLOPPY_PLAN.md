@@ -107,7 +107,7 @@ does not map raw state codes to room routines, which everything else needs.
    0xbe/0x6b vs 0xa6/0x71, probably coordinates) and state 690 (a byte store
    against a word store). The rest are instructions present on one side only,
    so the differences are structural, not constants; they are the work list
-   for the room ports.
+   for the room ports; see [ROOM_PORT_WORKLIST.md](ROOM_PORT_WORKLIST.md).
 4. Identify the shared library routines (dialogue, walking, drawing, inventory)
    once, as was done for the CD, so room listings read in engine terms.
    **First pass done:** `resident-map.json` maps 36 resident functions called
