@@ -1,0 +1,24 @@
+english-floppy exit 0 nonzero audio bytes 327060
+partMain _currentPart 900
+partMain _currentPart 901
+partMain _currentPart 902
+partMain _currentPart 903
+partMain _currentPart 904
+partMain _currentPart 850
+playMusic() 2
+partMain _currentPart 61
+partMain _currentPart 0
+playMusic() 3
+cd exit 0 nonzero audio bytes 1718814
+partMain _currentPart 900
+playMusic() 14
+partMain _currentPart 901
+partMain _currentPart 902
+partMain _currentPart 903
+partMain _currentPart 850
+playMusic() 10
+partMain _currentPart 61
+playMusic() 10
+partMain _currentPart 0
+playMusic() 2
+Catalog room/animation loaders and Igor bedroom passed

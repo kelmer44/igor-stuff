@@ -1,0 +1,1012 @@
+FUNCTIONS WITH NON-POINTER/NON-DIALOGUE CHANGES 223
+0281:15BD 096:124F
+  1F8A shl di, 1 <=> 1A42 shl di, 2
+  20FD shl di, 1 <=> 1B85 shl di, 2
+  2768 shl di, 1 <=> 2051 shl di, 2
+0281:27F2 096:20DA
+  2AE8 add di, 0xb500 <=> 240A add di, 0xcb8a
+  3218 shl di, 1 <=> 29D1 shl di, 2
+  3473 add di, 0x4886 <=> 2C1D add di, 0x5f10
+  34AF add di, 0xb5d8 <=> 2C51 add di, 0xcc62
+  352E add di, 0xb500 <=> 2CB1 add di, 0xcb8a
+  355E add di, 0xb500 <=> 2CDA add di, 0xcb8a
+028D:01B6 098:018A
+  0306 add di, 0x1b9a <=> 02C3 add di, 0x3230
+028D:17F3 098:1468
+  21C0 shl di, 1 <=> 1C5B shl di, 2
+  2333 shl di, 1 <=> 1D9E shl di, 2
+  299E shl di, 1 <=> 226A shl di, 2
+028D:2A28 098:22F3
+  2D1E add di, 0xb500 <=> 2623 add di, 0xcb8a
+  344E shl di, 1 <=> 2BEA shl di, 2
+  36A9 add di, 0x4886 <=> 2E36 add di, 0x5f10
+  36E5 add di, 0xb5d8 <=> 2E6A add di, 0xcc62
+  3764 add di, 0xb500 <=> 2ECA add di, 0xcb8a
+  3794 add di, 0xb500 <=> 2EF3 add di, 0xcb8a
+029A:083C 100:07BF
+  1207 shl di, 1 <=> 0FB0 shl di, 2
+  137A shl di, 1 <=> 10F3 shl di, 2
+  19E1 shl di, 1 <=> 15BB shl di, 2
+029A:1A6B 100:1644
+  1DEE add di, 0xb500 <=> 1A26 add di, 0xcb8a
+  2519 shl di, 1 <=> 1FE8 shl di, 2
+  2774 add di, 0x4886 <=> 2234 add di, 0x5f10
+  27B0 add di, 0xb5d8 <=> 2268 add di, 0xcc62
+  282F add di, 0xb500 <=> 22C8 add di, 0xcb8a
+  285F add di, 0xb500 <=> 22F1 add di, 0xcb8a
+029F:0000 101:0002
+  0129 add di, 0x1b9a <=> 0119 add di, 0x3230
+029F:121C 101:1101
+  1BE7 shl di, 1 <=> 18F2 shl di, 2
+  1D5A shl di, 1 <=> 1A35 shl di, 2
+  23C1 shl di, 1 <=> 1EFD shl di, 2
+029F:244A 101:1F85
+  2811 add di, 0xb500 <=> 23D9 add di, 0xcb8a
+  2F3C shl di, 1 <=> 299B shl di, 2
+  3197 add di, 0x4886 <=> 2BE7 add di, 0x5f10
+  31D3 add di, 0xb5d8 <=> 2C1B add di, 0xcc62
+  3252 add di, 0xb500 <=> 2C7B add di, 0xcb8a
+  3282 add di, 0xb500 <=> 2CA4 add di, 0xcb8a
+02BE:0000 107:0002
+  0121 add di, 0x1b9a <=> 0111 add di, 0x3230
+02BE:2235 107:1DEF
+  2C02 shl di, 1 <=> 25E2 shl di, 2
+  2D75 shl di, 1 <=> 2725 shl di, 2
+  33E0 shl di, 1 <=> 2BF1 shl di, 2
+02BE:346A 107:2C7A
+  379E add di, 0xb500 <=> 2FEC add di, 0xcb8a
+  3ECE shl di, 1 <=> 35B3 shl di, 2
+  4129 add di, 0x4886 <=> 37FF add di, 0x5f10
+  4165 add di, 0xb5d8 <=> 3833 add di, 0xcc62
+  41E4 add di, 0xb500 <=> 3893 add di, 0xcb8a
+  4214 add di, 0xb500 <=> 38BC add di, 0xcb8a
+02CE:1DF5 110:1A1B
+  27C2 shl di, 1 <=> 220E shl di, 2
+  2935 shl di, 1 <=> 2351 shl di, 2
+  2FA0 shl di, 1 <=> 281D shl di, 2
+02CE:302A 110:28A6
+  33AC add di, 0xb500 <=> 2C5E add di, 0xcb8a
+  3ADC shl di, 1 <=> 3225 shl di, 2
+  3D37 add di, 0x4886 <=> 3471 add di, 0x5f10
+  3D73 add di, 0xb5d8 <=> 34A5 add di, 0xcc62
+  3DF2 add di, 0xb500 <=> 3505 add di, 0xcb8a
+  3E22 add di, 0xb500 <=> 352E add di, 0xcb8a
+02DD:0000 114:0002
+  0121 add di, 0x1b9a <=> 0111 add di, 0x3230
+02DD:1C99 114:1887
+  2666 shl di, 1 <=> 207A shl di, 2
+  27D9 shl di, 1 <=> 21BD shl di, 2
+  2E44 shl di, 1 <=> 2689 shl di, 2
+02DD:2ECE 114:2712
+  31ED add di, 0xb500 <=> 2A6C add di, 0xcb8a
+  391D shl di, 1 <=> 3033 shl di, 2
+  3B78 add di, 0x4886 <=> 327F add di, 0x5f10
+  3BB4 add di, 0xb5d8 <=> 32B3 add di, 0xcc62
+  3C33 add di, 0xb500 <=> 3313 add di, 0xcb8a
+  3C63 add di, 0xb500 <=> 333C add di, 0xcb8a
+02EC:1A0B 117:1566
+  23D6 shl di, 1 <=> 1D57 shl di, 2
+  2549 shl di, 1 <=> 1E9A shl di, 2
+  2BB0 shl di, 1 <=> 2362 shl di, 2
+02EC:2C3A 117:23EB
+  2F51 add di, 0xb500 <=> 273E add di, 0xcb8a
+  367D shl di, 1 <=> 2D01 shl di, 2
+  38D8 add di, 0x4886 <=> 2F4D add di, 0x5f10
+  3914 add di, 0xb5d8 <=> 2F81 add di, 0xcc62
+  3993 add di, 0xb500 <=> 2FE1 add di, 0xcb8a
+  39C3 add di, 0xb500 <=> 300A add di, 0xcb8a
+02F9:0000 120:0002
+  0121 add di, 0x1b9a <=> 0111 add di, 0x3230
+02F9:01BD 120:01A2
+  02DE add di, 0x1b9a <=> 02B1 add di, 0x3230
+02F9:0E9C 120:0D7C
+  1867 shl di, 1 <=> 156D shl di, 2
+  19DA shl di, 1 <=> 16B0 shl di, 2
+  2041 shl di, 1 <=> 1B78 shl di, 2
+02F9:20CB 120:1C01
+  23E2 add di, 0xb500 <=> 1F54 add di, 0xcb8a
+  2B0D shl di, 1 <=> 2516 shl di, 2
+  2D68 add di, 0x4886 <=> 2762 add di, 0x5f10
+  2DA4 add di, 0xb5d8 <=> 2796 add di, 0xcc62
+  2E23 add di, 0xb500 <=> 27F6 add di, 0xcb8a
+  2E53 add di, 0xb500 <=> 281F add di, 0xcb8a
+0308:0000 123:0002
+  0121 add di, 0x1b9a <=> 0111 add di, 0x3230
+0308:2283 123:1DFF
+  2C50 shl di, 1 <=> 25F2 shl di, 2
+  2DC3 shl di, 1 <=> 2735 shl di, 2
+  342E shl di, 1 <=> 2C01 shl di, 2
+0308:34B8 123:2C8A
+  37D2 add di, 0xb500 <=> 2FE0 add di, 0xcb8a
+  3F02 shl di, 1 <=> 35A7 shl di, 2
+  415D add di, 0x4886 <=> 37F3 add di, 0x5f10
+  4199 add di, 0xb5d8 <=> 3827 add di, 0xcc62
+  4218 add di, 0xb500 <=> 3887 add di, 0xcb8a
+  4248 add di, 0xb500 <=> 38B0 add di, 0xcb8a
+0317:039A 126:0344
+  04BB add di, 0x1b9a <=> 0453 add di, 0x3230
+0317:06A1 126:061C
+  0816 add di, 0x1b9a <=> 0779 add di, 0x3230
+0317:0D2D 126:0C1B
+  16F8 shl di, 1 <=> 140C shl di, 2
+  186B shl di, 1 <=> 154F shl di, 2
+  1ED2 shl di, 1 <=> 1A17 shl di, 2
+0317:1F5C 126:1AA0
+  227F add di, 0xb500 <=> 1DFF add di, 0xcb8a
+  29AA shl di, 1 <=> 23C1 shl di, 2
+  2C05 add di, 0x4886 <=> 260D add di, 0x5f10
+  2C41 add di, 0xb5d8 <=> 2641 add di, 0xcc62
+  2CC0 add di, 0xb500 <=> 26A1 add di, 0xcb8a
+  2CF0 add di, 0xb500 <=> 26CA add di, 0xcb8a
+0326:0000 129:0002
+  0121 add di, 0x1b9a <=> 0111 add di, 0x3230
+0326:1626 129:1477
+  1FF1 shl di, 1 <=> 1C68 shl di, 2
+  2164 shl di, 1 <=> 1DAB shl di, 2
+  27CB shl di, 1 <=> 2273 shl di, 2
+0326:2855 129:22FC
+  2BB7 add di, 0xb500 <=> 269B add di, 0xcb8a
+  32E2 shl di, 1 <=> 2C5D shl di, 2
+  353D add di, 0x4886 <=> 2EA9 add di, 0x5f10
+  3579 add di, 0xb5d8 <=> 2EDD add di, 0xcc62
+  35F8 add di, 0xb500 <=> 2F3D add di, 0xcb8a
+  3628 add di, 0xb500 <=> 2F66 add di, 0xcb8a
+032D:02D2 130:0270
+  049E add di, 0x43cb <=> 03E3 add di, 0x5a61
+  0523 add di, 0x43f4 <=> 04BA add di, 0x5a8a
+  0552 add di, 0x441d <=> 04E4 add di, 0x5ab3
+032D:05B7 130:0544
+  06AA add di, 0x43f4 <=> 0625 add di, 0x5a8a
+  06D9 add di, 0x441d <=> 064F add di, 0x5ab3
+  0727 add di, 0x43f4 <=> 0694 add di, 0x5a8a
+  0756 add di, 0x441d <=> 06BE add di, 0x5ab3
+  07B6 add di, 0x43f4 <=> 0711 add di, 0x5a8a
+  07E5 add di, 0x441d <=> 073B add di, 0x5ab3
+032D:0DDD 130:0C40
+  0DE7 mov byte ptr [0xcae2], 1 <=> 0C71 mov byte ptr [0xfd1e], 2
+0338:0B95 133:0AA0
+  1562 shl di, 1 <=> 1293 shl di, 2
+  16D5 shl di, 1 <=> 13D6 shl di, 2
+  1D40 shl di, 1 <=> 18A2 shl di, 2
+0338:1DCA 133:192B
+  20D6 add di, 0xb500 <=> 1C72 add di, 0xcb8a
+  2805 shl di, 1 <=> 2238 shl di, 2
+  2A60 add di, 0x4886 <=> 2484 add di, 0x5f10
+  2A9C add di, 0xb5d8 <=> 24B8 add di, 0xcc62
+  2B1B add di, 0xb500 <=> 2518 add di, 0xcb8a
+  2B4B add di, 0xb500 <=> 2541 add di, 0xcb8a
+0347:1A5E 136:16C6
+  242B shl di, 1 <=> 1EB9 shl di, 2
+  259E shl di, 1 <=> 1FFC shl di, 2
+  2C09 shl di, 1 <=> 24C8 shl di, 2
+0347:2C93 136:2551
+  2F89 add di, 0xb500 <=> 2881 add di, 0xcb8a
+  36B9 shl di, 1 <=> 2E48 shl di, 2
+  3914 add di, 0x4886 <=> 3094 add di, 0x5f10
+  3950 add di, 0xb5d8 <=> 30C8 add di, 0xcc62
+  39CF add di, 0xb500 <=> 3128 add di, 0xcb8a
+  39FF add di, 0xb500 <=> 3151 add di, 0xcb8a
+034E:230A 137:1ECE
+  2CD7 shl di, 1 <=> 26C1 shl di, 2
+  2E4A shl di, 1 <=> 2804 shl di, 2
+  34B5 shl di, 1 <=> 2CD0 shl di, 2
+034E:353F 137:2D59
+  3852 add di, 0xb500 <=> 30A8 add di, 0xcb8a
+  3F82 shl di, 1 <=> 366F shl di, 2
+  41DD add di, 0x4886 <=> 38BB add di, 0x5f10
+  4219 add di, 0xb5d8 <=> 38EF add di, 0xcc62
+  4298 add di, 0xb500 <=> 394F add di, 0xcb8a
+  42C8 add di, 0xb500 <=> 3978 add di, 0xcb8a
+0363:0000 141:0002
+  00DA add di, 0x1b9a <=> 00CA add di, 0x3230
+0363:0145 141:012A
+  0217 add di, 0x1b9a <=> 01E6 add di, 0x3230
+0363:0282 141:0245
+  0354 add di, 0x1b9a <=> 0301 add di, 0x3230
+0363:0E33 141:0D11
+  0E59 shr ax, 1 <=> 0D35 shr ax, 2
+0363:1441 141:12D1
+  17C5 shr ax, 1 <=> 1622 shr ax, 2
+0363:2E5B 141:2945
+  382F shl di, 1 <=> 313F shl di, 2
+  39A2 shl di, 1 <=> 3282 shl di, 2
+  4010 shl di, 1 <=> 3751 shl di, 2
+0363:409A 141:37DA
+  4449 add di, 0xb500 <=> 3BC6 add di, 0xcb8a
+  4B7B shl di, 1 <=> 418F shl di, 2
+  4DD6 add di, 0x4886 <=> 43DB add di, 0x5f10
+  4E12 add di, 0xb5d8 <=> 440F add di, 0xcc62
+  4E92 add di, 0xb500 <=> 4470 add di, 0xcb8a
+  4EC2 add di, 0xb500 <=> 4499 add di, 0xcb8a
+0373:05C2 144:056F
+  0A25 mov word ptr [0xcad2], 0x35 <=> 0845 mov word ptr [0xeb1e], 0x23
+  0A7E cmp word ptr [0xcad2], 0x3d <=> 089E cmp word ptr [0xeb1e], 0x29
+  0A91 mov word ptr [0xcad2], 1 <=> 08DA mov word ptr [0xeb1e], 0x2a
+0373:1DDB 144:1A37
+  27A6 shl di, 1 <=> 2228 shl di, 2
+  2919 shl di, 1 <=> 236B shl di, 2
+  2F80 shl di, 1 <=> 2833 shl di, 2
+0373:300A 144:28BC
+  3320 add di, 0xb500 <=> 2C0D add di, 0xcb8a
+  3A4C shl di, 1 <=> 31D0 shl di, 2
+  3CA7 add di, 0x4886 <=> 341C add di, 0x5f10
+  3CE3 add di, 0xb5d8 <=> 3450 add di, 0xcc62
+  3D62 add di, 0xb500 <=> 34B0 add di, 0xcb8a
+  3D92 add di, 0xb500 <=> 34D9 add di, 0xcb8a
+038A:02E7 151:02B6
+  0CB2 shl di, 1 <=> 0AA7 shl di, 2
+  0E25 shl di, 1 <=> 0BEA shl di, 2
+  148C shl di, 1 <=> 10B2 shl di, 2
+038A:1516 151:113B
+  1809 add di, 0xb500 <=> 1460 add di, 0xcb8a
+  1F34 shl di, 1 <=> 1A22 shl di, 2
+  2178 add di, 0x4886 <=> 1C5A add di, 0x5f10
+  21B4 add di, 0xb5d8 <=> 1C8E add di, 0xcc62
+  2233 add di, 0xb500 <=> 1CEE add di, 0xcb8a
+  2263 add di, 0xb500 <=> 1D17 add di, 0xcb8a
+0393:04EB 153:0491
+  0604 add di, 0x1b9a <=> 0595 add di, 0x3230
+0393:166D 153:1490
+  2038 shl di, 1 <=> 1C81 shl di, 2
+  21AB shl di, 1 <=> 1DC4 shl di, 2
+  2812 shl di, 1 <=> 228C shl di, 2
+0393:289C 153:2315
+  2BDF add di, 0xb500 <=> 2693 add di, 0xcb8a
+  330A shl di, 1 <=> 2C55 shl di, 2
+  3565 add di, 0x4886 <=> 2EA1 add di, 0x5f10
+  35A1 add di, 0xb5d8 <=> 2ED5 add di, 0xcc62
+  3620 add di, 0xb500 <=> 2F35 add di, 0xcb8a
+  3650 add di, 0xb500 <=> 2F5E add di, 0xcb8a
+03A6:069A 157:0627
+  1064 shl di, 1 <=> 0E17 shl di, 2
+  11D7 shl di, 1 <=> 0F5A shl di, 2
+  183A shl di, 1 <=> 141E shl di, 2
+03A6:18C4 157:14A7
+  1BEF add di, 0xb500 <=> 180A add di, 0xcb8a
+  2316 shl di, 1 <=> 1DC8 shl di, 2
+  2571 add di, 0x4886 <=> 2014 add di, 0x5f10
+  25AD add di, 0xb5d8 <=> 2048 add di, 0xcc62
+  262C add di, 0xb500 <=> 20A8 add di, 0xcb8a
+  265C add di, 0xb500 <=> 20D1 add di, 0xcb8a
+0400:1CB0 175:18DC
+  267D shl di, 1 <=> 20CF shl di, 2
+  27F0 shl di, 1 <=> 2212 shl di, 2
+  2E5B shl di, 1 <=> 26DE shl di, 2
+0400:2EE5 175:2767
+  324F add di, 0xb500 <=> 2B37 add di, 0xcb8a
+  397F shl di, 1 <=> 30FE shl di, 2
+  3BDA add di, 0x4886 <=> 334A add di, 0x5f10
+  3C16 add di, 0xb5d8 <=> 337E add di, 0xcc62
+  3C95 add di, 0xb500 <=> 33DE add di, 0xcb8a
+  3CC5 add di, 0xb500 <=> 3407 add di, 0xcb8a
+0409:1D4A 176:1989
+  2717 shl di, 1 <=> 217C shl di, 2
+  288A shl di, 1 <=> 22BF shl di, 2
+  2EF5 shl di, 1 <=> 278B shl di, 2
+0409:2F7E 176:2813
+  3272 add di, 0xb500 <=> 2B68 add di, 0xcb8a
+  39A2 shl di, 1 <=> 312F shl di, 2
+  3BFD add di, 0x4886 <=> 337B add di, 0x5f10
+  3C39 add di, 0xb5d8 <=> 33AF add di, 0xcc62
+  3CB8 add di, 0xb500 <=> 340F add di, 0xcb8a
+  3CE8 add di, 0xb500 <=> 3438 add di, 0xcb8a
+041D:0000 180:0002
+  02FC cmp ax, 3 <=> 02FC cmp ax, 1
+  030F cmp ax, 9 <=> 030C cmp ax, 2
+  0322 cmp ax, 0x11 <=> 031C cmp ax, 3
+041D:0335 180:032C
+  0356 shl ax, 1 <=> 034D shl ax, 2
+041D:24AB 180:2374
+  2E78 shl di, 1 <=> 2B67 shl di, 2
+  2FEB shl di, 1 <=> 2CAA shl di, 2
+  3656 shl di, 1 <=> 3176 shl di, 2
+041D:36DF 180:31FE
+  3AE8 add di, 0xb500 <=> 3648 add di, 0xcb8a
+  4218 shl di, 1 <=> 3C0F shl di, 2
+  4473 add di, 0x4886 <=> 3E5B add di, 0x5f10
+  44AF add di, 0xb5d8 <=> 3E8F add di, 0xcc62
+  452E add di, 0xb500 <=> 3EEF add di, 0xcb8a
+  455E add di, 0xb500 <=> 3F18 add di, 0xcb8a
+0423:02D0 181:026E
+  05CC cmp ax, 3 <=> 0568 cmp ax, 1
+  05DF cmp ax, 9 <=> 0578 cmp ax, 2
+  05F2 cmp ax, 0x11 <=> 0588 cmp ax, 3
+0423:0609 181:059C
+  07D5 add di, 0x43cb <=> 070F add di, 0x5a61
+  085A add di, 0x43f4 <=> 07E6 add di, 0x5a8a
+  0889 add di, 0x441d <=> 0810 add di, 0x5ab3
+0423:08EE 181:0870
+  09E1 add di, 0x43f4 <=> 0951 add di, 0x5a8a
+  0A10 add di, 0x441d <=> 097B add di, 0x5ab3
+  0A5E add di, 0x43f4 <=> 09C0 add di, 0x5a8a
+  0A8D add di, 0x441d <=> 09EA add di, 0x5ab3
+  0AED add di, 0x43f4 <=> 0A3D add di, 0x5a8a
+  0B1C add di, 0x441d <=> 0A67 add di, 0x5ab3
+0423:1354 181:1175
+  135E mov byte ptr [0xcae2], 1 <=> 11A6 mov byte ptr [0xfd1e], 0xa
+0426:0000 182:0002
+  02FC cmp ax, 3 <=> 02FC cmp ax, 1
+  030F cmp ax, 9 <=> 030C cmp ax, 2
+  0322 cmp ax, 0x11 <=> 031C cmp ax, 3
+0426:0401 182:03BF
+  0422 shl ax, 1 <=> 03E0 shl ax, 2
+0426:1B44 182:17BC
+  1CB8 shl ax, 1 <=> 18FE shl ax, 2
+0426:1DA3 182:19D2
+  2777 shl di, 1 <=> 21CC shl di, 2
+  28EA shl di, 1 <=> 230F shl di, 2
+  2F58 shl di, 1 <=> 27DE shl di, 2
+0426:2FE2 182:2867
+  336D add di, 0xb500 <=> 2C53 add di, 0xcb8a
+  3A9F shl di, 1 <=> 321C shl di, 2
+  3CFA add di, 0x4886 <=> 3468 add di, 0x5f10
+  3D36 add di, 0xb5d8 <=> 349C add di, 0xcc62
+  3DB6 add di, 0xb500 <=> 34FD add di, 0xcb8a
+  3DE6 add di, 0xb500 <=> 3526 add di, 0xcb8a
+044D:0455 189:03F8
+  0607 add di, 0x1b9a <=> 0587 add di, 0x3230
+044D:101E 189:0F32
+  1029 sub sp, 2 <=> 0F3D sub sp, 4
+044D:2A8E 189:25F1
+  3462 shl di, 1 <=> 2DEB shl di, 2
+  35D5 shl di, 1 <=> 2F2E shl di, 2
+  3C43 shl di, 1 <=> 33FD shl di, 2
+044D:3CCD 189:3486
+  4092 add di, 0xb500 <=> 3886 add di, 0xcb8a
+  47C4 shl di, 1 <=> 3E4F shl di, 2
+  4A1F add di, 0x4886 <=> 409B add di, 0x5f10
+  4A5B add di, 0xb5d8 <=> 40CF add di, 0xcc62
+  4ADB add di, 0xb500 <=> 4130 add di, 0xcb8a
+  4B0B add di, 0xb500 <=> 4159 add di, 0xcb8a
+01F8:0000 062:0002
+  0121 add di, 0x1b9a <=> 010D add di, 0x3230
+01F8:08A6 062:0821
+  1270 shl di, 1 <=> 1011 shl di, 2
+  13E3 shl di, 1 <=> 1154 shl di, 2
+  1A46 shl di, 1 <=> 1618 shl di, 2
+01F8:1AD0 062:16A1
+  1F40 add di, 0xb500 <=> 1B30 add di, 0xcb8a
+  2667 shl di, 1 <=> 20EE shl di, 2
+  28C2 add di, 0x4886 <=> 233A add di, 0x5f10
+  28FE add di, 0xb5d8 <=> 236E add di, 0xcc62
+  297D add di, 0xb500 <=> 23CE add di, 0xcb8a
+  29AD add di, 0xb500 <=> 23F7 add di, 0xcb8a
+  2C94 cmp ax, 0xd <=> 26DB cmp ax, 0
+  2CA7 cmp ax, 0x89 <=> 26EB cmp ax, 1
+  2CBA cmp ax, 0xfc <=> 26FB cmp ax, 2
+  2CCD cmp ax, 0x173 <=> 270B cmp ax, 3
+  2CE0 cmp ax, 0x1f3 <=> 271B cmp ax, 4
+0276:0000 093:0002
+  012F add di, 0x1b9a <=> 0119 add di, 0x3230
+0276:077E 093:0702
+  1144 shl di, 1 <=> 0EEE shl di, 2
+  12B7 shl di, 1 <=> 1031 shl di, 2
+  1916 shl di, 1 <=> 14F1 shl di, 2
+0276:19A0 093:157A
+  1E57 add di, 0xb500 <=> 1A31 add di, 0xcb8a
+  257C shl di, 1 <=> 1FED shl di, 2
+  27D7 add di, 0x4886 <=> 2239 add di, 0x5f10
+  2813 add di, 0xb5d8 <=> 226D add di, 0xcc62
+  2892 add di, 0xb500 <=> 22CD add di, 0xcb8a
+  28C2 add di, 0xb500 <=> 22F6 add di, 0xcb8a
+  2BDC cmp ax, 0xd <=> 2605 cmp ax, 0
+  2BEF cmp ax, 0x89 <=> 2615 cmp ax, 1
+  2C02 cmp ax, 0xfc <=> 2625 cmp ax, 2
+  2C15 cmp ax, 0x173 <=> 2635 cmp ax, 3
+  2C28 cmp ax, 0x1f3 <=> 2645 cmp ax, 4
+026E:0000 091:0002
+  0132 add di, 0x1b9a <=> 011C add di, 0x3230
+026E:0781 091:0708
+  1147 shl di, 1 <=> 0EF4 shl di, 2
+  12BA shl di, 1 <=> 1037 shl di, 2
+  1919 shl di, 1 <=> 14F7 shl di, 2
+026E:19A3 091:1580
+  1E5A add di, 0xb500 <=> 1A36 add di, 0xcb8a
+  257F shl di, 1 <=> 1FF2 shl di, 2
+  27DA add di, 0x4886 <=> 223E add di, 0x5f10
+  2816 add di, 0xb5d8 <=> 2272 add di, 0xcc62
+  2895 add di, 0xb500 <=> 22D2 add di, 0xcb8a
+  28C5 add di, 0xb500 <=> 22FB add di, 0xcb8a
+  2BDF cmp ax, 0xd <=> 2609 cmp ax, 0
+  2BF2 cmp ax, 0x89 <=> 2619 cmp ax, 1
+  2C05 cmp ax, 0xfc <=> 2629 cmp ax, 2
+  2C18 cmp ax, 0x173 <=> 2639 cmp ax, 3
+  2C2B cmp ax, 0x1f3 <=> 2649 cmp ax, 4
+0266:0000 089:0002
+  0132 add di, 0x1b9a <=> 011C add di, 0x3230
+0266:08D0 089:0862
+  1296 shl di, 1 <=> 104E shl di, 2
+  1409 shl di, 1 <=> 1191 shl di, 2
+  1A68 shl di, 1 <=> 1651 shl di, 2
+0266:1AF2 089:16DA
+  1F95 add di, 0xb500 <=> 1B81 add di, 0xcb8a
+  26BA shl di, 1 <=> 213D shl di, 2
+  2915 add di, 0x4886 <=> 2389 add di, 0x5f10
+  2951 add di, 0xb5d8 <=> 23BD add di, 0xcc62
+  29D0 add di, 0xb500 <=> 241D add di, 0xcb8a
+  2A00 add di, 0xb500 <=> 2446 add di, 0xcb8a
+  2CEF cmp ax, 0xd <=> 272F cmp ax, 0
+  2D02 cmp ax, 0x89 <=> 273F cmp ax, 1
+  2D15 cmp ax, 0xfc <=> 274F cmp ax, 2
+  2D28 cmp ax, 0x173 <=> 275F cmp ax, 3
+  2D3B cmp ax, 0x1f3 <=> 276F cmp ax, 4
+025E:0000 087:0002
+  0132 add di, 0x1b9a <=> 011C add di, 0x3230
+025E:0756 087:06DB
+  111C shl di, 1 <=> 0EC7 shl di, 2
+  128F shl di, 1 <=> 100A shl di, 2
+  18EE shl di, 1 <=> 14CA shl di, 2
+025E:1978 087:1553
+  1E20 add di, 0xb500 <=> 19FF add di, 0xcb8a
+  2545 shl di, 1 <=> 1FBB shl di, 2
+  27A0 add di, 0x4886 <=> 2207 add di, 0x5f10
+  27DC add di, 0xb5d8 <=> 223B add di, 0xcc62
+  285B add di, 0xb500 <=> 229B add di, 0xcb8a
+  288B add di, 0xb500 <=> 22C4 add di, 0xcb8a
+  2B7A cmp ax, 0xd <=> 25AD cmp ax, 0
+  2B8D cmp ax, 0x89 <=> 25BD cmp ax, 1
+  2BA0 cmp ax, 0xfc <=> 25CD cmp ax, 2
+  2BB3 cmp ax, 0x173 <=> 25DD cmp ax, 3
+  2BC6 cmp ax, 0x1f3 <=> 25ED cmp ax, 4
+0256:0000 085:0002
+  0121 add di, 0x1b9a <=> 010D add di, 0x3230
+0256:0899 085:081D
+  1263 shl di, 1 <=> 100D shl di, 2
+  13D6 shl di, 1 <=> 1150 shl di, 2
+  1A39 shl di, 1 <=> 1614 shl di, 2
+0256:1AC3 085:169D
+  1F7A add di, 0xb500 <=> 1B5C add di, 0xcb8a
+  26A1 shl di, 1 <=> 211A shl di, 2
+  28FC add di, 0x4886 <=> 2366 add di, 0x5f10
+  2938 add di, 0xb5d8 <=> 239A add di, 0xcc62
+  29B7 add di, 0xb500 <=> 23FA add di, 0xcb8a
+  29E7 add di, 0xb500 <=> 2423 add di, 0xcb8a
+  2CCE cmp ax, 0xd <=> 2707 cmp ax, 0
+  2CE1 cmp ax, 0x89 <=> 2717 cmp ax, 1
+  2CF4 cmp ax, 0xfc <=> 2727 cmp ax, 2
+  2D07 cmp ax, 0x173 <=> 2737 cmp ax, 3
+  2D1A cmp ax, 0x1f3 <=> 2747 cmp ax, 4
+024E:0000 083:0002
+  0132 add di, 0x1b9a <=> 011C add di, 0x3230
+024E:0C75 083:0BE2
+  163F shl di, 1 <=> 13D2 shl di, 2
+  17B2 shl di, 1 <=> 1515 shl di, 2
+  1E15 shl di, 1 <=> 19D9 shl di, 2
+024E:1E9F 083:1A62
+  2370 add di, 0xb500 <=> 1F37 add di, 0xcb8a
+  2A97 shl di, 1 <=> 24F5 shl di, 2
+  2CF2 add di, 0x4886 <=> 2741 add di, 0x5f10
+  2D2E add di, 0xb5d8 <=> 2775 add di, 0xcc62
+  2DAD add di, 0xb500 <=> 27D5 add di, 0xcb8a
+  2DDD add di, 0xb500 <=> 27FE add di, 0xcb8a
+  30CC cmp ax, 0xd <=> 2AE6 cmp ax, 0
+  30DF cmp ax, 0x89 <=> 2AF6 cmp ax, 1
+  30F2 cmp ax, 0xfc <=> 2B06 cmp ax, 2
+  3105 cmp ax, 0x173 <=> 2B16 cmp ax, 3
+  3118 cmp ax, 0x1f3 <=> 2B26 cmp ax, 4
+0246:0000 081:0002
+  0132 add di, 0x1b9a <=> 011C add di, 0x3230
+0246:08DD 081:084F
+  12A7 shl di, 1 <=> 103F shl di, 2
+  141A shl di, 1 <=> 1182 shl di, 2
+  1A7D shl di, 1 <=> 1646 shl di, 2
+0246:1B07 081:16CF
+  1FDA add di, 0xb500 <=> 1BA3 add di, 0xcb8a
+  2701 shl di, 1 <=> 2161 shl di, 2
+  295C add di, 0x4886 <=> 23AD add di, 0x5f10
+  2998 add di, 0xb5d8 <=> 23E1 add di, 0xcc62
+  2A17 add di, 0xb500 <=> 2441 add di, 0xcb8a
+  2A47 add di, 0xb500 <=> 246A add di, 0xcb8a
+  2D61 cmp ax, 0xd <=> 2779 cmp ax, 0
+  2D74 cmp ax, 0x89 <=> 2789 cmp ax, 1
+  2D87 cmp ax, 0xfc <=> 2799 cmp ax, 2
+  2D9A cmp ax, 0x173 <=> 27A9 cmp ax, 3
+  2DAD cmp ax, 0x1f3 <=> 27B9 cmp ax, 4
+023E:0000 079:0002
+  0132 add di, 0x1b9a <=> 011C add di, 0x3230
+023E:0C75 079:0BE6
+  163F shl di, 1 <=> 13D6 shl di, 2
+  17B2 shl di, 1 <=> 1519 shl di, 2
+  1E15 shl di, 1 <=> 19DD shl di, 2
+023E:1E9F 079:1A66
+  235E add di, 0xb500 <=> 1F29 add di, 0xcb8a
+  2A85 shl di, 1 <=> 24E7 shl di, 2
+  2CE0 add di, 0x4886 <=> 2733 add di, 0x5f10
+  2D1C add di, 0xb5d8 <=> 2767 add di, 0xcc62
+  2D9B add di, 0xb500 <=> 27C7 add di, 0xcb8a
+  2DCB add di, 0xb500 <=> 27F0 add di, 0xcb8a
+  30BA cmp ax, 0xd <=> 2AD8 cmp ax, 0
+  30CD cmp ax, 0x89 <=> 2AE8 cmp ax, 1
+  30E0 cmp ax, 0xfc <=> 2AF8 cmp ax, 2
+  30F3 cmp ax, 0x173 <=> 2B08 cmp ax, 3
+  3106 cmp ax, 0x1f3 <=> 2B18 cmp ax, 4
+0236:0000 077:0002
+  0132 add di, 0x1b9a <=> 011C add di, 0x3230
+0236:08B2 077:0828
+  127C shl di, 1 <=> 1018 shl di, 2
+  13EF shl di, 1 <=> 115B shl di, 2
+  1A52 shl di, 1 <=> 161F shl di, 2
+0236:1ADC 077:16A8
+  1FAD add di, 0xb500 <=> 1B7D add di, 0xcb8a
+  26D4 shl di, 1 <=> 213B shl di, 2
+  292F add di, 0x4886 <=> 2387 add di, 0x5f10
+  296B add di, 0xb5d8 <=> 23BB add di, 0xcc62
+  29EA add di, 0xb500 <=> 241B add di, 0xcb8a
+  2A1A add di, 0xb500 <=> 2444 add di, 0xcb8a
+  2D09 cmp ax, 0xd <=> 272C cmp ax, 0
+  2D1C cmp ax, 0x89 <=> 273C cmp ax, 1
+  2D2F cmp ax, 0xfc <=> 274C cmp ax, 2
+  2D42 cmp ax, 0x173 <=> 275C cmp ax, 3
+  2D55 cmp ax, 0x1f3 <=> 276C cmp ax, 4
+022E:0000 075:0002
+  0132 add di, 0x1b9a <=> 011C add di, 0x3230
+022E:0C67 075:0BD3
+  1631 shl di, 1 <=> 13C3 shl di, 2
+  17A4 shl di, 1 <=> 1506 shl di, 2
+  1E07 shl di, 1 <=> 19CA shl di, 2
+022E:1E91 075:1A53
+  2350 add di, 0xb500 <=> 1F17 add di, 0xcb8a
+  2A77 shl di, 1 <=> 24D5 shl di, 2
+  2CD2 add di, 0x4886 <=> 2721 add di, 0x5f10
+  2D0E add di, 0xb5d8 <=> 2755 add di, 0xcc62
+  2D8D add di, 0xb500 <=> 27B5 add di, 0xcb8a
+  2DBD add di, 0xb500 <=> 27DE add di, 0xcb8a
+  30AC cmp ax, 0xd <=> 2AC7 cmp ax, 0
+  30BF cmp ax, 0x89 <=> 2AD7 cmp ax, 1
+  30D2 cmp ax, 0xfc <=> 2AE7 cmp ax, 2
+  30E5 cmp ax, 0x173 <=> 2AF7 cmp ax, 3
+  30F8 cmp ax, 0x1f3 <=> 2B07 cmp ax, 4
+0226:0000 073:0002
+  0132 add di, 0x1b9a <=> 011C add di, 0x3230
+0226:0DD1 073:0D33
+  179C shl di, 1 <=> 1524 shl di, 2
+  190F shl di, 1 <=> 1667 shl di, 2
+  1F76 shl di, 1 <=> 1B2F shl di, 2
+0226:2000 073:1BB8
+  24D3 add di, 0xb500 <=> 2091 add di, 0xcb8a
+  2BFE shl di, 1 <=> 2653 shl di, 2
+  2E59 add di, 0x4886 <=> 289F add di, 0x5f10
+  2E95 add di, 0xb5d8 <=> 28D3 add di, 0xcc62
+  2F14 add di, 0xb500 <=> 2933 add di, 0xcb8a
+  2F44 add di, 0xb500 <=> 295C add di, 0xcb8a
+  3233 cmp ax, 0xd <=> 2C45 cmp ax, 0
+  3246 cmp ax, 0x89 <=> 2C55 cmp ax, 1
+  3259 cmp ax, 0xfc <=> 2C65 cmp ax, 2
+  326C cmp ax, 0x173 <=> 2C75 cmp ax, 3
+  327F cmp ax, 0x1f3 <=> 2C85 cmp ax, 4
+021E:0000 071:0002
+  0132 add di, 0x1b9a <=> 011C add di, 0x3230
+021E:0E35 071:0D84
+  1800 shl di, 1 <=> 1575 shl di, 2
+  1973 shl di, 1 <=> 16B8 shl di, 2
+  1FDA shl di, 1 <=> 1B80 shl di, 2
+021E:2064 071:1C09
+  254B add di, 0xb500 <=> 20F2 add di, 0xcb8a
+  2C76 shl di, 1 <=> 26B4 shl di, 2
+  2ED1 add di, 0x4886 <=> 2900 add di, 0x5f10
+  2F0D add di, 0xb5d8 <=> 2934 add di, 0xcc62
+  2F8C add di, 0xb500 <=> 2994 add di, 0xcb8a
+  2FBC add di, 0xb500 <=> 29BD add di, 0xcb8a
+  32D6 cmp ax, 0xd <=> 2CCC cmp ax, 0
+  32E9 cmp ax, 0x89 <=> 2CDC cmp ax, 1
+  32FC cmp ax, 0xfc <=> 2CEC cmp ax, 2
+  330F cmp ax, 0x173 <=> 2CFC cmp ax, 3
+  3322 cmp ax, 0x1f3 <=> 2D0C cmp ax, 4
+0216:0000 069:0002
+  0132 add di, 0x1b9a <=> 011C add di, 0x3230
+0216:0DD1 069:0D33
+  179C shl di, 1 <=> 1524 shl di, 2
+  190F shl di, 1 <=> 1667 shl di, 2
+  1F76 shl di, 1 <=> 1B2F shl di, 2
+0216:2000 069:1BB8
+  24E5 add di, 0xb500 <=> 20A3 add di, 0xcb8a
+  2C10 shl di, 1 <=> 2665 shl di, 2
+  2E6B add di, 0x4886 <=> 28B1 add di, 0x5f10
+  2EA7 add di, 0xb5d8 <=> 28E5 add di, 0xcc62
+  2F26 add di, 0xb500 <=> 2945 add di, 0xcb8a
+  2F56 add di, 0xb500 <=> 296E add di, 0xcb8a
+  3245 cmp ax, 0xd <=> 2C57 cmp ax, 0
+  3258 cmp ax, 0x89 <=> 2C67 cmp ax, 1
+  326B cmp ax, 0xfc <=> 2C77 cmp ax, 2
+  327E cmp ax, 0x173 <=> 2C87 cmp ax, 3
+  3291 cmp ax, 0x1f3 <=> 2C97 cmp ax, 4
+020E:066A 067:0607
+  1035 shl di, 1 <=> 0DF8 shl di, 2
+  11A8 shl di, 1 <=> 0F3B shl di, 2
+  180F shl di, 1 <=> 1403 shl di, 2
+020E:1899 067:148C
+  1D58 add di, 0xb500 <=> 1954 add di, 0xcb8a
+  2483 shl di, 1 <=> 1F16 shl di, 2
+  26DE add di, 0x4886 <=> 2162 add di, 0x5f10
+  271A add di, 0xb5d8 <=> 2196 add di, 0xcc62
+  2799 add di, 0xb500 <=> 21F6 add di, 0xcb8a
+  27C9 add di, 0xb500 <=> 221F add di, 0xcb8a
+  290E cmp ax, 0xd <=> 2368 cmp ax, 0
+  2921 cmp ax, 0x89 <=> 2378 cmp ax, 1
+  2934 cmp ax, 0xfc <=> 2388 cmp ax, 2
+  2947 cmp ax, 0x173 <=> 2398 cmp ax, 3
+  295A cmp ax, 0x1f3 <=> 23A8 cmp ax, 4
+0205:0829 065:07BC
+  11F4 shl di, 1 <=> 0FAD shl di, 2
+  1367 shl di, 1 <=> 10F0 shl di, 2
+  19CE shl di, 1 <=> 15B8 shl di, 2
+0205:1A58 065:1641
+  1F2B add di, 0xb500 <=> 1B1E add di, 0xcb8a
+  2656 shl di, 1 <=> 20E0 shl di, 2
+  28B1 add di, 0x4886 <=> 232C add di, 0x5f10
+  28ED add di, 0xb5d8 <=> 2360 add di, 0xcc62
+  296C add di, 0xb500 <=> 23C0 add di, 0xcb8a
+  299C add di, 0xb500 <=> 23E9 add di, 0xcb8a
+  2AE1 cmp ax, 0xd <=> 2532 cmp ax, 0
+  2AF4 cmp ax, 0x89 <=> 2542 cmp ax, 1
+  2B07 cmp ax, 0xfc <=> 2552 cmp ax, 2
+  2B1A cmp ax, 0x173 <=> 2562 cmp ax, 3
+  2B2D cmp ax, 0x1f3 <=> 2572 cmp ax, 4
+01FC:0000 063:0002
+  0132 add di, 0x1b9a <=> 011C add di, 0x3230
+01FC:0979 063:08D3
+  1344 shl di, 1 <=> 10C4 shl di, 2
+  14B7 shl di, 1 <=> 1207 shl di, 2
+  1B1E shl di, 1 <=> 16CF shl di, 2
+01FC:1BA8 063:1758
+  2020 add di, 0xb500 <=> 1BEC add di, 0xcb8a
+  274B shl di, 1 <=> 21AE shl di, 2
+  29A6 add di, 0x4886 <=> 23FA add di, 0x5f10
+  29E2 add di, 0xb5d8 <=> 242E add di, 0xcc62
+  2A61 add di, 0xb500 <=> 248E add di, 0xcb8a
+  2A91 add di, 0xb500 <=> 24B7 add di, 0xcb8a
+  2D80 cmp ax, 0xd <=> 27A0 cmp ax, 0
+  2D93 cmp ax, 0x89 <=> 27B0 cmp ax, 1
+  2DA6 cmp ax, 0xfc <=> 27C0 cmp ax, 2
+  2DB9 cmp ax, 0x173 <=> 27D0 cmp ax, 3
+  2DCC cmp ax, 0x1f3 <=> 27E0 cmp ax, 4
+01D2:15AF 054:1245
+  1F83 shl di, 1 <=> 1A3F shl di, 2
+  20F6 shl di, 1 <=> 1B82 shl di, 2
+  2764 shl di, 1 <=> 2051 shl di, 2
+01D2:27EE 054:20DA
+  2D19 add di, 0xb500 <=> 262E add di, 0xcb8a
+  344B shl di, 1 <=> 2BF7 shl di, 2
+  36A6 add di, 0x4886 <=> 2E43 add di, 0x5f10
+  36E2 add di, 0xb5d8 <=> 2E77 add di, 0xcc62
+  3762 add di, 0xb500 <=> 2ED8 add di, 0xcb8a
+  3792 add di, 0xb500 <=> 2F01 add di, 0xcb8a
+0454:0660 190:05E2
+  07B1 add di, 0x1b9a <=> 071C add di, 0x3230
+0454:2571 190:2083
+  2F45 shl di, 1 <=> 287D shl di, 2
+  30B8 shl di, 1 <=> 29C0 shl di, 2
+  3726 shl di, 1 <=> 2E8F shl di, 2
+0454:37B0 190:2F18
+  3B4A add di, 0xb500 <=> 32EB add di, 0xcb8a
+  427C shl di, 1 <=> 38B4 shl di, 2
+  44D7 add di, 0x4886 <=> 3B00 add di, 0x5f10
+  4513 add di, 0xb5d8 <=> 3B34 add di, 0xcc62
+  4593 add di, 0xb500 <=> 3B95 add di, 0xcb8a
+  45C3 add di, 0xb500 <=> 3BBE add di, 0xcb8a
+04AE:00AE 206:00A2
+  020B add di, 0x1b9a <=> 01E8 add di, 0x3230
+04AE:0274 206:0249
+  03D8 add di, 0x1b9a <=> 0396 add di, 0x3230
+04AE:04EF 206:0497
+  064E add di, 0x1b9a <=> 05DF add di, 0x3230
+04AE:06B7 206:0640
+  0816 add di, 0x1b9a <=> 0788 add di, 0x3230
+04AE:092D 206:088B
+  0A8C add di, 0x1b9a <=> 09D3 add di, 0x3230
+04AE:0AF5 206:0A34
+  0C54 add di, 0x1b9a <=> 0B7C add di, 0x3230
+04AE:0CBD 206:0BDD
+  0E8E add di, 0x1b9a <=> 0D90 add di, 0x3230
+04AE:0ED1 206:0DCE
+  1052 add di, 0x1b9a <=> 0F32 add di, 0x3230
+04AE:10EF 206:0FC7
+  123F add di, 0x1b9a <=> 1100 add di, 0x3230
+04AE:12DC 206:1195
+  1443 add di, 0x1b9a <=> 12E6 add di, 0x3230
+04AE:148C 206:132A
+  161B add di, 0x1b9a <=> 149C add di, 0x3230
+04AE:3040 206:2A9E
+  3A0D shl di, 1 <=> 3291 shl di, 2
+  3B80 shl di, 1 <=> 33D4 shl di, 2
+  41EB shl di, 1 <=> 38A0 shl di, 2
+04AE:4275 206:3929
+  4609 add di, 0xb500 <=> 3D17 add di, 0xcb8a
+  4D39 shl di, 1 <=> 42DE shl di, 2
+  4F94 add di, 0x4886 <=> 452A add di, 0x5f10
+  4FD0 add di, 0xb5d8 <=> 455E add di, 0xcc62
+  504F add di, 0xb500 <=> 45BE add di, 0xcb8a
+  507F add di, 0xb500 <=> 45E7 add di, 0xcb8a
+048A:021A 200:01F6
+  0373 add di, 0x1b9a <=> 0338 add di, 0x3230
+048A:0422 200:03D2
+  0572 add di, 0x1b9a <=> 050B add di, 0x3230
+048A:0A40 200:0976
+  140B shl di, 1 <=> 1167 shl di, 2
+  157E shl di, 1 <=> 12AA shl di, 2
+  1BE5 shl di, 1 <=> 1772 shl di, 2
+048A:1C6F 200:17FB
+  211B add di, 0xb500 <=> 1CDD add di, 0xcb8a
+  2846 shl di, 1 <=> 229F shl di, 2
+  2AA1 add di, 0x4886 <=> 24EB add di, 0x5f10
+  2ADD add di, 0xb5d8 <=> 251F add di, 0xcc62
+  2B5C add di, 0xb500 <=> 257F add di, 0xcb8a
+  2B8C add di, 0xb500 <=> 25A8 add di, 0xcb8a
+0499:00AA 203:009E
+  00CB shl ax, 1 <=> 00BF shl ax, 2
+0499:01AF 203:018F
+  030E add di, 0x1b9a <=> 02D7 add di, 0x3230
+0499:0377 203:0338
+  04E2 add di, 0x1b9a <=> 0489 add di, 0x3230
+0499:0538 203:04DA
+  0688 add di, 0x1b9a <=> 0613 add di, 0x3230
+0499:06D2 203:0658
+  082B add di, 0x1b9a <=> 079A add di, 0x3230
+0499:08D7 203:0838
+  0A3E add di, 0x1b9a <=> 0988 add di, 0x3230
+0499:0E41 203:0D71
+  0F91 add di, 0x1b9a <=> 0EAA add di, 0x3230
+0499:10EA 203:0FEB
+  123A add di, 0x1b9a <=> 1124 add di, 0x3230
+0499:12E0 203:11C2
+  1430 add di, 0x1b9a <=> 12FB add di, 0x3230
+0499:1473 203:1339
+  156D add di, 0x1b9a <=> 141C add di, 0x3230
+0499:159D 203:1447
+  15A8 sub sp, 6 <=> 1452 sub sp, 4
+  1711 add di, 0x1b9a <=> 15AB add di, 0x3230
+0499:1B6B 203:19C0
+  1CA5 add di, 0x1b9a <=> 1AE4 add di, 0x3230
+0499:1CD2 203:1B0C
+  1E2B add di, 0x1b9a <=> 1C4E add di, 0x3230
+0499:1EE0 203:1CF8
+  2030 add di, 0x1b9a <=> 1E31 add di, 0x3230
+0499:3648 203:30EA
+  37BC shl ax, 1 <=> 322C shl ax, 2
+0499:38A7 203:3300
+  427B shl di, 1 <=> 3AFA shl di, 2
+  43EE shl di, 1 <=> 3C3D shl di, 2
+  4A5C shl di, 1 <=> 410C shl di, 2
+0499:4AE6 203:4195
+  519B add di, 0xb500 <=> 4849 add di, 0xcb8a
+  58CD shl di, 1 <=> 4E12 shl di, 2
+  5B28 add di, 0x4886 <=> 505E add di, 0x5f10
+  5B64 add di, 0xb5d8 <=> 5092 add di, 0xcc62
+  5BE4 add di, 0xb500 <=> 50F3 add di, 0xcb8a
+  5C14 add di, 0xb500 <=> 511C add di, 0xcb8a
+047B:0B0D 197:0B02
+  0B78 mov byte ptr es:[di + 0x92], 7 <=> 0B17 mov byte ptr es:[di + 0x129], 0x6d
+  0B7E cmp byte ptr [bp + 6], 2 <=> 0B1D cmp byte ptr [bp + 6], 1
+047B:1DBE 197:1A3F
+  2792 shl di, 1 <=> 2239 shl di, 2
+  2905 shl di, 1 <=> 237C shl di, 2
+  2F73 shl di, 1 <=> 284B shl di, 2
+047B:2FFD 197:28D4
+  33C4 add di, 0xb500 <=> 2CD9 add di, 0xcb8a
+  3AF6 shl di, 1 <=> 32A2 shl di, 2
+  3D51 add di, 0x4886 <=> 34EE add di, 0x5f10
+  3D8D add di, 0xb5d8 <=> 3522 add di, 0xcc62
+  3E0D add di, 0xb500 <=> 3583 add di, 0xcb8a
+  3E3D add di, 0xb500 <=> 35AC add di, 0xcb8a
+03EC:2D7B 171:270F
+  3748 shl di, 1 <=> 2F02 shl di, 2
+  38BB shl di, 1 <=> 3045 shl di, 2
+  3F26 shl di, 1 <=> 3511 shl di, 2
+03EC:3FB0 171:359A
+  439F add di, 0xb500 <=> 39B4 add di, 0xcb8a
+  4ACF shl di, 1 <=> 3F7B shl di, 2
+  4D2A add di, 0x4886 <=> 41C7 add di, 0x5f10
+  4D66 add di, 0xb5d8 <=> 41FB add di, 0xcc62
+  4DE5 add di, 0xb500 <=> 425B add di, 0xcb8a
+  4E15 add di, 0xb500 <=> 4284 add di, 0xcb8a
+03CC:2969 165:254C
+  3336 shl di, 1 <=> 2D3F shl di, 2
+  34A9 shl di, 1 <=> 2E82 shl di, 2
+  3B14 shl di, 1 <=> 334E shl di, 2
+03CC:3B9E 165:33D7
+  3EB7 add di, 0xb500 <=> 372C add di, 0xcb8a
+  45E7 shl di, 1 <=> 3CF3 shl di, 2
+  4842 add di, 0x4886 <=> 3F3F add di, 0x5f10
+  487E add di, 0xb5d8 <=> 3F73 add di, 0xcc62
+  48FD add di, 0xb500 <=> 3FD3 add di, 0xcb8a
+  492D add di, 0xb500 <=> 3FFC add di, 0xcb8a
+03E4:1864 169:14F8
+  222F shl di, 1 <=> 1CE9 shl di, 2
+  23A2 shl di, 1 <=> 1E2C shl di, 2
+  2A09 shl di, 1 <=> 22F4 shl di, 2
+03E4:2A93 169:237D
+  2D95 add di, 0xb500 <=> 26BA add di, 0xcb8a
+  34C1 shl di, 1 <=> 2C7D shl di, 2
+  371C add di, 0x4886 <=> 2EC9 add di, 0x5f10
+  3758 add di, 0xb5d8 <=> 2EFD add di, 0xcc62
+  37D7 add di, 0xb500 <=> 2F5D add di, 0xcb8a
+  3807 add di, 0xb500 <=> 2F86 add di, 0xcb8a
+039B:02D2 154:0270
+  049E add di, 0x43cb <=> 03E3 add di, 0x5a61
+  0523 add di, 0x43f4 <=> 04BA add di, 0x5a8a
+  0552 add di, 0x441d <=> 04E4 add di, 0x5ab3
+039B:05B7 154:0544
+  06AA add di, 0x43f4 <=> 0625 add di, 0x5a8a
+  06D9 add di, 0x441d <=> 064F add di, 0x5ab3
+  0727 add di, 0x43f4 <=> 0694 add di, 0x5a8a
+  0756 add di, 0x441d <=> 06BE add di, 0x5ab3
+  07B6 add di, 0x43f4 <=> 0711 add di, 0x5a8a
+  07E5 add di, 0x441d <=> 073B add di, 0x5ab3
+039B:0D61 154:0BE2
+  0D6B mov byte ptr [0xcae2], 1 <=> 0C13 mov byte ptr [0xfd1e], 2
+0437:056F 185:0505
+  0690 add di, 0x1b9a <=> 0615 add di, 0x3230
+0437:274C 185:22DD
+  3120 shl di, 1 <=> 2AD7 shl di, 2
+  3293 shl di, 1 <=> 2C1A shl di, 2
+  3901 shl di, 1 <=> 30E9 shl di, 2
+0437:398B 185:3172
+  3CCE add di, 0xb500 <=> 34F9 add di, 0xcb8a
+  4400 shl di, 1 <=> 3AC2 shl di, 2
+  465B add di, 0x4886 <=> 3D0E add di, 0x5f10
+  4697 add di, 0xb5d8 <=> 3D42 add di, 0xcc62
+  4717 add di, 0xb500 <=> 3DA3 add di, 0xcb8a
+  4747 add di, 0xb500 <=> 3DCC add di, 0xcb8a
+043F:02D2 186:0270
+  049E add di, 0x43cb <=> 03E3 add di, 0x5a61
+  0523 add di, 0x43f4 <=> 04BA add di, 0x5a8a
+  0552 add di, 0x441d <=> 04E4 add di, 0x5ab3
+043F:05B7 186:0544
+  06AA add di, 0x43f4 <=> 0625 add di, 0x5a8a
+  06D9 add di, 0x441d <=> 064F add di, 0x5ab3
+  0727 add di, 0x43f4 <=> 0694 add di, 0x5a8a
+  0756 add di, 0x441d <=> 06BE add di, 0x5ab3
+  07B6 add di, 0x43f4 <=> 0711 add di, 0x5a8a
+  07E5 add di, 0x441d <=> 073B add di, 0x5ab3
+043F:093E 186:0863
+  0A5F add di, 0x1b9a <=> 0973 add di, 0x3230
+043F:0F09 186:0D59
+  0F13 mov byte ptr [0xcae2], 1 <=> 0D8A mov byte ptr [0xfd1e], 2
+01AB:0333 046:02F6
+  0CFE shl di, 1 <=> 0AE7 shl di, 2
+  0E71 shl di, 1 <=> 0C2A shl di, 2
+  14D8 shl di, 1 <=> 10F2 shl di, 2
+01AB:1562 046:117B
+  180C add di, 0xb500 <=> 146E add di, 0xcb8a
+  1F37 shl di, 1 <=> 1A30 shl di, 2
+  217B add di, 0x4886 <=> 1C68 add di, 0x5f10
+  21B7 add di, 0xb5d8 <=> 1C9C add di, 0xcc62
+  2236 add di, 0xb500 <=> 1CFC add di, 0xcb8a
+  2266 add di, 0xb500 <=> 1D25 add di, 0xcb8a
+01B6:17D7 048:1458
+  21A4 shl di, 1 <=> 1C4B shl di, 2
+  2317 shl di, 1 <=> 1D8E shl di, 2
+  2982 shl di, 1 <=> 225A shl di, 2
+01B6:2A0C 048:22E3
+  301B add di, 0xb500 <=> 291B add di, 0xcb8a
+  374B shl di, 1 <=> 2EE2 shl di, 2
+  39A6 add di, 0x4886 <=> 312E add di, 0x5f10
+  39E2 add di, 0xb5d8 <=> 3162 add di, 0xcc62
+  3A61 add di, 0xb500 <=> 31C2 add di, 0xcb8a
+  3A91 add di, 0xb500 <=> 31EB add di, 0xcb8a
+01DA:0063 056:005C
+  0184 add di, 0x1b9a <=> 016B add di, 0x3230
+01DA:23D9 056:1F45
+  2DAD shl di, 1 <=> 273F shl di, 2
+  2F20 shl di, 1 <=> 2882 shl di, 2
+  358E shl di, 1 <=> 2D51 shl di, 2
+01DA:3618 056:2DDA
+  3B82 add di, 0xb500 <=> 336F add di, 0xcb8a
+  42B4 shl di, 1 <=> 3938 shl di, 2
+  450F add di, 0x4886 <=> 3B84 add di, 0x5f10
+  454B add di, 0xb5d8 <=> 3BB8 add di, 0xcc62
+  45CB add di, 0xb500 <=> 3C19 add di, 0xcb8a
+  45FB add di, 0xb500 <=> 3C42 add di, 0xcb8a
+01E0:0383 057:0316
+  054F add di, 0x43cb <=> 0489 add di, 0x5a61
+  05D4 add di, 0x43f4 <=> 0560 add di, 0x5a8a
+  0603 add di, 0x441d <=> 058A add di, 0x5ab3
+01E0:07CC 057:074A
+  08BF add di, 0x43f4 <=> 082B add di, 0x5a8a
+  08EE add di, 0x441d <=> 0855 add di, 0x5ab3
+  093C add di, 0x43f4 <=> 089A add di, 0x5a8a
+  096B add di, 0x441d <=> 08C4 add di, 0x5ab3
+  09CB add di, 0x43f4 <=> 0917 add di, 0x5a8a
+  09FA add di, 0x441d <=> 0941 add di, 0x5ab3
+01E0:0B7C 057:0A8E
+  0C9D add di, 0x1b9a <=> 0B9D add di, 0x3230
+01E0:135E 057:1109
+  1368 mov byte ptr [0xcae2], 1 <=> 113A mov byte ptr [0xfd1e], 4
+0142:01B5 018:0180
+  02D6 add di, 0x1b9a <=> 028F add di, 0x3230
+0142:2B68 018:25E3
+  3535 shl di, 1 <=> 2DD6 shl di, 2
+  36A8 shl di, 1 <=> 2F19 shl di, 2
+  3D13 shl di, 1 <=> 33E5 shl di, 2
+0142:3D9D 018:346E
+  42DF add di, 0xb500 <=> 39DB add di, 0xcb8a
+  4A0F shl di, 1 <=> 3FA2 shl di, 2
+  4C6A add di, 0x4886 <=> 41EE add di, 0x5f10
+  4CA6 add di, 0xb5d8 <=> 4222 add di, 0xcc62
+  4D25 add di, 0xb500 <=> 4282 add di, 0xcb8a
+  4D55 add di, 0xb500 <=> 42AB add di, 0xcb8a
+0148:02D2 019:0270
+  049E add di, 0x43cb <=> 03E3 add di, 0x5a61
+  0523 add di, 0x43f4 <=> 04BA add di, 0x5a8a
+  0552 add di, 0x441d <=> 04E4 add di, 0x5ab3
+0148:05B7 019:0544
+  06AA add di, 0x43f4 <=> 0625 add di, 0x5a8a
+  06D9 add di, 0x441d <=> 064F add di, 0x5ab3
+  0727 add di, 0x43f4 <=> 0694 add di, 0x5a8a
+  0756 add di, 0x441d <=> 06BE add di, 0x5ab3
+  07B6 add di, 0x43f4 <=> 0711 add di, 0x5a8a
+  07E5 add di, 0x441d <=> 073B add di, 0x5ab3
+0148:0943 019:0868
+  0A64 add di, 0x1b9a <=> 0977 add di, 0x3230
+0148:0F20 019:0D4E
+  0F2A mov byte ptr [0xcae2], 1 <=> 0D7F mov byte ptr [0xfd1e], 4
+01EC:0299 060:0243
+  03E3 add di, 0x1b9a <=> 0370 add di, 0x3230
+01EC:08B5 060:07F8
+  1280 shl di, 1 <=> 0FE9 shl di, 2
+  13F3 shl di, 1 <=> 112C shl di, 2
+  1A5A shl di, 1 <=> 15F4 shl di, 2
+01EC:1AE4 060:167D
+  1E77 add di, 0xb500 <=> 1A4A add di, 0xcb8a
+  25A2 shl di, 1 <=> 200C shl di, 2
+  27FD add di, 0x4886 <=> 2258 add di, 0x5f10
+  2839 add di, 0xb5d8 <=> 228C add di, 0xcc62
+  28B8 add di, 0xb500 <=> 22EC add di, 0xcb8a
+  28E8 add di, 0xb500 <=> 2315 add di, 0xcb8a
+01C2:1C31 051:188A
+  25FE shl di, 1 <=> 207D shl di, 2
+  2771 shl di, 1 <=> 21C0 shl di, 2
+  2DDC shl di, 1 <=> 268C shl di, 2
+01C2:2E66 051:2715
+  33A2 add di, 0xb500 <=> 2C79 add di, 0xcb8a
+  3AD2 shl di, 1 <=> 3240 shl di, 2
+  3D2D add di, 0x4886 <=> 348C add di, 0x5f10
+  3D69 add di, 0xb5d8 <=> 34C0 add di, 0xcc62
+  3DE8 add di, 0xb500 <=> 3520 add di, 0xcb8a
+  3E18 add di, 0xb500 <=> 3549 add di, 0xcb8a
+03B1:0631 160:05F5
+  0FFC shl di, 1 <=> 0DE6 shl di, 2
+  116F shl di, 1 <=> 0F29 shl di, 2
+  17D6 shl di, 1 <=> 13F1 shl di, 2
+03B1:1860 160:147A
+  1B51 add di, 0xb500 <=> 17A5 add di, 0xcb8a
+  227C shl di, 1 <=> 1D67 shl di, 2
+  24D7 add di, 0x4886 <=> 1FB3 add di, 0x5f10
+  2513 add di, 0xb5d8 <=> 1FE7 add di, 0xcc62
+  2592 add di, 0xb500 <=> 2047 add di, 0xcb8a
+  25C2 add di, 0xb500 <=> 2070 add di, 0xcb8a
+0168:0771 030:06E7
+  0797 shr ax, 1 <=> 070B shr ax, 2
+0168:0C3E 030:0B6F
+  0EEC shr ax, 1 <=> 0DF0 shr ax, 2
+0168:24A1 030:2047
+  2E75 shl di, 1 <=> 2841 shl di, 2
+  2FE8 shl di, 1 <=> 2984 shl di, 2
+  3656 shl di, 1 <=> 2E53 shl di, 2
+0168:36E0 030:2EDC
+  3A00 add di, 0xb500 <=> 3237 add di, 0xcb8a
+  4132 shl di, 1 <=> 3800 shl di, 2
+  438D add di, 0x4886 <=> 3A4C add di, 0x5f10
+  43C9 add di, 0xb5d8 <=> 3A80 add di, 0xcc62
+  4449 add di, 0xb500 <=> 3AE1 add di, 0xcb8a
+  4479 add di, 0xb500 <=> 3B0A add di, 0xcb8a
+015A:008D 024:008D
+  00A7 add di, 0x1904 <=> 00A3 add di, 0x2fb8
+  00E2 add di, 0x189e <=> 00D7 add di, 0x2f52
+015A:01A4 024:0196
+  0354 add di, 0x189e <=> 033D add di, 0x2f52
+015A:0E28 024:0D8B
+  152A mov byte ptr [0x887], 1 <=> 13F2 mov byte ptr [0xfd1e], 2
+0174:0752 033:0750
+  09B4 add di, 0x1b9a <=> 0995 add di, 0x3230
+0174:2244 033:1DCF
+  2C11 shl di, 1 <=> 25C2 shl di, 2
+  2D84 shl di, 1 <=> 2705 shl di, 2
+  33EF shl di, 1 <=> 2BD1 shl di, 2
+0174:3478 033:2C59
+  380F add di, 0xb500 <=> 2FC4 add di, 0xcb8a
+  3F3F shl di, 1 <=> 358B shl di, 2
+  419A add di, 0x4886 <=> 37D7 add di, 0x5f10
+  41D6 add di, 0xb5d8 <=> 380B add di, 0xcc62
+  4255 add di, 0xb500 <=> 386B add di, 0xcb8a
+  4285 add di, 0xb500 <=> 3894 add di, 0xcb8a

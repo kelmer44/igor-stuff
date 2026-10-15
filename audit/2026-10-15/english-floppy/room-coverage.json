@@ -1,0 +1,1787 @@
+[
+  {
+    "states": [
+      0,
+      1
+    ],
+    "part": 0,
+    "cs": 1198,
+    "entry": 17013,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_0.cpp",
+    "functions": 34,
+    "native_transitions": [
+      {
+        "address": "04AE:1482",
+        "state": 24
+      },
+      {
+        "address": "04AE:1664",
+        "state": 10
+      },
+      {
+        "address": "04AE:171A",
+        "state": 40
+      }
+    ],
+    "literal_transitions_absent_from_file": []
+  },
+  {
+    "states": [
+      20,
+      21,
+      22,
+      23,
+      24
+    ],
+    "part": 2,
+    "cs": 1177,
+    "entry": 19174,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_2.cpp",
+    "functions": 39,
+    "native_transitions": [
+      {
+        "address": "0499:1B1A",
+        "state": 12
+      },
+      {
+        "address": "0499:1B63",
+        "state": 11
+      },
+      {
+        "address": "0499:206F",
+        "state": 1
+      },
+      {
+        "address": "0499:2083",
+        "state": 30
+      }
+    ],
+    "literal_transitions_absent_from_file": []
+  },
+  {
+    "states": [
+      10,
+      11,
+      12
+    ],
+    "part": 1,
+    "cs": 1162,
+    "entry": 7279,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_1.cpp",
+    "functions": 21,
+    "native_transitions": [
+      {
+        "address": "048A:05B1",
+        "state": 20
+      },
+      {
+        "address": "048A:1E1F",
+        "state": 22
+      },
+      {
+        "address": "048A:1EE3",
+        "state": 23
+      }
+    ],
+    "literal_transitions_absent_from_file": []
+  },
+  {
+    "states": [
+      40
+    ],
+    "part": 4,
+    "cs": 906,
+    "entry": 5398,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_4.cpp",
+    "functions": 12,
+    "native_transitions": [
+      {
+        "address": "038A:000A",
+        "state": 120
+      },
+      {
+        "address": "038A:002D",
+        "state": 350
+      },
+      {
+        "address": "038A:003F",
+        "state": 100
+      },
+      {
+        "address": "038A:0058",
+        "state": 170
+      },
+      {
+        "address": "038A:0060",
+        "state": 770
+      },
+      {
+        "address": "038A:0072",
+        "state": 50
+      },
+      {
+        "address": "038A:152C",
+        "state": 730
+      },
+      {
+        "address": "038A:1549",
+        "state": 750
+      }
+    ],
+    "literal_transitions_absent_from_file": []
+  },
+  {
+    "states": [
+      50,
+      51,
+      52
+    ],
+    "part": 5,
+    "cs": 1062,
+    "entry": 12258,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_5.cpp",
+    "functions": 20,
+    "native_transitions": [
+      {
+        "address": "0426:09E7",
+        "state": 60
+      },
+      {
+        "address": "0426:09FB",
+        "state": 40
+      }
+    ],
+    "literal_transitions_absent_from_file": []
+  },
+  {
+    "states": [
+      60,
+      61,
+      62
+    ],
+    "part": 6,
+    "cs": 1053,
+    "entry": 14047,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_6.cpp",
+    "functions": 27,
+    "native_transitions": [
+      {
+        "address": "041D:0966",
+        "state": 51
+      }
+    ],
+    "literal_transitions_absent_from_file": []
+  },
+  {
+    "states": [
+      70,
+      71,
+      72
+    ],
+    "part": 7,
+    "cs": 1147,
+    "entry": 12285,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_7.cpp",
+    "functions": 26,
+    "native_transitions": [
+      {
+        "address": "047B:071E",
+        "state": 80
+      },
+      {
+        "address": "047B:078B",
+        "state": 90
+      },
+      {
+        "address": "047B:0931",
+        "state": 101
+      }
+    ],
+    "literal_transitions_absent_from_file": []
+  },
+  {
+    "states": [
+      80
+    ],
+    "part": 8,
+    "cs": 1101,
+    "entry": 15565,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_8.cpp",
+    "functions": 32,
+    "native_transitions": [
+      {
+        "address": "044D:08B2",
+        "state": 91
+      },
+      {
+        "address": "044D:134D",
+        "state": 71
+      }
+    ],
+    "literal_transitions_absent_from_file": []
+  },
+  {
+    "states": [
+      90,
+      91
+    ],
+    "part": 9,
+    "cs": 1108,
+    "entry": 14256,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_9.cpp",
+    "functions": 31,
+    "native_transitions": [
+      {
+        "address": "0454:0A50",
+        "state": 72
+      }
+    ],
+    "literal_transitions_absent_from_file": []
+  },
+  {
+    "states": [
+      100,
+      101,
+      102
+    ],
+    "part": 10,
+    "cs": 1024,
+    "entry": 12005,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_10.cpp",
+    "functions": 23,
+    "native_transitions": [
+      {
+        "address": "0400:05AE",
+        "state": 110
+      },
+      {
+        "address": "0400:05C2",
+        "state": 40
+      },
+      {
+        "address": "0400:0911",
+        "state": 70
+      }
+    ],
+    "literal_transitions_absent_from_file": []
+  },
+  {
+    "states": [
+      110
+    ],
+    "part": 11,
+    "cs": 1033,
+    "entry": 12158,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_11.cpp",
+    "functions": 25,
+    "native_transitions": [
+      {
+        "address": "0409:076F",
+        "state": 102
+      }
+    ],
+    "literal_transitions_absent_from_file": []
+  },
+  {
+    "states": [
+      120,
+      121,
+      122
+    ],
+    "part": 12,
+    "cs": 1004,
+    "entry": 16304,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_12.cpp",
+    "functions": 24,
+    "native_transitions": [
+      {
+        "address": "03EC:0610",
+        "state": 40
+      },
+      {
+        "address": "03EC:110F",
+        "state": 130
+      },
+      {
+        "address": "03EC:15C2",
+        "state": 40
+      },
+      {
+        "address": "03EC:41B3",
+        "state": 40
+      }
+    ],
+    "literal_transitions_absent_from_file": []
+  },
+  {
+    "states": [
+      130,
+      131
+    ],
+    "part": 13,
+    "cs": 996,
+    "entry": 10899,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_13.cpp",
+    "functions": 14,
+    "native_transitions": [
+      {
+        "address": "03E4:02A6",
+        "state": 121
+      },
+      {
+        "address": "03E4:02B8",
+        "state": 140
+      }
+    ],
+    "literal_transitions_absent_from_file": []
+  },
+  {
+    "states": [
+      140,
+      141,
+      142
+    ],
+    "part": 14,
+    "cs": 972,
+    "entry": 15262,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_14.cpp",
+    "functions": 25,
+    "native_transitions": [
+      {
+        "address": "03CC:016F",
+        "state": 140
+      },
+      {
+        "address": "03CC:08DB",
+        "state": 131
+      },
+      {
+        "address": "03CC:0AEB",
+        "state": 220
+      },
+      {
+        "address": "03CC:0CD7",
+        "state": 670
+      }
+    ],
+    "literal_transitions_absent_from_file": []
+  },
+  {
+    "states": [
+      150
+    ],
+    "part": 15,
+    "cs": 915,
+    "entry": 10396,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_15.cpp",
+    "functions": 30,
+    "native_transitions": [
+      {
+        "address": "0393:031B",
+        "state": 271
+      },
+      {
+        "address": "0393:0E6F",
+        "state": 780
+      },
+      {
+        "address": "0393:1228",
+        "state": 780
+      }
+    ],
+    "literal_transitions_absent_from_file": []
+  },
+  {
+    "states": [
+      160
+    ],
+    "part": 16,
+    "cs": 883,
+    "entry": 12298,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_16.cpp",
+    "functions": 16,
+    "native_transitions": [
+      {
+        "address": "0373:0231",
+        "state": 261
+      },
+      {
+        "address": "0373:0723",
+        "state": 331
+      },
+      {
+        "address": "0373:0B78",
+        "state": 261
+      }
+    ],
+    "literal_transitions_absent_from_file": []
+  },
+  {
+    "states": [
+      170,
+      171
+    ],
+    "part": 17,
+    "cs": 867,
+    "entry": 16538,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_17.cpp",
+    "functions": 25,
+    "native_transitions": [
+      {
+        "address": "0363:19ED",
+        "state": 40
+      },
+      {
+        "address": "0363:1A81",
+        "state": 302
+      }
+    ],
+    "literal_transitions_absent_from_file": []
+  },
+  {
+    "states": [
+      180,
+      181
+    ],
+    "part": 18,
+    "cs": 839,
+    "entry": 11411,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_18.cpp",
+    "functions": 21,
+    "native_transitions": [
+      {
+        "address": "0347:041C",
+        "state": 191
+      },
+      {
+        "address": "0347:06FA",
+        "state": 252
+      }
+    ],
+    "literal_transitions_absent_from_file": []
+  },
+  {
+    "states": [
+      190,
+      191
+    ],
+    "part": 19,
+    "cs": 846,
+    "entry": 13631,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_19.cpp",
+    "functions": 23,
+    "native_transitions": [
+      {
+        "address": "034E:0F0C",
+        "state": 232
+      },
+      {
+        "address": "034E:0FA3",
+        "state": 232
+      }
+    ],
+    "literal_transitions_absent_from_file": []
+  },
+  {
+    "states": [
+      210,
+      211,
+      212
+    ],
+    "part": 21,
+    "cs": 806,
+    "entry": 10325,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_21.cpp",
+    "functions": 31,
+    "native_transitions": [
+      {
+        "address": "0326:1060",
+        "state": 370
+      },
+      {
+        "address": "0326:10C8",
+        "state": 303
+      },
+      {
+        "address": "0326:1130",
+        "state": 270
+      }
+    ],
+    "literal_transitions_absent_from_file": []
+  },
+  {
+    "states": [
+      220,
+      221
+    ],
+    "part": 22,
+    "cs": 934,
+    "entry": 6340,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_22.cpp",
+    "functions": 9,
+    "native_transitions": [
+      {
+        "address": "03A6:04CC",
+        "state": 141
+      }
+    ],
+    "literal_transitions_absent_from_file": []
+  },
+  {
+    "states": [
+      230,
+      231,
+      232
+    ],
+    "part": 23,
+    "cs": 791,
+    "entry": 8028,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_23.cpp",
+    "functions": 25,
+    "native_transitions": [
+      {
+        "address": "0317:0699",
+        "state": 190
+      },
+      {
+        "address": "0317:0992",
+        "state": 280
+      },
+      {
+        "address": "0317:09A4",
+        "state": 300
+      }
+    ],
+    "literal_transitions_absent_from_file": []
+  },
+  {
+    "states": [
+      240,
+      241,
+      242
+    ],
+    "part": 24,
+    "cs": 761,
+    "entry": 8395,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_24.cpp",
+    "functions": 27,
+    "native_transitions": [
+      {
+        "address": "02F9:08A5",
+        "state": 360
+      },
+      {
+        "address": "02F9:0AA9",
+        "state": 313
+      },
+      {
+        "address": "02F9:0AFB",
+        "state": 330
+      }
+    ],
+    "literal_transitions_absent_from_file": []
+  },
+  {
+    "states": [
+      250,
+      251,
+      252
+    ],
+    "part": 25,
+    "cs": 748,
+    "entry": 11322,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_25.cpp",
+    "functions": 22,
+    "native_transitions": [
+      {
+        "address": "02EC:04A1",
+        "state": 180
+      },
+      {
+        "address": "02EC:0674",
+        "state": 260
+      },
+      {
+        "address": "02EC:0686",
+        "state": 310
+      }
+    ],
+    "literal_transitions_absent_from_file": []
+  },
+  {
+    "states": [
+      260,
+      261
+    ],
+    "part": 26,
+    "cs": 733,
+    "entry": 11982,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_26.cpp",
+    "functions": 26,
+    "native_transitions": [
+      {
+        "address": "02DD:06D7",
+        "state": 160
+      },
+      {
+        "address": "02DD:08C2",
+        "state": 250
+      }
+    ],
+    "literal_transitions_absent_from_file": []
+  },
+  {
+    "states": [
+      270,
+      271
+    ],
+    "part": 27,
+    "cs": 824,
+    "entry": 7626,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_27.cpp",
+    "functions": 23,
+    "native_transitions": [
+      {
+        "address": "0338:0792",
+        "state": 211
+      },
+      {
+        "address": "0338:07A4",
+        "state": 150
+      }
+    ],
+    "literal_transitions_absent_from_file": []
+  },
+  {
+    "states": [
+      280,
+      281
+    ],
+    "part": 28,
+    "cs": 776,
+    "entry": 13496,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_28.cpp",
+    "functions": 30,
+    "native_transitions": [
+      {
+        "address": "0308:0DBE",
+        "state": 230
+      }
+    ],
+    "literal_transitions_absent_from_file": []
+  },
+  {
+    "states": [
+      300,
+      301,
+      302,
+      303
+    ],
+    "part": 30,
+    "cs": 718,
+    "entry": 12330,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_30.cpp",
+    "functions": 21,
+    "native_transitions": [
+      {
+        "address": "02CE:06A5",
+        "state": 312
+      },
+      {
+        "address": "02CE:09FF",
+        "state": 171
+      },
+      {
+        "address": "02CE:0A07",
+        "state": 771
+      },
+      {
+        "address": "02CE:0A9E",
+        "state": 210
+      },
+      {
+        "address": "02CE:0B33",
+        "state": 231
+      }
+    ],
+    "literal_transitions_absent_from_file": [
+      171,
+      771
+    ]
+  },
+  {
+    "states": [
+      310,
+      311,
+      312,
+      313
+    ],
+    "part": 31,
+    "cs": 702,
+    "entry": 13418,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_31.cpp",
+    "functions": 32,
+    "native_transitions": [
+      {
+        "address": "02BE:0C52",
+        "state": 320
+      },
+      {
+        "address": "02BE:0D43",
+        "state": 301
+      },
+      {
+        "address": "02BE:0D55",
+        "state": 251
+      },
+      {
+        "address": "02BE:0D67",
+        "state": 240
+      }
+    ],
+    "literal_transitions_absent_from_file": []
+  },
+  {
+    "states": [
+      320
+    ],
+    "part": 32,
+    "cs": 945,
+    "entry": 6240,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_32.cpp",
+    "functions": 13,
+    "native_transitions": [
+      {
+        "address": "03B1:01F3",
+        "state": 320
+      },
+      {
+        "address": "03B1:0340",
+        "state": 311
+      }
+    ],
+    "literal_transitions_absent_from_file": []
+  },
+  {
+    "states": [
+      330,
+      331
+    ],
+    "part": 33,
+    "cs": 1079,
+    "entry": 14731,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_33.cpp",
+    "functions": 31,
+    "native_transitions": [
+      {
+        "address": "0437:018F",
+        "state": 241
+      }
+    ],
+    "literal_transitions_absent_from_file": []
+  },
+  {
+    "states": [
+      340
+    ],
+    "part": 34,
+    "cs": 671,
+    "entry": 9290,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_34.cpp",
+    "functions": 17,
+    "native_transitions": [
+      {
+        "address": "029F:0EC6",
+        "state": 351
+      }
+    ],
+    "literal_transitions_absent_from_file": []
+  },
+  {
+    "states": [
+      350,
+      351
+    ],
+    "part": 35,
+    "cs": 666,
+    "entry": 6763,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_35.cpp",
+    "functions": 15,
+    "native_transitions": [
+      {
+        "address": "029A:0464",
+        "state": 340
+      },
+      {
+        "address": "029A:04B9",
+        "state": 40
+      }
+    ],
+    "literal_transitions_absent_from_file": []
+  },
+  {
+    "states": [
+      360
+    ],
+    "part": 36,
+    "cs": 653,
+    "entry": 10792,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_36.cpp",
+    "functions": 19,
+    "native_transitions": [
+      {
+        "address": "028D:042B",
+        "state": 242
+      }
+    ],
+    "literal_transitions_absent_from_file": []
+  },
+  {
+    "states": [
+      370
+    ],
+    "part": 37,
+    "cs": 641,
+    "entry": 10226,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_37.cpp",
+    "functions": 15,
+    "native_transitions": [
+      {
+        "address": "0281:0287",
+        "state": 212
+      }
+    ],
+    "literal_transitions_absent_from_file": []
+  },
+  {
+    "states": [
+      500,
+      501
+    ],
+    "part": 50,
+    "cs": 466,
+    "entry": 10222,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_50.cpp",
+    "functions": 13,
+    "native_transitions": [
+      {
+        "address": "01D2:01F1",
+        "state": 663
+      },
+      {
+        "address": "01D2:020D",
+        "state": 700
+      }
+    ],
+    "literal_transitions_absent_from_file": []
+  },
+  {
+    "states": [
+      510
+    ],
+    "part": 51,
+    "cs": 630,
+    "entry": 6560,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_maze.cpp",
+    "functions": 11,
+    "native_transitions": [
+      {
+        "address": "0276:1CC1",
+        "state": 500
+      },
+      {
+        "address": "0276:1CC9",
+        "state": 142
+      }
+    ],
+    "literal_transitions_absent_from_file": [
+      142,
+      500
+    ]
+  },
+  {
+    "states": [
+      521
+    ],
+    "part": 52,
+    "cs": 622,
+    "entry": 6563,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_maze.cpp",
+    "functions": 11,
+    "native_transitions": [
+      {
+        "address": "026E:1CC4",
+        "state": 500
+      },
+      {
+        "address": "026E:1CCC",
+        "state": 142
+      }
+    ],
+    "literal_transitions_absent_from_file": [
+      142,
+      500
+    ]
+  },
+  {
+    "states": [
+      532
+    ],
+    "part": 53,
+    "cs": 614,
+    "entry": 6898,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_maze.cpp",
+    "functions": 10,
+    "native_transitions": [
+      {
+        "address": "0266:1DFF",
+        "state": 500
+      },
+      {
+        "address": "0266:1E07",
+        "state": 142
+      }
+    ],
+    "literal_transitions_absent_from_file": [
+      142,
+      500
+    ]
+  },
+  {
+    "states": [
+      543
+    ],
+    "part": 54,
+    "cs": 606,
+    "entry": 6520,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_maze.cpp",
+    "functions": 11,
+    "native_transitions": [
+      {
+        "address": "025E:1C8A",
+        "state": 500
+      },
+      {
+        "address": "025E:1C92",
+        "state": 142
+      }
+    ],
+    "literal_transitions_absent_from_file": [
+      142,
+      500
+    ]
+  },
+  {
+    "states": [
+      550,
+      551
+    ],
+    "part": 55,
+    "cs": 598,
+    "entry": 6851,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_maze.cpp",
+    "functions": 13,
+    "native_transitions": [
+      {
+        "address": "0256:1DE4",
+        "state": 500
+      },
+      {
+        "address": "0256:1DEC",
+        "state": 142
+      }
+    ],
+    "literal_transitions_absent_from_file": [
+      142,
+      500
+    ]
+  },
+  {
+    "states": [
+      560,
+      562
+    ],
+    "part": 56,
+    "cs": 590,
+    "entry": 7839,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_maze.cpp",
+    "functions": 13,
+    "native_transitions": [
+      {
+        "address": "024E:21DA",
+        "state": 500
+      },
+      {
+        "address": "024E:21E2",
+        "state": 142
+      }
+    ],
+    "literal_transitions_absent_from_file": [
+      142,
+      500
+    ]
+  },
+  {
+    "states": [
+      570,
+      573
+    ],
+    "part": 57,
+    "cs": 582,
+    "entry": 6919,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_maze.cpp",
+    "functions": 13,
+    "native_transitions": [
+      {
+        "address": "0246:1E44",
+        "state": 500
+      },
+      {
+        "address": "0246:1E4C",
+        "state": 142
+      }
+    ],
+    "literal_transitions_absent_from_file": [
+      142,
+      500
+    ]
+  },
+  {
+    "states": [
+      581,
+      582
+    ],
+    "part": 58,
+    "cs": 574,
+    "entry": 7839,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_maze.cpp",
+    "functions": 13,
+    "native_transitions": [
+      {
+        "address": "023E:21C8",
+        "state": 500
+      },
+      {
+        "address": "023E:21D0",
+        "state": 142
+      }
+    ],
+    "literal_transitions_absent_from_file": [
+      142,
+      500
+    ]
+  },
+  {
+    "states": [
+      591,
+      593
+    ],
+    "part": 59,
+    "cs": 566,
+    "entry": 6876,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_maze.cpp",
+    "functions": 13,
+    "native_transitions": [
+      {
+        "address": "0236:1E17",
+        "state": 500
+      },
+      {
+        "address": "0236:1E1F",
+        "state": 142
+      }
+    ],
+    "literal_transitions_absent_from_file": [
+      142,
+      500
+    ]
+  },
+  {
+    "states": [
+      602,
+      603
+    ],
+    "part": 60,
+    "cs": 558,
+    "entry": 7825,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_maze.cpp",
+    "functions": 13,
+    "native_transitions": [
+      {
+        "address": "022E:21BA",
+        "state": 500
+      },
+      {
+        "address": "022E:21C2",
+        "state": 142
+      }
+    ],
+    "literal_transitions_absent_from_file": [
+      142,
+      500
+    ]
+  },
+  {
+    "states": [
+      610,
+      611,
+      612
+    ],
+    "part": 61,
+    "cs": 550,
+    "entry": 8192,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_maze.cpp",
+    "functions": 15,
+    "native_transitions": [
+      {
+        "address": "0226:233D",
+        "state": 500
+      },
+      {
+        "address": "0226:2345",
+        "state": 142
+      }
+    ],
+    "literal_transitions_absent_from_file": [
+      142,
+      500
+    ]
+  },
+  {
+    "states": [
+      621,
+      622,
+      623
+    ],
+    "part": 62,
+    "cs": 542,
+    "entry": 8292,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_maze.cpp",
+    "functions": 15,
+    "native_transitions": [
+      {
+        "address": "021E:23B5",
+        "state": 500
+      },
+      {
+        "address": "021E:23BD",
+        "state": 142
+      }
+    ],
+    "literal_transitions_absent_from_file": [
+      142,
+      500
+    ]
+  },
+  {
+    "states": [
+      630,
+      632,
+      633
+    ],
+    "part": 63,
+    "cs": 534,
+    "entry": 8192,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_maze.cpp",
+    "functions": 15,
+    "native_transitions": [
+      {
+        "address": "0216:234F",
+        "state": 500
+      },
+      {
+        "address": "0216:2357",
+        "state": 142
+      }
+    ],
+    "literal_transitions_absent_from_file": [
+      142,
+      500
+    ]
+  },
+  {
+    "states": [
+      640,
+      641,
+      643
+    ],
+    "part": 64,
+    "cs": 526,
+    "entry": 6297,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_maze.cpp",
+    "functions": 13,
+    "native_transitions": [
+      {
+        "address": "020E:1BC2",
+        "state": 500
+      },
+      {
+        "address": "020E:1BCA",
+        "state": 142
+      }
+    ],
+    "literal_transitions_absent_from_file": [
+      142,
+      500
+    ]
+  },
+  {
+    "states": [
+      650,
+      651,
+      652,
+      653
+    ],
+    "part": 65,
+    "cs": 517,
+    "entry": 6744,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_maze.cpp",
+    "functions": 15,
+    "native_transitions": [
+      {
+        "address": "0205:1D95",
+        "state": 500
+      },
+      {
+        "address": "0205:1D9D",
+        "state": 142
+      }
+    ],
+    "literal_transitions_absent_from_file": [
+      142,
+      500
+    ]
+  },
+  {
+    "states": [
+      660,
+      663
+    ],
+    "part": 66,
+    "cs": 508,
+    "entry": 7080,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_maze.cpp",
+    "functions": 16,
+    "native_transitions": [
+      {
+        "address": "01FC:0678",
+        "state": 562
+      },
+      {
+        "address": "01FC:06CA",
+        "state": 500
+      },
+      {
+        "address": "01FC:1E8A",
+        "state": 500
+      },
+      {
+        "address": "01FC:1E92",
+        "state": 142
+      }
+    ],
+    "literal_transitions_absent_from_file": [
+      142,
+      500,
+      562
+    ]
+  },
+  {
+    "states": [
+      670,
+      671
+    ],
+    "part": 67,
+    "cs": 504,
+    "entry": 6864,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_maze.cpp",
+    "functions": 14,
+    "native_transitions": [
+      {
+        "address": "01F8:05C4",
+        "state": 142
+      },
+      {
+        "address": "01F8:061B",
+        "state": 643
+      },
+      {
+        "address": "01F8:1DAA",
+        "state": 500
+      },
+      {
+        "address": "01F8:1DB2",
+        "state": 142
+      }
+    ],
+    "literal_transitions_absent_from_file": [
+      142,
+      500,
+      643
+    ]
+  },
+  {
+    "states": [
+      680,
+      681
+    ],
+    "part": 68,
+    "cs": 474,
+    "entry": 13848,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_68.cpp",
+    "functions": 25,
+    "native_transitions": [
+      {
+        "address": "01DA:0EC2",
+        "state": 700
+      },
+      {
+        "address": "01DA:0ED9",
+        "state": 700
+      },
+      {
+        "address": "01DA:0F23",
+        "state": 710
+      }
+    ],
+    "literal_transitions_absent_from_file": []
+  },
+  {
+    "states": [
+      690
+    ],
+    "part": 69,
+    "cs": 450,
+    "entry": 11878,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_69.cpp",
+    "functions": 22,
+    "native_transitions": [
+      {
+        "address": "01C2:0883",
+        "state": 721
+      }
+    ],
+    "literal_transitions_absent_from_file": []
+  },
+  {
+    "states": [
+      700
+    ],
+    "part": 70,
+    "cs": 427,
+    "entry": 5474,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_70.cpp",
+    "functions": 12,
+    "native_transitions": [
+      {
+        "address": "01AB:000A",
+        "state": 501
+      },
+      {
+        "address": "01AB:001C",
+        "state": 720
+      },
+      {
+        "address": "01AB:002E",
+        "state": 680
+      },
+      {
+        "address": "01AB:0040",
+        "state": 810
+      }
+    ],
+    "literal_transitions_absent_from_file": [
+      501,
+      680,
+      720,
+      810
+    ]
+  },
+  {
+    "states": [
+      710
+    ],
+    "part": 71,
+    "cs": 492,
+    "entry": 6884,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_71.cpp",
+    "functions": 16,
+    "native_transitions": [
+      {
+        "address": "01EC:0534",
+        "state": 681
+      }
+    ],
+    "literal_transitions_absent_from_file": []
+  },
+  {
+    "states": [
+      720,
+      721
+    ],
+    "part": 72,
+    "cs": 438,
+    "entry": 10764,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_72.cpp",
+    "functions": 19,
+    "native_transitions": [
+      {
+        "address": "01B6:0249",
+        "state": 690
+      },
+      {
+        "address": "01B6:0260",
+        "state": 700
+      }
+    ],
+    "literal_transitions_absent_from_file": []
+  },
+  {
+    "states": [
+      730
+    ],
+    "part": 73,
+    "cs": 407,
+    "entry": 793,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_73.cpp",
+    "functions": 4,
+    "native_transitions": [
+      {
+        "address": "0197:05D6",
+        "state": 40
+      }
+    ],
+    "literal_transitions_absent_from_file": []
+  },
+  {
+    "states": [
+      740
+    ],
+    "part": 74,
+    "cs": 397,
+    "entry": 1354,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_74.cpp",
+    "functions": 5,
+    "native_transitions": [],
+    "literal_transitions_absent_from_file": []
+  },
+  {
+    "states": [
+      750
+    ],
+    "part": 75,
+    "cs": 387,
+    "entry": 1981,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_75.cpp",
+    "functions": 6,
+    "native_transitions": [
+      {
+        "address": "0183:0AF0",
+        "state": 122
+      }
+    ],
+    "literal_transitions_absent_from_file": []
+  },
+  {
+    "states": [
+      760
+    ],
+    "part": 76,
+    "cs": 372,
+    "entry": 13432,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_76.cpp",
+    "functions": 24,
+    "native_transitions": [
+      {
+        "address": "0174:0C3C",
+        "state": 790
+      }
+    ],
+    "literal_transitions_absent_from_file": []
+  },
+  {
+    "states": [
+      770,
+      771
+    ],
+    "part": 77,
+    "cs": 360,
+    "entry": 14048,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_77.cpp",
+    "functions": 20,
+    "native_transitions": [
+      {
+        "address": "0168:0659",
+        "state": 760
+      },
+      {
+        "address": "0168:10A9",
+        "state": 40
+      },
+      {
+        "address": "0168:113F",
+        "state": 302
+      }
+    ],
+    "literal_transitions_absent_from_file": [
+      40,
+      302
+    ]
+  },
+  {
+    "states": [
+      780
+    ],
+    "part": 78,
+    "cs": 346,
+    "entry": 3624,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_78.cpp",
+    "functions": 12,
+    "native_transitions": [
+      {
+        "address": "015A:1534",
+        "state": 281
+      }
+    ],
+    "literal_transitions_absent_from_file": []
+  },
+  {
+    "states": [
+      790
+    ],
+    "part": 79,
+    "cs": 308,
+    "entry": 1230,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_79.cpp",
+    "functions": 5,
+    "native_transitions": [
+      {
+        "address": "0134:0827",
+        "state": 791
+      }
+    ],
+    "literal_transitions_absent_from_file": []
+  },
+  {
+    "states": [
+      791
+    ],
+    "part": 79,
+    "cs": 286,
+    "entry": 3110,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_79.cpp",
+    "functions": 11,
+    "native_transitions": [
+      {
+        "address": "011E:20D0",
+        "state": 910
+      }
+    ],
+    "literal_transitions_absent_from_file": []
+  },
+  {
+    "states": [
+      800
+    ],
+    "part": 80,
+    "cs": 410,
+    "entry": 791,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_80.cpp",
+    "functions": 4,
+    "native_transitions": [],
+    "literal_transitions_absent_from_file": []
+  },
+  {
+    "states": [
+      810
+    ],
+    "part": 81,
+    "cs": 322,
+    "entry": 15773,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_81.cpp",
+    "functions": 25,
+    "native_transitions": [
+      {
+        "address": "0142:1365",
+        "state": 700
+      }
+    ],
+    "literal_transitions_absent_from_file": []
+  },
+  {
+    "states": [
+      850
+    ],
+    "part": 85,
+    "cs": 1217,
+    "entry": 2471,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_85.cpp",
+    "functions": 7,
+    "native_transitions": [
+      {
+        "address": "04C1:1075",
+        "state": 61
+      }
+    ],
+    "literal_transitions_absent_from_file": []
+  },
+  {
+    "states": [
+      900,
+      901,
+      902,
+      903,
+      904
+    ],
+    "part": 90,
+    "cs": 1232,
+    "entry": 46,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_90.cpp",
+    "functions": 1,
+    "native_transitions": [
+      {
+        "address": "04D0:02B4",
+        "state": 850
+      }
+    ],
+    "literal_transitions_absent_from_file": []
+  },
+  {
+    "states": [
+      910
+    ],
+    "part": 91,
+    "cs": 280,
+    "entry": 82,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_credits.cpp",
+    "functions": 1,
+    "native_transitions": [
+      {
+        "address": "0118:0330",
+        "state": 920
+      }
+    ],
+    "literal_transitions_absent_from_file": [
+      920
+    ]
+  },
+  {
+    "states": [
+      920
+    ],
+    "part": 92,
+    "cs": 274,
+    "entry": 61,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_credits.cpp",
+    "functions": 1,
+    "native_transitions": [
+      {
+        "address": "0112:029E",
+        "state": 930
+      }
+    ],
+    "literal_transitions_absent_from_file": [
+      930
+    ]
+  },
+  {
+    "states": [
+      930
+    ],
+    "part": 93,
+    "cs": 268,
+    "entry": 26,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_credits.cpp",
+    "functions": 1,
+    "native_transitions": [
+      {
+        "address": "010C:0233",
+        "state": 940
+      }
+    ],
+    "literal_transitions_absent_from_file": [
+      940
+    ]
+  },
+  {
+    "states": [
+      940
+    ],
+    "part": 94,
+    "cs": 262,
+    "entry": 32,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_credits.cpp",
+    "functions": 1,
+    "native_transitions": [
+      {
+        "address": "0106:0239",
+        "state": 950
+      }
+    ],
+    "literal_transitions_absent_from_file": [
+      950
+    ]
+  },
+  {
+    "states": [
+      950
+    ],
+    "part": 95,
+    "cs": 256,
+    "entry": 46,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_95.cpp",
+    "functions": 1,
+    "native_transitions": [
+      {
+        "address": "0100:0247",
+        "state": 960
+      }
+    ],
+    "literal_transitions_absent_from_file": [
+      960
+    ]
+  },
+  {
+    "states": [
+      960
+    ],
+    "part": 96,
+    "cs": 250,
+    "entry": 26,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_credits.cpp",
+    "functions": 1,
+    "native_transitions": [
+      {
+        "address": "00FA:0233",
+        "state": 970
+      }
+    ],
+    "literal_transitions_absent_from_file": [
+      970
+    ]
+  },
+  {
+    "states": [
+      970
+    ],
+    "part": 97,
+    "cs": 244,
+    "entry": 82,
+    "cpp_file": "/Users/gabriel/Desktop/source/scummvm-fork/engines/igor/parts/part_credits.cpp",
+    "functions": 1,
+    "native_transitions": [
+      {
+        "address": "00F4:02F7",
+        "state": 900
+      },
+      {
+        "address": "00F4:02FF",
+        "state": 910
+      }
+    ],
+    "literal_transitions_absent_from_file": [
+      900,
+      910
+    ]
+  }
+]

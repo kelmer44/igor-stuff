@@ -1,0 +1,2125 @@
+{
+  "dialogues": [
+    {
+      "name": "DLG_SpringPhotographer",
+      "layout": [
+        135,
+        30,
+        5158,
+        100,
+        60,
+        240,
+        15458,
+        15518,
+        35
+      ],
+      "floppy_size": 15460,
+      "cd_size": 15590,
+      "matrix_prefix_size": 340,
+      "matrix_prefix_identical": true,
+      "invalid_strings": []
+    },
+    {
+      "name": "DLG_DeanPepperOffice",
+      "layout": [
+        165,
+        30,
+        5188,
+        100,
+        90,
+        270,
+        15488,
+        15548,
+        100
+      ],
+      "floppy_size": 15490,
+      "cd_size": 15750,
+      "matrix_prefix_size": 370,
+      "matrix_prefix_identical": true,
+      "invalid_strings": []
+    },
+    {
+      "name": "DLG_AdministrationSecretaryRoom",
+      "layout": [
+        378,
+        29,
+        5237,
+        46,
+        120,
+        480,
+        10029,
+        10087,
+        46
+      ],
+      "floppy_size": 10031,
+      "cd_size": 10181,
+      "matrix_prefix_size": 583,
+      "matrix_prefix_identical": true,
+      "invalid_strings": []
+    },
+    {
+      "name": "DLG_OutsideChurch",
+      "layout": [
+        -85,
+        15,
+        2478,
+        25,
+        30,
+        60,
+        5230,
+        5260,
+        25
+      ],
+      "floppy_size": 5130,
+      "cd_size": 5314,
+      "matrix_prefix_size": 120,
+      "matrix_prefix_identical": false,
+      "invalid_strings": []
+    },
+    {
+      "name": "DLG_TobiasOffice",
+      "layout": [
+        45,
+        22,
+        3756,
+        66,
+        60,
+        180,
+        10588,
+        10632,
+        66
+      ],
+      "floppy_size": 10590,
+      "cd_size": 10766,
+      "matrix_prefix_size": 250,
+      "matrix_prefix_identical": true,
+      "invalid_strings": []
+    },
+    {
+      "name": "DLG_OutsideCollege",
+      "layout": [
+        -174,
+        5,
+        257,
+        1,
+        30,
+        0,
+        0,
+        0,
+        0
+      ],
+      "floppy_size": 953,
+      "cd_size": 965,
+      "matrix_prefix_size": 31,
+      "matrix_prefix_identical": true,
+      "invalid_strings": [
+        [
+          "reply",
+          0,
+          1,
+          0,
+          410
+        ]
+      ]
+    },
+    {
+      "name": "DLG_CollegeCorridorMargaret",
+      "layout": [
+        -85,
+        10,
+        1658,
+        50,
+        30,
+        90,
+        0,
+        0,
+        0
+      ],
+      "floppy_size": 6860,
+      "cd_size": 6980,
+      "matrix_prefix_size": 120,
+      "matrix_prefix_identical": true,
+      "invalid_strings": []
+    },
+    {
+      "name": "DLG_CollegeStairsFirstFloor",
+      "layout": [
+        -90,
+        9,
+        1489,
+        11,
+        30,
+        90,
+        2711,
+        2729,
+        11
+      ],
+      "floppy_size": 2713,
+      "cd_size": 2753,
+      "matrix_prefix_size": 115,
+      "matrix_prefix_identical": true,
+      "invalid_strings": []
+    },
+    {
+      "name": "DLG_Library",
+      "layout": [
+        -46,
+        9,
+        1533,
+        19,
+        60,
+        120,
+        3571,
+        3589,
+        19
+      ],
+      "floppy_size": 3573,
+      "cd_size": 3629,
+      "matrix_prefix_size": 159,
+      "matrix_prefix_identical": true,
+      "invalid_strings": []
+    },
+    {
+      "name": "DLG_Part68",
+      "layout": [
+        -75,
+        21,
+        3472,
+        100,
+        30,
+        60,
+        13772,
+        13814,
+        100
+      ],
+      "floppy_size": 13774,
+      "cd_size": 14016,
+      "matrix_prefix_size": 130,
+      "matrix_prefix_identical": true,
+      "invalid_strings": []
+    },
+    {
+      "name": "DLG_Part81",
+      "layout": [
+        -125,
+        10,
+        1618,
+        50,
+        30,
+        30,
+        6818,
+        6838,
+        50
+      ],
+      "floppy_size": 6820,
+      "cd_size": 6940,
+      "matrix_prefix_size": 80,
+      "matrix_prefix_identical": true,
+      "invalid_strings": []
+    },
+    {
+      "name": "DLG_ParkLady",
+      "layout": [
+        -162,
+        3,
+        433,
+        10,
+        30,
+        30
+      ],
+      "floppy_size": 1555,
+      "cd_size": 1581,
+      "matrix_prefix_size": 43,
+      "matrix_prefix_identical": true,
+      "invalid_strings": []
+    },
+    {
+      "name": "DLG_ParkLaura",
+      "layout": [
+        -131,
+        7,
+        1120,
+        16,
+        30,
+        60
+      ],
+      "floppy_size": 2854,
+      "cd_size": 2900,
+      "matrix_prefix_size": 74,
+      "matrix_prefix_identical": true,
+      "invalid_strings": []
+    },
+    {
+      "name": "DLG_Part8Intercom",
+      "layout": [
+        -174,
+        2,
+        257,
+        0,
+        30,
+        0
+      ],
+      "floppy_size": 461,
+      "cd_size": 467,
+      "matrix_prefix_size": 31,
+      "matrix_prefix_identical": true,
+      "invalid_strings": []
+    }
+  ],
+  "room_text_count": 67,
+  "room_walk_prefixes_identical": 67,
+  "special_room_texts": [
+    "TXT_Part79",
+    "TXT_Part79b",
+    "TXT_Credits1",
+    "TXT_Credits2",
+    "TXT_Credits3",
+    "TXT_Credits4",
+    "TXT_Credits5",
+    "TXT_Credits6",
+    "TXT_Credits7"
+  ],
+  "sound_voc_headers": 63,
+  "room_texts": {
+    "TXT_PhilipRoom": {
+      "walk_prefix_identical": true,
+      "objects": {},
+      "texts": {
+        "201": "I didn%t remember...",
+        "202": "...that I had a bottle of vodka",
+        "203": "in my locker...",
+        "204": "...it could be from a secret admirer.",
+        "205": "Yuck! This vodka tastes like...",
+        "206": "...like...",
+        "207": "Puajjjjjj!",
+        "208": "Ooooooooohhh!",
+        "209": "Arjjjjjjjj!",
+        "210": "BLEEEE!... BLIIII!... BLEEEE!..."
+      }
+    },
+    "TXT_PhysicsClassroom": {
+      "walk_prefix_identical": true,
+      "objects": {
+        "1": " door",
+        "2": " papercase",
+        "3": " blackboard",
+        "4": " desk"
+      },
+      "texts": {
+        "201": "There%s a paper, I%ll take it.",
+        "202": "It%s empty.",
+        "203": "I must confess that physics",
+        "204": "is not exactly my speciality.",
+        "205": "It%s the professor%s.",
+        "206": "I have nothing to throw away.",
+        "207": "I hate chalk."
+      }
+    },
+    "TXT_ChemistryClassroom": {
+      "walk_prefix_identical": true,
+      "objects": {
+        "1": " desk",
+        "2": " pen",
+        "3": " picture",
+        "4": " blackboard",
+        "5": " closet",
+        "6": " door"
+      },
+      "texts": {
+        "201": "It%s the professor%s desk.",
+        "202": "The chemistry professor must have left it.",
+        "203": "It%s a so and so Pasteur.",
+        "204": "To tell the truth,",
+        "205": "chemistry is not my forte.",
+        "206": "The chemistry professor keeps his notes",
+        "207": "and other junk here.",
+        "208": "It%s locked.",
+        "209": "I have nothing to write."
+      }
+    },
+    "TXT_CollegeStairsSecondFloor": {
+      "walk_prefix_identical": true,
+      "objects": {
+        "1": " corridor",
+        "2": " door",
+        "3": " stairs",
+        "4": " corridor",
+        "5": " plaque",
+        "6": " glass case",
+        "7": " glass case",
+        "8": " Johnny"
+      },
+      "texts": {
+        "201": "It leads to the astronomy observatory.",
+        "202": "It%s locked.",
+        "203": "It leads downstairs.",
+        "204": "Astronomy observatory.",
+        "205": "No, I better leave it open.",
+        "206": "I think it%s the first presinaptic pamphlet",
+        "207": "that was ever written.",
+        "208": "I don%t know what it is exactly...",
+        "209": "...but it must be some old",
+        "210": "astronomical instrument.",
+        "211": "Hey Johnny! How%s it going?",
+        "212": "come on buddy!",
+        "213": "I%m not going to hit you...",
+        "214": "I prefer not to beat up on a weakling...",
+        "215": "...if I don%t have to.",
+        "218": "I think that that would only",
+        "219": "scare him more.",
+        "220": "He%s \"Quivering\" Johnny. He%s that way because",
+        "221": "since he was a child,",
+        "222": "they%ve been beating up on him."
+      }
+    },
+    "TXT_CollegeStairsFirstFloor": {
+      "walk_prefix_identical": true,
+      "objects": {
+        "1": " corridor",
+        "2": " stairs",
+        "3": " stairs",
+        "4": " corridor"
+      },
+      "texts": {
+        "201": "It leads to the upstairs floor.",
+        "202": "It leads to the outside.",
+        "203": "Ex...ex...excuse me...",
+        "204": "La...Laura,",
+        "205": "I didn%t seen you.",
+        "206": "Clutz! It had to be you...",
+        "207": "I%ve never been described so well.",
+        "208": "At least you%re funny...",
+        "209": "...but now I%m in a hurry, bye bye.",
+        "210": "What a character!"
+      }
+    },
+    "TXT_CollegeCorridorMissBarrymore": {
+      "walk_prefix_identical": true,
+      "objects": {
+        "1": " plaque",
+        "2": " door",
+        "3": " sketch",
+        "4": " door",
+        "5": " Miss Barrymore"
+      },
+      "texts": {
+        "202": "Laboratory.",
+        "203": "It leads to the laboratory.",
+        "212": "I didn%t think they were ever going to leave...",
+        "213": "...but it was worth it",
+        "214": "to be hidden all this time...",
+        "215": "to get such a nice photo!",
+        "216": "Bother Miss Barrymore?",
+        "217": "She%s such an hysterical woman...",
+        "218": "...I would be crazy!",
+        "219": "I don%t think she%s going to like it.",
+        "220": "She%s Miss Barrymore.",
+        "221": "She teaches algebra and calculus...",
+        "222": "...she%s a witch.",
+        "223": "She isn%t my type.",
+        "224": "I think it%s one of those sketches",
+        "225": "by Leonardo da Vinci."
+      }
+    },
+    "TXT_CollegeCorridorAnnouncementBoard": {
+      "walk_prefix_identical": true,
+      "objects": {
+        "1": " corridor",
+        "2": " announcement board",
+        "3": " door",
+        "4": " corridor"
+      },
+      "texts": {
+        "201": "I don%t have any announcement to put up.",
+        "203": "It leads to the boys% bathroom.",
+        "204": "Redhead with nice personality is looking for",
+        "205": "an eating companion.",
+        "207": "If you have food left over...",
+        "208": "don%t throw it away!",
+        "209": "give it to me!",
+        "210": "New dieting technique...",
+        "211": "eat until you burst!"
+      }
+    },
+    "TXT_CollegeCorridorSharonMichael": {
+      "walk_prefix_identical": true,
+      "objects": {
+        "1": " corridor",
+        "2": " door",
+        "3": " plaque",
+        "4": " library",
+        "5": " plaque",
+        "6": " Sharon and Michael"
+      },
+      "texts": {
+        "201": "It leads to the chemistry classroom.",
+        "202": "Chemistry classroom.",
+        "203": "Library.",
+        "204": "I don%t want to take part in their conversation...",
+        "205": "...they only know how to talk about their studies.",
+        "206": "They%re nice nerds, but I don%t have",
+        "207": "any use for them.",
+        "208": "They always seem to be studying",
+        "209": "in the library.",
+        "210": "It looks like they left to argue about",
+        "211": "one of their theories.",
+        "212": "I%m not going to get anything",
+        "213": "out of those two eggheads."
+      }
+    },
+    "TXT_CollegeCorridorCaroline": {
+      "walk_prefix_identical": true,
+      "objects": {
+        "1": " plaque",
+        "2": " door",
+        "3": " folder",
+        "4": " Caroline",
+        "5": " announcement board",
+        "6": " plant",
+        "7": " corridor"
+      },
+      "texts": {
+        "201": "Examination classroom.",
+        "202": "It leads to the examination classroom.",
+        "203": "It must be Caroline%s folder.",
+        "204": "If she keeps on crying, she%ll dry up.",
+        "205": "None of my grades are posted...",
+        "206": "...and it%s better that they aren%t.",
+        "207": "What%s the matter with you?",
+        "208": "Leave me alone, I just flunked my exam.",
+        "209": "I hope that Philip can%t go",
+        "210": "on the trip either...",
+        "211": "Yes, my folder was stolen...",
+        "212": "...and I couldn%t study...",
+        "213": "...so I did terrible",
+        "214": "on the exam...",
+        "215": "how awful!",
+        "216": "I can%t go on the trip!",
+        "217": "If I only knew the scumbag that stole my folder!",
+        "218": "Are you still here?",
+        "219": "Yes, besides failing,",
+        "220": "my folder was stolen!",
+        "221": "I%m history!",
+        "222": "It%s better if she doesn%t know",
+        "223": "that I was the one who stole her folder.",
+        "224": "Just thinking about of Philip being with Laura",
+        "225": "on Uikokahonia makes me sick!",
+        "226": "She would find out that it was me who stole it.",
+        "227": "No, it%s still useful to me.",
+        "228": "It%s the examination classroom and...",
+        "229": "...I%m not interested in going in.",
+        "230": "She%s not going to like it when she finds out.",
+        "231": "Darn it! Philip passed!",
+        "232": "Now more than ever I have to get to",
+        "233": "Uikokahonia anyway I can!",
+        "234": "Now failing isn%t important.",
+        "235": "That girl?",
+        "236": "I couldn%t bear to hear her histerical screaming.",
+        "237": "Typical corridor plant."
+      }
+    },
+    "TXT_CollegeCorridorLucas": {
+      "walk_prefix_identical": true,
+      "objects": {
+        "1": " corridor",
+        "2": " class picture",
+        "3": " Lucas",
+        "4": " door",
+        "5": " corridor"
+      },
+      "texts": {
+        "201": "It%s the class picture from 1953,",
+        "202": "and I think the one in the center is Dean Peeper.",
+        "203": "He seems to be totally wrapped up in his game...",
+        "204": "...I%d better not bother him.",
+        "205": "It leads to the girls% bathroom.",
+        "206": "I can%t go in unless I get rid",
+        "207": "of those girls.",
+        "208": "He%s playing with one of those",
+        "209": "handheld videogames.",
+        "210": "My slogan is:",
+        "211": "Be good to others so that they%ll be kind to you.",
+        "212": "I don%t think I%ll distract him with this."
+      }
+    },
+    "TXT_CollegeCorridorMargaret": {
+      "walk_prefix_identical": true,
+      "objects": {
+        "1": " corridor",
+        "2": " Margaret",
+        "3": " sandwiches",
+        "4": " door",
+        "5": " plaque",
+        "6": " corridor"
+      },
+      "texts": {
+        "201": "She certainly has a healthy appetite.",
+        "202": "I don%t think she%ll let me.",
+        "203": "They look really good.",
+        "204": "It leads to the physics classroom.",
+        "205": "Physics classroom.",
+        "206": "I%m not interested.",
+        "207": "I don%t need this.",
+        "208": "I%ll change Laura%s name to Margaret...",
+        "209": "...and spice it up a little bit.",
+        "210": "I hope she doesn%t eat the sandwich",
+        "211": "without noticing the note.",
+        "212": "Mmmm, what%s this?",
+        "213": "It looks like a note...",
+        "214": "It reads:",
+        "215": "\"My darling Margaret,",
+        "216": "I can%t live without you,",
+        "217": "I%ll wait for your sweet face in the laboratory",
+        "218": "at the end of the day\".",
+        "219": "and it%s from...",
+        "220": "PHILIP!!!",
+        "221": "Thank you God!",
+        "222": "I don%t think she%ll be interested in this.",
+        "223": "I can%t give her the note like it is,",
+        "224": "or she%ll realize it%s for Laura.",
+        "226": "Hi Margaret.",
+        "227": "GROUNFCH?"
+      }
+    },
+    "TXT_CollegeLockers": {
+      "walk_prefix_identical": true,
+      "objects": {
+        "1": " corridor",
+        "2": " lockers",
+        "3": " Philip%s locker",
+        "4": " bottles",
+        "5": " announcement board",
+        "6": " plaque",
+        "7": " janitor%s room"
+      },
+      "texts": {
+        "201": "Each student has their own.",
+        "203": "I don%t know the combination to any of them.",
+        "204": "They%re all locked.",
+        "205": "Certain creeps shouldn%t have lockers.",
+        "206": "I don%t know what the combination is.",
+        "207": "I%m gonna take this little bottle of whisky.",
+        "208": "I think I don%t need anymore right now.",
+        "209": "I%ll use the combination",
+        "210": "that%s written in Philip%s folder",
+        "211": "to open it.",
+        "212": "I%ll put this flask here...",
+        "213": "...I%m sure that idiot will",
+        "214": "think it%s vodka.",
+        "215": "There are all kinds of liquor here.",
+        "216": "I believe that the last one on the right",
+        "217": "belongs to Philip.",
+        "218": "It%s very dirty,",
+        "219": "I can%t make out any announcement.",
+        "220": "It says:",
+        "221": "Janitor%s room."
+      }
+    },
+    "TXT_WomenToilets": {
+      "walk_prefix_identical": true,
+      "objects": {
+        "1": " door",
+        "2": " door",
+        "3": " door",
+        "4": " hand dryer",
+        "5": " sinks",
+        "6": " door"
+      },
+      "texts": {
+        "201": "Nothing special here.",
+        "202": "There%s someone in here!",
+        "203": "Wait a minute, please!",
+        "204": "I%m leaving!",
+        "205": "This works very well.",
+        "206": "There%s a bobby pin here.",
+        "207": "I%ll take it with me.",
+        "208": "It%s not the right time.",
+        "209": "Wow!, this seems interesting...",
+        "210": "This isn%t going to work.",
+        "211": "Nothing new here.",
+        "212": "...keep in mind that the animals",
+        "213": "that live among us",
+        "214": "are totally defenceless.",
+        "215": "Yes, it%s really a problem.",
+        "216": "We should do everything we can",
+        "217": "to protect them.",
+        "218": "What have you done? How could you be so careless?",
+        "219": "It%s true. How could I have been so careless?",
+        "220": "I%m really sorry...",
+        "221": "No, I said it because you got",
+        "222": "your shoe dirty.",
+        "223": "Well, you%re right. I%ll clean it up...",
+        "224": "Come with me to my room.",
+        "225": "Excuse me. I opened the wrong door."
+      }
+    },
+    "TXT_MenToilets": {
+      "walk_prefix_identical": true,
+      "objects": {
+        "1": " grate",
+        "2": " door",
+        "3": " door",
+        "4": " door",
+        "5": " hand dryer",
+        "6": " door",
+        "7": " faucet"
+      },
+      "texts": {
+        "201": "It leads to the floor downstairs.",
+        "202": "It%s nothing special.",
+        "204": "It leads to the corridor.",
+        "205": "Wait a minute, please!",
+        "206": "I%m leaving right now!",
+        "207": "It%s occupied!",
+        "208": "It doesn%t work.",
+        "209": "It%s a typical faucet.",
+        "210": "I don%t want to waste water.",
+        "211": "It%s already full of whisky.",
+        "212": "Now it%s full of water.",
+        "213": "OK.",
+        "214": "I filled it with water to the top.",
+        "215": "These girls must have left there."
+      }
+    },
+    "TXT_OutsideCollege": {
+      "walk_prefix_identical": true,
+      "objects": {
+        "1": " door",
+        "2": " Philip and Jimmy",
+        "3": " Philip%s folder",
+        "4": " path"
+      },
+      "texts": {
+        "201": "...don%t forget about the drinks",
+        "202": "for the party.",
+        "203": "Don%t worry.",
+        "204": "I always keep a bottle",
+        "205": "of whisky in my locker...",
+        "206": "...so you managed to get Laura Wright",
+        "207": "to play tennis with you.",
+        "208": "Yes, I have her wrapped around my little finger.",
+        "209": "You know that women find me irresistible...",
+        "210": "...I%ve heard you bought a Corvette.",
+        "212": "Yes, the Ferrari is already nine months old",
+        "213": "and I like new cars.",
+        "214": "Besides, the color is no longer vogue.",
+        "215": "What are you looking at, buttmunch?",
+        "216": "Have you lost something, creep?",
+        "217": "Any problem, lad?",
+        "218": "You%re not spying, worm, are you?",
+        "219": "I%m not going to stoop down to his level.",
+        "220": "I think that at the moment,",
+        "221": "maintaining some distance between that folder",
+        "222": "and myself would be better for my health.",
+        "223": "I don%t think he noticed",
+        "224": "the switch.",
+        "225": "It leads to the inside.",
+        "226": "Better not tempt luck."
+      }
+    },
+    "TXT_Laboratory": {
+      "walk_prefix_identical": true,
+      "objects": {
+        "1": " laboratory instruments",
+        "2": " door"
+      },
+      "texts": {
+        "201": "Let%s see...",
+        "202": "...back here there%s a bottle of vodka.",
+        "203": "I%ll take it with me.",
+        "204": "It%s a flask full of...",
+        "205": "...well, I don%t know what it is but it looks",
+        "206": "like it could put anybody in a trance.",
+        "207": "One flask is enough.",
+        "208": "There are all kinds of",
+        "209": "laboratory instruments.",
+        "210": "Well...",
+        "211": "...I%ve already given them the notes...",
+        "212": "...I%ve gotten the camera...",
+        "213": "...and it%s time.",
+        "214": "I will hide around here.",
+        "215": "Professor!?...",
+        "216": "...Professor!?...",
+        "217": "It seems he%s not here...",
+        "218": "Hi sweetie!,",
+        "219": "I%ve been waiting for this moment for a long time.",
+        "220": "What?...",
+        "221": "...you%re not...",
+        "222": "Yes, yes, I am,",
+        "223": "come here my little darling..."
+      }
+    },
+    "TXT_MargaretRoom": {
+      "walk_prefix_identical": true,
+      "objects": {},
+      "texts": {
+        "201": "I want to make myself look spiffy.",
+        "202": "I don%t want to let this opportunity go by!",
+        "203": "This bow will be a cute added touch...",
+        "204": "I don%t know, I don%t know...",
+        "205": "...Perhaps it%s the time for a SEXY look...",
+        "206": "...Something hot and wilder.",
+        "207": "Perhaps a happy hippy look.",
+        "208": "The 60%s look is perfect...",
+        "209": "...It suits me. I%m breathtaking!",
+        "210": "Hmmmm, I don%t know...",
+        "211": "...it could be too much...",
+        "212": "...I%m not sure if he would like this.",
+        "213": "The southern belle look seems great.",
+        "214": "But...",
+        "215": "Will he like this?",
+        "216": "Perhaps is too elegant...",
+        "217": "I think I%ll try the Cher look...",
+        "218": "...with style but very SEXY...",
+        "219": "I%ll be irresistible!!!",
+        "220": "I%ve decided...",
+        "221": "The \"Breakfast at Tiffany%s\" look is the best one.",
+        "222": "...When he sees me he%ll flip.",
+        "223": "I don%t know...",
+        "224": "...I think I%ll go with a natural look.",
+        "225": "My great personality makes up for everything."
+      }
+    },
+    "TXT_Map": {
+      "walk_prefix_identical": true,
+      "objects": {
+        "1": " church",
+        "2": " student dormitory",
+        "3": " park",
+        "4": " administration building",
+        "5": " faculty",
+        "6": " spring"
+      },
+      "texts": {}
+    },
+    "TXT_TobiasOffice": {
+      "walk_prefix_identical": true,
+      "objects": {
+        "1": " door",
+        "2": " cuckoo clock",
+        "3": " Tobias",
+        "4": " keyrack"
+      },
+      "texts": {
+        "201": "It%s Tobias Jennings.",
+        "202": "No one knows as many old stories about the faculty",
+        "203": "as he does.",
+        "204": "It leads to the corridor.",
+        "205": "I can%t reach it.",
+        "206": "If I only had a stepladder.",
+        "207": "It%s a very old rustic clock.",
+        "208": "Don%t even think about it.",
+        "209": "Mr. Jennings...",
+        "210": "...I%m bringing you the biology project.",
+        "211": "...here%s the money for the biology trip.",
+        "212": "Tell me your name, please.",
+        "213": "Igor Parker.",
+        "214": "Wait a moment...",
+        "215": "...I%m sorry, but I can%t find your name on",
+        "216": "the list of the students enrolled in biology.",
+        "217": "I can%t take it.",
+        "218": "...yes, I see you%re enrolled in biology.",
+        "219": "It%s OK.",
+        "220": "Give me the project.",
+        "221": "Remember that you still haven%t given me",
+        "222": "the money for the trip.",
+        "223": "Give me the money.",
+        "224": "Remember that you still haven%t given me",
+        "225": "the biology project.",
+        "226": "Good. Everything is arranged.",
+        "227": "You only have one requirement left...",
+        "228": "Requirement?, which requirement?",
+        "229": "To pass the exam, of course...",
+        "230": "EXAM!? DID YOU SAID EXAM!?",
+        "234": "He%s not sexy enough for me.",
+        "235": "I can%t take it with me...",
+        "236": "...specially with Tobias around.",
+        "237": "All the faculty keys",
+        "238": "must be hung there.",
+        "239": "That guy wouldn%t let me touch it.",
+        "240": "I don%t think it would interest him."
+      }
+    },
+    "TXT_BellChurch": {
+      "walk_prefix_identical": true,
+      "objects": {
+        "1": " bell",
+        "2": " stairs"
+      },
+      "texts": {
+        "201": "It%s huge! Its sound must be heard",
+        "202": "miles away.",
+        "203": "I%ll take a look inside the bell",
+        "204": "to see what they have hidden in it...",
+        "205": "Hey! There%s a note that reads:",
+        "206": "\"Don%t come home late. Mom is waiting for you\"."
+      }
+    },
+    "TXT_ChurchPuzzle": {
+      "walk_prefix_identical": true,
+      "objects": {
+        "1": " stairs",
+        "2": " mosaic",
+        "3": " candles",
+        "4": " church",
+        "5": " passage"
+      },
+      "texts": {
+        "201": "It leads to the belfry.",
+        "202": "They%re all out.",
+        "203": "It%s very dark.",
+        "204": "Nothing seems to be happening.",
+        "205": "Hi.",
+        "206": "Hi!, I didn%t hear you come in.",
+        "207": "Who are you?",
+        "208": "I%m Friar Anthony Mails,",
+        "209": "and I%ve come to bring you a gift.",
+        "210": "Me?, why?...",
+        "211": "Well it so happens that you are the one millionth",
+        "212": "person to light one of these candles.",
+        "213": "And we have a special gift",
+        "214": "for you:",
+        "215": "a 14th century vellum!",
+        "216": "Here you are. Congratulations!",
+        "217": "Good...",
+        "218": "...well...",
+        "219": "...thanks, but...",
+        "220": "Hey, look behind you!",
+        "221": "Your candle has gone out.",
+        "222": "I don%t know. It must have been the wind...",
+        "223": "Friar Anthony! Where are you?...",
+        "224": "...I guess he left.",
+        "225": "What a strange guy!",
+        "226": "It%s the last match in the box."
+      }
+    },
+    "TXT_InsideChurch": {
+      "walk_prefix_identical": true,
+      "objects": {
+        "1": " pulpit",
+        "2": " stain glass window",
+        "4": " door"
+      },
+      "texts": {
+        "201": "The light illuminates part",
+        "202": "of the church.",
+        "203": "I don%t see anything interesting around here."
+      }
+    },
+    "TXT_OutsideChurch": {
+      "walk_prefix_identical": true,
+      "objects": {
+        "1": " entrance",
+        "2": " path",
+        "3": " stone",
+        "4": " door"
+      },
+      "texts": {
+        "201": "Late 13th century Romanesque church.",
+        "203": "It looks like there was",
+        "204": "a lizard around here.",
+        "205": "I can barely see the resin.",
+        "206": "I better leave it open.",
+        "207": "I don%t see anyone",
+        "208": "inside the church.",
+        "209": "Nothing can be noted.",
+        "210": "I think that I should hide now...",
+        "211": "There isn%t a creature alive that can resist me.",
+        "212": "I%m in a hurry!",
+        "213": "There%s a posessed student on campus...",
+        "214": "...I%ve always wanted to perform...",
+        "215": "an exorcism!",
+        "216": "I think I should go to the police",
+        "217": "station first...",
+        "218": "...I bet I get a huge reward!!"
+      }
+    },
+    "TXT_SpringBridge": {
+      "walk_prefix_identical": true,
+      "objects": {
+        "1": " water",
+        "3": " note",
+        "4": " path"
+      },
+      "texts": {
+        "201": "It must be very cold",
+        "202": "coming directly from the mountain.",
+        "203": "I%m sure that idiot Philip",
+        "204": "must have dropped it."
+      }
+    },
+    "TXT_Library": {
+      "walk_prefix_identical": true,
+      "objects": {
+        "1": " books",
+        "2": " books",
+        "3": " books",
+        "4": " books",
+        "5": " books",
+        "6": " books",
+        "7": " books",
+        "8": " books",
+        "9": " Harrison",
+        "10": " door"
+      },
+      "texts": {
+        "201": "I don%t know which of these will be interesting.",
+        "202": "These are about History.",
+        "203": "These are about Physics.",
+        "204": "These are about Chemistry.",
+        "205": "These are about Geography.",
+        "206": "These are about Algebra.",
+        "207": "These are about Art.",
+        "208": "These are about Astronomy.",
+        "209": "These are about Philosophy.",
+        "210": "%The galaxy MJ-78%.",
+        "211": "Man! This is the galaxy",
+        "212": "that they are talking about in the newspaper.",
+        "213": "He%s a nerd.",
+        "214": "He spends his life here.",
+        "215": "Take this.",
+        "216": "Professor Morrissey told me to give this to you.",
+        "217": "Come to the laboratory at the end of the day",
+        "218": "to finish the experiment.",
+        "219": "Thank you very much, Igor.",
+        "220": "Hey! It%s time,",
+        "221": "I must go to the laboratory.",
+        "222": "Nothing here interests me.",
+        "223": "Look at the little gift that I%ve brought you...",
+        "224": "What is it?",
+        "225": "BUT, HOW!? WAS IT YOU?",
+        "226": "Ha ha, tear it up if you like, I have more copies.",
+        "227": "No, what I want to do is to thank you.",
+        "228": "What??? how??? but...",
+        "229": "Yes, you%ve made me the happiest man",
+        "230": "in the world by fixing me up with Margaret.",
+        "231": "Thanks Igor, to reward you",
+        "232": "I%ll give you this biology project.",
+        "233": "I%m going to finish some things",
+        "234": "and then I%m going to run and show it to Margaret."
+      }
+    },
+    "TXT_SpringBridgeIntro": {
+      "walk_prefix_identical": true,
+      "objects": {},
+      "texts": {
+        "201": "Well Laura, you%re getting better.",
+        "202": "But I still have to give you more tennis lessons",
+        "203": "to improve your game.",
+        "204": "Perhaps we can meet tomorrow and...",
+        "205": "I don%t think I can.",
+        "206": "Besides, all I want is",
+        "207": "to get myself in shape for the biology trip.",
+        "208": "Are you going on that trip?",
+        "209": "Of course,",
+        "210": "I wouldn%t miss it for anything.",
+        "211": "It%s the opportunity of a lifetime!",
+        "212": "We%re going to explore the island.",
+        "213": "We%re going to study indigenous fauna...",
+        "214": "...and we%re going to sunbathe on the beach!",
+        "215": "Hmmm. Thinking about it...",
+        "216": "...I could go surfing during the day",
+        "217": "and have barbecues on the beach at night.",
+        "218": "Yes, I think I%ll go on the trip!",
+        "219": "If you fulfill the requirements,",
+        "220": "why not?",
+        "221": "Well, it%s getting late.",
+        "222": "Let%s go or I%ll be late for my classes.",
+        "223": "I can%t stand seeing Laura Wright",
+        "224": "with that stupid jerk Philip Goolash.",
+        "225": "And on top of everything.",
+        "226": "He%s going on the biology trip with Laura!",
+        "227": "I must go on to the trip",
+        "228": "and stop that pig from getting close",
+        "229": "to Laura."
+      }
+    },
+    "TXT_SpringRock": {
+      "walk_prefix_identical": true,
+      "objects": {
+        "1": " water",
+        "3": " photographer",
+        "4": " camera"
+      },
+      "texts": {
+        "201": "It must be very cold",
+        "202": "coming directly from the mountain.",
+        "203": "He must be looking for something.",
+        "204": "It seems to be one of those instant cameras.",
+        "205": "Perhaps this will interest you...",
+        "206": "No, thanks.",
+        "207": "That%s not what I%m looking for.",
+        "208": "Look at this. I think that it",
+        "209": "may interest you.",
+        "210": "It%s red, has white stripes",
+        "211": "and it flies.",
+        "212": "I don%t know. Let me see it...",
+        "213": "You can never tell when one of these things",
+        "214": "will go off.",
+        "215": "Excuse me...",
+        "216": "Yes?"
+      }
+    },
+    "TXT_Park": {
+      "walk_prefix_identical": true,
+      "objects": {
+        "1": " statue",
+        "2": " tree",
+        "3": " resin",
+        "4": " old woman"
+      },
+      "texts": {
+        "201": "It%s the founder of",
+        "202": "the university: Salvor Hardin.",
+        "203": "I don%t know what kind of tree it is,",
+        "204": "but it%s covered with resin.",
+        "205": "It%s very sticky.",
+        "206": "I%ve never seen her",
+        "207": "on campus before.",
+        "208": "Podr\u00eda verme alguien y eso",
+        "209": "est\u00e1 prohibid\u00edsimo.",
+        "210": "No, I have enough.",
+        "211": "Look here ma%am,",
+        "212": "I think I found your kitten.",
+        "213": "No, that%s not my kitten.",
+        "216": "Thank you anyway, young man!",
+        "217": "RENATO!!!",
+        "218": "I have found you at last!",
+        "219": "Thank you very much, young man.",
+        "220": "You have been very kind.",
+        "221": "To thank you, I am going to give you",
+        "222": "a firecracker.",
+        "223": "I carry it in my bag.",
+        "224": "Here you are, but be careful",
+        "225": "because it%s very powerful.",
+        "226": "Thank you, ma%am.",
+        "227": "I must hurry to feed Renato.",
+        "228": "The poor thing must be very hungry.",
+        "229": "Good bye young man.",
+        "230": "Good bye ma%am."
+      }
+    },
+    "TXT_AdministrationSecretaryRoom": {
+      "walk_prefix_identical": true,
+      "objects": {
+        "1": " file cabinet",
+        "2": " secretary",
+        "3": " closet",
+        "4": " intercom",
+        "5": " monkey costume",
+        "6": " door"
+      },
+      "texts": {
+        "201": "That%s where she keeps",
+        "202": "all of the files.",
+        "203": "She seems to be very busy.",
+        "205": "I wonder, what does she keep here?",
+        "207": "The dean uses it when he wants something...",
+        "208": "...or when he%s bored.",
+        "209": "What does she use",
+        "210": "this for?",
+        "211": "It leads to the lobby.",
+        "212": "I%ve got it!",
+        "213": "It%s locked.",
+        "214": "I can%t do it",
+        "215": "without Miss Pickford seeing me.",
+        "216": "I don%t think she%ll let me use it.",
+        "217": "I%s better if I leave it open.",
+        "218": "There%s a monkey costume inside.",
+        "219": "It%s empty.",
+        "220": "I can%t go there with her in the way.",
+        "221": "A little paper here,",
+        "222": "A little paper there,",
+        "223": "and presto, I%m enrolled!",
+        "224": "Why? The Dean can%t answer me.",
+        "225": "I%ve done everything neccesary.",
+        "226": "As you wish, I%ll go rolling."
+      }
+    },
+    "TXT_DeanPepperOffice": {
+      "walk_prefix_identical": true,
+      "objects": {
+        "1": " window",
+        "2": " dean",
+        "3": " newspaper",
+        "4": " intercom",
+        "5": " books",
+        "6": " door"
+      },
+      "texts": {
+        "202": "Nice architectural design.",
+        "203": "I%m sure he hasn%t worked",
+        "204": "a day in his life.",
+        "205": "It%s used to order coffee",
+        "206": "and things like that.",
+        "207": "They%re completely new.",
+        "208": "I%m sure they%re only for adornment.",
+        "209": "It leads to the lobby.",
+        "210": "Although I know you don%t drink,",
+        "211": "I%m bringing you this little present, Dean Peeper.",
+        "212": "I don%t think he would let me use it.",
+        "213": "I don%t think that the dean would like",
+        "214": "his books touched.",
+        "215": "I have everything that I want.",
+        "216": "Well, as you say...",
+        "217": "...I don%t drink...",
+        "218": "...But I%ll keep it for visitors.",
+        "219": "Thank you Mr. Parker!",
+        "220": "Mr. Parker,",
+        "221": "aren%t there any doors in your house?...",
+        "222": "He%s resting.",
+        "223": "He%s not much for conversation.",
+        "224": "There%s no one in the secretary%s office",
+        "225": "to talk to.",
+        "226": "I don%t think he wants an empty bottle.",
+        "227": "I think I better let him rest.",
+        "228": "GLU!...GLU!...GLU!...",
+        "229": "...PUUUAAAAAJJ!...",
+        "230": "...BIEARJJJJJJJJ!..."
+      }
+    },
+    "TXT_StudentDormitoryRoom": {
+      "walk_prefix_identical": true,
+      "objects": {
+        "1": " bed",
+        "2": " nightstand",
+        "3": " alarm clock",
+        "4": " closet",
+        "5": " hole in the wall",
+        "6": " CDs",
+        "7": " window",
+        "8": " door"
+      },
+      "texts": {
+        "201": "It%s a nice view.",
+        "202": "From here I can see",
+        "203": "all of the campus.",
+        "204": "Nice invention, isn%t it?",
+        "205": "It%s small.",
+        "206": "I%ll clean it up tomorrow.",
+        "207": "Wow! What a hole!",
+        "208": "It%s a good thing that the closet covers it up.",
+        "209": "I only need one more record",
+        "210": "to have the complete collection",
+        "211": "of T.P.L...",
+        "212": "I%d better forget about going out again.",
+        "213": "I already have my favorite,",
+        "214": "I%ll leave the rest here.",
+        "215": "Luckily, my ratskin hat",
+        "216": "is still intact.",
+        "217": "There%s my alarm clock.",
+        "218": "There%s nothing interesting here.",
+        "219": "There%re only two reasons to use a bed,",
+        "220": "and I%m not sleepy..."
+      }
+    },
+    "TXT_DecanatoLeft": {
+      "walk_prefix_identical": true,
+      "objects": {
+        "1": " window",
+        "2": " hole",
+        "3": " drain pipe",
+        "4": " slug",
+        "6": " butterfly net",
+        "7": " broken glass",
+        "8": " bottle"
+      },
+      "texts": {
+        "201": "I think it%s the one",
+        "202": "from the dean%s office.",
+        "203": "There is a slug at the end of the pipe.",
+        "204": "One slug is more than enough.",
+        "205": "Hey Slug!",
+        "206": "Do you wanna a drink?",
+        "207": "It%s rather deep.",
+        "208": "I still haven%t caught anything.",
+        "209": "It seems that I have caught a bottle.",
+        "210": "It%s a broken bottle.",
+        "211": "Good catch."
+      }
+    },
+    "TXT_DecanatoRight": {
+      "walk_prefix_identical": true,
+      "objects": {
+        "1": " plaque",
+        "2": " door",
+        "3": " trashcan",
+        "4": " road",
+        "6": " sidewalk"
+      },
+      "texts": {
+        "201": "Administration building.",
+        "202": "It leads to the lobby.",
+        "203": "It looks like a hamburguer.",
+        "204": "I%ll pick it up.",
+        "205": "There%s nothing there.",
+        "206": "I don%t want to throw anything away.",
+        "207": "Not many cars go by here.",
+        "208": "Nothing interesting there."
+      }
+    },
+    "TXT_AdministrationCorridor": {
+      "walk_prefix_identical": true,
+      "objects": {
+        "1": " plaque",
+        "2": " door",
+        "3": " door",
+        "4": " plaque",
+        "5": " announcement board",
+        "6": " stairs",
+        "8": " door"
+      },
+      "texts": {
+        "201": "Dean Bob J. Peeper.",
+        "202": "I wonder what dirty secrets",
+        "203": "it%s hiding...",
+        "204": "Secretary.",
+        "205": "It reads:",
+        "206": "Trip to the Island of UIKOKAHONIA,",
+        "207": "organized by the Biology Department.",
+        "208": "Those students interested in going",
+        "209": "and already enrolled in the course,",
+        "210": "should hand in a project, as well",
+        "211": "as the money for the trip, to the janitor.",
+        "212": "There%s nothing up there.",
+        "213": "Looking for 60 people to share an apartment,",
+        "214": "it%s small but well located.",
+        "215": "Powerful computer for sale:",
+        "216": "XT-4 Mhz with CGA monitor,",
+        "217": "512Kb RAM,",
+        "218": "and 8\" drive.",
+        "219": "DOS 1.0 free!"
+      }
+    },
+    "TXT_ParkRight": {
+      "walk_prefix_identical": true,
+      "objects": {
+        "1": " tree",
+        "2": " resin",
+        "3": " rosebush",
+        "4": " bench",
+        "5": " path"
+      },
+      "texts": {
+        "201": "I don%t know what kind of tree it is,",
+        "202": "but it%s covered with resin.",
+        "203": "It%s very sticky.",
+        "204": "With a smell like that, it attracts insects.",
+        "205": "It probably isn%t very comfortable.",
+        "206": "No, I have enough."
+      }
+    },
+    "TXT_OutsideStudentDormitory": {
+      "walk_prefix_identical": true,
+      "objects": {
+        "1": " window",
+        "2": " window",
+        "3": " window",
+        "4": " pigeon"
+      },
+      "texts": {
+        "201": "I can%t go with that beast",
+        "202": "in the middle of the roof.",
+        "203": "Great! the window%s locked...",
+        "204": "...I won%t be able to go in through it again.",
+        "205": "I can%t stand these winged rats!",
+        "206": "It%s locked from the inside. I will have",
+        "207": "to look for another way to get out of here.",
+        "208": "It%s very dark, but it seems to be an old attic.",
+        "209": "It%s broken.",
+        "210": "I can%t open it from the outside.",
+        "211": "I wouldn%t touch that winged rat",
+        "212": "for anything!"
+      }
+    },
+    "TXT_StudentDormitoryAttic": {
+      "walk_prefix_identical": true,
+      "objects": {
+        "1": " window",
+        "2": " trunk",
+        "3": " butterfly net",
+        "4": " old junk",
+        "5": " painting",
+        "6": " hole in the wall",
+        "7": " crack",
+        "8": " small crack",
+        "9": " nail",
+        "10": " shelf"
+      },
+      "texts": {
+        "201": "It seems very old.",
+        "202": "It%s full of tools.",
+        "203": "I don%t know which one I will need...",
+        "204": "I%ll take this hammer.",
+        "205": "I%ll take the pick instead of the hammer.",
+        "206": "This stick of dynamite may be what I need.",
+        "207": "I don%t see anything else",
+        "208": "I may need.",
+        "209": "It doesn%t seem to be well hammered in.",
+        "210": "They%ve probably been here for ages.",
+        "211": "There%s a box of matches,",
+        "212": "I%ll take it...",
+        "213": "This dynamite made a big hole...",
+        "214": "It%s very deep,",
+        "215": "I can almost see the other room.",
+        "216": "I was never good at hanging pictures.",
+        "217": "Now there%s no nail to hammer.",
+        "218": "This isn%t good anymore.",
+        "219": "It%s broken.",
+        "220": "I can%t leave with those monsters out there.",
+        "221": "I%d better get out of here.",
+        "222": "It didn%t seem to explode...",
+        "224": "Cool explosion!",
+        "225": "At first glance it seems to be an Impresionistic",
+        "226": "work, influenced by the maestro%s personality;",
+        "227": "with touches of the Renaissance era and a lively",
+        "228": "global conception of the figure as everything.",
+        "229": "In summary: it%s trash!",
+        "230": "It%s empty."
+      }
+    },
+    "TXT_MazeEntrance": {
+      "walk_prefix_identical": true,
+      "objects": {
+        "1": " secret passage",
+        "2": " secret passage",
+        "3": " secret passage",
+        "4": " secret passage"
+      },
+      "texts": {
+        "201": "It seems to lead to a room",
+        "202": "similar to this one.",
+        "203": "It leads outside.",
+        "204": "He%s chained to the wall.",
+        "205": "He%s probably been here hundreds of years...",
+        "206": "...and those rags he has on his feet",
+        "207": "I would say that they are...",
+        "208": "...the robes of a friar.",
+        "209": "He obviously doesn%t feel",
+        "210": "like talking.",
+        "211": "It leads to the secret door",
+        "212": "of the church."
+      }
+    },
+    "TXT_Maze51": {
+      "walk_prefix_identical": true,
+      "objects": {
+        "1": " secret passage",
+        "2": " secret passage",
+        "3": " secret passage",
+        "4": " secret passage"
+      },
+      "texts": {
+        "201": "It seems to lead to a room",
+        "202": "similar to this one.",
+        "203": "It leads outside.",
+        "204": "He%s chained to the wall.",
+        "205": "He%s probably been here hundreds of years...",
+        "206": "...and those rags he has on his feet",
+        "207": "I would say that they are...",
+        "208": "...the robes of a friar.",
+        "209": "He obviously doesn%t feel",
+        "210": "like talking.",
+        "211": "It leads to the secret door",
+        "212": "of the church."
+      }
+    },
+    "TXT_Maze52": {
+      "walk_prefix_identical": true,
+      "objects": {
+        "1": " secret passage",
+        "2": " secret passage",
+        "3": " secret passage",
+        "4": " secret passage"
+      },
+      "texts": {
+        "201": "It seems to lead to a room",
+        "202": "similar to this one.",
+        "203": "It leads outside.",
+        "204": "He%s chained to the wall.",
+        "205": "He%s probably been here hundreds of years...",
+        "206": "...and those rags he has on his feet",
+        "207": "I would say that they are...",
+        "208": "...the robes of a friar.",
+        "209": "He obviously doesn%t feel",
+        "210": "like talking.",
+        "211": "It leads to the secret door",
+        "212": "of the church."
+      }
+    },
+    "TXT_Maze53": {
+      "walk_prefix_identical": true,
+      "objects": {
+        "1": " secret passage",
+        "2": " secret passage",
+        "3": " secret passage",
+        "4": " secret passage"
+      },
+      "texts": {
+        "201": "It seems to lead to a room",
+        "202": "similar to this one.",
+        "203": "It leads outside.",
+        "204": "He%s chained to the wall.",
+        "205": "He%s probably been here hundreds of years...",
+        "206": "...and those rags he has on his feet",
+        "207": "I would say that they are...",
+        "208": "...the robes of a friar.",
+        "209": "He obviously doesn%t feel",
+        "210": "like talking.",
+        "211": "It leads to the secret door",
+        "212": "of the church."
+      }
+    },
+    "TXT_Maze54": {
+      "walk_prefix_identical": true,
+      "objects": {
+        "1": " secret passage",
+        "2": " secret passage",
+        "3": " secret passage",
+        "4": " secret passage"
+      },
+      "texts": {
+        "201": "It seems to lead to a room",
+        "202": "similar to this one.",
+        "203": "It leads outside.",
+        "204": "He%s chained to the wall.",
+        "205": "He%s probably been here hundreds of years...",
+        "206": "...and those rags he has on his feet",
+        "207": "I would say that they are...",
+        "208": "...the robes of a friar.",
+        "209": "He obviously doesn%t feel",
+        "210": "like talking.",
+        "211": "It leads to the secret door",
+        "212": "of the church."
+      }
+    },
+    "TXT_Maze56": {
+      "walk_prefix_identical": true,
+      "objects": {
+        "1": " secret passage",
+        "2": " secret passage",
+        "3": " secret passage",
+        "4": " secret passage"
+      },
+      "texts": {
+        "201": "It seems to lead to a room",
+        "202": "similar to this one.",
+        "203": "It leads outside.",
+        "204": "He%s chained to the wall.",
+        "205": "He%s probably been here hundreds of years...",
+        "206": "...and those rags he has on his feet",
+        "207": "I would say that they are...",
+        "208": "...the robes of a friar.",
+        "209": "He obviously doesn%t feel",
+        "210": "like talking.",
+        "211": "It leads to the secret door",
+        "212": "of the church."
+      }
+    },
+    "TXT_Maze57": {
+      "walk_prefix_identical": true,
+      "objects": {
+        "1": " secret passage",
+        "2": " secret passage",
+        "3": " secret passage",
+        "4": " secret passage"
+      },
+      "texts": {
+        "201": "It seems to lead to a room",
+        "202": "similar to this one.",
+        "203": "It leads outside.",
+        "204": "He%s chained to the wall.",
+        "205": "He%s probably been here hundreds of years...",
+        "206": "...and those rags he has on his feet",
+        "207": "I would say that they are...",
+        "208": "...the robes of a friar.",
+        "209": "He obviously doesn%t feel",
+        "210": "like talking.",
+        "211": "It leads to the secret door",
+        "212": "of the church."
+      }
+    },
+    "TXT_Maze58": {
+      "walk_prefix_identical": true,
+      "objects": {
+        "1": " secret passage",
+        "2": " secret passage",
+        "3": " secret passage",
+        "4": " secret passage"
+      },
+      "texts": {
+        "201": "It seems to lead to a room",
+        "202": "similar to this one.",
+        "203": "It leads outside.",
+        "204": "He%s chained to the wall.",
+        "205": "He%s probably been here hundreds of years...",
+        "206": "...and those rags he has on his feet",
+        "207": "I would say that they are...",
+        "208": "...the robes of a friar.",
+        "209": "He obviously doesn%t feel",
+        "210": "like talking.",
+        "211": "It leads to the secret door",
+        "212": "of the church."
+      }
+    },
+    "TXT_Maze59": {
+      "walk_prefix_identical": true,
+      "objects": {
+        "1": " secret passage",
+        "2": " secret passage",
+        "3": " secret passage",
+        "4": " secret passage"
+      },
+      "texts": {
+        "201": "It seems to lead to a room",
+        "202": "similar to this one.",
+        "203": "It leads outside.",
+        "204": "He%s chained to the wall.",
+        "205": "He%s probably been here hundreds of years...",
+        "206": "...and those rags he has on his feet",
+        "207": "I would say that they are...",
+        "208": "...the robes of a friar.",
+        "209": "He obviously doesn%t feel",
+        "210": "like talking.",
+        "211": "It leads to the secret door",
+        "212": "of the church."
+      }
+    },
+    "TXT_Maze60": {
+      "walk_prefix_identical": true,
+      "objects": {
+        "1": " secret passage",
+        "2": " secret passage",
+        "3": " secret passage",
+        "4": " secret passage"
+      },
+      "texts": {
+        "201": "It seems to lead to a room",
+        "202": "similar to this one.",
+        "203": "It leads outside.",
+        "204": "He%s chained to the wall.",
+        "205": "He%s probably been here hundreds of years...",
+        "206": "...and those rags he has on his feet",
+        "207": "I would say that they are...",
+        "208": "...the robes of a friar.",
+        "209": "He obviously doesn%t feel",
+        "210": "like talking.",
+        "211": "It leads to the secret door",
+        "212": "of the church."
+      }
+    },
+    "TXT_Maze61": {
+      "walk_prefix_identical": true,
+      "objects": {
+        "1": " secret passage",
+        "2": " secret passage",
+        "3": " secret passage",
+        "4": " secret passage"
+      },
+      "texts": {
+        "201": "It seems to lead to a room",
+        "202": "similar to this one.",
+        "203": "It leads outside.",
+        "204": "He%s chained to the wall.",
+        "205": "He%s probably been here hundreds of years...",
+        "206": "...and those rags he has on his feet",
+        "207": "I would say that they are...",
+        "208": "...the robes of a friar.",
+        "209": "He obviously doesn%t feel",
+        "210": "like talking.",
+        "211": "It leads to the secret door",
+        "212": "of the church."
+      }
+    },
+    "TXT_Maze62": {
+      "walk_prefix_identical": true,
+      "objects": {
+        "1": " secret passage",
+        "2": " secret passage",
+        "3": " secret passage",
+        "4": " secret passage"
+      },
+      "texts": {
+        "201": "It seems to lead to a room",
+        "202": "similar to this one.",
+        "203": "It leads outside.",
+        "204": "He%s chained to the wall.",
+        "205": "He%s probably been here hundreds of years...",
+        "206": "...and those rags he has on his feet",
+        "207": "I would say that they are...",
+        "208": "...the robes of a friar.",
+        "209": "He obviously doesn%t feel",
+        "210": "like talking.",
+        "211": "It leads to the secret door",
+        "212": "of the church."
+      }
+    },
+    "TXT_Maze63": {
+      "walk_prefix_identical": true,
+      "objects": {
+        "1": " secret passage",
+        "2": " secret passage",
+        "3": " secret passage",
+        "4": " secret passage"
+      },
+      "texts": {
+        "201": "It seems to lead to a room",
+        "202": "similar to this one.",
+        "203": "It leads outside.",
+        "204": "He%s chained to the wall.",
+        "205": "He%s probably been here hundreds of years...",
+        "206": "...and those rags he has on his feet",
+        "207": "I would say that they are...",
+        "208": "...the robes of a friar.",
+        "209": "He obviously doesn%t feel",
+        "210": "like talking.",
+        "211": "It leads to the secret door",
+        "212": "of the church."
+      }
+    },
+    "TXT_Maze64": {
+      "walk_prefix_identical": true,
+      "objects": {
+        "1": " secret passage",
+        "2": " secret passage",
+        "3": " secret passage",
+        "4": " secret passage"
+      },
+      "texts": {
+        "201": "It seems to lead to a room",
+        "202": "similar to this one.",
+        "203": "It leads outside.",
+        "204": "He%s chained to the wall.",
+        "205": "He%s probably been here hundreds of years...",
+        "206": "...and those rags he has on his feet",
+        "207": "I would say that they are...",
+        "208": "...the robes of a friar.",
+        "209": "He obviously doesn%t feel",
+        "210": "like talking.",
+        "211": "It leads to the secret door",
+        "212": "of the church."
+      }
+    },
+    "TXT_Maze65": {
+      "walk_prefix_identical": true,
+      "objects": {
+        "1": " secret passage",
+        "2": " secret passage",
+        "3": " secret passage",
+        "4": " secret passage"
+      },
+      "texts": {
+        "201": "It seems to lead to a room",
+        "202": "similar to this one.",
+        "203": "It leads outside.",
+        "204": "He%s chained to the wall.",
+        "205": "He%s probably been here hundreds of years...",
+        "206": "...and those rags he has on his feet",
+        "207": "I would say that they are...",
+        "208": "...the robes of a friar.",
+        "209": "He obviously doesn%t feel",
+        "210": "like talking.",
+        "211": "It leads to the secret door",
+        "212": "of the church."
+      }
+    },
+    "TXT_Maze66": {
+      "walk_prefix_identical": true,
+      "objects": {
+        "1": " secret passage",
+        "2": " secret passage",
+        "3": " secret passage",
+        "4": " secret passage"
+      },
+      "texts": {
+        "201": "It seems to lead to a room",
+        "202": "similar to this one.",
+        "203": "It leads outside.",
+        "204": "He%s chained to the wall.",
+        "205": "He%s probably been here hundreds of years...",
+        "206": "...and those rags he has on his feet",
+        "207": "I would say that they are...",
+        "208": "...the robes of a friar.",
+        "209": "He obviously doesn%t feel",
+        "210": "like talking.",
+        "211": "It leads to the secret door",
+        "212": "of the church."
+      }
+    },
+    "TXT_OutsideMaze": {
+      "walk_prefix_identical": true,
+      "objects": {
+        "1": " path",
+        "2": " entrance to the labyrinth"
+      },
+      "texts": {
+        "201": "It leads to the secret passage."
+      }
+    },
+    "TXT_Part70": {
+      "walk_prefix_identical": true,
+      "objects": {
+        "1": " secret passage",
+        "2": " forest",
+        "3": " cementery",
+        "4": " lighthouse"
+      },
+      "texts": {}
+    },
+    "TXT_Part72": {
+      "walk_prefix_identical": true,
+      "objects": {
+        "1": " path",
+        "2": " flower",
+        "3": " crows",
+        "4": " overgrowth of trees",
+        "5": " path"
+      },
+      "texts": {
+        "201": "It has a very strong smell.",
+        "202": "It looks like an exotic flower.",
+        "203": "Those crows really annoy me.",
+        "204": "It looks like I%m not alone."
+      }
+    },
+    "TXT_Part68": {
+      "walk_prefix_identical": true,
+      "objects": {
+        "1": " path",
+        "2": " vase",
+        "3": " gravedigger",
+        "4": " cemetery",
+        "5": " path"
+      },
+      "texts": {
+        "201": "It%s transparent.",
+        "202": "Whoa...",
+        "203": "..whatcha tryin to do?...",
+        "204": "...don%t be thinkin about nabbin this...",
+        "205": "...without givin me somethin too.",
+        "206": "You%re bothering me...",
+        "207": "...I only wanted to see it up close.",
+        "208": "It%s cool...",
+        "209": "...if what you say is true...",
+        "210": "...but don%t get me steamin...",
+        "211": "...or we%ll have business to do.",
+        "212": "Looks like he%s listening",
+        "213": "to music.",
+        "214": "Maybe you might be interested in this CD.",
+        "215": "Hand it over...",
+        "216": "...it%s the latest...",
+        "217": "...of T.P.L.!",
+        "218": "Thanks dude!",
+        "219": "Take that vase...",
+        "220": "...it ain%t no problem of mine...",
+        "221": "...after all that old vase...",
+        "222": "...ain%t even worth a dime.",
+        "223": "I should speak with this nice man, first.",
+        "225": "Good evening, Mr. Gravedigger.",
+        "226": "Hi Boris!"
+      }
+    },
+    "TXT_Part81": {
+      "walk_prefix_identical": true,
+      "objects": {
+        "1": " path",
+        "2": " lighthouse keeper",
+        "3": " tree",
+        "4": " lighthouse",
+        "5": " sea"
+      },
+      "texts": {
+        "201": "It leads to the inside of the lighthouse.",
+        "202": "It%s obvious that he%s a man who enjoys life.",
+        "203": "It%s full of life.",
+        "204": "It seems very old.",
+        "205": "The boat has already left.",
+        "206": "It%s very dark,",
+        "207": "but I can see the light of a boat in the distance.",
+        "208": "I think this will interest you.",
+        "209": "Look buddy, that doesn%t interest me at all.",
+        "210": "Well, this should be great...",
+        "211": "to replace the light of the lighthouse!",
+        "212": "And you aren%t going to thank me for it?",
+        "213": "It%s OK, pal.",
+        "214": "Tell me what you want me to do.",
+        "215": "Can you send a message from the lighthouse?",
+        "216": "OK...",
+        "217": "...What message do you want to send?",
+        "218": "\"Don%t come home late. Mom is waiting for you\"",
+        "219": "OK, I%ve sent strange messages,",
+        "220": "but never one like this...",
+        "221": "...Don%t go, I%ll be back in a minute",
+        "222": "and I%ll tell you if I receive some answer,",
+        "223": "but I doubt I%ll receive anything.",
+        "224": "Listen pal, it%s strange but they%ve answered...",
+        "225": "It seems to be a garbled message:",
+        "226": "\"The kid is not here anymore,",
+        "227": "we left him in his grandfather%s house,",
+        "228": "old John O%Callahan, a while ago\".",
+        "229": "Thanks!, you%ve been a great help to me.",
+        "230": "It%s nothing, pal.",
+        "231": "Good evening.",
+        "232": "Hi young feller. What do you want?",
+        "233": "No, it%s too late to make a visit.",
+        "234": "No, I don%t want to bother him anymore."
+      }
+    },
+    "TXT_Part74": {
+      "walk_prefix_identical": true,
+      "objects": {},
+      "texts": {
+        "201": "Hey boss, I think they%re sending us a message...",
+        "202": "...Look through the binoculars.",
+        "203": "I%m the one that gives you orders here!",
+        "204": "...I%ll look through the binoculars.",
+        "205": "It%s the sign that we%re waiting for, boss.",
+        "206": "I%ll decide what the damn sign is!",
+        "207": "...Yeah, it%s the sign.",
+        "208": "Do I send the password, boss?",
+        "209": "Listen, I%ll say when you send the password!",
+        "210": "...Send the password now."
+      }
+    },
+    "TXT_Part71": {
+      "walk_prefix_identical": true,
+      "objects": {
+        "1": " grave",
+        "2": " statuette",
+        "3": " grave",
+        "4": " path",
+        "5": " grave",
+        "6": " grave"
+      },
+      "texts": {
+        "201": "John O%Callahan.",
+        "202": "1742-1778",
+        "203": "He should be rested by now.",
+        "204": "I%d better get out of here fast",
+        "205": "before the \"Weasel\" comes",
+        "206": "looking for his loot.",
+        "208": "Mary O%Hara.",
+        "209": "Your husband and children...",
+        "210": "...live in peace at last.",
+        "212": "Chris McPherson.",
+        "213": "1855-1855",
+        "214": "Thanks for your company.",
+        "216": "Fat McMan.",
+        "217": "We had to work overtime",
+        "218": "to dig your grave.",
+        "220": "Wow! It%s \"The Great Dosicua\",",
+        "221": "the stolen statuette.",
+        "222": "The \"Weasel\" will be here any minute",
+        "223": "looking for it."
+      }
+    },
+    "TXT_Part69": {
+      "walk_prefix_identical": true,
+      "objects": {
+        "1": " swamp",
+        "2": " path",
+        "3": " lightning bugs",
+        "4": " leader lightning bug",
+        "5": " flower"
+      },
+      "texts": {
+        "201": "I%m not going over there,",
+        "202": "it looks like quicksand!",
+        "203": "Looks like they%re following",
+        "204": "something...",
+        "205": "...it must be the one with the most personality.",
+        "206": "I bet they follow their leader",
+        "207": "wherever it goes.",
+        "208": "It%s so exotic!",
+        "209": "I%ve never seen anything like it.",
+        "210": "I can%t get close enough.",
+        "211": "It seems that none of the lightning bugs",
+        "212": "want to come close.",
+        "213": "From now on,",
+        "214": "I will be their leader.",
+        "215": "I don%t think",
+        "216": "I%ll get anything with that."
+      }
+    },
+    "TXT_Part32": {
+      "walk_prefix_identical": true,
+      "objects": {
+        "1": " door",
+        "2": " telescope",
+        "3": " control panel",
+        "4": " bookshelf",
+        "5": " graphics"
+      },
+      "texts": {
+        "201": "It%s a nice toy, isn%t it?",
+        "202": "It%s full of articles and documents",
+        "203": "about astronomy.",
+        "204": "I don%t have any idea what",
+        "205": "all those scribbles mean.",
+        "206": "Good thing I took that course",
+        "207": "on how to read lips",
+        "208": "two summers ago.",
+        "209": "Wow! The dean certainly...",
+        "210": "...knows astronomy!",
+        "211": "It must be a trick by some joker."
+      }
+    },
+    "TXT_Part77": {
+      "walk_prefix_identical": true,
+      "objects": {
+        "1": " door",
+        "2": " cage",
+        "4": " path"
+      },
+      "texts": {
+        "201": "I think I should have",
+        "202": "a good plan.",
+        "203": "It must be part of",
+        "204": "the stuff that they%re taking",
+        "205": "to Uikokahonia.",
+        "206": "Perhaps with this costume on",
+        "207": "they won%t notice me in the cage...",
+        "208": "...and now, I have to wait!",
+        "209": "It leads to the inside.",
+        "210": "Well, I think that this cage is",
+        "211": "the last thing to be loaded onto the truck.",
+        "212": "Why would they want to take a monkey",
+        "213": "to an island that must have hundreds of them?",
+        "214": "Damn trip!",
+        "215": "...anyway, I%ll have someone else",
+        "216": "load the cage...",
+        "217": "...before the truck leaves",
+        "218": "for the airport."
+      }
+    },
+    "TXT_Part78": {
+      "walk_prefix_identical": true,
+      "objects": {},
+      "texts": {
+        "201": "Whisper me the answer, Harrison!",
+        "202": "Come on, tell me something!",
+        "203": "Give me the answer to the first question!",
+        "204": "You have an hour to take the exam...",
+        "205": "...read it slowly and take your time",
+        "206": "answering the questions...",
+        "207": "...remember one thing.",
+        "208": "There will be NO trip for those",
+        "209": "who fail the exam!",
+        "210": "You can start now.",
+        "211": "Silence!",
+        "212": "I don%t want to hear a pin drop!",
+        "213": "I don%t want any nonsense!",
+        "214": "Mr. Parker!",
+        "215": "Are you copying!?",
+        "216": "Who me?",
+        "217": "Yes, you...",
+        "218": "...I don%t miss anything.",
+        "219": "You%re offending me...",
+        "222": "But really!...",
+        "223": "...if I...",
+        "224": "It%s true! He was copying,",
+        "225": "I also saw him.",
+        "226": "The thing to do is to throw him out, right?",
+        "227": "What you say is correct Mr. Goolash.",
+        "228": "Thanks a lot for your help.",
+        "229": "Don%t mention it.",
+        "230": "Remember me when you correct the exam.",
+        "231": "I will...",
+        "232": "...and now Mr. Parker...",
+        "233": "LEAVE!",
+        "234": "OUT!!!",
+        "235": "Don%t try to deceive me.",
+        "236": "I%ve seen you do it many times,",
+        "237": "but have said nothing."
+      }
+    },
+    "TXT_Part73": {
+      "walk_prefix_identical": true,
+      "objects": {},
+      "texts": {
+        "201": "So you didn%t know anything about the reward",
+        "202": "for \"The Great Dosicua\"?",
+        "203": "No, I didn%t know anything...",
+        "204": "...I even thought about donating the money",
+        "205": "to charity.",
+        "206": "Listen, we have a charity here to help",
+        "207": "the orphans of policemen.",
+        "208": "Come in again,",
+        "209": "and we will fill out the forms and...",
+        "210": "Gee... it%s really late!,",
+        "211": "I%ve got to run. See you later."
+      }
+    },
+    "TXT_Part80": {
+      "walk_prefix_identical": true,
+      "objects": {},
+      "texts": {
+        "201": "Have you heard about the capture of the \"Weasel\"",
+        "202": "and the recovery of \"The Great Dosicua\"?",
+        "203": "No, I didn%t.",
+        "204": "Do you know who was responsable",
+        "205": "for the capture?",
+        "206": "Who?",
+        "207": "Igor Parker.",
+        "208": "WHAT!?",
+        "209": "Yes, Igor, you already met him...",
+        "210": "Really?",
+        "211": "I swear, Laura.",
+        "212": "You know I never lie...",
+        "213": "Don%t make me laugh!",
+        "214": "Believe me, Laura, it%s true,",
+        "215": "and besides it%s in all the newspapers.",
+        "216": "OK, I believe you...",
+        "217": "...I never thought Igor was capable of that.",
+        "218": "I wouldn%t mind if he rescued me...",
+        "219": "Yes...",
+        "220": "...well...",
+        "221": "...he%s not that bad..."
+      }
+    },
+    "TXT_Part76": {
+      "walk_prefix_identical": true,
+      "objects": {
+        "1": " door",
+        "2": " latch",
+        "3": " parachute",
+        "4": " crate",
+        "5": " luggage"
+      },
+      "texts": {
+        "201": "It leads to my destiny.",
+        "202": "It%s used to open the door.",
+        "203": "It%s not in very good condition...",
+        "204": "...but it%s probably my only chance",
+        "205": "to get out of here.",
+        "206": "I%m on the verge of a nervous breakdown.",
+        "207": "It%s old,",
+        "208": "and it%s in lousy shape.",
+        "209": "Before, I should open the door.",
+        "210": "I%m scared to death to do this,",
+        "211": "I%ll drop all my stuff first.",
+        "212": "What I hate the most is to leave",
+        "213": "my boomerang here...",
+        "214": "...after all the time",
+        "215": "we%ve spent together.",
+        "216": "Well, that%s it! I%ve decided!",
+        "217": "I can%t leave you like this.",
+        "218": "What you deserve is to...",
+        "219": "...FLY!!!",
+        "220": "Good bye old friend...",
+        "221": "...and now...",
+        "222": "...enough nonsense...",
+        "223": "...here I come, Laura!",
+        "224": "It probably contains stuff for the trip.",
+        "225": "There must be all kinds of junk inside that.",
+        "226": "My clothing isn%t the most appropiate",
+        "227": "for a tropical island.",
+        "228": "Let%s see what I can find here...",
+        "229": "Well, this is better.",
+        "230": "It is important that I get off the plane",
+        "231": "before it lands, because it will all be over,",
+        "232": "if customs catches me."
+      }
+    }
+  }
+}

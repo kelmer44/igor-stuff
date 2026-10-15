@@ -1,0 +1,5014 @@
+[
+  {
+    "part": 0,
+    "floppy": "04AE:1722",
+    "cd": "206:159E",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "04AE:1732 mov word ptr [0x1b04], 0",
+        "cd": "206:15AE mov word ptr [0x31b8], 3"
+      },
+      {
+        "floppy": "04AE:1738 mov word ptr [0x1b06], 3",
+        "cd": "206:15B4 mov word ptr [0x31ba], 0x5f"
+      }
+    ]
+  },
+  {
+    "part": 0,
+    "floppy": "04AE:1755",
+    "cd": "206:159E",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "04AE:175F mov word ptr [0x1b02], 0xcc",
+        "cd": "206:15A8 mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "04AE:1765 mov word ptr [0x1b04], 0",
+        "cd": "206:15AE mov word ptr [0x31b8], 3"
+      },
+      {
+        "floppy": "04AE:176B mov word ptr [0x1b06], 1",
+        "cd": "206:15B4 mov word ptr [0x31ba], 0x5f"
+      }
+    ]
+  },
+  {
+    "part": 0,
+    "floppy": "04AE:1788",
+    "cd": "206:15F8",
+    "similarity": 0.92063,
+    "changes": [
+      {
+        "floppy": "04AE:179F mov word ptr [0x1b04], 0",
+        "cd": "206:1609 mov word ptr [0x31b6], 0xcd"
+      },
+      {
+        "floppy": "04AE:17AB mov word ptr [0x1b08], 0",
+        "cd": "206:1615 mov word ptr [0x31ba], 0x61"
+      },
+      {
+        "floppy": "04AE:17CF mov word ptr [0x1b04], 0",
+        "cd": "206:1639 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "04AE:17D5 mov word ptr [0x1b06], 1",
+        "cd": "206:163F mov word ptr [0x31ba], 0x68"
+      },
+      {
+        "floppy": "04AE:17F8 mov word ptr [0x1b04], 0",
+        "cd": "206:165C mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "04AE:17FE mov word ptr [0x1b06], 1",
+        "cd": "206:1662 mov word ptr [0x31ba], 0x69"
+      }
+    ]
+  },
+  {
+    "part": 0,
+    "floppy": "04AE:181B",
+    "cd": "206:159E",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "04AE:1825 mov word ptr [0x1b02], 0xce",
+        "cd": "206:15A8 mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "04AE:182B mov word ptr [0x1b04], 0",
+        "cd": "206:15AE mov word ptr [0x31b8], 3"
+      },
+      {
+        "floppy": "04AE:1831 mov word ptr [0x1b06], 1",
+        "cd": "206:15B4 mov word ptr [0x31ba], 0x5f"
+      }
+    ]
+  },
+  {
+    "part": 0,
+    "floppy": "04AE:184E",
+    "cd": "206:159E",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "04AE:1858 mov word ptr [0x1b02], 0xcf",
+        "cd": "206:15A8 mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "04AE:185E mov word ptr [0x1b04], 0",
+        "cd": "206:15AE mov word ptr [0x31b8], 3"
+      },
+      {
+        "floppy": "04AE:1864 mov word ptr [0x1b06], 2",
+        "cd": "206:15B4 mov word ptr [0x31ba], 0x5f"
+      }
+    ]
+  },
+  {
+    "part": 0,
+    "floppy": "04AE:1881",
+    "cd": "206:159E",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "04AE:188B mov word ptr [0x1b02], 0xd1",
+        "cd": "206:15A8 mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "04AE:1891 mov word ptr [0x1b04], 0",
+        "cd": "206:15AE mov word ptr [0x31b8], 3"
+      },
+      {
+        "floppy": "04AE:1897 mov word ptr [0x1b06], 3",
+        "cd": "206:15B4 mov word ptr [0x31ba], 0x5f"
+      }
+    ]
+  },
+  {
+    "part": 0,
+    "floppy": "04AE:18B4",
+    "cd": "206:1700",
+    "similarity": 0.875,
+    "changes": [
+      {
+        "floppy": "04AE:18C4 mov word ptr [0x1b04], 0",
+        "cd": "206:1710 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "04AE:18CA mov word ptr [0x1b06], 1",
+        "cd": "206:1716 mov word ptr [0x31ba], 0x6a"
+      },
+      {
+        "floppy": "04AE:18D0 mov word ptr [0x1b08], 0",
+        "cd": "206:171C mov word ptr [0x31bc], 0xdc"
+      },
+      {
+        "floppy": "04AE:18D6 mov word ptr [0x1b0e], 0xdc",
+        "cd": "206:1722 mov word ptr [0x31be], 1"
+      },
+      {
+        "floppy": "04AE:18DC mov word ptr [0x1b10], 0",
+        "cd": "206:1728 mov word ptr [0x31c0], 0x6b"
+      }
+    ]
+  },
+  {
+    "part": 2,
+    "floppy": "0499:0AF1",
+    "cd": "203:0A2D",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0499:0B01 mov word ptr [0x1b04], 0",
+        "cd": "203:0A3D mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0499:0B07 mov word ptr [0x1b06], 1",
+        "cd": "203:0A43 mov word ptr [0x31ba], 0x79"
+      }
+    ]
+  },
+  {
+    "part": 2,
+    "floppy": "0499:0B24",
+    "cd": "203:0A2D",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0499:0B2E mov word ptr [0x1b02], 0xda",
+        "cd": "203:0A37 mov word ptr [0x31b6], 0xd9"
+      },
+      {
+        "floppy": "0499:0B34 mov word ptr [0x1b04], 0",
+        "cd": "203:0A3D mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0499:0B3A mov word ptr [0x1b06], 1",
+        "cd": "203:0A43 mov word ptr [0x31ba], 0x79"
+      }
+    ]
+  },
+  {
+    "part": 2,
+    "floppy": "0499:1B24",
+    "cd": "203:197F",
+    "similarity": 0.91429,
+    "changes": [
+      {
+        "floppy": "0499:1B3B mov word ptr [0x1b04], 0",
+        "cd": "203:1996 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0499:1B41 mov word ptr [0x1b06], 1",
+        "cd": "203:199C mov word ptr [0x31ba], 0x7c"
+      }
+    ]
+  },
+  {
+    "part": 2,
+    "floppy": "0499:208B",
+    "cd": "203:1E87",
+    "similarity": 0.88889,
+    "changes": [
+      {
+        "floppy": "0499:209B mov word ptr [0x1b04], 0",
+        "cd": "203:1E97 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0499:20A1 mov word ptr [0x1b06], 1",
+        "cd": "203:1E9D mov word ptr [0x31ba], 0x73"
+      }
+    ]
+  },
+  {
+    "part": 2,
+    "floppy": "0499:20C3",
+    "cd": "203:0A2D",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0499:20CD mov word ptr [0x1b02], 0xd2",
+        "cd": "203:0A37 mov word ptr [0x31b6], 0xd9"
+      },
+      {
+        "floppy": "0499:20D3 mov word ptr [0x1b04], 0",
+        "cd": "203:0A3D mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0499:20D9 mov word ptr [0x1b06], 1",
+        "cd": "203:0A43 mov word ptr [0x31ba], 0x79"
+      }
+    ]
+  },
+  {
+    "part": 2,
+    "floppy": "0499:20F6",
+    "cd": "203:1EE6",
+    "similarity": 0.875,
+    "changes": [
+      {
+        "floppy": "0499:2106 mov word ptr [0x1b04], 0",
+        "cd": "203:1EF6 mov word ptr [0x31b8], 4"
+      },
+      {
+        "floppy": "0499:210C mov word ptr [0x1b06], 4",
+        "cd": "203:1EFC mov word ptr [0x31ba], 0x80"
+      },
+      {
+        "floppy": "0499:2112 mov word ptr [0x1b08], 0",
+        "cd": "203:1F02 mov word ptr [0x31bc], 0xe5"
+      },
+      {
+        "floppy": "0499:2118 mov word ptr [0x1b0e], 0xe5",
+        "cd": "203:1F08 mov word ptr [0x31be], 1"
+      },
+      {
+        "floppy": "0499:211E mov word ptr [0x1b10], 0",
+        "cd": "203:1F0E mov word ptr [0x31c0], 0x81"
+      }
+    ]
+  },
+  {
+    "part": 2,
+    "floppy": "0499:2141",
+    "cd": "203:0A2D",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0499:214B mov word ptr [0x1b02], 0xd5",
+        "cd": "203:0A37 mov word ptr [0x31b6], 0xd9"
+      },
+      {
+        "floppy": "0499:2151 mov word ptr [0x1b04], 0",
+        "cd": "203:0A3D mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0499:2157 mov word ptr [0x1b06], 1",
+        "cd": "203:0A43 mov word ptr [0x31ba], 0x79"
+      }
+    ]
+  },
+  {
+    "part": 2,
+    "floppy": "0499:2174",
+    "cd": "203:0A2D",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0499:217E mov word ptr [0x1b02], 0xd6",
+        "cd": "203:0A37 mov word ptr [0x31b6], 0xd9"
+      },
+      {
+        "floppy": "0499:2184 mov word ptr [0x1b04], 0",
+        "cd": "203:0A3D mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0499:218A mov word ptr [0x1b06], 2",
+        "cd": "203:0A43 mov word ptr [0x31ba], 0x79"
+      }
+    ]
+  },
+  {
+    "part": 2,
+    "floppy": "0499:21A7",
+    "cd": "203:0A2D",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0499:21B1 mov word ptr [0x1b02], 0xd8",
+        "cd": "203:0A37 mov word ptr [0x31b6], 0xd9"
+      },
+      {
+        "floppy": "0499:21B7 mov word ptr [0x1b04], 0",
+        "cd": "203:0A3D mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0499:21BD mov word ptr [0x1b06], 1",
+        "cd": "203:0A43 mov word ptr [0x31ba], 0x79"
+      }
+    ]
+  },
+  {
+    "part": 2,
+    "floppy": "0499:21DA",
+    "cd": "203:0A2D",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0499:21E4 mov word ptr [0x1b02], 0xdb",
+        "cd": "203:0A37 mov word ptr [0x31b6], 0xd9"
+      },
+      {
+        "floppy": "0499:21EA mov word ptr [0x1b04], 0",
+        "cd": "203:0A3D mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0499:21F0 mov word ptr [0x1b06], 1",
+        "cd": "203:0A43 mov word ptr [0x31ba], 0x79"
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "floppy": "048A:05BB",
+    "cd": "200:054F",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "048A:05CB mov word ptr [0x1b04], 0",
+        "cd": "200:055F mov word ptr [0x31b8], 2"
+      },
+      {
+        "floppy": "048A:05D1 mov word ptr [0x1b06], 2",
+        "cd": "200:0565 mov word ptr [0x31ba], 0x83"
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "floppy": "048A:05EE",
+    "cd": "200:054F",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "048A:05F8 mov word ptr [0x1b02], 0xcd",
+        "cd": "200:0559 mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "048A:05FE mov word ptr [0x1b04], 0",
+        "cd": "200:055F mov word ptr [0x31b8], 2"
+      },
+      {
+        "floppy": "048A:0604 mov word ptr [0x1b06], 1",
+        "cd": "200:0565 mov word ptr [0x31ba], 0x83"
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "floppy": "048A:0621",
+    "cd": "200:054F",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "048A:062B mov word ptr [0x1b02], 0xce",
+        "cd": "200:0559 mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "048A:0631 mov word ptr [0x1b04], 0",
+        "cd": "200:055F mov word ptr [0x31b8], 2"
+      },
+      {
+        "floppy": "048A:0637 mov word ptr [0x1b06], 2",
+        "cd": "200:0565 mov word ptr [0x31ba], 0x83"
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "floppy": "048A:0654",
+    "cd": "200:054F",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "048A:065E mov word ptr [0x1b02], 0xd0",
+        "cd": "200:0559 mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "048A:0664 mov word ptr [0x1b04], 0",
+        "cd": "200:055F mov word ptr [0x31b8], 2"
+      },
+      {
+        "floppy": "048A:066A mov word ptr [0x1b06], 1",
+        "cd": "200:0565 mov word ptr [0x31ba], 0x83"
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "floppy": "048A:0687",
+    "cd": "200:054F",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "048A:0691 mov word ptr [0x1b02], 0xd1",
+        "cd": "200:0559 mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "048A:0697 mov word ptr [0x1b04], 0",
+        "cd": "200:055F mov word ptr [0x31b8], 2"
+      },
+      {
+        "floppy": "048A:069D mov word ptr [0x1b06], 1",
+        "cd": "200:0565 mov word ptr [0x31ba], 0x83"
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "floppy": "048A:06BA",
+    "cd": "200:054F",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "048A:06C4 mov word ptr [0x1b02], 0xd2",
+        "cd": "200:0559 mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "048A:06CA mov word ptr [0x1b04], 0",
+        "cd": "200:055F mov word ptr [0x31b8], 2"
+      },
+      {
+        "floppy": "048A:06D0 mov word ptr [0x1b06], 1",
+        "cd": "200:0565 mov word ptr [0x31ba], 0x83"
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "floppy": "048A:06ED",
+    "cd": "200:054F",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "048A:06F7 mov word ptr [0x1b02], 0xd3",
+        "cd": "200:0559 mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "048A:06FD mov word ptr [0x1b04], 0",
+        "cd": "200:055F mov word ptr [0x31b8], 2"
+      },
+      {
+        "floppy": "048A:0703 mov word ptr [0x1b06], 2",
+        "cd": "200:0565 mov word ptr [0x31ba], 0x83"
+      }
+    ]
+  },
+  {
+    "part": 4,
+    "floppy": "038A:0023",
+    "cd": "151:0002",
+    "similarity": 0.85714,
+    "changes": [
+      {
+        "floppy": "038A:002D mov word ptr [0x1b84], 0x15e",
+        "cd": "151:000C mov word ptr [0x321a], 0x78"
+      }
+    ]
+  },
+  {
+    "part": 4,
+    "floppy": "038A:0035",
+    "cd": "151:0002",
+    "similarity": 0.85714,
+    "changes": [
+      {
+        "floppy": "038A:003F mov word ptr [0x1b84], 0x64",
+        "cd": "151:000C mov word ptr [0x321a], 0x78"
+      }
+    ]
+  },
+  {
+    "part": 4,
+    "floppy": "038A:0068",
+    "cd": "151:0002",
+    "similarity": 0.85714,
+    "changes": [
+      {
+        "floppy": "038A:0072 mov word ptr [0x1b84], 0x32",
+        "cd": "151:000C mov word ptr [0x321a], 0x78"
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "floppy": "0426:0000",
+    "cd": "182:0002",
+    "similarity": 0.86496,
+    "changes": [
+      {
+        "floppy": "0426:02FC cmp ax, 3",
+        "cd": "182:02FC cmp ax, 1"
+      },
+      {
+        "floppy": "0426:030F cmp ax, 9",
+        "cd": "182:030C cmp ax, 2"
+      },
+      {
+        "floppy": "0426:0322 cmp ax, 0x11",
+        "cd": "182:031C cmp ax, 3"
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "floppy": "0426:05AE",
+    "cd": "182:0548",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0426:05BE mov word ptr [0x1b04], 0",
+        "cd": "182:0558 mov word ptr [0x31b8], 2"
+      },
+      {
+        "floppy": "0426:05C4 mov word ptr [0x1b06], 2",
+        "cd": "182:055E mov word ptr [0x31ba], 0x1de"
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "floppy": "0426:05E1",
+    "cd": "182:0548",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0426:05EB mov word ptr [0x1b02], 0xcb",
+        "cd": "182:0552 mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "0426:05F1 mov word ptr [0x1b04], 0",
+        "cd": "182:0558 mov word ptr [0x31b8], 2"
+      },
+      {
+        "floppy": "0426:05F7 mov word ptr [0x1b06], 2",
+        "cd": "182:055E mov word ptr [0x31ba], 0x1de"
+      }
+    ]
+  },
+  {
+    "part": 6,
+    "floppy": "041D:0000",
+    "cd": "180:0002",
+    "similarity": 0.89266,
+    "changes": [
+      {
+        "floppy": "041D:02FC cmp ax, 3",
+        "cd": "180:02FC cmp ax, 1"
+      },
+      {
+        "floppy": "041D:030F cmp ax, 9",
+        "cd": "180:030C cmp ax, 2"
+      },
+      {
+        "floppy": "041D:0322 cmp ax, 0x11",
+        "cd": "180:031C cmp ax, 3"
+      }
+    ]
+  },
+  {
+    "part": 6,
+    "floppy": "041D:05F9",
+    "cd": "180:05B6",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "041D:0609 mov word ptr [0x1b04], 0",
+        "cd": "180:05C6 mov word ptr [0x31b8], 2"
+      },
+      {
+        "floppy": "041D:060F mov word ptr [0x1b06], 2",
+        "cd": "180:05CC mov word ptr [0x31ba], 0x1e0"
+      }
+    ]
+  },
+  {
+    "part": 6,
+    "floppy": "041D:062C",
+    "cd": "180:05B6",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "041D:0636 mov word ptr [0x1b02], 0xcb",
+        "cd": "180:05C0 mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "041D:063C mov word ptr [0x1b04], 0",
+        "cd": "180:05C6 mov word ptr [0x31b8], 2"
+      },
+      {
+        "floppy": "041D:0642 mov word ptr [0x1b06], 1",
+        "cd": "180:05CC mov word ptr [0x31ba], 0x1e0"
+      }
+    ]
+  },
+  {
+    "part": 6,
+    "floppy": "041D:065F",
+    "cd": "180:05B6",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "041D:0669 mov word ptr [0x1b02], 0xcc",
+        "cd": "180:05C0 mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "041D:066F mov word ptr [0x1b04], 0",
+        "cd": "180:05C6 mov word ptr [0x31b8], 2"
+      },
+      {
+        "floppy": "041D:0675 mov word ptr [0x1b06], 1",
+        "cd": "180:05CC mov word ptr [0x31ba], 0x1e0"
+      }
+    ]
+  },
+  {
+    "part": 7,
+    "floppy": "047B:0432",
+    "cd": "197:03E6",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "047B:0442 mov word ptr [0x1b04], 0",
+        "cd": "197:03F6 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "047B:0448 mov word ptr [0x1b06], 1",
+        "cd": "197:03FC mov word ptr [0x31ba], 0x8c"
+      }
+    ]
+  },
+  {
+    "part": 7,
+    "floppy": "047B:0465",
+    "cd": "197:03E6",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "047B:046F mov word ptr [0x1b02], 0xca",
+        "cd": "197:03F0 mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "047B:0475 mov word ptr [0x1b04], 0",
+        "cd": "197:03F6 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "047B:047B mov word ptr [0x1b06], 2",
+        "cd": "197:03FC mov word ptr [0x31ba], 0x8c"
+      }
+    ]
+  },
+  {
+    "part": 7,
+    "floppy": "047B:0498",
+    "cd": "197:03E6",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "047B:04A2 mov word ptr [0x1b02], 0xcc",
+        "cd": "197:03F0 mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "047B:04A8 mov word ptr [0x1b04], 0",
+        "cd": "197:03F6 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "047B:04AE mov word ptr [0x1b06], 1",
+        "cd": "197:03FC mov word ptr [0x31ba], 0x8c"
+      }
+    ]
+  },
+  {
+    "part": 7,
+    "floppy": "047B:04CB",
+    "cd": "197:046D",
+    "similarity": 0.85484,
+    "changes": [
+      {
+        "floppy": "047B:04FF mov word ptr [0x1b08], 0",
+        "cd": "197:048D mov word ptr [0x31b6], 0xcd"
+      },
+      {
+        "floppy": "047B:0505 mov word ptr [0x1b0e], 0xce",
+        "cd": "197:0493 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "047B:050B mov word ptr [0x1b10], 0",
+        "cd": "197:0499 mov word ptr [0x31ba], 0x8f"
+      },
+      {
+        "floppy": "047B:0511 mov word ptr [0x1b12], 2",
+        "cd": "197:049F mov word ptr [0x31bc], 0xce"
+      },
+      {
+        "floppy": "047B:0517 mov word ptr [0x1b14], 0",
+        "cd": "197:04A5 mov word ptr [0x31be], 2"
+      },
+      {
+        "floppy": "047B:051D mov word ptr [0x1b1a], 0xd0",
+        "cd": "197:04AB mov word ptr [0x31c0], 0x90"
+      },
+      {
+        "floppy": "047B:0523 mov word ptr [0x1b1c], 0",
+        "cd": "197:04B1 mov word ptr [0x31c2], 0xd0"
+      },
+      {
+        "floppy": "047B:052F mov word ptr [0x1b20], 0",
+        "cd": "197:04BD mov word ptr [0x31c6], 0x91"
+      },
+      {
+        "floppy": "047B:0551 mov word ptr [0x1b04], 0",
+        "cd": "197:04DF mov word ptr [0x31b8], 2"
+      },
+      {
+        "floppy": "047B:0557 mov word ptr [0x1b06], 2",
+        "cd": "197:04E5 mov word ptr [0x31ba], 0x93"
+      },
+      {
+        "floppy": "047B:059A mov word ptr [0x1b10], 0",
+        "cd": "197:0500 mov word ptr [0x31b6], 0xd7"
+      },
+      {
+        "floppy": "047B:05A6 mov word ptr [0x1b14], 0",
+        "cd": "197:050C mov word ptr [0x31ba], 0x94"
+      },
+      {
+        "floppy": "047B:05AC mov word ptr [0x1b1a], 0xd9",
+        "cd": "197:0512 mov word ptr [0x31bc], 0xd8"
+      },
+      {
+        "floppy": "047B:05B2 mov word ptr [0x1b1c], 0",
+        "cd": "197:0518 mov word ptr [0x31be], 1"
+      },
+      {
+        "floppy": "047B:05B8 mov word ptr [0x1b1e], 1",
+        "cd": "197:051E mov word ptr [0x31c0], 0x95"
+      },
+      {
+        "floppy": "047B:05BE mov word ptr [0x1b20], 0",
+        "cd": "197:0524 mov word ptr [0x31c2], 0xd9"
+      },
+      {
+        "floppy": "047B:05C4 mov word ptr [0x1b26], 0xda",
+        "cd": "197:052A mov word ptr [0x31c4], 1"
+      },
+      {
+        "floppy": "047B:05CA mov word ptr [0x1b28], 0",
+        "cd": "197:0530 mov word ptr [0x31c6], 0x96"
+      },
+      {
+        "floppy": "047B:05D0 mov word ptr [0x1b2a], 1",
+        "cd": "197:0536 mov word ptr [0x31c8], 0xda"
+      },
+      {
+        "floppy": "047B:05D6 mov word ptr [0x1b2c], 0",
+        "cd": "197:053C mov word ptr [0x31ca], 1"
+      },
+      {
+        "floppy": "047B:05DC mov word ptr [0x1b32], 0xdb",
+        "cd": "197:0542 mov word ptr [0x31cc], 0x97"
+      },
+      {
+        "floppy": "047B:05E2 mov word ptr [0x1b34], 0",
+        "cd": "197:0548 mov word ptr [0x31ce], 0xdb"
+      },
+      {
+        "floppy": "047B:05EE mov word ptr [0x1b38], 0",
+        "cd": "197:0554 mov word ptr [0x31d2], 0x98"
+      }
+    ]
+  },
+  {
+    "part": 7,
+    "floppy": "047B:0607",
+    "cd": "197:03E6",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "047B:0611 mov word ptr [0x1b02], 0xd4",
+        "cd": "197:03F0 mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "047B:0617 mov word ptr [0x1b04], 0",
+        "cd": "197:03F6 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "047B:061D mov word ptr [0x1b06], 1",
+        "cd": "197:03FC mov word ptr [0x31ba], 0x8c"
+      }
+    ]
+  },
+  {
+    "part": 8,
+    "floppy": "044D:0E71",
+    "cd": "189:0DA8",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "044D:0E81 mov word ptr [0x1b04], 0",
+        "cd": "189:0DB8 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "044D:0E87 mov word ptr [0x1b06], 1",
+        "cd": "189:0DBE mov word ptr [0x31ba], 0x99"
+      }
+    ]
+  },
+  {
+    "part": 8,
+    "floppy": "044D:0EA4",
+    "cd": "189:0DD5",
+    "similarity": 0.90909,
+    "changes": [
+      {
+        "floppy": "044D:0EBB mov word ptr [0x1b04], 0",
+        "cd": "189:0DE6 mov word ptr [0x31b6], 0xde"
+      },
+      {
+        "floppy": "044D:0EC7 mov word ptr [0x1b08], 0",
+        "cd": "189:0DF2 mov word ptr [0x31ba], 0xa8"
+      },
+      {
+        "floppy": "044D:0EE4 mov word ptr [0x1b04], 0",
+        "cd": "189:0E0F mov word ptr [0x31b8], 2"
+      },
+      {
+        "floppy": "044D:0EEA mov word ptr [0x1b06], 2",
+        "cd": "189:0E15 mov word ptr [0x31ba], 0x9a"
+      }
+    ]
+  },
+  {
+    "part": 8,
+    "floppy": "044D:0F07",
+    "cd": "189:0DA8",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "044D:0F11 mov word ptr [0x1b02], 0xcd",
+        "cd": "189:0DB2 mov word ptr [0x31b6], 0xca"
+      },
+      {
+        "floppy": "044D:0F17 mov word ptr [0x1b04], 0",
+        "cd": "189:0DB8 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "044D:0F1D mov word ptr [0x1b06], 2",
+        "cd": "189:0DBE mov word ptr [0x31ba], 0x99"
+      }
+    ]
+  },
+  {
+    "part": 8,
+    "floppy": "044D:0F3A",
+    "cd": "189:0DA8",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "044D:0F44 mov word ptr [0x1b02], 0xcf",
+        "cd": "189:0DB2 mov word ptr [0x31b6], 0xca"
+      },
+      {
+        "floppy": "044D:0F4A mov word ptr [0x1b04], 0",
+        "cd": "189:0DB8 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "044D:0F50 mov word ptr [0x1b06], 2",
+        "cd": "189:0DBE mov word ptr [0x31ba], 0x99"
+      }
+    ]
+  },
+  {
+    "part": 8,
+    "floppy": "044D:0F6D",
+    "cd": "189:0DA8",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "044D:0F77 mov word ptr [0x1b02], 0xd1",
+        "cd": "189:0DB2 mov word ptr [0x31b6], 0xca"
+      },
+      {
+        "floppy": "044D:0F7D mov word ptr [0x1b04], 0",
+        "cd": "189:0DB8 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "044D:0F83 mov word ptr [0x1b06], 1",
+        "cd": "189:0DBE mov word ptr [0x31ba], 0x99"
+      }
+    ]
+  },
+  {
+    "part": 9,
+    "floppy": "0454:0524",
+    "cd": "190:04C0",
+    "similarity": 0.90909,
+    "changes": [
+      {
+        "floppy": "0454:0541 mov word ptr [0x1b04], 0",
+        "cd": "190:04DD mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0454:0547 mov word ptr [0x1b06], 1",
+        "cd": "190:04E3 mov word ptr [0x31ba], 0xf5"
+      }
+    ]
+  },
+  {
+    "part": 9,
+    "floppy": "0454:0847",
+    "cd": "190:07AA",
+    "similarity": 0.91429,
+    "changes": [
+      {
+        "floppy": "0454:085E mov word ptr [0x1b04], 0",
+        "cd": "190:07C1 mov word ptr [0x31ba], 0xf4"
+      },
+      {
+        "floppy": "0454:086C mov word ptr [0x1b04], 0",
+        "cd": "190:07CF mov word ptr [0x31ba], 0xfc"
+      }
+    ]
+  },
+  {
+    "part": 9,
+    "floppy": "0454:088F",
+    "cd": "190:07EC",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0454:089F mov word ptr [0x1b04], 0",
+        "cd": "190:07FC mov word ptr [0x31b8], 2"
+      },
+      {
+        "floppy": "0454:08A5 mov word ptr [0x1b06], 2",
+        "cd": "190:0802 mov word ptr [0x31ba], 0xea"
+      }
+    ]
+  },
+  {
+    "part": 9,
+    "floppy": "0454:08C2",
+    "cd": "190:07EC",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0454:08CC mov word ptr [0x1b02], 0xcb",
+        "cd": "190:07F6 mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "0454:08D2 mov word ptr [0x1b04], 0",
+        "cd": "190:07FC mov word ptr [0x31b8], 2"
+      },
+      {
+        "floppy": "0454:08D8 mov word ptr [0x1b06], 2",
+        "cd": "190:0802 mov word ptr [0x31ba], 0xea"
+      }
+    ]
+  },
+  {
+    "part": 9,
+    "floppy": "0454:096D",
+    "cd": "190:08AF",
+    "similarity": 0.875,
+    "changes": [
+      {
+        "floppy": "0454:097D mov word ptr [0x1b04], 0",
+        "cd": "190:08BF mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0454:0983 mov word ptr [0x1b06], 1",
+        "cd": "190:08C5 mov word ptr [0x31ba], 0xed"
+      },
+      {
+        "floppy": "0454:0989 mov word ptr [0x1b08], 0",
+        "cd": "190:08CB mov word ptr [0x31bc], 0xd0"
+      },
+      {
+        "floppy": "0454:098F mov word ptr [0x1b0e], 0xd0",
+        "cd": "190:08D1 mov word ptr [0x31be], 1"
+      },
+      {
+        "floppy": "0454:0995 mov word ptr [0x1b10], 0",
+        "cd": "190:08D7 mov word ptr [0x31c0], 0xee"
+      }
+    ]
+  },
+  {
+    "part": 9,
+    "floppy": "0454:09B8",
+    "cd": "190:07EC",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0454:09C2 mov word ptr [0x1b02], 0xd3",
+        "cd": "190:07F6 mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "0454:09C8 mov word ptr [0x1b04], 0",
+        "cd": "190:07FC mov word ptr [0x31b8], 2"
+      },
+      {
+        "floppy": "0454:09CE mov word ptr [0x1b06], 1",
+        "cd": "190:0802 mov word ptr [0x31ba], 0xea"
+      }
+    ]
+  },
+  {
+    "part": 10,
+    "floppy": "0400:0105",
+    "cd": "175:00F2",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0400:0115 mov word ptr [0x1b04], 0",
+        "cd": "175:0102 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0400:011B mov word ptr [0x1b06], 1",
+        "cd": "175:0108 mov word ptr [0x31ba], 0x272"
+      }
+    ]
+  },
+  {
+    "part": 10,
+    "floppy": "0400:0138",
+    "cd": "175:00F2",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0400:0142 mov word ptr [0x1b02], 0xca",
+        "cd": "175:00FC mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "0400:0148 mov word ptr [0x1b04], 0",
+        "cd": "175:0102 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0400:014E mov word ptr [0x1b06], 1",
+        "cd": "175:0108 mov word ptr [0x31ba], 0x272"
+      }
+    ]
+  },
+  {
+    "part": 10,
+    "floppy": "0400:02A5",
+    "cd": "175:00F2",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0400:02AF mov word ptr [0x1b02], 0xce",
+        "cd": "175:00FC mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "0400:02B5 mov word ptr [0x1b04], 0",
+        "cd": "175:0102 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0400:02BB mov word ptr [0x1b06], 1",
+        "cd": "175:0108 mov word ptr [0x31ba], 0x272"
+      }
+    ]
+  },
+  {
+    "part": 10,
+    "floppy": "0400:02D8",
+    "cd": "175:00F2",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0400:02E2 mov word ptr [0x1b02], 0xcf",
+        "cd": "175:00FC mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "0400:02E8 mov word ptr [0x1b04], 0",
+        "cd": "175:0102 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0400:02EE mov word ptr [0x1b06], 1",
+        "cd": "175:0108 mov word ptr [0x31ba], 0x272"
+      }
+    ]
+  },
+  {
+    "part": 10,
+    "floppy": "0400:030B",
+    "cd": "175:00F2",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0400:0315 mov word ptr [0x1b02], 0xd0",
+        "cd": "175:00FC mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "0400:031B mov word ptr [0x1b04], 0",
+        "cd": "175:0102 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0400:0321 mov word ptr [0x1b06], 1",
+        "cd": "175:0108 mov word ptr [0x31ba], 0x272"
+      }
+    ]
+  },
+  {
+    "part": 11,
+    "floppy": "0409:02C3",
+    "cd": "176:0299",
+    "similarity": 0.91429,
+    "changes": [
+      {
+        "floppy": "0409:02DA mov word ptr [0x1b04], 0",
+        "cd": "176:02B0 mov word ptr [0x31ba], 0x26e"
+      },
+      {
+        "floppy": "0409:02E8 mov word ptr [0x1b04], 0",
+        "cd": "176:02BE mov word ptr [0x31ba], 0x26f"
+      }
+    ]
+  },
+  {
+    "part": 11,
+    "floppy": "0409:030B",
+    "cd": "176:02DB",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0409:0315 mov word ptr [0x1b02], 0xd4",
+        "cd": "176:02E5 mov word ptr [0x31b6], 0x1d"
+      },
+      {
+        "floppy": "0409:031B mov word ptr [0x1b04], 0",
+        "cd": "176:02EB mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0409:0321 mov word ptr [0x1b06], 1",
+        "cd": "176:02F1 mov word ptr [0x31ba], 0x1d"
+      }
+    ]
+  },
+  {
+    "part": 11,
+    "floppy": "0409:033E",
+    "cd": "176:02DB",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0409:0348 mov word ptr [0x1b02], 0xd2",
+        "cd": "176:02E5 mov word ptr [0x31b6], 0x1d"
+      },
+      {
+        "floppy": "0409:034E mov word ptr [0x1b04], 0",
+        "cd": "176:02EB mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0409:0354 mov word ptr [0x1b06], 1",
+        "cd": "176:02F1 mov word ptr [0x31ba], 0x1d"
+      }
+    ]
+  },
+  {
+    "part": 11,
+    "floppy": "0409:0371",
+    "cd": "176:02DB",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0409:037B mov word ptr [0x1b02], 0xd3",
+        "cd": "176:02E5 mov word ptr [0x31b6], 0x1d"
+      },
+      {
+        "floppy": "0409:0381 mov word ptr [0x1b04], 0",
+        "cd": "176:02EB mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0409:0387 mov word ptr [0x1b06], 1",
+        "cd": "176:02F1 mov word ptr [0x31ba], 0x1d"
+      }
+    ]
+  },
+  {
+    "part": 11,
+    "floppy": "0409:03A4",
+    "cd": "176:02DB",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0409:03AE mov word ptr [0x1b02], 0xc9",
+        "cd": "176:02E5 mov word ptr [0x31b6], 0x1d"
+      },
+      {
+        "floppy": "0409:03B4 mov word ptr [0x1b04], 0",
+        "cd": "176:02EB mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0409:03BA mov word ptr [0x1b06], 2",
+        "cd": "176:02F1 mov word ptr [0x31ba], 0x1d"
+      }
+    ]
+  },
+  {
+    "part": 11,
+    "floppy": "0409:03D7",
+    "cd": "176:02DB",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0409:03E7 mov word ptr [0x1b04], 0",
+        "cd": "176:02EB mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0409:03ED mov word ptr [0x1b06], 1",
+        "cd": "176:02F1 mov word ptr [0x31ba], 0x1d"
+      }
+    ]
+  },
+  {
+    "part": 11,
+    "floppy": "0409:040A",
+    "cd": "176:0299",
+    "similarity": 0.91429,
+    "changes": [
+      {
+        "floppy": "0409:0414 cmp byte ptr [0x840], 0",
+        "cd": "176:02A3 cmp byte ptr [0x866], 1"
+      },
+      {
+        "floppy": "0409:041B mov word ptr [0x1b02], 0xcb",
+        "cd": "176:02AA mov word ptr [0x31b6], 0xd0"
+      },
+      {
+        "floppy": "0409:0421 mov word ptr [0x1b04], 0",
+        "cd": "176:02B0 mov word ptr [0x31ba], 0x26e"
+      },
+      {
+        "floppy": "0409:0429 mov word ptr [0x1b02], 0xcc",
+        "cd": "176:02B8 mov word ptr [0x31b6], 0xd1"
+      },
+      {
+        "floppy": "0409:042F mov word ptr [0x1b04], 0",
+        "cd": "176:02BE mov word ptr [0x31ba], 0x26f"
+      }
+    ]
+  },
+  {
+    "part": 11,
+    "floppy": "0409:0452",
+    "cd": "176:03FE",
+    "similarity": 0.875,
+    "changes": [
+      {
+        "floppy": "0409:0462 mov word ptr [0x1b04], 0",
+        "cd": "176:040E mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0409:0468 mov word ptr [0x1b06], 1",
+        "cd": "176:0414 mov word ptr [0x31ba], 0x26b"
+      },
+      {
+        "floppy": "0409:046E mov word ptr [0x1b08], 0",
+        "cd": "176:041A mov word ptr [0x31bc], 0xce"
+      },
+      {
+        "floppy": "0409:0474 mov word ptr [0x1b0e], 0xce",
+        "cd": "176:0420 mov word ptr [0x31be], 1"
+      },
+      {
+        "floppy": "0409:047A mov word ptr [0x1b10], 0",
+        "cd": "176:0426 mov word ptr [0x31c0], 0x26c"
+      }
+    ]
+  },
+  {
+    "part": 11,
+    "floppy": "0409:049D",
+    "cd": "176:02DB",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0409:04A7 mov word ptr [0x1b02], 0x49",
+        "cd": "176:02E5 mov word ptr [0x31b6], 0x1d"
+      },
+      {
+        "floppy": "0409:04AD mov word ptr [0x1b04], 0",
+        "cd": "176:02EB mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0409:04B3 mov word ptr [0x1b06], 1",
+        "cd": "176:02F1 mov word ptr [0x31ba], 0x1d"
+      }
+    ]
+  },
+  {
+    "part": 11,
+    "floppy": "0409:04D0",
+    "cd": "176:02DB",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0409:04DA mov word ptr [0x1b02], 0xcf",
+        "cd": "176:02E5 mov word ptr [0x31b6], 0x1d"
+      },
+      {
+        "floppy": "0409:04E0 mov word ptr [0x1b04], 0",
+        "cd": "176:02EB mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0409:04E6 mov word ptr [0x1b06], 1",
+        "cd": "176:02F1 mov word ptr [0x31ba], 0x1d"
+      }
+    ]
+  },
+  {
+    "part": 12,
+    "floppy": "03EC:0030",
+    "cd": "171:0032",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "03EC:0040 mov word ptr [0x1b04], 0",
+        "cd": "171:0042 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "03EC:0046 mov word ptr [0x1b06], 1",
+        "cd": "171:0048 mov word ptr [0x31ba], 0x315"
+      }
+    ]
+  },
+  {
+    "part": 12,
+    "floppy": "03EC:0063",
+    "cd": "171:005F",
+    "similarity": 0.89474,
+    "changes": [
+      {
+        "floppy": "03EC:007A mov word ptr [0x1b04], 0",
+        "cd": "171:0076 mov word ptr [0x31b8], 2"
+      },
+      {
+        "floppy": "03EC:0080 mov word ptr [0x1b06], 2",
+        "cd": "171:007C mov word ptr [0x31ba], 0x316"
+      },
+      {
+        "floppy": "03EC:0094 mov word ptr [0x1b04], 0",
+        "cd": "171:0084 mov word ptr [0x31b6], 0xcd"
+      },
+      {
+        "floppy": "03EC:00A0 mov word ptr [0x1b08], 0",
+        "cd": "171:0090 mov word ptr [0x31ba], 0x317"
+      }
+    ]
+  },
+  {
+    "part": 12,
+    "floppy": "03EC:00B7",
+    "cd": "171:0032",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "03EC:00C1 mov word ptr [0x1b02], 0xcf",
+        "cd": "171:003C mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "03EC:00C7 mov word ptr [0x1b04], 0",
+        "cd": "171:0042 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "03EC:00CD mov word ptr [0x1b06], 2",
+        "cd": "171:0048 mov word ptr [0x31ba], 0x315"
+      }
+    ]
+  },
+  {
+    "part": 12,
+    "floppy": "03EC:00EA",
+    "cd": "171:0032",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "03EC:00F4 mov word ptr [0x1b02], 0xce",
+        "cd": "171:003C mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "03EC:00FA mov word ptr [0x1b04], 0",
+        "cd": "171:0042 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "03EC:0100 mov word ptr [0x1b06], 1",
+        "cd": "171:0048 mov word ptr [0x31ba], 0x315"
+      }
+    ]
+  },
+  {
+    "part": 12,
+    "floppy": "03EC:0A18",
+    "cd": "171:0993",
+    "similarity": 0.86947,
+    "changes": [
+      {
+        "floppy": "03EC:0A2D mov word ptr [0x1b02], 0xd8",
+        "cd": "171:09A8 mov word ptr [0x31b6], 0xdb"
+      },
+      {
+        "floppy": "03EC:0A33 mov word ptr [0x1b04], 0",
+        "cd": "171:09AE mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "03EC:0A39 mov word ptr [0x1b06], 2",
+        "cd": "171:09B4 mov word ptr [0x31ba], 0x321"
+      },
+      {
+        "floppy": "03EC:0B39 mov word ptr [0x1b04], 0",
+        "cd": "171:0AA0 mov word ptr [0x31b6], 0xd1"
+      },
+      {
+        "floppy": "03EC:0B45 mov word ptr [0x1b08], 0",
+        "cd": "171:0AAC mov word ptr [0x31ba], 0x31a"
+      },
+      {
+        "floppy": "03EC:0F82 mov word ptr [0x1b04], 0",
+        "cd": "171:0EBF mov word ptr [0x31b6], 0xd3"
+      },
+      {
+        "floppy": "03EC:0F8E mov word ptr [0x1b08], 0",
+        "cd": "171:0ECB mov word ptr [0x31ba], 0x31b"
+      }
+    ]
+  },
+  {
+    "part": 13,
+    "floppy": "03E4:0000",
+    "cd": "169:0002",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "03E4:0010 mov word ptr [0x1b04], 0",
+        "cd": "169:0012 mov word ptr [0x31b8], 2"
+      },
+      {
+        "floppy": "03E4:0016 mov word ptr [0x1b06], 2",
+        "cd": "169:0018 mov word ptr [0x31ba], 0x35a"
+      }
+    ]
+  },
+  {
+    "part": 13,
+    "floppy": "03E4:02C0",
+    "cd": "169:02A4",
+    "similarity": 0.92268,
+    "changes": [
+      {
+        "floppy": "03E4:0384 mov word ptr [0x1b04], 0",
+        "cd": "169:0362 mov word ptr [0x31b6], 0xcb"
+      },
+      {
+        "floppy": "03E4:0390 mov word ptr [0x1b08], 0",
+        "cd": "169:036E mov word ptr [0x31ba], 0x35b"
+      }
+    ]
+  },
+  {
+    "part": 14,
+    "floppy": "03CC:0057",
+    "cd": "165:0052",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "03CC:0067 mov word ptr [0x1b04], 0",
+        "cd": "165:0062 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "03CC:006D mov word ptr [0x1b06], 1",
+        "cd": "165:0068 mov word ptr [0x31ba], 0x35c"
+      }
+    ]
+  },
+  {
+    "part": 14,
+    "floppy": "03CC:0177",
+    "cd": "165:0052",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "03CC:0181 mov word ptr [0x1b02], 0xca",
+        "cd": "165:005C mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "03CC:0187 mov word ptr [0x1b04], 0",
+        "cd": "165:0062 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "03CC:018D mov word ptr [0x1b06], 1",
+        "cd": "165:0068 mov word ptr [0x31ba], 0x35c"
+      }
+    ]
+  },
+  {
+    "part": 14,
+    "floppy": "03CC:01AA",
+    "cd": "165:0052",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "03CC:01B4 mov word ptr [0x1b02], 0xcb",
+        "cd": "165:005C mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "03CC:01BA mov word ptr [0x1b04], 0",
+        "cd": "165:0062 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "03CC:01C0 mov word ptr [0x1b06], 1",
+        "cd": "165:0068 mov word ptr [0x31ba], 0x35c"
+      }
+    ]
+  },
+  {
+    "part": 15,
+    "floppy": "0393:0000",
+    "cd": "153:0002",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0393:0010 mov word ptr [0x1b04], 0",
+        "cd": "153:0012 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0393:0016 mov word ptr [0x1b06], 1",
+        "cd": "153:0018 mov word ptr [0x31ba], 0x144"
+      }
+    ]
+  },
+  {
+    "part": 15,
+    "floppy": "0393:0033",
+    "cd": "153:0002",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0393:003D mov word ptr [0x1b02], 0xcd",
+        "cd": "153:000C mov word ptr [0x31b6], 0xcc"
+      },
+      {
+        "floppy": "0393:0043 mov word ptr [0x1b04], 0",
+        "cd": "153:0012 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0393:0049 mov word ptr [0x1b06], 2",
+        "cd": "153:0018 mov word ptr [0x31ba], 0x144"
+      }
+    ]
+  },
+  {
+    "part": 15,
+    "floppy": "0393:0066",
+    "cd": "153:0002",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0393:0070 mov word ptr [0x1b02], 0xcf",
+        "cd": "153:000C mov word ptr [0x31b6], 0xcc"
+      },
+      {
+        "floppy": "0393:0076 mov word ptr [0x1b04], 0",
+        "cd": "153:0012 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0393:007C mov word ptr [0x1b06], 1",
+        "cd": "153:0018 mov word ptr [0x31ba], 0x144"
+      }
+    ]
+  },
+  {
+    "part": 15,
+    "floppy": "0393:0099",
+    "cd": "153:0002",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0393:00A3 mov word ptr [0x1b02], 0xcd",
+        "cd": "153:000C mov word ptr [0x31b6], 0xcc"
+      },
+      {
+        "floppy": "0393:00A9 mov word ptr [0x1b04], 0",
+        "cd": "153:0012 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0393:00AF mov word ptr [0x1b06], 2",
+        "cd": "153:0018 mov word ptr [0x31ba], 0x144"
+      }
+    ]
+  },
+  {
+    "part": 15,
+    "floppy": "0393:00CC",
+    "cd": "153:0002",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0393:00D6 mov word ptr [0x1b02], 0xcd",
+        "cd": "153:000C mov word ptr [0x31b6], 0xcc"
+      },
+      {
+        "floppy": "0393:00DC mov word ptr [0x1b04], 0",
+        "cd": "153:0012 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0393:00E2 mov word ptr [0x1b06], 2",
+        "cd": "153:0018 mov word ptr [0x31ba], 0x144"
+      }
+    ]
+  },
+  {
+    "part": 15,
+    "floppy": "0393:07A8",
+    "cd": "153:072E",
+    "similarity": 0.875,
+    "changes": [
+      {
+        "floppy": "0393:07B8 mov word ptr [0x1b04], 0",
+        "cd": "153:073E mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0393:07BE mov word ptr [0x1b06], 1",
+        "cd": "153:0744 mov word ptr [0x31ba], 0x142"
+      },
+      {
+        "floppy": "0393:07C4 mov word ptr [0x1b08], 0",
+        "cd": "153:074A mov word ptr [0x31bc], 0xca"
+      },
+      {
+        "floppy": "0393:07CA mov word ptr [0x1b0e], 0xca",
+        "cd": "153:0750 mov word ptr [0x31be], 2"
+      },
+      {
+        "floppy": "0393:07D0 mov word ptr [0x1b10], 0",
+        "cd": "153:0756 mov word ptr [0x31c0], 0x143"
+      }
+    ]
+  },
+  {
+    "part": 15,
+    "floppy": "0393:07F3",
+    "cd": "153:0002",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0393:07FD mov word ptr [0x1b02], 0xd0",
+        "cd": "153:000C mov word ptr [0x31b6], 0xcc"
+      },
+      {
+        "floppy": "0393:0803 mov word ptr [0x1b04], 0",
+        "cd": "153:0012 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0393:0809 mov word ptr [0x1b06], 1",
+        "cd": "153:0018 mov word ptr [0x31ba], 0x144"
+      }
+    ]
+  },
+  {
+    "part": 15,
+    "floppy": "0393:0826",
+    "cd": "153:0002",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0393:0830 mov word ptr [0x1b02], 0xea",
+        "cd": "153:000C mov word ptr [0x31b6], 0xcc"
+      },
+      {
+        "floppy": "0393:0836 mov word ptr [0x1b04], 0",
+        "cd": "153:0012 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0393:083C mov word ptr [0x1b06], 1",
+        "cd": "153:0018 mov word ptr [0x31ba], 0x144"
+      }
+    ]
+  },
+  {
+    "part": 15,
+    "floppy": "0393:0859",
+    "cd": "153:072E",
+    "similarity": 0.875,
+    "changes": [
+      {
+        "floppy": "0393:0863 mov word ptr [0x1b02], 0xeb",
+        "cd": "153:0738 mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "0393:0869 mov word ptr [0x1b04], 0",
+        "cd": "153:073E mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0393:086F mov word ptr [0x1b06], 1",
+        "cd": "153:0744 mov word ptr [0x31ba], 0x142"
+      },
+      {
+        "floppy": "0393:0875 mov word ptr [0x1b08], 0",
+        "cd": "153:074A mov word ptr [0x31bc], 0xca"
+      },
+      {
+        "floppy": "0393:087B mov word ptr [0x1b0e], 0xec",
+        "cd": "153:0750 mov word ptr [0x31be], 2"
+      },
+      {
+        "floppy": "0393:0881 mov word ptr [0x1b10], 0",
+        "cd": "153:0756 mov word ptr [0x31c0], 0x143"
+      }
+    ]
+  },
+  {
+    "part": 15,
+    "floppy": "0393:08A4",
+    "cd": "153:0002",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0393:08AE mov word ptr [0x1b02], 0xef",
+        "cd": "153:000C mov word ptr [0x31b6], 0xcc"
+      },
+      {
+        "floppy": "0393:08B4 mov word ptr [0x1b04], 0",
+        "cd": "153:0012 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0393:08BA mov word ptr [0x1b06], 1",
+        "cd": "153:0018 mov word ptr [0x31ba], 0x144"
+      }
+    ]
+  },
+  {
+    "part": 15,
+    "floppy": "0393:08D7",
+    "cd": "153:0002",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0393:08E1 mov word ptr [0x1b02], 0xed",
+        "cd": "153:000C mov word ptr [0x31b6], 0xcc"
+      },
+      {
+        "floppy": "0393:08E7 mov word ptr [0x1b04], 0",
+        "cd": "153:0012 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0393:08ED mov word ptr [0x1b06], 2",
+        "cd": "153:0018 mov word ptr [0x31ba], 0x144"
+      }
+    ]
+  },
+  {
+    "part": 15,
+    "floppy": "0393:0A8D",
+    "cd": "153:0002",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0393:0A97 mov word ptr [0x1b02], 0xf0",
+        "cd": "153:000C mov word ptr [0x31b6], 0xcc"
+      },
+      {
+        "floppy": "0393:0A9D mov word ptr [0x1b04], 0",
+        "cd": "153:0012 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0393:0AA3 mov word ptr [0x1b06], 1",
+        "cd": "153:0018 mov word ptr [0x31ba], 0x144"
+      }
+    ]
+  },
+  {
+    "part": 16,
+    "floppy": "0373:0000",
+    "cd": "144:0002",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0373:0010 mov word ptr [0x1b04], 0",
+        "cd": "144:0012 mov word ptr [0x31b8], 2"
+      },
+      {
+        "floppy": "0373:0016 mov word ptr [0x1b06], 2",
+        "cd": "144:0018 mov word ptr [0x31ba], 0x2da"
+      }
+    ]
+  },
+  {
+    "part": 17,
+    "floppy": "0363:0ABE",
+    "cd": "141:09E2",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0363:0ACE mov word ptr [0x1b04], 0",
+        "cd": "141:09F2 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0363:0AD4 mov word ptr [0x1b06], 1",
+        "cd": "141:09F8 mov word ptr [0x31ba], 0x288"
+      }
+    ]
+  },
+  {
+    "part": 17,
+    "floppy": "0363:0AF1",
+    "cd": "141:09E2",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0363:0AFB mov word ptr [0x1b02], 0xdc",
+        "cd": "141:09EC mov word ptr [0x31b6], 0xe1"
+      },
+      {
+        "floppy": "0363:0B01 mov word ptr [0x1b04], 0",
+        "cd": "141:09F2 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0363:0B07 mov word ptr [0x1b06], 3",
+        "cd": "141:09F8 mov word ptr [0x31ba], 0x288"
+      }
+    ]
+  },
+  {
+    "part": 18,
+    "floppy": "0347:0185",
+    "cd": "136:018A",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0347:0195 mov word ptr [0x1b04], 0",
+        "cd": "136:019A mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0347:019B mov word ptr [0x1b06], 1",
+        "cd": "136:01A0 mov word ptr [0x31ba], 0x380"
+      }
+    ]
+  },
+  {
+    "part": 18,
+    "floppy": "0347:01B8",
+    "cd": "136:018A",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0347:01C2 mov word ptr [0x1b02], 0xca",
+        "cd": "136:0194 mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "0347:01C8 mov word ptr [0x1b04], 0",
+        "cd": "136:019A mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0347:01CE mov word ptr [0x1b06], 1",
+        "cd": "136:01A0 mov word ptr [0x31ba], 0x380"
+      }
+    ]
+  },
+  {
+    "part": 18,
+    "floppy": "0347:02FF",
+    "cd": "136:018A",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0347:0309 mov word ptr [0x1b02], 0xd0",
+        "cd": "136:0194 mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "0347:030F mov word ptr [0x1b04], 0",
+        "cd": "136:019A mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0347:0315 mov word ptr [0x1b06], 1",
+        "cd": "136:01A0 mov word ptr [0x31ba], 0x380"
+      }
+    ]
+  },
+  {
+    "part": 18,
+    "floppy": "0347:0332",
+    "cd": "136:018A",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0347:033C mov word ptr [0x1b02], 0xd1",
+        "cd": "136:0194 mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "0347:0342 mov word ptr [0x1b04], 0",
+        "cd": "136:019A mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0347:0348 mov word ptr [0x1b06], 1",
+        "cd": "136:01A0 mov word ptr [0x31ba], 0x380"
+      }
+    ]
+  },
+  {
+    "part": 18,
+    "floppy": "0347:0365",
+    "cd": "136:018A",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0347:036F mov word ptr [0x1b02], 0xd2",
+        "cd": "136:0194 mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "0347:0375 mov word ptr [0x1b04], 0",
+        "cd": "136:019A mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0347:037B mov word ptr [0x1b06], 1",
+        "cd": "136:01A0 mov word ptr [0x31ba], 0x380"
+      }
+    ]
+  },
+  {
+    "part": 19,
+    "floppy": "034E:0185",
+    "cd": "137:018A",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "034E:0195 mov word ptr [0x1b04], 0",
+        "cd": "137:019A mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "034E:019B mov word ptr [0x1b06], 1",
+        "cd": "137:01A0 mov word ptr [0x31ba], 0x38d"
+      }
+    ]
+  },
+  {
+    "part": 19,
+    "floppy": "034E:02CC",
+    "cd": "137:018A",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "034E:02D6 mov word ptr [0x1b02], 0xcd",
+        "cd": "137:0194 mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "034E:02DC mov word ptr [0x1b04], 0",
+        "cd": "137:019A mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "034E:02E2 mov word ptr [0x1b06], 1",
+        "cd": "137:01A0 mov word ptr [0x31ba], 0x38d"
+      }
+    ]
+  },
+  {
+    "part": 19,
+    "floppy": "034E:0449",
+    "cd": "137:018A",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "034E:0453 mov word ptr [0x1b02], 0xd0",
+        "cd": "137:0194 mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "034E:0459 mov word ptr [0x1b04], 0",
+        "cd": "137:019A mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "034E:045F mov word ptr [0x1b06], 1",
+        "cd": "137:01A0 mov word ptr [0x31ba], 0x38d"
+      }
+    ]
+  },
+  {
+    "part": 19,
+    "floppy": "034E:047C",
+    "cd": "137:0421",
+    "similarity": 0.85106,
+    "changes": [
+      {
+        "floppy": "034E:0493 mov word ptr [0x1b04], 0",
+        "cd": "137:0432 mov word ptr [0x31b6], 0xd2"
+      },
+      {
+        "floppy": "034E:049F mov word ptr [0x1b08], 0",
+        "cd": "137:043E mov word ptr [0x31ba], 0x396"
+      },
+      {
+        "floppy": "034E:05A4 mov word ptr [0x1b04], 0",
+        "cd": "137:053B mov word ptr [0x31b6], 0xd1"
+      },
+      {
+        "floppy": "034E:05B0 mov word ptr [0x1b08], 0",
+        "cd": "137:0547 mov word ptr [0x31ba], 0x395"
+      }
+    ]
+  },
+  {
+    "part": 21,
+    "floppy": "0326:046A",
+    "cd": "129:0430",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0326:047A mov word ptr [0x1b04], 0",
+        "cd": "129:0440 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0326:0480 mov word ptr [0x1b06], 1",
+        "cd": "129:0446 mov word ptr [0x31ba], 0x499"
+      }
+    ]
+  },
+  {
+    "part": 21,
+    "floppy": "0326:049D",
+    "cd": "129:0430",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0326:04A7 mov word ptr [0x1b02], 0xcb",
+        "cd": "129:043A mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "0326:04AD mov word ptr [0x1b04], 0",
+        "cd": "129:0440 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0326:04B3 mov word ptr [0x1b06], 1",
+        "cd": "129:0446 mov word ptr [0x31ba], 0x499"
+      }
+    ]
+  },
+  {
+    "part": 21,
+    "floppy": "0326:04D0",
+    "cd": "129:0430",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0326:04DA mov word ptr [0x1b02], 0xcc",
+        "cd": "129:043A mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "0326:04E0 mov word ptr [0x1b04], 0",
+        "cd": "129:0440 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0326:04E6 mov word ptr [0x1b06], 1",
+        "cd": "129:0446 mov word ptr [0x31ba], 0x499"
+      }
+    ]
+  },
+  {
+    "part": 21,
+    "floppy": "0326:0503",
+    "cd": "129:0430",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0326:050D mov word ptr [0x1b02], 0xcd",
+        "cd": "129:043A mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "0326:0513 mov word ptr [0x1b04], 0",
+        "cd": "129:0440 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0326:0519 mov word ptr [0x1b06], 1",
+        "cd": "129:0446 mov word ptr [0x31ba], 0x499"
+      }
+    ]
+  },
+  {
+    "part": 21,
+    "floppy": "0326:0536",
+    "cd": "129:0430",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0326:0540 mov word ptr [0x1b02], 0xca",
+        "cd": "129:043A mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "0326:0546 mov word ptr [0x1b04], 0",
+        "cd": "129:0440 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0326:054C mov word ptr [0x1b06], 1",
+        "cd": "129:0446 mov word ptr [0x31ba], 0x499"
+      }
+    ]
+  },
+  {
+    "part": 21,
+    "floppy": "0326:0FCB",
+    "cd": "129:0430",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0326:0FD5 mov word ptr [0x1b02], 0xde",
+        "cd": "129:043A mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "0326:0FDB mov word ptr [0x1b04], 0",
+        "cd": "129:0440 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0326:0FE1 mov word ptr [0x1b06], 1",
+        "cd": "129:0446 mov word ptr [0x31ba], 0x499"
+      }
+    ]
+  },
+  {
+    "part": 23,
+    "floppy": "0317:0000",
+    "cd": "126:0002",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0317:0010 mov word ptr [0x1b04], 0",
+        "cd": "126:0012 mov word ptr [0x31b8], 2"
+      },
+      {
+        "floppy": "0317:0016 mov word ptr [0x1b06], 2",
+        "cd": "126:0018 mov word ptr [0x31ba], 0x4c1"
+      }
+    ]
+  },
+  {
+    "part": 23,
+    "floppy": "0317:0033",
+    "cd": "126:0002",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0317:003D mov word ptr [0x1b02], 0xcd",
+        "cd": "126:000C mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "0317:0043 mov word ptr [0x1b04], 0",
+        "cd": "126:0012 mov word ptr [0x31b8], 2"
+      },
+      {
+        "floppy": "0317:0049 mov word ptr [0x1b06], 1",
+        "cd": "126:0018 mov word ptr [0x31ba], 0x4c1"
+      }
+    ]
+  },
+  {
+    "part": 23,
+    "floppy": "0317:0066",
+    "cd": "126:005C",
+    "similarity": 0.875,
+    "changes": [
+      {
+        "floppy": "0317:0076 mov word ptr [0x1b04], 0",
+        "cd": "126:006C mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0317:007C mov word ptr [0x1b06], 1",
+        "cd": "126:0072 mov word ptr [0x31ba], 0x4c2"
+      },
+      {
+        "floppy": "0317:0082 mov word ptr [0x1b08], 0",
+        "cd": "126:0078 mov word ptr [0x31bc], 0xcc"
+      },
+      {
+        "floppy": "0317:0088 mov word ptr [0x1b0e], 0xcc",
+        "cd": "126:007E mov word ptr [0x31be], 1"
+      },
+      {
+        "floppy": "0317:008E mov word ptr [0x1b10], 0",
+        "cd": "126:0084 mov word ptr [0x31c0], 0x4c3"
+      }
+    ]
+  },
+  {
+    "part": 23,
+    "floppy": "0317:00B1",
+    "cd": "126:0002",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0317:00BB mov word ptr [0x1b02], 0xd0",
+        "cd": "126:000C mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "0317:00C1 mov word ptr [0x1b04], 0",
+        "cd": "126:0012 mov word ptr [0x31b8], 2"
+      },
+      {
+        "floppy": "0317:00C7 mov word ptr [0x1b06], 2",
+        "cd": "126:0018 mov word ptr [0x31ba], 0x4c1"
+      }
+    ]
+  },
+  {
+    "part": 23,
+    "floppy": "0317:00E4",
+    "cd": "126:005C",
+    "similarity": 0.875,
+    "changes": [
+      {
+        "floppy": "0317:00EE mov word ptr [0x1b02], 0xd2",
+        "cd": "126:0066 mov word ptr [0x31b6], 0xcb"
+      },
+      {
+        "floppy": "0317:00F4 mov word ptr [0x1b04], 0",
+        "cd": "126:006C mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0317:00FA mov word ptr [0x1b06], 1",
+        "cd": "126:0072 mov word ptr [0x31ba], 0x4c2"
+      },
+      {
+        "floppy": "0317:0100 mov word ptr [0x1b08], 0",
+        "cd": "126:0078 mov word ptr [0x31bc], 0xcc"
+      },
+      {
+        "floppy": "0317:0106 mov word ptr [0x1b0e], 0xd3",
+        "cd": "126:007E mov word ptr [0x31be], 1"
+      },
+      {
+        "floppy": "0317:010C mov word ptr [0x1b10], 0",
+        "cd": "126:0084 mov word ptr [0x31c0], 0x4c3"
+      }
+    ]
+  },
+  {
+    "part": 23,
+    "floppy": "0317:012F",
+    "cd": "126:0002",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0317:0139 mov word ptr [0x1b02], 0xd4",
+        "cd": "126:000C mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "0317:013F mov word ptr [0x1b04], 0",
+        "cd": "126:0012 mov word ptr [0x31b8], 2"
+      },
+      {
+        "floppy": "0317:0145 mov word ptr [0x1b06], 1",
+        "cd": "126:0018 mov word ptr [0x31ba], 0x4c1"
+      }
+    ]
+  },
+  {
+    "part": 23,
+    "floppy": "0317:099A",
+    "cd": "126:08D0",
+    "similarity": 0.85714,
+    "changes": [
+      {
+        "floppy": "0317:09A4 mov word ptr [0x1b84], 0x12c",
+        "cd": "126:08DA mov word ptr [0x321a], 0x118"
+      }
+    ]
+  },
+  {
+    "part": 24,
+    "floppy": "02F9:04A1",
+    "cd": "120:045B",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "02F9:04B1 mov word ptr [0x1b04], 0",
+        "cd": "120:046B mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "02F9:04B7 mov word ptr [0x1b06], 1",
+        "cd": "120:0471 mov word ptr [0x31ba], 0x4e9"
+      }
+    ]
+  },
+  {
+    "part": 24,
+    "floppy": "02F9:04D4",
+    "cd": "120:045B",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "02F9:04DE mov word ptr [0x1b02], 0xca",
+        "cd": "120:0465 mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "02F9:04E4 mov word ptr [0x1b04], 0",
+        "cd": "120:046B mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "02F9:04EA mov word ptr [0x1b06], 1",
+        "cd": "120:0471 mov word ptr [0x31ba], 0x4e9"
+      }
+    ]
+  },
+  {
+    "part": 24,
+    "floppy": "02F9:0507",
+    "cd": "120:045B",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "02F9:0511 mov word ptr [0x1b02], 0xcb",
+        "cd": "120:0465 mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "02F9:0517 mov word ptr [0x1b04], 0",
+        "cd": "120:046B mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "02F9:051D mov word ptr [0x1b06], 1",
+        "cd": "120:0471 mov word ptr [0x31ba], 0x4e9"
+      }
+    ]
+  },
+  {
+    "part": 24,
+    "floppy": "02F9:053A",
+    "cd": "120:04E2",
+    "similarity": 0.875,
+    "changes": [
+      {
+        "floppy": "02F9:054A mov word ptr [0x1b04], 0",
+        "cd": "120:04F2 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "02F9:0550 mov word ptr [0x1b06], 1",
+        "cd": "120:04F8 mov word ptr [0x31ba], 0x4ec"
+      },
+      {
+        "floppy": "02F9:0556 mov word ptr [0x1b08], 0",
+        "cd": "120:04FE mov word ptr [0x31bc], 0xcd"
+      },
+      {
+        "floppy": "02F9:055C mov word ptr [0x1b0e], 0xcd",
+        "cd": "120:0504 mov word ptr [0x31be], 1"
+      },
+      {
+        "floppy": "02F9:0562 mov word ptr [0x1b10], 0",
+        "cd": "120:050A mov word ptr [0x31c0], 0x4ed"
+      }
+    ]
+  },
+  {
+    "part": 24,
+    "floppy": "02F9:0585",
+    "cd": "120:045B",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "02F9:058F mov word ptr [0x1b02], 0xce",
+        "cd": "120:0465 mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "02F9:0595 mov word ptr [0x1b04], 0",
+        "cd": "120:046B mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "02F9:059B mov word ptr [0x1b06], 2",
+        "cd": "120:0471 mov word ptr [0x31ba], 0x4e9"
+      }
+    ]
+  },
+  {
+    "part": 24,
+    "floppy": "02F9:05B8",
+    "cd": "120:04E2",
+    "similarity": 0.875,
+    "changes": [
+      {
+        "floppy": "02F9:05C2 mov word ptr [0x1b02], 0xd0",
+        "cd": "120:04EC mov word ptr [0x31b6], 0xcc"
+      },
+      {
+        "floppy": "02F9:05C8 mov word ptr [0x1b04], 0",
+        "cd": "120:04F2 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "02F9:05CE mov word ptr [0x1b06], 2",
+        "cd": "120:04F8 mov word ptr [0x31ba], 0x4ec"
+      },
+      {
+        "floppy": "02F9:05D4 mov word ptr [0x1b08], 0",
+        "cd": "120:04FE mov word ptr [0x31bc], 0xcd"
+      },
+      {
+        "floppy": "02F9:05DA mov word ptr [0x1b0e], 0xd2",
+        "cd": "120:0504 mov word ptr [0x31be], 1"
+      },
+      {
+        "floppy": "02F9:05E0 mov word ptr [0x1b10], 0",
+        "cd": "120:050A mov word ptr [0x31c0], 0x4ed"
+      }
+    ]
+  },
+  {
+    "part": 24,
+    "floppy": "02F9:0603",
+    "cd": "120:045B",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "02F9:060D mov word ptr [0x1b02], 0xd4",
+        "cd": "120:0465 mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "02F9:0613 mov word ptr [0x1b04], 0",
+        "cd": "120:046B mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "02F9:0619 mov word ptr [0x1b06], 2",
+        "cd": "120:0471 mov word ptr [0x31ba], 0x4e9"
+      }
+    ]
+  },
+  {
+    "part": 25,
+    "floppy": "02EC:0138",
+    "cd": "117:00CA",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "02EC:0148 mov word ptr [0x1b04], 0",
+        "cd": "117:00DA mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "02EC:014E mov word ptr [0x1b06], 1",
+        "cd": "117:00E0 mov word ptr [0x31ba], 0x4f7"
+      }
+    ]
+  },
+  {
+    "part": 25,
+    "floppy": "02EC:01FE",
+    "cd": "117:00CA",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "02EC:0208 mov word ptr [0x1b02], 0xcb",
+        "cd": "117:00D4 mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "02EC:020E mov word ptr [0x1b04], 0",
+        "cd": "117:00DA mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "02EC:0214 mov word ptr [0x1b06], 1",
+        "cd": "117:00E0 mov word ptr [0x31ba], 0x4f7"
+      }
+    ]
+  },
+  {
+    "part": 25,
+    "floppy": "02EC:067C",
+    "cd": "117:0522",
+    "similarity": 0.85714,
+    "changes": [
+      {
+        "floppy": "02EC:0686 mov word ptr [0x1b84], 0x136",
+        "cd": "117:052C mov word ptr [0x321a], 0x104"
+      }
+    ]
+  },
+  {
+    "part": 26,
+    "floppy": "02DD:02C3",
+    "cd": "114:029D",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "02DD:02D3 mov word ptr [0x1b04], 0",
+        "cd": "114:02AD mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "02DD:02D9 mov word ptr [0x1b06], 1",
+        "cd": "114:02B3 mov word ptr [0x31ba], 0x4ff"
+      }
+    ]
+  },
+  {
+    "part": 26,
+    "floppy": "02DD:02F6",
+    "cd": "114:029D",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "02DD:0300 mov word ptr [0x1b02], 0xcb",
+        "cd": "114:02A7 mov word ptr [0x31b6], 0xca"
+      },
+      {
+        "floppy": "02DD:0306 mov word ptr [0x1b04], 0",
+        "cd": "114:02AD mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "02DD:030C mov word ptr [0x1b06], 1",
+        "cd": "114:02B3 mov word ptr [0x31ba], 0x4ff"
+      }
+    ]
+  },
+  {
+    "part": 26,
+    "floppy": "02DD:0329",
+    "cd": "114:029D",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "02DD:0333 mov word ptr [0x1b02], 0xe0",
+        "cd": "114:02A7 mov word ptr [0x31b6], 0xca"
+      },
+      {
+        "floppy": "02DD:0339 mov word ptr [0x1b04], 0",
+        "cd": "114:02AD mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "02DD:033F mov word ptr [0x1b06], 2",
+        "cd": "114:02B3 mov word ptr [0x31ba], 0x4ff"
+      }
+    ]
+  },
+  {
+    "part": 26,
+    "floppy": "02DD:035C",
+    "cd": "114:0324",
+    "similarity": 0.875,
+    "changes": [
+      {
+        "floppy": "02DD:036C mov word ptr [0x1b04], 0",
+        "cd": "114:0334 mov word ptr [0x31b8], 2"
+      },
+      {
+        "floppy": "02DD:0372 mov word ptr [0x1b06], 2",
+        "cd": "114:033A mov word ptr [0x31ba], 0x504"
+      },
+      {
+        "floppy": "02DD:0378 mov word ptr [0x1b08], 0",
+        "cd": "114:0340 mov word ptr [0x31bc], 0xda"
+      },
+      {
+        "floppy": "02DD:037E mov word ptr [0x1b0e], 0xda",
+        "cd": "114:0346 mov word ptr [0x31be], 1"
+      },
+      {
+        "floppy": "02DD:0384 mov word ptr [0x1b10], 0",
+        "cd": "114:034C mov word ptr [0x31c0], 0x505"
+      }
+    ]
+  },
+  {
+    "part": 26,
+    "floppy": "02DD:03A7",
+    "cd": "114:029D",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "02DD:03B1 mov word ptr [0x1b02], 0xdb",
+        "cd": "114:02A7 mov word ptr [0x31b6], 0xca"
+      },
+      {
+        "floppy": "02DD:03B7 mov word ptr [0x1b04], 0",
+        "cd": "114:02AD mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "02DD:03BD mov word ptr [0x1b06], 1",
+        "cd": "114:02B3 mov word ptr [0x31ba], 0x4ff"
+      }
+    ]
+  },
+  {
+    "part": 26,
+    "floppy": "02DD:03DA",
+    "cd": "114:0324",
+    "similarity": 0.875,
+    "changes": [
+      {
+        "floppy": "02DD:03E4 mov word ptr [0x1b02], 0xdc",
+        "cd": "114:032E mov word ptr [0x31b6], 0xd8"
+      },
+      {
+        "floppy": "02DD:03EA mov word ptr [0x1b04], 0",
+        "cd": "114:0334 mov word ptr [0x31b8], 2"
+      },
+      {
+        "floppy": "02DD:03F0 mov word ptr [0x1b06], 2",
+        "cd": "114:033A mov word ptr [0x31ba], 0x504"
+      },
+      {
+        "floppy": "02DD:03F6 mov word ptr [0x1b08], 0",
+        "cd": "114:0340 mov word ptr [0x31bc], 0xda"
+      },
+      {
+        "floppy": "02DD:03FC mov word ptr [0x1b0e], 0xde",
+        "cd": "114:0346 mov word ptr [0x31be], 1"
+      },
+      {
+        "floppy": "02DD:0402 mov word ptr [0x1b10], 0",
+        "cd": "114:034C mov word ptr [0x31c0], 0x505"
+      }
+    ]
+  },
+  {
+    "part": 26,
+    "floppy": "02DD:0425",
+    "cd": "114:029D",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "02DD:042F mov word ptr [0x1b02], 0xdf",
+        "cd": "114:02A7 mov word ptr [0x31b6], 0xca"
+      },
+      {
+        "floppy": "02DD:0435 mov word ptr [0x1b04], 0",
+        "cd": "114:02AD mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "02DD:043B mov word ptr [0x1b06], 1",
+        "cd": "114:02B3 mov word ptr [0x31ba], 0x4ff"
+      }
+    ]
+  },
+  {
+    "part": 27,
+    "floppy": "0338:006F",
+    "cd": "133:0065",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0338:007F mov word ptr [0x1b04], 0",
+        "cd": "133:0075 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0338:0085 mov word ptr [0x1b06], 1",
+        "cd": "133:007B mov word ptr [0x31ba], 0x48d"
+      }
+    ]
+  },
+  {
+    "part": 27,
+    "floppy": "0338:00A2",
+    "cd": "133:0065",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0338:00AC mov word ptr [0x1b02], 0xcb",
+        "cd": "133:006F mov word ptr [0x31b6], 0xcd"
+      },
+      {
+        "floppy": "0338:00B2 mov word ptr [0x1b04], 0",
+        "cd": "133:0075 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0338:00B8 mov word ptr [0x1b06], 1",
+        "cd": "133:007B mov word ptr [0x31ba], 0x48d"
+      }
+    ]
+  },
+  {
+    "part": 27,
+    "floppy": "0338:00D5",
+    "cd": "133:0065",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0338:00DF mov word ptr [0x1b02], 0xcc",
+        "cd": "133:006F mov word ptr [0x31b6], 0xcd"
+      },
+      {
+        "floppy": "0338:00E5 mov word ptr [0x1b04], 0",
+        "cd": "133:0075 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0338:00EB mov word ptr [0x1b06], 1",
+        "cd": "133:007B mov word ptr [0x31ba], 0x48d"
+      }
+    ]
+  },
+  {
+    "part": 27,
+    "floppy": "0338:0108",
+    "cd": "133:0065",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0338:0112 mov word ptr [0x1b02], 0xd7",
+        "cd": "133:006F mov word ptr [0x31b6], 0xcd"
+      },
+      {
+        "floppy": "0338:0118 mov word ptr [0x1b04], 0",
+        "cd": "133:0075 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0338:011E mov word ptr [0x1b06], 1",
+        "cd": "133:007B mov word ptr [0x31ba], 0x48d"
+      }
+    ]
+  },
+  {
+    "part": 27,
+    "floppy": "0338:013B",
+    "cd": "133:0065",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0338:0145 mov word ptr [0x1b02], 0xda",
+        "cd": "133:006F mov word ptr [0x31b6], 0xcd"
+      },
+      {
+        "floppy": "0338:014B mov word ptr [0x1b04], 0",
+        "cd": "133:0075 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0338:0151 mov word ptr [0x1b06], 2",
+        "cd": "133:007B mov word ptr [0x31ba], 0x48d"
+      }
+    ]
+  },
+  {
+    "part": 27,
+    "floppy": "0338:016E",
+    "cd": "133:0065",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0338:0178 mov word ptr [0x1b02], 0xdd",
+        "cd": "133:006F mov word ptr [0x31b6], 0xcd"
+      },
+      {
+        "floppy": "0338:017E mov word ptr [0x1b04], 0",
+        "cd": "133:0075 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0338:0184 mov word ptr [0x1b06], 1",
+        "cd": "133:007B mov word ptr [0x31ba], 0x48d"
+      }
+    ]
+  },
+  {
+    "part": 27,
+    "floppy": "0338:079A",
+    "cd": "133:06EC",
+    "similarity": 0.85714,
+    "changes": [
+      {
+        "floppy": "0338:07A4 mov word ptr [0x1b84], 0x96",
+        "cd": "133:06F6 mov word ptr [0x321a], 0xd3"
+      }
+    ]
+  },
+  {
+    "part": 28,
+    "floppy": "0308:0633",
+    "cd": "123:05E3",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0308:0643 mov word ptr [0x1b04], 0",
+        "cd": "123:05F3 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0308:0649 mov word ptr [0x1b06], 1",
+        "cd": "123:05F9 mov word ptr [0x31ba], 0x4ca"
+      }
+    ]
+  },
+  {
+    "part": 28,
+    "floppy": "0308:0666",
+    "cd": "123:05E3",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0308:0670 mov word ptr [0x1b02], 0xca",
+        "cd": "123:05ED mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "0308:0676 mov word ptr [0x1b04], 0",
+        "cd": "123:05F3 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0308:067C mov word ptr [0x1b06], 1",
+        "cd": "123:05F9 mov word ptr [0x31ba], 0x4ca"
+      }
+    ]
+  },
+  {
+    "part": 28,
+    "floppy": "0308:0699",
+    "cd": "123:05E3",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0308:06A3 mov word ptr [0x1b02], 0xcb",
+        "cd": "123:05ED mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "0308:06A9 mov word ptr [0x1b04], 0",
+        "cd": "123:05F3 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0308:06AF mov word ptr [0x1b06], 1",
+        "cd": "123:05F9 mov word ptr [0x31ba], 0x4ca"
+      }
+    ]
+  },
+  {
+    "part": 28,
+    "floppy": "0308:06CC",
+    "cd": "123:05E3",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0308:06D6 mov word ptr [0x1b02], 0xcc",
+        "cd": "123:05ED mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "0308:06DC mov word ptr [0x1b04], 0",
+        "cd": "123:05F3 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0308:06E2 mov word ptr [0x1b06], 1",
+        "cd": "123:05F9 mov word ptr [0x31ba], 0x4ca"
+      }
+    ]
+  },
+  {
+    "part": 28,
+    "floppy": "0308:06FF",
+    "cd": "123:0697",
+    "similarity": 0.90196,
+    "changes": [
+      {
+        "floppy": "0308:071C mov word ptr [0x1b06], 1",
+        "cd": "123:06A8 mov word ptr [0x31b6], 0xcd"
+      },
+      {
+        "floppy": "0308:0722 mov word ptr [0x1b08], 0",
+        "cd": "123:06AE mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0308:0728 mov word ptr [0x1b0e], 0xce",
+        "cd": "123:06B4 mov word ptr [0x31ba], 0x4ce"
+      },
+      {
+        "floppy": "0308:072E mov word ptr [0x1b10], 0",
+        "cd": "123:06BA mov word ptr [0x31bc], 0xce"
+      },
+      {
+        "floppy": "0308:073A mov word ptr [0x1b14], 0",
+        "cd": "123:06C6 mov word ptr [0x31c0], 0x4cf"
+      },
+      {
+        "floppy": "0308:0757 mov word ptr [0x1b04], 0",
+        "cd": "123:06E3 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0308:075D mov word ptr [0x1b06], 1",
+        "cd": "123:06E9 mov word ptr [0x31ba], 0x4e5"
+      }
+    ]
+  },
+  {
+    "part": 28,
+    "floppy": "0308:077A",
+    "cd": "123:05E3",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0308:0784 mov word ptr [0x1b02], 0xed",
+        "cd": "123:05ED mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "0308:078A mov word ptr [0x1b04], 0",
+        "cd": "123:05F3 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0308:0790 mov word ptr [0x1b06], 1",
+        "cd": "123:05F9 mov word ptr [0x31ba], 0x4ca"
+      }
+    ]
+  },
+  {
+    "part": 28,
+    "floppy": "0308:07AD",
+    "cd": "123:05E3",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0308:07B7 mov word ptr [0x1b02], 0xeb",
+        "cd": "123:05ED mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "0308:07BD mov word ptr [0x1b04], 0",
+        "cd": "123:05F3 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0308:07C3 mov word ptr [0x1b06], 1",
+        "cd": "123:05F9 mov word ptr [0x31ba], 0x4ca"
+      }
+    ]
+  },
+  {
+    "part": 28,
+    "floppy": "0308:07E0",
+    "cd": "123:05E3",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0308:07EA mov word ptr [0x1b02], 0xec",
+        "cd": "123:05ED mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "0308:07F0 mov word ptr [0x1b04], 0",
+        "cd": "123:05F3 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0308:07F6 mov word ptr [0x1b06], 1",
+        "cd": "123:05F9 mov word ptr [0x31ba], 0x4ca"
+      }
+    ]
+  },
+  {
+    "part": 28,
+    "floppy": "0308:0813",
+    "cd": "123:0787",
+    "similarity": 0.875,
+    "changes": [
+      {
+        "floppy": "0308:0823 mov word ptr [0x1b04], 0",
+        "cd": "123:0797 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0308:0829 mov word ptr [0x1b06], 1",
+        "cd": "123:079D mov word ptr [0x31ba], 0x4e0"
+      },
+      {
+        "floppy": "0308:082F mov word ptr [0x1b08], 0",
+        "cd": "123:07A3 mov word ptr [0x31bc], 0xe5"
+      },
+      {
+        "floppy": "0308:0835 mov word ptr [0x1b0e], 0xe5",
+        "cd": "123:07A9 mov word ptr [0x31be], 1"
+      },
+      {
+        "floppy": "0308:083B mov word ptr [0x1b10], 0",
+        "cd": "123:07AF mov word ptr [0x31c0], 0x4e1"
+      }
+    ]
+  },
+  {
+    "part": 28,
+    "floppy": "0308:0AE7",
+    "cd": "123:0A2E",
+    "similarity": 0.90476,
+    "changes": [
+      {
+        "floppy": "0308:0AFE mov word ptr [0x1b04], 0",
+        "cd": "123:0A45 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0308:0B04 mov word ptr [0x1b06], 1",
+        "cd": "123:0A4B mov word ptr [0x31ba], 0x4de"
+      },
+      {
+        "floppy": "0308:0B22 mov word ptr [0x1b04], 0",
+        "cd": "123:0A63 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0308:0B28 mov word ptr [0x1b06], 1",
+        "cd": "123:0A69 mov word ptr [0x31ba], 0x4df"
+      }
+    ]
+  },
+  {
+    "part": 30,
+    "floppy": "02CE:0000",
+    "cd": "110:0002",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "02CE:0010 mov word ptr [0x1b04], 0",
+        "cd": "110:0012 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "02CE:0016 mov word ptr [0x1b06], 1",
+        "cd": "110:0018 mov word ptr [0x31ba], 0x1c2"
+      }
+    ]
+  },
+  {
+    "part": 30,
+    "floppy": "02CE:0033",
+    "cd": "110:0002",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "02CE:003D mov word ptr [0x1b02], 0xca",
+        "cd": "110:000C mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "02CE:0043 mov word ptr [0x1b04], 0",
+        "cd": "110:0012 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "02CE:0049 mov word ptr [0x1b06], 1",
+        "cd": "110:0018 mov word ptr [0x31ba], 0x1c2"
+      }
+    ]
+  },
+  {
+    "part": 30,
+    "floppy": "02CE:0B29",
+    "cd": "110:09F9",
+    "similarity": 0.85714,
+    "changes": [
+      {
+        "floppy": "02CE:0B33 mov word ptr [0x1b84], 0xe7",
+        "cd": "110:0A03 mov word ptr [0x321a], 0xd2"
+      }
+    ]
+  },
+  {
+    "part": 31,
+    "floppy": "02BE:077A",
+    "cd": "107:071D",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "02BE:078A mov word ptr [0x1b04], 0",
+        "cd": "107:072D mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "02BE:0790 mov word ptr [0x1b06], 1",
+        "cd": "107:0733 mov word ptr [0x31ba], 0x371"
+      }
+    ]
+  },
+  {
+    "part": 31,
+    "floppy": "02BE:07AD",
+    "cd": "107:071D",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "02BE:07B7 mov word ptr [0x1b02], 0xcc",
+        "cd": "107:0727 mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "02BE:07BD mov word ptr [0x1b04], 0",
+        "cd": "107:072D mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "02BE:07C3 mov word ptr [0x1b06], 1",
+        "cd": "107:0733 mov word ptr [0x31ba], 0x371"
+      }
+    ]
+  },
+  {
+    "part": 31,
+    "floppy": "02BE:07E0",
+    "cd": "107:071D",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "02BE:07EA mov word ptr [0x1b02], 0xcb",
+        "cd": "107:0727 mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "02BE:07F0 mov word ptr [0x1b04], 0",
+        "cd": "107:072D mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "02BE:07F6 mov word ptr [0x1b06], 1",
+        "cd": "107:0733 mov word ptr [0x31ba], 0x371"
+      }
+    ]
+  },
+  {
+    "part": 31,
+    "floppy": "02BE:0813",
+    "cd": "107:071D",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "02BE:081D mov word ptr [0x1b02], 0xce",
+        "cd": "107:0727 mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "02BE:0823 mov word ptr [0x1b04], 0",
+        "cd": "107:072D mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "02BE:0829 mov word ptr [0x1b06], 2",
+        "cd": "107:0733 mov word ptr [0x31ba], 0x371"
+      }
+    ]
+  },
+  {
+    "part": 31,
+    "floppy": "02BE:0846",
+    "cd": "107:0810",
+    "similarity": 0.91429,
+    "changes": [
+      {
+        "floppy": "02BE:0850 mov word ptr [0x1b02], 0xd0",
+        "cd": "107:081A mov word ptr [0x31b6], 0xd3"
+      },
+      {
+        "floppy": "02BE:0856 mov word ptr [0x1b04], 0",
+        "cd": "107:0820 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "02BE:085C mov word ptr [0x1b06], 1",
+        "cd": "107:0826 mov word ptr [0x31ba], 0x379"
+      },
+      {
+        "floppy": "02BE:0862 mov word ptr [0x1b08], 0",
+        "cd": "107:082C mov word ptr [0x31bc], 0xd4"
+      },
+      {
+        "floppy": "02BE:0868 mov word ptr [0x1b0e], 0xd1",
+        "cd": "107:0832 mov word ptr [0x31be], 1"
+      },
+      {
+        "floppy": "02BE:086E mov word ptr [0x1b10], 0",
+        "cd": "107:0838 mov word ptr [0x31c0], 0x37a"
+      },
+      {
+        "floppy": "02BE:0874 mov word ptr [0x1b12], 2",
+        "cd": "107:083E mov word ptr [0x31c2], 0xd5"
+      },
+      {
+        "floppy": "02BE:087A mov word ptr [0x1b14], 0",
+        "cd": "107:0844 mov word ptr [0x31c4], 1"
+      },
+      {
+        "floppy": "02BE:0880 mov byte ptr [0x1b3e], 2",
+        "cd": "107:0850 mov byte ptr [0x31d4], 3"
+      }
+    ]
+  },
+  {
+    "part": 31,
+    "floppy": "02BE:0891",
+    "cd": "107:0810",
+    "similarity": 0.87179,
+    "changes": [
+      {
+        "floppy": "02BE:08A1 mov word ptr [0x1b04], 0",
+        "cd": "107:0820 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "02BE:08A7 mov word ptr [0x1b06], 1",
+        "cd": "107:0826 mov word ptr [0x31ba], 0x379"
+      },
+      {
+        "floppy": "02BE:08AD mov word ptr [0x1b08], 0",
+        "cd": "107:082C mov word ptr [0x31bc], 0xd4"
+      },
+      {
+        "floppy": "02BE:08B3 mov word ptr [0x1b0e], 0xd4",
+        "cd": "107:0832 mov word ptr [0x31be], 1"
+      },
+      {
+        "floppy": "02BE:08B9 mov word ptr [0x1b10], 0",
+        "cd": "107:0838 mov word ptr [0x31c0], 0x37a"
+      },
+      {
+        "floppy": "02BE:08BF mov word ptr [0x1b12], 1",
+        "cd": "107:083E mov word ptr [0x31c2], 0xd5"
+      },
+      {
+        "floppy": "02BE:08C5 mov word ptr [0x1b14], 0",
+        "cd": "107:0844 mov word ptr [0x31c4], 1"
+      },
+      {
+        "floppy": "02BE:08CB mov word ptr [0x1b1a], 0xd5",
+        "cd": "107:084A mov word ptr [0x31c6], 0x37b"
+      }
+    ]
+  },
+  {
+    "part": 31,
+    "floppy": "02BE:08F4",
+    "cd": "107:0810",
+    "similarity": 0.91429,
+    "changes": [
+      {
+        "floppy": "02BE:08FE mov word ptr [0x1b02], 0xd6",
+        "cd": "107:081A mov word ptr [0x31b6], 0xd3"
+      },
+      {
+        "floppy": "02BE:0904 mov word ptr [0x1b04], 0",
+        "cd": "107:0820 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "02BE:090A mov word ptr [0x1b06], 1",
+        "cd": "107:0826 mov word ptr [0x31ba], 0x379"
+      },
+      {
+        "floppy": "02BE:0910 mov word ptr [0x1b08], 0",
+        "cd": "107:082C mov word ptr [0x31bc], 0xd4"
+      },
+      {
+        "floppy": "02BE:0916 mov word ptr [0x1b0e], 0xd7",
+        "cd": "107:0832 mov word ptr [0x31be], 1"
+      },
+      {
+        "floppy": "02BE:091C mov word ptr [0x1b10], 0",
+        "cd": "107:0838 mov word ptr [0x31c0], 0x37a"
+      },
+      {
+        "floppy": "02BE:0922 mov word ptr [0x1b12], 1",
+        "cd": "107:083E mov word ptr [0x31c2], 0xd5"
+      },
+      {
+        "floppy": "02BE:0928 mov word ptr [0x1b14], 0",
+        "cd": "107:0844 mov word ptr [0x31c4], 1"
+      },
+      {
+        "floppy": "02BE:092E mov byte ptr [0x1b3e], 2",
+        "cd": "107:0850 mov byte ptr [0x31d4], 3"
+      }
+    ]
+  },
+  {
+    "part": 31,
+    "floppy": "02BE:093F",
+    "cd": "107:071D",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "02BE:0949 mov word ptr [0x1b02], 0xdc",
+        "cd": "107:0727 mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "02BE:094F mov word ptr [0x1b04], 0",
+        "cd": "107:072D mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "02BE:0955 mov word ptr [0x1b06], 3",
+        "cd": "107:0733 mov word ptr [0x31ba], 0x371"
+      }
+    ]
+  },
+  {
+    "part": 31,
+    "floppy": "02BE:0972",
+    "cd": "107:071D",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "02BE:097C mov word ptr [0x1b02], 0xda",
+        "cd": "107:0727 mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "02BE:0982 mov word ptr [0x1b04], 0",
+        "cd": "107:072D mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "02BE:0988 mov word ptr [0x1b06], 2",
+        "cd": "107:0733 mov word ptr [0x31ba], 0x371"
+      }
+    ]
+  },
+  {
+    "part": 31,
+    "floppy": "02BE:0B4B",
+    "cd": "107:0A86",
+    "similarity": 0.90909,
+    "changes": [
+      {
+        "floppy": "02BE:0B68 mov word ptr [0x1b04], 0",
+        "cd": "107:0AA3 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "02BE:0B6E mov word ptr [0x1b06], 1",
+        "cd": "107:0AA9 mov word ptr [0x31ba], 0x375"
+      }
+    ]
+  },
+  {
+    "part": 31,
+    "floppy": "02BE:0D5D",
+    "cd": "107:0C6A",
+    "similarity": 0.85714,
+    "changes": [
+      {
+        "floppy": "02BE:0D67 mov word ptr [0x1b84], 0xf0",
+        "cd": "107:0C74 mov word ptr [0x321a], 0xfb"
+      }
+    ]
+  },
+  {
+    "part": 32,
+    "floppy": "03B1:0000",
+    "cd": "160:0002",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "03B1:0010 mov word ptr [0x1b04], 0",
+        "cd": "160:0012 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "03B1:0016 mov word ptr [0x1b06], 1",
+        "cd": "160:0018 mov word ptr [0x31ba], 0x33c"
+      }
+    ]
+  },
+  {
+    "part": 32,
+    "floppy": "03B1:0033",
+    "cd": "160:0002",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "03B1:003D mov word ptr [0x1b02], 0xca",
+        "cd": "160:000C mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "03B1:0043 mov word ptr [0x1b04], 0",
+        "cd": "160:0012 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "03B1:0049 mov word ptr [0x1b06], 2",
+        "cd": "160:0018 mov word ptr [0x31ba], 0x33c"
+      }
+    ]
+  },
+  {
+    "part": 32,
+    "floppy": "03B1:0066",
+    "cd": "160:0002",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "03B1:0070 mov word ptr [0x1b02], 0xcc",
+        "cd": "160:000C mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "03B1:0076 mov word ptr [0x1b04], 0",
+        "cd": "160:0012 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "03B1:007C mov word ptr [0x1b06], 2",
+        "cd": "160:0018 mov word ptr [0x31ba], 0x33c"
+      }
+    ]
+  },
+  {
+    "part": 33,
+    "floppy": "0437:0197",
+    "cd": "185:0192",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0437:01A7 mov word ptr [0x1b04], 0",
+        "cd": "185:01A2 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0437:01AD mov word ptr [0x1b06], 1",
+        "cd": "185:01A8 mov word ptr [0x31ba], 0x18c"
+      }
+    ]
+  },
+  {
+    "part": 33,
+    "floppy": "0437:01CA",
+    "cd": "185:0192",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0437:01D4 mov word ptr [0x1b02], 0xca",
+        "cd": "185:019C mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "0437:01DA mov word ptr [0x1b04], 0",
+        "cd": "185:01A2 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0437:01E0 mov word ptr [0x1b06], 1",
+        "cd": "185:01A8 mov word ptr [0x31ba], 0x18c"
+      }
+    ]
+  },
+  {
+    "part": 33,
+    "floppy": "0437:01FD",
+    "cd": "185:0192",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0437:0207 mov word ptr [0x1b02], 0xcb",
+        "cd": "185:019C mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "0437:020D mov word ptr [0x1b04], 0",
+        "cd": "185:01A2 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0437:0213 mov word ptr [0x1b06], 1",
+        "cd": "185:01A8 mov word ptr [0x31ba], 0x18c"
+      }
+    ]
+  },
+  {
+    "part": 33,
+    "floppy": "0437:0230",
+    "cd": "185:0192",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0437:023A mov word ptr [0x1b02], 0xcc",
+        "cd": "185:019C mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "0437:0240 mov word ptr [0x1b04], 0",
+        "cd": "185:01A2 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0437:0246 mov word ptr [0x1b06], 1",
+        "cd": "185:01A8 mov word ptr [0x31ba], 0x18c"
+      }
+    ]
+  },
+  {
+    "part": 33,
+    "floppy": "0437:0263",
+    "cd": "185:0192",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0437:026D mov word ptr [0x1b02], 0xcd",
+        "cd": "185:019C mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "0437:0273 mov word ptr [0x1b04], 0",
+        "cd": "185:01A2 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0437:0279 mov word ptr [0x1b06], 1",
+        "cd": "185:01A8 mov word ptr [0x31ba], 0x18c"
+      }
+    ]
+  },
+  {
+    "part": 33,
+    "floppy": "0437:0296",
+    "cd": "185:0192",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0437:02A0 mov word ptr [0x1b02], 0xce",
+        "cd": "185:019C mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "0437:02A6 mov word ptr [0x1b04], 0",
+        "cd": "185:01A2 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0437:02AC mov word ptr [0x1b06], 1",
+        "cd": "185:01A8 mov word ptr [0x31ba], 0x18c"
+      }
+    ]
+  },
+  {
+    "part": 33,
+    "floppy": "0437:02C9",
+    "cd": "185:0192",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0437:02D3 mov word ptr [0x1b02], 0xcf",
+        "cd": "185:019C mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "0437:02D9 mov word ptr [0x1b04], 0",
+        "cd": "185:01A2 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0437:02DF mov word ptr [0x1b06], 1",
+        "cd": "185:01A8 mov word ptr [0x31ba], 0x18c"
+      }
+    ]
+  },
+  {
+    "part": 33,
+    "floppy": "0437:02FC",
+    "cd": "185:0192",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0437:0306 mov word ptr [0x1b02], 0xd0",
+        "cd": "185:019C mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "0437:030C mov word ptr [0x1b04], 0",
+        "cd": "185:01A2 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0437:0312 mov word ptr [0x1b06], 1",
+        "cd": "185:01A8 mov word ptr [0x31ba], 0x18c"
+      }
+    ]
+  },
+  {
+    "part": 33,
+    "floppy": "0437:032F",
+    "cd": "185:0192",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0437:0339 mov word ptr [0x1b02], 0xd1",
+        "cd": "185:019C mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "0437:033F mov word ptr [0x1b04], 0",
+        "cd": "185:01A2 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0437:0345 mov word ptr [0x1b06], 1",
+        "cd": "185:01A8 mov word ptr [0x31ba], 0x18c"
+      }
+    ]
+  },
+  {
+    "part": 33,
+    "floppy": "0437:0362",
+    "cd": "185:0192",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0437:036C mov word ptr [0x1b02], 0xd5",
+        "cd": "185:019C mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "0437:0372 mov word ptr [0x1b04], 0",
+        "cd": "185:01A2 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0437:0378 mov word ptr [0x1b06], 2",
+        "cd": "185:01A8 mov word ptr [0x31ba], 0x18c"
+      }
+    ]
+  },
+  {
+    "part": 34,
+    "floppy": "029F:0B79",
+    "cd": "101:0AC4",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "029F:0B89 mov word ptr [0x1b04], 0",
+        "cd": "101:0AD4 mov word ptr [0x31b8], 2"
+      },
+      {
+        "floppy": "029F:0B8F mov word ptr [0x1b06], 2",
+        "cd": "101:0ADA mov word ptr [0x31ba], 0x232"
+      }
+    ]
+  },
+  {
+    "part": 34,
+    "floppy": "029F:0BEB",
+    "cd": "101:0AC4",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "029F:0BF5 mov word ptr [0x1b02], 0xcd",
+        "cd": "101:0ACE mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "029F:0BFB mov word ptr [0x1b04], 0",
+        "cd": "101:0AD4 mov word ptr [0x31b8], 2"
+      },
+      {
+        "floppy": "029F:0C01 mov word ptr [0x1b06], 1",
+        "cd": "101:0ADA mov word ptr [0x31ba], 0x232"
+      }
+    ]
+  },
+  {
+    "part": 34,
+    "floppy": "029F:0C1E",
+    "cd": "101:0AC4",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "029F:0C28 mov word ptr [0x1b02], 0xce",
+        "cd": "101:0ACE mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "029F:0C2E mov word ptr [0x1b04], 0",
+        "cd": "101:0AD4 mov word ptr [0x31b8], 2"
+      },
+      {
+        "floppy": "029F:0C34 mov word ptr [0x1b06], 2",
+        "cd": "101:0ADA mov word ptr [0x31ba], 0x232"
+      }
+    ]
+  },
+  {
+    "part": 34,
+    "floppy": "029F:0C51",
+    "cd": "101:0AC4",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "029F:0C5B mov word ptr [0x1b02], 0xd0",
+        "cd": "101:0ACE mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "029F:0C61 mov word ptr [0x1b04], 0",
+        "cd": "101:0AD4 mov word ptr [0x31b8], 2"
+      },
+      {
+        "floppy": "029F:0C67 mov word ptr [0x1b06], 2",
+        "cd": "101:0ADA mov word ptr [0x31ba], 0x232"
+      }
+    ]
+  },
+  {
+    "part": 35,
+    "floppy": "029A:007F",
+    "cd": "100:007B",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "029A:008F mov word ptr [0x1b04], 0",
+        "cd": "100:008B mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "029A:0095 mov word ptr [0x1b06], 1",
+        "cd": "100:0091 mov word ptr [0x31ba], 0x264"
+      }
+    ]
+  },
+  {
+    "part": 35,
+    "floppy": "029A:00B2",
+    "cd": "100:007B",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "029A:00BC mov word ptr [0x1b02], 0xcc",
+        "cd": "100:0085 mov word ptr [0x31b6], 0xcb"
+      },
+      {
+        "floppy": "029A:00C2 mov word ptr [0x1b04], 0",
+        "cd": "100:008B mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "029A:00C8 mov word ptr [0x1b06], 1",
+        "cd": "100:0091 mov word ptr [0x31ba], 0x264"
+      }
+    ]
+  },
+  {
+    "part": 35,
+    "floppy": "029A:00E5",
+    "cd": "100:007B",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "029A:00EF mov word ptr [0x1b02], 0xcd",
+        "cd": "100:0085 mov word ptr [0x31b6], 0xcb"
+      },
+      {
+        "floppy": "029A:00F5 mov word ptr [0x1b04], 0",
+        "cd": "100:008B mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "029A:00FB mov word ptr [0x1b06], 1",
+        "cd": "100:0091 mov word ptr [0x31ba], 0x264"
+      }
+    ]
+  },
+  {
+    "part": 36,
+    "floppy": "028D:0051",
+    "cd": "098:004F",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "028D:0061 mov word ptr [0x1b04], 0",
+        "cd": "098:005F mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "028D:0067 mov word ptr [0x1b06], 1",
+        "cd": "098:0065 mov word ptr [0x31ba], 0x28f"
+      }
+    ]
+  },
+  {
+    "part": 36,
+    "floppy": "028D:0084",
+    "cd": "098:004F",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "028D:008E mov word ptr [0x1b02], 0xca",
+        "cd": "098:0059 mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "028D:0094 mov word ptr [0x1b04], 0",
+        "cd": "098:005F mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "028D:009A mov word ptr [0x1b06], 1",
+        "cd": "098:0065 mov word ptr [0x31ba], 0x28f"
+      }
+    ]
+  },
+  {
+    "part": 36,
+    "floppy": "028D:00B7",
+    "cd": "098:004F",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "028D:00C1 mov word ptr [0x1b02], 0xcb",
+        "cd": "098:0059 mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "028D:00C7 mov word ptr [0x1b04], 0",
+        "cd": "098:005F mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "028D:00CD mov word ptr [0x1b06], 1",
+        "cd": "098:0065 mov word ptr [0x31ba], 0x28f"
+      }
+    ]
+  },
+  {
+    "part": 36,
+    "floppy": "028D:00EA",
+    "cd": "098:004F",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "028D:00F4 mov word ptr [0x1b02], 0xcc",
+        "cd": "098:0059 mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "028D:00FA mov word ptr [0x1b04], 0",
+        "cd": "098:005F mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "028D:0100 mov word ptr [0x1b06], 2",
+        "cd": "098:0065 mov word ptr [0x31ba], 0x28f"
+      }
+    ]
+  },
+  {
+    "part": 36,
+    "floppy": "028D:011D",
+    "cd": "098:004F",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "028D:0127 mov word ptr [0x1b02], 0xd1",
+        "cd": "098:0059 mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "028D:012D mov word ptr [0x1b04], 0",
+        "cd": "098:005F mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "028D:0133 mov word ptr [0x1b06], 1",
+        "cd": "098:0065 mov word ptr [0x31ba], 0x28f"
+      }
+    ]
+  },
+  {
+    "part": 36,
+    "floppy": "028D:0150",
+    "cd": "098:004F",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "028D:015A mov word ptr [0x1b02], 0xce",
+        "cd": "098:0059 mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "028D:0160 mov word ptr [0x1b04], 0",
+        "cd": "098:005F mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "028D:0166 mov word ptr [0x1b06], 2",
+        "cd": "098:0065 mov word ptr [0x31ba], 0x28f"
+      }
+    ]
+  },
+  {
+    "part": 36,
+    "floppy": "028D:0183",
+    "cd": "098:004F",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "028D:018D mov word ptr [0x1b02], 0xd0",
+        "cd": "098:0059 mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "028D:0193 mov word ptr [0x1b04], 0",
+        "cd": "098:005F mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "028D:0199 mov word ptr [0x1b06], 1",
+        "cd": "098:0065 mov word ptr [0x31ba], 0x28f"
+      }
+    ]
+  },
+  {
+    "part": 37,
+    "floppy": "0281:0000",
+    "cd": "096:0002",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0281:0010 mov word ptr [0x1b04], 0",
+        "cd": "096:0012 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0281:0016 mov word ptr [0x1b06], 1",
+        "cd": "096:0018 mov word ptr [0x31ba], 0x299"
+      }
+    ]
+  },
+  {
+    "part": 37,
+    "floppy": "0281:0161",
+    "cd": "096:0002",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0281:016B mov word ptr [0x1b02], 0xcb",
+        "cd": "096:000C mov word ptr [0x31b6], 0xcd"
+      },
+      {
+        "floppy": "0281:0171 mov word ptr [0x1b04], 0",
+        "cd": "096:0012 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0281:0177 mov word ptr [0x1b06], 2",
+        "cd": "096:0018 mov word ptr [0x31ba], 0x299"
+      }
+    ]
+  },
+  {
+    "part": 37,
+    "floppy": "0281:0194",
+    "cd": "096:0002",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0281:019E mov word ptr [0x1b02], 0xcf",
+        "cd": "096:000C mov word ptr [0x31b6], 0xcd"
+      },
+      {
+        "floppy": "0281:01A4 mov word ptr [0x1b04], 0",
+        "cd": "096:0012 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0281:01AA mov word ptr [0x1b06], 1",
+        "cd": "096:0018 mov word ptr [0x31ba], 0x299"
+      }
+    ]
+  },
+  {
+    "part": 37,
+    "floppy": "0281:01C7",
+    "cd": "096:0002",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0281:01D1 mov word ptr [0x1b02], 0xce",
+        "cd": "096:000C mov word ptr [0x31b6], 0xcd"
+      },
+      {
+        "floppy": "0281:01D7 mov word ptr [0x1b04], 0",
+        "cd": "096:0012 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0281:01DD mov word ptr [0x1b06], 1",
+        "cd": "096:0018 mov word ptr [0x31ba], 0x299"
+      }
+    ]
+  },
+  {
+    "part": 50,
+    "floppy": "01D2:0000",
+    "cd": "054:0002",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "01D2:0010 mov word ptr [0x1b04], 0",
+        "cd": "054:0012 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "01D2:0016 mov word ptr [0x1b06], 1",
+        "cd": "054:0018 mov word ptr [0x31ba], 0x43b"
+      }
+    ]
+  },
+  {
+    "part": 51,
+    "floppy": "0276:03D2",
+    "cd": "093:039E",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0276:03E2 mov word ptr [0x1b04], 0",
+        "cd": "093:03AE mov word ptr [0x31b8], 2"
+      },
+      {
+        "floppy": "0276:03E8 mov word ptr [0x1b06], 2",
+        "cd": "093:03B4 mov word ptr [0x31ba], 0x47d"
+      }
+    ]
+  },
+  {
+    "part": 52,
+    "floppy": "026E:03D5",
+    "cd": "091:03A0",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "026E:03E5 mov word ptr [0x1b04], 0",
+        "cd": "091:03B0 mov word ptr [0x31b8], 2"
+      },
+      {
+        "floppy": "026E:03EB mov word ptr [0x1b06], 2",
+        "cd": "091:03B6 mov word ptr [0x31ba], 0x47d"
+      }
+    ]
+  },
+  {
+    "part": 53,
+    "floppy": "0266:0161",
+    "cd": "089:0146",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0266:0171 mov word ptr [0x1b04], 0",
+        "cd": "089:0156 mov word ptr [0x31b8], 2"
+      },
+      {
+        "floppy": "0266:0177 mov word ptr [0x1b06], 2",
+        "cd": "089:015C mov word ptr [0x31ba], 0x47d"
+      }
+    ]
+  },
+  {
+    "part": 54,
+    "floppy": "025E:03AA",
+    "cd": "087:037B",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "025E:03BA mov word ptr [0x1b04], 0",
+        "cd": "087:038B mov word ptr [0x31b8], 2"
+      },
+      {
+        "floppy": "025E:03C0 mov word ptr [0x1b06], 2",
+        "cd": "087:0391 mov word ptr [0x31ba], 0x47d"
+      }
+    ]
+  },
+  {
+    "part": 55,
+    "floppy": "0256:0391",
+    "cd": "085:0367",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0256:03A1 mov word ptr [0x1b04], 0",
+        "cd": "085:0377 mov word ptr [0x31b8], 2"
+      },
+      {
+        "floppy": "0256:03A7 mov word ptr [0x1b06], 2",
+        "cd": "085:037D mov word ptr [0x31ba], 0x47d"
+      }
+    ]
+  },
+  {
+    "part": 56,
+    "floppy": "024E:03AA",
+    "cd": "083:037A",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "024E:03BA mov word ptr [0x1b04], 0",
+        "cd": "083:038A mov word ptr [0x31b8], 2"
+      },
+      {
+        "floppy": "024E:03C0 mov word ptr [0x1b06], 2",
+        "cd": "083:0390 mov word ptr [0x31ba], 0x47d"
+      }
+    ]
+  },
+  {
+    "part": 57,
+    "floppy": "0246:03D5",
+    "cd": "081:03A1",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0246:03E5 mov word ptr [0x1b04], 0",
+        "cd": "081:03B1 mov word ptr [0x31b8], 2"
+      },
+      {
+        "floppy": "0246:03EB mov word ptr [0x1b06], 2",
+        "cd": "081:03B7 mov word ptr [0x31ba], 0x47d"
+      }
+    ]
+  },
+  {
+    "part": 58,
+    "floppy": "023E:03AA",
+    "cd": "079:037A",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "023E:03BA mov word ptr [0x1b04], 0",
+        "cd": "079:038A mov word ptr [0x31b8], 2"
+      },
+      {
+        "floppy": "023E:03C0 mov word ptr [0x1b06], 2",
+        "cd": "079:0390 mov word ptr [0x31ba], 0x47d"
+      }
+    ]
+  },
+  {
+    "part": 59,
+    "floppy": "0236:03AA",
+    "cd": "077:037A",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0236:03BA mov word ptr [0x1b04], 0",
+        "cd": "077:038A mov word ptr [0x31b8], 2"
+      },
+      {
+        "floppy": "0236:03C0 mov word ptr [0x1b06], 2",
+        "cd": "077:0390 mov word ptr [0x31ba], 0x47d"
+      }
+    ]
+  },
+  {
+    "part": 60,
+    "floppy": "022E:03AA",
+    "cd": "075:037B",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "022E:03BA mov word ptr [0x1b04], 0",
+        "cd": "075:038B mov word ptr [0x31b8], 2"
+      },
+      {
+        "floppy": "022E:03C0 mov word ptr [0x1b06], 2",
+        "cd": "075:0391 mov word ptr [0x31ba], 0x47d"
+      }
+    ]
+  },
+  {
+    "part": 61,
+    "floppy": "0226:03AA",
+    "cd": "073:037B",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0226:03BA mov word ptr [0x1b04], 0",
+        "cd": "073:038B mov word ptr [0x31b8], 2"
+      },
+      {
+        "floppy": "0226:03C0 mov word ptr [0x1b06], 2",
+        "cd": "073:0391 mov word ptr [0x31ba], 0x47d"
+      }
+    ]
+  },
+  {
+    "part": 62,
+    "floppy": "021E:03D5",
+    "cd": "071:03A1",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "021E:03E5 mov word ptr [0x1b04], 0",
+        "cd": "071:03B1 mov word ptr [0x31b8], 2"
+      },
+      {
+        "floppy": "021E:03EB mov word ptr [0x1b06], 2",
+        "cd": "071:03B7 mov word ptr [0x31ba], 0x47d"
+      }
+    ]
+  },
+  {
+    "part": 63,
+    "floppy": "0216:03AA",
+    "cd": "069:037B",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0216:03BA mov word ptr [0x1b04], 0",
+        "cd": "069:038B mov word ptr [0x31b8], 2"
+      },
+      {
+        "floppy": "0216:03C0 mov word ptr [0x1b06], 2",
+        "cd": "069:0391 mov word ptr [0x31ba], 0x47d"
+      }
+    ]
+  },
+  {
+    "part": 64,
+    "floppy": "020E:0000",
+    "cd": "067:0002",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "020E:0010 mov word ptr [0x1b04], 0",
+        "cd": "067:0012 mov word ptr [0x31b8], 2"
+      },
+      {
+        "floppy": "020E:0016 mov word ptr [0x1b06], 2",
+        "cd": "067:0018 mov word ptr [0x31ba], 0x47d"
+      }
+    ]
+  },
+  {
+    "part": 65,
+    "floppy": "0205:0000",
+    "cd": "065:0002",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0205:0010 mov word ptr [0x1b04], 0",
+        "cd": "065:0012 mov word ptr [0x31b8], 2"
+      },
+      {
+        "floppy": "0205:0016 mov word ptr [0x1b06], 2",
+        "cd": "065:0018 mov word ptr [0x31ba], 0x47d"
+      }
+    ]
+  },
+  {
+    "part": 66,
+    "floppy": "01FC:03AA",
+    "cd": "063:037B",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "01FC:03BA mov word ptr [0x1b04], 0",
+        "cd": "063:038B mov word ptr [0x31b8], 2"
+      },
+      {
+        "floppy": "01FC:03C0 mov word ptr [0x1b06], 2",
+        "cd": "063:0391 mov word ptr [0x31ba], 0x47d"
+      }
+    ]
+  },
+  {
+    "part": 66,
+    "floppy": "01FC:03DD",
+    "cd": "063:037B",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "01FC:03E7 mov word ptr [0x1b02], 0xcb",
+        "cd": "063:0385 mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "01FC:03ED mov word ptr [0x1b04], 0",
+        "cd": "063:038B mov word ptr [0x31b8], 2"
+      },
+      {
+        "floppy": "01FC:03F3 mov word ptr [0x1b06], 1",
+        "cd": "063:0391 mov word ptr [0x31ba], 0x47d"
+      }
+    ]
+  },
+  {
+    "part": 66,
+    "floppy": "01FC:0410",
+    "cd": "063:03D5",
+    "similarity": 0.87179,
+    "changes": [
+      {
+        "floppy": "01FC:0420 mov word ptr [0x1b04], 0",
+        "cd": "063:03E5 mov word ptr [0x31b8], 2"
+      },
+      {
+        "floppy": "01FC:0426 mov word ptr [0x1b06], 2",
+        "cd": "063:03EB mov word ptr [0x31ba], 0x47f"
+      },
+      {
+        "floppy": "01FC:042C mov word ptr [0x1b08], 0",
+        "cd": "063:03F1 mov word ptr [0x31bc], 0xce"
+      },
+      {
+        "floppy": "01FC:0432 mov word ptr [0x1b0e], 0xce",
+        "cd": "063:03F7 mov word ptr [0x31be], 2"
+      },
+      {
+        "floppy": "01FC:0438 mov word ptr [0x1b10], 0",
+        "cd": "063:03FD mov word ptr [0x31c0], 0x480"
+      },
+      {
+        "floppy": "01FC:043E mov word ptr [0x1b12], 2",
+        "cd": "063:0403 mov word ptr [0x31c2], 0xd0"
+      },
+      {
+        "floppy": "01FC:0444 mov word ptr [0x1b14], 0",
+        "cd": "063:0409 mov word ptr [0x31c4], 1"
+      },
+      {
+        "floppy": "01FC:044A mov word ptr [0x1b1a], 0xd0",
+        "cd": "063:040F mov word ptr [0x31c6], 0x481"
+      }
+    ]
+  },
+  {
+    "part": 66,
+    "floppy": "01FC:0473",
+    "cd": "063:037B",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "01FC:047D mov word ptr [0x1b02], 0xd1",
+        "cd": "063:0385 mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "01FC:0483 mov word ptr [0x1b04], 0",
+        "cd": "063:038B mov word ptr [0x31b8], 2"
+      },
+      {
+        "floppy": "01FC:0489 mov word ptr [0x1b06], 2",
+        "cd": "063:0391 mov word ptr [0x31ba], 0x47d"
+      }
+    ]
+  },
+  {
+    "part": 67,
+    "floppy": "01F8:0391",
+    "cd": "062:0367",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "01F8:03A1 mov word ptr [0x1b04], 0",
+        "cd": "062:0377 mov word ptr [0x31b8], 2"
+      },
+      {
+        "floppy": "01F8:03A7 mov word ptr [0x1b06], 2",
+        "cd": "062:037D mov word ptr [0x31ba], 0x483"
+      }
+    ]
+  },
+  {
+    "part": 67,
+    "floppy": "01F8:03C4",
+    "cd": "062:0367",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "01F8:03CE mov word ptr [0x1b02], 0xc9",
+        "cd": "062:0371 mov word ptr [0x31b6], 0xd3"
+      },
+      {
+        "floppy": "01F8:03D4 mov word ptr [0x1b04], 0",
+        "cd": "062:0377 mov word ptr [0x31b8], 2"
+      },
+      {
+        "floppy": "01F8:03DA mov word ptr [0x1b06], 2",
+        "cd": "062:037D mov word ptr [0x31ba], 0x483"
+      }
+    ]
+  },
+  {
+    "part": 68,
+    "floppy": "01DA:06F4",
+    "cd": "056:0697",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "01DA:0704 mov word ptr [0x1b04], 0",
+        "cd": "056:06A7 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "01DA:070A mov word ptr [0x1b06], 1",
+        "cd": "056:06AD mov word ptr [0x31ba], 0x3ef"
+      }
+    ]
+  },
+  {
+    "part": 68,
+    "floppy": "01DA:0727",
+    "cd": "056:0697",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "01DA:0731 mov word ptr [0x1b02], 0xd4",
+        "cd": "056:06A1 mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "01DA:0737 mov word ptr [0x1b04], 0",
+        "cd": "056:06A7 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "01DA:073D mov word ptr [0x1b06], 2",
+        "cd": "056:06AD mov word ptr [0x31ba], 0x3ef"
+      }
+    ]
+  },
+  {
+    "part": 68,
+    "floppy": "01DA:0ECA",
+    "cd": "056:0D88",
+    "similarity": 0.875,
+    "changes": [
+      {
+        "floppy": "01DA:0ED4 mov byte ptr [0x872], 0",
+        "cd": "056:0D92 mov byte ptr [0x896], 1"
+      }
+    ]
+  },
+  {
+    "part": 69,
+    "floppy": "01C2:011C",
+    "cd": "051:00C9",
+    "similarity": 0.91525,
+    "changes": [
+      {
+        "floppy": "01C2:0138 add ax, 0xb200",
+        "cd": "051:00E5 add ax, 0"
+      },
+      {
+        "floppy": "01C2:0154 add ax, 0xb200",
+        "cd": "051:0101 add ax, 0"
+      }
+    ]
+  },
+  {
+    "part": 69,
+    "floppy": "01C2:03B1",
+    "cd": "051:03A9",
+    "similarity": 0.88235,
+    "changes": [
+      {
+        "floppy": "01C2:03C1 mov word ptr [0x1b04], 0",
+        "cd": "051:03B9 mov word ptr [0x31b8], 2"
+      },
+      {
+        "floppy": "01C2:03C7 mov word ptr [0x1b06], 2",
+        "cd": "051:03BF mov word ptr [0x31ba], 0x43d"
+      },
+      {
+        "floppy": "01C2:03CD mov word ptr [0x1b08], 0",
+        "cd": "051:03C5 mov word ptr [0x31bc], 0xcd"
+      },
+      {
+        "floppy": "01C2:03D3 mov word ptr [0x1b0e], 0xcd",
+        "cd": "051:03CB mov word ptr [0x31be], 1"
+      },
+      {
+        "floppy": "01C2:03D9 mov word ptr [0x1b10], 0",
+        "cd": "051:03D1 mov word ptr [0x31c0], 0x43e"
+      }
+    ]
+  },
+  {
+    "part": 69,
+    "floppy": "01C2:0401",
+    "cd": "051:03ED",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "01C2:0411 mov word ptr [0x1b04], 0",
+        "cd": "051:03FD mov word ptr [0x31b8], 2"
+      },
+      {
+        "floppy": "01C2:0417 mov word ptr [0x1b06], 2",
+        "cd": "051:0403 mov word ptr [0x31ba], 0x43c"
+      }
+    ]
+  },
+  {
+    "part": 69,
+    "floppy": "01C2:0434",
+    "cd": "051:03ED",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "01C2:043E mov word ptr [0x1b02], 0xce",
+        "cd": "051:03F7 mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "01C2:0444 mov word ptr [0x1b04], 0",
+        "cd": "051:03FD mov word ptr [0x31b8], 2"
+      },
+      {
+        "floppy": "01C2:044A mov word ptr [0x1b06], 2",
+        "cd": "051:0403 mov word ptr [0x31ba], 0x43c"
+      }
+    ]
+  },
+  {
+    "part": 69,
+    "floppy": "01C2:0467",
+    "cd": "051:03ED",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "01C2:0471 mov word ptr [0x1b02], 0xd0",
+        "cd": "051:03F7 mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "01C2:0477 mov word ptr [0x1b04], 0",
+        "cd": "051:03FD mov word ptr [0x31b8], 2"
+      },
+      {
+        "floppy": "01C2:047D mov word ptr [0x1b06], 2",
+        "cd": "051:0403 mov word ptr [0x31ba], 0x43c"
+      }
+    ]
+  },
+  {
+    "part": 69,
+    "floppy": "01C2:049A",
+    "cd": "051:03ED",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "01C2:04A4 mov word ptr [0x1b02], 0xd2",
+        "cd": "051:03F7 mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "01C2:04AA mov word ptr [0x1b04], 0",
+        "cd": "051:03FD mov word ptr [0x31b8], 2"
+      },
+      {
+        "floppy": "01C2:04B0 mov word ptr [0x1b06], 1",
+        "cd": "051:0403 mov word ptr [0x31ba], 0x43c"
+      }
+    ]
+  },
+  {
+    "part": 69,
+    "floppy": "01C2:04CD",
+    "cd": "051:03ED",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "01C2:04D7 mov word ptr [0x1b02], 0xd7",
+        "cd": "051:03F7 mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "01C2:04DD mov word ptr [0x1b04], 0",
+        "cd": "051:03FD mov word ptr [0x31b8], 2"
+      },
+      {
+        "floppy": "01C2:04E3 mov word ptr [0x1b06], 2",
+        "cd": "051:0403 mov word ptr [0x31ba], 0x43c"
+      }
+    ]
+  },
+  {
+    "part": 69,
+    "floppy": "01C2:0500",
+    "cd": "051:04CE",
+    "similarity": 0.86902,
+    "changes": [
+      {
+        "floppy": "01C2:0597 mov word ptr [0x1b04], 0",
+        "cd": "051:0561 mov word ptr [0x31ba], 0x442"
+      },
+      {
+        "floppy": "01C2:0770 mov word ptr [0x1b04], 0",
+        "cd": "051:0738 mov word ptr [0x31ba], 0x443"
+      }
+    ]
+  },
+  {
+    "part": 70,
+    "floppy": "01AB:0012",
+    "cd": "046:0002",
+    "similarity": 0.85714,
+    "changes": [
+      {
+        "floppy": "01AB:001C mov word ptr [0x1b84], 0x2d0",
+        "cd": "046:000C mov word ptr [0x321a], 0x1f5"
+      }
+    ]
+  },
+  {
+    "part": 70,
+    "floppy": "01AB:0024",
+    "cd": "046:0002",
+    "similarity": 0.85714,
+    "changes": [
+      {
+        "floppy": "01AB:002E mov word ptr [0x1b84], 0x2a8",
+        "cd": "046:000C mov word ptr [0x321a], 0x1f5"
+      }
+    ]
+  },
+  {
+    "part": 70,
+    "floppy": "01AB:0036",
+    "cd": "046:0002",
+    "similarity": 0.85714,
+    "changes": [
+      {
+        "floppy": "01AB:0040 mov word ptr [0x1b84], 0x32a",
+        "cd": "046:000C mov word ptr [0x321a], 0x1f5"
+      }
+    ]
+  },
+  {
+    "part": 71,
+    "floppy": "01EC:0000",
+    "cd": "060:0002",
+    "similarity": 0.87179,
+    "changes": [
+      {
+        "floppy": "01EC:0010 mov word ptr [0x1b04], 0",
+        "cd": "060:0012 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "01EC:0016 mov word ptr [0x1b06], 1",
+        "cd": "060:0018 mov word ptr [0x31ba], 0x3e1"
+      },
+      {
+        "floppy": "01EC:001C mov word ptr [0x1b08], 0",
+        "cd": "060:001E mov word ptr [0x31bc], 0xca"
+      },
+      {
+        "floppy": "01EC:0022 mov word ptr [0x1b0e], 0xca",
+        "cd": "060:0024 mov word ptr [0x31be], 1"
+      },
+      {
+        "floppy": "01EC:0028 mov word ptr [0x1b10], 0",
+        "cd": "060:002A mov word ptr [0x31c0], 0x3e2"
+      },
+      {
+        "floppy": "01EC:002E mov word ptr [0x1b12], 1",
+        "cd": "060:0030 mov word ptr [0x31c2], 0xcb"
+      },
+      {
+        "floppy": "01EC:0034 mov word ptr [0x1b14], 0",
+        "cd": "060:0036 mov word ptr [0x31c4], 1"
+      },
+      {
+        "floppy": "01EC:003A mov word ptr [0x1b1a], 0xcb",
+        "cd": "060:003C mov word ptr [0x31c6], 0x3e3"
+      }
+    ]
+  },
+  {
+    "part": 71,
+    "floppy": "01EC:00D2",
+    "cd": "060:0002",
+    "similarity": 0.87179,
+    "changes": [
+      {
+        "floppy": "01EC:00DC mov word ptr [0x1b02], 0xd0",
+        "cd": "060:000C mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "01EC:00E2 mov word ptr [0x1b04], 0",
+        "cd": "060:0012 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "01EC:00E8 mov word ptr [0x1b06], 1",
+        "cd": "060:0018 mov word ptr [0x31ba], 0x3e1"
+      },
+      {
+        "floppy": "01EC:00EE mov word ptr [0x1b08], 0",
+        "cd": "060:001E mov word ptr [0x31bc], 0xca"
+      },
+      {
+        "floppy": "01EC:00F4 mov word ptr [0x1b0e], 0xd1",
+        "cd": "060:0024 mov word ptr [0x31be], 1"
+      },
+      {
+        "floppy": "01EC:00FA mov word ptr [0x1b10], 0",
+        "cd": "060:002A mov word ptr [0x31c0], 0x3e2"
+      },
+      {
+        "floppy": "01EC:0100 mov word ptr [0x1b12], 1",
+        "cd": "060:0030 mov word ptr [0x31c2], 0xcb"
+      },
+      {
+        "floppy": "01EC:0106 mov word ptr [0x1b14], 0",
+        "cd": "060:0036 mov word ptr [0x31c4], 1"
+      },
+      {
+        "floppy": "01EC:010C mov word ptr [0x1b1a], 0xd2",
+        "cd": "060:003C mov word ptr [0x31c6], 0x3e3"
+      }
+    ]
+  },
+  {
+    "part": 71,
+    "floppy": "01EC:0135",
+    "cd": "060:0002",
+    "similarity": 0.87179,
+    "changes": [
+      {
+        "floppy": "01EC:013F mov word ptr [0x1b02], 0xd4",
+        "cd": "060:000C mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "01EC:0145 mov word ptr [0x1b04], 0",
+        "cd": "060:0012 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "01EC:014B mov word ptr [0x1b06], 1",
+        "cd": "060:0018 mov word ptr [0x31ba], 0x3e1"
+      },
+      {
+        "floppy": "01EC:0151 mov word ptr [0x1b08], 0",
+        "cd": "060:001E mov word ptr [0x31bc], 0xca"
+      },
+      {
+        "floppy": "01EC:0157 mov word ptr [0x1b0e], 0xd5",
+        "cd": "060:0024 mov word ptr [0x31be], 1"
+      },
+      {
+        "floppy": "01EC:015D mov word ptr [0x1b10], 0",
+        "cd": "060:002A mov word ptr [0x31c0], 0x3e2"
+      },
+      {
+        "floppy": "01EC:0163 mov word ptr [0x1b12], 1",
+        "cd": "060:0030 mov word ptr [0x31c2], 0xcb"
+      },
+      {
+        "floppy": "01EC:0169 mov word ptr [0x1b14], 0",
+        "cd": "060:0036 mov word ptr [0x31c4], 1"
+      },
+      {
+        "floppy": "01EC:016F mov word ptr [0x1b1a], 0xd6",
+        "cd": "060:003C mov word ptr [0x31c6], 0x3e3"
+      }
+    ]
+  },
+  {
+    "part": 71,
+    "floppy": "01EC:0198",
+    "cd": "060:0002",
+    "similarity": 0.91429,
+    "changes": [
+      {
+        "floppy": "01EC:01A2 mov word ptr [0x1b02], 0xd8",
+        "cd": "060:000C mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "01EC:01A8 mov word ptr [0x1b04], 0",
+        "cd": "060:0012 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "01EC:01AE mov word ptr [0x1b06], 1",
+        "cd": "060:0018 mov word ptr [0x31ba], 0x3e1"
+      },
+      {
+        "floppy": "01EC:01B4 mov word ptr [0x1b08], 0",
+        "cd": "060:001E mov word ptr [0x31bc], 0xca"
+      },
+      {
+        "floppy": "01EC:01BA mov word ptr [0x1b0e], 0xd9",
+        "cd": "060:0024 mov word ptr [0x31be], 1"
+      },
+      {
+        "floppy": "01EC:01C0 mov word ptr [0x1b10], 0",
+        "cd": "060:002A mov word ptr [0x31c0], 0x3e2"
+      },
+      {
+        "floppy": "01EC:01C6 mov word ptr [0x1b12], 2",
+        "cd": "060:0030 mov word ptr [0x31c2], 0xcb"
+      },
+      {
+        "floppy": "01EC:01CC mov word ptr [0x1b14], 0",
+        "cd": "060:0036 mov word ptr [0x31c4], 1"
+      },
+      {
+        "floppy": "01EC:01D2 mov byte ptr [0x1b3e], 2",
+        "cd": "060:0042 mov byte ptr [0x31d4], 3"
+      }
+    ]
+  },
+  {
+    "part": 71,
+    "floppy": "01EC:023E",
+    "cd": "060:0197",
+    "similarity": 0.86567,
+    "changes": [
+      {
+        "floppy": "01EC:026D add di, 0x140a",
+        "cd": "060:01C6 add di, 0x13ec"
+      }
+    ]
+  },
+  {
+    "part": 72,
+    "floppy": "01B6:0000",
+    "cd": "048:0002",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "01B6:0010 mov word ptr [0x1b04], 0",
+        "cd": "048:0012 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "01B6:0016 mov word ptr [0x1b06], 1",
+        "cd": "048:0018 mov word ptr [0x31ba], 0x446"
+      }
+    ]
+  },
+  {
+    "part": 72,
+    "floppy": "01B6:0033",
+    "cd": "048:0002",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "01B6:003D mov word ptr [0x1b02], 0xcb",
+        "cd": "048:000C mov word ptr [0x31b6], 0xca"
+      },
+      {
+        "floppy": "01B6:0043 mov word ptr [0x1b04], 0",
+        "cd": "048:0012 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "01B6:0049 mov word ptr [0x1b06], 1",
+        "cd": "048:0018 mov word ptr [0x31ba], 0x446"
+      }
+    ]
+  },
+  {
+    "part": 72,
+    "floppy": "01B6:0066",
+    "cd": "048:0002",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "01B6:0070 mov word ptr [0x1b02], 0xcc",
+        "cd": "048:000C mov word ptr [0x31b6], 0xca"
+      },
+      {
+        "floppy": "01B6:0076 mov word ptr [0x1b04], 0",
+        "cd": "048:0012 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "01B6:007C mov word ptr [0x1b06], 1",
+        "cd": "048:0018 mov word ptr [0x31ba], 0x446"
+      }
+    ]
+  },
+  {
+    "part": 77,
+    "floppy": "0168:0000",
+    "cd": "030:0002",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0168:0010 mov word ptr [0x1b04], 0",
+        "cd": "030:0012 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0168:0016 mov word ptr [0x1b06], 1",
+        "cd": "030:0018 mov word ptr [0x31ba], 0x465"
+      }
+    ]
+  },
+  {
+    "part": 77,
+    "floppy": "0168:0033",
+    "cd": "030:0002",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0168:003D mov word ptr [0x1b02], 0xcb",
+        "cd": "030:000C mov word ptr [0x31b6], 0xd1"
+      },
+      {
+        "floppy": "0168:0043 mov word ptr [0x1b04], 0",
+        "cd": "030:0012 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0168:0049 mov word ptr [0x1b06], 3",
+        "cd": "030:0018 mov word ptr [0x31ba], 0x465"
+      }
+    ]
+  },
+  {
+    "part": 77,
+    "floppy": "0168:0066",
+    "cd": "030:0002",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0168:0070 mov word ptr [0x1b02], 0xc9",
+        "cd": "030:000C mov word ptr [0x31b6], 0xd1"
+      },
+      {
+        "floppy": "0168:0076 mov word ptr [0x1b04], 0",
+        "cd": "030:0012 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0168:007C mov word ptr [0x1b06], 2",
+        "cd": "030:0018 mov word ptr [0x31ba], 0x465"
+      }
+    ]
+  },
+  {
+    "part": 77,
+    "floppy": "0168:0771",
+    "cd": "030:06E7",
+    "similarity": 0.85944,
+    "changes": [
+      {
+        "floppy": "0168:0797 shr ax, 1",
+        "cd": "030:070B shr ax, 2"
+      }
+    ]
+  },
+  {
+    "part": 77,
+    "floppy": "0168:0C3E",
+    "cd": "030:0B6F",
+    "similarity": 0.85149,
+    "changes": [
+      {
+        "floppy": "0168:0EEC shr ax, 1",
+        "cd": "030:0DF0 shr ax, 2"
+      }
+    ]
+  },
+  {
+    "part": 78,
+    "floppy": "015A:008D",
+    "cd": "024:008D",
+    "similarity": 0.88393,
+    "changes": [
+      {
+        "floppy": "015A:00A7 add di, 0x1904",
+        "cd": "024:00A3 add di, 0x2fb8"
+      },
+      {
+        "floppy": "015A:00E2 add di, 0x189e",
+        "cd": "024:00D7 add di, 0x2f52"
+      }
+    ]
+  },
+  {
+    "part": 81,
+    "floppy": "0142:0000",
+    "cd": "018:0002",
+    "similarity": 0.89474,
+    "changes": [
+      {
+        "floppy": "0142:0017 mov word ptr [0x1b04], 0",
+        "cd": "018:0019 mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0142:001D mov word ptr [0x1b06], 1",
+        "cd": "018:001F mov word ptr [0x31ba], 0x3b2"
+      },
+      {
+        "floppy": "0142:0031 mov word ptr [0x1b04], 0",
+        "cd": "018:0027 mov word ptr [0x31b6], 0xc9"
+      },
+      {
+        "floppy": "0142:003D mov word ptr [0x1b08], 0",
+        "cd": "018:0033 mov word ptr [0x31ba], 0x3b1"
+      }
+    ]
+  },
+  {
+    "part": 81,
+    "floppy": "0142:0054",
+    "cd": "018:004A",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0142:0064 mov word ptr [0x1b04], 0",
+        "cd": "018:005A mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0142:006A mov word ptr [0x1b06], 1",
+        "cd": "018:0060 mov word ptr [0x31ba], 0x3b3"
+      }
+    ]
+  },
+  {
+    "part": 81,
+    "floppy": "0142:0087",
+    "cd": "018:004A",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0142:0091 mov word ptr [0x1b02], 0xcc",
+        "cd": "018:0054 mov word ptr [0x31b6], 0xcb"
+      },
+      {
+        "floppy": "0142:0097 mov word ptr [0x1b04], 0",
+        "cd": "018:005A mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0142:009D mov word ptr [0x1b06], 1",
+        "cd": "018:0060 mov word ptr [0x31ba], 0x3b3"
+      }
+    ]
+  },
+  {
+    "part": 81,
+    "floppy": "0142:00BA",
+    "cd": "018:00A4",
+    "similarity": 0.89362,
+    "changes": [
+      {
+        "floppy": "0142:00D1 mov word ptr [0x1b04], 0",
+        "cd": "018:00BB mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0142:00D7 mov word ptr [0x1b06], 1",
+        "cd": "018:00C1 mov word ptr [0x31ba], 0x3b6"
+      },
+      {
+        "floppy": "0142:00DD mov word ptr [0x1b08], 0",
+        "cd": "018:00C7 mov word ptr [0x31bc], 0xcf"
+      },
+      {
+        "floppy": "0142:00E3 mov word ptr [0x1b0e], 0xcf",
+        "cd": "018:00CD mov word ptr [0x31be], 1"
+      },
+      {
+        "floppy": "0142:00E9 mov word ptr [0x1b10], 0",
+        "cd": "018:00D3 mov word ptr [0x31c0], 0x3b7"
+      },
+      {
+        "floppy": "0142:0108 mov word ptr [0x1b04], 0",
+        "cd": "018:00E0 mov word ptr [0x31b6], 0xcd"
+      },
+      {
+        "floppy": "0142:0114 mov word ptr [0x1b08], 0",
+        "cd": "018:00EC mov word ptr [0x31ba], 0x3b5"
+      }
+    ]
+  },
+  {
+    "part": 81,
+    "floppy": "0142:012B",
+    "cd": "018:004A",
+    "similarity": 0.88,
+    "changes": [
+      {
+        "floppy": "0142:0135 mov word ptr [0x1b02], 0xe9",
+        "cd": "018:0054 mov word ptr [0x31b6], 0xcb"
+      },
+      {
+        "floppy": "0142:013B mov word ptr [0x1b04], 0",
+        "cd": "018:005A mov word ptr [0x31b8], 1"
+      },
+      {
+        "floppy": "0142:0141 mov word ptr [0x1b06], 1",
+        "cd": "018:0060 mov word ptr [0x31ba], 0x3b3"
+      }
+    ]
+  }
+]

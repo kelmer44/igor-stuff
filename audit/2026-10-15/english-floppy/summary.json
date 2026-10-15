@@ -1,0 +1,76 @@
+{
+  "inputs": {
+    "igor-en/IGOR.EXE": {
+      "size": 110368,
+      "sha256": "e955fd5d4f06fa590dcf75bb3ac7eb4fbe79bc3892711c83297285392683c42f"
+    },
+    "igor-en/IGOR.DAT": {
+      "size": 8819339,
+      "sha256": "ec1b6a5a1038d645053e8ec7b09b035ae0934d7d2245fce2f1585d92d5b4c08e"
+    },
+    "igor-en/IGOR.FSD": {
+      "size": 1324850,
+      "sha256": "61ae54f09fa0e554b8e13440c60fe9f261136c0dc367b858127008b2bf209ed8"
+    },
+    "IGOR-CD/IGOR.EXE": {
+      "size": 9115648,
+      "sha256": "d2dffce947200d4b8c5fb30f80832c177bb93fca5db6c2188007b9f8f2f512bd"
+    }
+  },
+  "overlay_count": 257,
+  "overlay_bytes_accounted": 8819339,
+  "resource_counts": {
+    "identical": 560,
+    "changed": 134,
+    "floppy-only-catalog-id": 17
+  },
+  "resource_types": {
+    "ANM": {
+      "identical": 70,
+      "changed": 1
+    },
+    "AOF": {
+      "identical": 5
+    },
+    "BOX": {
+      "identical": 65
+    },
+    "CMF": {
+      "floppy-only-catalog-id": 15
+    },
+    "DAT": {
+      "identical": 62
+    },
+    "DLG": {
+      "changed": 14
+    },
+    "FRM": {
+      "identical": 133
+    },
+    "IMG": {
+      "identical": 88,
+      "changed": 11,
+      "floppy-only-catalog-id": 1
+    },
+    "MSK": {
+      "identical": 66
+    },
+    "PAL": {
+      "identical": 65,
+      "changed": 21,
+      "floppy-only-catalog-id": 1
+    },
+    "TXT": {
+      "changed": 87
+    },
+    "WLK": {
+      "identical": 6
+    }
+  },
+  "native_dispatch_groups": 77,
+  "native_states": 148,
+  "states_absent_from_cpp_case_labels": [],
+  "native_compiler_prologues": 1626,
+  "compared_room_functions": 1236,
+  "shape_exact_room_functions": 0
+}
