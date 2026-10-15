@@ -25,23 +25,18 @@ lookup selects entries for that edition instead. Every resource uses the same
 
 ## Why the dictionary changed
 
-Older version-4 entries identified only a position and length in the edition's
+Version-4 entries identified only a position and length in the edition's
 resource container. For Spanish floppy that container is DAT, but its main text
 is actually inside the packed EXE. A DAT offset could never identify it correctly.
 
-The dictionary format is unchanged (still version 4). It already holds one
-resource table per game file, each selected by that file's size. Spanish floppy
-now has a second table, keyed by the unpacked EXE image size (120,864 bytes),
-listing the resources stored in the EXE (`resource_sp_floppy_exe.h`). Resource
-IDs are unique across the two Spanish floppy tables; the generator checks this.
-The engine looks an ID up in the DAT table first, then in the EXE table, and
-reads from the file whose table holds it. Every other edition's rows, its sound
-table and the shared strings are byte-identical to the previous dictionary.
-
-An earlier attempt bumped the format to version 5 with a per-row source byte.
-It was replaced so that existing dictionaries and readers stay unchanged.
-**Engine status:** the `floppy-support` reader in the fork implements this
-two-table lookup (see [the plan](SPANISH_FLOPPY_PLAN.md), phase 0).
+Version 5 adds one byte to each resource entry, its source: 0 for the edition's
+resource container, 1 for the unpacked EXE image. Catalog rows leave it out
+(container); the rows marked `SOURCE_EXECUTABLE` in `resource_sp_floppy.h` are
+the ones stored in the EXE. There is still one resource table per version, so
+the engine's lookup is unchanged; `loadData()` reads a row from the memory
+image of `IGOR.EXE` (restored at startup) when its source is 1. The engine still
+reads version 4 tables. Every edition's rows, sound table and the shared strings
+are otherwise identical to the previous dictionary.
 New entries describe where to read the player's data; they do not contain
 extracted pictures, text or fonts.
 
@@ -93,15 +88,16 @@ and [unpack.h](../../scummvm-fork/engines/igor/unpack.h). It uses ScummVM's exis
 memory arrays, strings, byte-order helpers and CRC32 file check. It requires no
 Unicorn emulator.
 
-Each resource record (unchanged version-4 layout) is stored as:
+Each resource record (version 5) is stored as:
 
 ```text
 uint16 BE resource ID
 uint32 BE offset
 uint32 BE size
+uint8 source (0 = original resource container; 1 = unpacked EXE image)
 ```
 
-For the EXE table, `offset` is a position in the unpacked, unrelocated image.
+For source 1, `offset` is a position in the unpacked, unrelocated image.
 
 `uint16`, `uint32` and `uint8` mean unsigned numbers stored in two, four and one
 bytes respectively. `BE` means big-endian byte order: the most significant byte

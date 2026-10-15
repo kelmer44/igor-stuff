@@ -13,7 +13,7 @@ disabled TODOs, and every resource goes through `IGOR.TBL`.
 | --- | --- |
 | Detection, EXE unpacker | Done on fork branch `floppy-support` |
 | Resource catalog | 676 DAT rows + 8 EXE rows; 50 CD identifiers open (6 have no floppy counterpart); see [SPLASH_AND_RESOURCE_TRACE.md](SPLASH_AND_RESOURCE_TRACE.md) |
-| TBL | Version 4, second Spanish floppy table for EXE resources (this change) |
+| TBL | Version 5: each row has a source (container or unpacked EXE image) |
 | Verb panel, inventory (8 slots), fonts, language, text timing | Implemented, compared with selected routines |
 | Room behaviour | Not started: every room runs the CD code |
 | Sound effects (51 VOC) and music (15 CMF) | Located in DAT; selection not derived |
@@ -46,11 +46,10 @@ Pre-rebase heads are kept as `backup/extracr2-pre-rebase` and
 
 ## Phase 0 — Finish the integration
 
-1. **Done (fork `1ea2ed78824`):** the `floppy-support` reader uses the
-   two-table TBL. For Spanish floppy it merges the DAT table and the table keyed
-   by the unpacked image size (120,864) into one sorted lookup, rejecting
-   duplicate IDs; `loadData()` reads EXE-table rows from the unpacked image.
-   `resource_format.h` and the version-5 path are gone.
+1. **Done:** the reader accepts TBL versions 4 and 5. In version 5 each row has a
+   source byte; `loadData()` reads source-1 rows from the memory image of
+   `IGOR.EXE` (restored at startup by the unpacker), so there is no second table,
+   merge or sort.
 2. **Done:** startup checks with that build. CD, English floppy and both demos
    load exactly the same resources up to the intro as the unchanged
    `igor-stuff` engine. Spanish floppy unpacks the EXE, loads 171 dialogue
@@ -153,8 +152,8 @@ spot check. Re-run the CD smoke checks after any change to shared code.
 
 - No unverified values in code; TODOs instead. No addresses in C++ comments;
   provenance goes into these notes.
-- New resources: rows in `resource_sp_floppy.h` (DAT) or
-  `resource_sp_floppy_exe.h` (EXE), IDs in `resource_ids_extra.h` and the fork's
+- New resources: rows in `resource_sp_floppy.h` (add `SOURCE_EXECUTABLE` for rows
+  in the executable), IDs in `resource_ids_extra.h` and the fork's
   `resource_ids.h`, regenerate with `create_igortbl`, install the same `IGOR.TBL`
   in the root, `IGOR/`, `IGOR-CD/`, `igor-en/`, `igor-demo/`, `igor110/` and the
   generator folder.

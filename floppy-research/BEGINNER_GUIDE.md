@@ -85,9 +85,8 @@ For example, `TXT_MainVerbs` tells the engine to read 192 bytes beginning at
 smaller packed EXE. The prefix `0x` means the number is written in hexadecimal,
 a notation commonly used for byte positions. You do not need to calculate it.
 
-A TBL entry describes a position in one file. Spanish floppy therefore has two
-tables: one for DAT, and a second one, selected by the unpacked EXE image size,
-for the resources stored inside the EXE.
+A TBL entry describes a position in one file. Each entry therefore records its
+source: the original container (DAT) or the unpacked EXE image.
 That is how we fixed the missing floppy main-text resource without inventing a
 DAT offset or introducing a second asset loader.
 

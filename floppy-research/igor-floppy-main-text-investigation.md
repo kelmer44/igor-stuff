@@ -34,10 +34,9 @@ records. Using the CD count of 250 would have read into unrelated data.
 
 ## How the fix works
 
-The dictionary has a second Spanish floppy table, selected by the unpacked EXE
-image size, for the resources stored in the EXE. The engine reconstructs EXE
-into memory when first needed and then uses the same resource lookup it already
-uses for DAT. (An earlier version-5 per-row source field was replaced by this.)
+Each resource entry of the version-5 dictionary has a source: the original
+container or the unpacked EXE image. The engine reconstructs EXE into memory at
+startup and then uses the same resource lookup it already uses for DAT.
 
 The dictionary holds the new locations and lengths, not copies of these texts.
 See [resource-loading implementation](UNPACKING_AND_RUNTIME_SUPPORT.md) for the

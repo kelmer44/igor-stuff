@@ -36,22 +36,17 @@ def main():
     assert previous == len(floppy)
 
     lines = ['// Spanish floppy resource catalog.',
-             '// Offsets refer to the original overlay data file (IGOR.DAT).',
-             '// Resources stored in the executable are listed in resource_sp_floppy_exe.h.',
+             '// Offsets refer to the original overlay data file (IGOR.DAT), or to the',
+             '// unpacked executable image for the rows marked SOURCE_EXECUTABLE.',
              '// This catalog is incomplete; unresolved resources remain disabled.',
              '// Changed resource layouts require corresponding engine support.', '']
-    exe_lines = ['// Spanish floppy resources stored in the packed executable.',
-                 '// Offsets refer to the unpacked, unrelocated executable image (120864 bytes),',
-                 '// which the engine reconstructs from IGOR.EXE. This table is selected by that',
-                 '// image size, separately from the IGOR.DAT table in resource_sp_floppy.h.', '']
     audit = []
     for name, cd_offset, cd_size in original:
         if name in resident:
             offset, size, method, _, _ = resident[name]
             payload = image[offset:offset + size]
             assert len(payload) == size
-            lines.append(f'// {name} is stored in the unpacked executable; see resource_sp_floppy_exe.h.')
-            exe_lines.append(f'{{ {name}, 0x{offset:x}, {size} }},')
+            lines.append(f'{{ {name}, 0x{offset:x}, {size}, SOURCE_EXECUTABLE }},')
             audit.append([name, f'0x{offset:x}', size, 'resident', f'0x{offset:x}',
                           method, cd_size, hashlib.sha256(payload).hexdigest()])
             continue
@@ -125,7 +120,7 @@ def main():
         assert len(payload) == size
         if name in ('IMG_FloppySentenceFont', 'IMG_FloppyDialogueFont'):
             assert set(payload) <= {0, 1, 2}, name
-        exe_lines.append(f'{{ {name}, 0x{offset:x}, {size} }},')
+        lines.append(f'{{ {name}, 0x{offset:x}, {size}, SOURCE_EXECUTABLE }},')
         audit.append([name, f'0x{offset:x}', size, 'resident', f'0x{offset:x}',
                       method, '', hashlib.sha256(payload).hexdigest()])
     assert resident['TXT_MainTable'][0:2] == [0x17cce, 19676]
@@ -135,7 +130,6 @@ def main():
         assert all(image[offset + i * width * 2 + lang * width] < width
                    for i in range(count) for lang in range(2))
     (TABLES / 'resource_sp_floppy.h').write_text('\n'.join(lines) + '\n')
-    (TABLES / 'resource_sp_floppy_exe.h').write_text('\n'.join(exe_lines) + '\n')
     with (RESEARCH / 'resources.csv').open('w') as fp:
         writer = csv.writer(fp)
         writer.writerow(['resource', 'offset', 'size', 'overlay', 'relative_offset',

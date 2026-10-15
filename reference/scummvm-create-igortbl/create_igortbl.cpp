@@ -35,11 +35,11 @@
 
 /*
 	uint32 : 'ITBL'
-	uint32 : version/tag
+	uint32 : version/tag (5; the engine also reads version 4, which has no source)
 	uint32 : offset to strings table
 	uint8  : number of game versions
 	repeat (number of game versions) {
-		uint32 : borland overlay size (or unpacked executable image size)
+		uint32 : borland overlay size
 		uint32 : offset to resources table
 		uint32 : offset to sounds table
 	}
@@ -49,6 +49,7 @@
 			uint16 : id
 			uint32 : offset
 			uint32 : length
+			uint8  : source (0: resource container, 1: unpacked executable)
 		}
 	}
 	repeat (number of sounds tables) {
@@ -73,10 +74,18 @@ typedef unsigned char   uint8;
 typedef unsigned short uint16;
 typedef unsigned int   uint32;
 
+// Where the data of a resource is read from. Catalog rows leave it out for the
+// resource container (the version's overlay file).
+enum {
+	SOURCE_CONTAINER = 0,
+	SOURCE_EXECUTABLE = 1 // the unpacked executable of the Spanish floppy version
+};
+
 struct ResourceEntry {
 	int id;
 	uint32 offs;
 	uint32 size;
+	uint8 source;
 };
 
 static struct ResourceEntry _resourceEntriesEngDemo100[] = {
@@ -99,11 +108,6 @@ static struct ResourceEntry _resourceEntriesSpaFloppy[] = {
 #include "resource_sp_floppy.h"
 };
 
-// Spanish floppy resources stored in IGOR.EXE, keyed by the unpacked image size.
-static struct ResourceEntry _resourceEntriesSpaFloppyExe[] = {
-#include "resource_sp_floppy_exe.h"
-};
-
 static struct {
 	struct ResourceEntry *p;
 	int count;
@@ -113,7 +117,6 @@ static struct {
 	{ _resourceEntriesEngFloppy, TABLE_SIZE(_resourceEntriesEngFloppy) },
 	{ _resourceEntriesSpaCd,      TABLE_SIZE(_resourceEntriesSpaCd) },
 	{ _resourceEntriesSpaFloppy,  TABLE_SIZE(_resourceEntriesSpaFloppy) },
-	{ _resourceEntriesSpaFloppyExe, TABLE_SIZE(_resourceEntriesSpaFloppyExe) },
 	{ 0, 0 }
 };
 
@@ -171,12 +174,11 @@ static const struct GameVersion _gameVersions[] = {
 	{ 4094103, _resourceEntriesEngDemo110, _soundEntriesEngDemo },
 	{ 9115648, _resourceEntriesSpaCd,      _soundEntriesSpaCd   },
 	{ 11199335, _resourceEntriesSpaFloppy, _soundEntriesSpaFloppy },
-	{ 8819339, _resourceEntriesEngFloppy, _soundEntriesEngFloppy },
-	{ 120864, _resourceEntriesSpaFloppyExe, 0 }
+	{ 8819339, _resourceEntriesEngFloppy, _soundEntriesEngFloppy }
 };
 
 static const uint32 ITBL_TAG = 0x4954424C;
-static const uint32 CURRENT_VERSION = 4;
+static const uint32 CURRENT_VERSION = 5;
 static const uint32 DEFAULT_OFFSET = 0x12345678;
 
 struct TablePtrOffset {
@@ -235,6 +237,7 @@ static void writeResourceEntriesTable(FILE *fp, struct ResourceEntry *re, int co
 		writeUint16BE(fp, re->id);
 		writeUint32BE(fp, re->offs);
 		writeUint32BE(fp, re->size);
+		writeByte(fp, re->source);
 	}
 }
 
@@ -266,21 +269,8 @@ static void writeStringEntriesTable(FILE *fp, struct StringEntry *se, int count)
 	}
 }
 
-/* The engine looks resources up in both Spanish floppy tables, so ids must be unique across them. */
-static void checkSpaFloppyIds() {
-	int i, j;
-
-	for (i = 0; i < (int)TABLE_SIZE(_resourceEntriesSpaFloppyExe); ++i) {
-		for (j = 0; j < (int)TABLE_SIZE(_resourceEntriesSpaFloppy); ++j) {
-			assert(_resourceEntriesSpaFloppyExe[i].id != _resourceEntriesSpaFloppy[j].id);
-		}
-	}
-}
-
 static void createTableFile(FILE *fp) {
 	int i, gameVersionsCount;
-
-	checkSpaFloppyIds();
 
 	gameVersionsCount = TABLE_SIZE(_gameVersions);
 

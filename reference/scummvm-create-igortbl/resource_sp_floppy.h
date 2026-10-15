@@ -1,6 +1,6 @@
 // Spanish floppy resource catalog.
-// Offsets refer to the original overlay data file (IGOR.DAT).
-// Resources stored in the executable are listed in resource_sp_floppy_exe.h.
+// Offsets refer to the original overlay data file (IGOR.DAT), or to the
+// unpacked executable image for the rows marked SOURCE_EXECUTABLE.
 // This catalog is incomplete; unresolved resources remain disabled.
 // Changed resource layouts require corresponding engine support.
 
@@ -461,7 +461,7 @@
 { FRM_IgorDirLeft, 0xa6a54a, 13500 },
 { FRM_IgorHead, 0xa6da06, 3696 },
 { IMG_VerbsPanel, 0xa27d1c, 3520 },
-// TXT_MainTable is stored in the unpacked executable; see resource_sp_floppy_exe.h.
+{ TXT_MainTable, 0x17cce, 19676, SOURCE_EXECUTABLE },
 { IMG_InventoryPanel, 0xaa01ef, 9600 },
 { IMG_Objects, 0xaa276f, 48000 },
 { PAL_DecanatoLeft, 0x87b049, 624 },
@@ -731,3 +731,10 @@
 { PAL_InventoryPanel, 0xaae2ef, 96 },
 { PAL_TitleScreen, 0x10b42c, 768 },
 { PAL_VerbsPanel, 0xa27cec, 48 },
+{ DAT_FloppyDialogueWidths, 0x177fc, 91, SOURCE_EXECUTABLE },
+{ DAT_FloppyFontMap, 0x176a0, 256, SOURCE_EXECUTABLE },
+{ DAT_FloppySentenceColors, 0x17bee, 3, SOURCE_EXECUTABLE },
+{ DAT_FloppySentenceWidths, 0x177a0, 92, SOURCE_EXECUTABLE },
+{ IMG_FloppyDialogueFont, 0x97fa, 9009, SOURCE_EXECUTABLE },
+{ IMG_FloppySentenceFont, 0xbb2b, 7007, SOURCE_EXECUTABLE },
+{ TXT_MainVerbs, 0x1785e, 192, SOURCE_EXECUTABLE },
