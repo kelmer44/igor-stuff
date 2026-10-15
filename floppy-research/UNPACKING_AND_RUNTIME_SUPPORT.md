@@ -29,10 +29,22 @@ Older version-4 entries identified only a position and length in the edition's
 resource container. For Spanish floppy that container is DAT, but its main text
 is actually inside the packed EXE. A DAT offset could never identify it correctly.
 
-Version 5 adds a source field: “original container” or “unpacked EXE image”. The
-engine still understands version-4 dictionaries. New entries describe where to
-read the player's data; they do not contain extracted pictures, text or fonts.
-The dictionary's existing shared-string section is unchanged.
+The dictionary format is unchanged (still version 4). It already holds one
+resource table per game file, each selected by that file's size. Spanish floppy
+now has a second table, keyed by the unpacked EXE image size (120,864 bytes),
+listing the resources stored in the EXE (`resource_sp_floppy_exe.h`). Resource
+IDs are unique across the two Spanish floppy tables; the generator checks this.
+The engine looks an ID up in the DAT table first, then in the EXE table, and
+reads from the file whose table holds it. Every other edition's rows, its sound
+table and the shared strings are byte-identical to the previous dictionary.
+
+An earlier attempt bumped the format to version 5 with a per-row source byte.
+It was replaced so that existing dictionaries and readers stay unchanged.
+**Engine status:** the `floppy-support` reader in the fork still implements the
+version-5 layout; it must be adapted to the two-table lookup before Spanish
+floppy starts again (see [the plan](SPANISH_FLOPPY_PLAN.md), phase 0).
+New entries describe where to read the player's data; they do not contain
+extracted pictures, text or fonts.
 
 The main-text fix found 171 original dialogue records, rather than using the
 CD count of 250. The eight verb labels are stored separately. The floppy also
@@ -82,14 +94,15 @@ and [unpack.h](../../scummvm-fork/engines/igor/unpack.h). It uses ScummVM's exis
 memory arrays, strings, byte-order helpers and CRC32 file check. It requires no
 Unicorn emulator.
 
-The version-5 resource record is stored as:
+Each resource record (unchanged version-4 layout) is stored as:
 
 ```text
 uint16 BE resource ID
 uint32 BE offset
 uint32 BE size
-uint8 source (0 = original resource container; 1 = unpacked EXE image)
 ```
+
+For the EXE table, `offset` is a position in the unpacked, unrelocated image.
 
 `uint16`, `uint32` and `uint8` mean unsigned numbers stored in two, four and one
 bytes respectively. `BE` means big-endian byte order: the most significant byte

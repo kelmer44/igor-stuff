@@ -1,6 +1,6 @@
 // Spanish floppy resource catalog.
-// Container offsets refer to the original overlay data file.
-// Resident offsets refer to the unrelocated executable image.
+// Offsets refer to the original overlay data file (IGOR.DAT).
+// Resources stored in the executable are listed in resource_sp_floppy_exe.h.
 // This catalog is incomplete; unresolved resources remain disabled.
 // Changed resource layouts require corresponding engine support.
 
@@ -403,7 +403,7 @@
 { FRM_IgorDirLeft, 0xa6a54a, 13500 },
 { FRM_IgorHead, 0xa6da06, 3696 },
 { IMG_VerbsPanel, 0xa27d1c, 3520 },
-{ TXT_MainTable, 0x17cce, 19676, Igor::kResourceSourceUnpackedExe },
+// TXT_MainTable is stored in the unpacked executable; see resource_sp_floppy_exe.h.
 { IMG_InventoryPanel, 0xaa01ef, 9600 },
 { IMG_Objects, 0xaa276f, 48000 },
 { PAL_DecanatoLeft, 0x87b049, 624 },
@@ -525,6 +525,7 @@
 { DLG_Part81, 0x112d8e, 6820 },
 { ANM_Part81, 0x125e16, 53065 },
 { TXT_Part81, 0x133432, 2114 },
+// TODO: Identify the floppy counterpart for TXT_Part81ObjectNames.
 { IMG_Part81, 0x133c74, 46080 },
 { PAL_Part81, 0x13f074, 624 },
 { MSK_Part81, 0x13f2e4, 2718 },
@@ -635,12 +636,12 @@
 // TODO: Identify the floppy counterpart for TXT_OptionsQuit.
 // TODO: Identify the floppy counterpart for TXT_OptionsSaveTitle.
 // TODO: Identify the floppy counterpart for TXT_OptionsLoadTitle.
+// TODO: Identify the floppy counterpart for TXT_Credits1.
+// TODO: Identify the floppy counterpart for TXT_Credits2.
+// TODO: Identify the floppy counterpart for TXT_Credits3.
+// TODO: Identify the floppy counterpart for TXT_Credits4.
+// TODO: Identify the floppy counterpart for TXT_Credits5.
+// TODO: Identify the floppy counterpart for TXT_Credits6.
+// TODO: Identify the floppy counterpart for TXT_Credits7.
 { PAL_InventoryPanel, 0xaae2ef, 96 },
 { PAL_VerbsPanel, 0xa27cec, 48 },
-{ DAT_FloppyDialogueWidths, 0x177fc, 91, Igor::kResourceSourceUnpackedExe },
-{ DAT_FloppyFontMap, 0x176a0, 256, Igor::kResourceSourceUnpackedExe },
-{ DAT_FloppySentenceColors, 0x17bee, 3, Igor::kResourceSourceUnpackedExe },
-{ DAT_FloppySentenceWidths, 0x177a0, 92, Igor::kResourceSourceUnpackedExe },
-{ IMG_FloppyDialogueFont, 0x97fa, 9009, Igor::kResourceSourceUnpackedExe },
-{ IMG_FloppySentenceFont, 0xbb2b, 7007, Igor::kResourceSourceUnpackedExe },
-{ TXT_MainVerbs, 0x1785e, 192, Igor::kResourceSourceUnpackedExe },

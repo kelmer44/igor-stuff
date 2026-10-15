@@ -47,6 +47,7 @@ sounds does not yet tell the engine which sound to play for each action.
 5. [Fonts, language and timing](TEXT_FONT_LANGUAGE_TIMING.md): the recent fixes and their evidence.
 6. [Audio findings](igor-floppy-audio-verification.md): why this copy has sampled effects but no FSD file.
 7. [Support plan](SUPPORT_PLAN.md): the remaining steps toward a faithful implementation.
+8. [Implementation plan](SPANISH_FLOPPY_PLAN.md): the phased work plan, starting with the college rooms that differ from CD.
 
 The [main-text investigation](igor-floppy-main-text-investigation.md) explains
 the earlier launch failure and why a DAT offset alone could not fix it.
