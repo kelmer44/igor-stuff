@@ -1,0 +1,26 @@
+english-floppy exit 0 nonzero audio bytes 0
+partMain _currentPart 900
+partMain _currentPart 901
+partMain _currentPart 902
+partMain _currentPart 903
+partMain _currentPart 904
+partMain _currentPart 850
+playMusic() 2
+partMain _currentPart 61
+F03_TRUNK_RESPONSE_PASSED branch=0 pages=1 firstLines=2
+F03_TRUNK_RESPONSE_PASSED branch=1 pages=1 firstLines=2
+F03_TRUNK_RESPONSE_PASSED branch=2 pages=1 firstLines=2
+cd exit 0 nonzero audio bytes 1632238
+partMain _currentPart 900
+playMusic() 14
+partMain _currentPart 901
+partMain _currentPart 902
+partMain _currentPart 903
+partMain _currentPart 850
+playMusic() 10
+partMain _currentPart 61
+playMusic() 10
+F03_TRUNK_RESPONSE_PASSED branch=0 pages=2 firstLines=1
+F03_TRUNK_RESPONSE_PASSED branch=1 pages=2 firstLines=1
+F03_TRUNK_RESPONSE_PASSED branch=2 pages=2 firstLines=1
+F03 three-branch trunk paging checks passed for English floppy and Spanish CD

@@ -1,0 +1,50 @@
+{
+  "demo100": {
+    "start": "029E:01FA",
+    "empty_count_decrement": [
+      "0x286"
+    ],
+    "row_multiplier_3200": [
+      "0x2d9"
+    ],
+    "row_add_320": [
+      "0x2de"
+    ]
+  },
+  "demo110": {
+    "start": "029E:024C",
+    "empty_count_decrement": [
+      "0x2d8"
+    ],
+    "row_multiplier_3200": [
+      "0x32b"
+    ],
+    "row_add_320": [
+      "0x330"
+    ]
+  },
+  "english-floppy": {
+    "start": "051A:01FA",
+    "empty_count_decrement": [
+      "0x286"
+    ],
+    "row_multiplier_3200": [
+      "0x2d9"
+    ],
+    "row_add_320": [
+      "0x2de"
+    ]
+  },
+  "spanish-cd": {
+    "start": "222:01DE",
+    "empty_count_decrement": [
+      "0x26b"
+    ],
+    "row_multiplier_3200": [
+      "0x2b7"
+    ],
+    "row_add_320": [
+      "0x2bb"
+    ]
+  }
+}

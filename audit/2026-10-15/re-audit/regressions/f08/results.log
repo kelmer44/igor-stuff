@@ -1,0 +1,22 @@
+english-floppy exit 0 nonzero audio bytes 1098630
+partMain _currentPart 900
+partMain _currentPart 901
+partMain _currentPart 902
+partMain _currentPart 903
+partMain _currentPart 904
+partMain _currentPart 850
+playMusic() 2
+partMain _currentPart 61
+playMusic() 2
+playMusic() 12
+playMusic() 12
+playMusic() 12
+playMusic() 12
+playMusic() 12
+playMusic() 12
+playMusic() 12
+playMusic() 12
+F08_DIRECT_START_PASSED cue=12 resource=CMF_12 continuedAcrossPages=1
+F08_NO_REPEAT_PASSED allSevenPages=1 secondPassFirstPage=1
+F08_ALL_PASSED
+F08 English floppy credits direct-start and no-repeat checks passed

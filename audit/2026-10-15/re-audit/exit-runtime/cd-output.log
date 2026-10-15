@@ -1,0 +1,110 @@
+Using configuration file: /Users/gabriel/Desktop/source/igor-stuff/audit/2026-10-15/re-audit/exit-runtime/cd.ini
+Debuglevel (from command line): 9
+Using SDL Video Driver "dummy"
+SDL Video Detecting OpenGL Features...
+SDL Video Detecting Anti-aliasing Support...
+Checking SDL Antialiasing Support With 2 Samples... No Window
+Checking SDL Antialiasing Support With 4 Samples... No Window
+Checking SDL Antialiasing Support With 8 Samples... No Window
+Checking SDL Antialiasing Support With 16 Samples... No Window
+Checking SDL Antialiasing Support With 32 Samples... No Window
+SDL Video OpenGL Feature Detection Complete
+Invalid joystick: 0
+creating SurfaceSDL graphics manager
+creating OpenGL graphics manager
+creating SurfaceSDL graphics manager
+Using SDL Audio Driver "dummy"
+Output sample rate: 44100 Hz
+Output buffer size: 1024 samples
+Output channels: 2
+HardwareInput with ID 'JOY_START' not known
+HardwareInput with ID 'JOY_LEFT_STICK_Y-' not known
+HardwareInput with ID 'JOY_LEFT_STICK_Y+' not known
+HardwareInput with ID 'JOY_LEFT_STICK_X-' not known
+HardwareInput with ID 'JOY_LEFT_STICK_X+' not known
+HardwareInput with ID 'JOY_RIGHT_SHOULDER' not known
+CPU extensions:
+SSE2(not supported) AVX2(not supported) NEON(enabled)
+User picked target 'test' (engine ID 'igor', game ID 'igor')...
+Running Igor: Objective Uikokahonia (CD/DOS/Spanish)
+IGOR.DAT: b4ba3ec480ec66a2fa456265ab51f5f6, 61682719 bytes.
+IGOR.EXE: 70f49859d1defddda140d144e1eb90b1, 9115648 bytes.
+HardwareInput with ID 'JOY_A' not known
+HardwareInput with ID 'JOY_B' not known
+HardwareInput with ID 'JOY_LEFT_SHOULDER' not known
+HardwareInput with ID 'JOY_Y' not known
+HardwareInput with ID 'JOY_X' not known
+HardwareInput with ID 'JOY_UP' not known
+HardwareInput with ID 'JOY_DOWN' not known
+HardwareInput with ID 'JOY_LEFT' not known
+HardwareInput with ID 'JOY_RIGHT' not known
+Setting 640 x 480 -> 640 x 480 -- 1
+generateZipSet: Loaded pack file: gui-icons.dat
+Opening hashed: THEMERC
+Opening hashed: THEMERC
+Opening hashed: THEMERC
+Opening hashed: THEMERC
+Loading theme gui/themes/scummremastered.zip
+Opening hashed: THEMERC
+Finished loading theme gui/themes/scummremastered.zip
+FSDirectory::createReadStreamForMember('IGOR.EXE') -> '/Users/gabriel/Desktop/source/igor-stuff/IGOR-CD/IGOR.EXE'
+Opening hashed: IGOR.EXE
+FSDirectory::createReadStreamForMember('IGOR.DAT') -> '/Users/gabriel/Desktop/source/igor-stuff/IGOR-CD/IGOR.DAT'
+Opening hashed: IGOR.DAT
+FSDirectory::createReadStreamForMember('IGOR.TBL') -> '/Users/gabriel/Desktop/source/igor-stuff/IGOR-CD/IGOR.TBL'
+Opening hashed: IGOR.TBL
+partMain _currentPart 900
+playMusic() 14
+File::open: opening 'track15.flac' failed
+File::open: opening 'track15.fla' failed
+File::open: opening 'track15.ogg' failed
+File::open: opening 'track15.mp3' failed
+File::open: opening 'track15.m4a' failed
+File::open: opening 'track15.wav' failed
+SeekableAudioStream::openStreamFile: Could not open compressed AudioFile track15
+File::open: opening 'track15.flac' failed
+File::open: opening 'track15.fla' failed
+File::open: opening 'track15.ogg' failed
+File::open: opening 'track15.mp3' failed
+File::open: opening 'track15.m4a' failed
+File::open: opening 'track15.wav' failed
+SeekableAudioStream::openStreamFile: Could not open compressed AudioFile track15
+File::open: opening 'track_15.flac' failed
+File::open: opening 'track_15.fla' failed
+File::open: opening 'track_15.ogg' failed
+FSDirectory::createReadStreamForMember('track_15.mp3') -> '/Users/gabriel/Desktop/source/igor-stuff/IGOR-CD/track_15.mp3'
+Opening hashed: track_15.mp3
+Skipping ID3 TAG (45 bytes)
+Ctrl+F: fast mode 4 (6 ms per tick)
+partMain _currentPart 901
+partMain _currentPart 902
+partMain _currentPart 903
+partMain _currentPart 850
+playMusic() 10
+File::open: opening 'track11.flac' failed
+File::open: opening 'track11.fla' failed
+File::open: opening 'track11.ogg' failed
+File::open: opening 'track11.mp3' failed
+File::open: opening 'track11.m4a' failed
+File::open: opening 'track11.wav' failed
+SeekableAudioStream::openStreamFile: Could not open compressed AudioFile track11
+File::open: opening 'track11.flac' failed
+File::open: opening 'track11.fla' failed
+File::open: opening 'track11.ogg' failed
+File::open: opening 'track11.mp3' failed
+File::open: opening 'track11.m4a' failed
+File::open: opening 'track11.wav' failed
+SeekableAudioStream::openStreamFile: Could not open compressed AudioFile track11
+File::open: opening 'track_11.flac' failed
+File::open: opening 'track_11.fla' failed
+File::open: opening 'track_11.ogg' failed
+FSDirectory::createReadStreamForMember('track_11.mp3') -> '/Users/gabriel/Desktop/source/igor-stuff/IGOR-CD/track_11.mp3'
+Opening hashed: track_11.mp3
+Skipping ID3 TAG (45 bytes)
+partMain _currentPart 61
+playMusic() 10
+Entering part6
+showCursor()
+SdlEventSource: corrected stale mouse position (320,173) to (128,29)
+hideCursor()
+MUSIC_NONZERO_BYTES=1644262 EXIT_MASK=0

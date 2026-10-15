@@ -1,0 +1,33 @@
+english-floppy exit 0 nonzero audio bytes 331402
+partMain _currentPart 900
+partMain _currentPart 901
+partMain _currentPart 902
+partMain _currentPart 903
+partMain _currentPart 904
+partMain _currentPart 850
+playMusic() 2
+partMain _currentPart 61
+playMusic() 2
+playMusic() 0
+playMusic() 7
+playMusic() 0
+playMusic() 2
+playMusic() 0
+F06_CUTSCENE_STOP_PASSED state=760 cue=0 activeNotes=0 restart=0
+F06_PENDING_STOP_PASSED
+F06_PLAY_AFTER_STOP_PASSED
+F06_ALL_PASSED
+cd exit 0 nonzero audio bytes 1878480
+partMain _currentPart 900
+playMusic() 14
+partMain _currentPart 901
+partMain _currentPart 902
+partMain _currentPart 903
+partMain _currentPart 850
+playMusic() 10
+partMain _currentPart 61
+playMusic() 10
+playMusic() 1
+F06_CD_CUTSCENE_PASSED state=760 cue=1
+F06_ALL_PASSED
+F06 English floppy cutscene stop checks passed

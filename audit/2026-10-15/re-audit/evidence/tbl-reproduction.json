@@ -1,0 +1,10 @@
+{
+  "sha256": "e396f69b98dbba979cbb18e103174510ca24c606466af045fb6deda736b7b04d",
+  "matches": {
+    "IGOR.TBL": true,
+    "IGOR-CD/IGOR.TBL": true,
+    "igor-en/IGOR.TBL": true,
+    "igor-demo/IGOR.TBL": true,
+    "igor110/IGOR.TBL": true
+  }
+}
