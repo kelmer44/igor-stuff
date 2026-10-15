@@ -11,8 +11,12 @@ The resident dispatcher has no states 901–904. The splash sequence is:
 
 | State | Overlay | What it does |
 | --- | --- | --- |
-| 900 | 19 | Loads overlay 20 (full-screen image + palette), fades in, holds ~800 ticks or until input, fades out, then sets state 980. |
-| 980 | 21 | Loads overlay 24 (image + palette), shows it, loads overlay 23 (a second full-screen image) and overlay 22 (a sampled sound); after a hold it copies the second image over the first with the same palette and starts the sound. Then fades out and sets state 850 (the intro). |
+| 900 | 19 | Loads overlay 20 (image + palette) and the verbs-panel palette (colors 240-255), fades in, holds 800 timer ticks ignoring input, raises colors 121-239 towards 56 in 56 steps of 5 ticks (the highlight; the matching loop afterwards compares against the raised palette and changes nothing), holds up to 2000 ticks (Escape, Enter, Insert or any mouse button skips; Space opens the options menu), fades out, sets state 980. |
+| 980 | 21 | Loads overlay 24 (image + palette), overlay 23 (second image, buffered) and overlay 22 (sound, buffered); fades in, holds 1000 ticks (any key or mouse button skips), copies the second image over the first with the same palette and plays the sound (if sound is enabled), holds 1000 more ticks (same skip rule), fades out, sets state 850 (the intro). |
+
+Music is started and stopped around these screens in the original; the
+Spanish floppy music is not implemented yet. Insert and the middle mouse button
+are not mapped by the engine.
 
 So the Spanish floppy has no Optik/Presents/"graphic adventure" screens.
 Overlay 20 is the Pendulo Studios logo. Overlay 24 is the cemetery scene and its
@@ -70,6 +74,28 @@ They are catalogued as `FRM_<Room>Floppy<k>` (ids 1249–1274 in
 `resource_ids_extra.h`); the CD names `FRM_College*<k>` stay unresolved because
 no counterpart exists. How the room code groups them (frames vs. offset tables)
 must be read from the floppy room code when each room is ported.
+
+
+## Sound table
+
+The engine plays effects by sound number through the TBL's sound table (offsets in
+the version's sound file; `IGOR.DAT` for this version). The floppy plays each
+effect from a buffer its room loads, addressed by byte offset, so the table is
+built from the effects themselves (`tools/generate_igor_floppy_sound_table.py`):
+
+- 51 effects are located in `IGOR.DAT` (`igor-floppy-pcm.csv`). 33 are
+  byte-identical to effects of the English floppy; that version's numbers
+  (1-63) are the numbers the engine already plays. 31 numbers get an effect
+  (numbers 2 and 3 exist twice, in two rooms' buffers; the first copy is used).
+- Cross-check: for nearly every room, the numbers mapped to the effects in its
+  sound overlay are numbers the engine plays in that room (e.g. state 720: 39, 40;
+  state 160: 25, 26, 27; state 850: 17).
+- The other 32 shared numbers have no identical effect in this version (0).
+  The 18 effects that exist only here are appended as numbers 64-81 in file
+  order; number 64 is the title screen sound.
+- The shared overlay 276 holds the generic effects (1, 2, 3, 5, 6), while rooms
+  play 13 and 14 (no identical floppy effect); those may be different
+  recordings. Matching them needs the floppy call sites, not content.
 
 ## Still open
 

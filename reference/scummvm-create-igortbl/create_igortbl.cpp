@@ -129,6 +129,10 @@ static const uint32 _soundEntriesSpaCd[] = {
 #include "fsd_sp_cdrom.h"
 };
 
+static const uint32 _soundEntriesSpaFloppy[] = {
+#include "fsd_sp_floppy.h"
+};
+
 static struct {
 	const uint32 *p;
 	int count;
@@ -136,7 +140,7 @@ static struct {
 	{ _soundEntriesEngDemo, TABLE_SIZE(_soundEntriesEngDemo) },
 	{ _soundEntriesEngFloppy, TABLE_SIZE(_soundEntriesEngFloppy) },
 	{ _soundEntriesSpaCd,   TABLE_SIZE(_soundEntriesSpaCd) },
-	// TODO: Derive the original floppy sound offsets.
+	{ _soundEntriesSpaFloppy, TABLE_SIZE(_soundEntriesSpaFloppy) },
 	{ 0, 0 }
 };
 
@@ -166,7 +170,7 @@ static const struct GameVersion _gameVersions[] = {
 	{ 4086790, _resourceEntriesEngDemo100, _soundEntriesEngDemo },
 	{ 4094103, _resourceEntriesEngDemo110, _soundEntriesEngDemo },
 	{ 9115648, _resourceEntriesSpaCd,      _soundEntriesSpaCd   },
-	{ 11199335, _resourceEntriesSpaFloppy, 0 },
+	{ 11199335, _resourceEntriesSpaFloppy, _soundEntriesSpaFloppy },
 	{ 8819339, _resourceEntriesEngFloppy, _soundEntriesEngFloppy },
 	{ 120864, _resourceEntriesSpaFloppyExe, 0 }
 };
