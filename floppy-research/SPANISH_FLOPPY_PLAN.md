@@ -100,7 +100,14 @@ does not map raw state codes to room routines, which everything else needs.
    real signals: 15, 21, 24, 26, 28, 71, 73, 75, 78, 80, 81 (and 19). Part 15
    (median 0.54) is outside College and was not expected. Credits overlays
    (9x) are data-heavy and not meaningful here. Operand-level diffs for the
-   "revised" functions are still to do.
+   "revised" functions: `tools/diff_igor_floppy_operands.py` (`operand-diff.*`).
+   Of 247 pairs at 0.85 or better, none is identical, but once relocated
+   addresses are masked only 5 aligned operand changes remain: state 280
+   (0x17 vs 0xf, a value written and tested), state 310 (two stored values
+   0xbe/0x6b vs 0xa6/0x71, probably coordinates) and state 690 (a byte store
+   against a word store). The rest are instructions present on one side only,
+   so the differences are structural, not constants; they are the work list
+   for the room ports.
 4. Identify the shared library routines (dialogue, walking, drawing, inventory)
    once, as was done for the CD, so room listings read in engine terms.
    **First pass done:** `resident-map.json` maps 36 resident functions called

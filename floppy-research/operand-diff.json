@@ -1,0 +1,5972 @@
+[
+ {
+  "state": 0,
+  "part": 0,
+  "overlay": 275,
+  "floppy": "1619",
+  "cd": "206:14EA",
+  "similarity": 0.98,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "16CB pop bp"
+  ],
+  "cd_only": [
+   "159C leave "
+  ]
+ },
+ {
+  "state": 0,
+  "part": 0,
+  "overlay": 275,
+  "floppy": "194F",
+  "cd": "206:1822",
+  "similarity": 0.8566,
+  "pointer_like_suppressed": 36,
+  "constant_changes": [],
+  "floppy_only": [
+   "1BBD pop bp"
+  ],
+  "cd_only": [
+   "1A90 leave "
+  ]
+ },
+ {
+  "state": 0,
+  "part": 0,
+  "overlay": 275,
+  "floppy": "1D8B",
+  "cd": "206:1BC2",
+  "similarity": 0.9474,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "1DF3 mov ax, 0x140",
+   "1DF6 mul word ptr es:[di]",
+   "1E1B pop bp"
+  ],
+  "cd_only": [
+   "1C2A imul ax, word ptr es:[di], 0x140",
+   "1C51 leave "
+  ]
+ },
+ {
+  "state": 10,
+  "part": 1,
+  "overlay": 267,
+  "floppy": "069F",
+  "cd": "200:068A",
+  "similarity": 0.8559,
+  "pointer_like_suppressed": 16,
+  "constant_changes": [],
+  "floppy_only": [
+   "07B9 pop bp"
+  ],
+  "cd_only": [
+   "07A4 leave "
+  ]
+ },
+ {
+  "state": 10,
+  "part": 1,
+  "overlay": 267,
+  "floppy": "07BB",
+  "cd": "200:07B4",
+  "similarity": 0.9394,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0816 mov ax, 0x140",
+   "0819 mul word ptr es:[di]",
+   "0858 mov ax, 0x140",
+   "085B mul word ptr es:[di]",
+   "0880 pop bp"
+  ],
+  "cd_only": [
+   "080F imul ax, word ptr es:[di], 0x140",
+   "0850 imul ax, word ptr es:[di], 0x140",
+   "0877 leave "
+  ]
+ },
+ {
+  "state": 20,
+  "part": 2,
+  "overlay": 271,
+  "floppy": "1E83",
+  "cd": "203:1E75",
+  "similarity": 0.8571,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "1E93 pop bp"
+  ],
+  "cd_only": [
+   "1E85 leave "
+  ]
+ },
+ {
+  "state": 20,
+  "part": 2,
+  "overlay": 271,
+  "floppy": "1FA7",
+  "cd": "203:1FD9",
+  "similarity": 0.8567,
+  "pointer_like_suppressed": 42,
+  "constant_changes": [],
+  "floppy_only": [
+   "227B pop bp"
+  ],
+  "cd_only": [
+   "22AD leave "
+  ]
+ },
+ {
+  "state": 20,
+  "part": 2,
+  "overlay": 271,
+  "floppy": "2449",
+  "cd": "203:2428",
+  "similarity": 0.9474,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "24B1 mov ax, 0x140",
+   "24B4 mul word ptr es:[di]",
+   "24D9 pop bp"
+  ],
+  "cd_only": [
+   "2490 imul ax, word ptr es:[di], 0x140",
+   "24B7 leave "
+  ]
+ },
+ {
+  "state": 40,
+  "part": 4,
+  "overlay": 207,
+  "floppy": "0000",
+  "cd": "151:0002",
+  "similarity": 0.8571,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0010 pop bp"
+  ],
+  "cd_only": [
+   "0012 leave "
+  ]
+ },
+ {
+  "state": 40,
+  "part": 4,
+  "overlay": 207,
+  "floppy": "0012",
+  "cd": "151:0014",
+  "similarity": 0.875,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0021 pop bp"
+  ],
+  "cd_only": [
+   "0023 leave "
+  ]
+ },
+ {
+  "state": 40,
+  "part": 4,
+  "overlay": 207,
+  "floppy": "0023",
+  "cd": "151:0025",
+  "similarity": 0.8571,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0033 pop bp"
+  ],
+  "cd_only": [
+   "0035 leave "
+  ]
+ },
+ {
+  "state": 40,
+  "part": 4,
+  "overlay": 207,
+  "floppy": "0035",
+  "cd": "151:0037",
+  "similarity": 0.8571,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0045 pop bp"
+  ],
+  "cd_only": [
+   "0047 leave "
+  ]
+ },
+ {
+  "state": 40,
+  "part": 4,
+  "overlay": 207,
+  "floppy": "0047",
+  "cd": "151:0049",
+  "similarity": 0.9091,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0066 pop bp"
+  ],
+  "cd_only": [
+   "0068 leave "
+  ]
+ },
+ {
+  "state": 40,
+  "part": 4,
+  "overlay": 207,
+  "floppy": "0068",
+  "cd": "151:006A",
+  "similarity": 0.8571,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0078 pop bp"
+  ],
+  "cd_only": [
+   "007A leave "
+  ]
+ },
+ {
+  "state": 40,
+  "part": 4,
+  "overlay": 207,
+  "floppy": "007A",
+  "cd": "151:007C",
+  "similarity": 0.8556,
+  "pointer_like_suppressed": 12,
+  "constant_changes": [],
+  "floppy_only": [
+   "0150 pop bp"
+  ],
+  "cd_only": [
+   "0152 leave "
+  ]
+ },
+ {
+  "state": 40,
+  "part": 4,
+  "overlay": 207,
+  "floppy": "0160",
+  "cd": "151:0167",
+  "similarity": 0.9153,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0189 mov ax, 0x140",
+   "018C mul word ptr es:[di]",
+   "01B1 pop bp"
+  ],
+  "cd_only": [
+   "0190 imul ax, word ptr es:[di], 0x140",
+   "01B7 leave "
+  ]
+ },
+ {
+  "state": 50,
+  "part": 5,
+  "overlay": 245,
+  "floppy": "0000",
+  "cd": "182:0002",
+  "similarity": 0.8848,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "00AA mov al, 0xa0",
+   "00AC push ax",
+   "00AD mov al, 0xa7",
+   "00AF push ax",
+   "0160 mov al, 0xa8",
+   "0162 push ax",
+   "0163 mov al, 0xb2",
+   "0165 push ax",
+   "0217 mov al, 0xb3",
+   "0219 push ax",
+   "021A mov al, 0xb8",
+   "021C push ax",
+   "02CE mov al, 0xb9",
+   "02D0 push ax",
+   "02D1 mov al, 0xbf",
+   "02D3 push ax",
+   "02D9 pop bp"
+  ],
+  "cd_only": [
+   "00AC push -0x60",
+   "00AE push -0x59",
+   "0160 push -0x58",
+   "0162 push -0x4e",
+   "0215 push -0x4d",
+   "0217 push -0x48",
+   "02CA push -0x47",
+   "02CC push -0x41",
+   "02D3 cmp byte ptr [0xeaca], 1",
+   "02D8 jne 0x32a",
+   "02DA push 0xf",
+   "02DC lcall 0, 0xffff",
+   "02E1 or ax, ax",
+   "02E3 jne 0x32a",
+   "02E5 push 4",
+   "02E7 lcall 0, 0xffff",
+   "02EC cmp ax, 0",
+   "02EF jne 0x2fc",
+   "02F1 push 0x15",
+   "02F3 push 1",
+   "02F5 lcall 0, 0xffff",
+   "02FA jmp 0x32a",
+   "02FC cmp ax, 1",
+   "02FF jne 0x30c",
+   "0301 push 0x16",
+   "0303 push 1",
+   "0305 lcall 0, 0xffff",
+   "030A jmp 0x32a",
+   "030C cmp ax, 2",
+   "030F jne 0x31c",
+   "0311 push 0x17",
+   "0313 push 1",
+   "0315 lcall 0, 0xffff",
+   "031A jmp 0x32a",
+   "031C cmp ax, 3",
+   "031F jne 0x32a",
+   "0321 push 0x12",
+   "0323 push 1",
+   "0325 lcall 0, 0xffff",
+   "032A leave "
+  ]
+ },
+ {
+  "state": 50,
+  "part": 5,
+  "overlay": 245,
+  "floppy": "02DB",
+  "cd": "182:032C",
+  "similarity": 0.8519,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0321 mov dx, 0x14",
+   "0324 mul dx",
+   "0326 mov di, ax",
+   "0332 mov dx, 0x14",
+   "0335 mul dx",
+   "0337 mov di, ax",
+   "0347 push cs",
+   "0348 call 0",
+   "0371 je 0x376",
+   "0373 jmp 0x2f0",
+   "0376 pop bp"
+  ],
+  "cd_only": [
+   "0372 imul di, ax, 0x14",
+   "037F imul di, ax, 0x14",
+   "0390 lcall 0, 0xffff",
+   "03BB jne 0x341",
+   "03BD leave "
+  ]
+ },
+ {
+  "state": 50,
+  "part": 5,
+  "overlay": 245,
+  "floppy": "0933",
+  "cd": "182:0963",
+  "similarity": 0.8571,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0943 pop bp"
+  ],
+  "cd_only": [
+   "0973 leave "
+  ]
+ },
+ {
+  "state": 50,
+  "part": 5,
+  "overlay": 245,
+  "floppy": "09CC",
+  "cd": "182:09F4",
+  "similarity": 0.8553,
+  "pointer_like_suppressed": 10,
+  "constant_changes": [],
+  "floppy_only": [
+   "0A80 pop bp"
+  ],
+  "cd_only": [
+   "0AA8 leave "
+  ]
+ },
+ {
+  "state": 50,
+  "part": 5,
+  "overlay": 245,
+  "floppy": "0AD0",
+  "cd": "182:0AF8",
+  "similarity": 0.9231,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0AF9 mov ax, 0x140",
+   "0AFC mul word ptr es:[di]",
+   "0B3B mov ax, 0x140",
+   "0B3E mul word ptr es:[di]",
+   "0B63 pop bp"
+  ],
+  "cd_only": [
+   "0B21 imul ax, word ptr es:[di], 0x140",
+   "0B62 imul ax, word ptr es:[di], 0x140",
+   "0B89 leave "
+  ]
+ },
+ {
+  "state": 60,
+  "part": 6,
+  "overlay": 242,
+  "floppy": "0000",
+  "cd": "180:0002",
+  "similarity": 0.8911,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "00AA mov al, 0xa0",
+   "00AC push ax",
+   "00AD mov al, 0xa7",
+   "00AF push ax",
+   "0160 mov al, 0xa8",
+   "0162 push ax",
+   "0163 mov al, 0xb2",
+   "0165 push ax",
+   "0217 mov al, 0xb3",
+   "0219 push ax",
+   "021A mov al, 0xb8",
+   "021C push ax",
+   "02CE mov al, 0xb9",
+   "02D0 push ax",
+   "02D1 mov al, 0xbf",
+   "02D3 push ax",
+   "02E0 mov ax, 0x14",
+   "02E3 push ax",
+   "02ED mov ax, 0x58e0",
+   "02F0 push ax",
+   "02F6 pop bp"
+  ],
+  "cd_only": [
+   "00AC push -0x60",
+   "00AE push -0x59",
+   "0160 push -0x58",
+   "0162 push -0x4e",
+   "0215 push -0x4d",
+   "0217 push -0x48",
+   "02CA push -0x47",
+   "02CC push -0x41",
+   "02DA push 0xf",
+   "02E5 push 4",
+   "02EC cmp ax, 0",
+   "02EF jne 0x2fc",
+   "02F1 push 0x15",
+   "02F3 push 1",
+   "02F5 lcall 0, 0xffff",
+   "02FA jmp 0x32a",
+   "02FC cmp ax, 1",
+   "02FF jne 0x30c",
+   "0301 push 0x16",
+   "0303 push 1",
+   "0305 lcall 0, 0xffff",
+   "030A jmp 0x32a",
+   "030C cmp ax, 2",
+   "030F jne 0x31c",
+   "0311 push 0x17",
+   "0313 push 1",
+   "0315 lcall 0, 0xffff",
+   "031A jmp 0x32a",
+   "031C cmp ax, 3",
+   "031F jne 0x32a",
+   "0321 push 0x12",
+   "0323 push 1",
+   "0325 lcall 0, 0xffff",
+   "032A leave "
+  ]
+ },
+ {
+  "state": 60,
+  "part": 6,
+  "overlay": 242,
+  "floppy": "0ACF",
+  "cd": "180:0B44",
+  "similarity": 0.9153,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0B15 mov ax, 0xa000",
+   "0B18 push ax",
+   "0B1E pop bp"
+  ],
+  "cd_only": [
+   "0B8A push word ptr [0x176e]",
+   "0B93 leave "
+  ]
+ },
+ {
+  "state": 60,
+  "part": 6,
+  "overlay": 242,
+  "floppy": "0E3F",
+  "cd": "180:126D",
+  "similarity": 0.8559,
+  "pointer_like_suppressed": 16,
+  "constant_changes": [],
+  "floppy_only": [
+   "0F59 pop bp"
+  ],
+  "cd_only": [
+   "1387 leave "
+  ]
+ },
+ {
+  "state": 60,
+  "part": 6,
+  "overlay": 242,
+  "floppy": "0FEF",
+  "cd": "180:141F",
+  "similarity": 0.9206,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "1033 mov ax, 0x140",
+   "1036 mul word ptr es:[di]",
+   "106E mov ax, 0x140",
+   "1071 mul word ptr es:[di]",
+   "10A3 mov ax, 0x140",
+   "10A6 mul word ptr es:[di]",
+   "10D3 mov ax, 0x140",
+   "10D6 mul word ptr es:[di]",
+   "10FB mov sp, bp",
+   "10FD pop bp"
+  ],
+  "cd_only": [
+   "1463 imul ax, word ptr es:[di], 0x140",
+   "149D imul ax, word ptr es:[di], 0x140",
+   "14D1 imul ax, word ptr es:[di], 0x140",
+   "1500 imul ax, word ptr es:[di], 0x140",
+   "1527 leave "
+  ]
+ },
+ {
+  "state": 70,
+  "part": 7,
+  "overlay": 264,
+  "floppy": "0659",
+  "cd": "197:0675",
+  "similarity": 0.8519,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "06B3 mov al, 1",
+   "06B5 push ax",
+   "06B6 mov al, 1",
+   "06B8 push ax",
+   "06C4 pop bp"
+  ],
+  "cd_only": [
+   "06CF push 1",
+   "06D1 push 1",
+   "06DE leave "
+  ]
+ },
+ {
+  "state": 70,
+  "part": 7,
+  "overlay": 264,
+  "floppy": "07F7",
+  "cd": "197:087A",
+  "similarity": 0.98,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "08A9 pop bp"
+  ],
+  "cd_only": [
+   "092C leave "
+  ]
+ },
+ {
+  "state": 70,
+  "part": 7,
+  "overlay": 264,
+  "floppy": "08AB",
+  "cd": "197:092E",
+  "similarity": 0.9412,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "08D9 pop bp"
+  ],
+  "cd_only": [
+   "095C leave "
+  ]
+ },
+ {
+  "state": 70,
+  "part": 7,
+  "overlay": 264,
+  "floppy": "08DB",
+  "cd": "197:095E",
+  "similarity": 0.8563,
+  "pointer_like_suppressed": 24,
+  "constant_changes": [],
+  "floppy_only": [
+   "0A7D pop bp"
+  ],
+  "cd_only": [
+   "0B00 leave "
+  ]
+ },
+ {
+  "state": 70,
+  "part": 7,
+  "overlay": 264,
+  "floppy": "0B5B",
+  "cd": "197:0BA3",
+  "similarity": 0.9153,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0B84 mov ax, 0x140",
+   "0B87 mul word ptr es:[di]",
+   "0BAC pop bp"
+  ],
+  "cd_only": [
+   "0BCC imul ax, word ptr es:[di], 0x140",
+   "0BF3 leave "
+  ]
+ },
+ {
+  "state": 80,
+  "part": 8,
+  "overlay": 254,
+  "floppy": "1227",
+  "cd": "189:1231",
+  "similarity": 0.9643,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "1279 pop bp"
+  ],
+  "cd_only": [
+   "1283 leave "
+  ]
+ },
+ {
+  "state": 80,
+  "part": 8,
+  "overlay": 254,
+  "floppy": "1400",
+  "cd": "189:14D2",
+  "similarity": 0.8564,
+  "pointer_like_suppressed": 26,
+  "constant_changes": [],
+  "floppy_only": [
+   "15C4 pop bp"
+  ],
+  "cd_only": [
+   "1696 leave "
+  ]
+ },
+ {
+  "state": 80,
+  "part": 8,
+  "overlay": 254,
+  "floppy": "16AC",
+  "cd": "189:1747",
+  "similarity": 0.9254,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "16E3 mov ax, 0x140",
+   "16E6 mul word ptr es:[di]",
+   "170B pop bp"
+  ],
+  "cd_only": [
+   "177E imul ax, word ptr es:[di], 0x140",
+   "17A5 leave "
+  ]
+ },
+ {
+  "state": 90,
+  "part": 9,
+  "overlay": 255,
+  "floppy": "0000",
+  "cd": "190:0002",
+  "similarity": 0.9412,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "002E pop bp"
+  ],
+  "cd_only": [
+   "0030 leave "
+  ]
+ },
+ {
+  "state": 90,
+  "part": 9,
+  "overlay": 255,
+  "floppy": "08EF",
+  "cd": "190:091B",
+  "similarity": 0.8519,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0949 mov al, 1",
+   "094B push ax",
+   "094C mov al, 1",
+   "094E push ax",
+   "095A pop bp"
+  ],
+  "cd_only": [
+   "0975 push 1",
+   "0977 push 1",
+   "0984 leave "
+  ]
+ },
+ {
+  "state": 90,
+  "part": 9,
+  "overlay": 255,
+  "floppy": "0E7B",
+  "cd": "190:0E8F",
+  "similarity": 0.8565,
+  "pointer_like_suppressed": 30,
+  "constant_changes": [],
+  "floppy_only": [
+   "1083 pop bp"
+  ],
+  "cd_only": [
+   "1097 leave "
+  ]
+ },
+ {
+  "state": 90,
+  "part": 9,
+  "overlay": 255,
+  "floppy": "121E",
+  "cd": "190:11AB",
+  "similarity": 0.9485,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "1283 mov ax, 0x140",
+   "1286 mul word ptr es:[di]",
+   "12AB pop bp"
+  ],
+  "cd_only": [
+   "1210 imul ax, word ptr es:[di], 0x140",
+   "1237 leave "
+  ]
+ },
+ {
+  "state": 100,
+  "part": 10,
+  "overlay": 236,
+  "floppy": "053D",
+  "cd": "175:055B",
+  "similarity": 0.8571,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "054D pop bp"
+  ],
+  "cd_only": [
+   "056B leave "
+  ]
+ },
+ {
+  "state": 100,
+  "part": 10,
+  "overlay": 236,
+  "floppy": "0910",
+  "cd": "175:087D",
+  "similarity": 0.9444,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0943 pop bp"
+  ],
+  "cd_only": [
+   "08B0 leave "
+  ]
+ },
+ {
+  "state": 100,
+  "part": 10,
+  "overlay": 236,
+  "floppy": "0945",
+  "cd": "175:08B2",
+  "similarity": 0.8561,
+  "pointer_like_suppressed": 18,
+  "constant_changes": [],
+  "floppy_only": [
+   "0A81 pop bp"
+  ],
+  "cd_only": [
+   "09EE leave "
+  ]
+ },
+ {
+  "state": 100,
+  "part": 10,
+  "overlay": 236,
+  "floppy": "0A91",
+  "cd": "175:09FE",
+  "similarity": 0.9231,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0ABA mov ax, 0x140",
+   "0ABD mul word ptr es:[di]",
+   "0AFC mov ax, 0x140",
+   "0AFF mul word ptr es:[di]",
+   "0B24 pop bp"
+  ],
+  "cd_only": [
+   "0A27 imul ax, word ptr es:[di], 0x140",
+   "0A68 imul ax, word ptr es:[di], 0x140",
+   "0A8F leave "
+  ]
+ },
+ {
+  "state": 110,
+  "part": 11,
+  "overlay": 238,
+  "floppy": "074D",
+  "cd": "176:07C1",
+  "similarity": 0.8564,
+  "pointer_like_suppressed": 28,
+  "constant_changes": [],
+  "floppy_only": [
+   "0933 pop bp"
+  ],
+  "cd_only": [
+   "09A7 leave "
+  ]
+ },
+ {
+  "state": 110,
+  "part": 11,
+  "overlay": 238,
+  "floppy": "0935",
+  "cd": "176:09A9",
+  "similarity": 0.9357,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0971 push cs",
+   "0972 call 0",
+   "09FC push cs",
+   "09FD call 0x57",
+   "0A2A push cs",
+   "0A2B call 0xae",
+   "0A38 pop bp"
+  ],
+  "cd_only": [
+   "09E5 lcall 0, 0xffff",
+   "0A71 lcall 0, 0xffff",
+   "0AA0 lcall 0, 0xffff",
+   "0AAF leave "
+  ]
+ },
+ {
+  "state": 110,
+  "part": 11,
+  "overlay": 238,
+  "floppy": "0A3C",
+  "cd": "176:0AB3",
+  "similarity": 0.9231,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0A65 mov ax, 0x140",
+   "0A68 mul word ptr es:[di]",
+   "0AA7 mov ax, 0x140",
+   "0AAA mul word ptr es:[di]",
+   "0ACF pop bp"
+  ],
+  "cd_only": [
+   "0ADC imul ax, word ptr es:[di], 0x140",
+   "0B1D imul ax, word ptr es:[di], 0x140",
+   "0B44 leave "
+  ]
+ },
+ {
+  "state": 120,
+  "part": 12,
+  "overlay": 231,
+  "floppy": "0000",
+  "cd": "171:0002",
+  "similarity": 0.9412,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "002E pop bp"
+  ],
+  "cd_only": [
+   "0030 leave "
+  ]
+ },
+ {
+  "state": 120,
+  "part": 12,
+  "overlay": 231,
+  "floppy": "00F6",
+  "cd": "171:0120",
+  "similarity": 0.873,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "014A mov ax, 0xc4",
+   "014D push ax",
+   "014E mov ax, 0x40",
+   "0151 push ax",
+   "0152 mov ax, 0xee",
+   "0155 push ax",
+   "0156 mov ax, 0x68",
+   "0159 push ax",
+   "015A push cs",
+   "015B call 0x2abd",
+   "0163 mov dx, 0x14",
+   "0166 mul dx",
+   "0168 mov di, ax",
+   "01BA mov dx, 0x14",
+   "01BD mul dx",
+   "01BF mov di, ax",
+   "01CB mov dx, 0x14",
+   "01CE mul dx",
+   "01D0 mov di, ax",
+   "023C mov ax, 0xa000",
+   "023F push ax",
+   "027E pop bp"
+  ],
+  "cd_only": [
+   "0174 push 0xc4",
+   "0177 push 0x40",
+   "0179 push 0xee",
+   "017C push 0x68",
+   "017E lcall 0, 0xffff",
+   "0188 imul di, ax, 0x14",
+   "01DB imul di, ax, 0x14",
+   "01E8 imul di, ax, 0x14",
+   "0255 push word ptr [0x176e]",
+   "0297 leave "
+  ]
+ },
+ {
+  "state": 120,
+  "part": 12,
+  "overlay": 231,
+  "floppy": "04D6",
+  "cd": "171:0463",
+  "similarity": 0.8699,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0508 mov ax, 0x110",
+   "050B push ax",
+   "050C mov ax, 0x5e",
+   "050F push ax",
+   "0510 mov ax, 0xc4",
+   "0513 push ax",
+   "0514 mov ax, 0x40",
+   "0517 push ax",
+   "0518 push cs",
+   "0519 call 0x2abd",
+   "0521 mov dx, 0x14",
+   "0524 mul dx",
+   "0526 mov di, ax",
+   "0578 mov dx, 0x14",
+   "057B mul dx",
+   "057D mov di, ax",
+   "0589 mov dx, 0x14",
+   "058C mul dx",
+   "058E mov di, ax",
+   "05FA mov ax, 0xa000",
+   "05FD push ax",
+   "0642 pop bp"
+  ],
+  "cd_only": [
+   "0495 push 0x110",
+   "0498 push 0x5e",
+   "049A push 0xc4",
+   "049D push 0x40",
+   "049F lcall 0, 0xffff",
+   "04A9 imul di, ax, 0x14",
+   "04FC imul di, ax, 0x14",
+   "0509 imul di, ax, 0x14",
+   "0576 push word ptr [0x176e]",
+   "05BE leave "
+  ]
+ },
+ {
+  "state": 120,
+  "part": 12,
+  "overlay": 231,
+  "floppy": "0644",
+  "cd": "171:05C0",
+  "similarity": 0.9545,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0682 pop bp"
+  ],
+  "cd_only": [
+   "05FE leave "
+  ]
+ },
+ {
+  "state": 120,
+  "part": 12,
+  "overlay": 231,
+  "floppy": "101C",
+  "cd": "171:0EE2",
+  "similarity": 0.8889,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "1061 mov ax, 0x7e",
+   "1064 push ax",
+   "1065 mov ax, 0x6c",
+   "1068 push ax",
+   "1069 mov ax, 0x4b",
+   "106C push ax",
+   "106D mov ax, 0x59",
+   "1070 push ax",
+   "1071 push cs",
+   "1072 call 0x2abd",
+   "10C0 mov dx, 0x14",
+   "10C3 mul dx",
+   "10C5 mov di, ax",
+   "10D1 mov dx, 0x14",
+   "10D4 mul dx",
+   "10D6 mov di, ax",
+   "1142 mov ax, 0xa000",
+   "1145 push ax",
+   "118A pop bp"
+  ],
+  "cd_only": [
+   "0F27 push 0x7e",
+   "0F29 push 0x6c",
+   "0F2B push 0x4b",
+   "0F2D push 0x59",
+   "0F2F lcall 0, 0xffff",
+   "0F7F imul di, ax, 0x14",
+   "0F8C imul di, ax, 0x14",
+   "0FF9 push word ptr [0x176e]",
+   "1041 leave "
+  ]
+ },
+ {
+  "state": 120,
+  "part": 12,
+  "overlay": 231,
+  "floppy": "118C",
+  "cd": "171:1043",
+  "similarity": 0.8837,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "11C0 mov ax, 0xa000",
+   "11C3 push ax",
+   "11C9 pop bp"
+  ],
+  "cd_only": [
+   "1077 push word ptr [0x176e]",
+   "1080 leave "
+  ]
+ },
+ {
+  "state": 120,
+  "part": 12,
+  "overlay": 231,
+  "floppy": "11CB",
+  "cd": "171:1082",
+  "similarity": 0.9153,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "1211 mov ax, 0xa000",
+   "1214 push ax",
+   "121A pop bp"
+  ],
+  "cd_only": [
+   "10C8 push word ptr [0x176e]",
+   "10D1 leave "
+  ]
+ },
+ {
+  "state": 120,
+  "part": 12,
+  "overlay": 231,
+  "floppy": "156C",
+  "cd": "171:14C6",
+  "similarity": 0.8559,
+  "pointer_like_suppressed": 16,
+  "constant_changes": [],
+  "floppy_only": [
+   "1686 pop bp"
+  ],
+  "cd_only": [
+   "15E0 leave "
+  ]
+ },
+ {
+  "state": 120,
+  "part": 12,
+  "overlay": 231,
+  "floppy": "1AC2",
+  "cd": "171:17ED",
+  "similarity": 0.9262,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "1B08 mov ax, 0x140",
+   "1B0B mul word ptr es:[di]",
+   "1B44 mov ax, 0x140",
+   "1B47 mul word ptr es:[di]",
+   "1B72 mov ax, 0x140",
+   "1B75 mul word ptr es:[di]",
+   "1B9A pop bp"
+  ],
+  "cd_only": [
+   "1833 imul ax, word ptr es:[di], 0x140",
+   "186E imul ax, word ptr es:[di], 0x140",
+   "189B imul ax, word ptr es:[di], 0x140",
+   "18C2 leave "
+  ]
+ },
+ {
+  "state": 130,
+  "part": 13,
+  "overlay": 229,
+  "floppy": "0264",
+  "cd": "169:01E4",
+  "similarity": 0.9787,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0310 pop bp"
+  ],
+  "cd_only": [
+   "0290 leave "
+  ]
+ },
+ {
+  "state": 130,
+  "part": 13,
+  "overlay": 229,
+  "floppy": "0312",
+  "cd": "169:0292",
+  "similarity": 0.8571,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0322 pop bp"
+  ],
+  "cd_only": [
+   "02A2 leave "
+  ]
+ },
+ {
+  "state": 130,
+  "part": 13,
+  "overlay": 229,
+  "floppy": "0686",
+  "cd": "169:0543",
+  "similarity": 0.8553,
+  "pointer_like_suppressed": 10,
+  "constant_changes": [],
+  "floppy_only": [
+   "073A pop bp"
+  ],
+  "cd_only": [
+   "05F7 leave "
+  ]
+ },
+ {
+  "state": 130,
+  "part": 13,
+  "overlay": 229,
+  "floppy": "074A",
+  "cd": "169:0607",
+  "similarity": 0.9573,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "07CF mov ax, 0x140",
+   "07D2 mul word ptr es:[di]",
+   "07F7 pop bp"
+  ],
+  "cd_only": [
+   "068C imul ax, word ptr es:[di], 0x140",
+   "06B3 leave "
+  ]
+ },
+ {
+  "state": 140,
+  "part": 14,
+  "overlay": 223,
+  "floppy": "01B0",
+  "cd": "165:020E",
+  "similarity": 0.8718,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0265 pop bp"
+  ],
+  "cd_only": [
+   "02C3 dec byte ptr [0xd94b]",
+   "02C7 push 0xb6",
+   "02CA push 0x8f",
+   "02CD push 0xa2",
+   "02D0 push 0x8a",
+   "02D3 lcall 0, 0xffff",
+   "02D8 mov al, byte ptr [0xd94b]",
+   "02DB xor ah, ah",
+   "02DD imul di, ax, 0x14",
+   "02E0 mov byte ptr [di - 0x2e93], 0",
+   "02E5 mov byte ptr [0xd94a], 1",
+   "02EA mov byte ptr [0xeb28], 1",
+   "02EF lcall 0, 0xffff",
+   "02F4 leave "
+  ]
+ },
+ {
+  "state": 140,
+  "part": 14,
+  "overlay": 223,
+  "floppy": "0267",
+  "cd": "165:02F6",
+  "similarity": 0.8661,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "02D8 mov al, 0xc0",
+   "02DA push ax",
+   "02DB mov al, 0xcf",
+   "02DD push ax",
+   "035C mov ax, 0x4c",
+   "035F push ax",
+   "0360 mov ax, 0x45",
+   "0363 push ax",
+   "0364 mov ax, 0x37",
+   "0367 push ax",
+   "0368 mov ax, 0x57",
+   "036B push ax",
+   "036C push cs",
+   "036D call 0x24d3",
+   "03B6 mov dx, 0x14",
+   "03B9 mul dx",
+   "03BB mov di, ax",
+   "03C7 mov dx, 0x14",
+   "03CA mul dx",
+   "03CC mov di, ax",
+   "0451 mov al, 0xc0",
+   "0453 push ax",
+   "0454 mov al, 0xcf",
+   "0456 push ax",
+   "0460 mov ax, 0x37",
+   "0463 push ax",
+   "0464 mov ax, 0x57",
+   "0467 push ax",
+   "0468 mov ax, 0x32",
+   "046B push ax",
+   "046C mov ax, 0x67",
+   "046F push ax",
+   "0470 push cs",
+   "0471 call 0x24d3",
+   "0479 mov dx, 0x14",
+   "047C mul dx",
+   "047E mov di, ax",
+   "04CB mov dx, 0x14",
+   "04CE mul dx",
+   "04D0 mov di, ax",
+   "04DC mov dx, 0x14",
+   "04DF mul dx",
+   "04E1 mov di, ax",
+   "054D pop bp"
+  ],
+  "cd_only": [
+   "0367 push -0x40",
+   "0369 push -0x31",
+   "03E9 push 0x4c",
+   "03EB push 0x45",
+   "03ED push 0x37",
+   "03EF push 0x57",
+   "03F1 lcall 0, 0xffff",
+   "043C imul di, ax, 0x14",
+   "0449 imul di, ax, 0x14",
+   "04CF push -0x40",
+   "04D1 push -0x31",
+   "04DC push 0x37",
+   "04DE push 0x57",
+   "04E0 push 0x32",
+   "04E2 push 0x67",
+   "04E4 lcall 0, 0xffff",
+   "04EE imul di, ax, 0x14",
+   "053C imul di, ax, 0x14",
+   "0549 imul di, ax, 0x14",
+   "05B6 leave "
+  ]
+ },
+ {
+  "state": 140,
+  "part": 14,
+  "overlay": 223,
+  "floppy": "0841",
+  "cd": "165:081B",
+  "similarity": 0.9796,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "08EE pop bp"
+  ],
+  "cd_only": [
+   "08C8 leave "
+  ]
+ },
+ {
+  "state": 140,
+  "part": 14,
+  "overlay": 223,
+  "floppy": "0B00",
+  "cd": "165:0ABA",
+  "similarity": 0.8984,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0B28 mov ax, 0xa4",
+   "0B2B push ax",
+   "0B2C mov ax, 0x7e",
+   "0B2F push ax",
+   "0B30 mov ax, 0xa4",
+   "0B33 push ax",
+   "0B34 mov ax, 0x6f",
+   "0B37 push ax",
+   "0B38 push cs",
+   "0B39 call 0x24d3",
+   "0B82 mov dx, 0x14",
+   "0B85 mul dx",
+   "0B87 mov di, ax",
+   "0B93 mov dx, 0x14",
+   "0B96 mul dx",
+   "0B98 mov di, ax",
+   "0C37 mov al, 0xc0",
+   "0C39 push ax",
+   "0C3A mov al, 0xcf",
+   "0C3C push ax",
+   "0CEA pop bp"
+  ],
+  "cd_only": [
+   "0AE2 push 0xa4",
+   "0AE5 push 0x7e",
+   "0AE7 push 0xa4",
+   "0AEA push 0x6f",
+   "0AEC lcall 0, 0xffff",
+   "0B37 imul di, ax, 0x14",
+   "0B44 imul di, ax, 0x14",
+   "0BE4 push -0x40",
+   "0BE6 push -0x31",
+   "0C95 leave "
+  ]
+ },
+ {
+  "state": 140,
+  "part": 14,
+  "overlay": 223,
+  "floppy": "0E4F",
+  "cd": "165:0E59",
+  "similarity": 0.9153,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0E95 mov ax, 0xa000",
+   "0E98 push ax",
+   "0E9E pop bp"
+  ],
+  "cd_only": [
+   "0E9F push word ptr [0x176e]",
+   "0EA8 leave "
+  ]
+ },
+ {
+  "state": 140,
+  "part": 14,
+  "overlay": 223,
+  "floppy": "0FBC",
+  "cd": "165:1049",
+  "similarity": 0.9241,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "101A mov ax, 0xa000",
+   "101D push ax",
+   "103C mov ax, 2",
+   "103F push ax",
+   "1047 push cs",
+   "1048 call 0xcec",
+   "1077 pop bp"
+  ],
+  "cd_only": [
+   "10A7 push word ptr [0x176e]",
+   "10C9 push 2",
+   "10D2 lcall 0, 0xffff",
+   "1103 leave "
+  ]
+ },
+ {
+  "state": 140,
+  "part": 14,
+  "overlay": 223,
+  "floppy": "13E5",
+  "cd": "165:153C",
+  "similarity": 0.8559,
+  "pointer_like_suppressed": 16,
+  "constant_changes": [],
+  "floppy_only": [
+   "14FF pop bp"
+  ],
+  "cd_only": [
+   "1656 leave "
+  ]
+ },
+ {
+  "state": 140,
+  "part": 14,
+  "overlay": 223,
+  "floppy": "1501",
+  "cd": "165:1658",
+  "similarity": 0.8889,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "151E push cs",
+   "151F call 0",
+   "154C pop bp"
+  ],
+  "cd_only": [
+   "1675 lcall 0, 0xffff",
+   "16A4 leave "
+  ]
+ },
+ {
+  "state": 140,
+  "part": 14,
+  "overlay": 223,
+  "floppy": "1550",
+  "cd": "165:16A8",
+  "similarity": 0.9254,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "1588 mov ax, 0x140",
+   "158B mul word ptr es:[di]",
+   "15B0 pop bp"
+  ],
+  "cd_only": [
+   "16E0 imul ax, word ptr es:[di], 0x140",
+   "1707 leave "
+  ]
+ },
+ {
+  "state": 160,
+  "part": 16,
+  "overlay": 200,
+  "floppy": "01CF",
+  "cd": "144:01F8",
+  "similarity": 0.8571,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "01DF pop bp"
+  ],
+  "cd_only": [
+   "0208 leave "
+  ]
+ },
+ {
+  "state": 160,
+  "part": 16,
+  "overlay": 200,
+  "floppy": "01E1",
+  "cd": "144:020A",
+  "similarity": 0.9153,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0227 mov ax, 0xa000",
+   "022A push ax",
+   "0230 pop bp"
+  ],
+  "cd_only": [
+   "0250 push word ptr [0x176e]",
+   "0259 leave "
+  ]
+ },
+ {
+  "state": 160,
+  "part": 16,
+  "overlay": 200,
+  "floppy": "093A",
+  "cd": "144:0B13",
+  "similarity": 0.875,
+  "pointer_like_suppressed": 5,
+  "constant_changes": [],
+  "floppy_only": [
+   "09AA pop bp"
+  ],
+  "cd_only": [
+   "0B83 leave "
+  ]
+ },
+ {
+  "state": 160,
+  "part": 16,
+  "overlay": 200,
+  "floppy": "09BA",
+  "cd": "144:0B93",
+  "similarity": 0.9254,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "09F2 mov ax, 0x140",
+   "09F5 mul word ptr es:[di]",
+   "0A1A pop bp"
+  ],
+  "cd_only": [
+   "0BCB imul ax, word ptr es:[di], 0x140",
+   "0BF2 leave "
+  ]
+ },
+ {
+  "state": 170,
+  "part": 17,
+  "overlay": 195,
+  "floppy": "0AB4",
+  "cd": "141:0B98",
+  "similarity": 0.9286,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0AD6 pop bp"
+  ],
+  "cd_only": [
+   "0BBA leave "
+  ]
+ },
+ {
+  "state": 170,
+  "part": 17,
+  "overlay": 195,
+  "floppy": "188B",
+  "cd": "141:18C3",
+  "similarity": 0.9167,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "18A7 pop bp"
+  ],
+  "cd_only": [
+   "18DF leave "
+  ]
+ },
+ {
+  "state": 170,
+  "part": 17,
+  "overlay": 195,
+  "floppy": "18AB",
+  "cd": "141:18E3",
+  "similarity": 0.8556,
+  "pointer_like_suppressed": 12,
+  "constant_changes": [],
+  "floppy_only": [
+   "1981 pop bp"
+  ],
+  "cd_only": [
+   "19B9 leave "
+  ]
+ },
+ {
+  "state": 170,
+  "part": 17,
+  "overlay": 195,
+  "floppy": "1A0E",
+  "cd": "141:1A32",
+  "similarity": 0.9444,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "1A46 mov ax, 0x140",
+   "1A49 mul word ptr es:[di]",
+   "1AB1 mov ax, 0x140",
+   "1AB4 mul word ptr es:[di]",
+   "1AD9 pop bp"
+  ],
+  "cd_only": [
+   "1A6A imul ax, word ptr es:[di], 0x140",
+   "1AD4 imul ax, word ptr es:[di], 0x140",
+   "1AFB leave "
+  ]
+ },
+ {
+  "state": 180,
+  "part": 18,
+  "overlay": 188,
+  "floppy": "0528",
+  "cd": "136:068F",
+  "similarity": 0.8571,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0538 pop bp"
+  ],
+  "cd_only": [
+   "069F leave "
+  ]
+ },
+ {
+  "state": 180,
+  "part": 18,
+  "overlay": 188,
+  "floppy": "053A",
+  "cd": "136:06A1",
+  "similarity": 0.8562,
+  "pointer_like_suppressed": 22,
+  "constant_changes": [],
+  "floppy_only": [
+   "06BA pop bp"
+  ],
+  "cd_only": [
+   "0821 leave "
+  ]
+ },
+ {
+  "state": 180,
+  "part": 18,
+  "overlay": 188,
+  "floppy": "06CA",
+  "cd": "136:0831",
+  "similarity": 0.9153,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "06F3 mov ax, 0x140",
+   "06F6 mul word ptr es:[di]",
+   "071B pop bp"
+  ],
+  "cd_only": [
+   "085A imul ax, word ptr es:[di], 0x140",
+   "0881 leave "
+  ]
+ },
+ {
+  "state": 190,
+  "part": 19,
+  "overlay": 189,
+  "floppy": "042D",
+  "cd": "137:0563",
+  "similarity": 0.9153,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0473 mov ax, 0xa000",
+   "0476 push ax",
+   "047C pop bp"
+  ],
+  "cd_only": [
+   "05A9 push word ptr [0x176e]",
+   "05B2 leave "
+  ]
+ },
+ {
+  "state": 190,
+  "part": 19,
+  "overlay": 189,
+  "floppy": "0BC8",
+  "cd": "137:0E94",
+  "similarity": 0.8571,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0BD8 pop bp"
+  ],
+  "cd_only": [
+   "0EA4 leave "
+  ]
+ },
+ {
+  "state": 190,
+  "part": 19,
+  "overlay": 189,
+  "floppy": "0BDA",
+  "cd": "137:0EA6",
+  "similarity": 0.8561,
+  "pointer_like_suppressed": 18,
+  "constant_changes": [],
+  "floppy_only": [
+   "0D16 pop bp"
+  ],
+  "cd_only": [
+   "0FE2 leave "
+  ]
+ },
+ {
+  "state": 190,
+  "part": 19,
+  "overlay": 189,
+  "floppy": "0D18",
+  "cd": "137:0FE4",
+  "similarity": 0.9643,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0D69 pop bp"
+  ],
+  "cd_only": [
+   "1035 leave "
+  ]
+ },
+ {
+  "state": 190,
+  "part": 19,
+  "overlay": 189,
+  "floppy": "0D6D",
+  "cd": "137:1039",
+  "similarity": 0.9153,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0D96 mov ax, 0x140",
+   "0D99 mul word ptr es:[di]",
+   "0DBE pop bp"
+  ],
+  "cd_only": [
+   "1062 imul ax, word ptr es:[di], 0x140",
+   "1089 leave "
+  ]
+ },
+ {
+  "state": 210,
+  "part": 21,
+  "overlay": 181,
+  "floppy": "056A",
+  "cd": "129:017D",
+  "similarity": 0.8642,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "058D push cs",
+   "058E call 0x3d2",
+   "05BE push cs",
+   "05BF call 0x3d2",
+   "05CD mov ax, 6",
+   "05D0 push ax",
+   "05DF pop bp"
+  ],
+  "cd_only": [
+   "01A0 lcall 0, 0xffff",
+   "01D2 lcall 0, 0xffff",
+   "01E2 push 6",
+   "01F2 leave "
+  ]
+ },
+ {
+  "state": 210,
+  "part": 21,
+  "overlay": 181,
+  "floppy": "0FF4",
+  "cd": "129:10E8",
+  "similarity": 0.8564,
+  "pointer_like_suppressed": 26,
+  "constant_changes": [],
+  "floppy_only": [
+   "11B8 pop bp"
+  ],
+  "cd_only": [
+   "12AC leave "
+  ]
+ },
+ {
+  "state": 210,
+  "part": 21,
+  "overlay": 181,
+  "floppy": "1259",
+  "cd": "129:1328",
+  "similarity": 0.8571,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "1275 cmp word ptr es:[di], 0xf8",
+   "127A jle 0x1281",
+   "127C mov word ptr es:[di], 0xf8",
+   "1281 les di, ptr [bp + 6]",
+   "1291 mov ax, 0x140",
+   "1294 mul word ptr es:[di]",
+   "12B9 pop bp"
+  ],
+  "cd_only": [
+   "1351 imul ax, word ptr es:[di], 0x140",
+   "1378 leave "
+  ]
+ },
+ {
+  "state": 220,
+  "part": 22,
+  "overlay": 212,
+  "floppy": "02FC",
+  "cd": "157:0310",
+  "similarity": 0.8824,
+  "pointer_like_suppressed": 1,
+  "constant_changes": [],
+  "floppy_only": [
+   "03C2 mov cl, 3",
+   "03C4 shl ax, cl",
+   "03CD mov dx, 0x140",
+   "03D0 mul dx",
+   "03E5 mov cl, 3",
+   "03E7 shl ax, cl",
+   "03EC mov dx, 0x140",
+   "03EF mul dx",
+   "0402 mov cl, 3",
+   "0404 shl ax, cl",
+   "0409 mov dx, 0x140",
+   "040C mul dx",
+   "041B mov cl, 3",
+   "041D shl ax, cl",
+   "0426 mov dx, 0x140",
+   "0429 mul dx",
+   "0440 mov ax, 0xb400",
+   "0443 push ax",
+   "0488 mov sp, bp",
+   "048A pop bp"
+  ],
+  "cd_only": [
+   "03D6 shl ax, 3",
+   "03E0 imul ax, ax, 0x140",
+   "03F7 shl ax, 3",
+   "03FD imul ax, ax, 0x140",
+   "0412 shl ax, 3",
+   "0418 imul ax, ax, 0x140",
+   "0429 shl ax, 3",
+   "0433 imul ax, ax, 0x140",
+   "044C push 0xb400",
+   "0493 leave "
+  ]
+ },
+ {
+  "state": 220,
+  "part": 22,
+  "overlay": 212,
+  "floppy": "048C",
+  "cd": "157:0495",
+  "similarity": 0.8529,
+  "pointer_like_suppressed": 4,
+  "constant_changes": [],
+  "floppy_only": [
+   "04DA pop bp"
+  ],
+  "cd_only": [
+   "04E3 leave "
+  ]
+ },
+ {
+  "state": 220,
+  "part": 22,
+  "overlay": 212,
+  "floppy": "04EA",
+  "cd": "157:04F3",
+  "similarity": 0.9444,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "051F pop bp"
+  ],
+  "cd_only": [
+   "0528 leave "
+  ]
+ },
+ {
+  "state": 230,
+  "part": 23,
+  "overlay": 178,
+  "floppy": "05CB",
+  "cd": "126:08D0",
+  "similarity": 0.8571,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "05DB pop bp"
+  ],
+  "cd_only": [
+   "08E0 leave "
+  ]
+ },
+ {
+  "state": 230,
+  "part": 23,
+  "overlay": 178,
+  "floppy": "05DD",
+  "cd": "126:08E2",
+  "similarity": 0.8571,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "05ED pop bp"
+  ],
+  "cd_only": [
+   "08F2 leave "
+  ]
+ },
+ {
+  "state": 230,
+  "part": 23,
+  "overlay": 178,
+  "floppy": "07A0",
+  "cd": "126:0ACC",
+  "similarity": 0.9153,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "07C9 mov ax, 0x140",
+   "07CC mul word ptr es:[di]",
+   "07F1 pop bp"
+  ],
+  "cd_only": [
+   "0AF5 imul ax, word ptr es:[di], 0x140",
+   "0B1C leave "
+  ]
+ },
+ {
+  "state": 240,
+  "part": 24,
+  "overlay": 172,
+  "floppy": "0602",
+  "cd": "120:0C2D",
+  "similarity": 0.9153,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "062B mov ax, 0x140",
+   "062E mul word ptr es:[di]",
+   "0653 pop bp"
+  ],
+  "cd_only": [
+   "0C56 imul ax, word ptr es:[di], 0x140",
+   "0C7D leave "
+  ]
+ },
+ {
+  "state": 250,
+  "part": 25,
+  "overlay": 167,
+  "floppy": "04BB",
+  "cd": "117:0522",
+  "similarity": 0.8571,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "04CB pop bp"
+  ],
+  "cd_only": [
+   "0532 leave "
+  ]
+ },
+ {
+  "state": 250,
+  "part": 25,
+  "overlay": 167,
+  "floppy": "04CD",
+  "cd": "117:0534",
+  "similarity": 0.8571,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "04DD pop bp"
+  ],
+  "cd_only": [
+   "0544 leave "
+  ]
+ },
+ {
+  "state": 250,
+  "part": 25,
+  "overlay": 167,
+  "floppy": "04DF",
+  "cd": "117:0546",
+  "similarity": 0.8561,
+  "pointer_like_suppressed": 18,
+  "constant_changes": [],
+  "floppy_only": [
+   "061B pop bp"
+  ],
+  "cd_only": [
+   "0682 leave "
+  ]
+ },
+ {
+  "state": 250,
+  "part": 25,
+  "overlay": 167,
+  "floppy": "0690",
+  "cd": "117:06D1",
+  "similarity": 0.9153,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "06B9 mov ax, 0x140",
+   "06BC mul word ptr es:[di]",
+   "06E1 pop bp"
+  ],
+  "cd_only": [
+   "06FA imul ax, word ptr es:[di], 0x140",
+   "0721 leave "
+  ]
+ },
+ {
+  "state": 260,
+  "part": 26,
+  "overlay": 164,
+  "floppy": "0510",
+  "cd": "114:0803",
+  "similarity": 0.8571,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0520 pop bp"
+  ],
+  "cd_only": [
+   "0813 leave "
+  ]
+ },
+ {
+  "state": 270,
+  "part": 27,
+  "overlay": 185,
+  "floppy": "05AC",
+  "cd": "133:06EC",
+  "similarity": 0.8571,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "05BC pop bp"
+  ],
+  "cd_only": [
+   "06FC leave "
+  ]
+ },
+ {
+  "state": 270,
+  "part": 27,
+  "overlay": 185,
+  "floppy": "07BF",
+  "cd": "133:0951",
+  "similarity": 0.8571,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "07DB cmp word ptr es:[di], 0x128",
+   "07E0 jle 0x7e7",
+   "07E2 mov word ptr es:[di], 0x128",
+   "07E7 les di, ptr [bp + 6]",
+   "07F7 mov ax, 0x140",
+   "07FA mul word ptr es:[di]",
+   "081F pop bp"
+  ],
+  "cd_only": [
+   "097A imul ax, word ptr es:[di], 0x140",
+   "09A1 leave "
+  ]
+ },
+ {
+  "state": 280,
+  "part": 28,
+  "overlay": 175,
+  "floppy": "0A8F",
+  "cd": "123:0C8A",
+  "similarity": 0.8571,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0A9F pop bp"
+  ],
+  "cd_only": [
+   "0C9A leave "
+  ]
+ },
+ {
+  "state": 280,
+  "part": 28,
+  "overlay": 175,
+  "floppy": "0E10",
+  "cd": "123:0F54",
+  "similarity": 0.8657,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [
+   [
+    "0E2C cmp word ptr es:[di], 0x17",
+    "0F70 cmp word ptr es:[di], 0xf"
+   ],
+   [
+    "0E32 mov word ptr es:[di], 0x17",
+    "0F76 mov word ptr es:[di], 0xf"
+   ]
+  ],
+  "floppy_only": [
+   "0E47 mov ax, 0x140",
+   "0E4A mul word ptr es:[di]",
+   "0E6F pop bp"
+  ],
+  "cd_only": [
+   "0F8B imul ax, word ptr es:[di], 0x140",
+   "0FB2 leave "
+  ]
+ },
+ {
+  "state": 300,
+  "part": 30,
+  "overlay": 160,
+  "floppy": "004A",
+  "cd": "110:005C",
+  "similarity": 0.9091,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "008A mov ax, 0xa000",
+   "008D push ax",
+   "0093 pop bp"
+  ],
+  "cd_only": [
+   "009C push word ptr [0x176e]",
+   "00A5 leave "
+  ]
+ },
+ {
+  "state": 300,
+  "part": 30,
+  "overlay": 160,
+  "floppy": "09CB",
+  "cd": "110:09F9",
+  "similarity": 0.8571,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "09DB pop bp"
+  ],
+  "cd_only": [
+   "0A09 leave "
+  ]
+ },
+ {
+  "state": 300,
+  "part": 30,
+  "overlay": 160,
+  "floppy": "0A60",
+  "cd": "110:0A86",
+  "similarity": 0.8571,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0A70 pop bp"
+  ],
+  "cd_only": [
+   "0A96 leave "
+  ]
+ },
+ {
+  "state": 300,
+  "part": 30,
+  "overlay": 160,
+  "floppy": "0A72",
+  "cd": "110:0A98",
+  "similarity": 0.8667,
+  "pointer_like_suppressed": 11,
+  "constant_changes": [],
+  "floppy_only": [
+   "0B48 pop bp"
+  ],
+  "cd_only": [
+   "0B6E leave "
+  ]
+ },
+ {
+  "state": 300,
+  "part": 30,
+  "overlay": 160,
+  "floppy": "0B58",
+  "cd": "110:0B7E",
+  "similarity": 0.9153,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0B81 mov ax, 0x140",
+   "0B84 mul word ptr es:[di]",
+   "0BA9 pop bp"
+  ],
+  "cd_only": [
+   "0BA7 imul ax, word ptr es:[di], 0x140",
+   "0BCE leave "
+  ]
+ },
+ {
+  "state": 310,
+  "part": 31,
+  "overlay": 157,
+  "floppy": "01C1",
+  "cd": "107:05FE",
+  "similarity": 0.8571,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [
+   [
+    "01E5 mov word ptr [0x9842], 0xbe",
+    "0622 mov word ptr [0xd168], 0xa6"
+   ],
+   [
+    "01EB mov word ptr [0x9844], 0x6b",
+    "0628 mov word ptr [0xd16a], 0x71"
+   ]
+  ],
+  "floppy_only": [
+   "0299 mov ax, 0xbe",
+   "029C push ax",
+   "029D mov ax, 0x6b",
+   "02A0 push ax",
+   "02A1 mov ax, 0xbe",
+   "02A4 push ax",
+   "02A5 mov ax, 0x7d",
+   "02A8 push ax",
+   "02A9 push cs",
+   "02AA call 0x1815",
+   "02CC mov dx, 0x14",
+   "02CF mul dx",
+   "02D1 mov di, ax",
+   "02E7 pop bp"
+  ],
+  "cd_only": [
+   "06D6 push 0xa6",
+   "06D9 push 0x71",
+   "06DB push 0x8c",
+   "06DE push 0x7b",
+   "06E0 lcall 0, 0xffff",
+   "0704 imul di, ax, 0x14",
+   "071B leave "
+  ]
+ },
+ {
+  "state": 310,
+  "part": 31,
+  "overlay": 157,
+  "floppy": "064C",
+  "cd": "107:0C6A",
+  "similarity": 0.8571,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "065C pop bp"
+  ],
+  "cd_only": [
+   "0C7A leave "
+  ]
+ },
+ {
+  "state": 310,
+  "part": 31,
+  "overlay": 157,
+  "floppy": "0892",
+  "cd": "107:0F52",
+  "similarity": 0.8571,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "08AE cmp word ptr es:[di], 0xf8",
+   "08B3 jle 0x8ba",
+   "08B5 mov word ptr es:[di], 0xf8",
+   "08BA les di, ptr [bp + 6]",
+   "08CA mov ax, 0x140",
+   "08CD mul word ptr es:[di]",
+   "08F2 pop bp"
+  ],
+  "cd_only": [
+   "0F7B imul ax, word ptr es:[di], 0x140",
+   "0FA2 leave "
+  ]
+ },
+ {
+  "state": 320,
+  "part": 32,
+  "overlay": 215,
+  "floppy": "02D4",
+  "cd": "160:032F",
+  "similarity": 0.8571,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "02E4 pop bp"
+  ],
+  "cd_only": [
+   "033F leave "
+  ]
+ },
+ {
+  "state": 320,
+  "part": 32,
+  "overlay": 215,
+  "floppy": "02E6",
+  "cd": "160:0341",
+  "similarity": 0.8667,
+  "pointer_like_suppressed": 11,
+  "constant_changes": [],
+  "floppy_only": [
+   "03BC pop bp"
+  ],
+  "cd_only": [
+   "0417 leave "
+  ]
+ },
+ {
+  "state": 320,
+  "part": 32,
+  "overlay": 215,
+  "floppy": "03CC",
+  "cd": "160:0427",
+  "similarity": 0.9252,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0411 mov ax, 0x140",
+   "0414 mul word ptr es:[di]",
+   "0446 mov ax, 0x140",
+   "0449 mul word ptr es:[di]",
+   "0476 mov ax, 0x140",
+   "0479 mul word ptr es:[di]",
+   "049E pop bp"
+  ],
+  "cd_only": [
+   "046C imul ax, word ptr es:[di], 0x140",
+   "04A0 imul ax, word ptr es:[di], 0x140",
+   "04CF imul ax, word ptr es:[di], 0x140",
+   "04F6 leave "
+  ]
+ },
+ {
+  "state": 330,
+  "part": 33,
+  "overlay": 249,
+  "floppy": "00BC",
+  "cd": "185:00E3",
+  "similarity": 0.9796,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0169 pop bp"
+  ],
+  "cd_only": [
+   "0190 leave "
+  ]
+ },
+ {
+  "state": 330,
+  "part": 33,
+  "overlay": 249,
+  "floppy": "0CEB",
+  "cd": "185:0EF3",
+  "similarity": 0.9153,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0D31 mov ax, 0xa000",
+   "0D34 push ax",
+   "0D3A pop bp"
+  ],
+  "cd_only": [
+   "0F39 push word ptr [0x176e]",
+   "0F42 leave "
+  ]
+ },
+ {
+  "state": 330,
+  "part": 33,
+  "overlay": 249,
+  "floppy": "0F5F",
+  "cd": "185:11F8",
+  "similarity": 0.8565,
+  "pointer_like_suppressed": 30,
+  "constant_changes": [],
+  "floppy_only": [
+   "1167 pop bp"
+  ],
+  "cd_only": [
+   "1400 leave "
+  ]
+ },
+ {
+  "state": 330,
+  "part": 33,
+  "overlay": 249,
+  "floppy": "1195",
+  "cd": "185:142F",
+  "similarity": 0.9254,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "11CD mov ax, 0x140",
+   "11D0 mul word ptr es:[di]",
+   "11F5 pop bp"
+  ],
+  "cd_only": [
+   "1467 imul ax, word ptr es:[di], 0x140",
+   "148E leave "
+  ]
+ },
+ {
+  "state": 340,
+  "part": 34,
+  "overlay": 149,
+  "floppy": "0CEC",
+  "cd": "101:0DE8",
+  "similarity": 0.8561,
+  "pointer_like_suppressed": 18,
+  "constant_changes": [],
+  "floppy_only": [
+   "0E28 pop bp"
+  ],
+  "cd_only": [
+   "0F24 leave "
+  ]
+ },
+ {
+  "state": 340,
+  "part": 34,
+  "overlay": 149,
+  "floppy": "0E2A",
+  "cd": "101:0F26",
+  "similarity": 0.9756,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0EA8 pop bp"
+  ],
+  "cd_only": [
+   "0FA4 leave "
+  ]
+ },
+ {
+  "state": 340,
+  "part": 34,
+  "overlay": 149,
+  "floppy": "0EAC",
+  "cd": "101:0FA8",
+  "similarity": 0.9231,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0ED5 mov ax, 0x140",
+   "0ED8 mul word ptr es:[di]",
+   "0F07 pop bp"
+  ],
+  "cd_only": [
+   "0FD1 imul ax, word ptr es:[di], 0x140",
+   "1002 leave "
+  ]
+ },
+ {
+  "state": 350,
+  "part": 35,
+  "overlay": 148,
+  "floppy": "0000",
+  "cd": "100:0002",
+  "similarity": 0.9545,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "003E pop bp"
+  ],
+  "cd_only": [
+   "0040 leave "
+  ]
+ },
+ {
+  "state": 350,
+  "part": 35,
+  "overlay": 148,
+  "floppy": "051B",
+  "cd": "100:0530",
+  "similarity": 0.8558,
+  "pointer_like_suppressed": 14,
+  "constant_changes": [],
+  "floppy_only": [
+   "0613 pop bp"
+  ],
+  "cd_only": [
+   "0628 leave "
+  ]
+ },
+ {
+  "state": 350,
+  "part": 35,
+  "overlay": 148,
+  "floppy": "0615",
+  "cd": "100:062A",
+  "similarity": 0.9333,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "063E pop bp"
+  ],
+  "cd_only": [
+   "0653 leave "
+  ]
+ },
+ {
+  "state": 350,
+  "part": 35,
+  "overlay": 148,
+  "floppy": "0642",
+  "cd": "100:0657",
+  "similarity": 0.9315,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "067A mov ax, 0x140",
+   "067D mul word ptr es:[di]",
+   "06AC pop bp"
+  ],
+  "cd_only": [
+   "068F imul ax, word ptr es:[di], 0x140",
+   "06C0 leave "
+  ]
+ },
+ {
+  "state": 360,
+  "part": 36,
+  "overlay": 145,
+  "floppy": "0000",
+  "cd": "98:0002",
+  "similarity": 0.875,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0021 mov ax, 7",
+   "0024 push ax",
+   "0044 mov ax, 7",
+   "0047 push ax",
+   "004D pop bp"
+  ],
+  "cd_only": [
+   "0023 push 7",
+   "0044 push 7",
+   "004B leave "
+  ]
+ },
+ {
+  "state": 360,
+  "part": 36,
+  "overlay": 145,
+  "floppy": "03AD",
+  "cd": "98:03CF",
+  "similarity": 0.8571,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "03BD pop bp"
+  ],
+  "cd_only": [
+   "03DF leave "
+  ]
+ },
+ {
+  "state": 360,
+  "part": 36,
+  "overlay": 145,
+  "floppy": "03BF",
+  "cd": "98:03E1",
+  "similarity": 0.8561,
+  "pointer_like_suppressed": 18,
+  "constant_changes": [],
+  "floppy_only": [
+   "04FB pop bp"
+  ],
+  "cd_only": [
+   "051D leave "
+  ]
+ },
+ {
+  "state": 360,
+  "part": 36,
+  "overlay": 145,
+  "floppy": "0538",
+  "cd": "98:055A",
+  "similarity": 0.9209,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "056F mov ax, 0x140",
+   "0572 mul word ptr es:[di]",
+   "05A4 mov ax, 0x140",
+   "05A7 mul word ptr es:[di]",
+   "05D4 mov ax, 0x140",
+   "05D7 mul word ptr es:[di]",
+   "05FC pop bp"
+  ],
+  "cd_only": [
+   "0591 imul ax, word ptr es:[di], 0x140",
+   "05C5 imul ax, word ptr es:[di], 0x140",
+   "05F4 imul ax, word ptr es:[di], 0x140",
+   "061B leave "
+  ]
+ },
+ {
+  "state": 370,
+  "part": 37,
+  "overlay": 142,
+  "floppy": "0217",
+  "cd": "96:0248",
+  "similarity": 0.8571,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0227 pop bp"
+  ],
+  "cd_only": [
+   "0258 leave "
+  ]
+ },
+ {
+  "state": 370,
+  "part": 37,
+  "overlay": 142,
+  "floppy": "0229",
+  "cd": "96:025A",
+  "similarity": 0.8667,
+  "pointer_like_suppressed": 11,
+  "constant_changes": [],
+  "floppy_only": [
+   "02FF pop bp"
+  ],
+  "cd_only": [
+   "0330 leave "
+  ]
+ },
+ {
+  "state": 370,
+  "part": 37,
+  "overlay": 142,
+  "floppy": "030F",
+  "cd": "96:0340",
+  "similarity": 0.9209,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0347 mov ax, 0x140",
+   "034A mul word ptr es:[di]",
+   "037C mov ax, 0x140",
+   "037F mul word ptr es:[di]",
+   "03AC mov ax, 0x140",
+   "03AF mul word ptr es:[di]",
+   "03D4 pop bp"
+  ],
+  "cd_only": [
+   "0378 imul ax, word ptr es:[di], 0x140",
+   "03AC imul ax, word ptr es:[di], 0x140",
+   "03DB imul ax, word ptr es:[di], 0x140",
+   "0402 leave "
+  ]
+ },
+ {
+  "state": 500,
+  "part": 50,
+  "overlay": 66,
+  "floppy": "026B",
+  "cd": "54:01D2",
+  "similarity": 0.875,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0280 pop bp"
+  ],
+  "cd_only": [
+   "01E7 leave "
+  ]
+ },
+ {
+  "state": 500,
+  "part": 50,
+  "overlay": 66,
+  "floppy": "0282",
+  "cd": "54:01E9",
+  "similarity": 0.8542,
+  "pointer_like_suppressed": 6,
+  "constant_changes": [],
+  "floppy_only": [
+   "02F2 pop bp"
+  ],
+  "cd_only": [
+   "0259 leave "
+  ]
+ },
+ {
+  "state": 500,
+  "part": 50,
+  "overlay": 66,
+  "floppy": "0302",
+  "cd": "54:0269",
+  "similarity": 0.9286,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0367 mov ax, 0x140",
+   "036A mul word ptr es:[di]",
+   "039C mov ax, 0x140",
+   "039F mul word ptr es:[di]",
+   "03CF mov ax, 0x140",
+   "03D2 mul word ptr es:[di]",
+   "0403 mov ax, 0x140",
+   "0406 mul word ptr es:[di]",
+   "0438 mov ax, 0x140",
+   "043B mul word ptr es:[di]",
+   "046D mov ax, 0x140",
+   "0470 mul word ptr es:[di]",
+   "0495 pop bp"
+  ],
+  "cd_only": [
+   "02CE imul ax, word ptr es:[di], 0x140",
+   "0302 imul ax, word ptr es:[di], 0x140",
+   "0334 imul ax, word ptr es:[di], 0x140",
+   "0367 imul ax, word ptr es:[di], 0x140",
+   "039B imul ax, word ptr es:[di], 0x140",
+   "03CF imul ax, word ptr es:[di], 0x140",
+   "03F6 leave "
+  ]
+ },
+ {
+  "state": 510,
+  "part": 51,
+  "overlay": 109,
+  "floppy": "015E",
+  "cd": "93:0143",
+  "similarity": 0.8884,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "01A8 mov dx, 0x14",
+   "01AB mul dx",
+   "01AD mov di, ax",
+   "01B9 mov dx, 0x14",
+   "01BC mul dx",
+   "01BE mov di, ax",
+   "01E4 mov ax, 0xa",
+   "01E7 push ax",
+   "01FF mov ax, 0xa",
+   "0202 push ax",
+   "021E mov ax, 0xd9",
+   "0221 push ax",
+   "0222 mov ax, 0x35",
+   "0225 push ax",
+   "0226 push cs",
+   "0227 call 0",
+   "022E mov ax, 0x54",
+   "0231 push ax",
+   "0232 mov ax, 0x34",
+   "0235 push ax",
+   "0236 push cs",
+   "0237 call 0",
+   "023A mov ax, 3",
+   "023D push ax",
+   "038D mov al, 1",
+   "038F push ax",
+   "0390 mov al, 0xb7",
+   "0392 push ax",
+   "0398 mov al, 0xc0",
+   "039A push ax",
+   "039B mov al, 0xcf",
+   "039D push ax",
+   "03CE mov sp, bp",
+   "03D0 pop bp"
+  ],
+  "cd_only": [
+   "018D imul di, ax, 0x14",
+   "019A imul di, ax, 0x14",
+   "01C1 push 0xa",
+   "01DA push 0xa",
+   "01F7 push 0xd9",
+   "01FA push 0x35",
+   "01FC lcall 0, 0xffff",
+   "0205 push 0x54",
+   "0207 push 0x34",
+   "0209 lcall 0, 0xffff",
+   "020E push 3",
+   "035F push 1",
+   "0361 push -0x49",
+   "0368 push -0x40",
+   "036A push -0x31",
+   "039C leave "
+  ]
+ },
+ {
+  "state": 510,
+  "part": 51,
+  "overlay": 109,
+  "floppy": "0531",
+  "cd": "93:04F7",
+  "similarity": 0.8529,
+  "pointer_like_suppressed": 4,
+  "constant_changes": [],
+  "floppy_only": [
+   "057F pop bp"
+  ],
+  "cd_only": [
+   "0545 leave "
+  ]
+ },
+ {
+  "state": 510,
+  "part": 51,
+  "overlay": 109,
+  "floppy": "058F",
+  "cd": "93:0555",
+  "similarity": 0.9333,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "05D5 mov ax, 0x140",
+   "05D8 mul word ptr es:[di]",
+   "0617 mov ax, 0x140",
+   "061A mul word ptr es:[di]",
+   "063F pop bp"
+  ],
+  "cd_only": [
+   "059B imul ax, word ptr es:[di], 0x140",
+   "05DC imul ax, word ptr es:[di], 0x140",
+   "0603 leave "
+  ]
+ },
+ {
+  "state": 521,
+  "part": 52,
+  "overlay": 107,
+  "floppy": "0161",
+  "cd": "91:0146",
+  "similarity": 0.8884,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "01AB mov dx, 0x14",
+   "01AE mul dx",
+   "01B0 mov di, ax",
+   "01BC mov dx, 0x14",
+   "01BF mul dx",
+   "01C1 mov di, ax",
+   "01E7 mov ax, 0xa",
+   "01EA push ax",
+   "0202 mov ax, 0xa",
+   "0205 push ax",
+   "0221 mov ax, 0x51",
+   "0224 push ax",
+   "0225 mov ax, 0x3f",
+   "0228 push ax",
+   "0229 push cs",
+   "022A call 0",
+   "0231 mov ax, 0x25",
+   "0234 push ax",
+   "0235 mov ax, 0x47",
+   "0238 push ax",
+   "0239 push cs",
+   "023A call 0",
+   "023D mov ax, 3",
+   "0240 push ax",
+   "0390 mov al, 1",
+   "0392 push ax",
+   "0393 mov al, 0xb7",
+   "0395 push ax",
+   "039B mov al, 0xc0",
+   "039D push ax",
+   "039E mov al, 0xcf",
+   "03A0 push ax",
+   "03D1 mov sp, bp",
+   "03D3 pop bp"
+  ],
+  "cd_only": [
+   "0190 imul di, ax, 0x14",
+   "019D imul di, ax, 0x14",
+   "01C4 push 0xa",
+   "01DD push 0xa",
+   "01FA push 0x51",
+   "01FC push 0x3f",
+   "01FE lcall 0, 0xffff",
+   "0207 push 0x25",
+   "0209 push 0x47",
+   "020B lcall 0, 0xffff",
+   "0210 push 3",
+   "0361 push 1",
+   "0363 push -0x49",
+   "036A push -0x40",
+   "036C push -0x31",
+   "039E leave "
+  ]
+ },
+ {
+  "state": 521,
+  "part": 52,
+  "overlay": 107,
+  "floppy": "0534",
+  "cd": "91:04FD",
+  "similarity": 0.8529,
+  "pointer_like_suppressed": 4,
+  "constant_changes": [],
+  "floppy_only": [
+   "0582 pop bp"
+  ],
+  "cd_only": [
+   "054B leave "
+  ]
+ },
+ {
+  "state": 521,
+  "part": 52,
+  "overlay": 107,
+  "floppy": "0592",
+  "cd": "91:055B",
+  "similarity": 0.9333,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "05D8 mov ax, 0x140",
+   "05DB mul word ptr es:[di]",
+   "061A mov ax, 0x140",
+   "061D mul word ptr es:[di]",
+   "0642 pop bp"
+  ],
+  "cd_only": [
+   "05A1 imul ax, word ptr es:[di], 0x140",
+   "05E2 imul ax, word ptr es:[di], 0x140",
+   "0609 leave "
+  ]
+ },
+ {
+  "state": 532,
+  "part": 53,
+  "overlay": 105,
+  "floppy": "0186",
+  "cd": "89:0173",
+  "similarity": 0.9327,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0244 mov ax, 0xa",
+   "0247 push ax",
+   "0263 mov ax, 0xd9",
+   "0266 push ax",
+   "0267 mov ax, 0x34",
+   "026A push ax",
+   "026B push cs",
+   "026C call 0",
+   "026F mov ax, 3",
+   "0272 push ax",
+   "03C2 mov al, 1",
+   "03C4 push ax",
+   "03C5 mov al, 0xb7",
+   "03C7 push ax",
+   "03CD mov al, 0xc0",
+   "03CF push ax",
+   "03D0 mov al, 0xcf",
+   "03D2 push ax",
+   "040D mov sp, bp",
+   "040F pop bp"
+  ],
+  "cd_only": [
+   "0231 push 0xa",
+   "024E push 0xd9",
+   "0251 push 0x34",
+   "0253 lcall 0, 0xffff",
+   "0258 push 3",
+   "03A9 push 1",
+   "03AB push -0x49",
+   "03B2 push -0x40",
+   "03B4 push -0x31",
+   "03F0 leave "
+  ]
+ },
+ {
+  "state": 532,
+  "part": 53,
+  "overlay": 105,
+  "floppy": "0411",
+  "cd": "89:03F2",
+  "similarity": 0.9317,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "04CC mov ax, 0xa",
+   "04CF push ax",
+   "04EB mov ax, 0xd9",
+   "04EE push ax",
+   "04EF mov ax, 0x34",
+   "04F2 push ax",
+   "04F3 push cs",
+   "04F4 call 0",
+   "04F7 mov ax, 3",
+   "04FA push ax",
+   "064A mov al, 1",
+   "064C push ax",
+   "064D mov al, 0xb7",
+   "064F push ax",
+   "0655 mov al, 0xc0",
+   "0657 push ax",
+   "0658 mov al, 0xcf",
+   "065A push ax",
+   "06B6 mov dx, 0xa",
+   "06B9 mul dx",
+   "06C1 mov sp, bp",
+   "06C3 pop bp"
+  ],
+  "cd_only": [
+   "04AD push 0xa",
+   "04CA push 0xd9",
+   "04CD push 0x34",
+   "04CF lcall 0, 0xffff",
+   "04D4 push 3",
+   "0625 push 1",
+   "0627 push -0x49",
+   "062E push -0x40",
+   "0630 push -0x31",
+   "068D imul ax, ax, 0xa",
+   "0696 leave "
+  ]
+ },
+ {
+  "state": 532,
+  "part": 53,
+  "overlay": 105,
+  "floppy": "06C5",
+  "cd": "89:0698",
+  "similarity": 0.8529,
+  "pointer_like_suppressed": 4,
+  "constant_changes": [],
+  "floppy_only": [
+   "0713 pop bp"
+  ],
+  "cd_only": [
+   "06E6 leave "
+  ]
+ },
+ {
+  "state": 532,
+  "part": 53,
+  "overlay": 105,
+  "floppy": "0723",
+  "cd": "89:06F6",
+  "similarity": 0.9333,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0769 mov ax, 0x140",
+   "076C mul word ptr es:[di]",
+   "0791 pop bp"
+  ],
+  "cd_only": [
+   "073C imul ax, word ptr es:[di], 0x140",
+   "0763 leave "
+  ]
+ },
+ {
+  "state": 543,
+  "part": 54,
+  "overlay": 103,
+  "floppy": "0161",
+  "cd": "87:0146",
+  "similarity": 0.9091,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "01AB mov dx, 0x14",
+   "01AE mul dx",
+   "01B0 mov di, ax",
+   "01BC mov dx, 0x14",
+   "01BF mul dx",
+   "01C1 mov di, ax",
+   "01E7 mov ax, 0xa",
+   "01EA push ax",
+   "0206 mov ax, 0x120",
+   "0209 push ax",
+   "020A mov ax, 0x26",
+   "020D push ax",
+   "020E push cs",
+   "020F call 0",
+   "0212 mov ax, 3",
+   "0215 push ax",
+   "0365 mov al, 1",
+   "0367 push ax",
+   "0368 mov al, 0xb7",
+   "036A push ax",
+   "0370 mov al, 0xc0",
+   "0372 push ax",
+   "0373 mov al, 0xcf",
+   "0375 push ax",
+   "03A6 mov sp, bp",
+   "03A8 pop bp"
+  ],
+  "cd_only": [
+   "0190 imul di, ax, 0x14",
+   "019D imul di, ax, 0x14",
+   "01C4 push 0xa",
+   "01E1 push 0x120",
+   "01E4 push 0x26",
+   "01E6 lcall 0, 0xffff",
+   "01EB push 3",
+   "033C push 1",
+   "033E push -0x49",
+   "0345 push -0x40",
+   "0347 push -0x31",
+   "0379 leave "
+  ]
+ },
+ {
+  "state": 543,
+  "part": 54,
+  "overlay": 103,
+  "floppy": "0509",
+  "cd": "87:04D0",
+  "similarity": 0.8529,
+  "pointer_like_suppressed": 4,
+  "constant_changes": [],
+  "floppy_only": [
+   "0557 pop bp"
+  ],
+  "cd_only": [
+   "051E leave "
+  ]
+ },
+ {
+  "state": 543,
+  "part": 54,
+  "overlay": 103,
+  "floppy": "0567",
+  "cd": "87:052E",
+  "similarity": 0.9333,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "05AD mov ax, 0x140",
+   "05B0 mul word ptr es:[di]",
+   "05EF mov ax, 0x140",
+   "05F2 mul word ptr es:[di]",
+   "0617 pop bp"
+  ],
+  "cd_only": [
+   "0574 imul ax, word ptr es:[di], 0x140",
+   "05B5 imul ax, word ptr es:[di], 0x140",
+   "05DC leave "
+  ]
+ },
+ {
+  "state": 550,
+  "part": 55,
+  "overlay": 101,
+  "floppy": "0150",
+  "cd": "85:0137",
+  "similarity": 0.9223,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "019A mov dx, 0x14",
+   "019D mul dx",
+   "019F mov di, ax",
+   "01AB mov dx, 0x14",
+   "01AE mul dx",
+   "01B0 mov di, ax",
+   "01D6 mov ax, 0xa",
+   "01D9 push ax",
+   "01F5 push cs",
+   "01F6 call 0",
+   "01F9 mov ax, 3",
+   "01FC push ax",
+   "034C mov al, 1",
+   "034E push ax",
+   "034F mov al, 0xb7",
+   "0351 push ax",
+   "0357 mov al, 0xc0",
+   "0359 push ax",
+   "035A mov al, 0xcf",
+   "035C push ax",
+   "038D mov sp, bp",
+   "038F pop bp"
+  ],
+  "cd_only": [
+   "0181 imul di, ax, 0x14",
+   "018E imul di, ax, 0x14",
+   "01B5 push 0xa",
+   "01D2 lcall 0, 0xffff",
+   "01D7 push 3",
+   "0328 push 1",
+   "032A push -0x49",
+   "0331 push -0x40",
+   "0333 push -0x31",
+   "0365 leave "
+  ]
+ },
+ {
+  "state": 550,
+  "part": 55,
+  "overlay": 101,
+  "floppy": "062A",
+  "cd": "85:05F0",
+  "similarity": 0.8542,
+  "pointer_like_suppressed": 6,
+  "constant_changes": [],
+  "floppy_only": [
+   "069A pop bp"
+  ],
+  "cd_only": [
+   "0660 leave "
+  ]
+ },
+ {
+  "state": 550,
+  "part": 55,
+  "overlay": 101,
+  "floppy": "06AA",
+  "cd": "85:0670",
+  "similarity": 0.9333,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "06F0 mov ax, 0x140",
+   "06F3 mul word ptr es:[di]",
+   "0732 mov ax, 0x140",
+   "0735 mul word ptr es:[di]",
+   "075A pop bp"
+  ],
+  "cd_only": [
+   "06B6 imul ax, word ptr es:[di], 0x140",
+   "06F7 imul ax, word ptr es:[di], 0x140",
+   "071E leave "
+  ]
+ },
+ {
+  "state": 560,
+  "part": 56,
+  "overlay": 99,
+  "floppy": "0161",
+  "cd": "83:0146",
+  "similarity": 0.9091,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "01AB mov dx, 0x14",
+   "01AE mul dx",
+   "01B0 mov di, ax",
+   "01BC mov dx, 0x14",
+   "01BF mul dx",
+   "01C1 mov di, ax",
+   "01E7 mov ax, 0xa",
+   "01EA push ax",
+   "0206 mov ax, 0x53",
+   "0209 push ax",
+   "020A mov ax, 0x34",
+   "020D push ax",
+   "020E push cs",
+   "020F call 0",
+   "0212 mov ax, 3",
+   "0215 push ax",
+   "0365 mov al, 1",
+   "0367 push ax",
+   "0368 mov al, 0xb7",
+   "036A push ax",
+   "0370 mov al, 0xc0",
+   "0372 push ax",
+   "0373 mov al, 0xcf",
+   "0375 push ax",
+   "03A6 mov sp, bp",
+   "03A8 pop bp"
+  ],
+  "cd_only": [
+   "0190 imul di, ax, 0x14",
+   "019D imul di, ax, 0x14",
+   "01C4 push 0xa",
+   "01E1 push 0x53",
+   "01E3 push 0x34",
+   "01E5 lcall 0, 0xffff",
+   "01EA push 3",
+   "033B push 1",
+   "033D push -0x49",
+   "0344 push -0x40",
+   "0346 push -0x31",
+   "0378 leave "
+  ]
+ },
+ {
+  "state": 560,
+  "part": 56,
+  "overlay": 99,
+  "floppy": "0487",
+  "cd": "83:0457",
+  "similarity": 0.9327,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0545 mov ax, 0xa",
+   "0548 push ax",
+   "0564 mov ax, 0x53",
+   "0567 push ax",
+   "0568 mov ax, 0x34",
+   "056B push ax",
+   "056C push cs",
+   "056D call 0",
+   "0570 mov ax, 3",
+   "0573 push ax",
+   "06C3 mov al, 1",
+   "06C5 push ax",
+   "06C6 mov al, 0xb7",
+   "06C8 push ax",
+   "06CE mov al, 0xc0",
+   "06D0 push ax",
+   "06D1 mov al, 0xcf",
+   "06D3 push ax",
+   "070E mov sp, bp",
+   "0710 pop bp"
+  ],
+  "cd_only": [
+   "0515 push 0xa",
+   "0532 push 0x53",
+   "0534 push 0x34",
+   "0536 lcall 0, 0xffff",
+   "053B push 3",
+   "068C push 1",
+   "068E push -0x49",
+   "0695 push -0x40",
+   "0697 push -0x31",
+   "06D3 leave "
+  ]
+ },
+ {
+  "state": 560,
+  "part": 56,
+  "overlay": 99,
+  "floppy": "0794",
+  "cd": "83:0751",
+  "similarity": 0.9317,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "084F mov ax, 0xa",
+   "0852 push ax",
+   "086E mov ax, 0x53",
+   "0871 push ax",
+   "0872 mov ax, 0x34",
+   "0875 push ax",
+   "0876 push cs",
+   "0877 call 0",
+   "087A mov ax, 3",
+   "087D push ax",
+   "09CD mov al, 1",
+   "09CF push ax",
+   "09D0 mov al, 0xb7",
+   "09D2 push ax",
+   "09D8 mov al, 0xc0",
+   "09DA push ax",
+   "09DB mov al, 0xcf",
+   "09DD push ax",
+   "0A39 mov dx, 0xa",
+   "0A3C mul dx",
+   "0A44 mov sp, bp",
+   "0A46 pop bp"
+  ],
+  "cd_only": [
+   "080C push 0xa",
+   "0829 push 0x53",
+   "082B push 0x34",
+   "082D lcall 0, 0xffff",
+   "0832 push 3",
+   "0983 push 1",
+   "0985 push -0x49",
+   "098C push -0x40",
+   "098E push -0x31",
+   "09EB imul ax, ax, 0xa",
+   "09F4 leave "
+  ]
+ },
+ {
+  "state": 560,
+  "part": 56,
+  "overlay": 99,
+  "floppy": "0A48",
+  "cd": "83:09F6",
+  "similarity": 0.8542,
+  "pointer_like_suppressed": 6,
+  "constant_changes": [],
+  "floppy_only": [
+   "0AB8 pop bp"
+  ],
+  "cd_only": [
+   "0A66 leave "
+  ]
+ },
+ {
+  "state": 560,
+  "part": 56,
+  "overlay": 99,
+  "floppy": "0AC8",
+  "cd": "83:0A76",
+  "similarity": 0.9333,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0B0E mov ax, 0x140",
+   "0B11 mul word ptr es:[di]",
+   "0B36 pop bp"
+  ],
+  "cd_only": [
+   "0ABC imul ax, word ptr es:[di], 0x140",
+   "0AE3 leave "
+  ]
+ },
+ {
+  "state": 570,
+  "part": 57,
+  "overlay": 97,
+  "floppy": "0161",
+  "cd": "81:0146",
+  "similarity": 0.8884,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "01AB mov dx, 0x14",
+   "01AE mul dx",
+   "01B0 mov di, ax",
+   "01BC mov dx, 0x14",
+   "01BF mul dx",
+   "01C1 mov di, ax",
+   "01E7 mov ax, 0xa",
+   "01EA push ax",
+   "0202 mov ax, 0xa",
+   "0205 push ax",
+   "0221 mov ax, 0x71",
+   "0224 push ax",
+   "0225 mov ax, 0xd",
+   "0228 push ax",
+   "0229 push cs",
+   "022A call 0",
+   "0231 mov ax, 0x9d",
+   "0234 push ax",
+   "0235 mov ax, 0xc",
+   "0238 push ax",
+   "0239 push cs",
+   "023A call 0",
+   "023D mov ax, 3",
+   "0240 push ax",
+   "0390 mov al, 1",
+   "0392 push ax",
+   "0393 mov al, 0xb7",
+   "0395 push ax",
+   "039B mov al, 0xc0",
+   "039D push ax",
+   "039E mov al, 0xcf",
+   "03A0 push ax",
+   "03D1 mov sp, bp",
+   "03D3 pop bp"
+  ],
+  "cd_only": [
+   "0190 imul di, ax, 0x14",
+   "019D imul di, ax, 0x14",
+   "01C4 push 0xa",
+   "01DD push 0xa",
+   "01FA push 0x71",
+   "01FC push 0xd",
+   "01FE lcall 0, 0xffff",
+   "0207 push 0x9d",
+   "020A push 0xc",
+   "020C lcall 0, 0xffff",
+   "0211 push 3",
+   "0362 push 1",
+   "0364 push -0x49",
+   "036B push -0x40",
+   "036D push -0x31",
+   "039F leave "
+  ]
+ },
+ {
+  "state": 570,
+  "part": 57,
+  "overlay": 97,
+  "floppy": "066E",
+  "cd": "81:0622",
+  "similarity": 0.8542,
+  "pointer_like_suppressed": 6,
+  "constant_changes": [],
+  "floppy_only": [
+   "06DE pop bp"
+  ],
+  "cd_only": [
+   "0692 leave "
+  ]
+ },
+ {
+  "state": 570,
+  "part": 57,
+  "overlay": 97,
+  "floppy": "06EE",
+  "cd": "81:06A2",
+  "similarity": 0.9333,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0734 mov ax, 0x140",
+   "0737 mul word ptr es:[di]",
+   "0776 mov ax, 0x140",
+   "0779 mul word ptr es:[di]",
+   "079E pop bp"
+  ],
+  "cd_only": [
+   "06E8 imul ax, word ptr es:[di], 0x140",
+   "0729 imul ax, word ptr es:[di], 0x140",
+   "0750 leave "
+  ]
+ },
+ {
+  "state": 581,
+  "part": 58,
+  "overlay": 95,
+  "floppy": "0161",
+  "cd": "79:0146",
+  "similarity": 0.9091,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "01AB mov dx, 0x14",
+   "01AE mul dx",
+   "01B0 mov di, ax",
+   "01BC mov dx, 0x14",
+   "01BF mul dx",
+   "01C1 mov di, ax",
+   "01E7 mov ax, 0xa",
+   "01EA push ax",
+   "0206 mov ax, 0x53",
+   "0209 push ax",
+   "020A mov ax, 0x35",
+   "020D push ax",
+   "020E push cs",
+   "020F call 0",
+   "0212 mov ax, 3",
+   "0215 push ax",
+   "0365 mov al, 1",
+   "0367 push ax",
+   "0368 mov al, 0xb7",
+   "036A push ax",
+   "0370 mov al, 0xc0",
+   "0372 push ax",
+   "0373 mov al, 0xcf",
+   "0375 push ax",
+   "03A6 mov sp, bp",
+   "03A8 pop bp"
+  ],
+  "cd_only": [
+   "0190 imul di, ax, 0x14",
+   "019D imul di, ax, 0x14",
+   "01C4 push 0xa",
+   "01E1 push 0x53",
+   "01E3 push 0x35",
+   "01E5 lcall 0, 0xffff",
+   "01EA push 3",
+   "033B push 1",
+   "033D push -0x49",
+   "0344 push -0x40",
+   "0346 push -0x31",
+   "0378 leave "
+  ]
+ },
+ {
+  "state": 581,
+  "part": 58,
+  "overlay": 95,
+  "floppy": "0487",
+  "cd": "79:0459",
+  "similarity": 0.9327,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0545 mov ax, 0xa",
+   "0548 push ax",
+   "0564 mov ax, 0x53",
+   "0567 push ax",
+   "0568 mov ax, 0x35",
+   "056B push ax",
+   "056C push cs",
+   "056D call 0",
+   "0570 mov ax, 3",
+   "0573 push ax",
+   "06C3 mov al, 1",
+   "06C5 push ax",
+   "06C6 mov al, 0xb7",
+   "06C8 push ax",
+   "06CE mov al, 0xc0",
+   "06D0 push ax",
+   "06D1 mov al, 0xcf",
+   "06D3 push ax",
+   "070E mov sp, bp",
+   "0710 pop bp"
+  ],
+  "cd_only": [
+   "0517 push 0xa",
+   "0534 push 0x53",
+   "0536 push 0x35",
+   "0538 lcall 0, 0xffff",
+   "053D push 3",
+   "068E push 1",
+   "0690 push -0x49",
+   "0697 push -0x40",
+   "0699 push -0x31",
+   "06D5 leave "
+  ]
+ },
+ {
+  "state": 581,
+  "part": 58,
+  "overlay": 95,
+  "floppy": "0794",
+  "cd": "79:0755",
+  "similarity": 0.9317,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "084F mov ax, 0xa",
+   "0852 push ax",
+   "086E mov ax, 0x53",
+   "0871 push ax",
+   "0872 mov ax, 0x35",
+   "0875 push ax",
+   "0876 push cs",
+   "0877 call 0",
+   "087A mov ax, 3",
+   "087D push ax",
+   "09CD mov al, 1",
+   "09CF push ax",
+   "09D0 mov al, 0xb7",
+   "09D2 push ax",
+   "09D8 mov al, 0xc0",
+   "09DA push ax",
+   "09DB mov al, 0xcf",
+   "09DD push ax",
+   "0A39 mov dx, 0xa",
+   "0A3C mul dx",
+   "0A44 mov sp, bp",
+   "0A46 pop bp"
+  ],
+  "cd_only": [
+   "0810 push 0xa",
+   "082D push 0x53",
+   "082F push 0x35",
+   "0831 lcall 0, 0xffff",
+   "0836 push 3",
+   "0987 push 1",
+   "0989 push -0x49",
+   "0990 push -0x40",
+   "0992 push -0x31",
+   "09EF imul ax, ax, 0xa",
+   "09F8 leave "
+  ]
+ },
+ {
+  "state": 581,
+  "part": 58,
+  "overlay": 95,
+  "floppy": "0A48",
+  "cd": "79:09FA",
+  "similarity": 0.8542,
+  "pointer_like_suppressed": 6,
+  "constant_changes": [],
+  "floppy_only": [
+   "0AB8 pop bp"
+  ],
+  "cd_only": [
+   "0A6A leave "
+  ]
+ },
+ {
+  "state": 581,
+  "part": 58,
+  "overlay": 95,
+  "floppy": "0AC8",
+  "cd": "79:0A7A",
+  "similarity": 0.9333,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0B0E mov ax, 0x140",
+   "0B11 mul word ptr es:[di]",
+   "0B36 pop bp"
+  ],
+  "cd_only": [
+   "0AC0 imul ax, word ptr es:[di], 0x140",
+   "0AE7 leave "
+  ]
+ },
+ {
+  "state": 591,
+  "part": 59,
+  "overlay": 93,
+  "floppy": "0161",
+  "cd": "77:0146",
+  "similarity": 0.9091,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "01AB mov dx, 0x14",
+   "01AE mul dx",
+   "01B0 mov di, ax",
+   "01BC mov dx, 0x14",
+   "01BF mul dx",
+   "01C1 mov di, ax",
+   "01E7 mov ax, 0xa",
+   "01EA push ax",
+   "0206 mov ax, 0x7f",
+   "0209 push ax",
+   "020A mov ax, 0x16",
+   "020D push ax",
+   "020E push cs",
+   "020F call 0",
+   "0212 mov ax, 3",
+   "0215 push ax",
+   "0365 mov al, 1",
+   "0367 push ax",
+   "0368 mov al, 0xb7",
+   "036A push ax",
+   "0370 mov al, 0xc0",
+   "0372 push ax",
+   "0373 mov al, 0xcf",
+   "0375 push ax",
+   "03A6 mov sp, bp",
+   "03A8 pop bp"
+  ],
+  "cd_only": [
+   "0190 imul di, ax, 0x14",
+   "019D imul di, ax, 0x14",
+   "01C4 push 0xa",
+   "01E1 push 0x7f",
+   "01E3 push 0x16",
+   "01E5 lcall 0, 0xffff",
+   "01EA push 3",
+   "033B push 1",
+   "033D push -0x49",
+   "0344 push -0x40",
+   "0346 push -0x31",
+   "0378 leave "
+  ]
+ },
+ {
+  "state": 591,
+  "part": 59,
+  "overlay": 93,
+  "floppy": "0643",
+  "cd": "77:05FB",
+  "similarity": 0.8542,
+  "pointer_like_suppressed": 6,
+  "constant_changes": [],
+  "floppy_only": [
+   "06B3 pop bp"
+  ],
+  "cd_only": [
+   "066B leave "
+  ]
+ },
+ {
+  "state": 591,
+  "part": 59,
+  "overlay": 93,
+  "floppy": "06C3",
+  "cd": "77:067B",
+  "similarity": 0.9333,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0709 mov ax, 0x140",
+   "070C mul word ptr es:[di]",
+   "074B mov ax, 0x140",
+   "074E mul word ptr es:[di]",
+   "0773 pop bp"
+  ],
+  "cd_only": [
+   "06C1 imul ax, word ptr es:[di], 0x140",
+   "0702 imul ax, word ptr es:[di], 0x140",
+   "0729 leave "
+  ]
+ },
+ {
+  "state": 602,
+  "part": 60,
+  "overlay": 91,
+  "floppy": "0161",
+  "cd": "75:0146",
+  "similarity": 0.9091,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "01AB mov dx, 0x14",
+   "01AE mul dx",
+   "01B0 mov di, ax",
+   "01BC mov dx, 0x14",
+   "01BF mul dx",
+   "01C1 mov di, ax",
+   "01E7 mov ax, 0xa",
+   "01EA push ax",
+   "0206 mov ax, 0x9d",
+   "0209 push ax",
+   "020A mov ax, 0xd",
+   "020D push ax",
+   "020E push cs",
+   "020F call 0",
+   "0212 mov ax, 3",
+   "0215 push ax",
+   "0365 mov al, 1",
+   "0367 push ax",
+   "0368 mov al, 0xb7",
+   "036A push ax",
+   "0370 mov al, 0xc0",
+   "0372 push ax",
+   "0373 mov al, 0xcf",
+   "0375 push ax",
+   "03A6 mov sp, bp",
+   "03A8 pop bp"
+  ],
+  "cd_only": [
+   "0190 imul di, ax, 0x14",
+   "019D imul di, ax, 0x14",
+   "01C4 push 0xa",
+   "01E1 push 0x9d",
+   "01E4 push 0xd",
+   "01E6 lcall 0, 0xffff",
+   "01EB push 3",
+   "033C push 1",
+   "033E push -0x49",
+   "0345 push -0x40",
+   "0347 push -0x31",
+   "0379 leave "
+  ]
+ },
+ {
+  "state": 602,
+  "part": 60,
+  "overlay": 91,
+  "floppy": "03CF",
+  "cd": "75:03A8",
+  "similarity": 0.9327,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "048D mov ax, 0xa",
+   "0490 push ax",
+   "04AC mov ax, 0x9d",
+   "04AF push ax",
+   "04B0 mov ax, 0xd",
+   "04B3 push ax",
+   "04B4 push cs",
+   "04B5 call 0",
+   "04B8 mov ax, 3",
+   "04BB push ax",
+   "060B mov al, 1",
+   "060D push ax",
+   "060E mov al, 0xb7",
+   "0610 push ax",
+   "0616 mov al, 0xc0",
+   "0618 push ax",
+   "0619 mov al, 0xcf",
+   "061B push ax",
+   "0656 mov sp, bp",
+   "0658 pop bp"
+  ],
+  "cd_only": [
+   "0466 push 0xa",
+   "0483 push 0x9d",
+   "0486 push 0xd",
+   "0488 lcall 0, 0xffff",
+   "048D push 3",
+   "05DE push 1",
+   "05E0 push -0x49",
+   "05E7 push -0x40",
+   "05E9 push -0x31",
+   "0625 leave "
+  ]
+ },
+ {
+  "state": 602,
+  "part": 60,
+  "overlay": 91,
+  "floppy": "0712",
+  "cd": "75:06D5",
+  "similarity": 0.9317,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "07CD mov ax, 0xa",
+   "07D0 push ax",
+   "07EC mov ax, 0x9d",
+   "07EF push ax",
+   "07F0 mov ax, 0xd",
+   "07F3 push ax",
+   "07F4 push cs",
+   "07F5 call 0",
+   "07F8 mov ax, 3",
+   "07FB push ax",
+   "094B mov al, 1",
+   "094D push ax",
+   "094E mov al, 0xb7",
+   "0950 push ax",
+   "0956 mov al, 0xc0",
+   "0958 push ax",
+   "0959 mov al, 0xcf",
+   "095B push ax",
+   "09B7 mov dx, 0xa",
+   "09BA mul dx",
+   "09C2 mov sp, bp",
+   "09C4 pop bp"
+  ],
+  "cd_only": [
+   "0790 push 0xa",
+   "07AD push 0x9d",
+   "07B0 push 0xd",
+   "07B2 lcall 0, 0xffff",
+   "07B7 push 3",
+   "0908 push 1",
+   "090A push -0x49",
+   "0911 push -0x40",
+   "0913 push -0x31",
+   "0970 imul ax, ax, 0xa",
+   "0979 leave "
+  ]
+ },
+ {
+  "state": 602,
+  "part": 60,
+  "overlay": 91,
+  "floppy": "0A48",
+  "cd": "75:09F5",
+  "similarity": 0.8542,
+  "pointer_like_suppressed": 6,
+  "constant_changes": [],
+  "floppy_only": [
+   "0AB8 pop bp"
+  ],
+  "cd_only": [
+   "0A65 leave "
+  ]
+ },
+ {
+  "state": 602,
+  "part": 60,
+  "overlay": 91,
+  "floppy": "0AC8",
+  "cd": "75:0A75",
+  "similarity": 0.9254,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0B00 mov ax, 0x140",
+   "0B03 mul word ptr es:[di]",
+   "0B28 pop bp"
+  ],
+  "cd_only": [
+   "0AAD imul ax, word ptr es:[di], 0x140",
+   "0AD4 leave "
+  ]
+ },
+ {
+  "state": 610,
+  "part": 61,
+  "overlay": 89,
+  "floppy": "0161",
+  "cd": "73:0146",
+  "similarity": 0.9091,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "01AB mov dx, 0x14",
+   "01AE mul dx",
+   "01B0 mov di, ax",
+   "01BC mov dx, 0x14",
+   "01BF mul dx",
+   "01C1 mov di, ax",
+   "01E7 mov ax, 0xa",
+   "01EA push ax",
+   "0206 mov ax, 0x9d",
+   "0209 push ax",
+   "020A mov ax, 0xc",
+   "020D push ax",
+   "020E push cs",
+   "020F call 0",
+   "0212 mov ax, 3",
+   "0215 push ax",
+   "0365 mov al, 1",
+   "0367 push ax",
+   "0368 mov al, 0xb7",
+   "036A push ax",
+   "0370 mov al, 0xc0",
+   "0372 push ax",
+   "0373 mov al, 0xcf",
+   "0375 push ax",
+   "03A6 mov sp, bp",
+   "03A8 pop bp"
+  ],
+  "cd_only": [
+   "0190 imul di, ax, 0x14",
+   "019D imul di, ax, 0x14",
+   "01C4 push 0xa",
+   "01E1 push 0x9d",
+   "01E4 push 0xc",
+   "01E6 lcall 0, 0xffff",
+   "01EB push 3",
+   "033C push 1",
+   "033E push -0x49",
+   "0345 push -0x40",
+   "0347 push -0x31",
+   "0379 leave "
+  ]
+ },
+ {
+  "state": 610,
+  "part": 61,
+  "overlay": 89,
+  "floppy": "053F",
+  "cd": "73:0508",
+  "similarity": 0.9327,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "05FD mov ax, 0xa",
+   "0600 push ax",
+   "061C mov ax, 0x9d",
+   "061F push ax",
+   "0620 mov ax, 0xc",
+   "0623 push ax",
+   "0624 push cs",
+   "0625 call 0",
+   "0628 mov ax, 3",
+   "062B push ax",
+   "077B mov al, 1",
+   "077D push ax",
+   "077E mov al, 0xb7",
+   "0780 push ax",
+   "0786 mov al, 0xc0",
+   "0788 push ax",
+   "0789 mov al, 0xcf",
+   "078B push ax",
+   "07C6 mov sp, bp",
+   "07C8 pop bp"
+  ],
+  "cd_only": [
+   "05C6 push 0xa",
+   "05E3 push 0x9d",
+   "05E6 push 0xc",
+   "05E8 lcall 0, 0xffff",
+   "05ED push 3",
+   "073E push 1",
+   "0740 push -0x49",
+   "0747 push -0x40",
+   "0749 push -0x31",
+   "0785 leave "
+  ]
+ },
+ {
+  "state": 610,
+  "part": 61,
+  "overlay": 89,
+  "floppy": "08CE",
+  "cd": "73:087F",
+  "similarity": 0.9317,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0989 mov ax, 0xa",
+   "098C push ax",
+   "09A8 mov ax, 0x9d",
+   "09AB push ax",
+   "09AC mov ax, 0xc",
+   "09AF push ax",
+   "09B0 push cs",
+   "09B1 call 0",
+   "09B4 mov ax, 3",
+   "09B7 push ax",
+   "0B07 mov al, 1",
+   "0B09 push ax",
+   "0B0A mov al, 0xb7",
+   "0B0C push ax",
+   "0B12 mov al, 0xc0",
+   "0B14 push ax",
+   "0B15 mov al, 0xcf",
+   "0B17 push ax",
+   "0B73 mov dx, 0xa",
+   "0B76 mul dx",
+   "0B7E mov sp, bp",
+   "0B80 pop bp"
+  ],
+  "cd_only": [
+   "093A push 0xa",
+   "0957 push 0x9d",
+   "095A push 0xc",
+   "095C lcall 0, 0xffff",
+   "0961 push 3",
+   "0AB2 push 1",
+   "0AB4 push -0x49",
+   "0ABB push -0x40",
+   "0ABD push -0x31",
+   "0B1A imul ax, ax, 0xa",
+   "0B23 leave "
+  ]
+ },
+ {
+  "state": 610,
+  "part": 61,
+  "overlay": 89,
+  "floppy": "0B82",
+  "cd": "73:0B25",
+  "similarity": 0.8548,
+  "pointer_like_suppressed": 8,
+  "constant_changes": [],
+  "floppy_only": [
+   "0C14 pop bp"
+  ],
+  "cd_only": [
+   "0BB7 leave "
+  ]
+ },
+ {
+  "state": 610,
+  "part": 61,
+  "overlay": 89,
+  "floppy": "0C24",
+  "cd": "73:0BC7",
+  "similarity": 0.9333,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0C6A mov ax, 0x140",
+   "0C6D mul word ptr es:[di]",
+   "0C92 pop bp"
+  ],
+  "cd_only": [
+   "0C0D imul ax, word ptr es:[di], 0x140",
+   "0C34 leave "
+  ]
+ },
+ {
+  "state": 621,
+  "part": 62,
+  "overlay": 87,
+  "floppy": "0161",
+  "cd": "71:0146",
+  "similarity": 0.8884,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "01AB mov dx, 0x14",
+   "01AE mul dx",
+   "01B0 mov di, ax",
+   "01BC mov dx, 0x14",
+   "01BF mul dx",
+   "01C1 mov di, ax",
+   "01E7 mov ax, 0xa",
+   "01EA push ax",
+   "0202 mov ax, 0xa",
+   "0205 push ax",
+   "0221 mov ax, 0xae",
+   "0224 push ax",
+   "0225 mov ax, 0x17",
+   "0228 push ax",
+   "0229 push cs",
+   "022A call 0",
+   "0231 mov ax, 0x7e",
+   "0234 push ax",
+   "0235 mov ax, 0x17",
+   "0238 push ax",
+   "0239 push cs",
+   "023A call 0",
+   "023D mov ax, 3",
+   "0240 push ax",
+   "0390 mov al, 1",
+   "0392 push ax",
+   "0393 mov al, 0xb7",
+   "0395 push ax",
+   "039B mov al, 0xc0",
+   "039D push ax",
+   "039E mov al, 0xcf",
+   "03A0 push ax",
+   "03D1 mov sp, bp",
+   "03D3 pop bp"
+  ],
+  "cd_only": [
+   "0190 imul di, ax, 0x14",
+   "019D imul di, ax, 0x14",
+   "01C4 push 0xa",
+   "01DD push 0xa",
+   "01FA push 0xae",
+   "01FD push 0x17",
+   "01FF lcall 0, 0xffff",
+   "0208 push 0x7e",
+   "020A push 0x17",
+   "020C lcall 0, 0xffff",
+   "0211 push 3",
+   "0362 push 1",
+   "0364 push -0x49",
+   "036B push -0x40",
+   "036D push -0x31",
+   "039F leave "
+  ]
+ },
+ {
+  "state": 621,
+  "part": 62,
+  "overlay": 87,
+  "floppy": "04B2",
+  "cd": "71:047E",
+  "similarity": 0.9118,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0570 mov ax, 0xa",
+   "0573 push ax",
+   "058B mov ax, 0xa",
+   "058E push ax",
+   "05AA mov ax, 0xae",
+   "05AD push ax",
+   "05AE mov ax, 0x17",
+   "05B1 push ax",
+   "05B2 push cs",
+   "05B3 call 0",
+   "05BA mov ax, 0x7e",
+   "05BD push ax",
+   "05BE mov ax, 0x17",
+   "05C1 push ax",
+   "05C2 push cs",
+   "05C3 call 0",
+   "05C6 mov ax, 3",
+   "05C9 push ax",
+   "0719 mov al, 1",
+   "071B push ax",
+   "071C mov al, 0xb7",
+   "071E push ax",
+   "0724 mov al, 0xc0",
+   "0726 push ax",
+   "0727 mov al, 0xcf",
+   "0729 push ax",
+   "0764 mov sp, bp",
+   "0766 pop bp"
+  ],
+  "cd_only": [
+   "053C push 0xa",
+   "0555 push 0xa",
+   "0572 push 0xae",
+   "0575 push 0x17",
+   "0577 lcall 0, 0xffff",
+   "0580 push 0x7e",
+   "0582 push 0x17",
+   "0584 lcall 0, 0xffff",
+   "0589 push 3",
+   "06DA push 1",
+   "06DC push -0x49",
+   "06E3 push -0x40",
+   "06E5 push -0x31",
+   "0721 leave "
+  ]
+ },
+ {
+  "state": 621,
+  "part": 62,
+  "overlay": 87,
+  "floppy": "08A2",
+  "cd": "71:084D",
+  "similarity": 0.9123,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "095D mov ax, 0xa",
+   "0960 push ax",
+   "0978 mov ax, 0xa",
+   "097B push ax",
+   "0997 mov ax, 0xae",
+   "099A push ax",
+   "099B mov ax, 0x17",
+   "099E push ax",
+   "099F push cs",
+   "09A0 call 0",
+   "09A7 mov ax, 0x7e",
+   "09AA push ax",
+   "09AB mov ax, 0x17",
+   "09AE push ax",
+   "09AF push cs",
+   "09B0 call 0",
+   "09B3 mov ax, 3",
+   "09B6 push ax",
+   "0B06 mov al, 1",
+   "0B08 push ax",
+   "0B09 mov al, 0xb7",
+   "0B0B push ax",
+   "0B11 mov al, 0xc0",
+   "0B13 push ax",
+   "0B14 mov al, 0xcf",
+   "0B16 push ax",
+   "0B72 mov dx, 0xa",
+   "0B75 mul dx",
+   "0B7D mov sp, bp",
+   "0B7F pop bp"
+  ],
+  "cd_only": [
+   "0908 push 0xa",
+   "0921 push 0xa",
+   "093E push 0xae",
+   "0941 push 0x17",
+   "0943 lcall 0, 0xffff",
+   "094C push 0x7e",
+   "094E push 0x17",
+   "0950 lcall 0, 0xffff",
+   "0955 push 3",
+   "0AA6 push 1",
+   "0AA8 push -0x49",
+   "0AAF push -0x40",
+   "0AB1 push -0x31",
+   "0B0E imul ax, ax, 0xa",
+   "0B17 leave "
+  ]
+ },
+ {
+  "state": 621,
+  "part": 62,
+  "overlay": 87,
+  "floppy": "0C03",
+  "cd": "71:0B93",
+  "similarity": 0.8548,
+  "pointer_like_suppressed": 8,
+  "constant_changes": [],
+  "floppy_only": [
+   "0C95 pop bp"
+  ],
+  "cd_only": [
+   "0C25 leave "
+  ]
+ },
+ {
+  "state": 621,
+  "part": 62,
+  "overlay": 87,
+  "floppy": "0CA5",
+  "cd": "71:0C35",
+  "similarity": 0.9153,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0CCE mov ax, 0x140",
+   "0CD1 mul word ptr es:[di]",
+   "0CF6 pop bp"
+  ],
+  "cd_only": [
+   "0C5E imul ax, word ptr es:[di], 0x140",
+   "0C85 leave "
+  ]
+ },
+ {
+  "state": 630,
+  "part": 63,
+  "overlay": 85,
+  "floppy": "0161",
+  "cd": "69:0146",
+  "similarity": 0.9091,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "01AB mov dx, 0x14",
+   "01AE mul dx",
+   "01B0 mov di, ax",
+   "01BC mov dx, 0x14",
+   "01BF mul dx",
+   "01C1 mov di, ax",
+   "01E7 mov ax, 0xa",
+   "01EA push ax",
+   "0206 mov ax, 0xd9",
+   "0209 push ax",
+   "020A mov ax, 0x34",
+   "020D push ax",
+   "020E push cs",
+   "020F call 0",
+   "0212 mov ax, 3",
+   "0215 push ax",
+   "0365 mov al, 1",
+   "0367 push ax",
+   "0368 mov al, 0xb7",
+   "036A push ax",
+   "0370 mov al, 0xc0",
+   "0372 push ax",
+   "0373 mov al, 0xcf",
+   "0375 push ax",
+   "03A6 mov sp, bp",
+   "03A8 pop bp"
+  ],
+  "cd_only": [
+   "0190 imul di, ax, 0x14",
+   "019D imul di, ax, 0x14",
+   "01C4 push 0xa",
+   "01E1 push 0xd9",
+   "01E4 push 0x34",
+   "01E6 lcall 0, 0xffff",
+   "01EB push 3",
+   "033C push 1",
+   "033E push -0x49",
+   "0345 push -0x40",
+   "0347 push -0x31",
+   "0379 leave "
+  ]
+ },
+ {
+  "state": 630,
+  "part": 63,
+  "overlay": 85,
+  "floppy": "0487",
+  "cd": "69:0458",
+  "similarity": 0.9327,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0545 mov ax, 0xa",
+   "0548 push ax",
+   "0564 mov ax, 0xd9",
+   "0567 push ax",
+   "0568 mov ax, 0x34",
+   "056B push ax",
+   "056C push cs",
+   "056D call 0",
+   "0570 mov ax, 3",
+   "0573 push ax",
+   "06C3 mov al, 1",
+   "06C5 push ax",
+   "06C6 mov al, 0xb7",
+   "06C8 push ax",
+   "06CE mov al, 0xc0",
+   "06D0 push ax",
+   "06D1 mov al, 0xcf",
+   "06D3 push ax",
+   "070E mov sp, bp",
+   "0710 pop bp"
+  ],
+  "cd_only": [
+   "0516 push 0xa",
+   "0533 push 0xd9",
+   "0536 push 0x34",
+   "0538 lcall 0, 0xffff",
+   "053D push 3",
+   "068E push 1",
+   "0690 push -0x49",
+   "0697 push -0x40",
+   "0699 push -0x31",
+   "06D5 leave "
+  ]
+ },
+ {
+  "state": 630,
+  "part": 63,
+  "overlay": 85,
+  "floppy": "084C",
+  "cd": "69:0803",
+  "similarity": 0.9317,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0907 mov ax, 0xa",
+   "090A push ax",
+   "0926 mov ax, 0xd9",
+   "0929 push ax",
+   "092A mov ax, 0x34",
+   "092D push ax",
+   "092E push cs",
+   "092F call 0",
+   "0932 mov ax, 3",
+   "0935 push ax",
+   "0A85 mov al, 1",
+   "0A87 push ax",
+   "0A88 mov al, 0xb7",
+   "0A8A push ax",
+   "0A90 mov al, 0xc0",
+   "0A92 push ax",
+   "0A93 mov al, 0xcf",
+   "0A95 push ax",
+   "0AF1 mov dx, 0xa",
+   "0AF4 mul dx",
+   "0AFC mov sp, bp",
+   "0AFE pop bp"
+  ],
+  "cd_only": [
+   "08BE push 0xa",
+   "08DB push 0xd9",
+   "08DE push 0x34",
+   "08E0 lcall 0, 0xffff",
+   "08E5 push 3",
+   "0A36 push 1",
+   "0A38 push -0x49",
+   "0A3F push -0x40",
+   "0A41 push -0x31",
+   "0A9E imul ax, ax, 0xa",
+   "0AA7 leave "
+  ]
+ },
+ {
+  "state": 630,
+  "part": 63,
+  "overlay": 85,
+  "floppy": "0B82",
+  "cd": "69:0B25",
+  "similarity": 0.8548,
+  "pointer_like_suppressed": 8,
+  "constant_changes": [],
+  "floppy_only": [
+   "0C14 pop bp"
+  ],
+  "cd_only": [
+   "0BB7 leave "
+  ]
+ },
+ {
+  "state": 630,
+  "part": 63,
+  "overlay": 85,
+  "floppy": "0C24",
+  "cd": "69:0BC7",
+  "similarity": 0.9333,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0C6A mov ax, 0x140",
+   "0C6D mul word ptr es:[di]",
+   "0C92 pop bp"
+  ],
+  "cd_only": [
+   "0C0D imul ax, word ptr es:[di], 0x140",
+   "0C34 leave "
+  ]
+ },
+ {
+  "state": 640,
+  "part": 64,
+  "overlay": 83,
+  "floppy": "03D9",
+  "cd": "67:03B8",
+  "similarity": 0.8548,
+  "pointer_like_suppressed": 8,
+  "constant_changes": [],
+  "floppy_only": [
+   "046B pop bp"
+  ],
+  "cd_only": [
+   "044A leave "
+  ]
+ },
+ {
+  "state": 640,
+  "part": 64,
+  "overlay": 83,
+  "floppy": "047B",
+  "cd": "67:045A",
+  "similarity": 0.9333,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "04C1 mov ax, 0x140",
+   "04C4 mul word ptr es:[di]",
+   "0503 mov ax, 0x140",
+   "0506 mul word ptr es:[di]",
+   "052B pop bp"
+  ],
+  "cd_only": [
+   "04A0 imul ax, word ptr es:[di], 0x140",
+   "04E1 imul ax, word ptr es:[di], 0x140",
+   "0508 leave "
+  ]
+ },
+ {
+  "state": 650,
+  "part": 65,
+  "overlay": 81,
+  "floppy": "0197",
+  "cd": "65:018F",
+  "similarity": 0.9851,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0270 pop bp"
+  ],
+  "cd_only": [
+   "0268 leave "
+  ]
+ },
+ {
+  "state": 650,
+  "part": 65,
+  "overlay": 81,
+  "floppy": "0431",
+  "cd": "65:0410",
+  "similarity": 0.9708,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0528 mov dx, 0xa",
+   "052B mul dx",
+   "0533 pop bp"
+  ],
+  "cd_only": [
+   "0507 imul ax, ax, 0xa",
+   "0510 leave "
+  ]
+ },
+ {
+  "state": 650,
+  "part": 65,
+  "overlay": 81,
+  "floppy": "05B8",
+  "cd": "65:058C",
+  "similarity": 0.8553,
+  "pointer_like_suppressed": 10,
+  "constant_changes": [],
+  "floppy_only": [
+   "066C pop bp"
+  ],
+  "cd_only": [
+   "0640 leave "
+  ]
+ },
+ {
+  "state": 650,
+  "part": 65,
+  "overlay": 81,
+  "floppy": "067C",
+  "cd": "65:0650",
+  "similarity": 0.9333,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "06C2 mov ax, 0x140",
+   "06C5 mul word ptr es:[di]",
+   "06EA pop bp"
+  ],
+  "cd_only": [
+   "0696 imul ax, word ptr es:[di], 0x140",
+   "06BD leave "
+  ]
+ },
+ {
+  "state": 660,
+  "part": 66,
+  "overlay": 79,
+  "floppy": "0161",
+  "cd": "63:0146",
+  "similarity": 0.9091,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "01AB mov dx, 0x14",
+   "01AE mul dx",
+   "01B0 mov di, ax",
+   "01BC mov dx, 0x14",
+   "01BF mul dx",
+   "01C1 mov di, ax",
+   "01E7 mov ax, 0xa",
+   "01EA push ax",
+   "0206 mov ax, 0xd9",
+   "0209 push ax",
+   "020A mov ax, 0x34",
+   "020D push ax",
+   "020E push cs",
+   "020F call 0",
+   "0212 mov ax, 3",
+   "0215 push ax",
+   "0365 mov al, 1",
+   "0367 push ax",
+   "0368 mov al, 0xb7",
+   "036A push ax",
+   "0370 mov al, 0xc0",
+   "0372 push ax",
+   "0373 mov al, 0xcf",
+   "0375 push ax",
+   "03A6 mov sp, bp",
+   "03A8 pop bp"
+  ],
+  "cd_only": [
+   "0190 imul di, ax, 0x14",
+   "019D imul di, ax, 0x14",
+   "01C4 push 0xa",
+   "01E1 push 0xd9",
+   "01E4 push 0x34",
+   "01E6 lcall 0, 0xffff",
+   "01EB push 3",
+   "033C push 1",
+   "033E push -0x49",
+   "0345 push -0x40",
+   "0347 push -0x31",
+   "0379 leave "
+  ]
+ },
+ {
+  "state": 660,
+  "part": 66,
+  "overlay": 79,
+  "floppy": "06F5",
+  "cd": "63:0665",
+  "similarity": 0.8556,
+  "pointer_like_suppressed": 12,
+  "constant_changes": [],
+  "floppy_only": [
+   "07CB pop bp"
+  ],
+  "cd_only": [
+   "073B leave "
+  ]
+ },
+ {
+  "state": 660,
+  "part": 66,
+  "overlay": 79,
+  "floppy": "07F8",
+  "cd": "63:0767",
+  "similarity": 0.9333,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "083E mov ax, 0x140",
+   "0841 mul word ptr es:[di]",
+   "0866 pop bp"
+  ],
+  "cd_only": [
+   "07AD imul ax, word ptr es:[di], 0x140",
+   "07D4 leave "
+  ]
+ },
+ {
+  "state": 670,
+  "part": 67,
+  "overlay": 78,
+  "floppy": "0150",
+  "cd": "62:0137",
+  "similarity": 0.9223,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "019A mov dx, 0x14",
+   "019D mul dx",
+   "019F mov di, ax",
+   "01AB mov dx, 0x14",
+   "01AE mul dx",
+   "01B0 mov di, ax",
+   "01D6 mov ax, 0xa",
+   "01D9 push ax",
+   "01F5 push cs",
+   "01F6 call 0",
+   "01F9 mov ax, 3",
+   "01FC push ax",
+   "034C mov al, 1",
+   "034E push ax",
+   "034F mov al, 0xb7",
+   "0351 push ax",
+   "0357 mov al, 0xc0",
+   "0359 push ax",
+   "035A mov al, 0xcf",
+   "035C push ax",
+   "038D mov sp, bp",
+   "038F pop bp"
+  ],
+  "cd_only": [
+   "0181 imul di, ax, 0x14",
+   "018E imul di, ax, 0x14",
+   "01B5 push 0xa",
+   "01D2 lcall 0, 0xffff",
+   "01D7 push 3",
+   "0328 push 1",
+   "032A push -0x49",
+   "0331 push -0x40",
+   "0333 push -0x31",
+   "0365 leave "
+  ]
+ },
+ {
+  "state": 670,
+  "part": 67,
+  "overlay": 78,
+  "floppy": "0679",
+  "cd": "62:05D2",
+  "similarity": 0.8548,
+  "pointer_like_suppressed": 8,
+  "constant_changes": [],
+  "floppy_only": [
+   "070B pop bp"
+  ],
+  "cd_only": [
+   "0664 leave "
+  ]
+ },
+ {
+  "state": 670,
+  "part": 67,
+  "overlay": 78,
+  "floppy": "071B",
+  "cd": "62:0674",
+  "similarity": 0.9333,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0761 mov ax, 0x140",
+   "0764 mul word ptr es:[di]",
+   "07A3 mov ax, 0x140",
+   "07A6 mul word ptr es:[di]",
+   "07CB pop bp"
+  ],
+  "cd_only": [
+   "06BA imul ax, word ptr es:[di], 0x140",
+   "06FB imul ax, word ptr es:[di], 0x140",
+   "0722 leave "
+  ]
+ },
+ {
+  "state": 680,
+  "part": 68,
+  "overlay": 69,
+  "floppy": "0C8E",
+  "cd": "56:0D88",
+  "similarity": 0.875,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0CA3 pop bp"
+  ],
+  "cd_only": [
+   "0D9D leave "
+  ]
+ },
+ {
+  "state": 680,
+  "part": 68,
+  "overlay": 69,
+  "floppy": "0CA5",
+  "cd": "56:0D9F",
+  "similarity": 0.875,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0CBA pop bp"
+  ],
+  "cd_only": [
+   "0DB4 leave "
+  ]
+ },
+ {
+  "state": 680,
+  "part": 68,
+  "overlay": 69,
+  "floppy": "0CF8",
+  "cd": "56:0DFC",
+  "similarity": 0.8559,
+  "pointer_like_suppressed": 16,
+  "constant_changes": [],
+  "floppy_only": [
+   "0E12 pop bp"
+  ],
+  "cd_only": [
+   "0F16 leave "
+  ]
+ },
+ {
+  "state": 680,
+  "part": 68,
+  "overlay": 69,
+  "floppy": "0FC7",
+  "cd": "56:109F",
+  "similarity": 0.9231,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0FF0 mov ax, 0x140",
+   "0FF3 mul word ptr es:[di]",
+   "1022 pop bp"
+  ],
+  "cd_only": [
+   "10C8 imul ax, word ptr es:[di], 0x140",
+   "10F9 leave "
+  ]
+ },
+ {
+  "state": 690,
+  "part": 69,
+  "overlay": 62,
+  "floppy": "0000",
+  "cd": "51:0002",
+  "similarity": 0.9353,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0075 mov ax, 0xa000",
+   "0078 push ax",
+   "00BA mov ax, 0xa000",
+   "00BD push ax",
+   "00C3 mov sp, bp",
+   "00C5 pop bp"
+  ],
+  "cd_only": [
+   "0077 push word ptr [0x176e]",
+   "00BC push word ptr [0x176e]",
+   "00C5 leave "
+  ]
+ },
+ {
+  "state": 690,
+  "part": 69,
+  "overlay": 62,
+  "floppy": "00C9",
+  "cd": "51:00C9",
+  "similarity": 0.9153,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "010F mov ax, 0xa000",
+   "0112 push ax",
+   "0118 pop bp"
+  ],
+  "cd_only": [
+   "010F push word ptr [0x176e]",
+   "0118 leave "
+  ]
+ },
+ {
+  "state": 690,
+  "part": 69,
+  "overlay": 62,
+  "floppy": "011C",
+  "cd": "51:011C",
+  "similarity": 0.9153,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0162 mov ax, 0xa000",
+   "0165 push ax",
+   "016B pop bp"
+  ],
+  "cd_only": [
+   "0162 push word ptr [0x176e]",
+   "016B leave "
+  ]
+ },
+ {
+  "state": 690,
+  "part": 69,
+  "overlay": 62,
+  "floppy": "016F",
+  "cd": "51:016F",
+  "similarity": 0.972,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "01C4 push cs",
+   "01C5 call 0x11c",
+   "01ED push cs",
+   "01EE call 0xc9",
+   "0312 pop bp"
+  ],
+  "cd_only": [
+   "01C4 lcall 0, 0xffff",
+   "01EE lcall 0, 0xffff",
+   "0314 leave "
+  ]
+ },
+ {
+  "state": 690,
+  "part": 69,
+  "overlay": 62,
+  "floppy": "0314",
+  "cd": "51:0316",
+  "similarity": 0.8519,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "035A mov dx, 0x14",
+   "035D mul dx",
+   "035F mov di, ax",
+   "036B mov dx, 0x14",
+   "036E mul dx",
+   "0370 mov di, ax",
+   "0380 push cs",
+   "0381 call 0x16f",
+   "03AA je 0x3af",
+   "03AC jmp 0x329",
+   "03AF pop bp"
+  ],
+  "cd_only": [
+   "035C imul di, ax, 0x14",
+   "0369 imul di, ax, 0x14",
+   "037A lcall 0, 0xffff",
+   "03A5 jne 0x32b",
+   "03A7 leave "
+  ]
+ },
+ {
+  "state": 690,
+  "part": 69,
+  "overlay": 62,
+  "floppy": "049E",
+  "cd": "51:04CE",
+  "similarity": 0.8664,
+  "pointer_like_suppressed": 1,
+  "constant_changes": [
+   [
+    "0744 mov byte ptr [0x6663], 2",
+    "079E mov word ptr [0x31b8], 2"
+   ]
+  ],
+  "floppy_only": [
+   "04BC mov ax, 0x1b",
+   "04BF mul word ptr [0xa83c]",
+   "04D3 mov ax, 0x140",
+   "04D6 mul word ptr [0xa83c]",
+   "04E2 mov ax, 0x1b",
+   "04E5 push ax",
+   "04FE push cs",
+   "04FF call 0x16f",
+   "052F mov byte ptr [0x6662], 0x6f",
+   "0537 push cs",
+   "0538 call 0x16f",
+   "0586 push cs",
+   "0587 call 0xc9",
+   "05D8 mov ax, 0xa000",
+   "05DB push ax",
+   "0675 mov ax, 0xa000",
+   "0678 push ax",
+   "06C3 mov al, 7",
+   "06C5 push ax",
+   "06D4 push cs",
+   "06D5 call 0x7f2",
+   "06D8 mov al, 0xff",
+   "06DA push ax",
+   "06DB push cs",
+   "06DC call 0x90e",
+   "06DF mov byte ptr [0x6662], 0x71",
+   "0728 mov ax, 0xa000",
+   "072B push ax",
+   "0758 mov sp, bp",
+   "075A pop bp"
+  ],
+  "cd_only": [
+   "04EC imul ax, word ptr [0xeb20], 0x1b",
+   "0501 imul ax, word ptr [0xeb20], 0x140",
+   "050F push 0x1b",
+   "0529 lcall 0, 0xffff",
+   "055B mov word ptr [0x31b6], 0xd3",
+   "0561 mov word ptr [0x31ba], 0x442",
+   "056A lcall 0, 0xffff",
+   "05BA lcall 0, 0xffff",
+   "060D push word ptr [0x176e]",
+   "06AA push word ptr [0x176e]",
+   "06F8 push 7",
+   "0703 push 0",
+   "070A push 0x3f",
+   "070C push 1",
+   "070E lcall 0, 0xffff",
+   "0713 les di, ptr [0x5e90]",
+   "0717 cmp word ptr es:[di], 0",
+   "071B jne 0x713",
+   "071D push 0x33",
+   "071F push 1",
+   "0721 lcall 0, 0xffff",
+   "0726 lcall 0, 0xffff",
+   "072B push -1",
+   "072D lcall 0, 0xffff",
+   "0732 mov word ptr [0x31b6], 0xd5",
+   "0738 mov word ptr [0x31ba], 0x443",
+   "0782 push word ptr [0x176e]",
+   "07B3 leave "
+  ]
+ },
+ {
+  "state": 690,
+  "part": 69,
+  "overlay": 62,
+  "floppy": "07E0",
+  "cd": "51:0833",
+  "similarity": 0.8571,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "07F0 pop bp"
+  ],
+  "cd_only": [
+   "0843 leave "
+  ]
+ },
+ {
+  "state": 690,
+  "part": 69,
+  "overlay": 62,
+  "floppy": "07F2",
+  "cd": "51:0845",
+  "similarity": 0.8559,
+  "pointer_like_suppressed": 16,
+  "constant_changes": [],
+  "floppy_only": [
+   "090C pop bp"
+  ],
+  "cd_only": [
+   "095F leave "
+  ]
+ },
+ {
+  "state": 690,
+  "part": 69,
+  "overlay": 62,
+  "floppy": "0941",
+  "cd": "51:09D4",
+  "similarity": 0.9315,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0979 mov ax, 0x140",
+   "097C mul word ptr es:[di]",
+   "09AB pop bp"
+  ],
+  "cd_only": [
+   "0A0C imul ax, word ptr es:[di], 0x140",
+   "0A3D leave "
+  ]
+ },
+ {
+  "state": 700,
+  "part": 70,
+  "overlay": 55,
+  "floppy": "0000",
+  "cd": "46:0002",
+  "similarity": 0.8571,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0010 pop bp"
+  ],
+  "cd_only": [
+   "0012 leave "
+  ]
+ },
+ {
+  "state": 700,
+  "part": 70,
+  "overlay": 55,
+  "floppy": "0012",
+  "cd": "46:0014",
+  "similarity": 0.8571,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0022 pop bp"
+  ],
+  "cd_only": [
+   "0024 leave "
+  ]
+ },
+ {
+  "state": 700,
+  "part": 70,
+  "overlay": 55,
+  "floppy": "0024",
+  "cd": "46:0026",
+  "similarity": 0.8571,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0034 pop bp"
+  ],
+  "cd_only": [
+   "0036 leave "
+  ]
+ },
+ {
+  "state": 700,
+  "part": 70,
+  "overlay": 55,
+  "floppy": "0036",
+  "cd": "46:0038",
+  "similarity": 0.8571,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0046 pop bp"
+  ],
+  "cd_only": [
+   "0048 leave "
+  ]
+ },
+ {
+  "state": 700,
+  "part": 70,
+  "overlay": 55,
+  "floppy": "00F2",
+  "cd": "46:00E6",
+  "similarity": 0.8548,
+  "pointer_like_suppressed": 8,
+  "constant_changes": [],
+  "floppy_only": [
+   "0184 pop bp"
+  ],
+  "cd_only": [
+   "0178 leave "
+  ]
+ },
+ {
+  "state": 700,
+  "part": 70,
+  "overlay": 55,
+  "floppy": "01B1",
+  "cd": "46:01A7",
+  "similarity": 0.9153,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "01DA mov ax, 0x140",
+   "01DD mul word ptr es:[di]",
+   "0202 pop bp"
+  ],
+  "cd_only": [
+   "01D0 imul ax, word ptr es:[di], 0x140",
+   "01F7 leave "
+  ]
+ },
+ {
+  "state": 710,
+  "part": 71,
+  "overlay": 74,
+  "floppy": "012D",
+  "cd": "60:0197",
+  "similarity": 0.8657,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0162 mov ax, 0x140",
+   "0165 mul word ptr [0xa83c]",
+   "0174 mov ax, 5",
+   "0177 push ax",
+   "0184 mov sp, bp",
+   "0186 pop bp"
+  ],
+  "cd_only": [
+   "01CC imul ax, word ptr [0xeb20], 0x140",
+   "01DD push 5",
+   "01EB leave "
+  ]
+ },
+ {
+  "state": 710,
+  "part": 71,
+  "overlay": 74,
+  "floppy": "0188",
+  "cd": "60:01ED",
+  "similarity": 0.8657,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "01BD mov ax, 0x140",
+   "01C0 mul word ptr [0xa83c]",
+   "01CF mov ax, 5",
+   "01D2 push ax",
+   "01DF mov sp, bp",
+   "01E1 pop bp"
+  ],
+  "cd_only": [
+   "0222 imul ax, word ptr [0xeb20], 0x140",
+   "0233 push 5",
+   "0241 leave "
+  ]
+ },
+ {
+  "state": 710,
+  "part": 71,
+  "overlay": 74,
+  "floppy": "0446",
+  "cd": "60:04A1",
+  "similarity": 0.8571,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0456 pop bp"
+  ],
+  "cd_only": [
+   "04B1 leave "
+  ]
+ },
+ {
+  "state": 710,
+  "part": 71,
+  "overlay": 74,
+  "floppy": "0458",
+  "cd": "60:04B3",
+  "similarity": 0.8558,
+  "pointer_like_suppressed": 14,
+  "constant_changes": [],
+  "floppy_only": [
+   "0550 pop bp"
+  ],
+  "cd_only": [
+   "05AB leave "
+  ]
+ },
+ {
+  "state": 710,
+  "part": 71,
+  "overlay": 74,
+  "floppy": "05D8",
+  "cd": "60:0633",
+  "similarity": 0.922,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "060F mov ax, 0x140",
+   "0612 mul word ptr es:[di]",
+   "064B mov ax, 0x140",
+   "064E mul word ptr es:[di]",
+   "0679 mov ax, 0x140",
+   "067C mul word ptr es:[di]",
+   "06A1 pop bp"
+  ],
+  "cd_only": [
+   "066A imul ax, word ptr es:[di], 0x140",
+   "06A5 imul ax, word ptr es:[di], 0x140",
+   "06D2 imul ax, word ptr es:[di], 0x140",
+   "06F9 leave "
+  ]
+ },
+ {
+  "state": 720,
+  "part": 72,
+  "overlay": 58,
+  "floppy": "01F5",
+  "cd": "48:0210",
+  "similarity": 0.8571,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0205 pop bp"
+  ],
+  "cd_only": [
+   "0220 leave "
+  ]
+ },
+ {
+  "state": 720,
+  "part": 72,
+  "overlay": 58,
+  "floppy": "0207",
+  "cd": "48:0222",
+  "similarity": 0.875,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "021C pop bp"
+  ],
+  "cd_only": [
+   "0237 leave "
+  ]
+ },
+ {
+  "state": 720,
+  "part": 72,
+  "overlay": 58,
+  "floppy": "0326",
+  "cd": "48:032E",
+  "similarity": 0.8936,
+  "pointer_like_suppressed": 8,
+  "constant_changes": [],
+  "floppy_only": [
+   "0396 mov ax, 5",
+   "0399 push ax",
+   "03A6 mov ax, 5",
+   "03A9 push ax",
+   "042D mov sp, bp",
+   "042F pop bp"
+  ],
+  "cd_only": [
+   "039E push 5",
+   "03AC push 5",
+   "0431 leave "
+  ]
+ },
+ {
+  "state": 720,
+  "part": 72,
+  "overlay": 58,
+  "floppy": "0431",
+  "cd": "48:0433",
+  "similarity": 0.8667,
+  "pointer_like_suppressed": 11,
+  "constant_changes": [],
+  "floppy_only": [
+   "0507 pop bp"
+  ],
+  "cd_only": [
+   "0509 leave "
+  ]
+ },
+ {
+  "state": 720,
+  "part": 72,
+  "overlay": 58,
+  "floppy": "054D",
+  "cd": "48:0551",
+  "similarity": 0.9185,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0576 mov ax, 0x140",
+   "0579 mul word ptr es:[di]",
+   "05AB mov ax, 0x140",
+   "05AE mul word ptr es:[di]",
+   "05E2 mov ax, 0x140",
+   "05E5 mul word ptr es:[di]",
+   "060A pop bp"
+  ],
+  "cd_only": [
+   "057A imul ax, word ptr es:[di], 0x140",
+   "05AE imul ax, word ptr es:[di], 0x140",
+   "05E4 imul ax, word ptr es:[di], 0x140",
+   "060B leave "
+  ]
+ },
+ {
+  "state": 740,
+  "part": 74,
+  "overlay": 46,
+  "floppy": "0000",
+  "cd": "1:2B3C",
+  "similarity": 0.9153,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0046 mov ax, 0xa000",
+   "0049 push ax",
+   "004F pop bp"
+  ],
+  "cd_only": [
+   "2B82 push word ptr [0x176e]",
+   "2B8B leave "
+  ]
+ },
+ {
+  "state": 740,
+  "part": 74,
+  "overlay": 46,
+  "floppy": "0226",
+  "cd": "1:2B3C",
+  "similarity": 0.9153,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "026C mov ax, 0xa000",
+   "026F push ax",
+   "0275 pop bp"
+  ],
+  "cd_only": [
+   "2B82 push word ptr [0x176e]",
+   "2B8B leave "
+  ]
+ },
+ {
+  "state": 750,
+  "part": 75,
+  "overlay": 43,
+  "floppy": "0000",
+  "cd": "37:05BE",
+  "similarity": 0.9153,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0046 mov ax, 0xa000",
+   "0049 push ax",
+   "004F pop bp"
+  ],
+  "cd_only": [
+   "0604 push word ptr [0x176e]",
+   "060D leave "
+  ]
+ },
+ {
+  "state": 760,
+  "part": 76,
+  "overlay": 39,
+  "floppy": "0211",
+  "cd": "33:04C9",
+  "similarity": 0.875,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0271 mov ax, 0xa000",
+   "0274 push ax",
+   "02D1 mov ax, 0xa000",
+   "02D4 push ax",
+   "02ED mov byte ptr [0x6662], 0x6a",
+   "02F2 mov byte ptr [0x6663], 1",
+   "030B mov al, 0xff",
+   "030D push ax",
+   "030E push cs",
+   "030F call 0xa68",
+   "0312 mov sp, bp",
+   "0314 pop bp"
+  ],
+  "cd_only": [
+   "0529 push word ptr [0x176e]",
+   "0589 push word ptr [0x176e]",
+   "05A5 mov word ptr [0x31b6], 0xce",
+   "05AB mov word ptr [0x31b8], 1",
+   "05B1 mov word ptr [0x31ba], 0x2c0",
+   "05CB push -1",
+   "05CD lcall 0, 0xffff",
+   "05D2 leave "
+  ]
+ },
+ {
+  "state": 760,
+  "part": 76,
+  "overlay": 39,
+  "floppy": "03FC",
+  "cd": "33:06FD",
+  "similarity": 0.9153,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0442 mov ax, 0xa000",
+   "0445 push ax",
+   "044B pop bp"
+  ],
+  "cd_only": [
+   "0743 push word ptr [0x176e]",
+   "074C leave "
+  ]
+ },
+ {
+  "state": 760,
+  "part": 76,
+  "overlay": 39,
+  "floppy": "094C",
+  "cd": "33:0CFE",
+  "similarity": 0.8559,
+  "pointer_like_suppressed": 16,
+  "constant_changes": [],
+  "floppy_only": [
+   "0A66 pop bp"
+  ],
+  "cd_only": [
+   "0E18 leave "
+  ]
+ },
+ {
+  "state": 760,
+  "part": 76,
+  "overlay": 39,
+  "floppy": "0B52",
+  "cd": "33:0EB5",
+  "similarity": 0.9272,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0B97 mov ax, 0x140",
+   "0B9A mul word ptr es:[di]",
+   "0BCB mov ax, 0x140",
+   "0BCE mul word ptr es:[di]",
+   "0C02 mov ax, 0x140",
+   "0C05 mul word ptr es:[di]",
+   "0C2A pop bp"
+  ],
+  "cd_only": [
+   "0EFA imul ax, word ptr es:[di], 0x140",
+   "0F2D imul ax, word ptr es:[di], 0x140",
+   "0F63 imul ax, word ptr es:[di], 0x140",
+   "0F8A leave "
+  ]
+ },
+ {
+  "state": 770,
+  "part": 77,
+  "overlay": 36,
+  "floppy": "006F",
+  "cd": "30:0089",
+  "similarity": 0.9153,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "00B5 mov ax, 0xa000",
+   "00B8 push ax",
+   "00BE pop bp"
+  ],
+  "cd_only": [
+   "00CF push word ptr [0x176e]",
+   "00D8 leave "
+  ]
+ },
+ {
+  "state": 770,
+  "part": 77,
+  "overlay": 36,
+  "floppy": "0514",
+  "cd": "30:05E9",
+  "similarity": 0.9286,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0536 pop bp"
+  ],
+  "cd_only": [
+   "060B leave "
+  ]
+ },
+ {
+  "state": 770,
+  "part": 77,
+  "overlay": 36,
+  "floppy": "0696",
+  "cd": "30:06E7",
+  "similarity": 0.8568,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "06BA shr ax, 1",
+   "06BC shr ax, 1",
+   "074C mov ax, 0x15",
+   "074F push ax",
+   "0750 mov ax, 0x11",
+   "0753 push ax",
+   "0754 mov ax, 0x41",
+   "0757 push ax",
+   "0758 mov ax, 0x73",
+   "075B push ax",
+   "075C push cs",
+   "075D call 0x2165",
+   "07C0 mov dx, 0x14",
+   "07C3 mul dx",
+   "07C5 mov di, ax",
+   "07D1 mov dx, 0x14",
+   "07D4 mul dx",
+   "07D6 mov di, ax",
+   "0814 mov dx, 0x14",
+   "0817 mul dx",
+   "0819 mov di, ax",
+   "0825 mov dx, 0x14",
+   "0828 mul dx",
+   "082A mov di, ax",
+   "08F3 mov ax, 0x24",
+   "08F6 push ax",
+   "08F7 mov ax, 0x8f",
+   "08FA push ax",
+   "08FB mov ax, 0x29",
+   "08FE push ax",
+   "08FF mov ax, 0x56",
+   "0902 push ax",
+   "0903 push cs",
+   "0904 call 0x2165",
+   "0962 mov al, 3",
+   "0964 push ax",
+   "096A mov dx, 0x14",
+   "096D mul dx",
+   "096F mov di, ax",
+   "09AE mov al, 3",
+   "09B0 push ax",
+   "09B6 mov dx, 0x14",
+   "09B9 mul dx",
+   "09BB mov di, ax",
+   "0A08 mov al, 0",
+   "0A0A push ax",
+   "0A0B push cs",
+   "0A0C call 0x514",
+   "0A13 mov ax, 0x29",
+   "0A16 push ax",
+   "0A17 mov ax, 0x56",
+   "0A1A push ax",
+   "0A1B mov ax, 0x2d",
+   "0A1E push ax",
+   "0A1F mov ax, 0x5f",
+   "0A22 push ax",
+   "0A23 push cs",
+   "0A24 call 0x2165",
+   "0A31 mov dx, 0x14",
+   "0A34 mul dx",
+   "0A36 mov di, ax",
+   "0A7E mov dx, 0x14",
+   "0A81 mul dx",
+   "0A83 mov di, ax",
+   "0A8F mov dx, 0x14",
+   "0A92 mul dx",
+   "0A94 mov di, ax",
+   "0AD8 mov dx, 0x14",
+   "0ADB mul dx",
+   "0ADD mov di, ax",
+   "0AE9 mov dx, 0x14",
+   "0AEC mul dx",
+   "0AEE mov di, ax",
+   "0B5F mov sp, bp",
+   "0B61 pop bp"
+  ],
+  "cd_only": [
+   "070B shr ax, 2",
+   "079C push 0x15",
+   "079E push 0x11",
+   "07A0 push 0x41",
+   "07A2 push 0x73",
+   "07A4 lcall 0, 0xffff",
+   "0809 imul di, ax, 0x14",
+   "0816 imul di, ax, 0x14",
+   "0855 imul di, ax, 0x14",
+   "0862 imul di, ax, 0x14",
+   "092C push 0x24",
+   "092E push 0x8f",
+   "0931 push 0x29",
+   "0933 push 0x56",
+   "0935 lcall 0, 0xffff",
+   "0995 push 3",
+   "099C imul di, ax, 0x14",
+   "09DC push 3",
+   "09E3 imul di, ax, 0x14",
+   "0A31 push 0",
+   "0A33 lcall 0, 0xffff",
+   "0A3C push 0x29",
+   "0A3E push 0x56",
+   "0A40 push 0x2d",
+   "0A42 push 0x5f",
+   "0A44 lcall 0, 0xffff",
+   "0A53 imul di, ax, 0x14",
+   "0A9C imul di, ax, 0x14",
+   "0AA9 imul di, ax, 0x14",
+   "0AEE imul di, ax, 0x14",
+   "0AFB imul di, ax, 0x14",
+   "0B6D leave "
+  ]
+ },
+ {
+  "state": 770,
+  "part": 77,
+  "overlay": 36,
+  "floppy": "106C",
+  "cd": "30:1029",
+  "similarity": 0.9167,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "1088 pop bp"
+  ],
+  "cd_only": [
+   "1045 leave "
+  ]
+ },
+ {
+  "state": 770,
+  "part": 77,
+  "overlay": 36,
+  "floppy": "108C",
+  "cd": "30:1049",
+  "similarity": 0.8667,
+  "pointer_like_suppressed": 11,
+  "constant_changes": [],
+  "floppy_only": [
+   "1162 pop bp"
+  ],
+  "cd_only": [
+   "111F leave "
+  ]
+ },
+ {
+  "state": 770,
+  "part": 77,
+  "overlay": 36,
+  "floppy": "1164",
+  "cd": "30:1121",
+  "similarity": 0.8571,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "1173 pop bp"
+  ],
+  "cd_only": [
+   "1130 leave "
+  ]
+ },
+ {
+  "state": 770,
+  "part": 77,
+  "overlay": 36,
+  "floppy": "1177",
+  "cd": "30:1134",
+  "similarity": 0.9444,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "11AF mov ax, 0x140",
+   "11B2 mul word ptr es:[di]",
+   "121A mov ax, 0x140",
+   "121D mul word ptr es:[di]",
+   "1242 pop bp"
+  ],
+  "cd_only": [
+   "116C imul ax, word ptr es:[di], 0x140",
+   "11D6 imul ax, word ptr es:[di], 0x140",
+   "11FD leave "
+  ]
+ },
+ {
+  "state": 780,
+  "part": 78,
+  "overlay": 31,
+  "floppy": "0000",
+  "cd": "24:05D3",
+  "similarity": 0.9153,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0046 mov ax, 0xa000",
+   "0049 push ax",
+   "004F pop bp"
+  ],
+  "cd_only": [
+   "0619 push word ptr [0x176e]",
+   "0622 leave "
+  ]
+ },
+ {
+  "state": 780,
+  "part": 78,
+  "overlay": 31,
+  "floppy": "0053",
+  "cd": "24:0626",
+  "similarity": 0.9123,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0095 mov ax, 0xa000",
+   "0098 push ax",
+   "009E pop bp"
+  ],
+  "cd_only": [
+   "0668 push word ptr [0x176e]",
+   "0671 leave "
+  ]
+ },
+ {
+  "state": 780,
+  "part": 78,
+  "overlay": 31,
+  "floppy": "00A2",
+  "cd": "24:0675",
+  "similarity": 0.866,
+  "pointer_like_suppressed": 4,
+  "constant_changes": [],
+  "floppy_only": [
+   "0105 mov ax, 0xa000",
+   "0108 push ax",
+   "010E pop bp"
+  ],
+  "cd_only": [
+   "06D8 push word ptr [0x176e]",
+   "06E1 leave "
+  ]
+ },
+ {
+  "state": 810,
+  "part": 81,
+  "overlay": 25,
+  "floppy": "0A8A",
+  "cd": "18:0B38",
+  "similarity": 0.8619,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "0A94 push cs",
+   "0A95 call 0x4df",
+   "0AEA mov ax, 0xa000",
+   "0AED push ax",
+   "0B61 mov ax, 0xa000",
+   "0B64 push ax",
+   "0B96 push cs",
+   "0B97 call 0x7e7",
+   "0B9A pop bp"
+  ],
+  "cd_only": [
+   "0B42 lcall 0, 0xffff",
+   "0B47 mov word ptr [0xeb1e], 1",
+   "0B4D jmp 0xb53",
+   "0B4F inc word ptr [0xeb1e]",
+   "0B53 mov byte ptr [0xeac8], 0",
+   "0B58 cmp byte ptr [0xeac8], 0xfa",
+   "0B5D jbe 0xb58",
+   "0B5F cmp word ptr [0xeb1e], 3",
+   "0B64 jne 0xb4f",
+   "0BB8 push word ptr [0x176e]",
+   "0BDA mov byte ptr [0xeac8], 0",
+   "0BDF cmp byte ptr [0xeac8], 0xfa",
+   "0BE4 jbe 0xbdf",
+   "0C3B push word ptr [0x176e]",
+   "0C70 lcall 0, 0xffff",
+   "0C75 leave "
+  ]
+ },
+ {
+  "state": 810,
+  "part": 81,
+  "overlay": 25,
+  "floppy": "1059",
+  "cd": "18:1226",
+  "similarity": 0.875,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "106E pop bp"
+  ],
+  "cd_only": [
+   "123B leave "
+  ]
+ },
+ {
+  "state": 810,
+  "part": 81,
+  "overlay": 25,
+  "floppy": "121C",
+  "cd": "18:13DD",
+  "similarity": 0.8561,
+  "pointer_like_suppressed": 18,
+  "constant_changes": [],
+  "floppy_only": [
+   "1358 pop bp"
+  ],
+  "cd_only": [
+   "1519 leave "
+  ]
+ },
+ {
+  "state": 810,
+  "part": 81,
+  "overlay": 25,
+  "floppy": "15CE",
+  "cd": "18:1684",
+  "similarity": 0.93,
+  "pointer_like_suppressed": 0,
+  "constant_changes": [],
+  "floppy_only": [
+   "1604 mov ax, 0x140",
+   "1607 mul word ptr es:[di]",
+   "1639 mov ax, 0x140",
+   "163C mul word ptr es:[di]",
+   "1670 mov ax, 0x140",
+   "1673 mul word ptr es:[di]",
+   "16C4 mov ax, 0x140",
+   "16C7 mul word ptr es:[di]",
+   "16EC pop bp"
+  ],
+  "cd_only": [
+   "16BA imul ax, word ptr es:[di], 0x140",
+   "16EE imul ax, word ptr es:[di], 0x140",
+   "1724 imul ax, word ptr es:[di], 0x140",
+   "1777 imul ax, word ptr es:[di], 0x140",
+   "179E leave "
+  ]
+ }
+]
