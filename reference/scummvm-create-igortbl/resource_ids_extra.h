@@ -414,3 +414,9 @@
 #define FRM_CollegeStairsSecondFloorFloppy1 1273
 #define FRM_CollegeStairsSecondFloorFloppy2 1274
 #define CMF_1 1275
+#define DAT_CollegeCorridorMathClass 1276
+#define TXT_CollegeCorridorMathClass 1277
+#define IMG_CollegeCorridorMathClass 1278
+#define PAL_CollegeCorridorMathClass 1279
+#define MSK_CollegeCorridorMathClass 1280
+#define BOX_CollegeCorridorMathClass 1281
