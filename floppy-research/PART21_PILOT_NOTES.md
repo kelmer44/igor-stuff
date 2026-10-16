@@ -75,13 +75,51 @@ Port when done (not applied yet): the three entries with the floppy values
 above, `buildWalkPath` instead of `buildWalkPathSimple`, and the area marking
 value 2 at the layer index of (181, 114) for 212.
 
+## Background update (Margaret animation)
+
+The floppy routine `056A` is the same state machine as the CD's (`017D`),
+constant for constant: it runs only when the tick byte equals 61 and the
+Margaret state is at most 1; with the frame counter above 2 it draws the frame,
+advances it, and at 6 bumps a loop counter, going back to frame 4 once and then
+resetting the counter and the frame to 1; at or below 2 it draws, advances, and
+at 3 asks the random helper (argument 6) and returns to frame 1 when that is
+non-zero. So the engine's state handling in `part21UpdateBackground` for
+Margaret needs no change for the floppy.
+
+What differs is the draw helper it calls (`03D2`, against the CD's `0002`):
+
+- frames are 0x4DF (1,247) bytes apart, not 2,107, and rows are 0x1D (29) bytes
+  wide in the frame buffer, not 49;
+- the destination on screen starts at row 0x4E, column 0x45 (offset 25,029,
+  i.e. (69, 78)), not offset 28,520 ((40, 89)) as in the engine;
+- before drawing it scans the destination for pixels in palette ranges
+  0xC0–0xCF and 0xF0–0xF1 and stores them in a side buffer, and first restores
+  saved pixels at 24 table positions. This is how it composites over the
+  background; the exact blending is not yet compared with `drawAnimRect`'s
+  `kBlendBehindIgorAndText` and must not be assumed equal.
+
+The door animation block (the engine's action-111 branch with offset 28,183 and
+the 0xBCA5 base) has no matching constants anywhere in this overlay. It has not
+been located yet; do not port a door animation for the floppy until it is.
+
+## Room routine layout
+
+The floppy room routine (`36E7`) runs setup, entry and the loop in one
+function, where the engine splits them into `part21()` and the shared
+`enterPartLoop`/`runPartLoop`. What is verified so far is its first steps: it
+sets a flag, clears two state bytes, calls three overlay routines (the room's
+data, animation and action loaders, by position only), then two room-local
+draw routines and the resident copy to the screen. The mapping of the three
+loaders to `loadRoomData`, `loadAnimData` and `loadActionData` and the
+resources each requests are still to be read.
+
 ## Still to verify before touching `part_21.cpp`
 
 1. The remaining entry-related code after the walk: the floppy sets a flag and
    calls one resident update routine; compare with
    `part21WaitForIgorWalkWithAnimation` (the CD loop is not byte-identical).
-2. The room loop at `36E7` onward against `part21()` and
-   `part21UpdateBackground`.
+2. The rest of `36E7` (the loop body and exit conditions) against the shared
+   part loop; the three loaders and the resources they request.
 3. `12BD`, `18D7` (area helpers, by structure the engine's
    `getClosestAreaTrianglePoint` and `getClosestAreaTrianglePoint2`) and the
    large routine at `2434` (1,853 instructions, no CD counterpart): read them.
