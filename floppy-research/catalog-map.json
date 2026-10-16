@@ -8822,6 +8822,111 @@
       "animation-loader-export",
       186,
       8680
+    ],
+    "CMF_8": [
+      10732319,
+      4926,
+      "identical",
+      292,
+      3845
+    ],
+    "CMF_9": [
+      10741736,
+      6249,
+      "identical",
+      292,
+      13262
+    ],
+    "CMF_10": [
+      10752290,
+      5982,
+      "identical",
+      292,
+      23816
+    ],
+    "CMF_11": [
+      10767785,
+      12793,
+      "identical",
+      292,
+      39311
+    ],
+    "CMF_12": [
+      10706193,
+      22275,
+      "identical",
+      291,
+      16677
+    ],
+    "CMF_2_1": [
+      10784787,
+      4111,
+      "identical",
+      293,
+      4191
+    ],
+    "CMF_2_2": [
+      10792015,
+      4303,
+      "identical",
+      293,
+      11419
+    ],
+    "CMF_2_3": [
+      10799465,
+      4343,
+      "identical",
+      293,
+      18869
+    ],
+    "CMF_3": [
+      10808119,
+      5898,
+      "identical",
+      293,
+      27523
+    ],
+    "CMF_4": [
+      10816123,
+      3133,
+      "identical",
+      293,
+      35527
+    ],
+    "CMF_7_1": [
+      10822643,
+      4671,
+      "identical",
+      293,
+      42047
+    ],
+    "CMF_7_2": [
+      10827731,
+      646,
+      "identical",
+      293,
+      47135
+    ],
+    "CMF_7_3": [
+      10829778,
+      2014,
+      "identical",
+      293,
+      49182
+    ],
+    "CMF_7_4": [
+      10832737,
+      1369,
+      "identical",
+      293,
+      52141
+    ],
+    "CMF_1": [
+      10781508,
+      306,
+      "identical",
+      293,
+      912
     ]
   },
   "missing": [
@@ -8958,7 +9063,22 @@
     "FRM_CollegeLockersFloppy2",
     "FRM_CollegeStairsSecondFloorFloppy1",
     "FRM_CollegeStairsSecondFloorFloppy2",
-    "IMG_FloppyTitleBackdrop"
+    "IMG_FloppyTitleBackdrop",
+    "CMF_8",
+    "CMF_9",
+    "CMF_10",
+    "CMF_11",
+    "CMF_12",
+    "CMF_2_1",
+    "CMF_2_2",
+    "CMF_2_3",
+    "CMF_3",
+    "CMF_4",
+    "CMF_7_1",
+    "CMF_7_2",
+    "CMF_7_3",
+    "CMF_7_4",
+    "CMF_1"
   ],
   "absent": {
     "PAL_GraphicAdventure": "its startup shows only the Pendulo logo and the title screen.",

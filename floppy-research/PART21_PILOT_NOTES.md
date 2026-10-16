@@ -113,6 +113,27 @@ draw routines and the resident copy to the screen. The mapping of the three
 loaders to `loadRoomData`, `loadAnimData` and `loadActionData` and the
 resources each requests are still to be read.
 
+## Resources the floppy room requests
+
+The room routine begins with three loader calls (overlays 184, 183 and 276).
+Their copy steps, read with `tools/decode_igor_floppy_loaders.py`, give the
+following; each row is already in the floppy catalog.
+
+| Loader overlay | What it copies | Catalog rows |
+| --- | --- | --- |
+| 184 (room data) | text 1,611 bytes; image 46,080 bytes to the layer buffer; palette 624; mask 1,962; boxes 1,280 | `TXT_`, `IMG_`, `PAL_`, `MSK_`, `BOX_CollegeCorridorMargaret` |
+| 183 (animations) | eight consecutive blocks (3,480, 6,138, 6,235, 4,320, 1,920, 7,128, 3,200 and 910 bytes) packed back to back into the animation buffer, 33,331 bytes in all | `FRM_CollegeCorridorMargaretFloppy1`–`8` (IDs 1259–1266) |
+| 276 (shared effects) | six blocks into a separate buffer; shared with other rooms, not part of this room | none for this room |
+
+Also used: the action data (`DAT_CollegeCorridorMargaret`, 6,301 bytes, stored
+inside the room's own code overlay) and the dialogue (`DLG_CollegeCorridorMargaret`,
+6,860 bytes). The CD room loads four animation blocks; the floppy loads eight,
+so `loadAnimData` for the floppy needs the eight floppy IDs in that order and
+none of the CD frame offsets (`0xCA7 + frame * 2107`, the door offsets and so
+on) can be reused: those must be re-derived from the floppy draw routines (the
+Margaret draw routine addresses its frames from the start of the animation
+buffer with a 1,247-byte stride).
+
 ## Still to verify before touching `part_21.cpp`
 
 1. The remaining entry-related code after the walk: the floppy sets a flag and

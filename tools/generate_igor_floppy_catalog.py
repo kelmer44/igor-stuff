@@ -109,6 +109,8 @@ def main():
             assert size % 3 == 0 and max(payload) <= 63, name
         elif name.startswith('IMG_'):
             assert size in (46080, 64000), name
+        elif name.startswith('CMF_'):
+            assert payload[:4] == b'CTMF' and payload.endswith(b'\xff\x2f\x00'), name
         else:
             assert name.startswith('FRM_'), name
         lines.append(f'{{ {name}, 0x{offset:x}, {size} }},')
