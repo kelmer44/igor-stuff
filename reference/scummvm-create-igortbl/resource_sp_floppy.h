@@ -80,10 +80,16 @@
 { PAL_CollegeCorridorAnnouncementBoard, 0x64ec68, 624 },
 { MSK_CollegeCorridorAnnouncementBoard, 0x64eed8, 2028 },
 { BOX_CollegeCorridorAnnouncementBoard, 0x64f6c4, 1280 },
-// TODO: Identify the floppy counterpart for FRM_CollegeCorridorSharonMichael1.
-// TODO: Identify the floppy counterpart for FRM_CollegeCorridorSharonMichael2.
-// TODO: Identify the floppy counterpart for FRM_CollegeCorridorSharonMichael3.
-// TODO: Identify the floppy counterpart for FRM_CollegeCorridorSharonMichael4.
+{ DAT_CollegeCorridorChemistryClass, 0x662f9c, 5973 },
+// TODO: Identify the floppy counterpart for FRM_CollegeCorridorChemistryClass1.
+// TODO: Identify the floppy counterpart for FRM_CollegeCorridorChemistryClass2.
+// TODO: Identify the floppy counterpart for FRM_CollegeCorridorChemistryClass3.
+// TODO: Identify the floppy counterpart for FRM_CollegeCorridorChemistryClass4.
+{ TXT_CollegeCorridorChemistryClass, 0x667b79, 1025 },
+{ IMG_CollegeCorridorChemistryClass, 0x667f7a, 46080 },
+{ PAL_CollegeCorridorChemistryClass, 0x67337a, 624 },
+{ MSK_CollegeCorridorChemistryClass, 0x6735ea, 1725 },
+{ BOX_CollegeCorridorChemistryClass, 0x673ca7, 1280 },
 { DAT_CollegeCorridorCaroline, 0x6781ff, 6301 },
 // TODO: Identify the floppy counterpart for FRM_CollegeCorridorCaroline1.
 // TODO: Identify the floppy counterpart for FRM_CollegeCorridorCaroline3.
@@ -93,10 +99,16 @@
 { PAL_CollegeCorridorCaroline, 0x68aa7a, 624 },
 { MSK_CollegeCorridorCaroline, 0x68acea, 1878 },
 { BOX_CollegeCorridorCaroline, 0x68b440, 1280 },
-// TODO: Identify the floppy counterpart for FRM_CollegeCorridorLucas1.
-// TODO: Identify the floppy counterpart for FRM_CollegeCorridorLucas2.
-// TODO: Identify the floppy counterpart for FRM_CollegeCorridorLucas3.
-// TODO: Identify the floppy counterpart for FRM_CollegeCorridorLucas4.
+{ DAT_CollegeCorridorLadiesRoom, 0x68e2ba, 5973 },
+// TODO: Identify the floppy counterpart for FRM_CollegeCorridorLadiesRoom1.
+// TODO: Identify the floppy counterpart for FRM_CollegeCorridorLadiesRoom2.
+// TODO: Identify the floppy counterpart for FRM_CollegeCorridorLadiesRoom3.
+// TODO: Identify the floppy counterpart for FRM_CollegeCorridorLadiesRoom4.
+{ TXT_CollegeCorridorLadiesRoom, 0x6927ff, 1167 },
+{ IMG_CollegeCorridorLadiesRoom, 0x692c8e, 46080 },
+{ PAL_CollegeCorridorLadiesRoom, 0x69e08e, 624 },
+{ MSK_CollegeCorridorLadiesRoom, 0x69e2fe, 2028 },
+{ BOX_CollegeCorridorLadiesRoom, 0x69eaea, 1280 },
 { FRM_SpringBridge1, 0x89b948, 24 },
 { FRM_SpringBridge2, 0x89b960, 4410 },
 { DAT_CollegeCorridorMargaret, 0x6a34c6, 6301 },
@@ -735,18 +747,6 @@
 { PAL_CollegeCorridorMathClass, 0x65f8f0, 624 },
 { MSK_CollegeCorridorMathClass, 0x65fb60, 1890 },
 { BOX_CollegeCorridorMathClass, 0x6602c2, 1280 },
-{ DAT_CollegeCorridorChemistryClass, 0x662f9c, 5973 },
-{ TXT_CollegeCorridorChemistryClass, 0x667b79, 1025 },
-{ IMG_CollegeCorridorChemistryClass, 0x667f7a, 46080 },
-{ PAL_CollegeCorridorChemistryClass, 0x67337a, 624 },
-{ MSK_CollegeCorridorChemistryClass, 0x6735ea, 1725 },
-{ BOX_CollegeCorridorChemistryClass, 0x673ca7, 1280 },
-{ DAT_CollegeCorridorLadiesRoom, 0x68e2ba, 5973 },
-{ TXT_CollegeCorridorLadiesRoom, 0x6927ff, 1167 },
-{ IMG_CollegeCorridorLadiesRoom, 0x692c8e, 46080 },
-{ PAL_CollegeCorridorLadiesRoom, 0x69e08e, 624 },
-{ MSK_CollegeCorridorLadiesRoom, 0x69e2fe, 2028 },
-{ BOX_CollegeCorridorLadiesRoom, 0x69eaea, 1280 },
 { IMG_FloppyTitleBackdrop, 0xfba2c, 64000 },
 { IMG_TitleScreen, 0xebfb8, 64000 },
 { PAL_InventoryPanel, 0xaae2ef, 96 },

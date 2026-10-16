@@ -11,14 +11,16 @@ Listing: `code-floppy/es/part_23_state_230.asm`. Same template as [part 24](PART
 The locker corridor with the ladies room door. There is no Lucas (the CD names were misleading), no
 dialogue, no per-frame background, no music call.
 
-## Resources (new catalog rows, ids 1288-1293)
+## Resources (no new catalog rows)
 
-Action data in overlay 178 at code offset 10,558: DAT 0x68E2BA (5,973). Room data (overlay 180):
-TXT 0x6927FF (1,167), IMG 0x692C8E (46,080), PAL 0x69E08E (624), MSK 0x69E2FE (2,028),
-BOX 0x69EAEA (1,280). Rows formerly named `*_CollegeCorridorLucas` are now
-`*_CollegeCorridorLadiesRoom` (ids 1288-1293; TBL regenerated and installed everywhere, unmodified
-tool verified first). Animation ids 1257/1258 renamed `FRM_CollegeCorridorLadiesRoomFloppy1/2`:
-Floppy1 (3,480) = closed and open door pictures 29x60, Floppy2 (6,048) = three 32x63 door frames.
+The rows already existed under CD ids 78-87. The name `CollegeCorridorLucas` was renamed in place
+to `CollegeCorridorLadiesRoom` in every catalog and in the engine (the ladies room door exists in
+all editions; Lucas is a non-interactive extra in the newer ones), so the floppy reuses the same
+ids; the TBL is byte-identical. Action data in overlay 178 at code offset 10,558: DAT 0x68E2BA
+(5,973). Room data (overlay 180): TXT 0x6927FF (1,167), IMG 0x692C8E (46,080), PAL 0x69E08E (624),
+MSK 0x69E2FE (2,028), BOX 0x69EAEA (1,280). Animation ids 1257/1258 are
+`FRM_CollegeCorridorLadiesRoomFloppy1/2`: Floppy1 (3,480) = closed and open door pictures 29x60,
+Floppy2 (6,048) = three 32x63 door frames.
 
 ## Room data offsets
 

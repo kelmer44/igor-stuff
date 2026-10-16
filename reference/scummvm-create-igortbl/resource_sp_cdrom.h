@@ -74,16 +74,16 @@
 { PAL_CollegeCorridorAnnouncementBoard, 0x471462, 624 },
 { MSK_CollegeCorridorAnnouncementBoard, 0x4716d2, 3117 },
 { BOX_CollegeCorridorAnnouncementBoard, 0x4722ff, 1280 },
-{ DAT_CollegeCorridorSharonMichael, 0x4752aa, 5993 },
-{ FRM_CollegeCorridorSharonMichael1, 0x4789d6, 3630 },
-{ FRM_CollegeCorridorSharonMichael2, 0x479804, 7752 },
-{ FRM_CollegeCorridorSharonMichael3, 0x47b64c, 5676 },
-{ FRM_CollegeCorridorSharonMichael4, 0x47cc78, 6762 },
-{ TXT_CollegeCorridorSharonMichael, 0x47eea2, 1331 },
-{ IMG_CollegeCorridorSharonMichael, 0x47f3d5, 46080 },
-{ PAL_CollegeCorridorSharonMichael, 0x48a7d5, 624 },
-{ MSK_CollegeCorridorSharonMichael, 0x48aa45, 3144 },
-{ BOX_CollegeCorridorSharonMichael, 0x48b68d, 1280 },
+{ DAT_CollegeCorridorChemistryClass, 0x4752aa, 5993 },
+{ FRM_CollegeCorridorChemistryClass1, 0x4789d6, 3630 },
+{ FRM_CollegeCorridorChemistryClass2, 0x479804, 7752 },
+{ FRM_CollegeCorridorChemistryClass3, 0x47b64c, 5676 },
+{ FRM_CollegeCorridorChemistryClass4, 0x47cc78, 6762 },
+{ TXT_CollegeCorridorChemistryClass, 0x47eea2, 1331 },
+{ IMG_CollegeCorridorChemistryClass, 0x47f3d5, 46080 },
+{ PAL_CollegeCorridorChemistryClass, 0x48a7d5, 624 },
+{ MSK_CollegeCorridorChemistryClass, 0x48aa45, 3144 },
+{ BOX_CollegeCorridorChemistryClass, 0x48b68d, 1280 },
 { DAT_CollegeCorridorCaroline, 0x48f747, 6509 },
 { FRM_CollegeCorridorCaroline1, 0x4934a3, 25080 },
 { FRM_CollegeCorridorCaroline3, 0x49969b, 7595 },
@@ -93,18 +93,18 @@
 { PAL_CollegeCorridorCaroline, 0x4a789d, 624 },
 { MSK_CollegeCorridorCaroline, 0x4a7b0d, 2151 },
 { BOX_CollegeCorridorCaroline, 0x4a8374, 1280 }, // seg125 stub at seg125:2, block 5: src 0xcd74 len 0x500; follows MSK contiguously
-{ DAT_CollegeCorridorLucas, 0x4ab255, 6109 },
-{ FRM_CollegeCorridorLucas1, 0x4ae9d6, 2592 }, // seg127 stub at seg127:2, block 0: src 0xd6 len 0xa20
-{ FRM_CollegeCorridorLucas2, 0x4af3f6, 1225 }, // block 1: src 0xaf6 len 0x4c9, dest +0xa20
-{ FRM_CollegeCorridorLucas3, 0x4af8bf, 6480 }, // block 2: src 0xfbf len 0x1950, dest +0xee9
-{ FRM_CollegeCorridorLucas4, 0x4b120f, 1140 }, // block 3: src 0x290f len 0x474, dest +0x2839
+{ DAT_CollegeCorridorLadiesRoom, 0x4ab255, 6109 },
+{ FRM_CollegeCorridorLadiesRoom1, 0x4ae9d6, 2592 }, // seg127 stub at seg127:2, block 0: src 0xd6 len 0xa20
+{ FRM_CollegeCorridorLadiesRoom2, 0x4af3f6, 1225 }, // block 1: src 0xaf6 len 0x4c9, dest +0xa20
+{ FRM_CollegeCorridorLadiesRoom3, 0x4af8bf, 6480 }, // block 2: src 0xfbf len 0x1950, dest +0xee9
+{ FRM_CollegeCorridorLadiesRoom4, 0x4b120f, 1140 }, // block 3: src 0x290f len 0x474, dest +0x2839
 { FRM_SpringBridge1, 0x4b16f4, 24 },
 { FRM_SpringBridge2, 0x4b170c, 4410 },
-{ TXT_CollegeCorridorLucas, 0x4b2fa2, 1333 },
-{ IMG_CollegeCorridorLucas, 0x4b34d7, 46080 },
-{ PAL_CollegeCorridorLucas, 0x4be8d7, 624 },
-{ MSK_CollegeCorridorLucas, 0x4beb47, 3297 },
-{ BOX_CollegeCorridorLucas, 0x4bf828, 1280 },
+{ TXT_CollegeCorridorLadiesRoom, 0x4b2fa2, 1333 },
+{ IMG_CollegeCorridorLadiesRoom, 0x4b34d7, 46080 },
+{ PAL_CollegeCorridorLadiesRoom, 0x4be8d7, 624 },
+{ MSK_CollegeCorridorLadiesRoom, 0x4beb47, 3297 },
+{ BOX_CollegeCorridorLadiesRoom, 0x4bf828, 1280 },
 { DAT_CollegeCorridorMargaret, 0x4c2ff1, 6273 },
 { DLG_CollegeCorridorMargaret, 0x4c7973, 6980 }, // cseg130+0x0F73 (offset literal repeated 30x in cseg130's dialogue loader, same role as 0x0ECD x29 in cseg111 for part 30). Size 6980: replySoundsOffset(6878) + (50 + 1) * 2 == 6980 exactly, with questionSoundsOffset = 6980 - (10 + 50 + 1) * 2 = 6858 giving questions 1199..1207,0 and replies 1208..1216 at 6878. NOTE: an earlier note here claimed 6982 -- that came from resource.cpp's off-by-one-word derived formula (now fixed); 6980 is correct. The 64-byte duplicate head at src+6980 confirms the end only coincidentally (trailing slots are zero)
 { FRM_CollegeCorridorMargaret1, 0x4cb3d6, 5346 },

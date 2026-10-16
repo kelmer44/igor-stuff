@@ -13,18 +13,15 @@ The floppy counterpart of the CD's Sharon and Michael corridor, redrawn without 
 students: the chemistry door, the plaque, and exits to the math corridor (left) and the
 library (right). No dialogue, no per-frame background, no music call.
 
-## Resources (new catalog rows, ids 1282-1287)
+## Resources (no new catalog rows)
 
-Action data is in overlay 172 at code offset
-10,144: DAT 0x662F9C (5,973); room data in overlay 174: TXT 0x667B79 (1,025), IMG 0x667F7A
-(46,080), PAL 0x67337A (624), MSK 0x6735EA (1,725), BOX 0x673CA7 (1,280). These rows previously
-carried the CD names (`*_CollegeCorridorSharonMichael`), which is wrong for this edition; they are
-now `*_CollegeCorridorChemistryClass` with ids 1282-1287 (new rows in `resource_sp_floppy.h`,
-defines in `resource_ids_extra.h` and the engine `resource_ids.h`), TBL regenerated (unmodified
-tool reproduced the shipped file byte for byte first) and installed in all copies. The two
-animation blocks keep ids 1269/1270, renamed `FRM_CollegeCorridorChemistryClassFloppy1/2`:
-Floppy1 (3,422) = closed and open door pictures 29x59, Floppy2 (7,812) = four 31x63 door frames
-with Igor.
+The rows already existed under CD ids 59-68. `CollegeCorridorSharonMichael` was renamed in place to
+`CollegeCorridorChemistryClass` in every catalog and in the engine (the chemistry class door exists
+in all editions), so the floppy reuses the same ids; the TBL is byte-identical. Action data in
+overlay 172 at code offset 10,144: DAT 0x662F9C (5,973); room data in overlay 174: TXT 0x667B79
+(1,025), IMG 0x667F7A (46,080), PAL 0x67337A (624), MSK 0x6735EA (1,725), BOX 0x673CA7 (1,280).
+Animation ids 1269/1270 are `FRM_CollegeCorridorChemistryClassFloppy1/2`: Floppy1 (3,422) = closed
+and open door pictures 29x59, Floppy2 (7,812) = four 31x63 door frames with Igor.
 
 ## Room data offsets
 

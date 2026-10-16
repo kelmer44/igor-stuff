@@ -420,15 +420,3 @@
 #define PAL_CollegeCorridorMathClass 1279
 #define MSK_CollegeCorridorMathClass 1280
 #define BOX_CollegeCorridorMathClass 1281
-#define DAT_CollegeCorridorChemistryClass 1282
-#define TXT_CollegeCorridorChemistryClass 1283
-#define IMG_CollegeCorridorChemistryClass 1284
-#define PAL_CollegeCorridorChemistryClass 1285
-#define MSK_CollegeCorridorChemistryClass 1286
-#define BOX_CollegeCorridorChemistryClass 1287
-#define DAT_CollegeCorridorLadiesRoom 1288
-#define TXT_CollegeCorridorLadiesRoom 1289
-#define IMG_CollegeCorridorLadiesRoom 1290
-#define PAL_CollegeCorridorLadiesRoom 1291
-#define MSK_CollegeCorridorLadiesRoom 1292
-#define BOX_CollegeCorridorLadiesRoom 1293
