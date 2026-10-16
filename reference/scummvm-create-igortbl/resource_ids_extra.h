@@ -395,8 +395,8 @@
 #define FRM_CollegeCorridorCarolineFloppy3 1254
 #define FRM_CollegeCorridorCarolineFloppy4 1255
 #define FRM_CollegeCorridorCarolineFloppy5 1256
-#define FRM_CollegeCorridorLucasFloppy1 1257
-#define FRM_CollegeCorridorLucasFloppy2 1258
+#define FRM_CollegeCorridorLadiesRoomFloppy1 1257
+#define FRM_CollegeCorridorLadiesRoomFloppy2 1258
 #define FRM_CollegeCorridorMargaretFloppy1 1259
 #define FRM_CollegeCorridorMargaretFloppy2 1260
 #define FRM_CollegeCorridorMargaretFloppy3 1261
@@ -407,8 +407,8 @@
 #define FRM_CollegeCorridorMargaretFloppy8 1266
 #define FRM_CollegeCorridorMissBarrymoreFloppy1 1267
 #define FRM_CollegeCorridorMissBarrymoreFloppy2 1268
-#define FRM_CollegeCorridorSharonMichaelFloppy1 1269
-#define FRM_CollegeCorridorSharonMichaelFloppy2 1270
+#define FRM_CollegeCorridorChemistryClassFloppy1 1269
+#define FRM_CollegeCorridorChemistryClassFloppy2 1270
 #define FRM_CollegeLockersFloppy1 1271
 #define FRM_CollegeLockersFloppy2 1272
 #define FRM_CollegeStairsSecondFloorFloppy1 1273
@@ -420,3 +420,15 @@
 #define PAL_CollegeCorridorMathClass 1279
 #define MSK_CollegeCorridorMathClass 1280
 #define BOX_CollegeCorridorMathClass 1281
+#define DAT_CollegeCorridorChemistryClass 1282
+#define TXT_CollegeCorridorChemistryClass 1283
+#define IMG_CollegeCorridorChemistryClass 1284
+#define PAL_CollegeCorridorChemistryClass 1285
+#define MSK_CollegeCorridorChemistryClass 1286
+#define BOX_CollegeCorridorChemistryClass 1287
+#define DAT_CollegeCorridorLadiesRoom 1288
+#define TXT_CollegeCorridorLadiesRoom 1289
+#define IMG_CollegeCorridorLadiesRoom 1290
+#define PAL_CollegeCorridorLadiesRoom 1291
+#define MSK_CollegeCorridorLadiesRoom 1292
+#define BOX_CollegeCorridorLadiesRoom 1293

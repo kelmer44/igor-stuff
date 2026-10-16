@@ -80,16 +80,10 @@
 { PAL_CollegeCorridorAnnouncementBoard, 0x64ec68, 624 },
 { MSK_CollegeCorridorAnnouncementBoard, 0x64eed8, 2028 },
 { BOX_CollegeCorridorAnnouncementBoard, 0x64f6c4, 1280 },
-{ DAT_CollegeCorridorSharonMichael, 0x662f9c, 5973 },
 // TODO: Identify the floppy counterpart for FRM_CollegeCorridorSharonMichael1.
 // TODO: Identify the floppy counterpart for FRM_CollegeCorridorSharonMichael2.
 // TODO: Identify the floppy counterpart for FRM_CollegeCorridorSharonMichael3.
 // TODO: Identify the floppy counterpart for FRM_CollegeCorridorSharonMichael4.
-{ TXT_CollegeCorridorSharonMichael, 0x667b79, 1025 },
-{ IMG_CollegeCorridorSharonMichael, 0x667f7a, 46080 },
-{ PAL_CollegeCorridorSharonMichael, 0x67337a, 624 },
-{ MSK_CollegeCorridorSharonMichael, 0x6735ea, 1725 },
-{ BOX_CollegeCorridorSharonMichael, 0x673ca7, 1280 },
 { DAT_CollegeCorridorCaroline, 0x6781ff, 6301 },
 // TODO: Identify the floppy counterpart for FRM_CollegeCorridorCaroline1.
 // TODO: Identify the floppy counterpart for FRM_CollegeCorridorCaroline3.
@@ -99,18 +93,12 @@
 { PAL_CollegeCorridorCaroline, 0x68aa7a, 624 },
 { MSK_CollegeCorridorCaroline, 0x68acea, 1878 },
 { BOX_CollegeCorridorCaroline, 0x68b440, 1280 },
-{ DAT_CollegeCorridorLucas, 0x68e2ba, 5973 },
 // TODO: Identify the floppy counterpart for FRM_CollegeCorridorLucas1.
 // TODO: Identify the floppy counterpart for FRM_CollegeCorridorLucas2.
 // TODO: Identify the floppy counterpart for FRM_CollegeCorridorLucas3.
 // TODO: Identify the floppy counterpart for FRM_CollegeCorridorLucas4.
 { FRM_SpringBridge1, 0x89b948, 24 },
 { FRM_SpringBridge2, 0x89b960, 4410 },
-{ TXT_CollegeCorridorLucas, 0x6927ff, 1167 },
-{ IMG_CollegeCorridorLucas, 0x692c8e, 46080 },
-{ PAL_CollegeCorridorLucas, 0x69e08e, 624 },
-{ MSK_CollegeCorridorLucas, 0x69e2fe, 2028 },
-{ BOX_CollegeCorridorLucas, 0x69eaea, 1280 },
 { DAT_CollegeCorridorMargaret, 0x6a34c6, 6301 },
 { DLG_CollegeCorridorMargaret, 0x6a6057, 6860 },
 // TODO: Identify the floppy counterpart for FRM_CollegeCorridorMargaret1.
@@ -688,10 +676,10 @@
 { IMG_Credits7, 0x6728f, 64000 },
 { PAL_Credits7, 0x76c8f, 768 },
 { DLG_Part8Intercom, 0x8f4c16, 461 },
-// TODO: Identify the floppy counterpart for TXT_OptionsButtons.
-// TODO: Identify the floppy counterpart for TXT_OptionsSettings.
-// TODO: Identify the floppy counterpart for TXT_OptionsTitle.
-// TODO: Identify the floppy counterpart for TXT_OptionsQuit.
+{ TXT_OptionsButtons, 0xa254cd, 34 },
+{ TXT_OptionsSettings, 0xa2576b, 159 },
+{ TXT_OptionsTitle, 0xa25df8, 17 },
+{ TXT_OptionsQuit, 0xa26084, 46 },
 // TODO: Identify the floppy counterpart for TXT_OptionsSaveTitle.
 // TODO: Identify the floppy counterpart for TXT_OptionsLoadTitle.
 // TODO: Identify the floppy counterpart for TXT_Credits1.
@@ -723,8 +711,8 @@
 { FRM_CollegeCorridorCarolineFloppy3, 0x67c430, 5673 },
 { FRM_CollegeCorridorCarolineFloppy4, 0x67da59, 156 },
 { FRM_CollegeCorridorCarolineFloppy5, 0x67daf5, 3248 },
-{ FRM_CollegeCorridorLucasFloppy1, 0x68fc13, 3480 },
-{ FRM_CollegeCorridorLucasFloppy2, 0x6909ab, 6048 },
+{ FRM_CollegeCorridorLadiesRoomFloppy1, 0x68fc13, 3480 },
+{ FRM_CollegeCorridorLadiesRoomFloppy2, 0x6909ab, 6048 },
 { FRM_CollegeCorridorMargaretFloppy1, 0x6a7d6b, 3480 },
 { FRM_CollegeCorridorMargaretFloppy2, 0x6a8b03, 6138 },
 { FRM_CollegeCorridorMargaretFloppy3, 0x6aa2fd, 6235 },
@@ -735,8 +723,8 @@
 { FRM_CollegeCorridorMargaretFloppy8, 0x6afc10, 910 },
 { FRM_CollegeCorridorMissBarrymoreFloppy1, 0x62d698, 1742 },
 { FRM_CollegeCorridorMissBarrymoreFloppy2, 0x62dd66, 5427 },
-{ FRM_CollegeCorridorSharonMichaelFloppy1, 0x6648e3, 3422 },
-{ FRM_CollegeCorridorSharonMichaelFloppy2, 0x665641, 7812 },
+{ FRM_CollegeCorridorChemistryClassFloppy1, 0x6648e3, 3422 },
+{ FRM_CollegeCorridorChemistryClassFloppy2, 0x665641, 7812 },
 { FRM_CollegeLockersFloppy1, 0x6c12a0, 8568 },
 { FRM_CollegeLockersFloppy2, 0x6c3418, 3584 },
 { FRM_CollegeStairsSecondFloorFloppy1, 0x5fc613, 1566 },
@@ -747,6 +735,18 @@
 { PAL_CollegeCorridorMathClass, 0x65f8f0, 624 },
 { MSK_CollegeCorridorMathClass, 0x65fb60, 1890 },
 { BOX_CollegeCorridorMathClass, 0x6602c2, 1280 },
+{ DAT_CollegeCorridorChemistryClass, 0x662f9c, 5973 },
+{ TXT_CollegeCorridorChemistryClass, 0x667b79, 1025 },
+{ IMG_CollegeCorridorChemistryClass, 0x667f7a, 46080 },
+{ PAL_CollegeCorridorChemistryClass, 0x67337a, 624 },
+{ MSK_CollegeCorridorChemistryClass, 0x6735ea, 1725 },
+{ BOX_CollegeCorridorChemistryClass, 0x673ca7, 1280 },
+{ DAT_CollegeCorridorLadiesRoom, 0x68e2ba, 5973 },
+{ TXT_CollegeCorridorLadiesRoom, 0x6927ff, 1167 },
+{ IMG_CollegeCorridorLadiesRoom, 0x692c8e, 46080 },
+{ PAL_CollegeCorridorLadiesRoom, 0x69e08e, 624 },
+{ MSK_CollegeCorridorLadiesRoom, 0x69e2fe, 2028 },
+{ BOX_CollegeCorridorLadiesRoom, 0x69eaea, 1280 },
 { IMG_FloppyTitleBackdrop, 0xfba2c, 64000 },
 { IMG_TitleScreen, 0xebfb8, 64000 },
 { PAL_InventoryPanel, 0xaae2ef, 96 },
