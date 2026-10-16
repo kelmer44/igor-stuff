@@ -58,6 +58,13 @@ look up, downstairs, look down, 210).
   Igor at (179,120); Igor 210; panel redraw. Laura's talk frames: 33 for end of
   sentence and standing, 33 plus a random 0–5 mid-sentence.
 - There is no speech, so sound ids are 0.
+- Music: neither the room routine, the cutscene, the dialogue overlay nor the
+  loader overlays call the music selection routine (the resident routine the
+  logo screen and the rooms that start music use). The room and its cutscene
+  select no music; whatever is playing continues. 33 other floppy rooms do
+  call it (e.g. states 40, 70, 100, 120, 140, 150, 170, 500-670, 770); the
+  college interiors (21, 23-28, 30, 31) do not. The CD and English floppy
+  restart music in these rooms, the Spanish floppy does not.
 
 ## Verified (headless, ASan build)
 
@@ -70,7 +77,6 @@ reaches state 312 and then fails in room 31 (not ported: missing resource).
 
 ## Not verified / open (TODO in the code)
 
-- Music of the room and the cutscene: not derived for this edition.
 - The save-in-cutscene resume branches of the original (the original resumes a
   loaded game in the middle of the cutscene).
 - A real mouse click on the stairs and the other verbs (only the action
