@@ -89,6 +89,10 @@ value 2 at the layer index of (181, 114) for 212.
    `11BA`) against `part21ExecuteAction` and the dialogue handlers.
 5. The resource set loaded by the floppy room (animation sets are unresolved
    for all 26 interior animation sets, see the plan).
-6. Whether other floppy rooms also use the area-routed builder where the CD
-   uses the simple one; if so this is an edition-wide property of the walk
-   code, not a part 21 quirk.
+6. **Answered:** it is not edition-wide. Every other room's local walk builder
+   has the same type on both sides, except three more (states 250, 260 and
+   300), where the floppy uses the direct builder and the CD the area-routed
+   one: the opposite direction to part 21. Classification by pattern, in
+   [walk-builders.md](walk-builders.md) (`tools/classify_igor_walk_builders.py`).
+   Each of these rooms needs its own entry walks checked; confirm the
+   classification by reading the functions when each room is ported.
