@@ -167,6 +167,18 @@ should explicitly distinguish that patched input from the unmodified repository
 copy.
 
 
+## Dialogue choices use the sentence font
+
+The dialogue handlers (for example overlay 182, the college corridor) draw each
+choice with the resident small-font routine (glyph cells 7 by 11, character map
+DS:0250, advances DS:0350), the same one used for the action sentence, and not
+with the dialogue font. The call passes x = 0, y = 135 + line * 10, color index
+0xF8 and the choice text. The engine now draws the choices with the sentence
+font. Two details still follow the CD behavior in the engine and differ from
+this code: the original line pitch is 10 rows (the engine uses 11, and its
+selection test divides by 11) and the color index is 0xF8 (the engine uses 240
+with the CD's palette setup). They are not changed yet.
+
 ## How this relates to unpacking the whole game
 
 The unpacker restores the resident program and embedded data. The separately

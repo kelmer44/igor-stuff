@@ -67,3 +67,12 @@ These share one shape of difference (floppy-only 6 to 96, CD-only 4 to 48 instru
 
 States 900–970 are single data-heavy overlays; function pairing is not meaningful and they were ported separately as the credits.
 
+## Room flow differences found while porting
+
+- Room 17 (college entrance): the door walk is the same as the CD's ((243,77) to
+  (243,74) to (274,68)) but it ends in state 150 (part 15), not 302 (part 30). The
+  path exit still goes to state 40. So the floppy college interior starts at part 15
+  and the engine's part 17 must send the Spanish floppy there.
+- Room 30: downstairs leads to state 151 (floppy only), upstairs to 312.
+- Room 21: the physics class door leads to 370, the corridor exits to 303 and 270.
+

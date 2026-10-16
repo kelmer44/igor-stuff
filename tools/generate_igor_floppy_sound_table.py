@@ -10,6 +10,8 @@ from the effects themselves:
   version closest to this one). A number gets the Spanish floppy effect whose sample
   data is byte-identical to the English effect of that number; numbers without an
   identical effect stay 0 (an offset the engine cannot play).
+* Numbers whose effect is fixed by a call site of the floppy code (CALL_SITE_NUMBERS)
+  take that effect, because the English effect is not byte-identical.
 * Effects that exist only in the Spanish floppy are appended after number 63, in
   the order they appear in IGOR.DAT.
 
@@ -24,6 +26,14 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 TABLES = ROOT / 'reference/scummvm-create-igortbl'
+
+# Effects the Spanish floppy code plays where the CD plays these numbers, found at the
+# call sites instead of by content. The door of the college corridor (part 21) opens with
+# the third and closes with the fourth record of the shared effects overlay.
+CALL_SITE_NUMBERS = {
+    13: 0x98EDB2,
+    14: 0x990694,
+}
 
 
 def voc_pcm(data, offset):
@@ -63,6 +73,10 @@ def main():
         table.append(match[0] if match else 0)
         if match:
             used.update(match)
+    for number, offset in CALL_SITE_NUMBERS.items():
+        assert offset in effects and table[number - 1] == 0, number
+        table[number - 1] = offset
+        used.add(offset)
     mapped = sum(1 for v in table if v)
     floppy_only = [offset for offset in effects if offset not in used]
     table += floppy_only

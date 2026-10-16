@@ -1,5 +1,7 @@
 # Part 21 (Margaret corridor) — Spanish floppy pilot notes
 
+**Superseded by [PART21_FLOPPY_PORT_NOTES.md](PART21_FLOPPY_PORT_NOTES.md), which records the finished port.**
+
 First findings for the pilot room. States 210, 211, 212; floppy overlay 181
 (23,871 code bytes, 15 exports); CD counterpart is segment 129. Everything below
 is read from the floppy code listing `code-floppy/es/part_21_state_210.asm`.
