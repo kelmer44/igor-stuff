@@ -21,14 +21,49 @@ Nothing here is applied to the engine yet.
 - Function pairing against the CD (similarity from the audit tool): the three
   entry functions 0.64–0.73 (codegen floor), the room routine 0.55.
 
-## Room entry: floppy values versus the current engine (CD values)
+## Walk record layout (verified)
 
-The floppy entry functions fill the walk record from constants, then call a
-four-argument routine (`21DC`) that returns at once when source equals
-destination and otherwise builds the walk. Its arguments are pushed in the order
-x0, y0, x1, y1, and its structure matches the engine's `buildWalkPathSimple`
-(early out on equal points; per-record fields written at 20-byte stride). That
-identification is by structure; its full body has not been compared.
+The floppy keeps walk records at a 20-byte stride; each field the entries write
+sits at the same relative position as the engine's `WalkData` members:
+
+| Offset | Floppy value written by entry | Engine member |
+| --- | --- | --- |
+| +0 (word) | start x | `x` |
+| +2 (word) | start y | `y` |
+| +4 (byte) | facing (2, 4, 3) | `posNum` |
+| +5 (byte) | 0 | `frameNum` |
+| +6 (byte) | clip skip (0x0f, 1, 1) | `clipSkipX` |
+| +7 (word) | clip width (0x0f, 0x0f, 0x1e) | `clipWidth` |
+| +9 (word) | 0x32 | `scaleWidth` |
+| +11 (byte) | 1 | `xPosChanged` |
+| +12 (word) | 0 | `dxPos` |
+| +14 (byte) | 1 | `yPosChanged` |
+| +15 (word) | 0 | `dyPos` |
+| +17 (byte) | 0x32 | `scaleHeight` |
+
+The clip values equal what the engine sets for the CD in all three entries
+(210: skip 15, width 15; 211: default skip, width 15; 212: defaults), and the
+default scale values (skip 1, width 30, scale 50) are the engine's
+`setDefaultScale`. So the record layout needs no change.
+
+## Walk routine: the floppy uses the area-routed builder
+
+The routine the entries call (`21DC`) is **not** the CD's simple builder. It
+looks up the area of the start and the destination in the room's layer data
+(`[x + y * 320]` through the object-areas table, 5-byte entries), loops over
+area transitions while the destination area differs from the current one,
+calls the two closest-triangle-point routines (`12BD`, `18D7`) and then the
+resident per-area builder, and finally sets and decrements the last-index
+byte around the build. That is the engine's `buildWalkPath`, not
+`buildWalkPathSimple`. The CD's counterpart (`137C`) copies the record,
+calls the per-area builder directly and does no area lookup, which is what the
+engine's `part21EnterFrom*` currently use.
+
+In 212 the floppy marks the start point's area entry as 2 before the build and
+resets it to 0 after (the index byte is the layer value at (181, 114)); the
+engine's CD version uses 1 at (119, 108).
+
+## Room entry: floppy values versus the current engine (CD values)
 
 | State | Entry | Floppy start (x, y), facing | Floppy walk target | Engine now (CD) |
 | --- | --- | --- | --- | --- |
@@ -36,32 +71,24 @@ identification is by structure; its full body has not been compared.
 | 211 | from the right | (319, 134), 4 | (289, 134) | start (319, 133), facing 4; target (239, 133) |
 | 212 | from physics class | (181, 114), 3 | (181, 125) | start (119, 108), facing 2; target (175, 130) |
 
-All three differ from what the engine does for the CD. Further floppy facts:
+Port when done (not applied yet): the three entries with the floppy values
+above, `buildWalkPath` instead of `buildWalkPathSimple`, and the area marking
+value 2 at the layer index of (181, 114) for 212.
 
-- The entry for 212 also sets one entry of the object-areas table (indexed by a
-  byte from the room's layer data) to 2 before the walk and back to 0 after it;
-  the engine does the same with value 1.
-- The record's byte at +2 and word at +3 relative to the facing byte are set per
-  entry: (0x0f, 0x0f) for 210, (1, 0x0f) for 211 and (1, 0x1e) for 212. If these
-  are the engine's `clipSkipX` and `clipWidth` (to be confirmed, step 1 below),
-  then 211 and 212 differ from the engine's values (211 has width 15 and no skip
-  in the engine, 212 sets neither).
-- After the walk every entry sets the "moving" flag and runs one resident
-  update routine, like `part21WaitForIgorWalkWithAnimation`.
+## Still to verify before touching `part_21.cpp`
 
-## To verify before touching `part_21.cpp`
-
-1. Map the walk record field offsets used by the floppy (word at +0, word at +2,
-   byte +4 .. byte +11, word +7, word +9 ...) onto `_walkData[]` members; the
-   facing byte and the clip fields are assumed from position only.
-2. Read the `21DC` body fully against `buildWalkPathSimple`.
-3. Read the room loop at `36E7` onward against `part21()` and the update routine
-   (`part21UpdateBackground`).
-4. Read `12BD` and `2434` (no CD equivalent) to see what they draw or script.
-5. Check every action routine (the ones paired as "new": `0649`, `0816`, `0739`,
-   `07AE`, `11BA`) against `part21ExecuteAction` and the dialogue handlers.
-6. Compare the resource set loaded by the floppy room (animation sets are
-   unresolved for all 26 interior animation sets, see the plan).
-
-No value in this file is copied into engine code until step 1–3 confirm the
-field mapping; until then the floppy edition keeps the CD walk behind a TODO.
+1. The remaining entry-related code after the walk: the floppy sets a flag and
+   calls one resident update routine; compare with
+   `part21WaitForIgorWalkWithAnimation` (the CD loop is not byte-identical).
+2. The room loop at `36E7` onward against `part21()` and
+   `part21UpdateBackground`.
+3. `12BD`, `18D7` (area helpers, by structure the engine's
+   `getClosestAreaTrianglePoint` and `getClosestAreaTrianglePoint2`) and the
+   large routine at `2434` (1,853 instructions, no CD counterpart): read them.
+4. Every action routine paired as "new" (`0649`, `0816`, `0739`, `07AE`,
+   `11BA`) against `part21ExecuteAction` and the dialogue handlers.
+5. The resource set loaded by the floppy room (animation sets are unresolved
+   for all 26 interior animation sets, see the plan).
+6. Whether other floppy rooms also use the area-routed builder where the CD
+   uses the simple one; if so this is an edition-wide property of the walk
+   code, not a part 21 quirk.
