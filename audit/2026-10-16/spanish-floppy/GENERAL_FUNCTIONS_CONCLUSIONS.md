@@ -101,12 +101,21 @@ Parts 160, 330, 660, 670, 790, 850 and 910–970 have no selection on the floppy
 State exclusion list and the Margaret/meanwhile trigger match the engine (the between-room Margaret
 trigger exists on the Spanish floppy, using absolute segment calls in the resident loop).
 
-## 7. Still not analyzed / leads
+## 7. Other general behavior checked
 
-* Igor idle animation (absent in the engine; needs verification against the loop).
-* Selected verb reset to Walk after an action or when no action results.
-* Dialogue-choice UI timing, walking routine beyond the room builders, cursor shapes, save/load slot
-  behavior.
+* **Igor idle blink — present on both, no change.** The floppy has the same routine (same two eye colours,
+  same pixel offsets per facing); the engine already implements it.
+* **Cursor shapes — identical.** The animated cursor mask table in the floppy image equals the engine's
+  table byte for byte (the offsets are stored as words instead of bytes).
+* **Selected verb after a click without an action — differs, implemented.** In the room loop a left click
+  on an object whose verb has no action sets the selected verb to Look when the clicked object is an
+  inventory item and to Walk when it is a room object; a use/give pair without action does the same by the
+  type of the second object. The engine always selected Walk. After an action runs the verb is Walk, as in
+  the engine. Engine: the `_actionCode == 0` branch of `handleRoomInput` (floppy only, untested in game).
+* **Walk timing:** the room loop advances Igor once per 16 ticks like the engine's `compareGameTick(1, 16)`.
+
+Still not analyzed: dialogue-choice UI timing, save/load slot behavior (the engine uses ScummVM saves, so
+only the original file format would matter), sound loop restarts after the options menu.
 
 ## 8. Suggested order
 

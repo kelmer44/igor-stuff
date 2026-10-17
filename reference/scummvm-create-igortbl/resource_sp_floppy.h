@@ -583,7 +583,7 @@
 { DLG_Part81, 0x112d8e, 6820 },
 { ANM_Part81, 0x125e16, 53065 },
 { TXT_Part81, 0x133432, 2114 },
-// TODO: Identify the floppy counterpart for TXT_Part81ObjectNames.
+{ TXT_Part81ObjectNames, 0x10ca90, 14 },
 { IMG_Part81, 0x133c74, 46080 },
 { PAL_Part81, 0x13f074, 624 },
 { MSK_Part81, 0x13f2e4, 2718 },
