@@ -1,0 +1,22 @@
+{
+  "demo100": {
+    "timeout": true,
+    "dictionary_error": true
+  },
+  "demo110": {
+    "timeout": true,
+    "dictionary_error": true
+  },
+  "english-floppy": {
+    "timeout": true,
+    "dictionary_error": true
+  },
+  "spanish-cd": {
+    "timeout": true,
+    "dictionary_error": true
+  },
+  "spanish-floppy": {
+    "timeout": true,
+    "dictionary_error": true
+  }
+}

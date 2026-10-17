@@ -1,0 +1,21 @@
+{
+  "IGOR.TBL": {
+    "identical": true
+  },
+  "IGOR/IGOR.TBL": {
+    "identical": true
+  },
+  "IGOR-CD/IGOR.TBL": {
+    "identical": true
+  },
+  "igor-en/IGOR.TBL": {
+    "identical": true
+  },
+  "igor-demo/IGOR.TBL": {
+    "identical": true
+  },
+  "igor110/IGOR.TBL": {
+    "identical": true
+  },
+  "generated_sha256": "ec87812432c97c3b93d29ca0fa93464ce104f6413fa917a344ece1e6014b7258"
+}

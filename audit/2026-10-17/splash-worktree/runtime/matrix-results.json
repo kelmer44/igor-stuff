@@ -1,0 +1,100 @@
+{
+  "demo100-matrix": {
+    "exit": 0,
+    "timeout": false,
+    "markers": [
+      "AUDIT_RESOURCE_BYTES_PASS count=340",
+      "AUDIT_ROOM_COMBINATIONS_PASS count=27",
+      "AUDIT_ANIMATION_GROUPS_PASS count=23",
+      "AUDIT_DIALOGUE_LOADS_PASS count=7",
+      "AUDIT_OPTIONS_TEXT_PASS count=30",
+      "AUDIT_TEXT_ROWS actual=22 native=21 delay=68",
+      "AUDIT_EMPTY_ROWS actual=11 native=1 delay=34 nativeDelay=0 slot=202",
+      "AUDIT_SAVED_MATRIX_OVERWRITTEN offset=0 initial=1",
+      "AUDIT_REMINDER_PASS",
+      "AUDIT_MUSIC_PASS cue=2 transitions=12 mask=15 segments=4",
+      "AUDIT_MUSIC_PASS cue=7 transitions=12 mask=15 segments=4",
+      "AUDIT_MATRIX_COMPLETE"
+    ],
+    "natural_state_61": true,
+    "dictionary_error": false
+  },
+  "demo110-matrix": {
+    "exit": 0,
+    "timeout": false,
+    "markers": [
+      "AUDIT_RESOURCE_BYTES_PASS count=340",
+      "AUDIT_ROOM_COMBINATIONS_PASS count=27",
+      "AUDIT_ANIMATION_GROUPS_PASS count=23",
+      "AUDIT_DIALOGUE_LOADS_PASS count=7",
+      "AUDIT_OPTIONS_TEXT_PASS count=30",
+      "AUDIT_TEXT_ROWS actual=22 native=21 delay=68",
+      "AUDIT_EMPTY_ROWS actual=11 native=1 delay=34 nativeDelay=0 slot=202",
+      "AUDIT_SAVED_MATRIX_OVERWRITTEN offset=0 initial=1",
+      "AUDIT_REMINDER_PASS",
+      "AUDIT_MUSIC_PASS cue=2 transitions=12 mask=15 segments=4",
+      "AUDIT_MUSIC_PASS cue=7 transitions=12 mask=15 segments=4",
+      "AUDIT_MATRIX_COMPLETE"
+    ],
+    "natural_state_61": true,
+    "dictionary_error": false
+  },
+  "english-floppy-matrix": {
+    "exit": 0,
+    "timeout": false,
+    "markers": [
+      "AUDIT_RESOURCE_BYTES_PASS count=711",
+      "AUDIT_ROOM_COMBINATIONS_PASS count=50",
+      "AUDIT_ANIMATION_GROUPS_PASS count=42",
+      "AUDIT_DIALOGUE_LOADS_PASS count=14",
+      "AUDIT_OPTIONS_TEXT_PASS count=30",
+      "AUDIT_TEXT_ROWS actual=22 native=21 delay=68",
+      "AUDIT_EMPTY_ROWS actual=11 native=1 delay=34 nativeDelay=0 slot=202",
+      "AUDIT_SAVED_MATRIX_OVERWRITTEN offset=0 initial=1",
+      "AUDIT_REMINDER_PASS",
+      "AUDIT_MUSIC_PASS cue=2 transitions=12 mask=15 segments=4",
+      "AUDIT_MUSIC_PASS cue=7 transitions=12 mask=15 segments=4",
+      "AUDIT_MATRIX_COMPLETE"
+    ],
+    "natural_state_61": true,
+    "dictionary_error": false
+  },
+  "spanish-cd-matrix": {
+    "exit": 0,
+    "timeout": false,
+    "markers": [
+      "AUDIT_RESOURCE_BYTES_PASS count=697",
+      "AUDIT_ROOM_COMBINATIONS_PASS count=50",
+      "AUDIT_ANIMATION_GROUPS_PASS count=42",
+      "AUDIT_DIALOGUE_LOADS_PASS count=14",
+      "AUDIT_OPTIONS_TEXT_PASS count=30",
+      "AUDIT_TEXT_ROWS actual=22 native=21 delay=68",
+      "AUDIT_EMPTY_ROWS actual=11 native=1 delay=34 nativeDelay=0 slot=202",
+      "AUDIT_SAVED_MATRIX_OVERWRITTEN offset=0 initial=1",
+      "AUDIT_REMINDER_PASS",
+      "AUDIT_MATRIX_COMPLETE"
+    ],
+    "natural_state_61": true,
+    "dictionary_error": false
+  },
+  "spanish-floppy-matrix": {
+    "exit": 0,
+    "timeout": false,
+    "markers": [
+      "AUDIT_RESOURCE_BYTES_PASS count=709",
+      "AUDIT_ROOM_COMBINATIONS_PASS count=51",
+      "AUDIT_ANIMATION_GROUPS_PASS count=42",
+      "AUDIT_DIALOGUE_LOADS_PASS count=13",
+      "AUDIT_OPTIONS_TEXT_PASS count=22",
+      "AUDIT_TEXT_ROWS actual=22 native=21 delay=68",
+      "AUDIT_EMPTY_ROWS actual=11 native=1 delay=34 nativeDelay=0 slot=202",
+      "AUDIT_SAVED_MATRIX_OVERWRITTEN offset=0 initial=1",
+      "AUDIT_REMINDER_PASS",
+      "AUDIT_MUSIC_PASS cue=2 transitions=12 mask=7 segments=3",
+      "AUDIT_MUSIC_PASS cue=7 transitions=12 mask=15 segments=4",
+      "AUDIT_MATRIX_COMPLETE"
+    ],
+    "natural_state_61": true,
+    "dictionary_error": false
+  }
+}

@@ -1,0 +1,11388 @@
+{
+  "demo100": [
+    {
+      "part": 12,
+      "resource": "DAT_OutsideChurch",
+      "source": "part_12.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [
+        106,
+        107,
+        108
+      ],
+      "samples": {
+        "102": [
+          "single",
+          1,
+          4,
+          115
+        ],
+        "101": [
+          "single",
+          2,
+          1,
+          129
+        ],
+        "103": [
+          "single",
+          3,
+          4,
+          155
+        ],
+        "104": [
+          "single",
+          4,
+          1,
+          169
+        ],
+        "105": [
+          "use",
+          1,
+          27,
+          2,
+          3,
+          2337
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 13,
+      "resource": "DAT_InsideChurch",
+      "source": "part_13.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          1,
+          65
+        ],
+        "103": [
+          "single",
+          1,
+          4,
+          71
+        ],
+        "102": [
+          "single",
+          2,
+          4,
+          91
+        ],
+        "105": [
+          "single",
+          3,
+          1,
+          105
+        ],
+        "104": [
+          "single",
+          4,
+          1,
+          125
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 14,
+      "resource": "DAT_ChurchPuzzle",
+      "source": "part_14.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          1,
+          69
+        ],
+        "102": [
+          "single",
+          1,
+          4,
+          75
+        ],
+        "103": [
+          "single",
+          2,
+          4,
+          95
+        ],
+        "104": [
+          "single",
+          3,
+          4,
+          115
+        ],
+        "105": [
+          "single",
+          4,
+          1,
+          129
+        ],
+        "106": [
+          "single",
+          5,
+          1,
+          149
+        ],
+        "107": [
+          "single",
+          5,
+          4,
+          155
+        ],
+        "108": [
+          "use",
+          1,
+          8,
+          2,
+          3,
+          971
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 15,
+      "resource": "DAT_TobiasOffice",
+      "source": "part_15.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          1,
+          37
+        ],
+        "102": [
+          "single",
+          1,
+          4,
+          43
+        ],
+        "103": [
+          "single",
+          2,
+          3,
+          61
+        ],
+        "104": [
+          "single",
+          2,
+          4,
+          63
+        ],
+        "105": [
+          "single",
+          2,
+          6,
+          67
+        ],
+        "106": [
+          "single",
+          2,
+          7,
+          69
+        ],
+        "107": [
+          "single",
+          3,
+          2,
+          79
+        ],
+        "108": [
+          "single",
+          3,
+          3,
+          81
+        ],
+        "109": [
+          "single",
+          3,
+          4,
+          83
+        ],
+        "110": [
+          "single",
+          3,
+          5,
+          85
+        ],
+        "111": [
+          "single",
+          4,
+          3,
+          101
+        ],
+        "112": [
+          "single",
+          4,
+          4,
+          103
+        ],
+        "113": [
+          "single",
+          4,
+          5,
+          105
+        ],
+        "114": [
+          "single",
+          16,
+          5,
+          345
+        ],
+        "116": [
+          "use",
+          1,
+          25,
+          2,
+          3,
+          2105
+        ],
+        "115": [
+          "use",
+          1,
+          35,
+          2,
+          3,
+          2905
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 16,
+      "resource": "DAT_Laboratory",
+      "source": "part_16.cpp",
+      "action_codes": [
+        101,
+        102,
+        103
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          3,
+          61
+        ],
+        "102": [
+          "single",
+          1,
+          4,
+          63
+        ],
+        "103": [
+          "single",
+          2,
+          1,
+          77
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 17,
+      "resource": "DAT_OutsideCollege",
+      "source": "part_17.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          1,
+          869
+        ],
+        "102": [
+          "single",
+          1,
+          4,
+          875
+        ],
+        "103": [
+          "single",
+          2,
+          1,
+          889
+        ],
+        "104": [
+          "single",
+          3,
+          1,
+          909
+        ],
+        "105": [
+          "single",
+          4,
+          1,
+          929
+        ],
+        "106": [
+          "use",
+          1,
+          22,
+          2,
+          3,
+          2697
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 18,
+      "resource": "DAT_MenToilets",
+      "source": "part_18.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          4,
+          83
+        ],
+        "102": [
+          "single",
+          2,
+          4,
+          103
+        ],
+        "103": [
+          "single",
+          2,
+          5,
+          105
+        ],
+        "104": [
+          "single",
+          3,
+          5,
+          125
+        ],
+        "105": [
+          "single",
+          4,
+          5,
+          145
+        ],
+        "106": [
+          "single",
+          5,
+          4,
+          163
+        ],
+        "110": [
+          "single",
+          6,
+          1,
+          177
+        ],
+        "107": [
+          "single",
+          7,
+          4,
+          203
+        ],
+        "108": [
+          "single",
+          7,
+          5,
+          205
+        ],
+        "109": [
+          "use",
+          1,
+          18,
+          2,
+          1,
+          1731
+        ],
+        "111": [
+          "use",
+          1,
+          23,
+          2,
+          7,
+          2173
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 19,
+      "resource": "DAT_WomenToilets",
+      "source": "part_19.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          4,
+          79
+        ],
+        "102": [
+          "single",
+          1,
+          5,
+          81
+        ],
+        "103": [
+          "single",
+          2,
+          5,
+          101
+        ],
+        "104": [
+          "single",
+          3,
+          5,
+          121
+        ],
+        "105": [
+          "single",
+          4,
+          4,
+          139
+        ],
+        "107": [
+          "single",
+          5,
+          4,
+          159
+        ],
+        "108": [
+          "single",
+          5,
+          5,
+          161
+        ],
+        "106": [
+          "single",
+          6,
+          1,
+          173
+        ],
+        "109": [
+          "use",
+          1,
+          28,
+          2,
+          4,
+          2523
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 21,
+      "resource": "DAT_CollegeCorridorMargaret",
+      "source": "part_21.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          1,
+          45
+        ],
+        "102": [
+          "single",
+          2,
+          2,
+          67
+        ],
+        "103": [
+          "single",
+          2,
+          4,
+          71
+        ],
+        "104": [
+          "single",
+          3,
+          3,
+          89
+        ],
+        "105": [
+          "single",
+          3,
+          4,
+          91
+        ],
+        "113": [
+          "single",
+          4,
+          1,
+          105
+        ],
+        "106": [
+          "single",
+          4,
+          4,
+          111
+        ],
+        "107": [
+          "single",
+          4,
+          6,
+          115
+        ],
+        "108": [
+          "single",
+          4,
+          7,
+          117
+        ],
+        "109": [
+          "single",
+          5,
+          4,
+          131
+        ],
+        "110": [
+          "single",
+          6,
+          1,
+          145
+        ],
+        "112": [
+          "give",
+          1,
+          1,
+          2,
+          2,
+          3407
+        ],
+        "111": [
+          "use",
+          1,
+          21,
+          2,
+          3,
+          1905
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 22,
+      "resource": "DAT_BellChurch",
+      "source": "part_22.cpp",
+      "action_codes": [
+        101,
+        102
+      ],
+      "handler_cases": [
+        101,
+        102
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          4,
+          35
+        ],
+        "102": [
+          "single",
+          2,
+          1,
+          49
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 25,
+      "resource": "DAT_CollegeCorridorAnnouncementBoard",
+      "source": "part_25.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109
+      ],
+      "handler_cases": [
+        1,
+        2,
+        3,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [
+        1,
+        2,
+        3
+      ],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          1,
+          65
+        ],
+        "104": [
+          "single",
+          2,
+          1,
+          85
+        ],
+        "102": [
+          "single",
+          2,
+          4,
+          91
+        ],
+        "103": [
+          "single",
+          2,
+          5,
+          93
+        ],
+        "105": [
+          "single",
+          3,
+          1,
+          105
+        ],
+        "106": [
+          "single",
+          3,
+          4,
+          111
+        ],
+        "107": [
+          "single",
+          3,
+          6,
+          115
+        ],
+        "108": [
+          "single",
+          3,
+          7,
+          117
+        ],
+        "109": [
+          "single",
+          4,
+          1,
+          125
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 26,
+      "resource": "DAT_CollegeCorridorMissBarrymore",
+      "source": "part_26.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          4,
+          75
+        ],
+        "107": [
+          "single",
+          2,
+          1,
+          89
+        ],
+        "102": [
+          "single",
+          2,
+          4,
+          95
+        ],
+        "103": [
+          "single",
+          2,
+          6,
+          99
+        ],
+        "104": [
+          "single",
+          2,
+          7,
+          101
+        ],
+        "105": [
+          "single",
+          3,
+          4,
+          115
+        ],
+        "106": [
+          "single",
+          4,
+          1,
+          129
+        ],
+        "108": [
+          "single",
+          5,
+          2,
+          151
+        ],
+        "109": [
+          "single",
+          5,
+          3,
+          153
+        ],
+        "110": [
+          "single",
+          5,
+          4,
+          155
+        ],
+        "111": [
+          "single",
+          5,
+          5,
+          157
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 27,
+      "resource": "DAT_CollegeLockers",
+      "source": "part_27.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          1,
+          49
+        ],
+        "102": [
+          "single",
+          2,
+          4,
+          75
+        ],
+        "103": [
+          "single",
+          2,
+          6,
+          79
+        ],
+        "104": [
+          "single",
+          2,
+          7,
+          81
+        ],
+        "105": [
+          "single",
+          3,
+          4,
+          95
+        ],
+        "106": [
+          "single",
+          3,
+          6,
+          99
+        ],
+        "107": [
+          "single",
+          3,
+          7,
+          101
+        ],
+        "108": [
+          "single",
+          4,
+          3,
+          113
+        ],
+        "109": [
+          "single",
+          4,
+          4,
+          115
+        ],
+        "111": [
+          "single",
+          5,
+          4,
+          135
+        ],
+        "112": [
+          "single",
+          6,
+          4,
+          155
+        ],
+        "113": [
+          "single",
+          7,
+          1,
+          169
+        ],
+        "110": [
+          "use",
+          1,
+          20,
+          2,
+          4,
+          1881
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 28,
+      "resource": "DAT_CollegeCorridorCaroline",
+      "source": "part_28.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "102": [
+          "single",
+          1,
+          4,
+          127
+        ],
+        "103": [
+          "single",
+          2,
+          4,
+          147
+        ],
+        "110": [
+          "single",
+          2,
+          6,
+          151
+        ],
+        "109": [
+          "single",
+          3,
+          3,
+          165
+        ],
+        "104": [
+          "single",
+          3,
+          4,
+          167
+        ],
+        "108": [
+          "single",
+          4,
+          2,
+          183
+        ],
+        "105": [
+          "single",
+          4,
+          4,
+          187
+        ],
+        "112": [
+          "single",
+          4,
+          5,
+          189
+        ],
+        "106": [
+          "single",
+          5,
+          4,
+          207
+        ],
+        "107": [
+          "single",
+          6,
+          4,
+          227
+        ],
+        "101": [
+          "single",
+          7,
+          1,
+          241
+        ],
+        "113": [
+          "use",
+          1,
+          8,
+          2,
+          4,
+          1093
+        ],
+        "111": [
+          "give",
+          1,
+          22,
+          1,
+          23,
+          5173
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 30,
+      "resource": "DAT_CollegeStairsFirstFloor",
+      "source": "part_30.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          1,
+          109
+        ],
+        "102": [
+          "single",
+          2,
+          1,
+          129
+        ],
+        "103": [
+          "single",
+          2,
+          4,
+          135
+        ],
+        "104": [
+          "single",
+          3,
+          1,
+          149
+        ],
+        "105": [
+          "single",
+          3,
+          4,
+          155
+        ],
+        "106": [
+          "single",
+          4,
+          1,
+          169
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 31,
+      "resource": "DAT_CollegeStairsSecondFloor",
+      "source": "part_31.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          1,
+          125
+        ],
+        "102": [
+          "single",
+          2,
+          1,
+          145
+        ],
+        "105": [
+          "single",
+          2,
+          4,
+          151
+        ],
+        "103": [
+          "single",
+          2,
+          6,
+          155
+        ],
+        "104": [
+          "single",
+          2,
+          7,
+          157
+        ],
+        "106": [
+          "single",
+          3,
+          1,
+          165
+        ],
+        "107": [
+          "single",
+          3,
+          4,
+          171
+        ],
+        "108": [
+          "single",
+          4,
+          1,
+          185
+        ],
+        "109": [
+          "single",
+          5,
+          4,
+          211
+        ],
+        "111": [
+          "single",
+          6,
+          4,
+          231
+        ],
+        "112": [
+          "single",
+          7,
+          4,
+          251
+        ],
+        "113": [
+          "single",
+          8,
+          2,
+          267
+        ],
+        "114": [
+          "single",
+          8,
+          3,
+          269
+        ],
+        "115": [
+          "single",
+          8,
+          4,
+          271
+        ],
+        "116": [
+          "use",
+          1,
+          1,
+          2,
+          8,
+          517
+        ],
+        "110": [
+          "use",
+          1,
+          16,
+          2,
+          2,
+          1603
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 33,
+      "resource": "DAT_Library",
+      "source": "part_33.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          3,
+          461
+        ],
+        "102": [
+          "single",
+          1,
+          4,
+          463
+        ],
+        "103": [
+          "single",
+          2,
+          4,
+          483
+        ],
+        "104": [
+          "single",
+          3,
+          4,
+          503
+        ],
+        "105": [
+          "single",
+          4,
+          4,
+          523
+        ],
+        "106": [
+          "single",
+          5,
+          4,
+          543
+        ],
+        "107": [
+          "single",
+          6,
+          4,
+          563
+        ],
+        "110": [
+          "single",
+          7,
+          4,
+          583
+        ],
+        "109": [
+          "single",
+          8,
+          3,
+          601
+        ],
+        "108": [
+          "single",
+          8,
+          4,
+          603
+        ],
+        "111": [
+          "single",
+          9,
+          2,
+          619
+        ],
+        "112": [
+          "single",
+          9,
+          4,
+          623
+        ],
+        "113": [
+          "single",
+          10,
+          1,
+          637
+        ],
+        "114": [
+          "give",
+          1,
+          19,
+          2,
+          9,
+          5665
+        ],
+        "115": [
+          "give",
+          1,
+          32,
+          2,
+          9,
+          6861
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 36,
+      "resource": "DAT_ChemistryClassroom",
+      "source": "part_36.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          4,
+          123
+        ],
+        "102": [
+          "single",
+          2,
+          3,
+          141
+        ],
+        "103": [
+          "single",
+          2,
+          4,
+          143
+        ],
+        "104": [
+          "single",
+          3,
+          4,
+          163
+        ],
+        "105": [
+          "single",
+          4,
+          4,
+          183
+        ],
+        "106": [
+          "single",
+          4,
+          5,
+          185
+        ],
+        "107": [
+          "single",
+          5,
+          4,
+          203
+        ],
+        "108": [
+          "single",
+          5,
+          6,
+          207
+        ],
+        "109": [
+          "single",
+          6,
+          1,
+          217
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 37,
+      "resource": "DAT_PhysicsClassroom",
+      "source": "part_37.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          1,
+          109
+        ],
+        "102": [
+          "single",
+          2,
+          4,
+          135
+        ],
+        "106": [
+          "single",
+          2,
+          5,
+          137
+        ],
+        "103": [
+          "single",
+          3,
+          4,
+          155
+        ],
+        "105": [
+          "single",
+          3,
+          5,
+          157
+        ],
+        "104": [
+          "single",
+          4,
+          4,
+          175
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 4,
+      "resource": "DAT_Map",
+      "source": "part_4.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          1,
+          45
+        ],
+        "102": [
+          "single",
+          2,
+          1,
+          65
+        ],
+        "103": [
+          "single",
+          3,
+          1,
+          85
+        ],
+        "104": [
+          "single",
+          4,
+          1,
+          105
+        ],
+        "105": [
+          "single",
+          5,
+          1,
+          125
+        ],
+        "106": [
+          "single",
+          6,
+          1,
+          145
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 5,
+      "resource": "DAT_SpringRock",
+      "source": "part_5.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          4,
+          293
+        ],
+        "102": [
+          "single",
+          2,
+          1,
+          307
+        ],
+        "103": [
+          "single",
+          3,
+          3,
+          331
+        ],
+        "104": [
+          "single",
+          3,
+          4,
+          333
+        ],
+        "105": [
+          "single",
+          4,
+          1,
+          347
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 6,
+      "resource": "DAT_SpringBridge",
+      "source": "part_6.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          4,
+          115
+        ],
+        "102": [
+          "single",
+          2,
+          1,
+          129
+        ],
+        "103": [
+          "single",
+          3,
+          2,
+          151
+        ],
+        "104": [
+          "single",
+          3,
+          4,
+          155
+        ],
+        "105": [
+          "single",
+          4,
+          3,
+          173
+        ],
+        "106": [
+          "single",
+          4,
+          4,
+          175
+        ],
+        "107": [
+          "give",
+          1,
+          1,
+          2,
+          3,
+          3293
+        ],
+        "108": [
+          "give",
+          1,
+          26,
+          2,
+          3,
+          5133
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    }
+  ],
+  "demo110": [
+    {
+      "part": 12,
+      "resource": "DAT_OutsideChurch",
+      "source": "part_12.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [
+        106,
+        107,
+        108
+      ],
+      "samples": {
+        "102": [
+          "single",
+          1,
+          4,
+          115
+        ],
+        "101": [
+          "single",
+          2,
+          1,
+          129
+        ],
+        "103": [
+          "single",
+          3,
+          4,
+          155
+        ],
+        "104": [
+          "single",
+          4,
+          1,
+          169
+        ],
+        "105": [
+          "use",
+          1,
+          27,
+          2,
+          3,
+          2337
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 13,
+      "resource": "DAT_InsideChurch",
+      "source": "part_13.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          1,
+          65
+        ],
+        "103": [
+          "single",
+          1,
+          4,
+          71
+        ],
+        "102": [
+          "single",
+          2,
+          4,
+          91
+        ],
+        "105": [
+          "single",
+          3,
+          1,
+          105
+        ],
+        "104": [
+          "single",
+          4,
+          1,
+          125
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 14,
+      "resource": "DAT_ChurchPuzzle",
+      "source": "part_14.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          1,
+          69
+        ],
+        "102": [
+          "single",
+          1,
+          4,
+          75
+        ],
+        "103": [
+          "single",
+          2,
+          4,
+          95
+        ],
+        "104": [
+          "single",
+          3,
+          4,
+          115
+        ],
+        "105": [
+          "single",
+          4,
+          1,
+          129
+        ],
+        "106": [
+          "single",
+          5,
+          1,
+          149
+        ],
+        "107": [
+          "single",
+          5,
+          4,
+          155
+        ],
+        "108": [
+          "use",
+          1,
+          8,
+          2,
+          3,
+          971
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 15,
+      "resource": "DAT_TobiasOffice",
+      "source": "part_15.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          1,
+          37
+        ],
+        "102": [
+          "single",
+          1,
+          4,
+          43
+        ],
+        "103": [
+          "single",
+          2,
+          3,
+          61
+        ],
+        "104": [
+          "single",
+          2,
+          4,
+          63
+        ],
+        "105": [
+          "single",
+          2,
+          6,
+          67
+        ],
+        "106": [
+          "single",
+          2,
+          7,
+          69
+        ],
+        "107": [
+          "single",
+          3,
+          2,
+          79
+        ],
+        "108": [
+          "single",
+          3,
+          3,
+          81
+        ],
+        "109": [
+          "single",
+          3,
+          4,
+          83
+        ],
+        "110": [
+          "single",
+          3,
+          5,
+          85
+        ],
+        "111": [
+          "single",
+          4,
+          3,
+          101
+        ],
+        "112": [
+          "single",
+          4,
+          4,
+          103
+        ],
+        "113": [
+          "single",
+          4,
+          5,
+          105
+        ],
+        "114": [
+          "single",
+          16,
+          5,
+          345
+        ],
+        "116": [
+          "use",
+          1,
+          25,
+          2,
+          3,
+          2105
+        ],
+        "115": [
+          "use",
+          1,
+          35,
+          2,
+          3,
+          2905
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 16,
+      "resource": "DAT_Laboratory",
+      "source": "part_16.cpp",
+      "action_codes": [
+        101,
+        102,
+        103
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          3,
+          61
+        ],
+        "102": [
+          "single",
+          1,
+          4,
+          63
+        ],
+        "103": [
+          "single",
+          2,
+          1,
+          77
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 17,
+      "resource": "DAT_OutsideCollege",
+      "source": "part_17.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          1,
+          869
+        ],
+        "102": [
+          "single",
+          1,
+          4,
+          875
+        ],
+        "103": [
+          "single",
+          2,
+          1,
+          889
+        ],
+        "104": [
+          "single",
+          3,
+          1,
+          909
+        ],
+        "105": [
+          "single",
+          4,
+          1,
+          929
+        ],
+        "106": [
+          "use",
+          1,
+          22,
+          2,
+          3,
+          2697
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 18,
+      "resource": "DAT_MenToilets",
+      "source": "part_18.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          4,
+          83
+        ],
+        "102": [
+          "single",
+          2,
+          4,
+          103
+        ],
+        "103": [
+          "single",
+          2,
+          5,
+          105
+        ],
+        "104": [
+          "single",
+          3,
+          5,
+          125
+        ],
+        "105": [
+          "single",
+          4,
+          5,
+          145
+        ],
+        "106": [
+          "single",
+          5,
+          4,
+          163
+        ],
+        "110": [
+          "single",
+          6,
+          1,
+          177
+        ],
+        "107": [
+          "single",
+          7,
+          4,
+          203
+        ],
+        "108": [
+          "single",
+          7,
+          5,
+          205
+        ],
+        "109": [
+          "use",
+          1,
+          18,
+          2,
+          1,
+          1731
+        ],
+        "111": [
+          "use",
+          1,
+          23,
+          2,
+          7,
+          2173
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 19,
+      "resource": "DAT_WomenToilets",
+      "source": "part_19.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          4,
+          79
+        ],
+        "102": [
+          "single",
+          1,
+          5,
+          81
+        ],
+        "103": [
+          "single",
+          2,
+          5,
+          101
+        ],
+        "104": [
+          "single",
+          3,
+          5,
+          121
+        ],
+        "105": [
+          "single",
+          4,
+          4,
+          139
+        ],
+        "107": [
+          "single",
+          5,
+          4,
+          159
+        ],
+        "108": [
+          "single",
+          5,
+          5,
+          161
+        ],
+        "106": [
+          "single",
+          6,
+          1,
+          173
+        ],
+        "109": [
+          "use",
+          1,
+          28,
+          2,
+          4,
+          2523
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 21,
+      "resource": "DAT_CollegeCorridorMargaret",
+      "source": "part_21.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          1,
+          45
+        ],
+        "102": [
+          "single",
+          2,
+          2,
+          67
+        ],
+        "103": [
+          "single",
+          2,
+          4,
+          71
+        ],
+        "104": [
+          "single",
+          3,
+          3,
+          89
+        ],
+        "105": [
+          "single",
+          3,
+          4,
+          91
+        ],
+        "113": [
+          "single",
+          4,
+          1,
+          105
+        ],
+        "106": [
+          "single",
+          4,
+          4,
+          111
+        ],
+        "107": [
+          "single",
+          4,
+          6,
+          115
+        ],
+        "108": [
+          "single",
+          4,
+          7,
+          117
+        ],
+        "109": [
+          "single",
+          5,
+          4,
+          131
+        ],
+        "110": [
+          "single",
+          6,
+          1,
+          145
+        ],
+        "112": [
+          "give",
+          1,
+          1,
+          2,
+          2,
+          3407
+        ],
+        "111": [
+          "use",
+          1,
+          21,
+          2,
+          3,
+          1905
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 22,
+      "resource": "DAT_BellChurch",
+      "source": "part_22.cpp",
+      "action_codes": [
+        101,
+        102
+      ],
+      "handler_cases": [
+        101,
+        102
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          4,
+          35
+        ],
+        "102": [
+          "single",
+          2,
+          1,
+          49
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 25,
+      "resource": "DAT_CollegeCorridorAnnouncementBoard",
+      "source": "part_25.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109
+      ],
+      "handler_cases": [
+        1,
+        2,
+        3,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [
+        1,
+        2,
+        3
+      ],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          1,
+          65
+        ],
+        "104": [
+          "single",
+          2,
+          1,
+          85
+        ],
+        "102": [
+          "single",
+          2,
+          4,
+          91
+        ],
+        "103": [
+          "single",
+          2,
+          5,
+          93
+        ],
+        "105": [
+          "single",
+          3,
+          1,
+          105
+        ],
+        "106": [
+          "single",
+          3,
+          4,
+          111
+        ],
+        "107": [
+          "single",
+          3,
+          6,
+          115
+        ],
+        "108": [
+          "single",
+          3,
+          7,
+          117
+        ],
+        "109": [
+          "single",
+          4,
+          1,
+          125
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 26,
+      "resource": "DAT_CollegeCorridorMissBarrymore",
+      "source": "part_26.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          4,
+          75
+        ],
+        "107": [
+          "single",
+          2,
+          1,
+          89
+        ],
+        "102": [
+          "single",
+          2,
+          4,
+          95
+        ],
+        "103": [
+          "single",
+          2,
+          6,
+          99
+        ],
+        "104": [
+          "single",
+          2,
+          7,
+          101
+        ],
+        "105": [
+          "single",
+          3,
+          4,
+          115
+        ],
+        "106": [
+          "single",
+          4,
+          1,
+          129
+        ],
+        "108": [
+          "single",
+          5,
+          2,
+          151
+        ],
+        "109": [
+          "single",
+          5,
+          3,
+          153
+        ],
+        "110": [
+          "single",
+          5,
+          4,
+          155
+        ],
+        "111": [
+          "single",
+          5,
+          5,
+          157
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 27,
+      "resource": "DAT_CollegeLockers",
+      "source": "part_27.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          1,
+          49
+        ],
+        "102": [
+          "single",
+          2,
+          4,
+          75
+        ],
+        "103": [
+          "single",
+          2,
+          6,
+          79
+        ],
+        "104": [
+          "single",
+          2,
+          7,
+          81
+        ],
+        "105": [
+          "single",
+          3,
+          4,
+          95
+        ],
+        "106": [
+          "single",
+          3,
+          6,
+          99
+        ],
+        "107": [
+          "single",
+          3,
+          7,
+          101
+        ],
+        "108": [
+          "single",
+          4,
+          3,
+          113
+        ],
+        "109": [
+          "single",
+          4,
+          4,
+          115
+        ],
+        "111": [
+          "single",
+          5,
+          4,
+          135
+        ],
+        "112": [
+          "single",
+          6,
+          4,
+          155
+        ],
+        "113": [
+          "single",
+          7,
+          1,
+          169
+        ],
+        "110": [
+          "use",
+          1,
+          20,
+          2,
+          4,
+          1881
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 28,
+      "resource": "DAT_CollegeCorridorCaroline",
+      "source": "part_28.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "102": [
+          "single",
+          1,
+          4,
+          127
+        ],
+        "103": [
+          "single",
+          2,
+          4,
+          147
+        ],
+        "110": [
+          "single",
+          2,
+          6,
+          151
+        ],
+        "109": [
+          "single",
+          3,
+          3,
+          165
+        ],
+        "104": [
+          "single",
+          3,
+          4,
+          167
+        ],
+        "108": [
+          "single",
+          4,
+          2,
+          183
+        ],
+        "105": [
+          "single",
+          4,
+          4,
+          187
+        ],
+        "112": [
+          "single",
+          4,
+          5,
+          189
+        ],
+        "106": [
+          "single",
+          5,
+          4,
+          207
+        ],
+        "107": [
+          "single",
+          6,
+          4,
+          227
+        ],
+        "101": [
+          "single",
+          7,
+          1,
+          241
+        ],
+        "113": [
+          "use",
+          1,
+          8,
+          2,
+          4,
+          1093
+        ],
+        "111": [
+          "give",
+          1,
+          22,
+          1,
+          23,
+          5173
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 30,
+      "resource": "DAT_CollegeStairsFirstFloor",
+      "source": "part_30.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          1,
+          109
+        ],
+        "102": [
+          "single",
+          2,
+          1,
+          129
+        ],
+        "103": [
+          "single",
+          2,
+          4,
+          135
+        ],
+        "104": [
+          "single",
+          3,
+          1,
+          149
+        ],
+        "105": [
+          "single",
+          3,
+          4,
+          155
+        ],
+        "106": [
+          "single",
+          4,
+          1,
+          169
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 31,
+      "resource": "DAT_CollegeStairsSecondFloor",
+      "source": "part_31.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          1,
+          125
+        ],
+        "102": [
+          "single",
+          2,
+          1,
+          145
+        ],
+        "105": [
+          "single",
+          2,
+          4,
+          151
+        ],
+        "103": [
+          "single",
+          2,
+          6,
+          155
+        ],
+        "104": [
+          "single",
+          2,
+          7,
+          157
+        ],
+        "106": [
+          "single",
+          3,
+          1,
+          165
+        ],
+        "107": [
+          "single",
+          3,
+          4,
+          171
+        ],
+        "108": [
+          "single",
+          4,
+          1,
+          185
+        ],
+        "109": [
+          "single",
+          5,
+          4,
+          211
+        ],
+        "111": [
+          "single",
+          6,
+          4,
+          231
+        ],
+        "112": [
+          "single",
+          7,
+          4,
+          251
+        ],
+        "113": [
+          "single",
+          8,
+          2,
+          267
+        ],
+        "114": [
+          "single",
+          8,
+          3,
+          269
+        ],
+        "115": [
+          "single",
+          8,
+          4,
+          271
+        ],
+        "116": [
+          "use",
+          1,
+          1,
+          2,
+          8,
+          517
+        ],
+        "110": [
+          "use",
+          1,
+          16,
+          2,
+          2,
+          1603
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 33,
+      "resource": "DAT_Library",
+      "source": "part_33.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          3,
+          461
+        ],
+        "102": [
+          "single",
+          1,
+          4,
+          463
+        ],
+        "103": [
+          "single",
+          2,
+          4,
+          483
+        ],
+        "104": [
+          "single",
+          3,
+          4,
+          503
+        ],
+        "105": [
+          "single",
+          4,
+          4,
+          523
+        ],
+        "106": [
+          "single",
+          5,
+          4,
+          543
+        ],
+        "107": [
+          "single",
+          6,
+          4,
+          563
+        ],
+        "110": [
+          "single",
+          7,
+          4,
+          583
+        ],
+        "109": [
+          "single",
+          8,
+          3,
+          601
+        ],
+        "108": [
+          "single",
+          8,
+          4,
+          603
+        ],
+        "111": [
+          "single",
+          9,
+          2,
+          619
+        ],
+        "112": [
+          "single",
+          9,
+          4,
+          623
+        ],
+        "113": [
+          "single",
+          10,
+          1,
+          637
+        ],
+        "114": [
+          "give",
+          1,
+          19,
+          2,
+          9,
+          5665
+        ],
+        "115": [
+          "give",
+          1,
+          32,
+          2,
+          9,
+          6861
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 36,
+      "resource": "DAT_ChemistryClassroom",
+      "source": "part_36.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          4,
+          123
+        ],
+        "102": [
+          "single",
+          2,
+          3,
+          141
+        ],
+        "103": [
+          "single",
+          2,
+          4,
+          143
+        ],
+        "104": [
+          "single",
+          3,
+          4,
+          163
+        ],
+        "105": [
+          "single",
+          4,
+          4,
+          183
+        ],
+        "106": [
+          "single",
+          4,
+          5,
+          185
+        ],
+        "107": [
+          "single",
+          5,
+          4,
+          203
+        ],
+        "108": [
+          "single",
+          5,
+          6,
+          207
+        ],
+        "109": [
+          "single",
+          6,
+          1,
+          217
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 37,
+      "resource": "DAT_PhysicsClassroom",
+      "source": "part_37.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          1,
+          109
+        ],
+        "102": [
+          "single",
+          2,
+          4,
+          135
+        ],
+        "106": [
+          "single",
+          2,
+          5,
+          137
+        ],
+        "103": [
+          "single",
+          3,
+          4,
+          155
+        ],
+        "105": [
+          "single",
+          3,
+          5,
+          157
+        ],
+        "104": [
+          "single",
+          4,
+          4,
+          175
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 4,
+      "resource": "DAT_Map",
+      "source": "part_4.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          1,
+          45
+        ],
+        "102": [
+          "single",
+          2,
+          1,
+          65
+        ],
+        "103": [
+          "single",
+          3,
+          1,
+          85
+        ],
+        "104": [
+          "single",
+          4,
+          1,
+          105
+        ],
+        "105": [
+          "single",
+          5,
+          1,
+          125
+        ],
+        "106": [
+          "single",
+          6,
+          1,
+          145
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 5,
+      "resource": "DAT_SpringRock",
+      "source": "part_5.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          4,
+          293
+        ],
+        "102": [
+          "single",
+          2,
+          1,
+          307
+        ],
+        "103": [
+          "single",
+          3,
+          3,
+          331
+        ],
+        "104": [
+          "single",
+          3,
+          4,
+          333
+        ],
+        "105": [
+          "single",
+          4,
+          1,
+          347
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 6,
+      "resource": "DAT_SpringBridge",
+      "source": "part_6.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          4,
+          115
+        ],
+        "102": [
+          "single",
+          2,
+          1,
+          129
+        ],
+        "103": [
+          "single",
+          3,
+          2,
+          151
+        ],
+        "104": [
+          "single",
+          3,
+          4,
+          155
+        ],
+        "105": [
+          "single",
+          4,
+          3,
+          173
+        ],
+        "106": [
+          "single",
+          4,
+          4,
+          175
+        ],
+        "107": [
+          "give",
+          1,
+          1,
+          2,
+          3,
+          3293
+        ],
+        "108": [
+          "give",
+          1,
+          26,
+          2,
+          3,
+          5133
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    }
+  ],
+  "english-floppy": [
+    {
+      "part": 0,
+      "resource": "DAT_StudentDormitoryRoom",
+      "source": "part_0.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "105": [
+          "single",
+          1,
+          4,
+          131
+        ],
+        "118": [
+          "single",
+          1,
+          5,
+          133
+        ],
+        "108": [
+          "single",
+          2,
+          4,
+          151
+        ],
+        "106": [
+          "single",
+          2,
+          6,
+          155
+        ],
+        "107": [
+          "single",
+          2,
+          7,
+          157
+        ],
+        "109": [
+          "single",
+          3,
+          3,
+          169
+        ],
+        "112": [
+          "single",
+          4,
+          4,
+          191
+        ],
+        "110": [
+          "single",
+          4,
+          6,
+          195
+        ],
+        "111": [
+          "single",
+          4,
+          7,
+          197
+        ],
+        "114": [
+          "single",
+          5,
+          1,
+          205
+        ],
+        "113": [
+          "single",
+          5,
+          4,
+          211
+        ],
+        "116": [
+          "single",
+          6,
+          3,
+          229
+        ],
+        "115": [
+          "single",
+          6,
+          4,
+          231
+        ],
+        "104": [
+          "single",
+          7,
+          1,
+          245
+        ],
+        "103": [
+          "single",
+          7,
+          4,
+          251
+        ],
+        "101": [
+          "single",
+          7,
+          6,
+          255
+        ],
+        "102": [
+          "single",
+          7,
+          7,
+          257
+        ],
+        "117": [
+          "single",
+          8,
+          1,
+          265
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 1,
+      "resource": "DAT_OutsideStudentDormitory",
+      "source": "part_1.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          1,
+          41
+        ],
+        "104": [
+          "single",
+          2,
+          4,
+          67
+        ],
+        "107": [
+          "single",
+          2,
+          6,
+          71
+        ],
+        "102": [
+          "single",
+          3,
+          1,
+          81
+        ],
+        "105": [
+          "single",
+          3,
+          4,
+          87
+        ],
+        "106": [
+          "single",
+          3,
+          6,
+          91
+        ],
+        "108": [
+          "single",
+          4,
+          3,
+          105
+        ],
+        "103": [
+          "single",
+          4,
+          4,
+          107
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 10,
+      "resource": "DAT_Decanato",
+      "source": "part_10.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          4,
+          123
+        ],
+        "102": [
+          "single",
+          2,
+          1,
+          137
+        ],
+        "103": [
+          "single",
+          2,
+          4,
+          143
+        ],
+        "104": [
+          "single",
+          3,
+          4,
+          163
+        ],
+        "105": [
+          "single",
+          3,
+          5,
+          165
+        ],
+        "106": [
+          "single",
+          4,
+          1,
+          177
+        ],
+        "107": [
+          "single",
+          4,
+          4,
+          183
+        ],
+        "108": [
+          "single",
+          5,
+          1,
+          197
+        ],
+        "109": [
+          "single",
+          6,
+          1,
+          217
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 11,
+      "resource": "DAT_DecanatoPart11",
+      "source": "part_11.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [
+        114
+      ],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          4,
+          87
+        ],
+        "102": [
+          "single",
+          1,
+          7,
+          93
+        ],
+        "109": [
+          "single",
+          2,
+          4,
+          107
+        ],
+        "103": [
+          "single",
+          3,
+          4,
+          127
+        ],
+        "104": [
+          "single",
+          4,
+          2,
+          143
+        ],
+        "105": [
+          "single",
+          4,
+          3,
+          145
+        ],
+        "106": [
+          "single",
+          4,
+          4,
+          147
+        ],
+        "108": [
+          "single",
+          5,
+          1,
+          161
+        ],
+        "110": [
+          "single",
+          6,
+          4,
+          187
+        ],
+        "111": [
+          "single",
+          7,
+          4,
+          207
+        ],
+        "112": [
+          "single",
+          8,
+          3,
+          225
+        ],
+        "113": [
+          "single",
+          8,
+          4,
+          227
+        ],
+        "107": [
+          "use",
+          1,
+          7,
+          2,
+          2,
+          959
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 12,
+      "resource": "DAT_OutsideChurch",
+      "source": "part_12.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [
+        106,
+        107,
+        108
+      ],
+      "samples": {
+        "102": [
+          "single",
+          1,
+          4,
+          115
+        ],
+        "101": [
+          "single",
+          2,
+          1,
+          129
+        ],
+        "103": [
+          "single",
+          3,
+          4,
+          155
+        ],
+        "104": [
+          "single",
+          4,
+          1,
+          169
+        ],
+        "105": [
+          "use",
+          1,
+          27,
+          2,
+          3,
+          2337
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 13,
+      "resource": "DAT_InsideChurch",
+      "source": "part_13.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          1,
+          65
+        ],
+        "103": [
+          "single",
+          1,
+          4,
+          71
+        ],
+        "102": [
+          "single",
+          2,
+          4,
+          91
+        ],
+        "105": [
+          "single",
+          3,
+          1,
+          105
+        ],
+        "104": [
+          "single",
+          4,
+          1,
+          125
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 14,
+      "resource": "DAT_ChurchPuzzle",
+      "source": "part_14.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          1,
+          69
+        ],
+        "102": [
+          "single",
+          1,
+          4,
+          75
+        ],
+        "103": [
+          "single",
+          2,
+          4,
+          95
+        ],
+        "104": [
+          "single",
+          3,
+          4,
+          115
+        ],
+        "105": [
+          "single",
+          4,
+          1,
+          129
+        ],
+        "106": [
+          "single",
+          5,
+          1,
+          149
+        ],
+        "107": [
+          "single",
+          5,
+          4,
+          155
+        ],
+        "108": [
+          "use",
+          1,
+          8,
+          2,
+          3,
+          971
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 15,
+      "resource": "DAT_TobiasOffice",
+      "source": "part_15.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          1,
+          37
+        ],
+        "102": [
+          "single",
+          1,
+          4,
+          43
+        ],
+        "103": [
+          "single",
+          2,
+          3,
+          61
+        ],
+        "104": [
+          "single",
+          2,
+          4,
+          63
+        ],
+        "105": [
+          "single",
+          2,
+          6,
+          67
+        ],
+        "106": [
+          "single",
+          2,
+          7,
+          69
+        ],
+        "107": [
+          "single",
+          3,
+          2,
+          79
+        ],
+        "108": [
+          "single",
+          3,
+          3,
+          81
+        ],
+        "109": [
+          "single",
+          3,
+          4,
+          83
+        ],
+        "110": [
+          "single",
+          3,
+          5,
+          85
+        ],
+        "111": [
+          "single",
+          4,
+          3,
+          101
+        ],
+        "112": [
+          "single",
+          4,
+          4,
+          103
+        ],
+        "113": [
+          "single",
+          4,
+          5,
+          105
+        ],
+        "114": [
+          "single",
+          16,
+          5,
+          345
+        ],
+        "116": [
+          "use",
+          1,
+          25,
+          2,
+          3,
+          2105
+        ],
+        "115": [
+          "use",
+          1,
+          35,
+          2,
+          3,
+          2905
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 16,
+      "resource": "DAT_Laboratory",
+      "source": "part_16.cpp",
+      "action_codes": [
+        101,
+        102,
+        103
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          3,
+          61
+        ],
+        "102": [
+          "single",
+          1,
+          4,
+          63
+        ],
+        "103": [
+          "single",
+          2,
+          1,
+          77
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 17,
+      "resource": "DAT_OutsideCollege",
+      "source": "part_17.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          1,
+          869
+        ],
+        "102": [
+          "single",
+          1,
+          4,
+          875
+        ],
+        "103": [
+          "single",
+          2,
+          1,
+          889
+        ],
+        "104": [
+          "single",
+          3,
+          1,
+          909
+        ],
+        "105": [
+          "single",
+          4,
+          1,
+          929
+        ],
+        "106": [
+          "use",
+          1,
+          22,
+          2,
+          3,
+          2697
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 18,
+      "resource": "DAT_MenToilets",
+      "source": "part_18.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          4,
+          83
+        ],
+        "102": [
+          "single",
+          2,
+          4,
+          103
+        ],
+        "103": [
+          "single",
+          2,
+          5,
+          105
+        ],
+        "104": [
+          "single",
+          3,
+          5,
+          125
+        ],
+        "105": [
+          "single",
+          4,
+          5,
+          145
+        ],
+        "106": [
+          "single",
+          5,
+          4,
+          163
+        ],
+        "110": [
+          "single",
+          6,
+          1,
+          177
+        ],
+        "107": [
+          "single",
+          7,
+          4,
+          203
+        ],
+        "108": [
+          "single",
+          7,
+          5,
+          205
+        ],
+        "109": [
+          "use",
+          1,
+          18,
+          2,
+          1,
+          1731
+        ],
+        "111": [
+          "use",
+          1,
+          23,
+          2,
+          7,
+          2173
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 19,
+      "resource": "DAT_WomenToilets",
+      "source": "part_19.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          4,
+          79
+        ],
+        "102": [
+          "single",
+          1,
+          5,
+          81
+        ],
+        "103": [
+          "single",
+          2,
+          5,
+          101
+        ],
+        "104": [
+          "single",
+          3,
+          5,
+          121
+        ],
+        "105": [
+          "single",
+          4,
+          4,
+          139
+        ],
+        "107": [
+          "single",
+          5,
+          4,
+          159
+        ],
+        "108": [
+          "single",
+          5,
+          5,
+          161
+        ],
+        "106": [
+          "single",
+          6,
+          1,
+          173
+        ],
+        "109": [
+          "use",
+          1,
+          28,
+          2,
+          4,
+          2523
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 2,
+      "resource": "DAT_StudentDormitoryAttic",
+      "source": "part_2.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        121
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [
+        120
+      ],
+      "samples": {
+        "118": [
+          "single",
+          1,
+          1,
+          311
+        ],
+        "114": [
+          "single",
+          1,
+          4,
+          317
+        ],
+        "106": [
+          "single",
+          2,
+          4,
+          337
+        ],
+        "101": [
+          "single",
+          2,
+          6,
+          341
+        ],
+        "102": [
+          "single",
+          2,
+          7,
+          343
+        ],
+        "107": [
+          "single",
+          3,
+          3,
+          355
+        ],
+        "108": [
+          "single",
+          4,
+          4,
+          377
+        ],
+        "109": [
+          "single",
+          5,
+          4,
+          397
+        ],
+        "119": [
+          "single",
+          6,
+          1,
+          411
+        ],
+        "110": [
+          "single",
+          6,
+          4,
+          417
+        ],
+        "111": [
+          "single",
+          7,
+          4,
+          437
+        ],
+        "112": [
+          "single",
+          8,
+          4,
+          457
+        ],
+        "105": [
+          "single",
+          9,
+          4,
+          477
+        ],
+        "121": [
+          "single",
+          10,
+          4,
+          497
+        ],
+        "117": [
+          "use",
+          1,
+          8,
+          2,
+          8,
+          1425
+        ],
+        "115": [
+          "use",
+          1,
+          9,
+          2,
+          8,
+          1521
+        ],
+        "103": [
+          "use",
+          1,
+          9,
+          2,
+          9,
+          1523
+        ],
+        "116": [
+          "use",
+          1,
+          10,
+          2,
+          7,
+          1615
+        ],
+        "104": [
+          "use",
+          1,
+          10,
+          2,
+          8,
+          1617
+        ],
+        "113": [
+          "use",
+          1,
+          11,
+          2,
+          7,
+          1711
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 21,
+      "resource": "DAT_CollegeCorridorMargaret",
+      "source": "part_21.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          1,
+          45
+        ],
+        "102": [
+          "single",
+          2,
+          2,
+          67
+        ],
+        "103": [
+          "single",
+          2,
+          4,
+          71
+        ],
+        "104": [
+          "single",
+          3,
+          3,
+          89
+        ],
+        "105": [
+          "single",
+          3,
+          4,
+          91
+        ],
+        "113": [
+          "single",
+          4,
+          1,
+          105
+        ],
+        "106": [
+          "single",
+          4,
+          4,
+          111
+        ],
+        "107": [
+          "single",
+          4,
+          6,
+          115
+        ],
+        "108": [
+          "single",
+          4,
+          7,
+          117
+        ],
+        "109": [
+          "single",
+          5,
+          4,
+          131
+        ],
+        "110": [
+          "single",
+          6,
+          1,
+          145
+        ],
+        "112": [
+          "give",
+          1,
+          1,
+          2,
+          2,
+          3407
+        ],
+        "111": [
+          "use",
+          1,
+          21,
+          2,
+          3,
+          1905
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 22,
+      "resource": "DAT_BellChurch",
+      "source": "part_22.cpp",
+      "action_codes": [
+        101,
+        102
+      ],
+      "handler_cases": [
+        101,
+        102
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          4,
+          35
+        ],
+        "102": [
+          "single",
+          2,
+          1,
+          49
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 25,
+      "resource": "DAT_CollegeCorridorAnnouncementBoard",
+      "source": "part_25.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109
+      ],
+      "handler_cases": [
+        1,
+        2,
+        3,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [
+        1,
+        2,
+        3
+      ],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          1,
+          65
+        ],
+        "104": [
+          "single",
+          2,
+          1,
+          85
+        ],
+        "102": [
+          "single",
+          2,
+          4,
+          91
+        ],
+        "103": [
+          "single",
+          2,
+          5,
+          93
+        ],
+        "105": [
+          "single",
+          3,
+          1,
+          105
+        ],
+        "106": [
+          "single",
+          3,
+          4,
+          111
+        ],
+        "107": [
+          "single",
+          3,
+          6,
+          115
+        ],
+        "108": [
+          "single",
+          3,
+          7,
+          117
+        ],
+        "109": [
+          "single",
+          4,
+          1,
+          125
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 26,
+      "resource": "DAT_CollegeCorridorMissBarrymore",
+      "source": "part_26.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          4,
+          75
+        ],
+        "107": [
+          "single",
+          2,
+          1,
+          89
+        ],
+        "102": [
+          "single",
+          2,
+          4,
+          95
+        ],
+        "103": [
+          "single",
+          2,
+          6,
+          99
+        ],
+        "104": [
+          "single",
+          2,
+          7,
+          101
+        ],
+        "105": [
+          "single",
+          3,
+          4,
+          115
+        ],
+        "106": [
+          "single",
+          4,
+          1,
+          129
+        ],
+        "108": [
+          "single",
+          5,
+          2,
+          151
+        ],
+        "109": [
+          "single",
+          5,
+          3,
+          153
+        ],
+        "110": [
+          "single",
+          5,
+          4,
+          155
+        ],
+        "111": [
+          "single",
+          5,
+          5,
+          157
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 27,
+      "resource": "DAT_CollegeLockers",
+      "source": "part_27.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          1,
+          49
+        ],
+        "102": [
+          "single",
+          2,
+          4,
+          75
+        ],
+        "103": [
+          "single",
+          2,
+          6,
+          79
+        ],
+        "104": [
+          "single",
+          2,
+          7,
+          81
+        ],
+        "105": [
+          "single",
+          3,
+          4,
+          95
+        ],
+        "106": [
+          "single",
+          3,
+          6,
+          99
+        ],
+        "107": [
+          "single",
+          3,
+          7,
+          101
+        ],
+        "108": [
+          "single",
+          4,
+          3,
+          113
+        ],
+        "109": [
+          "single",
+          4,
+          4,
+          115
+        ],
+        "111": [
+          "single",
+          5,
+          4,
+          135
+        ],
+        "112": [
+          "single",
+          6,
+          4,
+          155
+        ],
+        "113": [
+          "single",
+          7,
+          1,
+          169
+        ],
+        "110": [
+          "use",
+          1,
+          20,
+          2,
+          4,
+          1881
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 28,
+      "resource": "DAT_CollegeCorridorCaroline",
+      "source": "part_28.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "102": [
+          "single",
+          1,
+          4,
+          127
+        ],
+        "103": [
+          "single",
+          2,
+          4,
+          147
+        ],
+        "110": [
+          "single",
+          2,
+          6,
+          151
+        ],
+        "109": [
+          "single",
+          3,
+          3,
+          165
+        ],
+        "104": [
+          "single",
+          3,
+          4,
+          167
+        ],
+        "108": [
+          "single",
+          4,
+          2,
+          183
+        ],
+        "105": [
+          "single",
+          4,
+          4,
+          187
+        ],
+        "112": [
+          "single",
+          4,
+          5,
+          189
+        ],
+        "106": [
+          "single",
+          5,
+          4,
+          207
+        ],
+        "107": [
+          "single",
+          6,
+          4,
+          227
+        ],
+        "101": [
+          "single",
+          7,
+          1,
+          241
+        ],
+        "113": [
+          "use",
+          1,
+          8,
+          2,
+          4,
+          1093
+        ],
+        "111": [
+          "give",
+          1,
+          22,
+          1,
+          23,
+          5173
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 30,
+      "resource": "DAT_CollegeStairsFirstFloor",
+      "source": "part_30.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          1,
+          109
+        ],
+        "102": [
+          "single",
+          2,
+          1,
+          129
+        ],
+        "103": [
+          "single",
+          2,
+          4,
+          135
+        ],
+        "104": [
+          "single",
+          3,
+          1,
+          149
+        ],
+        "105": [
+          "single",
+          3,
+          4,
+          155
+        ],
+        "106": [
+          "single",
+          4,
+          1,
+          169
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 31,
+      "resource": "DAT_CollegeStairsSecondFloor",
+      "source": "part_31.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          1,
+          125
+        ],
+        "102": [
+          "single",
+          2,
+          1,
+          145
+        ],
+        "105": [
+          "single",
+          2,
+          4,
+          151
+        ],
+        "103": [
+          "single",
+          2,
+          6,
+          155
+        ],
+        "104": [
+          "single",
+          2,
+          7,
+          157
+        ],
+        "106": [
+          "single",
+          3,
+          1,
+          165
+        ],
+        "107": [
+          "single",
+          3,
+          4,
+          171
+        ],
+        "108": [
+          "single",
+          4,
+          1,
+          185
+        ],
+        "109": [
+          "single",
+          5,
+          4,
+          211
+        ],
+        "111": [
+          "single",
+          6,
+          4,
+          231
+        ],
+        "112": [
+          "single",
+          7,
+          4,
+          251
+        ],
+        "113": [
+          "single",
+          8,
+          2,
+          267
+        ],
+        "114": [
+          "single",
+          8,
+          3,
+          269
+        ],
+        "115": [
+          "single",
+          8,
+          4,
+          271
+        ],
+        "116": [
+          "use",
+          1,
+          1,
+          2,
+          8,
+          517
+        ],
+        "110": [
+          "use",
+          1,
+          16,
+          2,
+          2,
+          1603
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 32,
+      "resource": "DAT_Part32",
+      "source": "part_32.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        108
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106
+      ],
+      "unhandled": [
+        108
+      ],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          1,
+          41
+        ],
+        "102": [
+          "single",
+          2,
+          4,
+          67
+        ],
+        "106": [
+          "single",
+          2,
+          5,
+          69
+        ],
+        "103": [
+          "single",
+          3,
+          4,
+          87
+        ],
+        "104": [
+          "single",
+          4,
+          4,
+          107
+        ],
+        "105": [
+          "single",
+          5,
+          4,
+          127
+        ],
+        "108": [
+          "use",
+          1,
+          8,
+          2,
+          3,
+          943
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 33,
+      "resource": "DAT_Library",
+      "source": "part_33.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          3,
+          461
+        ],
+        "102": [
+          "single",
+          1,
+          4,
+          463
+        ],
+        "103": [
+          "single",
+          2,
+          4,
+          483
+        ],
+        "104": [
+          "single",
+          3,
+          4,
+          503
+        ],
+        "105": [
+          "single",
+          4,
+          4,
+          523
+        ],
+        "106": [
+          "single",
+          5,
+          4,
+          543
+        ],
+        "107": [
+          "single",
+          6,
+          4,
+          563
+        ],
+        "110": [
+          "single",
+          7,
+          4,
+          583
+        ],
+        "109": [
+          "single",
+          8,
+          3,
+          601
+        ],
+        "108": [
+          "single",
+          8,
+          4,
+          603
+        ],
+        "111": [
+          "single",
+          9,
+          2,
+          619
+        ],
+        "112": [
+          "single",
+          9,
+          4,
+          623
+        ],
+        "113": [
+          "single",
+          10,
+          1,
+          637
+        ],
+        "114": [
+          "give",
+          1,
+          19,
+          2,
+          9,
+          5665
+        ],
+        "115": [
+          "give",
+          1,
+          32,
+          2,
+          9,
+          6861
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 34,
+      "resource": "DAT_ParkLeft",
+      "source": "part_34.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        108,
+        109
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [
+        107
+      ],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          4,
+          47
+        ],
+        "102": [
+          "single",
+          2,
+          4,
+          67
+        ],
+        "103": [
+          "single",
+          3,
+          3,
+          85
+        ],
+        "104": [
+          "single",
+          3,
+          4,
+          87
+        ],
+        "105": [
+          "single",
+          4,
+          2,
+          103
+        ],
+        "106": [
+          "single",
+          4,
+          4,
+          107
+        ],
+        "109": [
+          "single",
+          5,
+          1,
+          121
+        ],
+        "108": [
+          "give",
+          1,
+          24,
+          2,
+          4,
+          4927
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 35,
+      "resource": "DAT_ParkRight",
+      "source": "part_35.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          4,
+          51
+        ],
+        "102": [
+          "single",
+          2,
+          3,
+          69
+        ],
+        "103": [
+          "single",
+          2,
+          4,
+          71
+        ],
+        "104": [
+          "single",
+          3,
+          4,
+          91
+        ],
+        "105": [
+          "single",
+          4,
+          4,
+          111
+        ],
+        "106": [
+          "single",
+          5,
+          1,
+          125
+        ],
+        "107": [
+          "single",
+          6,
+          1,
+          145
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 36,
+      "resource": "DAT_ChemistryClassroom",
+      "source": "part_36.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          4,
+          123
+        ],
+        "102": [
+          "single",
+          2,
+          3,
+          141
+        ],
+        "103": [
+          "single",
+          2,
+          4,
+          143
+        ],
+        "104": [
+          "single",
+          3,
+          4,
+          163
+        ],
+        "105": [
+          "single",
+          4,
+          4,
+          183
+        ],
+        "106": [
+          "single",
+          4,
+          5,
+          185
+        ],
+        "107": [
+          "single",
+          5,
+          4,
+          203
+        ],
+        "108": [
+          "single",
+          5,
+          6,
+          207
+        ],
+        "109": [
+          "single",
+          6,
+          1,
+          217
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 37,
+      "resource": "DAT_PhysicsClassroom",
+      "source": "part_37.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          1,
+          109
+        ],
+        "102": [
+          "single",
+          2,
+          4,
+          135
+        ],
+        "106": [
+          "single",
+          2,
+          5,
+          137
+        ],
+        "103": [
+          "single",
+          3,
+          4,
+          155
+        ],
+        "105": [
+          "single",
+          3,
+          5,
+          157
+        ],
+        "104": [
+          "single",
+          4,
+          4,
+          175
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 4,
+      "resource": "DAT_Map",
+      "source": "part_4.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          1,
+          45
+        ],
+        "102": [
+          "single",
+          2,
+          1,
+          65
+        ],
+        "103": [
+          "single",
+          3,
+          1,
+          85
+        ],
+        "104": [
+          "single",
+          4,
+          1,
+          105
+        ],
+        "105": [
+          "single",
+          5,
+          1,
+          125
+        ],
+        "106": [
+          "single",
+          6,
+          1,
+          145
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 5,
+      "resource": "DAT_SpringRock",
+      "source": "part_5.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          4,
+          293
+        ],
+        "102": [
+          "single",
+          2,
+          1,
+          307
+        ],
+        "103": [
+          "single",
+          3,
+          3,
+          331
+        ],
+        "104": [
+          "single",
+          3,
+          4,
+          333
+        ],
+        "105": [
+          "single",
+          4,
+          1,
+          347
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 50,
+      "resource": "DAT_OutsideMaze",
+      "source": "part_50.cpp",
+      "action_codes": [
+        101,
+        102,
+        103
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "103": [
+          "single",
+          1,
+          1,
+          617
+        ],
+        "101": [
+          "single",
+          2,
+          1,
+          637
+        ],
+        "102": [
+          "single",
+          2,
+          4,
+          643
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 6,
+      "resource": "DAT_SpringBridge",
+      "source": "part_6.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          4,
+          115
+        ],
+        "102": [
+          "single",
+          2,
+          1,
+          129
+        ],
+        "103": [
+          "single",
+          3,
+          2,
+          151
+        ],
+        "104": [
+          "single",
+          3,
+          4,
+          155
+        ],
+        "105": [
+          "single",
+          4,
+          3,
+          173
+        ],
+        "106": [
+          "single",
+          4,
+          4,
+          175
+        ],
+        "107": [
+          "give",
+          1,
+          1,
+          2,
+          3,
+          3293
+        ],
+        "108": [
+          "give",
+          1,
+          26,
+          2,
+          3,
+          5133
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 68,
+      "resource": "DAT_Part68",
+      "source": "part_68.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        108,
+        109
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        108,
+        109
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          1,
+          185
+        ],
+        "102": [
+          "single",
+          2,
+          3,
+          209
+        ],
+        "103": [
+          "single",
+          2,
+          4,
+          211
+        ],
+        "104": [
+          "single",
+          3,
+          2,
+          227
+        ],
+        "105": [
+          "single",
+          3,
+          4,
+          231
+        ],
+        "106": [
+          "single",
+          4,
+          1,
+          245
+        ],
+        "109": [
+          "single",
+          5,
+          1,
+          265
+        ],
+        "108": [
+          "give",
+          1,
+          5,
+          2,
+          3,
+          3709
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 69,
+      "resource": "DAT_Part69",
+      "source": "part_69.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "102": [
+          "single",
+          1,
+          4,
+          119
+        ],
+        "101": [
+          "single",
+          2,
+          1,
+          133
+        ],
+        "106": [
+          "single",
+          3,
+          3,
+          157
+        ],
+        "103": [
+          "single",
+          3,
+          4,
+          159
+        ],
+        "104": [
+          "single",
+          4,
+          4,
+          179
+        ],
+        "105": [
+          "single",
+          5,
+          4,
+          199
+        ],
+        "108": [
+          "use",
+          1,
+          33,
+          2,
+          4,
+          2841
+        ],
+        "107": [
+          "use",
+          1,
+          34,
+          2,
+          4,
+          2921
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 7,
+      "resource": "DAT_AdministrationCorridor",
+      "source": "part_7.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112
+      ],
+      "handler_cases": [
+        0,
+        1,
+        2,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [
+        0,
+        1,
+        2
+      ],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          4,
+          203
+        ],
+        "111": [
+          "single",
+          2,
+          1,
+          217
+        ],
+        "102": [
+          "single",
+          2,
+          4,
+          223
+        ],
+        "103": [
+          "single",
+          2,
+          6,
+          227
+        ],
+        "104": [
+          "single",
+          2,
+          7,
+          229
+        ],
+        "112": [
+          "single",
+          3,
+          1,
+          237
+        ],
+        "105": [
+          "single",
+          3,
+          6,
+          247
+        ],
+        "106": [
+          "single",
+          3,
+          7,
+          249
+        ],
+        "107": [
+          "single",
+          4,
+          4,
+          263
+        ],
+        "108": [
+          "single",
+          5,
+          4,
+          283
+        ],
+        "109": [
+          "single",
+          6,
+          4,
+          303
+        ],
+        "110": [
+          "single",
+          8,
+          1,
+          337
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 70,
+      "resource": "DAT_Part70",
+      "source": "part_70.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          1,
+          37
+        ],
+        "102": [
+          "single",
+          2,
+          1,
+          57
+        ],
+        "103": [
+          "single",
+          3,
+          1,
+          77
+        ],
+        "104": [
+          "single",
+          4,
+          1,
+          97
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 71,
+      "resource": "DAT_Part71",
+      "source": "part_71.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          4,
+          51
+        ],
+        "102": [
+          "single",
+          2,
+          3,
+          69
+        ],
+        "103": [
+          "single",
+          2,
+          4,
+          71
+        ],
+        "104": [
+          "single",
+          3,
+          4,
+          91
+        ],
+        "105": [
+          "single",
+          4,
+          1,
+          105
+        ],
+        "106": [
+          "single",
+          5,
+          4,
+          131
+        ],
+        "107": [
+          "single",
+          6,
+          4,
+          151
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 72,
+      "resource": "DAT_Part72",
+      "source": "part_72.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          1,
+          113
+        ],
+        "102": [
+          "single",
+          2,
+          3,
+          137
+        ],
+        "103": [
+          "single",
+          2,
+          4,
+          139
+        ],
+        "104": [
+          "single",
+          3,
+          4,
+          159
+        ],
+        "105": [
+          "single",
+          4,
+          4,
+          179
+        ],
+        "106": [
+          "single",
+          5,
+          1,
+          193
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 76,
+      "resource": "DAT_Part76",
+      "source": "part_76.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        107,
+        108,
+        109
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108
+      ],
+      "unhandled": [
+        109
+      ],
+      "unreferenced_cases": [
+        106
+      ],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          4,
+          75
+        ],
+        "102": [
+          "single",
+          2,
+          4,
+          95
+        ],
+        "103": [
+          "single",
+          2,
+          5,
+          97
+        ],
+        "104": [
+          "single",
+          3,
+          3,
+          113
+        ],
+        "105": [
+          "single",
+          3,
+          4,
+          115
+        ],
+        "107": [
+          "single",
+          4,
+          4,
+          135
+        ],
+        "108": [
+          "single",
+          5,
+          4,
+          155
+        ],
+        "109": [
+          "give",
+          1,
+          25,
+          2,
+          1,
+          5143
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 77,
+      "resource": "DAT_Part77",
+      "source": "part_77.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          1,
+          869
+        ],
+        "102": [
+          "single",
+          1,
+          4,
+          875
+        ],
+        "103": [
+          "single",
+          2,
+          4,
+          895
+        ],
+        "104": [
+          "single",
+          2,
+          5,
+          897
+        ],
+        "105": [
+          "single",
+          4,
+          1,
+          929
+        ],
+        "106": [
+          "use",
+          1,
+          14,
+          2,
+          2,
+          2055
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 8,
+      "resource": "DAT_DeanPepperOffice",
+      "source": "part_8.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "102": [
+          "single",
+          1,
+          4,
+          195
+        ],
+        "103": [
+          "single",
+          2,
+          2,
+          211
+        ],
+        "104": [
+          "single",
+          2,
+          4,
+          215
+        ],
+        "105": [
+          "single",
+          3,
+          3,
+          233
+        ],
+        "107": [
+          "single",
+          4,
+          4,
+          255
+        ],
+        "108": [
+          "single",
+          4,
+          5,
+          257
+        ],
+        "109": [
+          "single",
+          5,
+          3,
+          273
+        ],
+        "110": [
+          "single",
+          5,
+          4,
+          275
+        ],
+        "101": [
+          "single",
+          6,
+          1,
+          289
+        ],
+        "111": [
+          "single",
+          6,
+          4,
+          295
+        ],
+        "112": [
+          "single",
+          6,
+          6,
+          299
+        ],
+        "113": [
+          "single",
+          6,
+          7,
+          301
+        ],
+        "114": [
+          "give",
+          1,
+          23,
+          2,
+          2,
+          5231
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 81,
+      "resource": "DAT_Part81",
+      "source": "part_81.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        106,
+        107,
+        108,
+        109,
+        110
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        106,
+        107,
+        108,
+        109,
+        110
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          1,
+          69
+        ],
+        "102": [
+          "single",
+          2,
+          2,
+          91
+        ],
+        "103": [
+          "single",
+          2,
+          4,
+          95
+        ],
+        "104": [
+          "single",
+          2,
+          6,
+          99
+        ],
+        "106": [
+          "single",
+          3,
+          4,
+          115
+        ],
+        "107": [
+          "single",
+          4,
+          4,
+          135
+        ],
+        "108": [
+          "single",
+          5,
+          4,
+          155
+        ],
+        "110": [
+          "give",
+          1,
+          1,
+          2,
+          2,
+          3341
+        ],
+        "109": [
+          "give",
+          1,
+          34,
+          2,
+          2,
+          5883
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 9,
+      "resource": "DAT_AdministrationSecretaryRoom",
+      "source": "part_9.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        112,
+        113,
+        114,
+        115,
+        116
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        112,
+        113,
+        114,
+        115,
+        116
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          1,
+          189
+        ],
+        "102": [
+          "single",
+          1,
+          4,
+          195
+        ],
+        "103": [
+          "single",
+          2,
+          2,
+          211
+        ],
+        "104": [
+          "single",
+          2,
+          4,
+          215
+        ],
+        "105": [
+          "single",
+          3,
+          4,
+          235
+        ],
+        "106": [
+          "single",
+          3,
+          6,
+          239
+        ],
+        "107": [
+          "single",
+          3,
+          7,
+          241
+        ],
+        "108": [
+          "single",
+          4,
+          4,
+          255
+        ],
+        "109": [
+          "single",
+          4,
+          5,
+          257
+        ],
+        "110": [
+          "single",
+          5,
+          3,
+          273
+        ],
+        "116": [
+          "single",
+          6,
+          1,
+          289
+        ],
+        "112": [
+          "single",
+          6,
+          4,
+          295
+        ],
+        "113": [
+          "single",
+          6,
+          6,
+          299
+        ],
+        "114": [
+          "single",
+          6,
+          7,
+          301
+        ],
+        "115": [
+          "use",
+          1,
+          12,
+          2,
+          3,
+          1293
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    }
+  ],
+  "spanish-cd": [
+    {
+      "part": 0,
+      "resource": "DAT_StudentDormitoryRoom",
+      "source": "part_0.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "105": [
+          "single",
+          1,
+          4,
+          131
+        ],
+        "118": [
+          "single",
+          1,
+          5,
+          133
+        ],
+        "108": [
+          "single",
+          2,
+          4,
+          151
+        ],
+        "106": [
+          "single",
+          2,
+          6,
+          155
+        ],
+        "107": [
+          "single",
+          2,
+          7,
+          157
+        ],
+        "109": [
+          "single",
+          3,
+          3,
+          169
+        ],
+        "112": [
+          "single",
+          4,
+          4,
+          191
+        ],
+        "110": [
+          "single",
+          4,
+          6,
+          195
+        ],
+        "111": [
+          "single",
+          4,
+          7,
+          197
+        ],
+        "114": [
+          "single",
+          5,
+          1,
+          205
+        ],
+        "113": [
+          "single",
+          5,
+          4,
+          211
+        ],
+        "116": [
+          "single",
+          6,
+          3,
+          229
+        ],
+        "115": [
+          "single",
+          6,
+          4,
+          231
+        ],
+        "104": [
+          "single",
+          7,
+          1,
+          245
+        ],
+        "103": [
+          "single",
+          7,
+          4,
+          251
+        ],
+        "101": [
+          "single",
+          7,
+          6,
+          255
+        ],
+        "102": [
+          "single",
+          7,
+          7,
+          257
+        ],
+        "117": [
+          "single",
+          8,
+          1,
+          265
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 1,
+      "resource": "DAT_OutsideStudentDormitory",
+      "source": "part_1.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          1,
+          41
+        ],
+        "104": [
+          "single",
+          2,
+          4,
+          67
+        ],
+        "107": [
+          "single",
+          2,
+          6,
+          71
+        ],
+        "102": [
+          "single",
+          3,
+          1,
+          81
+        ],
+        "105": [
+          "single",
+          3,
+          4,
+          87
+        ],
+        "106": [
+          "single",
+          3,
+          6,
+          91
+        ],
+        "108": [
+          "single",
+          4,
+          3,
+          105
+        ],
+        "103": [
+          "single",
+          4,
+          4,
+          107
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 10,
+      "resource": "DAT_Decanato",
+      "source": "part_10.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          4,
+          123
+        ],
+        "102": [
+          "single",
+          2,
+          1,
+          137
+        ],
+        "103": [
+          "single",
+          2,
+          4,
+          143
+        ],
+        "104": [
+          "single",
+          3,
+          4,
+          163
+        ],
+        "105": [
+          "single",
+          3,
+          5,
+          165
+        ],
+        "106": [
+          "single",
+          4,
+          1,
+          177
+        ],
+        "107": [
+          "single",
+          4,
+          4,
+          183
+        ],
+        "108": [
+          "single",
+          5,
+          1,
+          197
+        ],
+        "109": [
+          "single",
+          6,
+          1,
+          217
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 11,
+      "resource": "DAT_DecanatoPart11",
+      "source": "part_11.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [
+        114
+      ],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          4,
+          87
+        ],
+        "102": [
+          "single",
+          1,
+          7,
+          93
+        ],
+        "109": [
+          "single",
+          2,
+          4,
+          107
+        ],
+        "103": [
+          "single",
+          3,
+          4,
+          127
+        ],
+        "104": [
+          "single",
+          4,
+          2,
+          143
+        ],
+        "105": [
+          "single",
+          4,
+          3,
+          145
+        ],
+        "106": [
+          "single",
+          4,
+          4,
+          147
+        ],
+        "108": [
+          "single",
+          5,
+          1,
+          161
+        ],
+        "110": [
+          "single",
+          6,
+          4,
+          187
+        ],
+        "111": [
+          "single",
+          7,
+          4,
+          207
+        ],
+        "112": [
+          "single",
+          8,
+          3,
+          225
+        ],
+        "113": [
+          "single",
+          8,
+          4,
+          227
+        ],
+        "107": [
+          "use",
+          1,
+          7,
+          2,
+          2,
+          959
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 12,
+      "resource": "DAT_OutsideChurch",
+      "source": "part_12.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [
+        106,
+        107,
+        108
+      ],
+      "samples": {
+        "102": [
+          "single",
+          1,
+          4,
+          115
+        ],
+        "101": [
+          "single",
+          2,
+          1,
+          129
+        ],
+        "103": [
+          "single",
+          3,
+          4,
+          155
+        ],
+        "104": [
+          "single",
+          4,
+          1,
+          169
+        ],
+        "105": [
+          "use",
+          1,
+          27,
+          2,
+          3,
+          2337
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 13,
+      "resource": "DAT_InsideChurch",
+      "source": "part_13.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          1,
+          65
+        ],
+        "103": [
+          "single",
+          1,
+          4,
+          71
+        ],
+        "102": [
+          "single",
+          2,
+          4,
+          91
+        ],
+        "105": [
+          "single",
+          3,
+          1,
+          105
+        ],
+        "104": [
+          "single",
+          4,
+          1,
+          125
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 14,
+      "resource": "DAT_ChurchPuzzle",
+      "source": "part_14.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          1,
+          69
+        ],
+        "102": [
+          "single",
+          1,
+          4,
+          75
+        ],
+        "103": [
+          "single",
+          2,
+          4,
+          95
+        ],
+        "104": [
+          "single",
+          3,
+          4,
+          115
+        ],
+        "105": [
+          "single",
+          4,
+          1,
+          129
+        ],
+        "106": [
+          "single",
+          5,
+          1,
+          149
+        ],
+        "107": [
+          "single",
+          5,
+          4,
+          155
+        ],
+        "108": [
+          "use",
+          1,
+          8,
+          2,
+          3,
+          971
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 15,
+      "resource": "DAT_TobiasOffice",
+      "source": "part_15.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          1,
+          37
+        ],
+        "102": [
+          "single",
+          1,
+          4,
+          43
+        ],
+        "103": [
+          "single",
+          2,
+          3,
+          61
+        ],
+        "104": [
+          "single",
+          2,
+          4,
+          63
+        ],
+        "105": [
+          "single",
+          2,
+          6,
+          67
+        ],
+        "106": [
+          "single",
+          2,
+          7,
+          69
+        ],
+        "107": [
+          "single",
+          3,
+          2,
+          79
+        ],
+        "108": [
+          "single",
+          3,
+          3,
+          81
+        ],
+        "109": [
+          "single",
+          3,
+          4,
+          83
+        ],
+        "110": [
+          "single",
+          3,
+          5,
+          85
+        ],
+        "111": [
+          "single",
+          4,
+          3,
+          101
+        ],
+        "112": [
+          "single",
+          4,
+          4,
+          103
+        ],
+        "113": [
+          "single",
+          4,
+          5,
+          105
+        ],
+        "114": [
+          "single",
+          16,
+          5,
+          345
+        ],
+        "116": [
+          "use",
+          1,
+          25,
+          2,
+          3,
+          2105
+        ],
+        "115": [
+          "use",
+          1,
+          35,
+          2,
+          3,
+          2905
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 16,
+      "resource": "DAT_Laboratory",
+      "source": "part_16.cpp",
+      "action_codes": [
+        101,
+        102,
+        103
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          3,
+          61
+        ],
+        "102": [
+          "single",
+          1,
+          4,
+          63
+        ],
+        "103": [
+          "single",
+          2,
+          1,
+          77
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 17,
+      "resource": "DAT_OutsideCollege",
+      "source": "part_17.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          1,
+          869
+        ],
+        "102": [
+          "single",
+          1,
+          4,
+          875
+        ],
+        "103": [
+          "single",
+          2,
+          1,
+          889
+        ],
+        "104": [
+          "single",
+          3,
+          1,
+          909
+        ],
+        "105": [
+          "single",
+          4,
+          1,
+          929
+        ],
+        "106": [
+          "use",
+          1,
+          22,
+          2,
+          3,
+          2697
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 18,
+      "resource": "DAT_MenToilets",
+      "source": "part_18.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          4,
+          83
+        ],
+        "102": [
+          "single",
+          2,
+          4,
+          103
+        ],
+        "103": [
+          "single",
+          2,
+          5,
+          105
+        ],
+        "104": [
+          "single",
+          3,
+          5,
+          125
+        ],
+        "105": [
+          "single",
+          4,
+          5,
+          145
+        ],
+        "106": [
+          "single",
+          5,
+          4,
+          163
+        ],
+        "110": [
+          "single",
+          6,
+          1,
+          177
+        ],
+        "107": [
+          "single",
+          7,
+          4,
+          203
+        ],
+        "108": [
+          "single",
+          7,
+          5,
+          205
+        ],
+        "109": [
+          "use",
+          1,
+          18,
+          2,
+          1,
+          1731
+        ],
+        "111": [
+          "use",
+          1,
+          23,
+          2,
+          7,
+          2173
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 19,
+      "resource": "DAT_WomenToilets",
+      "source": "part_19.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          4,
+          79
+        ],
+        "102": [
+          "single",
+          1,
+          5,
+          81
+        ],
+        "103": [
+          "single",
+          2,
+          5,
+          101
+        ],
+        "104": [
+          "single",
+          3,
+          5,
+          121
+        ],
+        "105": [
+          "single",
+          4,
+          4,
+          139
+        ],
+        "107": [
+          "single",
+          5,
+          4,
+          159
+        ],
+        "108": [
+          "single",
+          5,
+          5,
+          161
+        ],
+        "106": [
+          "single",
+          6,
+          1,
+          173
+        ],
+        "109": [
+          "use",
+          1,
+          28,
+          2,
+          4,
+          2523
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 2,
+      "resource": "DAT_StudentDormitoryAttic",
+      "source": "part_2.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        121
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [
+        120
+      ],
+      "samples": {
+        "118": [
+          "single",
+          1,
+          1,
+          311
+        ],
+        "114": [
+          "single",
+          1,
+          4,
+          317
+        ],
+        "106": [
+          "single",
+          2,
+          4,
+          337
+        ],
+        "101": [
+          "single",
+          2,
+          6,
+          341
+        ],
+        "102": [
+          "single",
+          2,
+          7,
+          343
+        ],
+        "107": [
+          "single",
+          3,
+          3,
+          355
+        ],
+        "108": [
+          "single",
+          4,
+          4,
+          377
+        ],
+        "109": [
+          "single",
+          5,
+          4,
+          397
+        ],
+        "119": [
+          "single",
+          6,
+          1,
+          411
+        ],
+        "110": [
+          "single",
+          6,
+          4,
+          417
+        ],
+        "111": [
+          "single",
+          7,
+          4,
+          437
+        ],
+        "112": [
+          "single",
+          8,
+          4,
+          457
+        ],
+        "105": [
+          "single",
+          9,
+          4,
+          477
+        ],
+        "121": [
+          "single",
+          10,
+          4,
+          497
+        ],
+        "117": [
+          "use",
+          1,
+          8,
+          2,
+          8,
+          1425
+        ],
+        "115": [
+          "use",
+          1,
+          9,
+          2,
+          8,
+          1521
+        ],
+        "103": [
+          "use",
+          1,
+          9,
+          2,
+          9,
+          1523
+        ],
+        "116": [
+          "use",
+          1,
+          10,
+          2,
+          7,
+          1615
+        ],
+        "104": [
+          "use",
+          1,
+          10,
+          2,
+          8,
+          1617
+        ],
+        "113": [
+          "use",
+          1,
+          11,
+          2,
+          7,
+          1711
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 21,
+      "resource": "DAT_CollegeCorridorMargaret",
+      "source": "part_21.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          1,
+          45
+        ],
+        "102": [
+          "single",
+          2,
+          2,
+          67
+        ],
+        "103": [
+          "single",
+          2,
+          4,
+          71
+        ],
+        "104": [
+          "single",
+          3,
+          3,
+          89
+        ],
+        "105": [
+          "single",
+          3,
+          4,
+          91
+        ],
+        "113": [
+          "single",
+          4,
+          1,
+          105
+        ],
+        "106": [
+          "single",
+          4,
+          4,
+          111
+        ],
+        "107": [
+          "single",
+          4,
+          6,
+          115
+        ],
+        "108": [
+          "single",
+          4,
+          7,
+          117
+        ],
+        "109": [
+          "single",
+          5,
+          4,
+          131
+        ],
+        "110": [
+          "single",
+          6,
+          1,
+          145
+        ],
+        "112": [
+          "give",
+          1,
+          1,
+          2,
+          2,
+          3407
+        ],
+        "111": [
+          "use",
+          1,
+          21,
+          2,
+          3,
+          1905
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 22,
+      "resource": "DAT_BellChurch",
+      "source": "part_22.cpp",
+      "action_codes": [
+        101,
+        102
+      ],
+      "handler_cases": [
+        101,
+        102
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          4,
+          35
+        ],
+        "102": [
+          "single",
+          2,
+          1,
+          49
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 25,
+      "resource": "DAT_CollegeCorridorAnnouncementBoard",
+      "source": "part_25.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109
+      ],
+      "handler_cases": [
+        1,
+        2,
+        3,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [
+        1,
+        2,
+        3
+      ],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          1,
+          65
+        ],
+        "104": [
+          "single",
+          2,
+          1,
+          85
+        ],
+        "102": [
+          "single",
+          2,
+          4,
+          91
+        ],
+        "103": [
+          "single",
+          2,
+          5,
+          93
+        ],
+        "105": [
+          "single",
+          3,
+          1,
+          105
+        ],
+        "106": [
+          "single",
+          3,
+          4,
+          111
+        ],
+        "107": [
+          "single",
+          3,
+          6,
+          115
+        ],
+        "108": [
+          "single",
+          3,
+          7,
+          117
+        ],
+        "109": [
+          "single",
+          4,
+          1,
+          125
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 26,
+      "resource": "DAT_CollegeCorridorMissBarrymore",
+      "source": "part_26.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          4,
+          75
+        ],
+        "107": [
+          "single",
+          2,
+          1,
+          89
+        ],
+        "102": [
+          "single",
+          2,
+          4,
+          95
+        ],
+        "103": [
+          "single",
+          2,
+          6,
+          99
+        ],
+        "104": [
+          "single",
+          2,
+          7,
+          101
+        ],
+        "105": [
+          "single",
+          3,
+          4,
+          115
+        ],
+        "106": [
+          "single",
+          4,
+          1,
+          129
+        ],
+        "108": [
+          "single",
+          5,
+          2,
+          151
+        ],
+        "109": [
+          "single",
+          5,
+          3,
+          153
+        ],
+        "110": [
+          "single",
+          5,
+          4,
+          155
+        ],
+        "111": [
+          "single",
+          5,
+          5,
+          157
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 27,
+      "resource": "DAT_CollegeLockers",
+      "source": "part_27.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          1,
+          49
+        ],
+        "102": [
+          "single",
+          2,
+          4,
+          75
+        ],
+        "103": [
+          "single",
+          2,
+          6,
+          79
+        ],
+        "104": [
+          "single",
+          2,
+          7,
+          81
+        ],
+        "105": [
+          "single",
+          3,
+          4,
+          95
+        ],
+        "106": [
+          "single",
+          3,
+          6,
+          99
+        ],
+        "107": [
+          "single",
+          3,
+          7,
+          101
+        ],
+        "108": [
+          "single",
+          4,
+          3,
+          113
+        ],
+        "109": [
+          "single",
+          4,
+          4,
+          115
+        ],
+        "111": [
+          "single",
+          5,
+          4,
+          135
+        ],
+        "112": [
+          "single",
+          6,
+          4,
+          155
+        ],
+        "113": [
+          "single",
+          7,
+          1,
+          169
+        ],
+        "110": [
+          "use",
+          1,
+          20,
+          2,
+          4,
+          1881
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 28,
+      "resource": "DAT_CollegeCorridorCaroline",
+      "source": "part_28.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "102": [
+          "single",
+          1,
+          4,
+          127
+        ],
+        "103": [
+          "single",
+          2,
+          4,
+          147
+        ],
+        "110": [
+          "single",
+          2,
+          6,
+          151
+        ],
+        "109": [
+          "single",
+          3,
+          3,
+          165
+        ],
+        "104": [
+          "single",
+          3,
+          4,
+          167
+        ],
+        "108": [
+          "single",
+          4,
+          2,
+          183
+        ],
+        "105": [
+          "single",
+          4,
+          4,
+          187
+        ],
+        "112": [
+          "single",
+          4,
+          5,
+          189
+        ],
+        "106": [
+          "single",
+          5,
+          4,
+          207
+        ],
+        "107": [
+          "single",
+          6,
+          4,
+          227
+        ],
+        "101": [
+          "single",
+          7,
+          1,
+          241
+        ],
+        "113": [
+          "use",
+          1,
+          8,
+          2,
+          4,
+          1093
+        ],
+        "111": [
+          "give",
+          1,
+          22,
+          1,
+          23,
+          5173
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 30,
+      "resource": "DAT_CollegeStairsFirstFloor",
+      "source": "part_30.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          1,
+          109
+        ],
+        "102": [
+          "single",
+          2,
+          1,
+          129
+        ],
+        "103": [
+          "single",
+          2,
+          4,
+          135
+        ],
+        "104": [
+          "single",
+          3,
+          1,
+          149
+        ],
+        "105": [
+          "single",
+          3,
+          4,
+          155
+        ],
+        "106": [
+          "single",
+          4,
+          1,
+          169
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 31,
+      "resource": "DAT_CollegeStairsSecondFloor",
+      "source": "part_31.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          1,
+          125
+        ],
+        "102": [
+          "single",
+          2,
+          1,
+          145
+        ],
+        "105": [
+          "single",
+          2,
+          4,
+          151
+        ],
+        "103": [
+          "single",
+          2,
+          6,
+          155
+        ],
+        "104": [
+          "single",
+          2,
+          7,
+          157
+        ],
+        "106": [
+          "single",
+          3,
+          1,
+          165
+        ],
+        "107": [
+          "single",
+          3,
+          4,
+          171
+        ],
+        "108": [
+          "single",
+          4,
+          1,
+          185
+        ],
+        "109": [
+          "single",
+          5,
+          4,
+          211
+        ],
+        "111": [
+          "single",
+          6,
+          4,
+          231
+        ],
+        "112": [
+          "single",
+          7,
+          4,
+          251
+        ],
+        "113": [
+          "single",
+          8,
+          2,
+          267
+        ],
+        "114": [
+          "single",
+          8,
+          3,
+          269
+        ],
+        "115": [
+          "single",
+          8,
+          4,
+          271
+        ],
+        "116": [
+          "use",
+          1,
+          1,
+          2,
+          8,
+          517
+        ],
+        "110": [
+          "use",
+          1,
+          16,
+          2,
+          2,
+          1603
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 32,
+      "resource": "DAT_Part32",
+      "source": "part_32.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        108
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106
+      ],
+      "unhandled": [
+        108
+      ],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          1,
+          41
+        ],
+        "102": [
+          "single",
+          2,
+          4,
+          67
+        ],
+        "106": [
+          "single",
+          2,
+          5,
+          69
+        ],
+        "103": [
+          "single",
+          3,
+          4,
+          87
+        ],
+        "104": [
+          "single",
+          4,
+          4,
+          107
+        ],
+        "105": [
+          "single",
+          5,
+          4,
+          127
+        ],
+        "108": [
+          "use",
+          1,
+          8,
+          2,
+          3,
+          943
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 33,
+      "resource": "DAT_Library",
+      "source": "part_33.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          3,
+          461
+        ],
+        "102": [
+          "single",
+          1,
+          4,
+          463
+        ],
+        "103": [
+          "single",
+          2,
+          4,
+          483
+        ],
+        "104": [
+          "single",
+          3,
+          4,
+          503
+        ],
+        "105": [
+          "single",
+          4,
+          4,
+          523
+        ],
+        "106": [
+          "single",
+          5,
+          4,
+          543
+        ],
+        "107": [
+          "single",
+          6,
+          4,
+          563
+        ],
+        "110": [
+          "single",
+          7,
+          4,
+          583
+        ],
+        "109": [
+          "single",
+          8,
+          3,
+          601
+        ],
+        "108": [
+          "single",
+          8,
+          4,
+          603
+        ],
+        "111": [
+          "single",
+          9,
+          2,
+          619
+        ],
+        "112": [
+          "single",
+          9,
+          4,
+          623
+        ],
+        "113": [
+          "single",
+          10,
+          1,
+          637
+        ],
+        "114": [
+          "give",
+          1,
+          19,
+          2,
+          9,
+          5665
+        ],
+        "115": [
+          "give",
+          1,
+          32,
+          2,
+          9,
+          6861
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 34,
+      "resource": "DAT_ParkLeft",
+      "source": "part_34.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        108,
+        109
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [
+        107
+      ],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          4,
+          47
+        ],
+        "102": [
+          "single",
+          2,
+          4,
+          67
+        ],
+        "103": [
+          "single",
+          3,
+          3,
+          85
+        ],
+        "104": [
+          "single",
+          3,
+          4,
+          87
+        ],
+        "105": [
+          "single",
+          4,
+          2,
+          103
+        ],
+        "106": [
+          "single",
+          4,
+          4,
+          107
+        ],
+        "109": [
+          "single",
+          5,
+          1,
+          121
+        ],
+        "108": [
+          "give",
+          1,
+          24,
+          2,
+          4,
+          4927
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 35,
+      "resource": "DAT_ParkRight",
+      "source": "part_35.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          4,
+          51
+        ],
+        "102": [
+          "single",
+          2,
+          3,
+          69
+        ],
+        "103": [
+          "single",
+          2,
+          4,
+          71
+        ],
+        "104": [
+          "single",
+          3,
+          4,
+          91
+        ],
+        "105": [
+          "single",
+          4,
+          4,
+          111
+        ],
+        "106": [
+          "single",
+          5,
+          1,
+          125
+        ],
+        "107": [
+          "single",
+          6,
+          1,
+          145
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 36,
+      "resource": "DAT_ChemistryClassroom",
+      "source": "part_36.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          4,
+          123
+        ],
+        "102": [
+          "single",
+          2,
+          3,
+          141
+        ],
+        "103": [
+          "single",
+          2,
+          4,
+          143
+        ],
+        "104": [
+          "single",
+          3,
+          4,
+          163
+        ],
+        "105": [
+          "single",
+          4,
+          4,
+          183
+        ],
+        "106": [
+          "single",
+          4,
+          5,
+          185
+        ],
+        "107": [
+          "single",
+          5,
+          4,
+          203
+        ],
+        "108": [
+          "single",
+          5,
+          6,
+          207
+        ],
+        "109": [
+          "single",
+          6,
+          1,
+          217
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 37,
+      "resource": "DAT_PhysicsClassroom",
+      "source": "part_37.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          1,
+          109
+        ],
+        "102": [
+          "single",
+          2,
+          4,
+          135
+        ],
+        "106": [
+          "single",
+          2,
+          5,
+          137
+        ],
+        "103": [
+          "single",
+          3,
+          4,
+          155
+        ],
+        "105": [
+          "single",
+          3,
+          5,
+          157
+        ],
+        "104": [
+          "single",
+          4,
+          4,
+          175
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 4,
+      "resource": "DAT_Map",
+      "source": "part_4.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          1,
+          45
+        ],
+        "102": [
+          "single",
+          2,
+          1,
+          65
+        ],
+        "103": [
+          "single",
+          3,
+          1,
+          85
+        ],
+        "104": [
+          "single",
+          4,
+          1,
+          105
+        ],
+        "105": [
+          "single",
+          5,
+          1,
+          125
+        ],
+        "106": [
+          "single",
+          6,
+          1,
+          145
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 5,
+      "resource": "DAT_SpringRock",
+      "source": "part_5.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          4,
+          293
+        ],
+        "102": [
+          "single",
+          2,
+          1,
+          307
+        ],
+        "103": [
+          "single",
+          3,
+          3,
+          331
+        ],
+        "104": [
+          "single",
+          3,
+          4,
+          333
+        ],
+        "105": [
+          "single",
+          4,
+          1,
+          347
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 50,
+      "resource": "DAT_OutsideMaze",
+      "source": "part_50.cpp",
+      "action_codes": [
+        101,
+        102,
+        103
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "103": [
+          "single",
+          1,
+          1,
+          617
+        ],
+        "101": [
+          "single",
+          2,
+          1,
+          637
+        ],
+        "102": [
+          "single",
+          2,
+          4,
+          643
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 6,
+      "resource": "DAT_SpringBridge",
+      "source": "part_6.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          4,
+          115
+        ],
+        "102": [
+          "single",
+          2,
+          1,
+          129
+        ],
+        "103": [
+          "single",
+          3,
+          2,
+          151
+        ],
+        "104": [
+          "single",
+          3,
+          4,
+          155
+        ],
+        "105": [
+          "single",
+          4,
+          3,
+          173
+        ],
+        "106": [
+          "single",
+          4,
+          4,
+          175
+        ],
+        "107": [
+          "give",
+          1,
+          1,
+          2,
+          3,
+          3293
+        ],
+        "108": [
+          "give",
+          1,
+          26,
+          2,
+          3,
+          5133
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 68,
+      "resource": "DAT_Part68",
+      "source": "part_68.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        108,
+        109
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        108,
+        109
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          1,
+          185
+        ],
+        "102": [
+          "single",
+          2,
+          3,
+          209
+        ],
+        "103": [
+          "single",
+          2,
+          4,
+          211
+        ],
+        "104": [
+          "single",
+          3,
+          2,
+          227
+        ],
+        "105": [
+          "single",
+          3,
+          4,
+          231
+        ],
+        "106": [
+          "single",
+          4,
+          1,
+          245
+        ],
+        "109": [
+          "single",
+          5,
+          1,
+          265
+        ],
+        "108": [
+          "give",
+          1,
+          5,
+          2,
+          3,
+          3709
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 69,
+      "resource": "DAT_Part69",
+      "source": "part_69.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "102": [
+          "single",
+          1,
+          4,
+          119
+        ],
+        "101": [
+          "single",
+          2,
+          1,
+          133
+        ],
+        "106": [
+          "single",
+          3,
+          3,
+          157
+        ],
+        "103": [
+          "single",
+          3,
+          4,
+          159
+        ],
+        "104": [
+          "single",
+          4,
+          4,
+          179
+        ],
+        "105": [
+          "single",
+          5,
+          4,
+          199
+        ],
+        "108": [
+          "use",
+          1,
+          33,
+          2,
+          4,
+          2841
+        ],
+        "107": [
+          "use",
+          1,
+          34,
+          2,
+          4,
+          2921
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 7,
+      "resource": "DAT_AdministrationCorridor",
+      "source": "part_7.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112
+      ],
+      "handler_cases": [
+        0,
+        1,
+        2,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [
+        0,
+        1,
+        2
+      ],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          4,
+          203
+        ],
+        "111": [
+          "single",
+          2,
+          1,
+          217
+        ],
+        "102": [
+          "single",
+          2,
+          4,
+          223
+        ],
+        "103": [
+          "single",
+          2,
+          6,
+          227
+        ],
+        "104": [
+          "single",
+          2,
+          7,
+          229
+        ],
+        "112": [
+          "single",
+          3,
+          1,
+          237
+        ],
+        "105": [
+          "single",
+          3,
+          6,
+          247
+        ],
+        "106": [
+          "single",
+          3,
+          7,
+          249
+        ],
+        "107": [
+          "single",
+          4,
+          4,
+          263
+        ],
+        "108": [
+          "single",
+          5,
+          4,
+          283
+        ],
+        "109": [
+          "single",
+          6,
+          4,
+          303
+        ],
+        "110": [
+          "single",
+          8,
+          1,
+          337
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 70,
+      "resource": "DAT_Part70",
+      "source": "part_70.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          1,
+          37
+        ],
+        "102": [
+          "single",
+          2,
+          1,
+          57
+        ],
+        "103": [
+          "single",
+          3,
+          1,
+          77
+        ],
+        "104": [
+          "single",
+          4,
+          1,
+          97
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 71,
+      "resource": "DAT_Part71",
+      "source": "part_71.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          4,
+          51
+        ],
+        "102": [
+          "single",
+          2,
+          3,
+          69
+        ],
+        "103": [
+          "single",
+          2,
+          4,
+          71
+        ],
+        "104": [
+          "single",
+          3,
+          4,
+          91
+        ],
+        "105": [
+          "single",
+          4,
+          1,
+          105
+        ],
+        "106": [
+          "single",
+          5,
+          4,
+          131
+        ],
+        "107": [
+          "single",
+          6,
+          4,
+          151
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 72,
+      "resource": "DAT_Part72",
+      "source": "part_72.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          1,
+          113
+        ],
+        "102": [
+          "single",
+          2,
+          3,
+          137
+        ],
+        "103": [
+          "single",
+          2,
+          4,
+          139
+        ],
+        "104": [
+          "single",
+          3,
+          4,
+          159
+        ],
+        "105": [
+          "single",
+          4,
+          4,
+          179
+        ],
+        "106": [
+          "single",
+          5,
+          1,
+          193
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 76,
+      "resource": "DAT_Part76",
+      "source": "part_76.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        107,
+        108,
+        109
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108
+      ],
+      "unhandled": [
+        109
+      ],
+      "unreferenced_cases": [
+        106
+      ],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          4,
+          75
+        ],
+        "102": [
+          "single",
+          2,
+          4,
+          95
+        ],
+        "103": [
+          "single",
+          2,
+          5,
+          97
+        ],
+        "104": [
+          "single",
+          3,
+          3,
+          113
+        ],
+        "105": [
+          "single",
+          3,
+          4,
+          115
+        ],
+        "107": [
+          "single",
+          4,
+          4,
+          135
+        ],
+        "108": [
+          "single",
+          5,
+          4,
+          155
+        ],
+        "109": [
+          "give",
+          1,
+          25,
+          2,
+          1,
+          5143
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 77,
+      "resource": "DAT_Part77",
+      "source": "part_77.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          1,
+          869
+        ],
+        "102": [
+          "single",
+          1,
+          4,
+          875
+        ],
+        "103": [
+          "single",
+          2,
+          4,
+          895
+        ],
+        "104": [
+          "single",
+          2,
+          5,
+          897
+        ],
+        "105": [
+          "single",
+          4,
+          1,
+          929
+        ],
+        "106": [
+          "use",
+          1,
+          14,
+          2,
+          2,
+          2055
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 8,
+      "resource": "DAT_DeanPepperOffice",
+      "source": "part_8.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "102": [
+          "single",
+          1,
+          4,
+          195
+        ],
+        "103": [
+          "single",
+          2,
+          2,
+          211
+        ],
+        "104": [
+          "single",
+          2,
+          4,
+          215
+        ],
+        "105": [
+          "single",
+          3,
+          3,
+          233
+        ],
+        "107": [
+          "single",
+          4,
+          4,
+          255
+        ],
+        "108": [
+          "single",
+          4,
+          5,
+          257
+        ],
+        "109": [
+          "single",
+          5,
+          3,
+          273
+        ],
+        "110": [
+          "single",
+          5,
+          4,
+          275
+        ],
+        "101": [
+          "single",
+          6,
+          1,
+          289
+        ],
+        "111": [
+          "single",
+          6,
+          4,
+          295
+        ],
+        "112": [
+          "single",
+          6,
+          6,
+          299
+        ],
+        "113": [
+          "single",
+          6,
+          7,
+          301
+        ],
+        "114": [
+          "give",
+          1,
+          23,
+          2,
+          2,
+          5231
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 81,
+      "resource": "DAT_Part81",
+      "source": "part_81.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        106,
+        107,
+        108,
+        109,
+        110
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        106,
+        107,
+        108,
+        109,
+        110
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          1,
+          69
+        ],
+        "102": [
+          "single",
+          2,
+          2,
+          91
+        ],
+        "103": [
+          "single",
+          2,
+          4,
+          95
+        ],
+        "104": [
+          "single",
+          2,
+          6,
+          99
+        ],
+        "106": [
+          "single",
+          3,
+          4,
+          115
+        ],
+        "107": [
+          "single",
+          4,
+          4,
+          135
+        ],
+        "108": [
+          "single",
+          5,
+          4,
+          155
+        ],
+        "110": [
+          "give",
+          1,
+          1,
+          2,
+          2,
+          3341
+        ],
+        "109": [
+          "give",
+          1,
+          34,
+          2,
+          2,
+          5883
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    },
+    {
+      "part": 9,
+      "resource": "DAT_AdministrationSecretaryRoom",
+      "source": "part_9.cpp",
+      "action_codes": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        112,
+        113,
+        114,
+        115,
+        116
+      ],
+      "handler_cases": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        112,
+        113,
+        114,
+        115,
+        116
+      ],
+      "unhandled": [],
+      "unreferenced_cases": [],
+      "samples": {
+        "101": [
+          "single",
+          1,
+          1,
+          189
+        ],
+        "102": [
+          "single",
+          1,
+          4,
+          195
+        ],
+        "103": [
+          "single",
+          2,
+          2,
+          211
+        ],
+        "104": [
+          "single",
+          2,
+          4,
+          215
+        ],
+        "105": [
+          "single",
+          3,
+          4,
+          235
+        ],
+        "106": [
+          "single",
+          3,
+          6,
+          239
+        ],
+        "107": [
+          "single",
+          3,
+          7,
+          241
+        ],
+        "108": [
+          "single",
+          4,
+          4,
+          255
+        ],
+        "109": [
+          "single",
+          4,
+          5,
+          257
+        ],
+        "110": [
+          "single",
+          5,
+          3,
+          273
+        ],
+        "116": [
+          "single",
+          6,
+          1,
+          289
+        ],
+        "112": [
+          "single",
+          6,
+          4,
+          295
+        ],
+        "113": [
+          "single",
+          6,
+          6,
+          299
+        ],
+        "114": [
+          "single",
+          6,
+          7,
+          301
+        ],
+        "115": [
+          "use",
+          1,
+          12,
+          2,
+          3,
+          1293
+        ]
+      },
+      "out_of_range_matrix_offsets": []
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+Using configuration file: /Users/gabriel/Desktop/source/igor-stuff/audit/2026-10-17/all-versions/evidence/spanish-cd.ini
+User picked target 'audit' (engine ID 'igor', game ID 'igor')...
+Running Igor: Objective Uikokahonia (CD/DOS/Spanish)
+IGOR.DAT: b4ba3ec480ec66a2fa456265ab51f5f6, 61682719 bytes.
+IGOR.EXE: 70f49859d1defddda140d144e1eb90b1, 9115648 bytes.
+Unable to read 'IGOR.TBL'!
+Debugger started, type 'exit' to return to the game.
+Type 'help' to see a little list of commands and variables.
+Type 'clear' or 'cls' to clear the debugger's output.
+ERROR: Unable to read 'IGOR.TBL'!
+
+

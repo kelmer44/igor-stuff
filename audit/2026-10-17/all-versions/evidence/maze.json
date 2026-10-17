@@ -1,0 +1,12 @@
+{
+  "rooms": 17,
+  "nodes": 108,
+  "resources": 97,
+  "raw_text_identical": false,
+  "reviewed_differences": [
+    "removed generated-source comment",
+    "object state literal 70 renamed kMazeBeatenStateIndex (value 70)",
+    "getMazeRoom renamed partMazeGetRoom"
+  ],
+  "data_equivalent_after_verified_symbol_substitutions": true
+}

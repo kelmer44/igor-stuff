@@ -1,0 +1,69 @@
+[2026-10-17 08:14:54] ScummVM 2026.3.1git10592-ga54b0a6ab85-dirty (Oct 17 2026 08:10:16)
+[2026-10-17 08:14:54] TAINTED Vorbis FLAC MP3 RGB zLib AAC A/52 FreeType2 FriBiDi JPEG PNG taskbar TTS SDL_net SDL2 OpenGL (with shaders) OpenGL desktop only RetroWave 
+[2026-10-17 08:14:54] --- Log opened.
+[2026-10-17 08:14:54] Using SDL Video Driver "dummy"
+[2026-10-17 08:14:54] SDL Video Detecting OpenGL Features...
+[2026-10-17 08:14:54] SDL Video Detecting Anti-aliasing Support...
+[2026-10-17 08:14:54] Checking SDL Antialiasing Support With 2 Samples... No Window
+[2026-10-17 08:14:54] Checking SDL Antialiasing Support With 4 Samples... No Window
+[2026-10-17 08:14:54] Checking SDL Antialiasing Support With 8 Samples... No Window
+[2026-10-17 08:14:54] Checking SDL Antialiasing Support With 16 Samples... No Window
+[2026-10-17 08:14:54] Checking SDL Antialiasing Support With 32 Samples... No Window
+[2026-10-17 08:14:54] SDL Video OpenGL Feature Detection Complete
+[2026-10-17 08:14:54] Invalid joystick: 0
+[2026-10-17 08:14:54] creating SurfaceSDL graphics manager
+[2026-10-17 08:14:54] creating OpenGL graphics manager
+[2026-10-17 08:14:54] creating SurfaceSDL graphics manager
+[2026-10-17 08:14:54] Using SDL Audio Driver "dummy"
+[2026-10-17 08:14:54] Output sample rate: 44100 Hz
+[2026-10-17 08:14:54] Output buffer size: 1024 samples
+[2026-10-17 08:14:54] Output channels: 2
+[2026-10-17 08:14:54] HardwareInput with ID 'JOY_START' not known
+[2026-10-17 08:14:54] HardwareInput with ID 'JOY_LEFT_STICK_Y-' not known
+[2026-10-17 08:14:54] HardwareInput with ID 'JOY_LEFT_STICK_Y+' not known
+[2026-10-17 08:14:54] HardwareInput with ID 'JOY_LEFT_STICK_X-' not known
+[2026-10-17 08:14:54] HardwareInput with ID 'JOY_LEFT_STICK_X+' not known
+[2026-10-17 08:14:54] HardwareInput with ID 'JOY_RIGHT_SHOULDER' not known
+[2026-10-17 08:14:54] CPU extensions:
+[2026-10-17 08:14:54] SSE2(not supported) AVX2(not supported) NEON(enabled)
+[2026-10-17 08:14:54] Running Igor: Objective Uikokahonia (Floppy/DOS/English)
+[2026-10-17 08:14:54] IGOR.DAT: dbbac4257430da5d616ae946a37750ef, 8819339 bytes.
+[2026-10-17 08:14:54] IGOR.FSD: d081e286da14913379f0d7f58a6a5686, 1324850 bytes.
+[2026-10-17 08:14:54] HardwareInput with ID 'JOY_A' not known
+[2026-10-17 08:14:54] HardwareInput with ID 'JOY_B' not known
+[2026-10-17 08:14:54] HardwareInput with ID 'JOY_LEFT_SHOULDER' not known
+[2026-10-17 08:14:54] HardwareInput with ID 'JOY_Y' not known
+[2026-10-17 08:14:54] HardwareInput with ID 'JOY_X' not known
+[2026-10-17 08:14:54] HardwareInput with ID 'JOY_UP' not known
+[2026-10-17 08:14:54] HardwareInput with ID 'JOY_DOWN' not known
+[2026-10-17 08:14:54] HardwareInput with ID 'JOY_LEFT' not known
+[2026-10-17 08:14:54] HardwareInput with ID 'JOY_RIGHT' not known
+[2026-10-17 08:14:54] Setting 640 x 480 -> 640 x 480 -- 1
+[2026-10-17 08:14:54] generateZipSet: Loaded pack file: gui-icons.dat
+[2026-10-17 08:14:54] Opening hashed: THEMERC
+[2026-10-17 08:14:54] Opening hashed: THEMERC
+[2026-10-17 08:14:54] Opening hashed: THEMERC
+[2026-10-17 08:14:54] Opening hashed: THEMERC
+[2026-10-17 08:14:54] Loading theme gui/themes/scummremastered.zip
+[2026-10-17 08:14:54] Opening hashed: THEMERC
+[2026-10-17 08:14:54] Finished loading theme gui/themes/scummremastered.zip
+[2026-10-17 08:14:55] FSDirectory::createReadStreamForMember('IGOR.DAT') -> '/Users/gabriel/Desktop/source/igor-stuff/igor-en/IGOR.DAT'
+[2026-10-17 08:14:55] Opening hashed: IGOR.DAT
+[2026-10-17 08:14:55] FSDirectory::createReadStreamForMember('IGOR.FSD') -> '/Users/gabriel/Desktop/source/igor-stuff/igor-en/IGOR.FSD'
+[2026-10-17 08:14:55] Opening hashed: IGOR.FSD
+[2026-10-17 08:14:55] FSDirectory::createReadStreamForMember('IGOR.TBL') -> '/Users/gabriel/Desktop/source/igor-stuff/igor-en/IGOR.TBL'
+[2026-10-17 08:14:55] Opening hashed: IGOR.TBL
+[2026-10-17 08:14:55] partMain _currentPart 900
+[2026-10-17 08:14:56] Ctrl+F: fast mode 4 (6 ms per tick)
+[2026-10-17 08:14:58] partMain _currentPart 901
+[2026-10-17 08:14:59] partMain _currentPart 902
+[2026-10-17 08:14:59] partMain _currentPart 903
+[2026-10-17 08:15:03] partMain _currentPart 904
+[2026-10-17 08:15:05] partMain _currentPart 850
+[2026-10-17 08:15:05] playMusic() 2
+[2026-10-17 08:15:06] partMain _currentPart 61
+[2026-10-17 08:15:06] Entering part6
+[2026-10-17 08:15:07] showCursor()
+[2026-10-17 08:15:07] SdlEventSource: corrected stale mouse position (320,173) to (128,29)
+[2026-10-17 08:15:07] hideCursor()
+[2026-10-17 08:15:07] --- Log closed successfully.

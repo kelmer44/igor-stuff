@@ -1,0 +1,25 @@
+{
+  "spanish-floppy-credits": {
+    "exit": 0,
+    "timeout": false,
+    "markers": [
+      "AUDIT_CREDITS_PAGE state=910 pass=0",
+      "AUDIT_CREDITS_PAGE state=920 pass=0",
+      "AUDIT_CREDITS_PAGE state=930 pass=0",
+      "AUDIT_CREDITS_PAGE state=940 pass=0",
+      "AUDIT_CREDITS_PAGE state=950 pass=0",
+      "AUDIT_CREDITS_PAGE state=960 pass=0",
+      "AUDIT_CREDITS_PAGE state=970 pass=0",
+      "AUDIT_CREDITS_PAGE state=910 pass=1",
+      "AUDIT_CREDITS_PAGE state=920 pass=1",
+      "AUDIT_CREDITS_PAGE state=930 pass=1",
+      "AUDIT_CREDITS_PAGE state=940 pass=1",
+      "AUDIT_CREDITS_PAGE state=950 pass=1",
+      "AUDIT_CREDITS_PAGE state=960 pass=1",
+      "AUDIT_CREDITS_PAGE state=970 pass=1",
+      "AUDIT_CREDITS_COMPLETE"
+    ],
+    "natural_state_61": true,
+    "dictionary_error": false
+  }
+}

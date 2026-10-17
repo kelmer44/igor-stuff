@@ -1,0 +1,11 @@
+{
+  "spanish-floppy-lighthouse": {
+    "exit": -6,
+    "timeout": false,
+    "markers": [
+      "AUDIT_LIGHTHOUSE_ENTER"
+    ],
+    "natural_state_61": true,
+    "dictionary_error": false
+  }
+}

@@ -1,0 +1,5385 @@
+{
+  "demo100": {
+    "lane_loads_checked": 54,
+    "primary_lane_bad_resources": [],
+    "secondary_lane_bad_resources": [
+      {
+        "resource": "TXT_PhilipRoom",
+        "language": 1,
+        "differences": 10,
+        "examples": [
+          {
+            "group": "text",
+            "slot": 201,
+            "expected": "",
+            "actual": "I didn%t remember..."
+          },
+          {
+            "group": "text",
+            "slot": 202,
+            "expected": "",
+            "actual": "...that I had a bottle of vodka"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_PhysicsClassroom",
+        "language": 1,
+        "differences": 11,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " door"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " papercase"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_ChemistryClassroom",
+        "language": 1,
+        "differences": 15,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " desk"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " pen"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_CollegeStairsSecondFloor",
+        "language": 1,
+        "differences": 28,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " corridor"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " door"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_CollegeStairsFirstFloor",
+        "language": 1,
+        "differences": 14,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " corridor"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " stairs"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_CollegeCorridorMissBarrymore",
+        "language": 1,
+        "differences": 21,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " plaque"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " door"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_CollegeCorridorAnnouncementBoard",
+        "language": 1,
+        "differences": 13,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " corridor"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " announcement board"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_CollegeCorridorChemistryClass",
+        "language": 1,
+        "differences": 19,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " corridor"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " door"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_CollegeCorridorLadiesRoom",
+        "language": 1,
+        "differences": 17,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " corridor"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " class picture"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_CollegeCorridorMargaret",
+        "language": 1,
+        "differences": 32,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " corridor"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " Margaret"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_CollegeLockers",
+        "language": 1,
+        "differences": 34,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " corridor"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " lockers"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_WomenToilets",
+        "language": 1,
+        "differences": 31,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " door"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " door"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_MenToilets",
+        "language": 1,
+        "differences": 21,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " grate"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " door"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_OutsideCollege",
+        "language": 1,
+        "differences": 29,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " door"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " Philip and Jimmy"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Laboratory",
+        "language": 1,
+        "differences": 25,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " laboratory instruments"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " door"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_MargaretRoom",
+        "language": 1,
+        "differences": 25,
+        "examples": [
+          {
+            "group": "text",
+            "slot": 201,
+            "expected": "",
+            "actual": "I want to make myself look spiffy."
+          },
+          {
+            "group": "text",
+            "slot": 202,
+            "expected": "",
+            "actual": "I don%t want to let this opportunity go by!"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Map",
+        "language": 1,
+        "differences": 6,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " church"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " student dormitory"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_TobiasOffice",
+        "language": 1,
+        "differences": 41,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " door"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " cuckoo clock"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_BellChurch",
+        "language": 1,
+        "differences": 8,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " bell"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " stairs"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_ChurchPuzzle",
+        "language": 1,
+        "differences": 31,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " stairs"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " mosaic"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_InsideChurch",
+        "language": 1,
+        "differences": 6,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " pulpit"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " stain glass window"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_OutsideChurch",
+        "language": 1,
+        "differences": 21,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " entrance"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " path"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_SpringBridge",
+        "language": 1,
+        "differences": 7,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " water"
+          },
+          {
+            "group": "object",
+            "slot": 3,
+            "expected": "",
+            "actual": " note"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Library",
+        "language": 1,
+        "differences": 44,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " books"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " books"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_SpringBridgeIntro",
+        "language": 1,
+        "differences": 29,
+        "examples": [
+          {
+            "group": "text",
+            "slot": 201,
+            "expected": "",
+            "actual": "Well Laura, you%re getting better."
+          },
+          {
+            "group": "text",
+            "slot": 202,
+            "expected": "",
+            "actual": "But I still have to give you more tennis lessons"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_SpringRock",
+        "language": 1,
+        "differences": 19,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " water"
+          },
+          {
+            "group": "object",
+            "slot": 3,
+            "expected": "",
+            "actual": " photographer"
+          }
+        ]
+      }
+    ]
+  },
+  "demo110": {
+    "lane_loads_checked": 54,
+    "primary_lane_bad_resources": [],
+    "secondary_lane_bad_resources": [
+      {
+        "resource": "TXT_PhilipRoom",
+        "language": 1,
+        "differences": 10,
+        "examples": [
+          {
+            "group": "text",
+            "slot": 201,
+            "expected": "",
+            "actual": "I didn%t remember..."
+          },
+          {
+            "group": "text",
+            "slot": 202,
+            "expected": "",
+            "actual": "...that I had a bottle of vodka"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_PhysicsClassroom",
+        "language": 1,
+        "differences": 11,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " door"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " papercase"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_ChemistryClassroom",
+        "language": 1,
+        "differences": 15,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " desk"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " pen"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_CollegeStairsSecondFloor",
+        "language": 1,
+        "differences": 28,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " corridor"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " door"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_CollegeStairsFirstFloor",
+        "language": 1,
+        "differences": 14,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " corridor"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " stairs"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_CollegeCorridorMissBarrymore",
+        "language": 1,
+        "differences": 21,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " plaque"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " door"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_CollegeCorridorAnnouncementBoard",
+        "language": 1,
+        "differences": 13,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " corridor"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " announcement board"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_CollegeCorridorChemistryClass",
+        "language": 1,
+        "differences": 19,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " corridor"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " door"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_CollegeCorridorLadiesRoom",
+        "language": 1,
+        "differences": 17,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " corridor"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " class picture"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_CollegeCorridorMargaret",
+        "language": 1,
+        "differences": 32,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " corridor"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " Margaret"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_CollegeLockers",
+        "language": 1,
+        "differences": 34,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " corridor"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " lockers"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_WomenToilets",
+        "language": 1,
+        "differences": 31,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " door"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " door"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_MenToilets",
+        "language": 1,
+        "differences": 21,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " grate"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " door"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_OutsideCollege",
+        "language": 1,
+        "differences": 29,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " door"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " Philip and Jimmy"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Laboratory",
+        "language": 1,
+        "differences": 25,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " laboratory instruments"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " door"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_MargaretRoom",
+        "language": 1,
+        "differences": 25,
+        "examples": [
+          {
+            "group": "text",
+            "slot": 201,
+            "expected": "",
+            "actual": "I want to make myself look spiffy."
+          },
+          {
+            "group": "text",
+            "slot": 202,
+            "expected": "",
+            "actual": "I don%t want to let this opportunity go by!"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Map",
+        "language": 1,
+        "differences": 6,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " church"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " student dormitory"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_TobiasOffice",
+        "language": 1,
+        "differences": 41,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " door"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " cuckoo clock"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_BellChurch",
+        "language": 1,
+        "differences": 8,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " bell"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " stairs"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_ChurchPuzzle",
+        "language": 1,
+        "differences": 31,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " stairs"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " mosaic"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_InsideChurch",
+        "language": 1,
+        "differences": 6,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " pulpit"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " stain glass window"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_OutsideChurch",
+        "language": 1,
+        "differences": 21,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " entrance"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " path"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_SpringBridge",
+        "language": 1,
+        "differences": 7,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " water"
+          },
+          {
+            "group": "object",
+            "slot": 3,
+            "expected": "",
+            "actual": " note"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Library",
+        "language": 1,
+        "differences": 44,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " books"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " books"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_SpringBridgeIntro",
+        "language": 1,
+        "differences": 29,
+        "examples": [
+          {
+            "group": "text",
+            "slot": 201,
+            "expected": "",
+            "actual": "Well Laura, you%re getting better."
+          },
+          {
+            "group": "text",
+            "slot": 202,
+            "expected": "",
+            "actual": "But I still have to give you more tennis lessons"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_SpringRock",
+        "language": 1,
+        "differences": 19,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " water"
+          },
+          {
+            "group": "object",
+            "slot": 3,
+            "expected": "",
+            "actual": " photographer"
+          }
+        ]
+      }
+    ]
+  },
+  "english-floppy": {
+    "lane_loads_checked": 134,
+    "primary_lane_bad_resources": [],
+    "secondary_lane_bad_resources": [
+      {
+        "resource": "TXT_PhilipRoom",
+        "language": 1,
+        "differences": 10,
+        "examples": [
+          {
+            "group": "text",
+            "slot": 201,
+            "expected": "",
+            "actual": "I didn%t remember..."
+          },
+          {
+            "group": "text",
+            "slot": 202,
+            "expected": "",
+            "actual": "...that I had a bottle of vodka"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_PhysicsClassroom",
+        "language": 1,
+        "differences": 11,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " door"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " papercase"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_ChemistryClassroom",
+        "language": 1,
+        "differences": 15,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " desk"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " pen"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_CollegeStairsSecondFloor",
+        "language": 1,
+        "differences": 28,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " corridor"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " door"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_CollegeStairsFirstFloor",
+        "language": 1,
+        "differences": 14,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " corridor"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " stairs"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_CollegeCorridorMissBarrymore",
+        "language": 1,
+        "differences": 21,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " plaque"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " door"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_CollegeCorridorAnnouncementBoard",
+        "language": 1,
+        "differences": 13,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " corridor"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " announcement board"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_CollegeCorridorChemistryClass",
+        "language": 1,
+        "differences": 19,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " corridor"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " door"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_CollegeCorridorLadiesRoom",
+        "language": 1,
+        "differences": 17,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " corridor"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " class picture"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_CollegeCorridorMargaret",
+        "language": 1,
+        "differences": 32,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " corridor"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " Margaret"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_CollegeLockers",
+        "language": 1,
+        "differences": 27,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " corridor"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " lockers"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_WomenToilets",
+        "language": 1,
+        "differences": 31,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " door"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " door"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_MenToilets",
+        "language": 1,
+        "differences": 21,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " grate"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " door"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_OutsideCollege",
+        "language": 1,
+        "differences": 29,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " door"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " Philip and Jimmy"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Laboratory",
+        "language": 1,
+        "differences": 25,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " laboratory instruments"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " door"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_MargaretRoom",
+        "language": 1,
+        "differences": 25,
+        "examples": [
+          {
+            "group": "text",
+            "slot": 201,
+            "expected": "",
+            "actual": "I want to make myself look spiffy."
+          },
+          {
+            "group": "text",
+            "slot": 202,
+            "expected": "",
+            "actual": "I don%t want to let this opportunity go by!"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Map",
+        "language": 1,
+        "differences": 6,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " church"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " student dormitory"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_TobiasOffice",
+        "language": 1,
+        "differences": 41,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " door"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " cuckoo clock"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_BellChurch",
+        "language": 1,
+        "differences": 8,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " bell"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " stairs"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_ChurchPuzzle",
+        "language": 1,
+        "differences": 31,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " stairs"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " mosaic"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_InsideChurch",
+        "language": 1,
+        "differences": 6,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " pulpit"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " stain glass window"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_OutsideChurch",
+        "language": 1,
+        "differences": 21,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " entrance"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " path"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_SpringBridge",
+        "language": 1,
+        "differences": 7,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " water"
+          },
+          {
+            "group": "object",
+            "slot": 3,
+            "expected": "",
+            "actual": " note"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Library",
+        "language": 1,
+        "differences": 44,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " books"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " books"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_SpringBridgeIntro",
+        "language": 1,
+        "differences": 29,
+        "examples": [
+          {
+            "group": "text",
+            "slot": 201,
+            "expected": "",
+            "actual": "Well Laura, you%re getting better."
+          },
+          {
+            "group": "text",
+            "slot": 202,
+            "expected": "",
+            "actual": "But I still have to give you more tennis lessons"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_SpringRock",
+        "language": 1,
+        "differences": 19,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " water"
+          },
+          {
+            "group": "object",
+            "slot": 3,
+            "expected": "",
+            "actual": " photographer"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Park",
+        "language": 1,
+        "differences": 32,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " statue"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " tree"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_AdministrationSecretaryRoom",
+        "language": 1,
+        "differences": 30,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " file cabinet"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " secretary"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_DeanPepperOffice",
+        "language": 1,
+        "differences": 35,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " window"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " dean"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_StudentDormitoryRoom",
+        "language": 1,
+        "differences": 28,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " bed"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " nightstand"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_DecanatoLeft",
+        "language": 1,
+        "differences": 18,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " window"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " hole"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_DecanatoRight",
+        "language": 1,
+        "differences": 13,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " plaque"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " door"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_AdministrationCorridor",
+        "language": 1,
+        "differences": 26,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " plaque"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " door"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_ParkRight",
+        "language": 1,
+        "differences": 11,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " tree"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " resin"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_OutsideStudentDormitory",
+        "language": 1,
+        "differences": 16,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " window"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " window"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_StudentDormitoryAttic",
+        "language": 1,
+        "differences": 39,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " window"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " trunk"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_MazeEntrance",
+        "language": 1,
+        "differences": 16,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " secret passage"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " secret passage"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Maze51",
+        "language": 1,
+        "differences": 16,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " secret passage"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " secret passage"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Maze52",
+        "language": 1,
+        "differences": 16,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " secret passage"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " secret passage"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Maze53",
+        "language": 1,
+        "differences": 16,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " secret passage"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " secret passage"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Maze54",
+        "language": 1,
+        "differences": 16,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " secret passage"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " secret passage"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Maze56",
+        "language": 1,
+        "differences": 16,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " secret passage"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " secret passage"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Maze57",
+        "language": 1,
+        "differences": 16,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " secret passage"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " secret passage"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Maze58",
+        "language": 1,
+        "differences": 16,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " secret passage"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " secret passage"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Maze59",
+        "language": 1,
+        "differences": 16,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " secret passage"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " secret passage"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Maze60",
+        "language": 1,
+        "differences": 16,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " secret passage"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " secret passage"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Maze61",
+        "language": 1,
+        "differences": 16,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " secret passage"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " secret passage"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Maze62",
+        "language": 1,
+        "differences": 16,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " secret passage"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " secret passage"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Maze63",
+        "language": 1,
+        "differences": 16,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " secret passage"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " secret passage"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Maze64",
+        "language": 1,
+        "differences": 16,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " secret passage"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " secret passage"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Maze65",
+        "language": 1,
+        "differences": 16,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " secret passage"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " secret passage"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Maze66",
+        "language": 1,
+        "differences": 16,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " secret passage"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " secret passage"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_OutsideMaze",
+        "language": 1,
+        "differences": 3,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " path"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " entrance to the labyrinth"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Part70",
+        "language": 1,
+        "differences": 4,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " secret passage"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " forest"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Part72",
+        "language": 1,
+        "differences": 9,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " path"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " flower"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Part68",
+        "language": 1,
+        "differences": 30,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " path"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " vase"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Part81",
+        "language": 1,
+        "differences": 39,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " path"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " lighthouse keeper"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Part74",
+        "language": 1,
+        "differences": 10,
+        "examples": [
+          {
+            "group": "text",
+            "slot": 201,
+            "expected": "",
+            "actual": "Hey boss, I think they%re sending us a message..."
+          },
+          {
+            "group": "text",
+            "slot": 202,
+            "expected": "",
+            "actual": "...Look through the binoculars."
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Part71",
+        "language": 1,
+        "differences": 25,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " grave"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " statuette"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Part69",
+        "language": 1,
+        "differences": 21,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " swamp"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " path"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Part32",
+        "language": 1,
+        "differences": 16,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " door"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " telescope"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Part77",
+        "language": 1,
+        "differences": 21,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " door"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " cage"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Part78",
+        "language": 1,
+        "differences": 35,
+        "examples": [
+          {
+            "group": "text",
+            "slot": 201,
+            "expected": "",
+            "actual": "Whisper me the answer, Harrison!"
+          },
+          {
+            "group": "text",
+            "slot": 202,
+            "expected": "",
+            "actual": "Come on, tell me something!"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Part73",
+        "language": 1,
+        "differences": 11,
+        "examples": [
+          {
+            "group": "text",
+            "slot": 201,
+            "expected": "",
+            "actual": "So you didn%t know anything about the reward"
+          },
+          {
+            "group": "text",
+            "slot": 202,
+            "expected": "",
+            "actual": "for \"The Great Dosicua\"?"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Part80",
+        "language": 1,
+        "differences": 21,
+        "examples": [
+          {
+            "group": "text",
+            "slot": 201,
+            "expected": "",
+            "actual": "Have you heard about the capture of the \"Weasel\""
+          },
+          {
+            "group": "text",
+            "slot": 202,
+            "expected": "",
+            "actual": "and the recovery of \"The Great Dosicua\"?"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Part76",
+        "language": 1,
+        "differences": 37,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " door"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " latch"
+          }
+        ]
+      }
+    ]
+  },
+  "spanish-cd": {
+    "lane_loads_checked": 134,
+    "primary_lane_bad_resources": [],
+    "secondary_lane_bad_resources": [
+      {
+        "resource": "TXT_PhilipRoom",
+        "language": 1,
+        "differences": 10,
+        "examples": [
+          {
+            "group": "text",
+            "slot": 201,
+            "expected": "",
+            "actual": "No me acordaba"
+          },
+          {
+            "group": "text",
+            "slot": 202,
+            "expected": "",
+            "actual": "que tenía esta botellita de vodka"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_PhysicsClassroom",
+        "language": 1,
+        "differences": 11,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " puerta"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " papelera"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_ChemistryClassroom",
+        "language": 1,
+        "differences": 15,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " mesa"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " bolígrafo"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_ParkRight",
+        "language": 1,
+        "differences": 11,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " árbol"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " resina"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Park",
+        "language": 1,
+        "differences": 32,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " estatua"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " árbol"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_CollegeStairsSecondFloor",
+        "language": 1,
+        "differences": 28,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " pasillo"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " puerta"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_CollegeStairsFirstFloor",
+        "language": 1,
+        "differences": 14,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " pasillo"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " escalera"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_CollegeCorridorMissBarrymore",
+        "language": 1,
+        "differences": 21,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " placa"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " puerta"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_CollegeCorridorAnnouncementBoard",
+        "language": 1,
+        "differences": 13,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " pasillo"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " tablón de anuncios"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_CollegeCorridorChemistryClass",
+        "language": 1,
+        "differences": 19,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " pasillo"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " puerta"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_CollegeCorridorLadiesRoom",
+        "language": 1,
+        "differences": 17,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " pasillo"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " orla"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_CollegeCorridorMargaret",
+        "language": 1,
+        "differences": 32,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " pasillo"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " Margaret"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_CollegeLockers",
+        "language": 1,
+        "differences": 27,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " pasillo"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " taquillas"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_WomenToilets",
+        "language": 1,
+        "differences": 31,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " puerta"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " puerta"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_MenToilets",
+        "language": 1,
+        "differences": 21,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " rejilla"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " puerta"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_OutsideCollege",
+        "language": 1,
+        "differences": 32,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " puerta"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " Philip y Jimmy"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_MargaretRoom",
+        "language": 1,
+        "differences": 25,
+        "examples": [
+          {
+            "group": "text",
+            "slot": 201,
+            "expected": "",
+            "actual": "Me arreglaré un poco para la ocasión."
+          },
+          {
+            "group": "text",
+            "slot": 202,
+            "expected": "",
+            "actual": "¡NO puedo dejar escapar esta oportunidad!"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Laboratory",
+        "language": 1,
+        "differences": 25,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " instrumental"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " puerta"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Map",
+        "language": 1,
+        "differences": 6,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " iglesia"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " residencia de estudiantes"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_TobiasOffice",
+        "language": 1,
+        "differences": 41,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " puerta"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " reloj de cuco"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_BellChurch",
+        "language": 1,
+        "differences": 8,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " campana"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " escaleras"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_SpringBridge",
+        "language": 1,
+        "differences": 7,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " agua"
+          },
+          {
+            "group": "object",
+            "slot": 3,
+            "expected": "",
+            "actual": " papel"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_MazeEntrance",
+        "language": 1,
+        "differences": 16,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " pasadizo"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " pasadizo"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Maze51",
+        "language": 1,
+        "differences": 16,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " pasadizo"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " pasadizo"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Maze52",
+        "language": 1,
+        "differences": 16,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " pasadizo"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " pasadizo"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Maze53",
+        "language": 1,
+        "differences": 16,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " pasadizo"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " pasadizo"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Maze54",
+        "language": 1,
+        "differences": 16,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " pasadizo"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " pasadizo"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Maze56",
+        "language": 1,
+        "differences": 16,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " pasadizo"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " pasadizo"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Maze57",
+        "language": 1,
+        "differences": 16,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " pasadizo"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " pasadizo"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Maze58",
+        "language": 1,
+        "differences": 16,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " pasadizo"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " pasadizo"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Maze59",
+        "language": 1,
+        "differences": 16,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " pasadizo"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " pasadizo"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Maze60",
+        "language": 1,
+        "differences": 16,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " pasadizo"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " pasadizo"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Maze61",
+        "language": 1,
+        "differences": 16,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " pasadizo"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " pasadizo"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Maze62",
+        "language": 1,
+        "differences": 16,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " pasadizo"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " pasadizo"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Maze63",
+        "language": 1,
+        "differences": 16,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " pasadizo"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " pasadizo"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Maze64",
+        "language": 1,
+        "differences": 16,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " pasadizo"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " pasadizo"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Maze65",
+        "language": 1,
+        "differences": 16,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " pasadizo"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " pasadizo"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Maze66",
+        "language": 1,
+        "differences": 16,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " pasadizo"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " pasadizo"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_OutsideMaze",
+        "language": 1,
+        "differences": 3,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " camino"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " entrada al pasadizo"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_AdministrationSecretaryRoom",
+        "language": 1,
+        "differences": 30,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " archivador"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " secretaria"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_DeanPepperOffice",
+        "language": 1,
+        "differences": 35,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " ventana"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " decano"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_StudentDormitoryRoom",
+        "language": 1,
+        "differences": 28,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " cama"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " mesilla"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_OutsideStudentDormitory",
+        "language": 1,
+        "differences": 16,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " ventana"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " ventana"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_StudentDormitoryAttic",
+        "language": 1,
+        "differences": 39,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " ventana"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " baúl"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_SpringBridgeIntro",
+        "language": 1,
+        "differences": 29,
+        "examples": [
+          {
+            "group": "text",
+            "slot": 201,
+            "expected": "",
+            "actual": "Bueno Laura, vas progresando,"
+          },
+          {
+            "group": "text",
+            "slot": 202,
+            "expected": "",
+            "actual": "pero aún tengo que darte más clases de tenis"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_SpringRock",
+        "language": 1,
+        "differences": 19,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " agua"
+          },
+          {
+            "group": "object",
+            "slot": 3,
+            "expected": "",
+            "actual": " fotógrafo"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_DecanatoLeft",
+        "language": 1,
+        "differences": 18,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " ventana"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " agujero"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_DecanatoRight",
+        "language": 1,
+        "differences": 13,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " placa"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " puerta"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_AdministrationCorridor",
+        "language": 1,
+        "differences": 26,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " placa"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " puerta"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_OutsideChurch",
+        "language": 1,
+        "differences": 22,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " portalón"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " camino"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_ChurchPuzzle",
+        "language": 1,
+        "differences": 32,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " escaleras"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " rosetón"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_InsideChurch",
+        "language": 1,
+        "differences": 7,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " púlpito"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " vidriera"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Library",
+        "language": 1,
+        "differences": 44,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " libros"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " libros"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Part70",
+        "language": 1,
+        "differences": 4,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " pasadizo"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " bosque"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Part72",
+        "language": 1,
+        "differences": 9,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " pantano"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " flor"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Part68",
+        "language": 1,
+        "differences": 31,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " camino"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " jarrón"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Part81",
+        "language": 1,
+        "differences": 39,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " camino"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " farero"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Part74",
+        "language": 1,
+        "differences": 10,
+        "examples": [
+          {
+            "group": "text",
+            "slot": 201,
+            "expected": "",
+            "actual": "Jefe, creo que están enviándonos un mensaje."
+          },
+          {
+            "group": "text",
+            "slot": 202,
+            "expected": "",
+            "actual": "Mire por los prismáticos."
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Part71",
+        "language": 1,
+        "differences": 25,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " tumba"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " estatuilla"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Part69",
+        "language": 1,
+        "differences": 21,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " pantano"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " bosque"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Part32",
+        "language": 1,
+        "differences": 16,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " puerta"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " telescopio"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Part77",
+        "language": 1,
+        "differences": 21,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " puerta"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " jaula"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Part78",
+        "language": 1,
+        "differences": 35,
+        "examples": [
+          {
+            "group": "text",
+            "slot": 201,
+            "expected": "",
+            "actual": "¡Sóplame Harrison!"
+          },
+          {
+            "group": "text",
+            "slot": 202,
+            "expected": "",
+            "actual": "¡Venga, dime algo!"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Part73",
+        "language": 1,
+        "differences": 11,
+        "examples": [
+          {
+            "group": "text",
+            "slot": 201,
+            "expected": "",
+            "actual": "¿Así que no habías oído hablar de la recompensa"
+          },
+          {
+            "group": "text",
+            "slot": 202,
+            "expected": "",
+            "actual": "por recuperar \"El Gran Dosicua\"?"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Part80",
+        "language": 1,
+        "differences": 21,
+        "examples": [
+          {
+            "group": "text",
+            "slot": 201,
+            "expected": "",
+            "actual": "¿Te has enterado de la captura de \"El Comadreja\""
+          },
+          {
+            "group": "text",
+            "slot": 202,
+            "expected": "",
+            "actual": "y de la recuperación de \"El Gran Dosicua\"?"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Part76",
+        "language": 1,
+        "differences": 37,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": " puerta"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": " palanca"
+          }
+        ]
+      }
+    ]
+  },
+  "spanish-floppy": {
+    "lane_loads_checked": 136,
+    "primary_lane_bad_resources": [
+      {
+        "resource": "TXT_CollegeCorridorLadiesRoom",
+        "language": 0,
+        "differences": 4,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "pasillo",
+            "actual": "corridor"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "taquillas",
+            "actual": "door"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_WomenToilets",
+        "language": 0,
+        "differences": 5,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "puerta",
+            "actual": "door"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "puerta",
+            "actual": "door"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_MenToilets",
+        "language": 0,
+        "differences": 5,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "rejilla",
+            "actual": "upstairs"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "puerta",
+            "actual": "large rosette"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_SpringBridge",
+        "language": 0,
+        "differences": 3,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "agua",
+            "actual": "water"
+          },
+          {
+            "group": "object",
+            "slot": 3,
+            "expected": "papel",
+            "actual": "paper"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_MazeEntrance",
+        "language": 0,
+        "differences": 4,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "pasadizo",
+            "actual": "passage"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "pasadizo",
+            "actual": "passage"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Maze51",
+        "language": 0,
+        "differences": 4,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "pasadizo",
+            "actual": "passage"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "pasadizo",
+            "actual": "passage"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Maze52",
+        "language": 0,
+        "differences": 4,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "pasadizo",
+            "actual": "passage"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "pasadizo",
+            "actual": "passage"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Maze53",
+        "language": 0,
+        "differences": 4,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "pasadizo",
+            "actual": "passage"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "pasadizo",
+            "actual": "passage"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Maze54",
+        "language": 0,
+        "differences": 4,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "pasadizo",
+            "actual": "passage"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "pasadizo",
+            "actual": "passage"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Maze56",
+        "language": 0,
+        "differences": 4,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "pasadizo",
+            "actual": "passage"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "pasadizo",
+            "actual": "passage"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Maze57",
+        "language": 0,
+        "differences": 4,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "pasadizo",
+            "actual": "passage"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "pasadizo",
+            "actual": "passage"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Maze58",
+        "language": 0,
+        "differences": 4,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "pasadizo",
+            "actual": "passage"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "pasadizo",
+            "actual": "passage"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Maze59",
+        "language": 0,
+        "differences": 4,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "pasadizo",
+            "actual": "passage"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "pasadizo",
+            "actual": "passage"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Maze60",
+        "language": 0,
+        "differences": 4,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "pasadizo",
+            "actual": "passage"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "pasadizo",
+            "actual": "passage"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Maze61",
+        "language": 0,
+        "differences": 4,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "pasadizo",
+            "actual": "passage"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "pasadizo",
+            "actual": "passage"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Maze62",
+        "language": 0,
+        "differences": 4,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "pasadizo",
+            "actual": "passage"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "pasadizo",
+            "actual": "passage"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Maze63",
+        "language": 0,
+        "differences": 4,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "pasadizo",
+            "actual": "passage"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "pasadizo",
+            "actual": "passage"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Maze64",
+        "language": 0,
+        "differences": 4,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "pasadizo",
+            "actual": "passage"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "pasadizo",
+            "actual": "passage"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Maze65",
+        "language": 0,
+        "differences": 4,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "pasadizo",
+            "actual": "passage"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "pasadizo",
+            "actual": "passage"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Maze66",
+        "language": 0,
+        "differences": 4,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "pasadizo",
+            "actual": "passage"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "pasadizo",
+            "actual": "passage"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_OutsideMaze",
+        "language": 0,
+        "differences": 2,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "camino",
+            "actual": "path"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "entrada pasadizo",
+            "actual": "passage entrance"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_AdministrationSecretaryRoom",
+        "language": 0,
+        "differences": 17,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "archivador",
+            "actual": "archive"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "secretaria",
+            "actual": "secretary"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_DeanPepperOffice",
+        "language": 0,
+        "differences": 23,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "ventana",
+            "actual": "window"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "decano",
+            "actual": "dean"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_StudentDormitoryRoom",
+        "language": 0,
+        "differences": 26,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "cama",
+            "actual": "bed"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "mesilla",
+            "actual": "bed-side table"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_OutsideStudentDormitory",
+        "language": 0,
+        "differences": 16,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "ventana",
+            "actual": "window"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "ventana",
+            "actual": "window"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_StudentDormitoryAttic",
+        "language": 0,
+        "differences": 39,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "ventana",
+            "actual": "window"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "baúl",
+            "actual": "trunk"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_SpringRock",
+        "language": 0,
+        "differences": 3,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "agua",
+            "actual": "water"
+          },
+          {
+            "group": "object",
+            "slot": 3,
+            "expected": "fotógrafo",
+            "actual": "photographer"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_DecanatoLeft",
+        "language": 0,
+        "differences": 14,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "ventana",
+            "actual": "window"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "agujero",
+            "actual": "hole"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_DecanatoRight",
+        "language": 0,
+        "differences": 12,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "placa",
+            "actual": "plaque"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "puerta",
+            "actual": "door"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_AdministrationCorridor",
+        "language": 0,
+        "differences": 26,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "placa",
+            "actual": "plaque"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "puerta",
+            "actual": "door"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_OutsideChurch",
+        "language": 0,
+        "differences": 4,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "portalón",
+            "actual": "gate"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "camino",
+            "actual": "path"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_ChurchPuzzle",
+        "language": 0,
+        "differences": 5,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "escaleras",
+            "actual": "upstairs"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "rosetón",
+            "actual": "large rosette"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_InsideChurch",
+        "language": 0,
+        "differences": 3,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "púlpito",
+            "actual": "pulpit"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "vidriera",
+            "actual": "stained glass window"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_CollegeCorridorMathClass",
+        "language": 0,
+        "differences": 4,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "pasillo",
+            "actual": "corridor"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "puerta",
+            "actual": "door"
+          }
+        ]
+      }
+    ],
+    "secondary_lane_bad_resources": [
+      {
+        "resource": "TXT_PhilipRoom",
+        "language": 1,
+        "differences": 10,
+        "examples": [
+          {
+            "group": "text",
+            "slot": 201,
+            "expected": "",
+            "actual": "No me acordaba..."
+          },
+          {
+            "group": "text",
+            "slot": 202,
+            "expected": "",
+            "actual": "...que tenía esta botellita de vodka"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_PhysicsClassroom",
+        "language": 1,
+        "differences": 11,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": "puerta"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": "papelera"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_ChemistryClassroom",
+        "language": 1,
+        "differences": 15,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": "mesa"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": "bolígrafo"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_ParkRight",
+        "language": 1,
+        "differences": 11,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": "árbol"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": "resina"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Park",
+        "language": 1,
+        "differences": 34,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": "estatua"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": "árbol"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_CollegeStairsSecondFloor",
+        "language": 1,
+        "differences": 10,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": "pasillo"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": "puerta"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_CollegeStairsFirstFloor",
+        "language": 1,
+        "differences": 14,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": "pasillo"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": "escalera"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_CollegeCorridorMissBarrymore",
+        "language": 1,
+        "differences": 18,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": "placa"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": "puerta"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_CollegeCorridorAnnouncementBoard",
+        "language": 1,
+        "differences": 8,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": "pasillo"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": "taquillas"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_CollegeCorridorChemistryClass",
+        "language": 1,
+        "differences": 6,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": "pasillo"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": "puerta"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_CollegeCorridorCaroline",
+        "language": 1,
+        "differences": 40,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": "placa"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": "puerta"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_CollegeCorridorLadiesRoom",
+        "language": 1,
+        "differences": 6,
+        "examples": [
+          {
+            "group": "text",
+            "slot": 201,
+            "expected": "",
+            "actual": "Cada alumno tiene la suya."
+          },
+          {
+            "group": "text",
+            "slot": 203,
+            "expected": "",
+            "actual": "No conozco la combinación de ninguna."
+          }
+        ]
+      },
+      {
+        "resource": "TXT_CollegeCorridorMargaret",
+        "language": 1,
+        "differences": 33,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": "pasillo"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": "Margaret"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_CollegeLockers",
+        "language": 1,
+        "differences": 20,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": "pasillo"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": "taquillas"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_WomenToilets",
+        "language": 1,
+        "differences": 26,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 4,
+            "expected": "",
+            "actual": "calentador"
+          },
+          {
+            "group": "text",
+            "slot": 201,
+            "expected": "",
+            "actual": "No tiene nada de especial."
+          }
+        ]
+      },
+      {
+        "resource": "TXT_MenToilets",
+        "language": 1,
+        "differences": 16,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 6,
+            "expected": "",
+            "actual": "puerta"
+          },
+          {
+            "group": "object",
+            "slot": 7,
+            "expected": "",
+            "actual": "grifo"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_OutsideCollege",
+        "language": 1,
+        "differences": 32,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": "puerta"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": "Philip y Jimmy"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_MargaretRoom",
+        "language": 1,
+        "differences": 25,
+        "examples": [
+          {
+            "group": "text",
+            "slot": 201,
+            "expected": "",
+            "actual": "Me arreglaré un poco para la ocasión..."
+          },
+          {
+            "group": "text",
+            "slot": 202,
+            "expected": "",
+            "actual": "...¡NO puedo dejar escapar esta oportunidad!..."
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Laboratory",
+        "language": 1,
+        "differences": 25,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": "instrumental"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": "puerta"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Map",
+        "language": 1,
+        "differences": 6,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": "iglesia"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": "residencia de estudiantes"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_TobiasOffice",
+        "language": 1,
+        "differences": 35,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": "conserje"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": "puerta de la conserjería"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_BellChurch",
+        "language": 1,
+        "differences": 8,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": "campana"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": "escaleras"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_SpringBridge",
+        "language": 1,
+        "differences": 4,
+        "examples": [
+          {
+            "group": "text",
+            "slot": 201,
+            "expected": "",
+            "actual": "Debe estar muy fría"
+          },
+          {
+            "group": "text",
+            "slot": 202,
+            "expected": "",
+            "actual": "viniendo directamente de la montaña."
+          }
+        ]
+      },
+      {
+        "resource": "TXT_MazeEntrance",
+        "language": 1,
+        "differences": 12,
+        "examples": [
+          {
+            "group": "text",
+            "slot": 201,
+            "expected": "",
+            "actual": "Parece conducir a otra estancia"
+          },
+          {
+            "group": "text",
+            "slot": 202,
+            "expected": "",
+            "actual": "similar a esta."
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Maze51",
+        "language": 1,
+        "differences": 12,
+        "examples": [
+          {
+            "group": "text",
+            "slot": 201,
+            "expected": "",
+            "actual": "Parece conducir a otra estancia"
+          },
+          {
+            "group": "text",
+            "slot": 202,
+            "expected": "",
+            "actual": "similar a esta."
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Maze52",
+        "language": 1,
+        "differences": 12,
+        "examples": [
+          {
+            "group": "text",
+            "slot": 201,
+            "expected": "",
+            "actual": "Parece conducir a otra estancia"
+          },
+          {
+            "group": "text",
+            "slot": 202,
+            "expected": "",
+            "actual": "similar a esta."
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Maze53",
+        "language": 1,
+        "differences": 12,
+        "examples": [
+          {
+            "group": "text",
+            "slot": 201,
+            "expected": "",
+            "actual": "Parece conducir a otra estancia"
+          },
+          {
+            "group": "text",
+            "slot": 202,
+            "expected": "",
+            "actual": "similar a esta."
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Maze54",
+        "language": 1,
+        "differences": 12,
+        "examples": [
+          {
+            "group": "text",
+            "slot": 201,
+            "expected": "",
+            "actual": "Parece conducir a otra estancia"
+          },
+          {
+            "group": "text",
+            "slot": 202,
+            "expected": "",
+            "actual": "similar a esta."
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Maze56",
+        "language": 1,
+        "differences": 12,
+        "examples": [
+          {
+            "group": "text",
+            "slot": 201,
+            "expected": "",
+            "actual": "Parece conducir a otra estancia"
+          },
+          {
+            "group": "text",
+            "slot": 202,
+            "expected": "",
+            "actual": "similar a esta."
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Maze57",
+        "language": 1,
+        "differences": 12,
+        "examples": [
+          {
+            "group": "text",
+            "slot": 201,
+            "expected": "",
+            "actual": "Parece conducir a otra estancia"
+          },
+          {
+            "group": "text",
+            "slot": 202,
+            "expected": "",
+            "actual": "similar a esta."
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Maze58",
+        "language": 1,
+        "differences": 12,
+        "examples": [
+          {
+            "group": "text",
+            "slot": 201,
+            "expected": "",
+            "actual": "Parece conducir a otra estancia"
+          },
+          {
+            "group": "text",
+            "slot": 202,
+            "expected": "",
+            "actual": "similar a esta."
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Maze59",
+        "language": 1,
+        "differences": 12,
+        "examples": [
+          {
+            "group": "text",
+            "slot": 201,
+            "expected": "",
+            "actual": "Parece conducir a otra estancia"
+          },
+          {
+            "group": "text",
+            "slot": 202,
+            "expected": "",
+            "actual": "similar a esta."
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Maze60",
+        "language": 1,
+        "differences": 12,
+        "examples": [
+          {
+            "group": "text",
+            "slot": 201,
+            "expected": "",
+            "actual": "Parece conducir a otra estancia"
+          },
+          {
+            "group": "text",
+            "slot": 202,
+            "expected": "",
+            "actual": "similar a esta."
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Maze61",
+        "language": 1,
+        "differences": 12,
+        "examples": [
+          {
+            "group": "text",
+            "slot": 201,
+            "expected": "",
+            "actual": "Parece conducir a otra estancia"
+          },
+          {
+            "group": "text",
+            "slot": 202,
+            "expected": "",
+            "actual": "similar a esta."
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Maze62",
+        "language": 1,
+        "differences": 12,
+        "examples": [
+          {
+            "group": "text",
+            "slot": 201,
+            "expected": "",
+            "actual": "Parece conducir a otra estancia"
+          },
+          {
+            "group": "text",
+            "slot": 202,
+            "expected": "",
+            "actual": "similar a esta."
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Maze63",
+        "language": 1,
+        "differences": 12,
+        "examples": [
+          {
+            "group": "text",
+            "slot": 201,
+            "expected": "",
+            "actual": "Parece conducir a otra estancia"
+          },
+          {
+            "group": "text",
+            "slot": 202,
+            "expected": "",
+            "actual": "similar a esta."
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Maze64",
+        "language": 1,
+        "differences": 12,
+        "examples": [
+          {
+            "group": "text",
+            "slot": 201,
+            "expected": "",
+            "actual": "Parece conducir a otra estancia"
+          },
+          {
+            "group": "text",
+            "slot": 202,
+            "expected": "",
+            "actual": "similar a esta."
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Maze65",
+        "language": 1,
+        "differences": 12,
+        "examples": [
+          {
+            "group": "text",
+            "slot": 201,
+            "expected": "",
+            "actual": "Parece conducir a otra estancia"
+          },
+          {
+            "group": "text",
+            "slot": 202,
+            "expected": "",
+            "actual": "similar a esta."
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Maze66",
+        "language": 1,
+        "differences": 12,
+        "examples": [
+          {
+            "group": "text",
+            "slot": 201,
+            "expected": "",
+            "actual": "Parece conducir a otra estancia"
+          },
+          {
+            "group": "text",
+            "slot": 202,
+            "expected": "",
+            "actual": "similar a esta."
+          }
+        ]
+      },
+      {
+        "resource": "TXT_OutsideMaze",
+        "language": 1,
+        "differences": 1,
+        "examples": [
+          {
+            "group": "text",
+            "slot": 201,
+            "expected": "",
+            "actual": "Conduce al pasadizo."
+          }
+        ]
+      },
+      {
+        "resource": "TXT_AdministrationSecretaryRoom",
+        "language": 1,
+        "differences": 14,
+        "examples": [
+          {
+            "group": "text",
+            "slot": 209,
+            "expected": "",
+            "actual": "¿Para qué lo utilizará"
+          },
+          {
+            "group": "text",
+            "slot": 210,
+            "expected": "",
+            "actual": "la mujer esta?."
+          }
+        ]
+      },
+      {
+        "resource": "TXT_DeanPepperOffice",
+        "language": 1,
+        "differences": 12,
+        "examples": [
+          {
+            "group": "text",
+            "slot": 204,
+            "expected": "",
+            "actual": "en su vida."
+          },
+          {
+            "group": "text",
+            "slot": 214,
+            "expected": "",
+            "actual": "que toquen sus libros."
+          }
+        ]
+      },
+      {
+        "resource": "TXT_StudentDormitoryRoom",
+        "language": 1,
+        "differences": 2,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 5,
+            "expected": "",
+            "actual": "agujero en la pared"
+          },
+          {
+            "group": "text",
+            "slot": 211,
+            "expected": "",
+            "actual": "de T.P.L...."
+          }
+        ]
+      },
+      {
+        "resource": "TXT_SpringBridgeIntro",
+        "language": 1,
+        "differences": 29,
+        "examples": [
+          {
+            "group": "text",
+            "slot": 201,
+            "expected": "",
+            "actual": "Bueno Laura, vas progresando"
+          },
+          {
+            "group": "text",
+            "slot": 202,
+            "expected": "",
+            "actual": "pero aún tengo que darte más clases de tenis"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_SpringRock",
+        "language": 1,
+        "differences": 16,
+        "examples": [
+          {
+            "group": "text",
+            "slot": 201,
+            "expected": "",
+            "actual": "Debe estar muy fría"
+          },
+          {
+            "group": "text",
+            "slot": 202,
+            "expected": "",
+            "actual": "viniendo directamente de la montaña."
+          }
+        ]
+      },
+      {
+        "resource": "TXT_DecanatoLeft",
+        "language": 1,
+        "differences": 4,
+        "examples": [
+          {
+            "group": "text",
+            "slot": 208,
+            "expected": "",
+            "actual": "Está vacío."
+          },
+          {
+            "group": "text",
+            "slot": 209,
+            "expected": "",
+            "actual": "Parece que he atrapado una botella."
+          }
+        ]
+      },
+      {
+        "resource": "TXT_OutsideChurch",
+        "language": 1,
+        "differences": 17,
+        "examples": [
+          {
+            "group": "text",
+            "slot": 201,
+            "expected": "",
+            "actual": "Románico tardío, siglo XIII."
+          },
+          {
+            "group": "text",
+            "slot": 203,
+            "expected": "",
+            "actual": "Me pareció ver un lagarto"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_ChurchPuzzle",
+        "language": 1,
+        "differences": 26,
+        "examples": [
+          {
+            "group": "text",
+            "slot": 201,
+            "expected": "",
+            "actual": "Conducen al campanario."
+          },
+          {
+            "group": "text",
+            "slot": 202,
+            "expected": "",
+            "actual": "Están todas apagadas."
+          }
+        ]
+      },
+      {
+        "resource": "TXT_InsideChurch",
+        "language": 1,
+        "differences": 3,
+        "examples": [
+          {
+            "group": "text",
+            "slot": 201,
+            "expected": "",
+            "actual": "Bonita composición de colores"
+          },
+          {
+            "group": "text",
+            "slot": 202,
+            "expected": "",
+            "actual": "forma el sol a su paso por los cristales."
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Library",
+        "language": 1,
+        "differences": 44,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": "libros"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": "libros"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Part70",
+        "language": 1,
+        "differences": 4,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": "pasadizo"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": "bosque"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Part72",
+        "language": 1,
+        "differences": 9,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": "pantano"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": "flor"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Part68",
+        "language": 1,
+        "differences": 31,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": "camino"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": "jarrón"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Part81",
+        "language": 1,
+        "differences": 39,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": "camino"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": "farero"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Part74",
+        "language": 1,
+        "differences": 10,
+        "examples": [
+          {
+            "group": "text",
+            "slot": 201,
+            "expected": "",
+            "actual": "Jefe, creo que están enviándonos un mensaje..."
+          },
+          {
+            "group": "text",
+            "slot": 202,
+            "expected": "",
+            "actual": "...mire por los prismáticos."
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Part71",
+        "language": 1,
+        "differences": 25,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": "tumba"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": "estatuilla"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Part69",
+        "language": 1,
+        "differences": 21,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": "pantano"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": "bosque"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Part32",
+        "language": 1,
+        "differences": 16,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": "puerta"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": "telescopio"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Part77",
+        "language": 1,
+        "differences": 21,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": "puerta"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": "jaula"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Part78",
+        "language": 1,
+        "differences": 34,
+        "examples": [
+          {
+            "group": "text",
+            "slot": 201,
+            "expected": "",
+            "actual": "¡Sóplame Harrison!."
+          },
+          {
+            "group": "text",
+            "slot": 202,
+            "expected": "",
+            "actual": "¡Venga, dime algo!."
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Part73",
+        "language": 1,
+        "differences": 11,
+        "examples": [
+          {
+            "group": "text",
+            "slot": 201,
+            "expected": "",
+            "actual": "...¿así que no habías oído hablar de la recompensa"
+          },
+          {
+            "group": "text",
+            "slot": 202,
+            "expected": "",
+            "actual": "por recuperar \"El Gran Dosicua\"?. "
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Part80",
+        "language": 1,
+        "differences": 21,
+        "examples": [
+          {
+            "group": "text",
+            "slot": 201,
+            "expected": "",
+            "actual": "¿Te has enterado de la captura de \"El Comadreja\""
+          },
+          {
+            "group": "text",
+            "slot": 202,
+            "expected": "",
+            "actual": "y de la recuperación de \"El Gran Dosicua\"?..."
+          }
+        ]
+      },
+      {
+        "resource": "TXT_Part76",
+        "language": 1,
+        "differences": 37,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 1,
+            "expected": "",
+            "actual": "puerta"
+          },
+          {
+            "group": "object",
+            "slot": 2,
+            "expected": "",
+            "actual": "palanca"
+          }
+        ]
+      },
+      {
+        "resource": "TXT_CollegeCorridorMathClass",
+        "language": 1,
+        "differences": 8,
+        "examples": [
+          {
+            "group": "object",
+            "slot": 4,
+            "expected": "",
+            "actual": "tablón de anuncios"
+          },
+          {
+            "group": "text",
+            "slot": 201,
+            "expected": "",
+            "actual": "Creo que están dando clase."
+          }
+        ]
+      }
+    ]
+  }
+}

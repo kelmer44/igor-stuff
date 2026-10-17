@@ -1,0 +1,12 @@
+Using configuration file: /Users/gabriel/Desktop/source/igor-stuff/audit/2026-10-17/all-versions/evidence/spanish-floppy.ini
+User picked target 'audit' (engine ID 'igor', game ID 'igor')...
+Running Igor: Objective Uikokahonia (Floppy/DOS/Spanish)
+IGOR.DAT: 69eec27e1d2fe2f0612a6fb265385dfb, 11199335 bytes.
+IGOR.EXE: 91d60ccc00ea19c1bd1b50657a9c598b, 39537 bytes.
+Unable to read 'IGOR.TBL'!
+Debugger started, type 'exit' to return to the game.
+Type 'help' to see a little list of commands and variables.
+Type 'clear' or 'cls' to clear the debugger's output.
+ERROR: Unable to read 'IGOR.TBL'!
+
+

@@ -1,0 +1,12 @@
+Using configuration file: /Users/gabriel/Desktop/source/igor-stuff/audit/2026-10-17/all-versions/evidence/demo110.ini
+User picked target 'audit' (engine ID 'igor', game ID 'igor')...
+Running Igor: Objective Uikokahonia (Demo 1.10s/DOS/English)
+IGOR.DAT: a8a4d8979c43727e7689705e23fb1a20, 4094103 bytes.
+IGOR.FSD: 679d176c331247bc1b22151abe97f438, 462564 bytes.
+Unable to read 'IGOR.TBL'!
+Debugger started, type 'exit' to return to the game.
+Type 'help' to see a little list of commands and variables.
+Type 'clear' or 'cls' to clear the debugger's output.
+ERROR: Unable to read 'IGOR.TBL'!
+
+

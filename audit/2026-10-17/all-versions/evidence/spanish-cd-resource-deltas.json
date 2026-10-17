@@ -1,0 +1,4881 @@
+[
+  {
+    "name": "FRM_PhysicsClassroom1",
+    "size": 3100,
+    "sha256": "adfa7f19bf5464026ae3832c34778fb69fbb7f49f71b6146c983fd0e138aa610",
+    "cd_size": 3100,
+    "status": "identical"
+  },
+  {
+    "name": "ANM_PhilipVodka",
+    "size": 24175,
+    "sha256": "7485cb13465ed984d6e4c67870a9484c93c5ef5b2adc85d3f3ca0b8f5587a939",
+    "cd_size": 24175,
+    "status": "identical"
+  },
+  {
+    "name": "AOF_PhilipVodka",
+    "size": 80,
+    "sha256": "dcfd303df5bb7d11a7a2302cfb44c3d66cee8164f595b4405577e54b1beacd96",
+    "cd_size": 80,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_PhilipRoom",
+    "size": 1191,
+    "sha256": "8561b66780d4421ce238d3032f0f2d1cfdbb665d3017b335d39eb11de26c694b",
+    "cd_size": 1191,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_PhilipRoom",
+    "size": 46080,
+    "sha256": "0f6c78621ac5b5ba4b6b064347dec128cc57ba801f02198ee80a1d2f2f7c19a0",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_PhilipRoom",
+    "size": 768,
+    "sha256": "0dc3467c6897c43509c53927511d3eb980c7899597e83f42f2205af0880bd500",
+    "cd_size": 768,
+    "status": "identical"
+  },
+  {
+    "name": "MSK_PhilipRoom",
+    "size": 3,
+    "sha256": "829c8eb945d8f74afba3b19e9d3591e2d3d8c8989fb193e4d620b37f224ac61c",
+    "cd_size": 3,
+    "status": "identical"
+  },
+  {
+    "name": "BOX_PhilipRoom",
+    "size": 1280,
+    "sha256": "b8529f60e0f233dcf08f239499ec807c0a9c517a9511102e073e06e1e3039e7c",
+    "cd_size": 1280,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_ChemistryClassroom1",
+    "size": 14,
+    "sha256": "0be355a10db0ee16ff67fea94be3d2db580caafc6129f07dd72256009287122d",
+    "cd_size": 14,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_ChemistryClassroom2",
+    "size": 3332,
+    "sha256": "5aadb04d0a85aeb4b95de1805dfd09643ce4b1bb23d435777f53c5ed29db0b7d",
+    "cd_size": 3332,
+    "status": "identical"
+  },
+  {
+    "name": "DAT_Physicsclassroom",
+    "size": 6017,
+    "sha256": "72b8b34f2a056e3350870b3b57eaf3985999ac0a20d7a89a02ff07108a32f9aa",
+    "cd_size": 6017,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_PhysicsClassroom",
+    "size": 1141,
+    "sha256": "33229eb762fea3c7b60cbe5b860e58d8a55d01faa155369be3cded6ca46c51a4",
+    "cd_size": 1141,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_PhysicsClassroom",
+    "size": 46080,
+    "sha256": "10b1e0105eb291bac581292717e480307356e866b54485cd68aacb6c6691c535",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_PhysicsClassroom",
+    "size": 624,
+    "sha256": "0978c2cc71ef72729a37ad4f806b28aaf1df9237a72a54e8428270c985e11b80",
+    "cd_size": 624,
+    "status": "identical"
+  },
+  {
+    "name": "MSK_PhysicsClassroom",
+    "size": 1557,
+    "sha256": "9c26b539b86fd57f8da131ff17cc3f360947c4d6a69827523c8298d089b7920a",
+    "cd_size": 1557,
+    "status": "identical"
+  },
+  {
+    "name": "BOX_PhysicsClassroom",
+    "size": 1280,
+    "sha256": "54501f4d604d44c7bd21afe67867711ae1022c293e9769c4a61bed1d20148a22",
+    "cd_size": 1280,
+    "status": "identical"
+  },
+  {
+    "name": "DAT_ChemistryClassroom",
+    "size": 6345,
+    "sha256": "d9c39b80721135e1e3e4e83bc392c5139ed346fcda8b46f002090e0e211b5523",
+    "cd_size": 6345,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_ChemistryClassroom",
+    "size": 1233,
+    "sha256": "10882208ae5a8f414f76f1a203fcc37e38c41b1adc684d859775a76609174256",
+    "cd_size": 1233,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_ChemistryClassroom",
+    "size": 46080,
+    "sha256": "af39c9f72358a82f79f1ad052d2d7a6839bfbf06bfaabe4a8094e9d036b81cd8",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_ChemistryClassroom",
+    "size": 624,
+    "sha256": "0978c2cc71ef72729a37ad4f806b28aaf1df9237a72a54e8428270c985e11b80",
+    "cd_size": 624,
+    "status": "identical"
+  },
+  {
+    "name": "MSK_ChemistryClassroom",
+    "size": 1980,
+    "sha256": "bb32820817b4e41faae517f26cc01b86c530d189a5a6eb188f536554e2643483",
+    "cd_size": 1980,
+    "status": "identical"
+  },
+  {
+    "name": "BOX_ChemistryClassroom",
+    "size": 1280,
+    "sha256": "be6be8d33f6eee50d6ef32cb3d84c8f874011f9dc3a7077dff4e1d0fb42a7193",
+    "cd_size": 1280,
+    "status": "identical"
+  },
+  {
+    "name": "DAT_ParkRight",
+    "size": 6133,
+    "sha256": "12acf59f1a64cb327a7c2d7cc1248d4e8b5140c7ca3fe870586bdd076c66c098",
+    "cd_size": 6133,
+    "status": "identical"
+  },
+  {
+    "name": "DAT_ParkLeft",
+    "size": 5969,
+    "sha256": "535ed39b27223b12b04a7045d27866cf12f05f89358ec2f5a6dd309f5afea8a0",
+    "cd_size": 5969,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_MenToilets1",
+    "size": 3038,
+    "sha256": "f562acf2142b036b0f6f15fe82cd38842925c1770e914ca25f76a7fa062b64d0",
+    "cd_size": 3038,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_MenToilets2",
+    "size": 1624,
+    "sha256": "9e3158db30d3946d96960ebe8beba8c656c620e05844a362cec7a9608ccb90c3",
+    "cd_size": 1624,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_Park1",
+    "size": 30376,
+    "sha256": "791794608c47f5706c41eed3a224fb9673215cb74a49942a03de96114d900f4c",
+    "cd_size": 30376,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_Park2",
+    "size": 62,
+    "sha256": "e573885452c7c6900f57d3750f371144d6e85af109d18e29f875939f63f1e6e3",
+    "cd_size": 62,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_Park3",
+    "size": 3969,
+    "sha256": "839abbb12b43f5c4489caa1892a92b74ef69e804f3256d05808aa16b3246e2e8",
+    "cd_size": 3969,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_Park4",
+    "size": 3150,
+    "sha256": "aa7123af52f7664a90206f93ce4b4b242896045c500a62a0ce5fe202c8f9c5df",
+    "cd_size": 3150,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_ParkRight",
+    "size": 1160,
+    "sha256": "cd1faac9ff74cff937b8e6a661321981bfda8f99cda9f09aaadf076ae23e34c0",
+    "cd_size": 1160,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_ParkRight",
+    "size": 46080,
+    "sha256": "219131dbaf3a50052d8fc24b8e402a05b15b93a6369818487166abce6259801a",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_ParkRight",
+    "size": 624,
+    "sha256": "c70607d3d4759b0abba483dd8ff291cba3919e803427b1f728ef44892015019c",
+    "cd_size": 624,
+    "status": "identical"
+  },
+  {
+    "name": "MSK_ParkRight",
+    "size": 3972,
+    "sha256": "84bc12e348d267d724f75fc6f7531242c2f182f02abde40543d859e18022fb21",
+    "cd_size": 3972,
+    "status": "identical"
+  },
+  {
+    "name": "BOX_ParkRight",
+    "size": 1280,
+    "sha256": "0c1e245a43ff38e4f9c897aee4c850d712c41fd3a49ae9dfc5a055c6032d62ca",
+    "cd_size": 1280,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_Park",
+    "size": 1691,
+    "sha256": "4995e287f1f092b43f6e5ffadc882246321e0a74378516e601601bb5e9325a20",
+    "cd_size": 1691,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_Park",
+    "size": 46080,
+    "sha256": "e8b5dfa4a57e64d5f97235c72c9bed8725048dadaa7d6f13bf781b6a5097ec92",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_Park",
+    "size": 624,
+    "sha256": "06d4737ab20602523258b89f08aaad2cac043789a98ce2f35407b2a503860b17",
+    "cd_size": 624,
+    "status": "identical"
+  },
+  {
+    "name": "MSK_Park",
+    "size": 4728,
+    "sha256": "7da0aa028b9741bf17f5d607e307c986875ce25c73939bbf0102c94e6901cc9e",
+    "cd_size": 4728,
+    "status": "identical"
+  },
+  {
+    "name": "BOX_Park",
+    "size": 1280,
+    "sha256": "ce433671dafdf25c8beb4f4420930af939e92e02051db4cb20bf9a02f1bf18e8",
+    "cd_size": 1280,
+    "status": "identical"
+  },
+  {
+    "name": "DAT_CollegeStairsSecondFloor",
+    "size": 6393,
+    "sha256": "3985b2ded4e5076af0f0f14808ed92aaa37ccbd3231c4b35a719a680adfb791e",
+    "cd_size": 6393,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_CollegeStairsSecondFloor1",
+    "size": 2756,
+    "sha256": "dad78c754efbb925fc4b758664e1eb4181b624dc40462ef1d3870739dff741ca",
+    "cd_size": 2756,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_CollegeStairsSecondFloor2",
+    "size": 11136,
+    "sha256": "c0dbd158d9f170c5201d780cace8c2d4867d892fc8ce99b63d75cd2242def3ed",
+    "cd_size": 11136,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_CollegeStairsSecondFloor3",
+    "size": 6665,
+    "sha256": "94af23f0da86ddb808fdff819d73dab68b5ffeed3014f8a9a6345b7f33371c6c",
+    "cd_size": 6665,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_CollegeStairsSecondFloor",
+    "size": 1564,
+    "sha256": "005da1c5e2afc2c75042e3aa4c715ddf720d2473e4f5fd4253da3df5b1306767",
+    "cd_size": 1564,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_CollegeStairsSecondFloor",
+    "size": 46080,
+    "sha256": "8429f177ff8d6fad713759a37dea20e7b0c60f764e1833b9cac97a478c31b110",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_CollegeStairsSecondFloor",
+    "size": 624,
+    "sha256": "da9f3f7d2b7a74f11e199f38e3eb97b9ac23807c010f800180e24a9705994387",
+    "cd_size": 624,
+    "status": "identical"
+  },
+  {
+    "name": "MSK_CollegeStairsSecondFloor",
+    "size": 4128,
+    "sha256": "faf6dd7efe179f9da3a10382c96b49a889e56623c0c6d8e069c9b9f8365332c8",
+    "cd_size": 4128,
+    "status": "identical"
+  },
+  {
+    "name": "BOX_CollegeStairsSecondFloor",
+    "size": 1280,
+    "sha256": "e7c12207442c36ba70bcde9d8651bfe7344fe387f7327fdb6ad32fced1cfe7da",
+    "cd_size": 1280,
+    "status": "identical"
+  },
+  {
+    "name": "DAT_CollegeStairsFirstFloor",
+    "size": 6017,
+    "sha256": "580e2cf20287da46580c4bb7dc2c710b6bc8e3454413d8d30a1eef71232ad851",
+    "cd_size": 6017,
+    "status": "identical"
+  },
+  {
+    "name": "DLG_CollegeStairsFirstFloor",
+    "size": 2753,
+    "sha256": "01a35bd97f73d596a046b0e30f41a736d14e69bd6fca1c7328a8fec68f783e67",
+    "cd_size": 2753,
+    "status": "identical"
+  },
+  {
+    "name": "DLG_OutsideCollege",
+    "size": 965,
+    "sha256": "22d0e5e4211a8c7969ff21a7dfe60aa4a10d21137dd0085b32169335615c981f",
+    "cd_size": 965,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_CollegeStairsFirstFloor1",
+    "size": 48790,
+    "sha256": "47184d52775f100f397ed2ab0fdb9d2cf491edf18ac7f11859fe7fedfbe16749",
+    "cd_size": 48790,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_CollegeStairsFirstFloor2",
+    "size": 140,
+    "sha256": "1da41e8da2a5409fd8f3935d8da42327e628191fe793f2d8c54ca6fd34bf904b",
+    "cd_size": 140,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_CollegeStairsFirstFloor",
+    "size": 1226,
+    "sha256": "af27c8ff775952b4c262060fe775c0b3767833df229027e8ebf9abf05b69b7b5",
+    "cd_size": 1226,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_CollegeStairsFirstFloor",
+    "size": 46080,
+    "sha256": "a2cf953cee0c6b446f224ea10a2ffbc0407f5d6729f1537a9830c4718bc132f1",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_CollegeStairsFirstFloor",
+    "size": 624,
+    "sha256": "bff76b6b307873eb97c1996219bce371314cb9e47e859eedd5b24373439c4837",
+    "cd_size": 624,
+    "status": "identical"
+  },
+  {
+    "name": "MSK_CollegeStairsFirstFloor",
+    "size": 2934,
+    "sha256": "10859a3300375757be10260498a37b8b553cbe00404cc0832c5ef41eeb6738f8",
+    "cd_size": 2934,
+    "status": "identical"
+  },
+  {
+    "name": "BOX_CollegeStairsFirstFloor",
+    "size": 1280,
+    "sha256": "9402040e713b8f61f323b424b3824770c647e5a2b5a3bc9842d21d376d50091c",
+    "cd_size": 1280,
+    "status": "identical"
+  },
+  {
+    "name": "DAT_CollegeCorridorMissBarrymore",
+    "size": 6137,
+    "sha256": "ff5382448948cff20a130065a72141e74295c2aee8cb55cf7063f68ee9d2692b",
+    "cd_size": 6137,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_CollegeCorridorMissBarrymore1",
+    "size": 3250,
+    "sha256": "ba8e1cc8553f600325a3fb41c4501c78248fd1b08a38f8d2d106ab2c2a1a468b",
+    "cd_size": 3250,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_CollegeCorridorMissBarrymore2",
+    "size": 5280,
+    "sha256": "0d5076fb16eec2dcb163a38203613ce92322bc2930804db10c32b65a9a97b8c6",
+    "cd_size": 5280,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_CollegeCorridorMissBarrymore3",
+    "size": 10824,
+    "sha256": "4766b7afb7c7528e6c0235daacec71ee1bf02665b6ffa357b31b8152c1be4a40",
+    "cd_size": 10824,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_CollegeCorridorMissBarrymore",
+    "size": 1405,
+    "sha256": "a0496a2747c997684a3729be6df2e23cec68f41b43588fd6dee4d69c5623a5ac",
+    "cd_size": 1405,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_CollegeCorridorMissBarrymore",
+    "size": 46080,
+    "sha256": "5647fcf6cf2e9f54c76caeb0491c9c2e6ce61125eeb908a44b5b74f62b523794",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_CollegeCorridorMissBarrymore",
+    "size": 624,
+    "sha256": "12063cde535833bf0c93f2adbf2f982849357c4e7d88dfecdda3a1ddde1aeb13",
+    "cd_size": 624,
+    "status": "identical"
+  },
+  {
+    "name": "MSK_CollegeCorridorMissBarrymore",
+    "size": 2484,
+    "sha256": "73d2bed28ca6d4ec35c9d5ca15c69ebdcd3549b7090bc4e3790e576c99b289a5",
+    "cd_size": 2484,
+    "status": "identical"
+  },
+  {
+    "name": "BOX_CollegeCorridorMissBarrymore",
+    "size": 1280,
+    "sha256": "b5fd04908e6d18fc28297cf6cc88d6d03fdcfc884fba247c697404db15dbd929",
+    "cd_size": 1280,
+    "status": "identical"
+  },
+  {
+    "name": "DAT_CollegeCorridorAnnouncementBoard",
+    "size": 5973,
+    "sha256": "22cba47706119f104825b0cb10a184dcc05cf2f77fe0121847f9295b78408f1d",
+    "cd_size": 5973,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_CollegeCorridorAnnouncementBoard1",
+    "size": 2392,
+    "sha256": "0a392393456a56dbabb0e6de6e5a30318acd40f6be779df279edb47d25c7753f",
+    "cd_size": 2392,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_CollegeCorridorAnnouncementBoard2",
+    "size": 6944,
+    "sha256": "c0d60a35aa8b0608a28da4eb9e59117183486f3e21ac7f4319c8d1b7602ae4d5",
+    "cd_size": 6944,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_CollegeCorridorAnnouncementBoard",
+    "size": 1216,
+    "sha256": "3d864d9fdfeef223c2d02b660ce5ed8f2396a00c1cdf1c8d82d114f07c1bce01",
+    "cd_size": 1216,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_CollegeCorridorAnnouncementBoard",
+    "size": 46080,
+    "sha256": "1d835a32000946595a1c8df9ac7986ad7002b3f962527363e94bdad098c083af",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_CollegeCorridorAnnouncementBoard",
+    "size": 624,
+    "sha256": "593eaaf2d7926b61d510a37186ce80386a73d29b28648bf45de0489694b2a9fe",
+    "cd_size": 624,
+    "status": "identical"
+  },
+  {
+    "name": "MSK_CollegeCorridorAnnouncementBoard",
+    "size": 3117,
+    "sha256": "b5fbdacbbc74676c0f9518e06cfc8a7edb54b1b998b0fa9aeb61c1dbcf12753b",
+    "cd_size": 3117,
+    "status": "identical"
+  },
+  {
+    "name": "BOX_CollegeCorridorAnnouncementBoard",
+    "size": 1280,
+    "sha256": "9dc5da1add27a741e9071749009bff5950ffe561ad993acfef704da164925bd9",
+    "cd_size": 1280,
+    "status": "identical"
+  },
+  {
+    "name": "DAT_CollegeCorridorChemistryClass",
+    "size": 5993,
+    "sha256": "6a2c0f6a1e5da2b1f59a6b0eb16e1d33422d90cf5a724adf3ee218a540c47663",
+    "cd_size": 5993,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_CollegeCorridorChemistryClass1",
+    "size": 3630,
+    "sha256": "e593460f448967edbd52d0e69f3f162318a46ff84286624b0e7a54054e2e7756",
+    "cd_size": 3630,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_CollegeCorridorChemistryClass2",
+    "size": 7752,
+    "sha256": "b76e5b66d2f9000b3deb0008fdf3ba144b621a2641fbf355c0c9516fd22f8be6",
+    "cd_size": 7752,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_CollegeCorridorChemistryClass3",
+    "size": 5676,
+    "sha256": "6a03b2efe5fce09147df643d482dd9b86840658462dbe3411a61e0e8210436a1",
+    "cd_size": 5676,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_CollegeCorridorChemistryClass4",
+    "size": 6762,
+    "sha256": "da72cc39d4658298ee2c97b40834c26f22382156d2b4cce0036d4f8fba1ff2d6",
+    "cd_size": 6762,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_CollegeCorridorChemistryClass",
+    "size": 1331,
+    "sha256": "8b43de91fd40d9e106d9d5cf2378b80c85210ac921eb5bd7990c47967cbe54d5",
+    "cd_size": 1331,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_CollegeCorridorChemistryClass",
+    "size": 46080,
+    "sha256": "a718bfb0ef9c87c5969765dfab8d8535041e555430b9611ec71c389690d7e581",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_CollegeCorridorChemistryClass",
+    "size": 624,
+    "sha256": "60b787c9f555c258547968dca6b2383cdab3a95d69a08c6ef321e2cd3c5263e2",
+    "cd_size": 624,
+    "status": "identical"
+  },
+  {
+    "name": "MSK_CollegeCorridorChemistryClass",
+    "size": 3144,
+    "sha256": "303c8da43f44acf49900898a340a337de4e111b523515053e87a2496136b4b16",
+    "cd_size": 3144,
+    "status": "identical"
+  },
+  {
+    "name": "BOX_CollegeCorridorChemistryClass",
+    "size": 1280,
+    "sha256": "f44f7750afdadb3645035bd19ca891dcfebce42b5751839c9bc42569fb79a461",
+    "cd_size": 1280,
+    "status": "identical"
+  },
+  {
+    "name": "DAT_CollegeCorridorCaroline",
+    "size": 6509,
+    "sha256": "31288c747fceadcb8a5c5c1a99851b70b50dbd129ba1e4347382f09f2ee63dc1",
+    "cd_size": 6509,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_CollegeCorridorCaroline1",
+    "size": 25080,
+    "sha256": "256daae0c9eb01ae8ae824580c767053d78931507ef695ff5f6a4b446e617c7d",
+    "cd_size": 25080,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_CollegeCorridorCaroline3",
+    "size": 7595,
+    "sha256": "35c36c19bf53871ce0552a95ea2baa979cf6c5ff75b1065681dd00dde69c0e80",
+    "cd_size": 7595,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_CollegeCorridorCaroline2",
+    "size": 270,
+    "sha256": "cd7613784219fc93446357ce17aec3c6e59565381215f2d208a85842f47d3160",
+    "cd_size": 270,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_CollegeCorridorCaroline",
+    "size": 2026,
+    "sha256": "f666e5d5414bc1d987734f8d6b8d01cbe3d50040ab569422b51d60a1bcf7855b",
+    "cd_size": 2026,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_CollegeCorridorCaroline",
+    "size": 46080,
+    "sha256": "bdbe20a556e2ce9502572835bf61da8970af1c93f0eb3759fc650c41a4bd503f",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_CollegeCorridorCaroline",
+    "size": 624,
+    "sha256": "8da238fdf160e5565956f4f6c89ebad903601a57acd24a6aaffba045d41f8726",
+    "cd_size": 624,
+    "status": "identical"
+  },
+  {
+    "name": "MSK_CollegeCorridorCaroline",
+    "size": 2151,
+    "sha256": "7f560080e4166448195e43fcb14fd89c59e676bf9aaa1be01471bedf70366d51",
+    "cd_size": 2151,
+    "status": "identical"
+  },
+  {
+    "name": "BOX_CollegeCorridorCaroline",
+    "size": 1280,
+    "sha256": "e0da9c90813e079cfeaae4173a245ada7849463305438047e5e617827743383b",
+    "cd_size": 1280,
+    "status": "identical"
+  },
+  {
+    "name": "DAT_CollegeCorridorLadiesRoom",
+    "size": 6109,
+    "sha256": "d3a7f4cd818fc1b5feb4423ce9482677f13e1f3378b122fee6fab16b2c14a997",
+    "cd_size": 6109,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_CollegeCorridorLadiesRoom1",
+    "size": 2592,
+    "sha256": "a7e6db355dbc00b5d190e4bf4896062adec981e7b404a436d5bd86823083a890",
+    "cd_size": 2592,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_CollegeCorridorLadiesRoom2",
+    "size": 1225,
+    "sha256": "604a2c5b21af009684d2e5cec5d36a78f99cca7aff607428e6520a7d2fbee244",
+    "cd_size": 1225,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_CollegeCorridorLadiesRoom3",
+    "size": 6480,
+    "sha256": "aa073bfbb40f30497a1bcce32183d5c1bc3c888dff8235d035df8599af4178f8",
+    "cd_size": 6480,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_CollegeCorridorLadiesRoom4",
+    "size": 1140,
+    "sha256": "94252397d1de81b2cbbe7c00e7d16435cb8ea3a0aa1adf8d44382757a8b1b619",
+    "cd_size": 1140,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_SpringBridge1",
+    "size": 24,
+    "sha256": "70d8beca659bed204d6eb261e96098ce326e6f780df45c8a44a0905d1bf700cc",
+    "cd_size": 24,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_SpringBridge2",
+    "size": 4410,
+    "sha256": "87977c16f7693f959ec19ace99495f258d3c3335361da709c0daa185b9d1a411",
+    "cd_size": 4410,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_CollegeCorridorLadiesRoom",
+    "size": 1333,
+    "sha256": "502260f1175b64802ebac434cdebee15981c09c25786cf9014e7bdbfc229549d",
+    "cd_size": 1333,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_CollegeCorridorLadiesRoom",
+    "size": 46080,
+    "sha256": "c16dd5315ba2c621f12371607bdde8a699631daae451b03499538550609e5568",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_CollegeCorridorLadiesRoom",
+    "size": 624,
+    "sha256": "6829a4bbe10ffb16ef3ce84bd7dec94d8270f98e1acb06fa32d7689b7131126d",
+    "cd_size": 624,
+    "status": "identical"
+  },
+  {
+    "name": "MSK_CollegeCorridorLadiesRoom",
+    "size": 3297,
+    "sha256": "59330c43eae1aa0c1887f9ecae7a78263e8497de0a1d6fea5ed1aa8f99cf3351",
+    "cd_size": 3297,
+    "status": "identical"
+  },
+  {
+    "name": "BOX_CollegeCorridorLadiesRoom",
+    "size": 1280,
+    "sha256": "60b43f4f4e9905825d02bebf375974f9d676b2ff44edb6537339fc41186f345b",
+    "cd_size": 1280,
+    "status": "identical"
+  },
+  {
+    "name": "DAT_CollegeCorridorMargaret",
+    "size": 6273,
+    "sha256": "af4a73f3b377fab30108b5c82ae9369e6e1ce5975b38a05d2586415174f763cb",
+    "cd_size": 6273,
+    "status": "identical"
+  },
+  {
+    "name": "DLG_CollegeCorridorMargaret",
+    "size": 6980,
+    "sha256": "8a0c9ee84ea38447aac91a2eec668d50b0b03f4802ef716717ef6b24d873494f",
+    "cd_size": 6980,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_CollegeCorridorMargaret1",
+    "size": 5346,
+    "sha256": "82e0ed0bd05917f1abadc85d60e0c3e9b25c26b7e751484428ab97f637ac7774",
+    "cd_size": 5346,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_CollegeCorridorMargaret2",
+    "size": 44247,
+    "sha256": "6b1e4d387ede3305c35146cda55ca8f23aba7ef8ce88af1d848e7204d3ea95e7",
+    "cd_size": 44247,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_CollegeCorridorMargaret3",
+    "size": 7800,
+    "sha256": "1f24abbd8f3fcd92fb01a37832371575e9c8e79b6b35030c72738185ecb732e8",
+    "cd_size": 7800,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_CollegeCorridorMargaret4",
+    "size": 3564,
+    "sha256": "5a77c743f434fbd522451e8360b409deaa1943aabd9516b7ff001688bd1f7aa3",
+    "cd_size": 3564,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_CollegeCorridorMargaret",
+    "size": 1559,
+    "sha256": "609ae6dee0b0dde148c5c6aeccfbfab26f0981808467d0998928e65a122b4e21",
+    "cd_size": 1559,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_CollegeCorridorMargaret",
+    "size": 46080,
+    "sha256": "d99b22c95b9afec02777af2f328a521cdefaf3c24023965c221826ae5b73c8e3",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_CollegeCorridorMargaret",
+    "size": 624,
+    "sha256": "bf1bf19d54df2d76085e3b47265c82a982c958db76fd4ffc985fd72174633bc1",
+    "cd_size": 624,
+    "status": "identical"
+  },
+  {
+    "name": "MSK_CollegeCorridorMargaret",
+    "size": 3690,
+    "sha256": "e1c9846735bd6e14082b1a2578eb6eda565a74833690cd11d50e6ae68364639d",
+    "cd_size": 3690,
+    "status": "identical"
+  },
+  {
+    "name": "BOX_CollegeCorridorMargaret",
+    "size": 1280,
+    "sha256": "cfad7b25e9f5f465459a7e8001a98342a0c41a7f75c4840f3e50e0fa5cb0a910",
+    "cd_size": 1280,
+    "status": "identical"
+  },
+  {
+    "name": "DAT_CollegeLockers",
+    "size": 6437,
+    "sha256": "b75f9b2193455c51c729ce829e02bca65472b240045d9778fd9d39f6c5ec0fb7",
+    "cd_size": 6437,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_CollegeLockers1",
+    "size": 2496,
+    "sha256": "e82a1ddf18ce6a5c2c89789a163bccb45ac7be6fd3f0aa9bba77c5168479f4fa",
+    "cd_size": 2496,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_CollegeLockers2",
+    "size": 4704,
+    "sha256": "6f4c01462b8a204d9e04ff5f43ce7b45b175fe0af6dc9478ca3b3ecb0309d307",
+    "cd_size": 4704,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_CollegeLockers3",
+    "size": 1260,
+    "sha256": "3f0a0c43141ba0434684da91fa7f786df44ebb1e5bd5e71315acbf8fc09ecb63",
+    "cd_size": 1260,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_CollegeLockers",
+    "size": 1561,
+    "sha256": "cb32f557627c5d87a4b40d9e6b9c4037dde061d4258da74363951070b8c06c84",
+    "cd_size": 1561,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_CollegeLockers",
+    "size": 46080,
+    "sha256": "61d8aa207473cbd4c1fd51c68a02e8a8dac16eecf7daf30eb38fe0ad78abe61f",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_CollegeLockers",
+    "size": 624,
+    "sha256": "c7964540b77d035e4bfca1208f901c4276e2e2446ab7dbe2a66aef5d5074935d",
+    "cd_size": 624,
+    "status": "identical"
+  },
+  {
+    "name": "MSK_CollegeLockers",
+    "size": 2235,
+    "sha256": "8e9e46697c1f2875afe16ffca33c7ecae283791b14446e96733400d95e6664dd",
+    "cd_size": 2235,
+    "status": "identical"
+  },
+  {
+    "name": "BOX_CollegeLockers",
+    "size": 1280,
+    "sha256": "92b451216dc6d53fe87097e58caa21795e9d7caf34009c6564b6d17cc1a4dbd9",
+    "cd_size": 1280,
+    "status": "identical"
+  },
+  {
+    "name": "DAT_MenToilets",
+    "size": 6465,
+    "sha256": "aee7a7a5b5cb897128939af34865acb936a20dd08530dbcabb073b5557fbff1f",
+    "cd_size": 6465,
+    "status": "identical"
+  },
+  {
+    "name": "DAT_WomenToilets",
+    "size": 6385,
+    "sha256": "969206705314ff3486557bbaab22a3eaa112d436b8ba670a98987c8bce45eea2",
+    "cd_size": 6385,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_WomenToilets1",
+    "size": 854,
+    "sha256": "2ff746930e499ad6125935140e8db2be633384bcfe1a4fa77be6043c8fb663a4",
+    "cd_size": 854,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_WomenToilets2",
+    "size": 12,
+    "sha256": "c9de75814dab31241034d3fc94e1ad15565009023c88e325f4cd9e9401fcfe1c",
+    "cd_size": 12,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_WomenToilets3",
+    "size": 2744,
+    "sha256": "fd45223bd81da6dc66c58a17bd4aec241d216d0e1aabe596b763d382c1dc007a",
+    "cd_size": 2744,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_WomenToilets4",
+    "size": 12855,
+    "sha256": "e0dbbbed62e9c6828940ccb0c768794eaa63f740992048948b285f8a0ad8a410",
+    "cd_size": 12855,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_WomenToilets5",
+    "size": 102,
+    "sha256": "c828f53e44c56dfa5cb16cedbcde80f29e79bac0a979a8487a2d7a71c45d5169",
+    "cd_size": 102,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_WomenToilets",
+    "size": 1666,
+    "sha256": "ddd5243b9e6c81576b0778643f3a6c06a90b8882c177996d66873d6ef0a9cc02",
+    "cd_size": 1666,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_WomenToilets",
+    "size": 46080,
+    "sha256": "888026fa138d7f0477429819130cc4f8ab8ca17164fd34aed1dcefff17c2b783",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_WomenToilets",
+    "size": 624,
+    "sha256": "aa5b1869448ecfe3cf19f006486838bb1d8a37c48aa6dad6cd3422e854831717",
+    "cd_size": 624,
+    "status": "identical"
+  },
+  {
+    "name": "MSK_WomenToilets",
+    "size": 2022,
+    "sha256": "988d810a9a476bae4d7ad384087a61535db7a1542c98af97ef765b1a4fb2c1b1",
+    "cd_size": 2022,
+    "status": "identical"
+  },
+  {
+    "name": "BOX_WomenToilets",
+    "size": 1280,
+    "sha256": "36481d21e72c028036d0a7cc6430d9e14c873bc48b46d6e5548e2e1fa2bc52d0",
+    "cd_size": 1280,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_MenToilets",
+    "size": 1346,
+    "sha256": "a7b779d34c68122b4c843d7eafdf69f1aa3e9b2757af249d096471c5123f2aa8",
+    "cd_size": 1346,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_MenToilets",
+    "size": 46080,
+    "sha256": "d0e626f3fa95fb5430638e1b2702ef76370c4b1daa93a686b3fc0f5956a4c69f",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_MenToilets",
+    "size": 624,
+    "sha256": "417dd3aa4dbd7c2d0f5a141167d02104505066e2e1f7504616f1af375f5ea94e",
+    "cd_size": 624,
+    "status": "identical"
+  },
+  {
+    "name": "MSK_MenToilets",
+    "size": 1980,
+    "sha256": "b9cbfe98a1142e7d52853620a00fef8f311187edbe15022baba79a8f4289861f",
+    "cd_size": 1980,
+    "status": "identical"
+  },
+  {
+    "name": "BOX_MenToilets",
+    "size": 1280,
+    "sha256": "f2fd9a419ce54882f57e8bb1ab9365a7481521b7b5c795058171444a1f5dc2dc",
+    "cd_size": 1280,
+    "status": "identical"
+  },
+  {
+    "name": "DAT_OutsideCollege",
+    "size": 6777,
+    "sha256": "acfcaa438b64917c084fdead597ed41065febd528d4b5b612cf8b0b6df2cc31f",
+    "cd_size": 6777,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_OutsideCollege1",
+    "size": 2156,
+    "sha256": "e21c0b374646e26cd8ca5d14c6d8e96bf5817a34535ad68bc821ad63c7d26509",
+    "cd_size": 2156,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_OutsideCollege2",
+    "size": 4347,
+    "sha256": "15953b5bc36c3f52d9f4dae468b54a0af29964f8ec23291c6850b2977c726cb9",
+    "cd_size": 4347,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_OutsideCollege3",
+    "size": 693,
+    "sha256": "724768f6dd220502c19c17398bbfece4176d0a471b76cc81e22c174f2654130f",
+    "cd_size": 693,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_OutsideCollege4",
+    "size": 594,
+    "sha256": "a1a550622651c742a11a3c346be243da7c0457624213695a2b56cb34da03a690",
+    "cd_size": 594,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_OutsideCollege5",
+    "size": 10080,
+    "sha256": "469ca19707938662e740663a494babc27ca3dbba6ebe1af3cc821a940e97751f",
+    "cd_size": 10080,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_OutsideCollege",
+    "size": 1824,
+    "sha256": "fdad9c411f48e9951634bbb23fc7332759dc202acac44bbcc0088f861b1113a4",
+    "cd_size": 1824,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_OutsideCollege",
+    "size": 46080,
+    "sha256": "e995affe7a96ee3b1f0ea918ec450324dc43b882b2d6bbe6cd7bd9b5c14d00ed",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_OutsideCollege",
+    "size": 624,
+    "sha256": "91c22971d3c8651f869398fc9fc039348cec23a259781dccc771af8ca85311d0",
+    "cd_size": 624,
+    "status": "identical"
+  },
+  {
+    "name": "MSK_OutsideCollege",
+    "size": 4974,
+    "sha256": "35921f7545b3614bc2ceab709bb1423a7c14cb5a97927ca85fdf7be7cf57d233",
+    "cd_size": 4974,
+    "status": "identical"
+  },
+  {
+    "name": "BOX_OutsideCollege",
+    "size": 1280,
+    "sha256": "f1da0e63258029145027b834eec1665ce303e4edc0001662a6230ed9de8b530f",
+    "cd_size": 1280,
+    "status": "identical"
+  },
+  {
+    "name": "DAT_Laboratory",
+    "size": 5645,
+    "sha256": "7b47607edcd22dff6ed6da13e76585f4bf57f25e452fec60aeb9b2bb6816ae28",
+    "cd_size": 5645,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_MargaretRoom1",
+    "size": 10853,
+    "sha256": "7a7c9988bd3beca15942d97584e1c257ef02c4b00fa653418457c6ecbdfe7a9b",
+    "cd_size": 10853,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_MargaretRoom2",
+    "size": 16,
+    "sha256": "7bb6ae6b22a17c83f44a0d023865b4178a0dbc317179be22632a9d0059168630",
+    "cd_size": 16,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_MargaretRoom3",
+    "size": 44564,
+    "sha256": "4f78e7bcec4dd3173c38d251480db192d6ee3f62e3b5322de612a68833f10a56",
+    "cd_size": 44564,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_MargaretRoom4",
+    "size": 80,
+    "sha256": "4f733897ed0aa6e46c58fa3143286d56637fee51da46435033e9d2153b65e48f",
+    "cd_size": 80,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_MargaretRoom",
+    "size": 1709,
+    "sha256": "19b362b9fccaf1967658fab126e2770ee2e91e823de30ddeacf8fcbef56006ea",
+    "cd_size": 1709,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_MargaretRoom",
+    "size": 46080,
+    "sha256": "65da18150c2ff32ef679fbfdc72599673eee276c4c044562d13c9331434ed619",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_MargaretRoom",
+    "size": 768,
+    "sha256": "e11737fc1804496baa27bef2d9147276f8767de93fe3124565184d9065c5d118",
+    "cd_size": 768,
+    "status": "identical"
+  },
+  {
+    "name": "MSK_MargaretRoom",
+    "size": 3,
+    "sha256": "829c8eb945d8f74afba3b19e9d3591e2d3d8c8989fb193e4d620b37f224ac61c",
+    "cd_size": 3,
+    "status": "identical"
+  },
+  {
+    "name": "BOX_MargaretRoom",
+    "size": 1280,
+    "sha256": "b8529f60e0f233dcf08f239499ec807c0a9c517a9511102e073e06e1e3039e7c",
+    "cd_size": 1280,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_Meanwhile",
+    "size": 46080,
+    "sha256": "0890a761737a122e1a5e26bb429664e2d979f240ae2ad68cf76eafea8463538d",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_Laboratory1",
+    "size": 2254,
+    "sha256": "56e6c02f0ab2039a8fd59ab06532051b104edfaa61b9db734ee5ca89f8af34e5",
+    "cd_size": 2254,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_Laboratory2",
+    "size": 26218,
+    "sha256": "41ada143f5b8980fdf5903a02803f22891ae86d5d458976b979c77951aa4fe93",
+    "cd_size": 26218,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_Laboratory3",
+    "size": 128,
+    "sha256": "e534c30e343a74fb0d0a21e76b5e817b58c2caf520c8bc6370bad0da908b3c9a",
+    "cd_size": 128,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_Laboratory",
+    "size": 1482,
+    "sha256": "827bcbd94afb9a6686ea49137a6b749d0ea1f43c15acf20ead0cc99a136b9504",
+    "cd_size": 1482,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_Laboratory",
+    "size": 46080,
+    "sha256": "32eaab38341c7814298c2daeea9b17b866ae2769a21bfac7c0620bb125715378",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_Laboratory",
+    "size": 624,
+    "sha256": "cdffa82588afea1562ed71ba96d95fa3e8d5f4a869655176170b9103b3d72005",
+    "cd_size": 624,
+    "status": "identical"
+  },
+  {
+    "name": "MSK_Laboratory",
+    "size": 2130,
+    "sha256": "a01fb24f3df9053b0ccd8ec78aa24e39d7818421f4a271a7068b86fc542f6264",
+    "cd_size": 2130,
+    "status": "identical"
+  },
+  {
+    "name": "BOX_Laboratory",
+    "size": 1280,
+    "sha256": "685e9a2b9c7894b5215f67f39e2502bf3f70f02106d7296a9ba8de105b758c92",
+    "cd_size": 1280,
+    "status": "identical"
+  },
+  {
+    "name": "DAT_Map",
+    "size": 6273,
+    "sha256": "eb8db6cb72ea2d59f89c5761042f1de8946657e6d36e76a20b93061ee3b4cbcb",
+    "cd_size": 6273,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_Map",
+    "size": 1023,
+    "sha256": "940758012d129a72ec1c9e2aafb4f6d26510a2e606a45baee3f570db7adbcf22",
+    "cd_size": 1023,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_Map",
+    "size": 46080,
+    "sha256": "2c24658cae1a326553b1c116e1568c97ff7e33705c9a4de904ebedf97efd701f",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_Map",
+    "size": 624,
+    "sha256": "244c4d8a59bcc67d29bfd6dd006ed15e881e6ca4ca144c79d3c8ba9e951f6fe5",
+    "cd_size": 624,
+    "status": "identical"
+  },
+  {
+    "name": "MSK_Map",
+    "size": 1809,
+    "sha256": "1249c33b2179ce8e9b9e02ba5c25ebb9c25708e9488098b12b03c5da57e59783",
+    "cd_size": 1809,
+    "status": "identical"
+  },
+  {
+    "name": "BOX_Map",
+    "size": 1280,
+    "sha256": "8fa22ea827b158e776c3c02765a9d5e490355d58e22360dea9501eaf3d60877e",
+    "cd_size": 1280,
+    "status": "identical"
+  },
+  {
+    "name": "DAT_TobiasOffice",
+    "size": 5945,
+    "sha256": "bdaf94eed6ef94bb98145a2b3d459013847ab405e0eed71a7576e7c7f90f51f1",
+    "cd_size": 5945,
+    "status": "identical"
+  },
+  {
+    "name": "ANM_TobiasOffice1",
+    "size": 2392,
+    "sha256": "39ea2243b666e950adcd757b8f6a6de976ce08b6b7fa97f0ccf0e5719e522269",
+    "cd_size": 2392,
+    "status": "identical"
+  },
+  {
+    "name": "AOF_TobiasOffice1",
+    "size": 910,
+    "sha256": "6d32d6a517c3526312946f9822cb0c47162efc5558ea1b39f4a29d48f3ba7740",
+    "cd_size": 910,
+    "status": "identical"
+  },
+  {
+    "name": "ANM_TobiasOffice2",
+    "size": 16992,
+    "sha256": "44fac62f73a39aacf2bd7fede1b75e6a479a90c1b2efcb4435ed7cac2a0c743c",
+    "cd_size": 16992,
+    "status": "identical"
+  },
+  {
+    "name": "AOF_TobiasOffice2",
+    "size": 6678,
+    "sha256": "727dde66b304a16e8c2e32f7c9616f5123f008e549556900f57f6a1c70abbc27",
+    "cd_size": 6678,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_TobiasOffice",
+    "size": 2084,
+    "sha256": "fe1af9b70f16f1f7834415228708a111cb9bb101a61279306eee0c898bbd04f1",
+    "cd_size": 2084,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_TobiasOffice",
+    "size": 46080,
+    "sha256": "c53d167ab4cc46bc9cbd812fb6af5624a45a1d6e17a26a957445333a9f2301e4",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_TobiasOffice",
+    "size": 624,
+    "sha256": "f5daa36069e56b2b19fd5d2b71cb3cdc31c89244a1f0aa54a791ab4a14f2b947",
+    "cd_size": 624,
+    "status": "identical"
+  },
+  {
+    "name": "MSK_TobiasOffice",
+    "size": 1455,
+    "sha256": "266a98f4469fabfa6560307754fb79f84d6154ab541c6b0f04523de029c737f4",
+    "cd_size": 1455,
+    "status": "identical"
+  },
+  {
+    "name": "BOX_TobiasOffice",
+    "size": 1280,
+    "sha256": "9f5138800a38ef494affb5a4adea2fd234cb1e71bc28ef02a7ffdece42e4020e",
+    "cd_size": 1280,
+    "status": "identical"
+  },
+  {
+    "name": "DAT_BellChurch",
+    "size": 5617,
+    "sha256": "9bfae02a9c807d36da8daf5a0b51a2352c0a5a4e0581d8d246f503f585d5b52b",
+    "cd_size": 5617,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_BellChurch1",
+    "size": 40960,
+    "sha256": "343b081d82c1e46f9c9d9713abda8012fbcc2122b5d18f4f8a0c9a75c1640c06",
+    "cd_size": 40960,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_BellChurch2",
+    "size": 2100,
+    "sha256": "400889b8789717d0b527e60665f9563638559297d5467784d861d88f3fc6a107",
+    "cd_size": 2100,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_BellChurch",
+    "size": 1154,
+    "sha256": "0815579b104e8c2e4c8ed64e56a8adeb3878d5ac97fce66b35ec992f26f4a864",
+    "cd_size": 1154,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_BellChurch",
+    "size": 46080,
+    "sha256": "ada20814e78c0ccf358105c264d0fccd57d17e8d73723f8fb2a558530580b89e",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_BellChurch",
+    "size": 624,
+    "sha256": "baf4902d41b2d24991f19fb5b720dbb749ba092ca48de58c1edaca579242a57a",
+    "cd_size": 624,
+    "status": "identical"
+  },
+  {
+    "name": "MSK_BellChurch",
+    "size": 861,
+    "sha256": "a5c8a8ae9b434c3bc0732ddcf6f669f2912ad60ccb1957fd3eaad3a2690fc251",
+    "cd_size": 861,
+    "status": "identical"
+  },
+  {
+    "name": "BOX_BellChurch",
+    "size": 1280,
+    "sha256": "7c378a923a3a3f2839de84e4c8fc66e28bc8899e4aa8337b61200784171da603",
+    "cd_size": 1280,
+    "status": "identical"
+  },
+  {
+    "name": "DAT_Decanato",
+    "size": 6345,
+    "sha256": "9a4a54bd5216d0d61f92c8f05c07fda1efb10f96ba8a39f1edd463c6d7776e60",
+    "cd_size": 6345,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_Decanato1",
+    "size": 2058,
+    "sha256": "34704cf80accc4fc603ee967dd8cf5c39c19008cc5de7f815e502ee4e7a75732",
+    "cd_size": 2058,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_Decanato2",
+    "size": 2520,
+    "sha256": "6caedf1b87529160eae640db4047cca1725615f809b8c3c34e32520c07d77e90",
+    "cd_size": 2520,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_Decanato3",
+    "size": 420,
+    "sha256": "fa924d3be4b27f4ab7b3ea84b7731ec95aa5af9772b0daa7c71fa04906b75dee",
+    "cd_size": 420,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_Decanato4",
+    "size": 296,
+    "sha256": "41679dc137dc6463969f22f845ad17adf54a7f447ee48958b91c5b90a4d2bf0c",
+    "cd_size": 296,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_Decanato5",
+    "size": 2520,
+    "sha256": "2b2e1bbf04d017a0a55fef5c51b1c30176db6cf53ed1999ab28d0daf223f5586",
+    "cd_size": 2520,
+    "status": "identical"
+  },
+  {
+    "name": "ANM_DecanatoHamburger",
+    "size": 4998,
+    "sha256": "8ea90bc62d9f6212aeb2c1579d0e00e7dfbe7c6e51f62de222cc447b702d1ed6",
+    "cd_size": 4998,
+    "status": "identical"
+  },
+  {
+    "name": "WLK_DecanatoLeft",
+    "size": 120,
+    "sha256": "0cfc978073d0bf1c6e1968aa92334de3ebd89571625814d22f414ed56da54d8e",
+    "cd_size": 120,
+    "status": "identical"
+  },
+  {
+    "name": "WLK_DecanatoRight",
+    "size": 120,
+    "sha256": "0cfc978073d0bf1c6e1968aa92334de3ebd89571625814d22f414ed56da54d8e",
+    "cd_size": 120,
+    "status": "identical"
+  },
+  {
+    "name": "DAT_DecanatoPart11",
+    "size": 6209,
+    "sha256": "7bff128bd767c45b4e539b5604f93353e7ba1997b16da9c746a3d86dbcf2e61c",
+    "cd_size": 6209,
+    "status": "identical"
+  },
+  {
+    "name": "DAT_SpringBridge",
+    "size": 6017,
+    "sha256": "57c890010b05e3a651fa20fe56e242edd63aa549d0502a09c2effd2b7d307481",
+    "cd_size": 6017,
+    "status": "identical"
+  },
+  {
+    "name": "WLK_Bridge1",
+    "size": 134,
+    "sha256": "8ca5f4a2c6d289b6cfe4bae51289a4d9679e65b3fb7db03a5e72b65fb254a965",
+    "cd_size": 134,
+    "status": "identical"
+  },
+  {
+    "name": "WLK_Bridge2",
+    "size": 2546,
+    "sha256": "e635c2a7ad6e1baba4071f0e711a126928b6412e80de9fa8d4b1589f1f352cb9",
+    "cd_size": 2546,
+    "status": "identical"
+  },
+  {
+    "name": "DLG_SpringPhotographer",
+    "size": 15590,
+    "sha256": "1f65804da1973b535350c0b01cf25f29e410fb13162b232d4f19586bab89d5bc",
+    "cd_size": 15590,
+    "status": "identical"
+  },
+  {
+    "name": "DAT_SpringRock",
+    "size": 6195,
+    "sha256": "38a77a4e9ca03cbc59e112ea6957bdeb157f6e8e0c9da40328ce91eb641b81a7",
+    "cd_size": 6195,
+    "status": "identical"
+  },
+  {
+    "name": "WLK_Bridge3",
+    "size": 134,
+    "sha256": "8ca5f4a2c6d289b6cfe4bae51289a4d9679e65b3fb7db03a5e72b65fb254a965",
+    "cd_size": 134,
+    "status": "identical"
+  },
+  {
+    "name": "WLK_Bridge4",
+    "size": 2546,
+    "sha256": "e635c2a7ad6e1baba4071f0e711a126928b6412e80de9fa8d4b1589f1f352cb9",
+    "cd_size": 2546,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_SpringRock1",
+    "size": 84,
+    "sha256": "ef0f28c690034efd96c86ba7acce05787b62a8ff107182b0b01e7efc2a0f4f48",
+    "cd_size": 84,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_SpringRock2",
+    "size": 759,
+    "sha256": "5a6d9360122c8250367d5c459f58df859277ea0d612bb703fccf4b1c41f2b6d7",
+    "cd_size": 759,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_SpringRock3",
+    "size": 5145,
+    "sha256": "2f03431947829203b38b8df7b95ded794c91e115f25308c13001576b43b96814",
+    "cd_size": 5145,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_SpringRock4",
+    "size": 4508,
+    "sha256": "3bcbb83a48427ba19d36a29132d6358e2cd4f6601aac358ee2ba80b8e5d954c1",
+    "cd_size": 4508,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_SpringRock5",
+    "size": 13364,
+    "sha256": "a30230890b378903135079fd8da1a9490b0676380e5574e99f62438c9068c087",
+    "cd_size": 13364,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_SpringRock6",
+    "size": 54,
+    "sha256": "135a808d1b691fe5655896ceb66519fa159b7e80a377580e6554d5a5ba9b85f0",
+    "cd_size": 54,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_SpringBridge",
+    "size": 1080,
+    "sha256": "d3cb037f03e0bd05f9eb8217b8231ced4c1eb92643be631d5dcdde3ab6ae640d",
+    "cd_size": 1080,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_SpringBridge",
+    "size": 46080,
+    "sha256": "77c4647828f1f60a61bb631c1e3b94a8cfab7e77f1ec8fb5651b622d17d328ca",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_SpringBridge",
+    "size": 624,
+    "sha256": "62811b903276722b3025b7515f415f42dbeb7d4fa0306683e19d49ca07303763",
+    "cd_size": 624,
+    "status": "identical"
+  },
+  {
+    "name": "MSK_SpringBridge",
+    "size": 3936,
+    "sha256": "c052bbdb036832f8d058b6744dabdc98715ee3b733a61571d3bed0b8a13ff700",
+    "cd_size": 3936,
+    "status": "identical"
+  },
+  {
+    "name": "BOX_SpringBridge",
+    "size": 1280,
+    "sha256": "31767bf95a5f0c4be328b9678d8196f64b98ce51fa5bdec585a10ccc234982bf",
+    "cd_size": 1280,
+    "status": "identical"
+  },
+  {
+    "name": "DAT_DeanPepperOffice",
+    "size": 6417,
+    "sha256": "ba4b6de290fa8de7303cd147373171ded9c04189b0613a3d9224134c96c200f6",
+    "cd_size": 6417,
+    "status": "identical"
+  },
+  {
+    "name": "DLG_DeanPepperOffice",
+    "size": 15750,
+    "sha256": "b2e0d5ed878c2a37033ce9ae83d02a98fd488f7f577dd24cdec949a38be24ff7",
+    "cd_size": 15750,
+    "status": "identical"
+  },
+  {
+    "name": "DLG_AdministrationSecretaryRoom",
+    "size": 10181,
+    "sha256": "6adc6c538f475c134e298f70c6b1736fb3a422cd16fa85a99e72d66d92f8b883",
+    "cd_size": 10181,
+    "status": "identical"
+  },
+  {
+    "name": "DLG_ParkLady",
+    "size": 1581,
+    "sha256": "738841acade20610360c201a847fe93fbb07ba43e8ee54142c7a0502bcaa0e38",
+    "cd_size": 1581,
+    "status": "identical"
+  },
+  {
+    "name": "DLG_ParkLaura",
+    "size": 2900,
+    "sha256": "ad7b4b81ce456eb07c9ded619ddea4c3af40330f7ee5869a5575917f34f7571d",
+    "cd_size": 2900,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_ParkLaura1",
+    "size": 40622,
+    "sha256": "41c401d7d3a69ce8a9739ea0a64348c582a709249a0a6fca80d9b54e6ee2dd1c",
+    "cd_size": 40622,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_ParkLaura2",
+    "size": 114,
+    "sha256": "12f0447a54a2ce496cb983ed7e96aea3b6e6de59c0a4d02dd43376bdb63f24d1",
+    "cd_size": 114,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_ParkLaura3",
+    "size": 48,
+    "sha256": "c67be06cc83b5099e68988a128e1d756eb286d364b6c0bad68c938395ee6fe37",
+    "cd_size": 48,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_ParkRight1",
+    "size": 3969,
+    "sha256": "839abbb12b43f5c4489caa1892a92b74ef69e804f3256d05808aa16b3246e2e8",
+    "cd_size": 3969,
+    "status": "identical"
+  },
+  {
+    "name": "DAT_MazeEntrance",
+    "size": 5617,
+    "sha256": "b0bd1895948af165312301a282c927c7b3f5277a5f35b666f397076a47bf56fe",
+    "cd_size": 5617,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_MazeEntrance1",
+    "size": 6061,
+    "sha256": "a98e4a140da4028dad377e75b83744462d31ff0ff1a2e0a6442403ad0b1f94d8",
+    "cd_size": 6061,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_MazeEntrance",
+    "size": 1279,
+    "sha256": "88da0a9fbd86456508ea4d989f95fe9f3def25be53c2696f1e88a3e7ca752cb5",
+    "cd_size": 1279,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_MazeEntrance",
+    "size": 46080,
+    "sha256": "0f83db43f7bfd2eea64df0e56fbcd749201896d4a659095f4952086554cb5e55",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_MazeEntrance",
+    "size": 576,
+    "sha256": "787939248cdec17d92ba1950a72319e352e1efbf05e268cbc8f6a42fde4baeb9",
+    "cd_size": 576,
+    "status": "identical"
+  },
+  {
+    "name": "MSK_MazeEntrance",
+    "size": 1884,
+    "sha256": "b67998b6cb83f1a7fcf405f50b78633155158d5882274d1655e09d1d87ba5a4b",
+    "cd_size": 1884,
+    "status": "identical"
+  },
+  {
+    "name": "BOX_MazeEntrance",
+    "size": 1280,
+    "sha256": "dd394447aef8bbb980e1b3178f187de4008e86f5669f034d02af5fadebff1696",
+    "cd_size": 1280,
+    "status": "identical"
+  },
+  {
+    "name": "DAT_Maze51",
+    "size": 5173,
+    "sha256": "11607df3129fce009e856d699acd03bd9074b107fd7f7a21e45c07e77091139e",
+    "cd_size": 5173,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_Maze51",
+    "size": 1279,
+    "sha256": "88da0a9fbd86456508ea4d989f95fe9f3def25be53c2696f1e88a3e7ca752cb5",
+    "cd_size": 1279,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_Maze51",
+    "size": 46080,
+    "sha256": "53b66fca35f8e0ada28c839288929834a208ae3475156ae93e40130806655b0e",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_Maze51",
+    "size": 576,
+    "sha256": "787939248cdec17d92ba1950a72319e352e1efbf05e268cbc8f6a42fde4baeb9",
+    "cd_size": 576,
+    "status": "identical"
+  },
+  {
+    "name": "MSK_Maze51",
+    "size": 873,
+    "sha256": "d2f07fefe67e3b9afca8626e88f51dc499d6dd3e3c6d2b3460424a7b51a9703c",
+    "cd_size": 873,
+    "status": "identical"
+  },
+  {
+    "name": "BOX_Maze51",
+    "size": 1280,
+    "sha256": "a9ab003feb51f2b4f322000e88932184ac41cd0f426013e88edb01544f259db5",
+    "cd_size": 1280,
+    "status": "identical"
+  },
+  {
+    "name": "DAT_Maze52",
+    "size": 5173,
+    "sha256": "7360c671bcb91559cbea03431a212d1ffbf677778186605d4b804b0d1789cc36",
+    "cd_size": 5173,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_Maze52",
+    "size": 1279,
+    "sha256": "88da0a9fbd86456508ea4d989f95fe9f3def25be53c2696f1e88a3e7ca752cb5",
+    "cd_size": 1279,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_Maze52",
+    "size": 46080,
+    "sha256": "64e6ee58f107adaba34df53375ab0b704b4f5a436de119a52d1cf230b5ca7619",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_Maze52",
+    "size": 576,
+    "sha256": "787939248cdec17d92ba1950a72319e352e1efbf05e268cbc8f6a42fde4baeb9",
+    "cd_size": 576,
+    "status": "identical"
+  },
+  {
+    "name": "MSK_Maze52",
+    "size": 1128,
+    "sha256": "9b7ac09edcb060b19dc7a639be481e7c4fdb921b102a6acfe127c42c29556df2",
+    "cd_size": 1128,
+    "status": "identical"
+  },
+  {
+    "name": "BOX_Maze52",
+    "size": 1280,
+    "sha256": "55691e017c2b318f794288646d7067415c671274ff7d48bc149e7942f46d8379",
+    "cd_size": 1280,
+    "status": "identical"
+  },
+  {
+    "name": "DAT_Maze53",
+    "size": 5173,
+    "sha256": "84ab30bd3f30ce24c6313efca0969062bfefa9b8b5bca17d1548307b22ba5efc",
+    "cd_size": 5173,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_Maze53",
+    "size": 1279,
+    "sha256": "88da0a9fbd86456508ea4d989f95fe9f3def25be53c2696f1e88a3e7ca752cb5",
+    "cd_size": 1279,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_Maze53",
+    "size": 46080,
+    "sha256": "cb45357886eb39cb29fafc50747817d6b7f9454b896a9ecf5b0bd47217bc63bb",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_Maze53",
+    "size": 576,
+    "sha256": "787939248cdec17d92ba1950a72319e352e1efbf05e268cbc8f6a42fde4baeb9",
+    "cd_size": 576,
+    "status": "identical"
+  },
+  {
+    "name": "MSK_Maze53",
+    "size": 267,
+    "sha256": "0b18d4eb36d0c3b2cf269e9967203504df24dfea6276b98929cf15e1c8a0b7b6",
+    "cd_size": 267,
+    "status": "identical"
+  },
+  {
+    "name": "BOX_Maze53",
+    "size": 1280,
+    "sha256": "cfaf1afadd0939fed4c0aa3b73e218fe5e50b2ab1f6d89edeef31b0646f2f785",
+    "cd_size": 1280,
+    "status": "identical"
+  },
+  {
+    "name": "DAT_Maze54",
+    "size": 5173,
+    "sha256": "d2a96c97aeb592af4aee428a95085c7e354d618d99eb6c669b6653e1211c5024",
+    "cd_size": 5173,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_Maze54",
+    "size": 1279,
+    "sha256": "88da0a9fbd86456508ea4d989f95fe9f3def25be53c2696f1e88a3e7ca752cb5",
+    "cd_size": 1279,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_Maze54",
+    "size": 46080,
+    "sha256": "693bb78844d35c03e4f073349a7292610c7c2b96f39bb2b24b8e4e8b24da6c9e",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_Maze54",
+    "size": 576,
+    "sha256": "8323ab73ca72a1c4798666b47d44ee1d5cb8bd1d0d413d4ef0626c68b56f2fd3",
+    "cd_size": 576,
+    "status": "identical"
+  },
+  {
+    "name": "MSK_Maze54",
+    "size": 1278,
+    "sha256": "e498cfed74727cba78ec9e4905e5c210ebadecedafde80a05db7f85188d1d3ae",
+    "cd_size": 1278,
+    "status": "identical"
+  },
+  {
+    "name": "BOX_Maze54",
+    "size": 1280,
+    "sha256": "a166d5f2ec34a3e50a296b5c31ed1411eee6c172a2ea4bddb23d654ecc91c336",
+    "cd_size": 1280,
+    "status": "identical"
+  },
+  {
+    "name": "DAT_Maze55",
+    "size": 5197,
+    "sha256": "e3a05732b6094713d23bc5356ce7765f1d29f961f84e6592780ba448e0976003",
+    "cd_size": 5197,
+    "status": "identical"
+  },
+  {
+    "name": "DAT_Maze56",
+    "size": 5197,
+    "sha256": "624d9c0f25a92e8e2e5ec6a1df05c37fed63c6c23f49bcf909b3ba0ec6d8d278",
+    "cd_size": 5197,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_Maze56",
+    "size": 1279,
+    "sha256": "88da0a9fbd86456508ea4d989f95fe9f3def25be53c2696f1e88a3e7ca752cb5",
+    "cd_size": 1279,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_Maze56",
+    "size": 46080,
+    "sha256": "5909db7b3bc78fae55a57170c1d4257fff0b0d73cbeeb1876216430628440c2e",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_Maze56",
+    "size": 576,
+    "sha256": "787939248cdec17d92ba1950a72319e352e1efbf05e268cbc8f6a42fde4baeb9",
+    "cd_size": 576,
+    "status": "identical"
+  },
+  {
+    "name": "MSK_Maze56",
+    "size": 1017,
+    "sha256": "72b3ed6e6998260be0197768c59a8c38df26b1465322a9a5575b0a381b708db6",
+    "cd_size": 1017,
+    "status": "identical"
+  },
+  {
+    "name": "BOX_Maze56",
+    "size": 1280,
+    "sha256": "4788cc60b90a6d61a5714659bae2a2d2ec0861601466b2ff1d95b06a67cd9e80",
+    "cd_size": 1280,
+    "status": "identical"
+  },
+  {
+    "name": "DAT_Maze57",
+    "size": 5197,
+    "sha256": "9e53776cccdf328f464541094c71d5ab0e8c41e03bb5af6e76998efa8467bf04",
+    "cd_size": 5197,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_Maze57",
+    "size": 1279,
+    "sha256": "88da0a9fbd86456508ea4d989f95fe9f3def25be53c2696f1e88a3e7ca752cb5",
+    "cd_size": 1279,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_Maze57",
+    "size": 46080,
+    "sha256": "23204ca9a71a98f294dbc7bcdb62cfc338772059562cad4b6d77987a307770ea",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_Maze57",
+    "size": 576,
+    "sha256": "8323ab73ca72a1c4798666b47d44ee1d5cb8bd1d0d413d4ef0626c68b56f2fd3",
+    "cd_size": 576,
+    "status": "identical"
+  },
+  {
+    "name": "MSK_Maze57",
+    "size": 2058,
+    "sha256": "cad94e0c0363507176073ff202889091b14379d3b3beba5294a2673b964feb75",
+    "cd_size": 2058,
+    "status": "identical"
+  },
+  {
+    "name": "BOX_Maze57",
+    "size": 1280,
+    "sha256": "8b48815c58f1bc5aae8e8c81990ce365f3652fca5a10910b40a4cc47cd261840",
+    "cd_size": 1280,
+    "status": "identical"
+  },
+  {
+    "name": "DAT_Maze58",
+    "size": 5197,
+    "sha256": "8d3809aa8c3b098194af199b10d3573082020ddcd4f3e036b48ca8926a53c660",
+    "cd_size": 5197,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_Maze58",
+    "size": 1279,
+    "sha256": "88da0a9fbd86456508ea4d989f95fe9f3def25be53c2696f1e88a3e7ca752cb5",
+    "cd_size": 1279,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_Maze58",
+    "size": 46080,
+    "sha256": "2711fdb9f5f125fadcc0c0d520d0bea6cf3c60fb7df73d5fe11052a2f936b591",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_Maze58",
+    "size": 576,
+    "sha256": "787939248cdec17d92ba1950a72319e352e1efbf05e268cbc8f6a42fde4baeb9",
+    "cd_size": 576,
+    "status": "identical"
+  },
+  {
+    "name": "MSK_Maze58",
+    "size": 1254,
+    "sha256": "0e6e8824c5ab5c12ad7c48083d335ad3abb8a8a2ce5c5230b9117d228346ac11",
+    "cd_size": 1254,
+    "status": "identical"
+  },
+  {
+    "name": "BOX_Maze58",
+    "size": 1280,
+    "sha256": "12a2abfb0ad1cff81f4556023ea13a20ca25f9f7fc47c9bb223e892db240a2e4",
+    "cd_size": 1280,
+    "status": "identical"
+  },
+  {
+    "name": "DAT_Maze59",
+    "size": 5897,
+    "sha256": "0e7b4c913ff8fb258104641c3aea852a1b86ce1f8ae0ad49d143c05221703a7a",
+    "cd_size": 5897,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_Maze59",
+    "size": 1279,
+    "sha256": "88da0a9fbd86456508ea4d989f95fe9f3def25be53c2696f1e88a3e7ca752cb5",
+    "cd_size": 1279,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_Maze59",
+    "size": 46080,
+    "sha256": "7ba72b4afb9792a952eda407744865a2b555bb36af299c0507e030752423254d",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_Maze59",
+    "size": 576,
+    "sha256": "8323ab73ca72a1c4798666b47d44ee1d5cb8bd1d0d413d4ef0626c68b56f2fd3",
+    "cd_size": 576,
+    "status": "identical"
+  },
+  {
+    "name": "MSK_Maze59",
+    "size": 1992,
+    "sha256": "84ebd1d2fd7ec8a8bc61f9a29c9abcedfe6f63f3f64f3af42888d65d291cc159",
+    "cd_size": 1992,
+    "status": "identical"
+  },
+  {
+    "name": "BOX_Maze59",
+    "size": 1280,
+    "sha256": "8bf14d82e9cba529ed321ba3267b68a3d1903568c22cd82867f4a10814a6789c",
+    "cd_size": 1280,
+    "status": "identical"
+  },
+  {
+    "name": "DAT_Maze60",
+    "size": 5197,
+    "sha256": "a41b5315080a7cb242ad43a59af0c26e215873fc87dd501ced7f9618335cb913",
+    "cd_size": 5197,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_Maze60",
+    "size": 1279,
+    "sha256": "88da0a9fbd86456508ea4d989f95fe9f3def25be53c2696f1e88a3e7ca752cb5",
+    "cd_size": 1279,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_Maze60",
+    "size": 46080,
+    "sha256": "924785151979c7d396697020dcdd44a7cda252d3c8120e17e2414622d4b3342d",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_Maze60",
+    "size": 576,
+    "sha256": "8323ab73ca72a1c4798666b47d44ee1d5cb8bd1d0d413d4ef0626c68b56f2fd3",
+    "cd_size": 576,
+    "status": "identical"
+  },
+  {
+    "name": "MSK_Maze60",
+    "size": 1404,
+    "sha256": "08366714e919c6e11cde22e0b9ab84ba0dfb6fa6ee546d86e8c2d1ccb34047c7",
+    "cd_size": 1404,
+    "status": "identical"
+  },
+  {
+    "name": "BOX_Maze60",
+    "size": 1280,
+    "sha256": "8479785247cf33d8422a043b2e8d83634f6edcdb4a231ba5090faa696a11177a",
+    "cd_size": 1280,
+    "status": "identical"
+  },
+  {
+    "name": "DAT_Maze61",
+    "size": 5221,
+    "sha256": "1f890d477455358f7a34876c0ab217f93e50940da5d0a56db46f45f299bacf99",
+    "cd_size": 5221,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_Maze61",
+    "size": 1279,
+    "sha256": "88da0a9fbd86456508ea4d989f95fe9f3def25be53c2696f1e88a3e7ca752cb5",
+    "cd_size": 1279,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_Maze61",
+    "size": 46080,
+    "sha256": "2b0c0d4a710483a3c75ea5b70b19bd6c7bd9e2746a39901f9b8bd5d7fc60b459",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_Maze61",
+    "size": 576,
+    "sha256": "8323ab73ca72a1c4798666b47d44ee1d5cb8bd1d0d413d4ef0626c68b56f2fd3",
+    "cd_size": 576,
+    "status": "identical"
+  },
+  {
+    "name": "MSK_Maze61",
+    "size": 2256,
+    "sha256": "d9613c9c544cd4a82063614dce6303f1b37849bfa3eeaa0a2ff922b8a252bdc6",
+    "cd_size": 2256,
+    "status": "identical"
+  },
+  {
+    "name": "BOX_Maze61",
+    "size": 1280,
+    "sha256": "87a889859fd5e14f41313303940c57be7fc1e54114aba926439e7207b6fa6376",
+    "cd_size": 1280,
+    "status": "identical"
+  },
+  {
+    "name": "DAT_Maze62",
+    "size": 5221,
+    "sha256": "4629e26c995a9594bbdadd4f7353b1ef5367a08fee76f7285e28dcad3226a47b",
+    "cd_size": 5221,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_Maze62",
+    "size": 1279,
+    "sha256": "88da0a9fbd86456508ea4d989f95fe9f3def25be53c2696f1e88a3e7ca752cb5",
+    "cd_size": 1279,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_Maze62",
+    "size": 46080,
+    "sha256": "594dcac247a13a99650e260df0609b399a6eaca15add4be2b4fb37eee183ce66",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_Maze62",
+    "size": 576,
+    "sha256": "8323ab73ca72a1c4798666b47d44ee1d5cb8bd1d0d413d4ef0626c68b56f2fd3",
+    "cd_size": 576,
+    "status": "identical"
+  },
+  {
+    "name": "MSK_Maze62",
+    "size": 2139,
+    "sha256": "a76acda8de17ccc2029e468c2d196b144d71da15537470f07450fb8e677cabd1",
+    "cd_size": 2139,
+    "status": "identical"
+  },
+  {
+    "name": "BOX_Maze62",
+    "size": 1280,
+    "sha256": "526e7b67159ea708fa9ae80099d7f2bec4584b7c18e42b0445536f4ced24beb9",
+    "cd_size": 1280,
+    "status": "identical"
+  },
+  {
+    "name": "DAT_Maze63",
+    "size": 5221,
+    "sha256": "9b49ff501f4fddbf6aa8e2c960b5789443cfefd14d8838d55cd56445ef7ca105",
+    "cd_size": 5221,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_Maze63",
+    "size": 1279,
+    "sha256": "88da0a9fbd86456508ea4d989f95fe9f3def25be53c2696f1e88a3e7ca752cb5",
+    "cd_size": 1279,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_Maze63",
+    "size": 46080,
+    "sha256": "a760e6687e2517b753adc078c9c4420392c6d81779119c87f06e45decaa0d704",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_Maze63",
+    "size": 576,
+    "sha256": "787939248cdec17d92ba1950a72319e352e1efbf05e268cbc8f6a42fde4baeb9",
+    "cd_size": 576,
+    "status": "identical"
+  },
+  {
+    "name": "MSK_Maze63",
+    "size": 2034,
+    "sha256": "f34577826155369131b2e261133ebe049040bf5a904ac609e8cc93f7248faaac",
+    "cd_size": 2034,
+    "status": "identical"
+  },
+  {
+    "name": "BOX_Maze63",
+    "size": 1280,
+    "sha256": "60a0d39182c1909de3ae1631056b8da5ed82345f463f270ae9745e281d299480",
+    "cd_size": 1280,
+    "status": "identical"
+  },
+  {
+    "name": "DAT_Maze64",
+    "size": 5221,
+    "sha256": "709447360677870e7563f4e8ab7c5ca61ff7a2fe851b195ef8a290a32faeb4b8",
+    "cd_size": 5221,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_Maze64",
+    "size": 1279,
+    "sha256": "88da0a9fbd86456508ea4d989f95fe9f3def25be53c2696f1e88a3e7ca752cb5",
+    "cd_size": 1279,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_Maze64",
+    "size": 46080,
+    "sha256": "daa4590f2c7fcc1f721143252d48e51086238b1735ffca45e9a5ddea9d931bcf",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_Maze64",
+    "size": 576,
+    "sha256": "787939248cdec17d92ba1950a72319e352e1efbf05e268cbc8f6a42fde4baeb9",
+    "cd_size": 576,
+    "status": "identical"
+  },
+  {
+    "name": "MSK_Maze64",
+    "size": 3273,
+    "sha256": "f66341242186e19158498e4adf409cba57a709004008368909d0809d63361dad",
+    "cd_size": 3273,
+    "status": "identical"
+  },
+  {
+    "name": "BOX_Maze64",
+    "size": 1280,
+    "sha256": "9e4c122d149bcd325dfbe064ae2f1182b806a9f42cb405d4b307fdddb5c63997",
+    "cd_size": 1280,
+    "status": "identical"
+  },
+  {
+    "name": "DAT_Maze65",
+    "size": 5245,
+    "sha256": "76f53e81301ba130e2aeec9f0933f43b295ba6ed7f03ac72f9f4959f3a651e20",
+    "cd_size": 5245,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_Maze65",
+    "size": 1279,
+    "sha256": "88da0a9fbd86456508ea4d989f95fe9f3def25be53c2696f1e88a3e7ca752cb5",
+    "cd_size": 1279,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_Maze65",
+    "size": 46080,
+    "sha256": "82687c71be06e92bc6764bcdea35da08c6e025b367742edea377b65bda68ec27",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_Maze65",
+    "size": 576,
+    "sha256": "787939248cdec17d92ba1950a72319e352e1efbf05e268cbc8f6a42fde4baeb9",
+    "cd_size": 576,
+    "status": "identical"
+  },
+  {
+    "name": "MSK_Maze65",
+    "size": 3366,
+    "sha256": "5cffb31392e73d8b061c058d9a19be85d81a8bd56e67f83c6e13a26906eb1fc8",
+    "cd_size": 3366,
+    "status": "identical"
+  },
+  {
+    "name": "BOX_Maze65",
+    "size": 1280,
+    "sha256": "81afb7f16d5f5dff37e1774ebef1f66fd496a6462b91259849224526f94500d8",
+    "cd_size": 1280,
+    "status": "identical"
+  },
+  {
+    "name": "DAT_Maze66",
+    "size": 5781,
+    "sha256": "4a186a98950636f1814e71c21f68efd6a2cc57a8ef1eddc47538d7ce1a8e70a7",
+    "cd_size": 5781,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_Maze66",
+    "size": 1279,
+    "sha256": "88da0a9fbd86456508ea4d989f95fe9f3def25be53c2696f1e88a3e7ca752cb5",
+    "cd_size": 1279,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_Maze66",
+    "size": 46080,
+    "sha256": "f2af1b7c9623addbe41d8d1c8920d8c70c622d9ca5b172546fdc2747d074e663",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_Maze66",
+    "size": 576,
+    "sha256": "787939248cdec17d92ba1950a72319e352e1efbf05e268cbc8f6a42fde4baeb9",
+    "cd_size": 576,
+    "status": "identical"
+  },
+  {
+    "name": "MSK_Maze66",
+    "size": 2364,
+    "sha256": "54886cee0de6a0ac7e2a7bfe0ad3adf9ecf86e82a884e2666f6c71b66c85384b",
+    "cd_size": 2364,
+    "status": "identical"
+  },
+  {
+    "name": "BOX_Maze66",
+    "size": 1280,
+    "sha256": "716f35b4d9838d51ccafea506e9a2c080f38252ed40df88e3935cd69b41c3b5e",
+    "cd_size": 1280,
+    "status": "identical"
+  },
+  {
+    "name": "DAT_OutsideMaze",
+    "size": 6205,
+    "sha256": "ca0dca3a0910d612e8558ad6fd7397df54805d33b9bd9d01401cf2b5515e307d",
+    "cd_size": 6205,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_OutsideMaze",
+    "size": 1001,
+    "sha256": "51bb09b2abb60d50bc186b3e16f356ba5f4307b7a085d02892f2489ea15e4174",
+    "cd_size": 1001,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_OutsideMaze",
+    "size": 46080,
+    "sha256": "31935232182983c5eccb3a37f40b7449097dcc9b76f81417cd9352413cde7689",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_OutsideMaze",
+    "size": 576,
+    "sha256": "e89448ce8247b5e800e251088659250838ee809883bac3caf0ccf92191932fa5",
+    "cd_size": 576,
+    "status": "identical"
+  },
+  {
+    "name": "MSK_OutsideMaze",
+    "size": 2511,
+    "sha256": "5e4af3b8477b739f7a3278085555d22017f34d1f43102ecb6dff552c8bfe1fae",
+    "cd_size": 2511,
+    "status": "identical"
+  },
+  {
+    "name": "BOX_OutsideMaze",
+    "size": 1280,
+    "sha256": "9ba47dd01658e9bd299a39b9145888254cef2496a9e239778c362e3804ac4fb1",
+    "cd_size": 1280,
+    "status": "identical"
+  },
+  {
+    "name": "DAT_AdministrationSecretaryRoom",
+    "size": 6417,
+    "sha256": "fd97aa01e15df74a21d4b249cb3df95a6e0ca7ae1630377dd1270505f5f20bf2",
+    "cd_size": 6417,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_AdministrationSecretaryRoom",
+    "size": 1624,
+    "sha256": "15f85c88c52593019fa85b378dac6211921a9b784a1c5ce416090377d80cc7c0",
+    "cd_size": 1624,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_AdministrationSecretaryRoom",
+    "size": 46080,
+    "sha256": "4210fd92c9a6526a077224d3c048b7d1c8bd108a53880cee5903b286e5999889",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_AdministrationSecretaryRoom",
+    "size": 624,
+    "sha256": "29029fd7a0bfeec056eeeacdf84b590c49b42b8ae67d5de075ff8025452236f1",
+    "cd_size": 624,
+    "status": "identical"
+  },
+  {
+    "name": "MSK_AdministrationSecretaryRoom",
+    "size": 2400,
+    "sha256": "de6dac0c5c378faa52cb8f59b8afcc3fc097c508d6da0345c2ee56e16b14b847",
+    "cd_size": 2400,
+    "status": "identical"
+  },
+  {
+    "name": "BOX_AdministrationSecretaryRoom",
+    "size": 1280,
+    "sha256": "43beaf36d3ff9b4fcdc98544cab00c36e1dbd7029153dfd81262d58f63c46b72",
+    "cd_size": 1280,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_DeanPepperOffice1",
+    "size": 2448,
+    "sha256": "9cd73dd790323b125c2fea039623336494e31630b5a07f97b6589b9eda29552e",
+    "cd_size": 2448,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_DeanPepperOffice2",
+    "size": 2254,
+    "sha256": "f7257bdf86e6a2ad50434ec0f4c447626fe7913507cf72a0eed5193b2f557a9c",
+    "cd_size": 2254,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_DeanPepperOffice3",
+    "size": 2744,
+    "sha256": "93f85bb5f5f1c5b6e891c293d3e0a2dd8ad81053d61588edad342ff196af335a",
+    "cd_size": 2744,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_DeanPepperOffice4",
+    "size": 2652,
+    "sha256": "9ebb6c4c55dcf651a17ea6078d94426e55ff3f5328aed74506bea2d09e47f557",
+    "cd_size": 2652,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_DeanPepperOffice5",
+    "size": 2842,
+    "sha256": "2f44b9d9a8d1801c18b94807b8859d4c8599b6421ac1d05c71f3c76f497dd9ad",
+    "cd_size": 2842,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_DeanPepperOffice6",
+    "size": 2842,
+    "sha256": "1419080adae4c3f92004ad71d70e7c1e6715e830edf7cc232a5b26bc1d760b22",
+    "cd_size": 2842,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_DeanPepperOffice7",
+    "size": 4293,
+    "sha256": "612631d4e705ea1a45f615dbe2a4ed572d46f0c7695d4221f9313ad63d955d9e",
+    "cd_size": 4293,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_DeanPepperOffice8",
+    "size": 3850,
+    "sha256": "d92bcf74fa66578f027a99503ab38300588f0b6eef417c062a64fb7ae0f53f4a",
+    "cd_size": 3850,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_DeanPepperOffice9",
+    "size": 4704,
+    "sha256": "ed0be40750a5858a0e7d027ee9a7363154618d05a6535b437db8c4efe2b1761e",
+    "cd_size": 4704,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_DeanPepperOffice10",
+    "size": 1800,
+    "sha256": "cf0a6c2831fc0516e0e1b8747c7f02bb5698188211c0d6c73b0cbc7ef0a7e53e",
+    "cd_size": 1800,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_DeanPepperOffice11",
+    "size": 3480,
+    "sha256": "bfa113c87c16d9a484350a5cadde0b6f38336322bbb3ca8d61b5376c3adf7017",
+    "cd_size": 3480,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_DeanPepperOffice12",
+    "size": 20,
+    "sha256": "a32b1ae4bb32bdbb2e2ab4d5810e457a3f0a5c4474541b59d868c0479635c45f",
+    "cd_size": 20,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_DeanPepperOffice13",
+    "size": 5075,
+    "sha256": "ab8ab1598639a9fe7e6209bfa5e5dbf1183cf215a0bb4bc1ef0789ec1847732f",
+    "cd_size": 5075,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_DeanPepperOffice14",
+    "size": 620,
+    "sha256": "849005d89380adc4fc4dcb37dc3ca8cfcda57d0e86868d8df3f40c881583628b",
+    "cd_size": 620,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_DeanPepperOffice15",
+    "size": 18298,
+    "sha256": "9a19f377ac0551cc557bf1f2df75d3bf72bfa6ea2ff9b66ecdec2dada8d23b0b",
+    "cd_size": 18298,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_DeanPepperOffice16",
+    "size": 38,
+    "sha256": "a5432e439071e0ad3a5d442a7c1c554037fed51967adb81801b8981dad3e61f5",
+    "cd_size": 38,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_DeanPepperOffice",
+    "size": 1708,
+    "sha256": "f81fc23c2bff2dcc40306ce3a274850bf90148888cdfaef4a2ba85fae2c57449",
+    "cd_size": 1708,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_DeanPepperOffice",
+    "size": 46080,
+    "sha256": "c6bc3a26094d7f32a029737eb4b778f35330cea970df187816fc74d1e9890de3",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_DeanPepperOffice",
+    "size": 624,
+    "sha256": "ed947e92644e73708b9583752f7b5465f83e9cab59e036c3cb40141cd97f01b8",
+    "cd_size": 624,
+    "status": "identical"
+  },
+  {
+    "name": "MSK_DeanPepperOffice",
+    "size": 2745,
+    "sha256": "1e8775f3d22565fff7803d2f9f666a7796328d2751111dd160f474ce042ff698",
+    "cd_size": 2745,
+    "status": "identical"
+  },
+  {
+    "name": "BOX_DeanPepperOffice",
+    "size": 1280,
+    "sha256": "337e552a9b86eb1052c02c1b0ab4621d05fe280b73e176e471c024b8738f6854",
+    "cd_size": 1280,
+    "status": "identical"
+  },
+  {
+    "name": "ANM_AdministrationSecretaryRoom1",
+    "size": 3384,
+    "sha256": "9f7b6a90cb633eaaed44086754e15041708e4a0b313e2b2918b10fe182424e55",
+    "cd_size": 3384,
+    "status": "identical"
+  },
+  {
+    "name": "ANM_AdministrationSecretaryRoom2",
+    "size": 507,
+    "sha256": "63ef172a1c560be1a64017348e2fa10075ff3774b9cfff8e8bad2510a1decfea",
+    "cd_size": 507,
+    "status": "identical"
+  },
+  {
+    "name": "ANM_AdministrationSecretaryRoom3",
+    "size": 19928,
+    "sha256": "f8cbfcf51afd9eca11f0c6e71891bbfd4de3783e8849590c3f8d250798be56af",
+    "cd_size": 19928,
+    "status": "identical"
+  },
+  {
+    "name": "ANM_AdministrationSecretaryRoom4",
+    "size": 2352,
+    "sha256": "fa8e7990e44ab9d15a6c9fc8e74a06183b8caf1348e8cb037d28bd18283d69b3",
+    "cd_size": 2352,
+    "status": "identical"
+  },
+  {
+    "name": "ANM_AdministrationSecretaryRoom5",
+    "size": 2000,
+    "sha256": "4848f4399adc8bcae9d51f8f21951704b020453bbdc6f1e508ef88dd3a7479c4",
+    "cd_size": 2000,
+    "status": "identical"
+  },
+  {
+    "name": "ANM_AdministrationSecretaryRoom6",
+    "size": 6372,
+    "sha256": "9bd4b3537ee86c45a3a3237ddf1ccf3ad9def7e77eb9e4c2fe35b18d13ae8910",
+    "cd_size": 6372,
+    "status": "identical"
+  },
+  {
+    "name": "ANM_AdministrationSecretaryRoom7",
+    "size": 5300,
+    "sha256": "fad45d09dc682682a20961747546388ea51d446c3153a010107132c6c8f7ff77",
+    "cd_size": 5300,
+    "status": "identical"
+  },
+  {
+    "name": "ANM_AdministrationSecretaryRoom8",
+    "size": 2160,
+    "sha256": "d3f17db570e26801413b70f6326ca36d41dde7e214cd50ff8e32961d3e76cd7e",
+    "cd_size": 2160,
+    "status": "identical"
+  },
+  {
+    "name": "ANM_AdministrationSecretaryRoom9",
+    "size": 14749,
+    "sha256": "37175ef3ca4e2a21c7db56e80066b2083dec8df573b9e1441cdb01036e9ec62c",
+    "cd_size": 14749,
+    "status": "identical"
+  },
+  {
+    "name": "DAT_StudentDormitoryRoom",
+    "size": 6673,
+    "sha256": "b9d1819bac1d27354d90ef3b2e21a1b54c9cfecc469c4268e6497a32e88d253f",
+    "cd_size": 6673,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_StudentDormitoryRoom",
+    "size": 1476,
+    "sha256": "d814551e4146d9006c714246e9d34733bb920c96cf13e7396481ceedda38c734",
+    "cd_size": 1476,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_StudentDormitoryRoom",
+    "size": 46080,
+    "sha256": "fc325fd8c9f11a97388cb3789a055efca8e55c8286c21978055ffd01a6bdcb2c",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_StudentDormitoryRoom",
+    "size": 624,
+    "sha256": "2479a535e7b92c474fa3c666eb328f3b17f3433cbd341ebc15cc4eaa931f4fac",
+    "cd_size": 624,
+    "status": "identical"
+  },
+  {
+    "name": "MSK_StudentDormitoryRoom",
+    "size": 6699,
+    "sha256": "4749b85eda0b718714924bcf341c653240b8e52fb3cfc8e10face28c0b615caa",
+    "cd_size": 6699,
+    "status": "identical"
+  },
+  {
+    "name": "BOX_StudentDormitoryRoom",
+    "size": 1280,
+    "sha256": "abc59cce23c3711e32b9c82154a802b0b5419540a37aefceb064425852c05730",
+    "cd_size": 1280,
+    "status": "identical"
+  },
+  {
+    "name": "ANM_StudentDormitoryRoom1",
+    "size": 4608,
+    "sha256": "0c05397cba4a70e249bbf349e93cc0442dfda754ec23d56caf8ab839cdabc552",
+    "cd_size": 4608,
+    "status": "identical"
+  },
+  {
+    "name": "ANM_StudentDormitoryRoom2",
+    "size": 1144,
+    "sha256": "59025909168c71498a6c4be2164e0ed0d07f2fd9a434b7fbdf898602f62aefad",
+    "cd_size": 1144,
+    "status": "identical"
+  },
+  {
+    "name": "ANM_StudentDormitoryRoom3",
+    "size": 7104,
+    "sha256": "61ae4aed4781ac1205f34a17d4589b2e3ffbf4c2125bffad9f834e44da588428",
+    "cd_size": 7104,
+    "status": "identical"
+  },
+  {
+    "name": "ANM_StudentDormitoryRoom4",
+    "size": 3472,
+    "sha256": "81163a058333897ac8f3a5a2780a6654889e757c1ca37eeca21b3059605433ad",
+    "cd_size": 3472,
+    "status": "identical"
+  },
+  {
+    "name": "ANM_StudentDormitoryRoom5",
+    "size": 3234,
+    "sha256": "dacea0c28a27459d9d7a3a8620c678dc3fd800089b65eae6faa30fcc8377b8c0",
+    "cd_size": 3234,
+    "status": "identical"
+  },
+  {
+    "name": "ANM_StudentDormitoryRoom6",
+    "size": 288,
+    "sha256": "7a8a5a33b695d14dec1f88af04a36148d274971688d9ad652c0acf4135bcbe97",
+    "cd_size": 288,
+    "status": "identical"
+  },
+  {
+    "name": "ANM_StudentDormitoryRoom7",
+    "size": 3000,
+    "sha256": "4a13578e8ae5881ecd3459d3597c6c2874fffbb440be093e826303e1f8cd51e5",
+    "cd_size": 3000,
+    "status": "identical"
+  },
+  {
+    "name": "ANM_StudentDormitoryRoom8",
+    "size": 3300,
+    "sha256": "9842bafb10286abd305fed904bf255a1ed4e25b2005a60bcccc6492b154fd1bd",
+    "cd_size": 3300,
+    "status": "identical"
+  },
+  {
+    "name": "ANM_StudentDormitoryRoom9",
+    "size": 5600,
+    "sha256": "15f757357d2bc2699a1e860b9e05b1975c6a61d3017e9faa641a5c81d68ee07a",
+    "cd_size": 5600,
+    "status": "identical"
+  },
+  {
+    "name": "ANM_StudentDormitoryRoom10",
+    "size": 2058,
+    "sha256": "3897a2b948ce44c4da3e7516de92364b8c84a35fb207df41494269bd9b9b286c",
+    "cd_size": 2058,
+    "status": "identical"
+  },
+  {
+    "name": "ANM_StudentDormitoryRoom11",
+    "size": 2058,
+    "sha256": "45a8b4105709e347f7b4e56fcc35788c4ba3e933ae9ce93286a9e2b05ac92fcc",
+    "cd_size": 2058,
+    "status": "identical"
+  },
+  {
+    "name": "DAT_OutsideStudentDormitory",
+    "size": 6109,
+    "sha256": "22075ee2469e05ee7753fb3fee9f3ea9ec29c2958195ec313346864e86042498",
+    "cd_size": 6109,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_OutsideStudentDormitory",
+    "size": 1353,
+    "sha256": "f5d4e93a18fdf0fe963fe6a7608f9a824fd66296a270d727a7800ec94883dec5",
+    "cd_size": 1353,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_OutsideStudentDormitory",
+    "size": 46080,
+    "sha256": "0f843146403c203e12c4f5ca97741f2f6e4cd6ad2641c02a5a4d9d443eff6435",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_OutsideStudentDormitory",
+    "size": 624,
+    "sha256": "4815e1def99d99288240fdc4c017c2556f59418fbbd53af9c9d630a726cd7e6e",
+    "cd_size": 624,
+    "status": "identical"
+  },
+  {
+    "name": "MSK_OutsideStudentDormitory",
+    "size": 1524,
+    "sha256": "0cb32f96c9d89b24a87ffece74f93e78044fb882fe63b472d27183f19d9e05e7",
+    "cd_size": 1524,
+    "status": "identical"
+  },
+  {
+    "name": "BOX_OutsideStudentDormitory",
+    "size": 1280,
+    "sha256": "a397cb35e08d95f72a0861b60b26eddc800b9c58d3547be7cf485aa662519152",
+    "cd_size": 1280,
+    "status": "identical"
+  },
+  {
+    "name": "ANM_OutsideStudentDormitory1",
+    "size": 216,
+    "sha256": "caad318e68f0dc5ea63232c2a8a9c9a08842e70dcd5cd0e201705bd74b916e1d",
+    "cd_size": 216,
+    "status": "identical"
+  },
+  {
+    "name": "ANM_OutsideStudentDormitory2",
+    "size": 3612,
+    "sha256": "e86554b0335e253315f43ea6cbbb84088372a36ef87e416b034901ada71dbe78",
+    "cd_size": 3612,
+    "status": "identical"
+  },
+  {
+    "name": "ANM_OutsideStudentDormitory3",
+    "size": 1968,
+    "sha256": "2a28d15f73f524df6d7291877ea96585431a101a38e754ad9ec1b52c7869b045",
+    "cd_size": 1968,
+    "status": "identical"
+  },
+  {
+    "name": "ANM_OutsideStudentDormitory4",
+    "size": 437,
+    "sha256": "6e9ed4878ba2b4e327b0acfbdfcd0ee9161e85b2489089ebc7e5487cfd4ba812",
+    "cd_size": 437,
+    "status": "identical"
+  },
+  {
+    "name": "ANM_OutsideStudentDormitory5",
+    "size": 208,
+    "sha256": "96b7e63ac23ef9eec9062453cdad7d3590ba2a45e29235e78781fdb5e2be0123",
+    "cd_size": 208,
+    "status": "identical"
+  },
+  {
+    "name": "ANM_OutsideStudentDormitory6",
+    "size": 36480,
+    "sha256": "1cd0078011f42624999007d6995cc4cc36b65475e7fceeca5761eb474a75ef13",
+    "cd_size": 36480,
+    "status": "identical"
+  },
+  {
+    "name": "ANM_OutsideStudentDormitory7",
+    "size": 80,
+    "sha256": "3309059802930b62e96f3413c6224826fdee97eb8ed809d4c98538d08d821b10",
+    "cd_size": 80,
+    "status": "identical"
+  },
+  {
+    "name": "ANM_OutsideStudentDormitory8",
+    "size": 8720,
+    "sha256": "3210ee6f459f7eb141eb8a1fe9d16ecb4d4cc55fee7c41aa966ef36c643742d8",
+    "cd_size": 8720,
+    "status": "identical"
+  },
+  {
+    "name": "DAT_StudentDormitoryAttic",
+    "size": 7843,
+    "sha256": "95aced23f8b4f10df0244e191fa0be4ffe4b9adbe6cf39a4fc554af7b66a1956",
+    "cd_size": 7843,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_StudentDormitoryAttic",
+    "size": 1860,
+    "sha256": "3cab22f3ae9aacffc641ed661223657bbfa1f336b3046ac94ecff613b3f9a565",
+    "cd_size": 1860,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_StudentDormitoryAttic",
+    "size": 46080,
+    "sha256": "dead6f5d166deded44f664baeb202fcafd96045eb9abc7bbc853377e20725ce8",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_StudentDormitoryAttic",
+    "size": 624,
+    "sha256": "619ab047db96cdec627da17d0295b9f3c480740c5fef6332c71d8c906bb21106",
+    "cd_size": 624,
+    "status": "identical"
+  },
+  {
+    "name": "MSK_StudentDormitoryAttic",
+    "size": 4545,
+    "sha256": "7e2469b9dd4da548dd152985bbc09ad1d155cfec07e098b868026707810ad37e",
+    "cd_size": 4545,
+    "status": "identical"
+  },
+  {
+    "name": "BOX_StudentDormitoryAttic",
+    "size": 1280,
+    "sha256": "08b18b38af51188a825c9e7fac70517774fe835ec2d81fe31308afc7712e4a06",
+    "cd_size": 1280,
+    "status": "identical"
+  },
+  {
+    "name": "ANM_StudentDormitoryAttic1",
+    "size": 700,
+    "sha256": "3ff207f84d65d97a7be0e67bea190405015acc87db0f29d8a67c62a6fc750342",
+    "cd_size": 700,
+    "status": "identical"
+  },
+  {
+    "name": "ANM_StudentDormitoryAttic2",
+    "size": 220,
+    "sha256": "8a2760e9991ac3977f34bef5f12628ae0f675aba38db84fb950fd48286c0465f",
+    "cd_size": 220,
+    "status": "identical"
+  },
+  {
+    "name": "ANM_StudentDormitoryAttic3",
+    "size": 40,
+    "sha256": "b249aad964a827c33a9e4e9ea334961467669a4a4c3ee64c6f27d35c6c9a1738",
+    "cd_size": 40,
+    "status": "identical"
+  },
+  {
+    "name": "ANM_StudentDormitoryAttic4",
+    "size": 5439,
+    "sha256": "f279114ddaabec1afadbbd27a013215035d40facb4d7137526190ca36f5a0d30",
+    "cd_size": 5439,
+    "status": "identical"
+  },
+  {
+    "name": "ANM_StudentDormitoryAttic5",
+    "size": 5439,
+    "sha256": "07354a08c1e2a8a888a948a40750675f3ac677aaea609aa03f299c6f9a312575",
+    "cd_size": 5439,
+    "status": "identical"
+  },
+  {
+    "name": "ANM_StudentDormitoryAttic6",
+    "size": 1404,
+    "sha256": "7fc23ff56c892ba18cbfded6e800c43cc1687ccbd44a0d91143cf21f0c895631",
+    "cd_size": 1404,
+    "status": "identical"
+  },
+  {
+    "name": "ANM_StudentDormitoryAttic7",
+    "size": 3600,
+    "sha256": "181071f7b442a85e87e90e077dcd0cfcf2f6469c2f3b57721477c60653187925",
+    "cd_size": 3600,
+    "status": "identical"
+  },
+  {
+    "name": "ANM_StudentDormitoryAttic8",
+    "size": 4872,
+    "sha256": "5d50b8dc3bf0282ac6c91b646c50f7f2c95977a32de27756f0aad31d03583a3d",
+    "cd_size": 4872,
+    "status": "identical"
+  },
+  {
+    "name": "ANM_StudentDormitoryAttic9",
+    "size": 2058,
+    "sha256": "cedda73fb51b5741ea8f053dc4496f68da5f45164e9b78dd38c62a69ce8ba361",
+    "cd_size": 2058,
+    "status": "identical"
+  },
+  {
+    "name": "ANM_StudentDormitoryAttic10",
+    "size": 3300,
+    "sha256": "4bb6f24bf58d66f9b62252db21fe85652a4f52f610fad63ff84b2bd6ec9e4c5a",
+    "cd_size": 3300,
+    "status": "identical"
+  },
+  {
+    "name": "ANM_StudentDormitoryAttic11",
+    "size": 5643,
+    "sha256": "3ad6ce39f33951da3f091a87e411d901b5353de36eecccdb595a3c4c1ea99536",
+    "cd_size": 5643,
+    "status": "identical"
+  },
+  {
+    "name": "ANM_StudentDormitoryAttic12",
+    "size": 576,
+    "sha256": "b9843aa8a16ef01a3dfd016f775f57375005e4ff84cc5eb7af89e06cae00cc0e",
+    "cd_size": 576,
+    "status": "identical"
+  },
+  {
+    "name": "ANM_StudentDormitoryAttic13",
+    "size": 12925,
+    "sha256": "6138de8bbd73fc8bb3a61b06c30f6b7bd0f8c4af57720883005703e8092f5fa2",
+    "cd_size": 12925,
+    "status": "identical"
+  },
+  {
+    "name": "ANM_StudentDormitoryAttic14",
+    "size": 2400,
+    "sha256": "7af194519d67b8cc4c95730a2bee185a0a53e06c831ddf2163232e4168022f31",
+    "cd_size": 2400,
+    "status": "identical"
+  },
+  {
+    "name": "ANM_PhilipLauraIntro",
+    "size": 29824,
+    "sha256": "f278976af8068b665102fe8949e74b08a011da4bd6eb673130235c6ca0238058",
+    "cd_size": 29824,
+    "status": "identical"
+  },
+  {
+    "name": "AOF_PhilipLauraIntro",
+    "size": 74,
+    "sha256": "677fe4babf59e2791a018c8a25d156a15ef0de8b4d6c65606b40424f6875a58b",
+    "cd_size": 74,
+    "status": "identical"
+  },
+  {
+    "name": "ANM_LauraIntro",
+    "size": 12793,
+    "sha256": "f1b9abd9b264a9dec5e5230ca2e1663761db941d027a7c6ae66973c242fc223a",
+    "cd_size": 12793,
+    "status": "identical"
+  },
+  {
+    "name": "AOF_LauraIntro",
+    "size": 48,
+    "sha256": "0e2a99459b0b96525e811d5084b97f58afe8fa5e2e27df94664cbad5b758c2f2",
+    "cd_size": 48,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_SpringBridgeIntro",
+    "size": 1835,
+    "sha256": "f25c5c3d68a0a75835ce560bd52ec4841863aa6a4525d5267f1aad0d6552fc74",
+    "cd_size": 1835,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_SpringBridgeIntro",
+    "size": 46080,
+    "sha256": "77c4647828f1f60a61bb631c1e3b94a8cfab7e77f1ec8fb5651b622d17d328ca",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_SpringBridgeIntro",
+    "size": 720,
+    "sha256": "54170bd84d9fddda4193eeb9164cdc5b64db94058efb7b2b5346d49f9f2175c0",
+    "cd_size": 720,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_SpringRock",
+    "size": 1348,
+    "sha256": "3b608b68faddc37277984843002e39506da5af75260f59922423b088c2242b4a",
+    "cd_size": 1348,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_SpringRock",
+    "size": 46080,
+    "sha256": "b75af8a57388bc05b4637ec9f6cea728376a35f93644c98509478ed620d3b033",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_SpringRock",
+    "size": 720,
+    "sha256": "54170bd84d9fddda4193eeb9164cdc5b64db94058efb7b2b5346d49f9f2175c0",
+    "cd_size": 720,
+    "status": "identical"
+  },
+  {
+    "name": "MSK_SpringRock",
+    "size": 3117,
+    "sha256": "db9ba02362ba407ef68059cd34827b3c6ca7b76101fcd612796ccb6b323858c7",
+    "cd_size": 3117,
+    "status": "identical"
+  },
+  {
+    "name": "BOX_SpringRock",
+    "size": 1280,
+    "sha256": "35100e71d6e8df1a665bedb34ba96a0da01fbd8f401c8558a0c2c4bb726778f7",
+    "cd_size": 1280,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_PenduloStudios",
+    "size": 768,
+    "sha256": "8f49461265698f4e160144c5e7aa909f19450ea0e8c278848dd86f10381da26c",
+    "cd_size": 768,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_PenduloStudios",
+    "size": 64000,
+    "sha256": "a0cf2142198ea1dbcd407b13cf46dc63e7250aac0dd84d32ba3dc97623c29618",
+    "cd_size": 64000,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_GraphicAdventure",
+    "size": 768,
+    "sha256": "3f1e09735e3cd097b8741a2e4603050e5f599073d8fcc37a958130e0a2a53038",
+    "cd_size": 768,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_GraphicAdventure",
+    "size": 64000,
+    "sha256": "6859caa694c8ded508878f0355bc45a713f78bdf9be526f5d1033a3f8fe9a2a9",
+    "cd_size": 64000,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_Presents",
+    "size": 768,
+    "sha256": "3f1e09735e3cd097b8741a2e4603050e5f599073d8fcc37a958130e0a2a53038",
+    "cd_size": 768,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_Presents",
+    "size": 64000,
+    "sha256": "c3869e0ff3fe1d40cc7226b1770960864a61a2e004cace774129468434ad0000",
+    "cd_size": 64000,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_OptikSoftware",
+    "size": 768,
+    "sha256": "5c862d300d64dce270a462f96f035e099d9fb2b3dbd1aa4fe3289806d0a07a28",
+    "cd_size": 768,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_OptikSoftware",
+    "size": 64000,
+    "sha256": "1bb7bd65cdbae7181075a5c622c7bcb52b0fa3b3e175a62924cefc7e633b164b",
+    "cd_size": 64000,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_IgorDirBack2",
+    "size": 10500,
+    "sha256": "2f2b227f4b815270360dc785946b431e792cbbf7130d45feeb01a77639eb9241",
+    "cd_size": 10500,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_IgorDirRight2",
+    "size": 13500,
+    "sha256": "273e4c873459ec224a48946ffe1589160bb7887b033f91fc03bba253bf5bfc54",
+    "cd_size": 13500,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_IgorDirFront2",
+    "size": 10500,
+    "sha256": "0e0349cef7f72fcc744113df3f862323cb8d51261cec5832335d871c56fd3772",
+    "cd_size": 10500,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_IgorDirLeft2",
+    "size": 13500,
+    "sha256": "dc469526b7f3750750b9adc90405ea546c31cce43e349412484932109e856964",
+    "cd_size": 13500,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_IgorHead2",
+    "size": 3696,
+    "sha256": "7f31abcc931ce5bee3882ee4376b14a873f7b68418736faf661efa9d628b11f7",
+    "cd_size": 3696,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_IgorDirBack",
+    "size": 10500,
+    "sha256": "b53e10f63c35a45620f2e34443ae5b948aef884f0b446f3e525b04f170ab5483",
+    "cd_size": 10500,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_IgorDirRight",
+    "size": 13500,
+    "sha256": "9ca967acf9139e0ef1291a6002e6359a0e157524c714a57dad30c0878d27a80a",
+    "cd_size": 13500,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_IgorDirFront",
+    "size": 10500,
+    "sha256": "5e16a19bd51ee5df698ed5b6fba6904dc8859ce6b345996657895fbaa01f2762",
+    "cd_size": 10500,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_IgorDirLeft",
+    "size": 13500,
+    "sha256": "c81e15d47d65f4643bf57cce0143eb0fbc51cc8e3e28142e4d24c6d7151714b0",
+    "cd_size": 13500,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_IgorHead",
+    "size": 3696,
+    "sha256": "0e05b4953b90f8152b858f4b06257acd6e8dbff8db2d327a4db0f6336db94f88",
+    "cd_size": 3696,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_VerbsPanel",
+    "size": 3840,
+    "sha256": "c5ae1a176cbad12511b3818d33d0f03eeef8574f21869cc667794658084e1ce6",
+    "cd_size": 3840,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_MainTable",
+    "size": 28028,
+    "sha256": "0d2566b58b7c247d79dfb92c6f90da547db88551ea47608bd618cbdf953a3759",
+    "cd_size": 28028,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_InventoryPanel",
+    "size": 9600,
+    "sha256": "9763976a718fdbbae1d288365865b37831ca430c1f442448caec1158f8896384",
+    "cd_size": 9600,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_Objects",
+    "size": 48000,
+    "sha256": "53dbfd30457760a27f6ec8f5f4367ec74793c6d65e3cbd644b9823472c62caac",
+    "cd_size": 48000,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_DecanatoLeft",
+    "size": 624,
+    "sha256": "0b7a82f6304d6282a11fbaa12d9556beaf7ed6f0e3a48e83eed75022769f5650",
+    "cd_size": 624,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_DecanatoLeft",
+    "size": 46080,
+    "sha256": "4e2e869997006094002aad6e72454d1a03103ac87aa955f7b0452a842a455922",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "MSK_DecanatoLeft",
+    "size": 5766,
+    "sha256": "b0251cd0107ae44b9e75190f7d5f897caf1dc4655d721f86d274528e7983d212",
+    "cd_size": 5766,
+    "status": "identical"
+  },
+  {
+    "name": "BOX_DecanatoLeft",
+    "size": 1280,
+    "sha256": "5eebfc7825e84e37bd55f7f4e0a56b6288cb501b080523b0f2ff5e7f0fb5b83b",
+    "cd_size": 1280,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_DecanatoRight",
+    "size": 624,
+    "sha256": "0b7a82f6304d6282a11fbaa12d9556beaf7ed6f0e3a48e83eed75022769f5650",
+    "cd_size": 624,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_DecanatoRight",
+    "size": 46080,
+    "sha256": "2fd3c4acdab3bbb4474ea03bdc513cef6b41018094f3df4a0f9c8b620ef35dcc",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "MSK_DecanatoRight",
+    "size": 3858,
+    "sha256": "9b9e6a64c61335f5a995c194160bf59720a5a15dfa6296c415536128625fff6c",
+    "cd_size": 3858,
+    "status": "identical"
+  },
+  {
+    "name": "BOX_DecanatoRight",
+    "size": 1280,
+    "sha256": "825c43e3fa0c26bc19338d94d3239927297d7d290b82af715c43667be7226dc4",
+    "cd_size": 1280,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_DecanatoLeft",
+    "size": 1297,
+    "sha256": "f809aee4ff07bf28a601fb9577ab90e58e84e2b83a390f33350ff84fe4e1c371",
+    "cd_size": 1297,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_DecanatoRight",
+    "size": 1165,
+    "sha256": "01016d0bc6e6926c2be5944669336874cf10d6f72987b78a4332383b922e8506",
+    "cd_size": 1165,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_IgorIntroLogo",
+    "size": 2678,
+    "sha256": "8b0c04fadcc51e626a79e6805e711b0c70d77748475623a7e738b275129646c3",
+    "cd_size": 2678,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_IgorIntroLogo",
+    "size": 39040,
+    "sha256": "6cfb67bb6ef6f4da714c1fb55c53d6b828c35400d0c384c7fcd478d2b8c46069",
+    "cd_size": 39040,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_IgorIntroLogo",
+    "size": 768,
+    "sha256": "df3053344869c6c129954db43b0ee86cc54ddab60ae6310f35a5e50a8ade81ad",
+    "cd_size": 768,
+    "status": "identical"
+  },
+  {
+    "name": "DAT_AdministrationCorridor",
+    "size": 6745,
+    "sha256": "e04da634e342f0828fb864bc2d11973b91f2c11313a2de0c8b2b93b8b6b4a652",
+    "cd_size": 6745,
+    "status": "identical"
+  },
+  {
+    "name": "ANM_AdministrationCorridor",
+    "size": 11085,
+    "sha256": "e18deda3e642a474819bac2b0486126db8b0e9bec7efd579a781e59c9bd3bd2e",
+    "cd_size": 11085,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_AdministrationCorridor",
+    "size": 1518,
+    "sha256": "af6b292b117bfed197b9febce8f1abe1b6d256081853d400daac1858aa7ed114",
+    "cd_size": 1518,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_AdministrationCorridor",
+    "size": 46080,
+    "sha256": "369b953bac0aaf8fc1d70495c30479bc2a894d98861142124ab48b59e907b723",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_AdministrationCorridor",
+    "size": 624,
+    "sha256": "23af3f549d0fc34b3d619fc1829f928355e6f6332ea33d95b8094623f0945524",
+    "cd_size": 624,
+    "status": "identical"
+  },
+  {
+    "name": "MSK_AdministrationCorridor",
+    "size": 2388,
+    "sha256": "2fcb266ac3284f36cc2f037983c0787058286a7d55b6b26ff5bfa43c943a7c5e",
+    "cd_size": 2388,
+    "status": "identical"
+  },
+  {
+    "name": "BOX_AdministrationCorridor",
+    "size": 1280,
+    "sha256": "e48e4efc2d7458000398482dc39a62643027544b9b27767456d7decb5ccbad1e",
+    "cd_size": 1280,
+    "status": "identical"
+  },
+  {
+    "name": "DAT_OutsideChurch",
+    "size": 6017,
+    "sha256": "7e5fe4fdcc7d94bf767e7267c4589bad8f95a205edb55eda8c49f403985fcc58",
+    "cd_size": 6017,
+    "status": "identical"
+  },
+  {
+    "name": "DLG_OutsideChurch",
+    "size": 5314,
+    "sha256": "e5976c932c8d0c403fc45c545af4a6bb0c95ed3dd0b7eafc950e035feb049038",
+    "cd_size": 5314,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_OutsideChurch8",
+    "size": 27365,
+    "sha256": "c739fb073dfd3ea7a87e3a9a4d976ea050f43d5c81eeb81e527aa48649da4cfc",
+    "cd_size": 27365,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_OutsideChurch9",
+    "size": 58,
+    "sha256": "ed15d62fcd2c7218c6f2081c5e241e4dc7f85d8e3a686c2388f68fd28f5c7314",
+    "cd_size": 58,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_OutsideChurch1",
+    "size": 1869,
+    "sha256": "c03ffccdf4dd2ff7d68b44be74396b20dfbb80c902724bca30ecc72d5bed51d1",
+    "cd_size": 1869,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_OutsideChurch2",
+    "size": 20,
+    "sha256": "5cfaf03c7fb269132b6a627d9170e71213760e03f50921828243631e8e08b647",
+    "cd_size": 20,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_OutsideChurch3",
+    "size": 2472,
+    "sha256": "a17cf13be8ec570d574dc84b1294a86ce7b0b327a997a5608e1f787c732ccb4d",
+    "cd_size": 2472,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_OutsideChurch4",
+    "size": 16,
+    "sha256": "fa7dcdd48a0683999d56c81730e99e7ad84fce3b7b05bc775bc29d3a5885b208",
+    "cd_size": 16,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_OutsideChurch5",
+    "size": 5147,
+    "sha256": "a8bf52c273a0d2a1cee2d33e9b9276e9f39daf02a1ff9995a620c4dd47737a8f",
+    "cd_size": 5147,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_OutsideChurch6",
+    "size": 14,
+    "sha256": "8c06c745a537b07dfaf96a4c5aad06a9f3b329746ec5d68338c88fcc6f761fc3",
+    "cd_size": 14,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_OutsideChurch7",
+    "size": 5145,
+    "sha256": "cbe77f55d688d970f9e809700092fc97772c7f86dd8f270befd4293cf5c2d1c9",
+    "cd_size": 5145,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_OutsideChurch10",
+    "size": 6805,
+    "sha256": "a2b749bcaec4d12c121b78aa0730b1cf2a16a5d02046a5b9e56252b0c1ed3810",
+    "cd_size": 6805,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_OutsideChurch11",
+    "size": 14,
+    "sha256": "8d3c00bb978dcecbcb336f719b4e84399f5cd0171f4b5cc0d39cffff47713da6",
+    "cd_size": 14,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_OutsideChurch12",
+    "size": 5145,
+    "sha256": "2acda158659159545aff52754829f670ca4da175354a8c7099fb2e8929c43923",
+    "cd_size": 5145,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_OutsideChurch",
+    "size": 1442,
+    "sha256": "21063afae7a9910dcacae6b2324e648e0e0f8cf7abec4fbe74d33d433d1b4c90",
+    "cd_size": 1442,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_OutsideChurch",
+    "size": 46080,
+    "sha256": "3d5d6ea5ae21d7c1bc06f40aa143af7de4204aaa4c66e69b0cbcb6ec8d6879d9",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_OutsideChurch",
+    "size": 624,
+    "sha256": "ea8e514d216578005165fc96a5b2ca98818f0fadfcf612b701be368ae8d35647",
+    "cd_size": 624,
+    "status": "identical"
+  },
+  {
+    "name": "MSK_OutsideChurch",
+    "size": 3264,
+    "sha256": "3da20f82139ce7ce4c6d3c0d13e4d5b3b71d11b282cf41ce867ffd48d9271960",
+    "cd_size": 3264,
+    "status": "identical"
+  },
+  {
+    "name": "BOX_OutsideChurch",
+    "size": 1280,
+    "sha256": "f4f2861f53700c4087f4c8f88a89988755ac4e598f761a5d5fa858f082125824",
+    "cd_size": 1280,
+    "status": "identical"
+  },
+  {
+    "name": "DAT_PhysicsClassroom",
+    "size": 6017,
+    "sha256": "72b8b34f2a056e3350870b3b57eaf3985999ac0a20d7a89a02ff07108a32f9aa",
+    "cd_size": 6017,
+    "status": "identical"
+  },
+  {
+    "name": "DAT_ChurchPuzzle",
+    "size": 6137,
+    "sha256": "51f80a9268e3481907af70b040c97390ed753ff2ae8109afed621d1583ea2456",
+    "cd_size": 6137,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_ChurchMosaic",
+    "size": 46080,
+    "sha256": "b17ded1d987eea34c8ab6841275df71bdfd9c653a97abefa3eeb2346e6c025fa",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_ChurchMosaic",
+    "size": 720,
+    "sha256": "b2564e8e29b064e71537abcbfe4dbd43c9902467de3aedb0a64138e12ae35cdc",
+    "cd_size": 720,
+    "status": "identical"
+  },
+  {
+    "name": "MSK_ChurchMosaic",
+    "size": 2445,
+    "sha256": "b90a8353760acd459d7abf188de2a3e71d795bde126251b94c80ccff04c6d6a5",
+    "cd_size": 2445,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_ChurchPuzzle1",
+    "size": 980,
+    "sha256": "e205f7c51dca807cc9ecd826eefdbbdda81ca578e02678012c0c719d336b0109",
+    "cd_size": 980,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_ChurchPuzzle2",
+    "size": 945,
+    "sha256": "5129eec590d93bee43c23a456ecda580cb163072c319aa489c9070dc787e9ef2",
+    "cd_size": 945,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_ChurchPuzzle3",
+    "size": 1794,
+    "sha256": "18a66fd80e81b17cc4a848fc928ce06959de0d08eb0dd8e9896e9d85d7dd9cdd",
+    "cd_size": 1794,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_ChurchPuzzle13",
+    "size": 2240,
+    "sha256": "e926bd1acf6a802392b77b1b4e87fbaf49941ff68261c1b796057804dbb3667d",
+    "cd_size": 2240,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_ChurchPuzzle4",
+    "size": 2106,
+    "sha256": "ff6e40dc09ebaedcf5bc62a7f38b50c6c8911ed8c746822f9bacd62b97f1ac24",
+    "cd_size": 2106,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_ChurchPuzzle5",
+    "size": 1260,
+    "sha256": "b46e15620061ec49e94cf968199428153f65ccf86b0e5e7eed5f8b0fc62a1495",
+    "cd_size": 1260,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_ChurchPuzzle6",
+    "size": 1036,
+    "sha256": "ef054f48a789fd91c9dcd6fb1d485300be4e1fd3c504d19cf298764c29eb938f",
+    "cd_size": 1036,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_ChurchPuzzle7",
+    "size": 1053,
+    "sha256": "69c3077089f8e1a256a46ab2e15d77147ba1eadc462933d8cae107298c028bb3",
+    "cd_size": 1053,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_ChurchPuzzle8",
+    "size": 6,
+    "sha256": "d3f61ad84d61a5a57e18e64561584c107aebf43f4fbd09e7d2b5a56f1b381163",
+    "cd_size": 6,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_ChurchPuzzle9",
+    "size": 26980,
+    "sha256": "de4b33cde959db89d0cfd720f3f83afc8a96f6d01426a89bc746595feb5db785",
+    "cd_size": 26980,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_ChurchPuzzle10",
+    "size": 120,
+    "sha256": "c3fe5db914e6e977e7108085b60cb379fccc959fa55b69000a1b0954588e34b2",
+    "cd_size": 120,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_ChurchPuzzle11",
+    "size": 11607,
+    "sha256": "04725cb34d47ce1e58031c3514e8d67c67c9f730c3d4d293c2b369f63be6c8d4",
+    "cd_size": 11607,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_ChurchPuzzle12",
+    "size": 20,
+    "sha256": "623f52166d3051f2ebac26136275eadb00c122b5b7490ce49c8d1658a8010861",
+    "cd_size": 20,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_ChurchPuzzle14",
+    "size": 2904,
+    "sha256": "9519470dc0d4e99726f7d162d889ff86d652eaa1abcb0bf99cc9bddbee96da01",
+    "cd_size": 2904,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_ChurchPuzzle",
+    "size": 1647,
+    "sha256": "896e34ce45891728a6c14e4c2d32a4d035b9f733ae58697ae9e83a78e1a77645",
+    "cd_size": 1647,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_ChurchPuzzle",
+    "size": 46080,
+    "sha256": "f2c3e7d66be30ee32b2515411845eae421be4969bdb8555275bcb23043d24e03",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_ChurchPuzzle",
+    "size": 624,
+    "sha256": "347e5778e16c184d09535eac33a22d945b409b9c1ffb5869b5cd52d35c50f186",
+    "cd_size": 624,
+    "status": "identical"
+  },
+  {
+    "name": "MSK_ChurchPuzzle",
+    "size": 1992,
+    "sha256": "b514b2271de472b4feda116e91b9f7c82e5cf58a13f0839e4597caea268efe70",
+    "cd_size": 1992,
+    "status": "identical"
+  },
+  {
+    "name": "BOX_ChurchPuzzle",
+    "size": 1280,
+    "sha256": "58c834384ddf833da62e9cca37f1b6ab14f34487c243f3c6467672ed120776b1",
+    "cd_size": 1280,
+    "status": "identical"
+  },
+  {
+    "name": "DAT_InsideChurch",
+    "size": 5973,
+    "sha256": "f493f50375b1a3273cc756e5b00ed29b1d142e41485dd3fa96f585556d86e082",
+    "cd_size": 5973,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_InsideChurch",
+    "size": 1057,
+    "sha256": "f53ce60f826ed4de10fe3b2a7621f8ff3098c3490a75a24c969a84602c65a331",
+    "cd_size": 1057,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_InsideChurch",
+    "size": 46080,
+    "sha256": "4a1d0c1f054d20fec3e5ba7113c317cf306141b7da6454495f8d543b07d3a8ae",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_InsideChurch",
+    "size": 624,
+    "sha256": "d385c32f8f957444dca57b29dca8913171b60135924f6b898168a00eb0c63fca",
+    "cd_size": 624,
+    "status": "identical"
+  },
+  {
+    "name": "MSK_InsideChurch",
+    "size": 2352,
+    "sha256": "95e466620b00c866e6097e440a339975314d40f730014de400d8acea7af4cd6b",
+    "cd_size": 2352,
+    "status": "identical"
+  },
+  {
+    "name": "BOX_InsideChurch",
+    "size": 1280,
+    "sha256": "455b371a9f3038e780382211e87f38804a8bf851526ad85abe3ae83f5e093d70",
+    "cd_size": 1280,
+    "status": "identical"
+  },
+  {
+    "name": "DLG_TobiasOffice",
+    "size": 10766,
+    "sha256": "f60b891b8c6c5de8cbd6f625ae0e1b4b5387dce6ae091fb690b406d2c2630b41",
+    "cd_size": 10766,
+    "status": "identical"
+  },
+  {
+    "name": "DAT_Library",
+    "size": 7325,
+    "sha256": "be707d3fbd0a098fce824ffde3a7a71a5904e74eb6be4a89cbee8ed4d61d3660",
+    "cd_size": 7325,
+    "status": "identical"
+  },
+  {
+    "name": "DLG_Library",
+    "size": 3629,
+    "sha256": "a61cf977c0ddd09cc7e6025c6953f0dcf2df9e1395c1643839c287a46dbc1719",
+    "cd_size": 3629,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_Library1",
+    "size": 2254,
+    "sha256": "de531d6d4ad7e1f183d496ee187e26b47c08fa14fb5736c794612aeb490bf04e",
+    "cd_size": 2254,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_Library2",
+    "size": 18823,
+    "sha256": "ad5a8b1a52cfd4756fcda835395f3814d0364b6011c91223895876fda9b7133c",
+    "cd_size": 18823,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_Library3",
+    "size": 50,
+    "sha256": "82dd30d29223485c2c9c796e68cde1f8619345a11b7bc70da1fc833f9f0d1145",
+    "cd_size": 50,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_Library4",
+    "size": 1440,
+    "sha256": "d3a50e19de7db53159d96fe8190df66f8e1c12a7ef65b0b910a6c776b43776a4",
+    "cd_size": 1440,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_Library5",
+    "size": 14616,
+    "sha256": "0a8688f2114a442c4b7f06ddffec35c684855e631c66d7463e8bd5442655c848",
+    "cd_size": 14616,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_Library",
+    "size": 2062,
+    "sha256": "48606405dfdd4b5c3f02e46d29b1aa57dc569d4dca55147169d42af7ef5350da",
+    "cd_size": 2062,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_Library",
+    "size": 46080,
+    "sha256": "d560955e7c7cf9a6245c8f760b321c308e6d66ba45436742cb26cb1e651bf80e",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_Library",
+    "size": 624,
+    "sha256": "44d856d881bbc958a49aebbdd1d85642a9225396a41e292c39c213f19cc426dd",
+    "cd_size": 624,
+    "status": "identical"
+  },
+  {
+    "name": "MSK_Library",
+    "size": 2217,
+    "sha256": "ef0aa8536f199481f29839b073ba57c3ed997536d9084818a5cd7fd26205200d",
+    "cd_size": 2217,
+    "status": "identical"
+  },
+  {
+    "name": "BOX_Library",
+    "size": 1280,
+    "sha256": "d2d2b5bb9e12202319928083dd0cd3652f452e82f5190a44bd5f731b93cfe01d",
+    "cd_size": 1280,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_Library2",
+    "size": 234,
+    "sha256": "ef7adbdb2a37341661cd2b1b0c48de35af0ca9a3d23dcf0eb99486ffac110802",
+    "cd_size": 234,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_PhotoHarrisonMargaret",
+    "size": 46080,
+    "sha256": "384842dad2a16ee635a360b2523c7993a23267dd153d00055d3a4648a4981b45",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_PhotoHarrisonMargaret",
+    "size": 624,
+    "sha256": "601a71b7d40232d806bbecd6b4d09621cb45afffddca4b4e3ad4f9344a19a0bc",
+    "cd_size": 624,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_RomanNumbersPaper",
+    "size": 46080,
+    "sha256": "8d27c37b8f28eb4557918c6a8dba3a964e24ba9b3a21e2baf63ed1509d39c922",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_RomanNumbersPaper",
+    "size": 624,
+    "sha256": "565d0c24f5adc0fc05781f1dc9fcc3f09e4f820994fa0fdfbf3fbb31cbeb6f22",
+    "cd_size": 624,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_NumbersPaper1",
+    "size": 51163,
+    "sha256": "666979631fde6585442ca5bf46733b4c9ae0414b78fe35804240a9df86ed4fa5",
+    "cd_size": 51163,
+    "status": "identical"
+  },
+  {
+    "name": "FRM_NumbersPaper2",
+    "size": 40,
+    "sha256": "e0b8e47375e5e6f1182e527b3111aa328ddd86fefa2286bca34815fae3912719",
+    "cd_size": 40,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_NewsPaper",
+    "size": 46080,
+    "sha256": "e4037ed0871b08c7ea1cc93a8eb58dae6358bba64473e9e04dc28a8fdebf2c96",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_NewsPaper",
+    "size": 624,
+    "sha256": "7264cd65826b8157f1fd2cde613493472e9789c8161fdb722bad536292142e9a",
+    "cd_size": 624,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_OptionsButton",
+    "size": 2106,
+    "sha256": "c116402228acf8eb77b6ea33732f9656f02a2bffdbb23b40a6fe70cb492e25f0",
+    "cd_size": 2106,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_OptionsMenu",
+    "size": 36800,
+    "sha256": "81b5e2c8d01c5220fc22df365b68de753429ee3d80393306ee1a27c91125056b",
+    "cd_size": 36800,
+    "status": "identical"
+  },
+  {
+    "name": "DAT_Part70",
+    "size": 5945,
+    "sha256": "528c1570843b46887fd265ffcf74ca1a3b69de7c144607db819c1d937f93cdd4",
+    "cd_size": 5945,
+    "status": "identical"
+  },
+  {
+    "name": "ANM_Part70",
+    "size": 4290,
+    "sha256": "96a65caf1f228285142dbb77cf3c9a7ec4efd68b4ba7454292910ec6f8b854e0",
+    "cd_size": 4290,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_Part70",
+    "size": 986,
+    "sha256": "e3d5b636fd56508c68296b065a1d647b47041bb872a83d050ec9bf9c9935e085",
+    "cd_size": 986,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_Part70",
+    "size": 46080,
+    "sha256": "3e2ed0fc9dacd59c6793a2393b28b0840d5cf3935242e1d1835332fc09345cfc",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_Part70",
+    "size": 624,
+    "sha256": "63f59d6264aa1fe7975beba48300f425f2884380879f3245b41ed0456d28f44f",
+    "cd_size": 624,
+    "status": "identical"
+  },
+  {
+    "name": "MSK_Part70",
+    "size": 1212,
+    "sha256": "4d948e90a51bc841d166c76d025097c23d674eabb9c3eb3bf5a4a9101cdbc6e5",
+    "cd_size": 1212,
+    "status": "identical"
+  },
+  {
+    "name": "BOX_Part70",
+    "size": 1280,
+    "sha256": "5caac3a2bf985ce419e2b30bee01584cec28d5dc5f1fbd4fb488c4ca85298e95",
+    "cd_size": 1280,
+    "status": "identical"
+  },
+  {
+    "name": "DAT_Part72",
+    "size": 6181,
+    "sha256": "4de1d3e5f96d405ef218e6453614e50fc8c22fd62d8e09e6f040ed65da513dc0",
+    "cd_size": 6181,
+    "status": "identical"
+  },
+  {
+    "name": "ANM_Part72",
+    "size": 5235,
+    "sha256": "79f9f9c8710b4bfbcc529d3327831900465489c9ef7157707cad8adba9078fa2",
+    "cd_size": 5235,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_Part72",
+    "size": 1102,
+    "sha256": "37dc285a2ed770ee9b83ab97faf593278c5d428af361c8b0afdd87acc79b0c3b",
+    "cd_size": 1102,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_Part72",
+    "size": 46080,
+    "sha256": "502e1c9421a9025dc6171f5783dbf888e7975b62cb50636e32bda3d245f45487",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_Part72",
+    "size": 624,
+    "sha256": "a2fa319e4127b169dcd55f79a32ded5015f76c965a76094b1ba6b706550c9b1d",
+    "cd_size": 624,
+    "status": "identical"
+  },
+  {
+    "name": "MSK_Part72",
+    "size": 5325,
+    "sha256": "df56cf9148715e55ad5c501dda7788f3ba38bf5a7ccc4f63c7469d172d67e4f6",
+    "cd_size": 5325,
+    "status": "identical"
+  },
+  {
+    "name": "BOX_Part72",
+    "size": 1280,
+    "sha256": "e25b46e5bcdbd368104d29d65ce1adb66afeb5f28d83b419892f0f56542a5300",
+    "cd_size": 1280,
+    "status": "identical"
+  },
+  {
+    "name": "DAT_Part68",
+    "size": 6113,
+    "sha256": "357a1eb236fdbd48c188057c42fedc24e3a09b51a168fa7ff1b5ad34b5d45e86",
+    "cd_size": 6113,
+    "status": "identical"
+  },
+  {
+    "name": "DLG_Part68",
+    "size": 14016,
+    "sha256": "b4eeb2ef91d032604184bfdea1eb0e195a76df10352c031e44ad9926b4962e6a",
+    "cd_size": 14016,
+    "status": "identical"
+  },
+  {
+    "name": "ANM_Part68",
+    "size": 28857,
+    "sha256": "44e909c4e17b78f6aa36a9a1644c897209a788818a1e2f61f506d9d161613ee0",
+    "cd_size": 28857,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_Part68",
+    "size": 1598,
+    "sha256": "bb40f7fc2cba28dc9ebe01c128ce1527d255ed8f8404fbad046439810dda837d",
+    "cd_size": 1598,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_Part68",
+    "size": 46080,
+    "sha256": "9ff4afcdf0cc76da3db1e2be1a5ccc3973c72ead04eebf304d09d2258641c356",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_Part68",
+    "size": 624,
+    "sha256": "6b654455bdd1157a2dd4fb017e6c014619677cabb1507af09c6f4d864201130d",
+    "cd_size": 624,
+    "status": "identical"
+  },
+  {
+    "name": "MSK_Part68",
+    "size": 5499,
+    "sha256": "6ab29b1bdadee627c0ad4d71223823394175a5800eeeee4489120a2953a9ac45",
+    "cd_size": 5499,
+    "status": "identical"
+  },
+  {
+    "name": "BOX_Part68",
+    "size": 1280,
+    "sha256": "c01a69c71d7875204b00838bc7b6e38761a9cd6103e33e0b227e819ecf1ffebb",
+    "cd_size": 1280,
+    "status": "identical"
+  },
+  {
+    "name": "DAT_Part81",
+    "size": 6137,
+    "sha256": "300a0fa939c4dcf97e50fa0c76737b43d961162aa061170278b3349a709c94d9",
+    "cd_size": 6137,
+    "status": "identical"
+  },
+  {
+    "name": "DLG_Part81",
+    "size": 6940,
+    "sha256": "e8d6f4e9d927e14819bb43c6cfdd2758b0fb889a0a1254038c4573815fb2fa2f",
+    "cd_size": 6940,
+    "status": "identical"
+  },
+  {
+    "name": "ANM_Part81",
+    "size": 53065,
+    "sha256": "ea75dedcb549c5418dd6d99b9849110b5e0cce68a656aef35558c41490d030a6",
+    "cd_size": 53065,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_Part81",
+    "size": 2100,
+    "sha256": "40d1e46006b5c4a12429d3f203e73bd19b7ec650bda2e833c686b0c6e8028c82",
+    "cd_size": 2100,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_Part81ObjectNames",
+    "size": 16,
+    "sha256": "1696668648f9b4df3b1265fa5d4934b46b9bbeea0e83ef1904a9d8d50644dcf8",
+    "cd_size": 16,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_Part81",
+    "size": 46080,
+    "sha256": "0a1be2f6e746f1ce23e7b86e6f48082430bf5b64ef5f7774312bcaf163555142",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_Part81",
+    "size": 624,
+    "sha256": "daa42d7421c1b7e3cd4ab94ca58b99322be1030cf9bbac8ee9fc4d1955e38ddd",
+    "cd_size": 624,
+    "status": "identical"
+  },
+  {
+    "name": "MSK_Part81",
+    "size": 2718,
+    "sha256": "d4f3852169775bb694e622515f2332144ba0faedb77b858e94a372267533859f",
+    "cd_size": 2718,
+    "status": "identical"
+  },
+  {
+    "name": "BOX_Part81",
+    "size": 1280,
+    "sha256": "94bb616d3ef4a6b75f05f338c2277d1cd0acf11682f9a7f70603d0bc3af89b9e",
+    "cd_size": 1280,
+    "status": "identical"
+  },
+  {
+    "name": "ANM_Part81Cutscene",
+    "size": 49944,
+    "sha256": "04170ff08ea9bb97ca36e8a9b556f0289c5073000e319bbb539d2a06b9008185",
+    "cd_size": 49944,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_Part81Strip",
+    "size": 20520,
+    "sha256": "29c64ad2d4d1c1c47b0097881cc5bdc9b89566b3a2aadd6c0a0b94e83636c495",
+    "cd_size": 20520,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_Part74",
+    "size": 624,
+    "sha256": "7184fb95c6766fc0c0694a502728bd352cc41ec9518e3b5c2c5272777ef19c21",
+    "cd_size": 624,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_Part74",
+    "size": 46080,
+    "sha256": "db166223b96864e534fda4709b0cd3f523f70c886466144e1876caf86c86cc89",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_Part74",
+    "size": 1228,
+    "sha256": "5e51a21fdcf8c7b2112cf1e0097cbe9de232dae8a9f45bdbe8403b811996f06b",
+    "cd_size": 1228,
+    "status": "identical"
+  },
+  {
+    "name": "ANM_Part74",
+    "size": 5598,
+    "sha256": "89312750a7d202829cd162b7894b02be5924e4d4823a695e41fd02cd5f81f78e",
+    "cd_size": 5598,
+    "status": "identical"
+  },
+  {
+    "name": "DAT_Part71",
+    "size": 6273,
+    "sha256": "638a9238c172c7c1058b7b0a3fd306a4c1df5a349e84414c2cb29593b0c03064",
+    "cd_size": 6273,
+    "status": "identical"
+  },
+  {
+    "name": "ANM_Part71",
+    "size": 5160,
+    "sha256": "7bd3a1b40bd2631211597442b8f3d9c959331f97cd09224075fc9451c12dbc55",
+    "cd_size": 5160,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_Part71",
+    "size": 1411,
+    "sha256": "e243f06562d2f4987aa1c8f992bd756e4306cc8b90eccba3472f75845bd8e82e",
+    "cd_size": 1411,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_Part71",
+    "size": 46080,
+    "sha256": "3555545431159b090d7d52b3a2d547faba44f551eb22217a400116ef25875614",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_Part71",
+    "size": 624,
+    "sha256": "2097c2884bc355bfb696f43480e0ac4669e2282efcc917a7a56030147eb99645",
+    "cd_size": 624,
+    "status": "identical"
+  },
+  {
+    "name": "MSK_Part71",
+    "size": 2586,
+    "sha256": "021d7831619c009ee7c6b813f1300dc57bb3dd5addfdd133cf95369411c5ed7b",
+    "cd_size": 2586,
+    "status": "identical"
+  },
+  {
+    "name": "BOX_Part71",
+    "size": 1280,
+    "sha256": "7df217551c23df56050bf41b6b91cc49e42e8acc0ef533f0ff4a52076f5cfc16",
+    "cd_size": 1280,
+    "status": "identical"
+  },
+  {
+    "name": "DAT_Part69",
+    "size": 6041,
+    "sha256": "9caeb07b958db6a565de9c63f7add1df61630ef05fb8c9dfe0c159886568e6c9",
+    "cd_size": 6041,
+    "status": "identical"
+  },
+  {
+    "name": "ANM_Part69",
+    "size": 58485,
+    "sha256": "bf1ecacee868f2395b92e5005f28bcbd6c5c226412142f87651f842a8e191203",
+    "cd_size": 58485,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_Part69",
+    "size": 1413,
+    "sha256": "964aa1f8a3ff4b8701154c1b2416f1be0806a736a601c3c3cd50909e9b3f7a54",
+    "cd_size": 1413,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_Part69",
+    "size": 46080,
+    "sha256": "70d1b5c937ba134a870b60a36ed66644de7b0dbb4984605a4f4afe77029e2bd8",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_Part69",
+    "size": 624,
+    "sha256": "2151dbc62b6701fe3e92790d8b5dc940a56967ae75d2499a7f19500dec7efe8c",
+    "cd_size": 624,
+    "status": "identical"
+  },
+  {
+    "name": "MSK_Part69",
+    "size": 3546,
+    "sha256": "e1be385b1d02edf8cf73c2ec2c9e0a7825aa677410448ce21dba2ee4d5bd986a",
+    "cd_size": 3546,
+    "status": "identical"
+  },
+  {
+    "name": "BOX_Part69",
+    "size": 1280,
+    "sha256": "24893f2a576c26ffaec780804ae5d2bbd077bc2706b32bd6b7672e963fef88f1",
+    "cd_size": 1280,
+    "status": "identical"
+  },
+  {
+    "name": "DAT_Part32",
+    "size": 6109,
+    "sha256": "f61c0d9b988e86c6f463f194b9d4b75461565e53f6cbfc68d19af5de8a20d847",
+    "cd_size": 6109,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_Part32",
+    "size": 1310,
+    "sha256": "bd5e0118acaa92a69e967f7452c0315d8b3770fc5c5884d3605023ac4f8564b4",
+    "cd_size": 1310,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_Part32",
+    "size": 46080,
+    "sha256": "4df848522a632200da042e5d15ce9480d059a3553144853edfe4ce8f9d59922a",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_Part32",
+    "size": 624,
+    "sha256": "588e57d1de83a277b6b1960cadbad2a28ea3290c18ed029620a15fff8e676d50",
+    "cd_size": 624,
+    "status": "identical"
+  },
+  {
+    "name": "MSK_Part32",
+    "size": 3237,
+    "sha256": "ed16e3bc0c8b7ede272921fcecd4fa9e2d02bfa43cff05078e581ebceedbf1e9",
+    "cd_size": 3237,
+    "status": "identical"
+  },
+  {
+    "name": "BOX_Part32",
+    "size": 1280,
+    "sha256": "832dd36d39bf0914c022525b1ba6e5d28b0820d39fb9e3be3e81029419202c90",
+    "cd_size": 1280,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_Part32Lock",
+    "size": 46080,
+    "sha256": "0f3fd9ddb96dab0d8822030b60a950ff97459edb59de889b41b2f5a3789eeef6",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_Part32Lock",
+    "size": 624,
+    "sha256": "ed0886443cb03d97fa39183e798383b67a2e32872a73818892d90875bc5c96cc",
+    "cd_size": 624,
+    "status": "identical"
+  },
+  {
+    "name": "MSK_Part32Lock",
+    "size": 1401,
+    "sha256": "7f29abb2cf73d1affa3c3f5eea377ab7dbc6919fbe8a9715813ceb535c043bf7",
+    "cd_size": 1401,
+    "status": "identical"
+  },
+  {
+    "name": "ANM_Part32Digits",
+    "size": 420,
+    "sha256": "e4966e9b1b02537b7870a16e14b3921e1c827e103bcdaa5e51bdf25a655a16b1",
+    "cd_size": 420,
+    "status": "identical"
+  },
+  {
+    "name": "ANM_Part32Tower",
+    "size": 34105,
+    "sha256": "bb4e80f010065d3871d82eede3797620e4f8f6bf233f4dc3ca87d45e3e7e2b0e",
+    "cd_size": 34105,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_Part32Tower",
+    "size": 901,
+    "sha256": "8b77b51395852248fb464f9f525ee9424208b9e7b63e394eee7f4697866897f4",
+    "cd_size": 901,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_Part32Tower",
+    "size": 624,
+    "sha256": "56614818563a6b9a59d764b031594264591b2cbbeb10d485723ecbeea07b269d",
+    "cd_size": 624,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_Part32Girl",
+    "size": 46080,
+    "sha256": "e6ea262dcc7578e13f5320d4011a70a946a55c3082e5b88df6d6525846183347",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_Part32Girl",
+    "size": 768,
+    "sha256": "ccc050f20efccb939f1aba28dd92ed927eeca8a972256ad2c568535256123043",
+    "cd_size": 768,
+    "status": "identical"
+  },
+  {
+    "name": "ANM_Part32Girl",
+    "size": 2907,
+    "sha256": "27a2a99bdcb312bac4d4bc515c5eb90cb1f976adfefbdf7441425b9b46a97ec1",
+    "cd_size": 2907,
+    "status": "identical"
+  },
+  {
+    "name": "DAT_Part77",
+    "size": 6777,
+    "sha256": "70b2b6b22827e25e2beb715713c138701861fe856ec1936f7d959599bd1dba26",
+    "cd_size": 6777,
+    "status": "identical"
+  },
+  {
+    "name": "ANM_Part77",
+    "size": 26666,
+    "sha256": "8164c15dea8576094b4c008ef176796a5bcc076d1b57718e23a97df9940c7710",
+    "cd_size": 26666,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_Part77",
+    "size": 1445,
+    "sha256": "514f8598fa9f1d42b76761fc0bc7d1e0409d8b52d6588c0a5fb8fe2d6ff71a07",
+    "cd_size": 1445,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_Part77",
+    "size": 46080,
+    "sha256": "aa6f4fadafa31ce8362631c076c585535c9cac05838c106dc73e6008ce7d34ae",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_Part77",
+    "size": 624,
+    "sha256": "37df52d0c151d60983ca710cf8db046f12b17976ad61b8f1b3b8218b0b52bd9f",
+    "cd_size": 624,
+    "status": "identical"
+  },
+  {
+    "name": "MSK_Part77",
+    "size": 4974,
+    "sha256": "70c7513d0a6fcd7a0eff88fef625038dee08096437bdf225f60d699c0b5960c1",
+    "cd_size": 4974,
+    "status": "identical"
+  },
+  {
+    "name": "BOX_Part77",
+    "size": 1280,
+    "sha256": "6963fe15e00ef9d34e887cabb02107e07d7b1a682d414ee22a09fff706eb5ebc",
+    "cd_size": 1280,
+    "status": "identical"
+  },
+  {
+    "name": "ANM_Part78",
+    "size": 64402,
+    "sha256": "85f7d600b02d4b3294c458ad46a493441cc51c81f818b89ed8683a33686a0e80",
+    "cd_size": 64402,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_Part78",
+    "size": 1792,
+    "sha256": "71e39c47ec853668711e98ec83e59cd14fac1dc517b1cbf1b12ee1a7f976b117",
+    "cd_size": 1792,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_Part78",
+    "size": 46080,
+    "sha256": "2ef33a986d9d8dbce0ba65eeb8bacd943b3d7ae34426069db69700e79b551de5",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_Part78",
+    "size": 768,
+    "sha256": "a621e9d853c23c7f6f952a89d0b918ed15b9d9a4f184f015c652baeceaa3cd65",
+    "cd_size": 768,
+    "status": "identical"
+  },
+  {
+    "name": "BOX_Part78",
+    "size": 1280,
+    "sha256": "b8529f60e0f233dcf08f239499ec807c0a9c517a9511102e073e06e1e3039e7c",
+    "cd_size": 1280,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_Part78Layer2",
+    "size": 45388,
+    "sha256": "d89d8f53d5911bcead157d1c014f7426403f1218cb30aee6de7077591cbaf357",
+    "cd_size": 45388,
+    "status": "identical"
+  },
+  {
+    "name": "ANM_Part78Frames",
+    "size": 14756,
+    "sha256": "72fb2d36f717a1a312b4b15b2dbeaadfbda932631fc5990a9343e40c6c043b98",
+    "cd_size": 14756,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_Part78MinutesLater",
+    "size": 46080,
+    "sha256": "2b593e0b25433f343adbca2b07a0d97deeb7d331459f44a5c7c77a516545c05c",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_Part78NextDay",
+    "size": 46080,
+    "sha256": "91d99f17a75bf32b43e2d53bf4ce185379409ff4aa6b4628d80aa4de80d378b2",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "ANM_Part73",
+    "size": 6890,
+    "sha256": "8c69be9359029e2f8a3045542b6d317b7c33e52387b9b46ebdd4cefb6fafe583",
+    "cd_size": 6890,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_Part73",
+    "size": 1305,
+    "sha256": "6f0c86267453eaa74229f489588b7da9d868a00b21d3541959253c5c69a4b7ff",
+    "cd_size": 1305,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_Part73",
+    "size": 46080,
+    "sha256": "47e8107555f9f8ae482b6ad88b9f471ca7ca97e38021ea4d607a6909b044bc76",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_Part73",
+    "size": 624,
+    "sha256": "afd2530917ab0d388207677ff5f6f64115f75a1b9c2707cc219fd588b8581aae",
+    "cd_size": 624,
+    "status": "identical"
+  },
+  {
+    "name": "MSK_Part73",
+    "size": 636,
+    "sha256": "987bb9a4214f90958c54d850e523b37cb14206859e3cf417cefcc8e1e9a4fbed",
+    "cd_size": 636,
+    "status": "identical"
+  },
+  {
+    "name": "BOX_Part73",
+    "size": 1280,
+    "sha256": "19ec43a95411ec0e40291df38e3579403d5e450e3aea5637eb5bb20c6c99414c",
+    "cd_size": 1280,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_Part73Card",
+    "size": 46080,
+    "sha256": "093a447ba4920711bbed7996d5293c1e672349db5283dc598b72e6662145e94b",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "ANM_Part80",
+    "size": 19328,
+    "sha256": "6db505b1b6abc7926777f8b1a26f4f8e7d49880997afd662a6c49b7a34d1b81b",
+    "cd_size": 19328,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_Part80",
+    "size": 1443,
+    "sha256": "e2bacf982998c4b3348d2e4406780f19c8d8aef7d7edbf506849cc6146ccdf5b",
+    "cd_size": 1443,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_Part80",
+    "size": 46080,
+    "sha256": "1dff2f59aef31db8d47b2a30ff95b0f59d8d401b4b28792b3d078f38944c3fda",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_Part80",
+    "size": 768,
+    "sha256": "3953d0146b83de736a1159073145c78e728016b4d11c9fb360e37723d8a74c5d",
+    "cd_size": 768,
+    "status": "identical"
+  },
+  {
+    "name": "MSK_Part80",
+    "size": 3,
+    "sha256": "829c8eb945d8f74afba3b19e9d3591e2d3d8c8989fb193e4d620b37f224ac61c",
+    "cd_size": 3,
+    "status": "identical"
+  },
+  {
+    "name": "BOX_Part80",
+    "size": 1280,
+    "sha256": "b8529f60e0f233dcf08f239499ec807c0a9c517a9511102e073e06e1e3039e7c",
+    "cd_size": 1280,
+    "status": "identical"
+  },
+  {
+    "name": "DAT_Part76",
+    "size": 6137,
+    "sha256": "4f60bfa97061b17ce257775132d5d8888521d5c80be9c2da1c575d6c61158eec",
+    "cd_size": 6137,
+    "status": "identical"
+  },
+  {
+    "name": "ANM_Part76",
+    "size": 31576,
+    "sha256": "b06ae17e9fee65f60276c38507f1c35590d68efbc8f9274926d944d8ad3b23b2",
+    "cd_size": 31576,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_Part76",
+    "size": 1864,
+    "sha256": "d241738d79f9b26fcfacb37b8620e03cda9bb1f95259f61d6d9be4993d45a5b7",
+    "cd_size": 1864,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_Part76",
+    "size": 46080,
+    "sha256": "5c76c0715fdbd74559b69302d7f5b0ad978dfcc4565ab80d99a3f7a150b627d0",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_Part76",
+    "size": 624,
+    "sha256": "c45da8be17eecaceaba34e3fe4178e4c5ffa45db9f1f50bc7de5a82827e1b801",
+    "cd_size": 624,
+    "status": "identical"
+  },
+  {
+    "name": "MSK_Part76",
+    "size": 2760,
+    "sha256": "303b4866a9e834643b7f366a2edf696a29dcc2bd311e53099d9beffd0e2e3291",
+    "cd_size": 2760,
+    "status": "identical"
+  },
+  {
+    "name": "BOX_Part76",
+    "size": 1280,
+    "sha256": "5a71f69586da378d2797f5c36376e429b9a1973f0c27a406069aba97b446e8da",
+    "cd_size": 1280,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_Part76Card",
+    "size": 46080,
+    "sha256": "e9b91edc240786bc27d14a3625fe820710a0fc36685fd43fad723540f1f23455",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_Part79",
+    "size": 768,
+    "sha256": "47b75a932a8f62642496a1fc6a41638b213ee98e15f6dc0fd409a27bed070f6c",
+    "cd_size": 768,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_Part79",
+    "size": 46080,
+    "sha256": "f15ce5265d85358d1c06cf5606444d53cbcffae98b2834953fb46ff701e7948d",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_Part79",
+    "size": 491,
+    "sha256": "8beca62cb51b1640768bff5bfb91e0e5f5a11e572f897d5ac33962b0591382b8",
+    "cd_size": 491,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_Part79Layer2",
+    "size": 46080,
+    "sha256": "784ebe12cd74a0a8b524c7fcece2f61a4fc2b70d459a7aefc17b2026988ffc81",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "ANM_Part79",
+    "size": 64517,
+    "sha256": "8495803bef2f9317b2915bdaec0ae80cfdc54221eee730ed1c904905801f9f25",
+    "cd_size": 64517,
+    "status": "identical"
+  },
+  {
+    "name": "ANM_Part79Frames",
+    "size": 28086,
+    "sha256": "343a8d7dd3469b30f39b7fb1be34e6f9e93bb8d3f6bc66a4195de9391d9d7189",
+    "cd_size": 28086,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_Part79b",
+    "size": 46080,
+    "sha256": "784ebe12cd74a0a8b524c7fcece2f61a4fc2b70d459a7aefc17b2026988ffc81",
+    "cd_size": 46080,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_Part79b",
+    "size": 991,
+    "sha256": "7d818b7318c88fbdb3be53877518fb65b8059caabf4509a7354ac9410f21aed0",
+    "cd_size": 991,
+    "status": "identical"
+  },
+  {
+    "name": "ANM_Part79bFrames",
+    "size": 63364,
+    "sha256": "a38a6031e4fa5c0fd96a1029e2cd35acdddb1dc3dba9c50c7bc462a7a6468ed1",
+    "cd_size": 63364,
+    "status": "identical"
+  },
+  {
+    "name": "ANM_Part79bLayer2",
+    "size": 32788,
+    "sha256": "3a4c078b065b35c474d7d597dcee7047f1ecd2e935bf02b9246d37d510a516dc",
+    "cd_size": 32788,
+    "status": "identical"
+  },
+  {
+    "name": "ANM_Part79bScenes",
+    "size": 52397,
+    "sha256": "68c7b87cf2dea813c9ff6354b09f77b0ff2e2ceda548511b3821f0fc710d7176",
+    "cd_size": 52397,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_Part79bMain",
+    "size": 296,
+    "sha256": "5734ef13b61073185f79f98ade0d7c4c375a9f712069158ffb620d3206334b0f",
+    "cd_size": 296,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_Credits1",
+    "size": 64000,
+    "sha256": "b0785c3aa04191749b6d281875d3ec86209da8fc89efc231544e8af052c711a4",
+    "cd_size": 64000,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_Credits1",
+    "size": 768,
+    "sha256": "0a14489c4197f961ce865dccb500abf6e618e27608fda92a6420c6c001fbec51",
+    "cd_size": 768,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_Credits2",
+    "size": 64000,
+    "sha256": "9ca73620539a2e31de20f24ff3f3e887c530834899681f263146881248f7ee8a",
+    "cd_size": 64000,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_Credits2",
+    "size": 768,
+    "sha256": "0a14489c4197f961ce865dccb500abf6e618e27608fda92a6420c6c001fbec51",
+    "cd_size": 768,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_Credits3",
+    "size": 64000,
+    "sha256": "07a0b12e9d771819092209f6d79c939a39752b93555e9ef9433d874ebed0cd9e",
+    "cd_size": 64000,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_Credits3",
+    "size": 768,
+    "sha256": "0a14489c4197f961ce865dccb500abf6e618e27608fda92a6420c6c001fbec51",
+    "cd_size": 768,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_Credits4",
+    "size": 64000,
+    "sha256": "87dfbbd69d0d7e313d67e5dda8e64638a9604c2b9f92f85548537818f8fa2ef0",
+    "cd_size": 64000,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_Credits4",
+    "size": 768,
+    "sha256": "0a14489c4197f961ce865dccb500abf6e618e27608fda92a6420c6c001fbec51",
+    "cd_size": 768,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_Credits5",
+    "size": 64000,
+    "sha256": "309b9dbbe86d5751219562d66f8926bad27d017c6d9b99a32dea4adb1fc004fb",
+    "cd_size": 64000,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_Credits5",
+    "size": 768,
+    "sha256": "0a14489c4197f961ce865dccb500abf6e618e27608fda92a6420c6c001fbec51",
+    "cd_size": 768,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_Credits6",
+    "size": 64000,
+    "sha256": "543eb7495a70438dda52445c38e76051ca7841f726c67db488cb47abfab1cdfe",
+    "cd_size": 64000,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_Credits6",
+    "size": 768,
+    "sha256": "0a14489c4197f961ce865dccb500abf6e618e27608fda92a6420c6c001fbec51",
+    "cd_size": 768,
+    "status": "identical"
+  },
+  {
+    "name": "IMG_Credits7",
+    "size": 64000,
+    "sha256": "0e545e99be90a0aed1c0ccb9211639075a761ff9ef4b7dfe4794394428327409",
+    "cd_size": 64000,
+    "status": "identical"
+  },
+  {
+    "name": "PAL_Credits7",
+    "size": 768,
+    "sha256": "0a14489c4197f961ce865dccb500abf6e618e27608fda92a6420c6c001fbec51",
+    "cd_size": 768,
+    "status": "identical"
+  },
+  {
+    "name": "DLG_Part8Intercom",
+    "size": 467,
+    "sha256": "664219b0314b215d33f4acbedcba48f3ab6976010cf471fd719176c5dc31ddb0",
+    "cd_size": 467,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_OptionsButtons",
+    "size": 34,
+    "sha256": "56fd8eed4cedb8fbb582a73e1cabcf6562a90299c0d08776d99ccd5f33a84863",
+    "cd_size": 34,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_OptionsSettings",
+    "size": 351,
+    "sha256": "b5660171d8c550b1f104ed889a2a4d02a47319948a05aef209f1a6030743d530",
+    "cd_size": 351,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_OptionsTitle",
+    "size": 9,
+    "sha256": "67ff7396c4db54b9c9075da20112ba727f8076c059c5f8f850d43b5c5c51f41f",
+    "cd_size": 9,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_OptionsQuit",
+    "size": 27,
+    "sha256": "b3944c1005552ab3da9dcc183e5fc666589008efe9d182c2cb92937b4b671bda",
+    "cd_size": 27,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_OptionsSaveTitle",
+    "size": 32,
+    "sha256": "99761c7a5a7f006f504284c7b331ec90e1e1a7e88533f051b9fb279b17123783",
+    "cd_size": 32,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_OptionsLoadTitle",
+    "size": 61,
+    "sha256": "cc504c2c726a3340b91fbf9b64879758ab1a7d750f972acca14bbbe68d6bf7d9",
+    "cd_size": 61,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_Credits1",
+    "size": 124,
+    "sha256": "3a1f6f322cc9a691076817c6da5188f74cec1c59a99828fb074f7cdefa4f7f36",
+    "cd_size": 124,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_Credits2",
+    "size": 173,
+    "sha256": "555b184e4be2f1f3cc286f44df8a729b3822b6784f03e9144c66079c628be2cc",
+    "cd_size": 173,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_Credits3",
+    "size": 137,
+    "sha256": "20d63ca00698041d2c48f4a05b34c92c295f198d9e14109a2d562a5014a30aa1",
+    "cd_size": 137,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_Credits4",
+    "size": 64,
+    "sha256": "cf02ea54a999e1e4ca4620e2869df0ba7b079fa0c97d606bc0e6e27157ba461d",
+    "cd_size": 64,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_Credits5",
+    "size": 77,
+    "sha256": "fdd24c03ead6148869d1d8155ec8f23ed25dee0a6a029cb76a51c02877a2baa4",
+    "cd_size": 77,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_Credits6",
+    "size": 134,
+    "sha256": "6d8d47afa0dc6eb1577fccbd2c66e42144bc0f55c69229e89a0baaadd386d55b",
+    "cd_size": 134,
+    "status": "identical"
+  },
+  {
+    "name": "TXT_Credits7",
+    "size": 69,
+    "sha256": "7ee665aedf65d96951174275948e5ae1d4f71a55b9d6876729714ff2ee33ffaf",
+    "cd_size": 69,
+    "status": "identical"
+  }
+]

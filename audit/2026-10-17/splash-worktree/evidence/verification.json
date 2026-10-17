@@ -1,0 +1,13 @@
+{
+  "worktree": "/Users/gabriel/Desktop/source/scummvm-fork-splash",
+  "branch": "floppy-splash",
+  "HEAD": "a54b0a6ab85bc56cdb561b1a8efc00a11af9d2dd",
+  "source_unchanged": true,
+  "input_changes": [],
+  "working_status_unchanged": true,
+  "build": "make engines/igor/libigor.a scummvm -j4: pass; duplicate SDL2/z linker warnings",
+  "git_diff_check": "pass",
+  "native_unit_roots": 81,
+  "spanish_floppy_states": 147,
+  "document_word_count": 6899
+}

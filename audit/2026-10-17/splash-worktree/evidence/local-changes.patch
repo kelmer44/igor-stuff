@@ -1,0 +1,738 @@
+diff --git a/engines/igor/igor.cpp b/engines/igor/igor.cpp
+index 641ce2aac7c..eed7beded1f 100644
+--- a/engines/igor/igor.cpp
++++ b/engines/igor/igor.cpp
+@@ -149,6 +149,7 @@ void IgorEngine::restart() {
+ 	_actionWalkPoint = 0;
+ 	_rightButtonSelecting = false;
+ 	_hoverVerbState = kHoverVerbSelected;
++	_keyboardCursorStep = 1;
+ 	_rightButtonSelectCursorX = _rightButtonSelectCursorY = 0;
+ 	memset(_inputVars, 0, sizeof(_inputVars));
+ 
+diff --git a/engines/igor/igor.h b/engines/igor/igor.h
+index 216ca6e2ed0..8fcde98fc8d 100644
+--- a/engines/igor/igor.h
++++ b/engines/igor/igor.h
+@@ -26,6 +26,7 @@
+ #include "common/file.h"
+ #include "common/fs.h"
+ #include "common/hash-str.h"
++#include "common/keyboard.h"
+ #include "common/random.h"
+ #include "common/scummsys.h"
+ #include "common/serializer.h"
+@@ -83,6 +84,21 @@ enum {
+ 	kTalkModeTextOnly = 2
+ };
+ 
++// Spanish floppy effects without a counterpart in the other versions (numbers of its sound table)
++enum SpaFloppySound {
++	kSpaFloppySoundPlaneEngine = 66,
++	kSpaFloppySoundPart50Door = 68,
++	kSpaFloppySoundPart68AmbientA = 69,
++	kSpaFloppySoundPart68AmbientB = 70,
++	kSpaFloppySoundPart18Tap = 71,
++	kSpaFloppySoundPart19Dryer = 72,
++	kSpaFloppySoundParkAmbient = 75,
++	kSpaFloppySoundPart6Ambient = 76,
++	kSpaFloppySoundPart8Shards = 77,
++	kSpaFloppySoundPart1Window = 79,
++	kSpaFloppySoundPart2Fuse = 80
++};
++
+ // Value of _hoverVerbState when the verb panel shows the selected verb
+ static const int kHoverVerbSelected = -1;
+ 
+@@ -654,6 +670,7 @@ private:
+ 	bool _rightButtonSelecting;
+ 	// Verb highlighted while the cursor is over a hotspot (Spanish floppy): kHoverVerbSelected = the selected verb
+ 	int _hoverVerbState;
++	int _keyboardCursorStep;
+ 	int _rightButtonSelectCursorX, _rightButtonSelectCursorY;
+ 
+ 	bool _scrollInventory;
+@@ -776,6 +793,7 @@ private:
+ 	void playMusic(int num, bool restart = false);
+ 	void updateMusic();
+ 	void playSound(int num, int type);
++	void playRoomSound(int sound, int spaFloppySound);
+ 	void stopSound();
+ 	int getTalkMode() const;
+ 	int prepareDialoguePlayback(const DialogueText &text);
+@@ -1471,6 +1489,7 @@ private:
+ 	void part68DrawPose(int frame);
+ 	void part68UpdateOwlsEyes();
+ 	void part68UpdateBackground();
++	void part68PlayAmbientSound();
+ 	void part68UpdateBackgroundTalk();
+ 	void part68SayBorisReplies(int action);
+ 	void part68SayBoris(const Common::Array<DialogueText> &lines);
+@@ -1707,6 +1726,8 @@ private:
+ 	void redrawVerb(uint8 verb, bool highlight);
+ 	void beginRightButtonVerbPick();
+ 	void updateHoverVerbHighlight();
++	bool isCursorKey(Common::KeyCode key) const;
++	bool moveCursorWithKeyboard(Common::KeyCode key);
+ 	void updateRightButtonVerbPick();
+ 	void endRightButtonVerbPick();
+ 	void formatRightButtonSentence();
+diff --git a/engines/igor/input.cpp b/engines/igor/input.cpp
+index 366e191d2f1..13571ffa444 100644
+--- a/engines/igor/input.cpp
++++ b/engines/igor/input.cpp
+@@ -56,8 +56,20 @@ void IgorEngine::waitForTimer(int ticks, bool presentScreen, uint32 deadline) {
+ 					       _fastMode, kTimerTicksCount * 1000 / kTickDelay / _fastMode);
+ 				} else if (ev.kbd.keycode == Common::KEYCODE_ESCAPE) {
+ 					_inputVars[kInputEscape] = 1;
++				} else if (_game.version == kIdSpaFloppy && moveCursorWithKeyboard(ev.kbd.keycode)) {
++					// the cursor was moved with the arrow/keypad keys
++				} else if (_game.version == kIdSpaFloppy && ev.kbd.keycode == Common::KEYCODE_INSERT) {
++					// Insert acts as the right button
++					if (!_gameState.dialogueTextRunning && !ev.kbdRepeat) {
++						_inputVars[kInputRightRelease] = 0;
++						_inputVars[kInputRightClick] = 1;
++					}
+ 				} else if (ev.kbd.keycode == Common::KEYCODE_RETURN || ev.kbd.keycode == Common::KEYCODE_KP_ENTER) {
+ 					_inputVars[kInputConfirm] = 1;
++					// Enter acts as the left button at the cursor position (first press only)
++					if (_game.version == kIdSpaFloppy && !_gameState.dialogueTextRunning && !ev.kbdRepeat) {
++						_inputVars[kInputClick] = 1;
++					}
+ 				} else if (ev.kbd.keycode == Common::KEYCODE_SPACE) {
+ 					_inputVars[kInputOptions] = 1;
+ 				} else if (ev.kbd.keycode == Common::KEYCODE_p) {
+@@ -65,6 +77,9 @@ void IgorEngine::waitForTimer(int ticks, bool presentScreen, uint32 deadline) {
+ 				}
+ 				break;
+ 			case Common::EVENT_KEYUP:
++				if (_game.version == kIdSpaFloppy && isCursorKey(ev.kbd.keycode)) {
++					_keyboardCursorStep = 1;
++				}
+ 				if (ev.kbd.keycode == Common::KEYCODE_RETURN || ev.kbd.keycode == Common::KEYCODE_KP_ENTER) {
+ 					_inputVars[kInputConfirm] = 0;
+ 				}
+@@ -293,6 +308,47 @@ void IgorEngine::formatRightButtonSentence() {
+  * The Spanish floppy highlights, while the cursor is over a hotspot, the default verb of that hotspot
+  * (Look for inventory objects) and shows the selected verb again when the cursor leaves.
+  */
++static const Common::KeyCode kCursorKeys[] = {
++	Common::KEYCODE_UP, Common::KEYCODE_DOWN, Common::KEYCODE_LEFT, Common::KEYCODE_RIGHT,
++	Common::KEYCODE_HOME, Common::KEYCODE_END, Common::KEYCODE_PAGEUP, Common::KEYCODE_PAGEDOWN,
++	Common::KEYCODE_KP8, Common::KEYCODE_KP2, Common::KEYCODE_KP4, Common::KEYCODE_KP6,
++	Common::KEYCODE_KP7, Common::KEYCODE_KP1, Common::KEYCODE_KP9, Common::KEYCODE_KP3
++};
++
++bool IgorEngine::isCursorKey(Common::KeyCode key) const {
++	for (uint i = 0; i < ARRAYSIZE(kCursorKeys); ++i) {
++		if (kCursorKeys[i] == key)
++			return true;
++	}
++	return false;
++}
++
++// Arrow and keypad keys move the cursor by a step that grows with every key
++// press (key repeat included) and returns to 1 when a key is released.
++bool IgorEngine::moveCursorWithKeyboard(Common::KeyCode key) {
++	if (!isCursorKey(key))
++		return false;
++	int dx = 0;
++	int dy = 0;
++	switch (key) {
++	case Common::KEYCODE_UP: case Common::KEYCODE_KP8: dy = -1; break;
++	case Common::KEYCODE_DOWN: case Common::KEYCODE_KP2: dy = 1; break;
++	case Common::KEYCODE_LEFT: case Common::KEYCODE_KP4: dx = -1; break;
++	case Common::KEYCODE_RIGHT: case Common::KEYCODE_KP6: dx = 1; break;
++	case Common::KEYCODE_HOME: case Common::KEYCODE_KP7: dx = -1; dy = -1; break;
++	case Common::KEYCODE_PAGEUP: case Common::KEYCODE_KP9: dx = 1; dy = -1; break;
++	case Common::KEYCODE_END: case Common::KEYCODE_KP1: dx = -1; dy = 1; break;
++	default: dx = 1; dy = 1; break;
++	}
++	const int step = _keyboardCursorStep++;
++	const int x = CLIP<int>(_inputVars[kInputCursorXPos] + dx * step, 0, 319);
++	const int y = CLIP<int>(_inputVars[kInputCursorYPos] + dy * step, 0, 199);
++	_inputVars[kInputCursorXPos] = x;
++	_inputVars[kInputCursorYPos] = y;
++	_system->warpMouse(x, y);
++	return true;
++}
++
+ void IgorEngine::updateHoverVerbHighlight() {
+ 	int wanted = kHoverVerbSelected;
+ 	const bool idle = !_rightButtonSelecting && !_gameState.dialogueTextRunning && !_inputVars[kInputClick];
+@@ -370,7 +426,31 @@ void IgorEngine::handleRoomInput() {
+ 		_inputVars[kInputRightRelease] = 0;
+ 		return;
+ 	}
+-	if (_inputVars[kInputRightClick]) {
++	if (_game.version == kIdSpaFloppy && _inputVars[kInputRightClick]) {
++		// Right click runs the hovered object's default verb right away
++		// (Look for inventory items) instead of opening a verb pick.
++		_inputVars[kInputRightClick] = 0;
++		const int x = _inputVars[kInputCursorXPos];
++		const int y = _inputVars[kInputCursorYPos];
++		int verb = 0;
++		if (y < 144) {
++			const int area = _screenLayer2[y * 320 + x];
++			const int object = _roomObjectAreasTable[area].object;
++			const int defaultVerbOffset = _roomDataOffsets.obj.walkPoints +
++				_roomDataOffsets.obj.walkFacingPosition - _roomDataOffsets.action.defaultVerb;
++			verb = _roomActionsTable[defaultVerbOffset + object];
++		} else if (y >= 170 && y <= 197 && getObjectFromInventory(x) != 0) {
++			verb = kVerbLook;
++		}
++		if (verb >= kVerbWalk && verb <= kVerbGive) {
++			redrawVerb(_hoverVerbState == kHoverVerbSelected ? _currentAction.verb : _hoverVerbState, false);
++			memset(&_currentAction, 0, sizeof(_currentAction));
++			_currentAction.verb = verb;
++			_hoverVerbState = verb;
++			redrawVerb(verb, true);
++			_inputVars[kInputClick] = 1;
++		}
++	} else if (_inputVars[kInputRightClick]) {
+ 		_inputVars[kInputRightClick] = 0;
+ 		if (!_rightButtonSelecting) {
+ 			beginRightButtonVerbPick();
+@@ -633,8 +713,13 @@ void IgorEngine::handleRoomInput() {
+ }
+ 
+ void IgorEngine::clearAction(bool redraw) {
+-	if (redraw)
++	if (redraw) {
++		if (_game.version == kIdSpaFloppy && _hoverVerbState != kHoverVerbSelected) {
++			redrawVerb(_hoverVerbState, false);
++			_hoverVerbState = kHoverVerbSelected;
++		}
+ 		redrawVerb(_currentAction.verb, false);
++	}
+ 	memset(&_currentAction, 0, sizeof(_currentAction));
+ 	_currentAction.verb = kVerbWalk;
+ 	_actionCode = 0;
+diff --git a/engines/igor/parts/part_0.cpp b/engines/igor/parts/part_0.cpp
+index 7f3d8a53613..8910a1a4c93 100644
+--- a/engines/igor/parts/part_0.cpp
++++ b/engines/igor/parts/part_0.cpp
+@@ -86,14 +86,14 @@ void IgorEngine::part0ExecuteAction(int action) {
+ 		break;
+ 	case 106: // open bedside table
+ 		if (_objectsState[kBedroomNightstandOpenStateIndex] == 0) {
+-			animateLitAnimFrames(0x3FC8, 0, 2, 0x436, 22, 49, 0x693C, 126, 2, 6);
++			animateLitAnimFrames(0x3FC8, 0, 2, 0x436, 22, 49, 0x693C, 126, 2, _game.version == kIdSpaFloppy ? 5 : 6);
+ 			_objectsState[kBedroomNightstandOpenStateIndex] = 1;
+ 			part0ApplyObjectState(1);
+ 		}
+ 		break;
+ 	case 107: // close bedside table
+ 		if (_objectsState[kBedroomNightstandOpenStateIndex] != 0) {
+-			animateLitAnimFrames(0x3FC8, 2, 0, 0x436, 22, 49, 0x693C, 126, 1, 6);
++			animateLitAnimFrames(0x3FC8, 2, 0, 0x436, 22, 49, 0x693C, 126, 1, _game.version == kIdSpaFloppy ? 5 : 6);
+ 			_objectsState[kBedroomNightstandOpenStateIndex] = 0;
+ 			part0ApplyObjectState(1);
+ 		}
+@@ -125,7 +125,7 @@ void IgorEngine::part0ExecuteAction(int action) {
+ 		break;
+ 	case 111: // close closet
+ 		if (_objectsState[kBedroomClosetOpenStateIndex] != 0) {
+-			animateLitAnimFrames(0x1678, 2, 0, 0x940, 37, 64, 0x556C, 126, 1, 4);
++			animateLitAnimFrames(0x1678, 2, 0, 0x940, 37, 64, 0x556C, 126, 1, _game.version == kIdSpaFloppy ? 14 : 4);
+ 			_objectsState[kBedroomClosetOpenStateIndex] = 0;
+ 			part0ApplyObjectState(3);
+ 		}
+diff --git a/engines/igor/parts/part_1.cpp b/engines/igor/parts/part_1.cpp
+index fb102e0a30a..ba913cd4f5c 100644
+--- a/engines/igor/parts/part_1.cpp
++++ b/engines/igor/parts/part_1.cpp
+@@ -200,7 +200,7 @@ void IgorEngine::part1() {
+ 			else if (_currentPart == 12) {
+ 				memcpy(_currentPalette, _paletteBuffer, 768);
+ 				updatePalette(768);
+-				playSound(12, 1);
++				playRoomSound(12, kSpaFloppySoundPart1Window);
+ 				part1Explosion();
+ 				_currentPart = 23;
+ 			}
+diff --git a/engines/igor/parts/part_12.cpp b/engines/igor/parts/part_12.cpp
+index 18c40c958df..59d6152aaea 100644
+--- a/engines/igor/parts/part_12.cpp
++++ b/engines/igor/parts/part_12.cpp
+@@ -110,7 +110,7 @@ void IgorEngine::part12TryEnterChurch() {
+ 	moveIgor(_walkData[_walkDataCurrentIndex].posNum, _walkData[_walkDataCurrentIndex].frameNum);
+ 	waitForTimer(35);
+ 	// dor opening
+-	playSound(13, 1);
++	playRoomSound(13, 0);
+ 	_walkDataCurrentIndex = _walkDataLastIndex;
+ 	const uint8 *src = _animFramesBuffer + 0x395B + READ_LE_UINT16(_animFramesBuffer + 0xA444) - 1;
+ 	decodeAnimFrame(src, _screenVGA);
+@@ -147,7 +147,7 @@ void IgorEngine::part12TryEnterChurch() {
+ 		if (i > 1) {
+ 			waitForTimer(35);
+ 		} else {
+-			playSound(14, 1);
++			playRoomSound(14, 0);
+ 		}
+ 	}
+ 	src = _animFramesBuffer + 0x395B + READ_LE_UINT16(_animFramesBuffer + 0xA440) - 1;
+@@ -285,19 +285,33 @@ void IgorEngine::part12EnterChurch() {
+ 
+ void IgorEngine::part12UpdateBackground() {
+ 	if (compareGameTick(1) && getRandomNumber(14) == 0) {
+-		switch (getRandomNumber(3)) {
+-		case 0:
+-			playSound(21, 1);
+-			break;
+-		case 1:
+-			playSound(22, 1);
+-			break;
+-		case 2:
+-			playSound(23, 1);
+-			break;
+-		case 3:
+-			playSound(18, 1);
+-			break;
++		if (_game.version == kIdSpaFloppy) {
++			switch (getRandomNumber(2)) {
++			case 0:
++				playSound(21, 1);
++				break;
++			case 1:
++				playSound(kSpaFloppySoundParkAmbient, 1);
++				break;
++			case 2:
++				playSound(23, 1);
++				break;
++			}
++		} else {
++			switch (getRandomNumber(3)) {
++			case 0:
++				playSound(21, 1);
++				break;
++			case 1:
++				playSound(22, 1);
++				break;
++			case 2:
++				playSound(23, 1);
++				break;
++			case 3:
++				playSound(18, 1);
++				break;
++			}
+ 		}
+ 	}
+ }
+@@ -376,7 +390,7 @@ void IgorEngine::part12ExorcismCutscene() {
+ 	SET_PAL_240_48_1();
+ 	SET_PAL_208_96_1();
+ 	fadeIn(768);
+-	playSound(13, 1);
++	playRoomSound(13, 0);
+ 	for (int i = 1; i <= 5; ++i) {
+ 		const uint8 *src = _animFramesBuffer + 0x395B + READ_LE_UINT16(_animFramesBuffer + 0xA43E + i * 2) - 1;
+ 		decodeAnimFrame(src, _screenVGA, true);
+diff --git a/engines/igor/parts/part_14.cpp b/engines/igor/parts/part_14.cpp
+index 94c4d5dee03..15b3aa25bb6 100644
+--- a/engines/igor/parts/part_14.cpp
++++ b/engines/igor/parts/part_14.cpp
+@@ -435,7 +435,7 @@ void IgorEngine::part14ShowPuzzle() {
+ 			if (area >= 1 && area <= 8) {
+ 				drawActionSentence(getString(STR_PushStone), 251);
+ 				hideCursor();
+-				playSound(34, 1);
++				playRoomSound(34, 0);
+ 				switch (area) {
+ 				case 1:
+ 					part14PushStone(33359, 28, 34, 0);
+diff --git a/engines/igor/parts/part_18.cpp b/engines/igor/parts/part_18.cpp
+index 62d253f07e0..683c8ee5af0 100644
+--- a/engines/igor/parts/part_18.cpp
++++ b/engines/igor/parts/part_18.cpp
+@@ -106,7 +106,7 @@ void IgorEngine::part18UseBottleOnTap() {
+ 	}
+ 	const int offset = 26798;
+ 	drawAnimRect(offset, 0xF0A, 28, 29);
+-	playSound(47, 1);
++	playRoomSound(47, kSpaFloppySoundPart18Tap);
+ 	for (int i = 1; i <= 2; ++i) {
+ 		waitForTimer(_game.version == kIdSpaFloppy ? 120 : 200);
+ 	}
+diff --git a/engines/igor/parts/part_19.cpp b/engines/igor/parts/part_19.cpp
+index 835e2f78779..2e826202e11 100644
+--- a/engines/igor/parts/part_19.cpp
++++ b/engines/igor/parts/part_19.cpp
+@@ -88,7 +88,7 @@ void IgorEngine::part19UsePapyrusOnDryer() {
+ 		waitForTimer(45);
+ 	}
+ 	decodeAnimFrame(_animFramesBuffer + READ_LE_UINT16(_animFramesBuffer + 0x35E) - 1, _screenVGA, true);
+-	playSound(45, 1);
++	playRoomSound(45, kSpaFloppySoundPart19Dryer);
+ 	partMainLookAtPapyrus(true);
+ 	part19ApplyObjectState(255);
+ 	stopSound();
+diff --git a/engines/igor/parts/part_2.cpp b/engines/igor/parts/part_2.cpp
+index 8c96c00c72a..92fffee9ed3 100644
+--- a/engines/igor/parts/part_2.cpp
++++ b/engines/igor/parts/part_2.cpp
+@@ -315,20 +315,20 @@ void IgorEngine::part2ExecuteAction(int action) {
+ 
+ void IgorEngine::part2LightUpDynamite() {
+ 	memset(_screenVGA + 0xB400, 0, 0x4BFF);
+-	playSound(68, 1);
++	playRoomSound(68, 0);
+ 	animateLitAnimFrames(0x5CDC, 0, 2, 0x44C, 22, 50, 0x5989, 127, -1, 0);
+ 	waitForTimer(127);
+ 
+ 	igorSay(221, 1, 125);
+ 	if (_gameState.talkMode == kTalkModeTextOnly)
+-		playSound(11, 1);
++		playRoomSound(11, kSpaFloppySoundPart2Fuse);
+ 	_updateRoomBackground = &IgorEngine::part2UpdateFuse;
+ 	waitForEndOfIgorDialogue();
+ 	_updateRoomBackground = 0;
+ 
+ 	memcpy(_screenVGA + _dialogueDirtyRectY, _screenTextLayer + 320 * 72, _dialogueDirtyRectSize);
+ 	if (_gameState.talkMode != kTalkModeTextOnly)
+-		playSound(11, 1);
++		playRoomSound(11, kSpaFloppySoundPart2Fuse);
+ 
+ 	part2WalkWhileFuseBurns(211, 120, 0, 143);
+ 	for (int elapsed = 0; elapsed < 255; elapsed += kTimerTicksCount) {
+diff --git a/engines/igor/parts/part_32.cpp b/engines/igor/parts/part_32.cpp
+index 54b21de6ec2..bba514ddcb4 100644
+--- a/engines/igor/parts/part_32.cpp
++++ b/engines/igor/parts/part_32.cpp
+@@ -230,7 +230,7 @@ void IgorEngine::part32ControlsIdle(int fieldColor) {
+ }
+ 
+ void IgorEngine::part32ExitControls() {
+-	playSound(getRandomNumber(1) + 0x42, 1);
++	playRoomSound(getRandomNumber(1) + 0x42, 0);
+ 	part32CopyControlColor(kPart32DeclinationColor, kPart32FieldColor);
+ 	part32CopyControlColor(kPart32AscensionColor, kPart32FieldColor);
+ 	setPaletteRange(kPart32DeclinationColor, kPart32AscensionColor);
+@@ -239,7 +239,7 @@ void IgorEngine::part32ExitControls() {
+ 
+ 
+ void IgorEngine::part32SelectDeclination() {
+-	playSound(31, 1);
++	playRoomSound(31, 0);
+ 	part32CopyControlColor(kPart32DeclinationColor, kPart32FieldColor);
+ 	part32CopyControlColor(kPart32AscensionColor, kPart32FieldColor);
+ 	setPaletteRange(kPart32AscensionColor, kPart32AscensionColor);
+@@ -249,7 +249,7 @@ void IgorEngine::part32SelectDeclination() {
+ 			_inputVars[kInputClick] = 0;
+ 			const int key = part32ControlKeyAtCursor();
+ 			if (key != kPart32KeyAscension) {
+-				playSound(getRandomNumber(1) + 0x42, 1);
++				playRoomSound(getRandomNumber(1) + 0x42, 0);
+ 			}
+ 			if (key >= 1 && key <= 10) {
+ 				// the declination does not go over 90
+@@ -280,7 +280,7 @@ void IgorEngine::part32SelectDeclination() {
+ }
+ 
+ void IgorEngine::part32SelectAscension() {
+-	playSound(31, 1);
++	playRoomSound(31, 0);
+ 	part32CopyControlColor(kPart32DeclinationColor, kPart32FieldColor);
+ 	setPaletteRange(kPart32DeclinationColor, kPart32DeclinationColor);
+ 	_part32Blink = 2;
+@@ -289,7 +289,7 @@ void IgorEngine::part32SelectAscension() {
+ 			_inputVars[kInputClick] = 0;
+ 			const int key = part32ControlKeyAtCursor();
+ 			if (key != kPart32KeyDeclination) {
+-				playSound(getRandomNumber(1) + 0x42, 1);
++				playRoomSound(getRandomNumber(1) + 0x42, 0);
+ 			}
+ 			if (key >= 1 && key <= 10) {
+ 				// the ascension does not go over 360
+@@ -326,7 +326,7 @@ void IgorEngine::part32SelectAscension() {
+ }
+ 
+ void IgorEngine::part32EnterCoordinates() {
+-	playSound(getRandomNumber(1) + 0x42, 1);
++	playRoomSound(getRandomNumber(1) + 0x42, 0);
+ 	part32CopyControlColor(kPart32DeclinationColor, kPart32FieldColor);
+ 	part32CopyControlColor(kPart32AscensionColor, kPart32FieldColor);
+ 	setPaletteRange(kPart32DeclinationColor, kPart32AscensionColor);
+@@ -344,7 +344,7 @@ void IgorEngine::part32EnterCoordinates() {
+ }
+ 
+ int IgorEngine::part32AnimateDeclination() {
+-	playSound(30, 1);
++	playRoomSound(30, 0);
+ 	uint8 *digits = _part32DeclinationDigits;
+ 	if (digits[1] == 0xFF) {
+ 		digits[1] = digits[0];
+@@ -369,7 +369,7 @@ int IgorEngine::part32AnimateDeclination() {
+ }
+ 
+ int IgorEngine::part32AnimateAscension() {
+-	playSound(30, 1);
++	playRoomSound(30, 0);
+ 	uint8 *digits = _part32AscensionDigits;
+ 	if (digits[2] == 0xFF) {
+ 		digits[2] = digits[1];
+@@ -595,7 +595,7 @@ void IgorEngine::part32SceneGirl() {
+ 		decodeAnimFrame(_screenLayer2 + READ_LE_UINT16(_screenLayer2 + frame * 2 - 2) + 9, _screenVGA, false);
+ 		waitForTimer(50);
+ 	}
+-	playSound(32, 1);
++	playRoomSound(32, 0);
+ 	waitForTimer(255);
+ }
+ 
+diff --git a/engines/igor/parts/part_34.cpp b/engines/igor/parts/part_34.cpp
+index 7302d6c1e3b..9938564686e 100644
+--- a/engines/igor/parts/part_34.cpp
++++ b/engines/igor/parts/part_34.cpp
+@@ -86,19 +86,33 @@ void IgorEngine::part34And35PickUpAnimation(int screenOffset, int framesOffset)
+  */
+ void IgorEngine::part34And35UpdateAmbientSound() {
+ 	if (compareGameTick(1) && getRandomNumber(14) == 0) {
+-		switch (getRandomNumber(3)) {
+-		case 0:
+-			playSound(21, 1);
+-			break;
+-		case 1:
+-			playSound(22, 1);
+-			break;
+-		case 2:
+-			playSound(23, 1);
+-			break;
+-		case 3:
+-			playSound(18, 1);
+-			break;
++		if (_game.version == kIdSpaFloppy) {
++			switch (getRandomNumber(2)) {
++			case 0:
++				playSound(21, 1);
++				break;
++			case 1:
++				playSound(kSpaFloppySoundParkAmbient, 1);
++				break;
++			case 2:
++				playSound(23, 1);
++				break;
++			}
++		} else {
++			switch (getRandomNumber(3)) {
++			case 0:
++				playSound(21, 1);
++				break;
++			case 1:
++				playSound(22, 1);
++				break;
++			case 2:
++				playSound(23, 1);
++				break;
++			case 3:
++				playSound(18, 1);
++				break;
++			}
+ 		}
+ 	}
+ }
+diff --git a/engines/igor/parts/part_5.cpp b/engines/igor/parts/part_5.cpp
+index 84bbae2e787..da4d1101042 100644
+--- a/engines/igor/parts/part_5.cpp
++++ b/engines/igor/parts/part_5.cpp
+@@ -268,21 +268,23 @@ void IgorEngine::part5UpdateBackground() {
+ 		scrollPalette(185, 191);
+ 		setPaletteRange(185, 191);
+ 	}
+-	if (compareGameTick(1)) {
+-		if (getRandomNumber(14) == 0) {
+-			switch (getRandomNumber(3)) {
+-			case 0:
+-				playSound(21, 1);
+-				break;
+-			case 1:
+-				playSound(22, 1);
+-				break;
+-			case 2:
+-				playSound(23, 1);
+-				break;
+-			case 3:
+-				playSound(18, 1);
+-				break;
++	if (_game.version != kIdSpaFloppy) {
++		if (compareGameTick(1)) {
++			if (getRandomNumber(14) == 0) {
++				switch (getRandomNumber(3)) {
++				case 0:
++					playSound(21, 1);
++					break;
++				case 1:
++					playSound(22, 1);
++					break;
++				case 2:
++					playSound(23, 1);
++					break;
++				case 3:
++					playSound(18, 1);
++					break;
++				}
+ 			}
+ 		}
+ 	}
+diff --git a/engines/igor/parts/part_50.cpp b/engines/igor/parts/part_50.cpp
+index a98c8a27a0a..aa53bb907ad 100644
+--- a/engines/igor/parts/part_50.cpp
++++ b/engines/igor/parts/part_50.cpp
+@@ -76,6 +76,8 @@ void IgorEngine::part50EnterFromDoor() {
+ 	_walkDataCurrentIndex = 1;
+ 	_gameState.igorMoving = true;
+ 	waitForIgorMove();
++	if (_game.version == kIdSpaFloppy)
++		playSound(kSpaFloppySoundPart50Door, 1);
+ }
+ 
+ void IgorEngine::part50EnterFromHill() {
+@@ -103,7 +105,7 @@ void IgorEngine::part50EnterFromHill() {
+  */
+ void IgorEngine::part50UpdateBackground() {
+ 	if (compareGameTick(0x3D) && getRandomNumber(49) == 0) {
+-		playSound(44, 1);
++		playRoomSound(44, kSpaFloppySoundPart50Door);
+ 	}
+ }
+ 
+diff --git a/engines/igor/parts/part_6.cpp b/engines/igor/parts/part_6.cpp
+index da1a78e4a9c..aa15ba45833 100644
+--- a/engines/igor/parts/part_6.cpp
++++ b/engines/igor/parts/part_6.cpp
+@@ -40,7 +40,10 @@ void IgorEngine::part6UpdateBackground() {
+ 		setPaletteRange(185, 191);
+ 	}
+ 	if (compareGameTick(1)) {
+-		if (getRandomNumber(14) == 0) {
++		if (_game.version == kIdSpaFloppy) {
++			if (getRandomNumber(19) == 0)
++				playSound(kSpaFloppySoundPart6Ambient, 1);
++		} else if (getRandomNumber(14) == 0) {
+ 			switch (getRandomNumber(3)) {
+ 			case 0:
+ 				playSound(21, 1);
+diff --git a/engines/igor/parts/part_68.cpp b/engines/igor/parts/part_68.cpp
+index 6ff7b7403b8..46ce8a39063 100644
+--- a/engines/igor/parts/part_68.cpp
++++ b/engines/igor/parts/part_68.cpp
+@@ -146,16 +146,23 @@ void IgorEngine::part68UpdateOwlsEyes() {
+ 	}
+ }
+ 
++void IgorEngine::part68PlayAmbientSound() {
++	if (_game.version == kIdSpaFloppy)
++		playSound(getRandomNumber(1) == 0 ? kSpaFloppySoundPart68AmbientA : kSpaFloppySoundPart68AmbientB, 1);
++	else
++		playSound(41, 1);
++}
++
+ void IgorEngine::part68UpdateBackgroundTalk() {
+ 	if (compareGameTick(1) && getRandomNumber(49) == 0) {
+-		playSound(41, 1);
++		part68PlayAmbientSound();
+ 	}
+ 	part68UpdateOwlsEyes();
+ }
+ 
+ void IgorEngine::part68UpdateBackground() {
+ 	if (compareGameTick(1) && getRandomNumber(49) == 0) {
+-		playSound(41, 1);
++		part68PlayAmbientSound();
+ 	}
+ 	if (compareGameTick(0x3D) && _part68NpcPresent) {
+ 		part68DrawUndertaker(getRandomNumber(2));
+diff --git a/engines/igor/parts/part_76.cpp b/engines/igor/parts/part_76.cpp
+index 281c09c8b7f..e673c3a3506 100644
+--- a/engines/igor/parts/part_76.cpp
++++ b/engines/igor/parts/part_76.cpp
+@@ -295,6 +295,8 @@ void IgorEngine::part76() {
+ 	setRoomClickFix(119, 153, 295, true, 119);
+ 	partMainSetExecuteAction(1, &IgorEngine::part76ExecuteAction);
+ 	part76ApplyObjectState();
++	if (_game.version == kIdSpaFloppy)
++		playSound(kSpaFloppySoundPlaneEngine, 1);
+ 	memcpy(_screenVGA, _screenLayer1, 46080);
+ 
+ 	if (!restoreRoomAfterLoad()) {
+diff --git a/engines/igor/parts/part_79.cpp b/engines/igor/parts/part_79.cpp
+index 208949dcbd1..e8d53e7fab6 100644
+--- a/engines/igor/parts/part_79.cpp
++++ b/engines/igor/parts/part_79.cpp
+@@ -457,7 +457,7 @@ void IgorEngine::part79BeachScene() {
+ 			waitForTimer(31);
+ 		}
+ 		if (frame == 0x59) {
+-			playSound(48, 1);
++			playRoomSound(48, 0);
+ 		}
+ 	}
+ 
+diff --git a/engines/igor/parts/part_8.cpp b/engines/igor/parts/part_8.cpp
+index c57b6303f3e..dda2234eb3f 100644
+--- a/engines/igor/parts/part_8.cpp
++++ b/engines/igor/parts/part_8.cpp
+@@ -338,12 +338,12 @@ void IgorEngine::part8ExecuteAction(int action) {
+ 					// Only the shards fall with a pause and a sound
+ 					if (!bottleCaught) {
+ 						waitForTimer(100);
+-						playSound(16, 1);
++						playRoomSound(16, kSpaFloppySoundPart8Shards);
+ 					}
+ 				} else {
+ 					waitForTimer(101);
+ 					if (!bottleCaught)
+-						playSound(16, 1);
++						playRoomSound(16, kSpaFloppySoundPart8Shards);
+ 				}
+ 				if (pendingDeanDrink == kPart08PendingDeanDrinkWater) {
+ 					part8DeanPassesOut();
+diff --git a/engines/igor/parts/part_85.cpp b/engines/igor/parts/part_85.cpp
+index 618096b33d0..d2cb9416fec 100644
+--- a/engines/igor/parts/part_85.cpp
++++ b/engines/igor/parts/part_85.cpp
+@@ -47,7 +47,7 @@ void IgorEngine::part85DisplayLogo() {
+ 	// The CD executable preserves the last intro frame while it displays a
+ 	// 320x122 title card, then restores that frame before entering part 61.
+ 	memcpy(_screenTextLayer, _screenVGA, 46080);
+-	playSound(65, 1);
++	playRoomSound(65, 0);
+ 
+ 	memcpy(_paletteBuffer, _currentPalette, 768);
+ 	loadData(PAL_IgorIntroLogo, _currentPalette);
+diff --git a/engines/igor/parts/part_9.cpp b/engines/igor/parts/part_9.cpp
+index 8fc63a93bda..af454a42147 100644
+--- a/engines/igor/parts/part_9.cpp
++++ b/engines/igor/parts/part_9.cpp
+@@ -292,7 +292,7 @@ void IgorEngine::part9() {
+ 			if (frame < 19)
+ 				waitForTimer(31);
+ 			else
+-				playSound(14, 1);
++				playRoomSound(14, 0);
+ 		}
+ 		waitForTimer(255);
+ 		fadeOut(624);
+diff --git a/engines/igor/sound.cpp b/engines/igor/sound.cpp
+index 9d897082da8..3da9eed0261 100644
+--- a/engines/igor/sound.cpp
++++ b/engines/igor/sound.cpp
+@@ -282,6 +282,17 @@ void IgorEngine::playSound(int num, int type) {
+ 	}
+ }
+ 
++/**
++ * Plays an effect of a room. The Spanish floppy plays its own effect (or none, when spaFloppySound is 0)
++ * where the other versions play "sound".
++ */
++void IgorEngine::playRoomSound(int sound, int spaFloppySound) {
++	if (_game.version == kIdSpaFloppy)
++		sound = spaFloppySound;
++	if (sound > 0)
++		playSound(sound, 1);
++}
++
+ void IgorEngine::stopSound() {
+ 	_mixer->stopHandle(_sfxHandle);
+ 	_mixer->stopHandle(_speechHandle);

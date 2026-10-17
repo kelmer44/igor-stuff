@@ -1,0 +1,10 @@
+{
+  "engine_commit": "ae886e59c6b4342d8e595278352968b9f4fe7e17",
+  "library_build": "pass: make engines/igor/libigor.a -j4",
+  "executable_build": "pass: make scummvm -j4; duplicate SDL2/z library linker warnings",
+  "palette_rotation": "pass",
+  "park_validator": "fails obsolete versions == 3 assertion",
+  "speech_reference_validator": "flags igor.cpp demo reminder no-speech records",
+  "unicorn_available": false,
+  "engine_source_unchanged": true
+}
