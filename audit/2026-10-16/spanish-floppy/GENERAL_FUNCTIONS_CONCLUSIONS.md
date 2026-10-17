@@ -117,7 +117,30 @@ trigger exists on the Spanish floppy, using absolute segment calls in the reside
 Still not analyzed: dialogue-choice UI timing, save/load slot behavior (the engine uses ScummVM saves, so
 only the original file format would matter), sound loop restarts after the options menu.
 
-## 8. Suggested order
+## 8. Generic actions and inventory responses (`part_main.cpp`) — Verified
+
+The floppy installs 66 generic action handlers (codes 2–69, the ones every room shares: looking at and
+using inventory objects, refusals, the newspaper / photo / papyrus viewers) from the resident startup code
+into the same action table the rooms use. All of them were decoded and compared with
+`partMainExecuteAction`:
+
+* **Identical:** every text id and count (the engine's global text numbering is the floppy's native
+  numbering for ids below 101), the random choices (action 2: 34 % / 35 % / 25 % / 6 %, the 2-way and 3-way
+  picks of 9, 12, 17, 21), the bottle look (77 + state), the conditional texts (lizard, folder, statue,
+  vase, lab keys), and the inventory side effects of using the burger on the lizard, the flower on the vase
+  and picking up the lab keys. The object-state routine (bottle / lizard / folder / vase / statue names
+  and inventory pictures) also matches, and so does the inventory action table (37 objects × 10 verbs).
+* **Different, implemented (Spanish floppy only):**
+  * Newspaper and photo stay on screen after their text until a click (left, right, Enter or Insert); the
+    engine closed them when the text ended.
+  * Looking at the newspaper always sets the astronomy-book state to 1 (the engine only did so from 0).
+  * Looking at the papyrus shows the paper (with its figures when revealed) and waits for a click, with
+    **no comment**; the engine played texts 99 / 100.
+* **Open:** during the newspaper and photo screens the floppy changes a global (the byte before the
+  object states, 0xD5 during the screen, 0xF0 afterwards) that is not mapped to anything in the engine; it
+  looks like the dialogue text colour index. Not touched.
+
+## 9. Suggested order
 
 1. Confirm hover highlight, right click, keyboard and the sound changes in game (nothing here was run).
 2. Remaining leads in section 7.
