@@ -695,8 +695,11 @@
 { DAT_FloppyProtectionWords, 0xa24c90, 1400 },
 { TXT_FloppyProtectionScreen, 0xa1b16a, 80 },
 { TXT_FloppyProtectionReply, 0xa1bad5, 46 },
-// TODO: Identify the floppy counterpart for TXT_OptionsSaveTitle.
-// TODO: Identify the floppy counterpart for TXT_OptionsLoadTitle.
+{ TXT_OptionsSaveTitle, 0xa26bc5, 24 },
+{ TXT_OptionsLoadTitle, 0xa26e7e, 24 },
+{ TXT_OptionsDescribeSave, 0xa2673b, 27 },
+{ TXT_OptionsNoSavedGames, 0xa26e63, 27 },
+{ DAT_OptionsNameChars, 0xa26756, 32 },
 // TODO: Identify the floppy counterpart for TXT_Credits1.
 // TODO: Identify the floppy counterpart for TXT_Credits2.
 // TODO: Identify the floppy counterpart for TXT_Credits3.

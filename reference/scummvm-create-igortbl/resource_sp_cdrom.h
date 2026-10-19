@@ -691,6 +691,8 @@
 { TXT_OptionsQuit, 0x8515e5, 27 },
 { TXT_OptionsSaveTitle, 0x85202a, 32 },
 { TXT_OptionsLoadTitle, 0x85220e, 61 },
+{ TXT_OptionsDescribeSave, 0x851b52, 26 },
+{ DAT_OptionsNameChars, 0x851b6c, 32 },
 
 { TXT_Credits1, 0x3aab, 124 },
 { TXT_Credits2, 0x36cf, 173 },
