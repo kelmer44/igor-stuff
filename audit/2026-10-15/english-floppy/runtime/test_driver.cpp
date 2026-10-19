@@ -91,8 +91,10 @@ static int poll(SDL_Event *event) {
    const uint8 oldLizard=engine->_objectsState[Igor::kLizardTakenStateIndex];
    engine->_objectsState[Igor::kLizardTakenStateIndex]=1;
    engine->part12UseResinWithStone();
-   assert(engine->_dialogueTextsTable[0].num==219);
-   fprintf(stderr,"CONFIRMED_CHURCH_USES_EMPTY_CD_LINE_219\n");
+   assert(engine->_dialogueTextsTable[0].num==216);
+   assert(engine->_dialogueTextsTable[0].count==2);
+   assert(engine->_dialogueTextsTable[0].sound==Igor::kNoSpeechSound);
+   fprintf(stderr,"F02_RESIN_RESPONSE_FIXED\n");
    engine->cancelDialogue();
    engine->_objectsState[Igor::kLizardTakenStateIndex]=oldLizard;
    engine->_globalDialogueTexts[240][0]=0;

@@ -1,0 +1,16 @@
+{
+  "tested_engine_commit": "ea3134f191a9a77ffab7e6d81d3c034373142365",
+  "completion_engine_commit": "ea3134f191a9a77ffab7e6d81d3c034373142365",
+  "engine_branch": "floppy-splash",
+  "completion_engine_status": " M engines/igor/igor.cpp\n M engines/igor/igor.h\n",
+  "concurrent_files_not_in_tested_snapshot": [
+    "igor.cpp",
+    "igor.h"
+  ],
+  "changed_game_inputs": [],
+  "diff_check_exit": 0,
+  "diff_check_output": "",
+  "tested_snapshot_was_clean_at_start": true,
+  "game_inputs_stable": true,
+  "scope": "Runtime tests cover the starting clean HEAD and recorded research assets; later concurrent source edits retained as an untested patch."
+}

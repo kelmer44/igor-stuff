@@ -420,3 +420,6 @@
 #define PAL_CollegeCorridorMathClass 1279
 #define MSK_CollegeCorridorMathClass 1280
 #define BOX_CollegeCorridorMathClass 1281
+#define DAT_FloppyProtectionWords 1282
+#define TXT_FloppyProtectionScreen 1283
+#define TXT_FloppyProtectionReply 1284

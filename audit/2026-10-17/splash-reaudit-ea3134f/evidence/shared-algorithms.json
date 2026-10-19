@@ -1,0 +1,47 @@
+{
+  "initialized_native_CD_tables": {
+    "_walkScaleTable": {
+      "size": 2356,
+      "native_offset": "0x924",
+      "identical": true
+    },
+    "_walkWidthScaleTable": {
+      "size": 50,
+      "native_offset": "0x1258",
+      "identical": true
+    },
+    "_inventoryActionsTable": {
+      "size": 740,
+      "native_offset": "0x548",
+      "identical": true
+    },
+    "_inventoryOffsetTable": {
+      "size": 8,
+      "native_offset": "0x834",
+      "identical": true
+    },
+    "INVENTORY_IMG_INIT": {
+      "size": 36,
+      "native_offset": "0x8b6",
+      "identical": true
+    },
+    "_talkDelays": {
+      "size": 7,
+      "native_offset": "0x401",
+      "identical": true
+    }
+  },
+  "part_main_native_CD_selector": {
+    "cases": 262144,
+    "raw_states": 65536,
+    "scene_boundaries": [
+      0,
+      1,
+      7,
+      8
+    ],
+    "identical": true,
+    "scope": "eligibility prefix only; does not prove cutscene body or every edition timer"
+  },
+  "palette_rotation_original_instruction_check": "pass (splash palette.cpp)"
+}

@@ -1,0 +1,22 @@
+{
+  "FloppyFont::_charIndex": {
+    "values": 256,
+    "identical": true
+  },
+  "FloppyDialogueFont::_charWidth": {
+    "values": 91,
+    "identical": true
+  },
+  "FloppyDialogueFont::_charData": {
+    "values": 1001,
+    "identical": true
+  },
+  "FloppySentenceFont::_charWidth": {
+    "values": 91,
+    "identical": true
+  },
+  "FloppySentenceFont::_charData": {
+    "values": 1001,
+    "identical": true
+  }
+}

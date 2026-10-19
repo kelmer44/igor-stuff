@@ -1,0 +1,32 @@
+{
+  "demo100": {
+    "resources": 340,
+    "room_combinations": 27,
+    "animation_groups": 23,
+    "dialogues": 7
+  },
+  "demo110": {
+    "resources": 340,
+    "room_combinations": 27,
+    "animation_groups": 23,
+    "dialogues": 7
+  },
+  "english-floppy": {
+    "resources": 711,
+    "room_combinations": 50,
+    "animation_groups": 42,
+    "dialogues": 14
+  },
+  "spanish-cd": {
+    "resources": 697,
+    "room_combinations": 50,
+    "animation_groups": 42,
+    "dialogues": 14
+  },
+  "spanish-floppy": {
+    "resources": 710,
+    "room_combinations": 51,
+    "animation_groups": 42,
+    "dialogues": 13
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "demo100": {
+    "lane_loads_checked": 54,
+    "primary_lane_bad_resources": [],
+    "secondary_lane_bad_resources": []
+  },
+  "demo110": {
+    "lane_loads_checked": 54,
+    "primary_lane_bad_resources": [],
+    "secondary_lane_bad_resources": []
+  },
+  "english-floppy": {
+    "lane_loads_checked": 134,
+    "primary_lane_bad_resources": [],
+    "secondary_lane_bad_resources": []
+  },
+  "spanish-cd": {
+    "lane_loads_checked": 134,
+    "primary_lane_bad_resources": [],
+    "secondary_lane_bad_resources": []
+  },
+  "spanish-floppy": {
+    "lane_loads_checked": 136,
+    "primary_lane_bad_resources": [],
+    "secondary_lane_bad_resources": []
+  }
+}

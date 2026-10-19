@@ -1,0 +1,57 @@
+{
+  "demo100-matrix": {
+    "exit": 0,
+    "timeout": false,
+    "markers": [
+      "AUDIT_AV02_REAL_TEXT_PASS rows=21 emptyRows=1 emptyDelay=0",
+      "AUDIT_AV02_MASKS_PASS repeats=60 allMasks=30 nextRecords=30",
+      "AUDIT_AV02_COMPLETE"
+    ],
+    "natural_state_61": true,
+    "dictionary_error": false
+  },
+  "demo110-matrix": {
+    "exit": 0,
+    "timeout": false,
+    "markers": [
+      "AUDIT_AV02_REAL_TEXT_PASS rows=21 emptyRows=1 emptyDelay=0",
+      "AUDIT_AV02_MASKS_PASS repeats=60 allMasks=30 nextRecords=30",
+      "AUDIT_AV02_COMPLETE"
+    ],
+    "natural_state_61": true,
+    "dictionary_error": false
+  },
+  "english-floppy-matrix": {
+    "exit": 0,
+    "timeout": false,
+    "markers": [
+      "AUDIT_AV02_REAL_TEXT_PASS rows=21 emptyRows=1 emptyDelay=0",
+      "AUDIT_AV02_MASKS_PASS repeats=60 allMasks=30 nextRecords=30",
+      "AUDIT_AV02_COMPLETE"
+    ],
+    "natural_state_61": true,
+    "dictionary_error": false
+  },
+  "spanish-cd-matrix": {
+    "exit": 0,
+    "timeout": false,
+    "markers": [
+      "AUDIT_AV02_REAL_TEXT_PASS rows=21 emptyRows=1 emptyDelay=0",
+      "AUDIT_AV02_MASKS_PASS repeats=60 allMasks=30 nextRecords=30",
+      "AUDIT_AV02_COMPLETE"
+    ],
+    "natural_state_61": true,
+    "dictionary_error": false
+  },
+  "spanish-floppy-matrix": {
+    "exit": 0,
+    "timeout": false,
+    "markers": [
+      "AUDIT_AV02_REAL_TEXT_PASS rows=21 emptyRows=1 emptyDelay=0",
+      "AUDIT_AV02_MASKS_PASS repeats=60 allMasks=30 nextRecords=30",
+      "AUDIT_AV02_COMPLETE"
+    ],
+    "natural_state_61": true,
+    "dictionary_error": false
+  }
+}

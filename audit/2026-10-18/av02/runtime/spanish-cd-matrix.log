@@ -1,0 +1,202 @@
+[2026-10-18 21:45:05] ScummVM 2026.3.1git10607-gd4e67dd2b41-dirty (Oct 18 2026 21:44:23)
+[2026-10-18 21:45:05] TAINTED Vorbis FLAC MP3 RGB zLib AAC A/52 FreeType2 FriBiDi JPEG PNG taskbar TTS SDL_net SDL2 OpenGL (with shaders) OpenGL desktop only RetroWave 
+[2026-10-18 21:45:05] --- Log opened.
+[2026-10-18 21:45:05] Using SDL Video Driver "dummy"
+[2026-10-18 21:45:05] SDL Video Detecting OpenGL Features...
+[2026-10-18 21:45:05] SDL Video Detecting Anti-aliasing Support...
+[2026-10-18 21:45:05] Checking SDL Antialiasing Support With 2 Samples... No Window
+[2026-10-18 21:45:05] Checking SDL Antialiasing Support With 4 Samples... No Window
+[2026-10-18 21:45:05] Checking SDL Antialiasing Support With 8 Samples... No Window
+[2026-10-18 21:45:05] Checking SDL Antialiasing Support With 16 Samples... No Window
+[2026-10-18 21:45:05] Checking SDL Antialiasing Support With 32 Samples... No Window
+[2026-10-18 21:45:05] SDL Video OpenGL Feature Detection Complete
+[2026-10-18 21:45:05] Invalid joystick: 0
+[2026-10-18 21:45:05] creating SurfaceSDL graphics manager
+[2026-10-18 21:45:05] creating OpenGL graphics manager
+[2026-10-18 21:45:05] creating SurfaceSDL graphics manager
+[2026-10-18 21:45:05] Using SDL Audio Driver "dummy"
+[2026-10-18 21:45:05] Output sample rate: 44100 Hz
+[2026-10-18 21:45:05] Output buffer size: 1024 samples
+[2026-10-18 21:45:05] Output channels: 2
+[2026-10-18 21:45:05] HardwareInput with ID 'JOY_START' not known
+[2026-10-18 21:45:05] HardwareInput with ID 'JOY_LEFT_STICK_Y-' not known
+[2026-10-18 21:45:05] HardwareInput with ID 'JOY_LEFT_STICK_Y+' not known
+[2026-10-18 21:45:05] HardwareInput with ID 'JOY_LEFT_STICK_X-' not known
+[2026-10-18 21:45:05] HardwareInput with ID 'JOY_LEFT_STICK_X+' not known
+[2026-10-18 21:45:05] HardwareInput with ID 'JOY_RIGHT_SHOULDER' not known
+[2026-10-18 21:45:05] CPU extensions:
+[2026-10-18 21:45:05] SSE2(not supported) AVX2(not supported) NEON(enabled)
+[2026-10-18 21:45:05] Running Igor: Objective Uikokahonia (CD/DOS/Spanish)
+[2026-10-18 21:45:05] IGOR.DAT: b4ba3ec480ec66a2fa456265ab51f5f6, 61682719 bytes.
+[2026-10-18 21:45:05] IGOR.EXE: 70f49859d1defddda140d144e1eb90b1, 9115648 bytes.
+[2026-10-18 21:45:05] HardwareInput with ID 'JOY_A' not known
+[2026-10-18 21:45:05] HardwareInput with ID 'JOY_B' not known
+[2026-10-18 21:45:05] HardwareInput with ID 'JOY_LEFT_SHOULDER' not known
+[2026-10-18 21:45:05] HardwareInput with ID 'JOY_Y' not known
+[2026-10-18 21:45:05] HardwareInput with ID 'JOY_X' not known
+[2026-10-18 21:45:05] HardwareInput with ID 'JOY_UP' not known
+[2026-10-18 21:45:05] HardwareInput with ID 'JOY_DOWN' not known
+[2026-10-18 21:45:05] HardwareInput with ID 'JOY_LEFT' not known
+[2026-10-18 21:45:05] HardwareInput with ID 'JOY_RIGHT' not known
+[2026-10-18 21:45:05] Setting 640 x 480 -> 640 x 480 -- 1
+[2026-10-18 21:45:05] generateZipSet: Loaded pack file: gui-icons.dat
+[2026-10-18 21:45:05] Opening hashed: THEMERC
+[2026-10-18 21:45:05] Opening hashed: THEMERC
+[2026-10-18 21:45:05] Opening hashed: THEMERC
+[2026-10-18 21:45:05] Opening hashed: THEMERC
+[2026-10-18 21:45:05] Loading theme gui/themes/scummremastered.zip
+[2026-10-18 21:45:05] Opening hashed: THEMERC
+[2026-10-18 21:45:05] Finished loading theme gui/themes/scummremastered.zip
+[2026-10-18 21:45:06] FSDirectory::createReadStreamForMember('IGOR.EXE') -> '/Users/gabriel/Desktop/source/igor-stuff/IGOR-CD/IGOR.EXE'
+[2026-10-18 21:45:06] Opening hashed: IGOR.EXE
+[2026-10-18 21:45:06] FSDirectory::createReadStreamForMember('IGOR.DAT') -> '/Users/gabriel/Desktop/source/igor-stuff/IGOR-CD/IGOR.DAT'
+[2026-10-18 21:45:06] Opening hashed: IGOR.DAT
+[2026-10-18 21:45:06] FSDirectory::createReadStreamForMember('IGOR.TBL') -> '/Users/gabriel/Desktop/source/igor-stuff/IGOR-CD/IGOR.TBL'
+[2026-10-18 21:45:06] Opening hashed: IGOR.TBL
+[2026-10-18 21:45:06] partMain _currentPart 900
+[2026-10-18 21:45:06] playMusic() 14
+[2026-10-18 21:45:06] File::open: opening 'track15.flac' failed
+[2026-10-18 21:45:06] File::open: opening 'track15.fla' failed
+[2026-10-18 21:45:06] File::open: opening 'track15.ogg' failed
+[2026-10-18 21:45:06] File::open: opening 'track15.mp3' failed
+[2026-10-18 21:45:06] File::open: opening 'track15.m4a' failed
+[2026-10-18 21:45:06] File::open: opening 'track15.wav' failed
+[2026-10-18 21:45:06] SeekableAudioStream::openStreamFile: Could not open compressed AudioFile track15
+[2026-10-18 21:45:06] File::open: opening 'track15.flac' failed
+[2026-10-18 21:45:06] File::open: opening 'track15.fla' failed
+[2026-10-18 21:45:06] File::open: opening 'track15.ogg' failed
+[2026-10-18 21:45:06] File::open: opening 'track15.mp3' failed
+[2026-10-18 21:45:06] File::open: opening 'track15.m4a' failed
+[2026-10-18 21:45:06] File::open: opening 'track15.wav' failed
+[2026-10-18 21:45:06] SeekableAudioStream::openStreamFile: Could not open compressed AudioFile track15
+[2026-10-18 21:45:06] File::open: opening 'track_15.flac' failed
+[2026-10-18 21:45:06] File::open: opening 'track_15.fla' failed
+[2026-10-18 21:45:06] File::open: opening 'track_15.ogg' failed
+[2026-10-18 21:45:06] FSDirectory::createReadStreamForMember('track_15.mp3') -> '/Users/gabriel/Desktop/source/igor-stuff/IGOR-CD/track_15.mp3'
+[2026-10-18 21:45:06] Opening hashed: track_15.mp3
+[2026-10-18 21:45:06] Skipping ID3 TAG (45 bytes)
+[2026-10-18 21:45:06] Ctrl+F: fast mode 4 (6 ms per tick)
+[2026-10-18 21:45:09] partMain _currentPart 901
+[2026-10-18 21:45:09] partMain _currentPart 902
+[2026-10-18 21:45:10] partMain _currentPart 903
+[2026-10-18 21:45:13] partMain _currentPart 850
+[2026-10-18 21:45:13] playMusic() 10
+[2026-10-18 21:45:13] File::open: opening 'track11.flac' failed
+[2026-10-18 21:45:13] File::open: opening 'track11.fla' failed
+[2026-10-18 21:45:13] File::open: opening 'track11.ogg' failed
+[2026-10-18 21:45:13] File::open: opening 'track11.mp3' failed
+[2026-10-18 21:45:13] File::open: opening 'track11.m4a' failed
+[2026-10-18 21:45:13] File::open: opening 'track11.wav' failed
+[2026-10-18 21:45:13] SeekableAudioStream::openStreamFile: Could not open compressed AudioFile track11
+[2026-10-18 21:45:13] File::open: opening 'track11.flac' failed
+[2026-10-18 21:45:13] File::open: opening 'track11.fla' failed
+[2026-10-18 21:45:13] File::open: opening 'track11.ogg' failed
+[2026-10-18 21:45:13] File::open: opening 'track11.mp3' failed
+[2026-10-18 21:45:13] File::open: opening 'track11.m4a' failed
+[2026-10-18 21:45:13] File::open: opening 'track11.wav' failed
+[2026-10-18 21:45:13] SeekableAudioStream::openStreamFile: Could not open compressed AudioFile track11
+[2026-10-18 21:45:13] File::open: opening 'track_11.flac' failed
+[2026-10-18 21:45:13] File::open: opening 'track_11.fla' failed
+[2026-10-18 21:45:13] File::open: opening 'track_11.ogg' failed
+[2026-10-18 21:45:13] FSDirectory::createReadStreamForMember('track_11.mp3') -> '/Users/gabriel/Desktop/source/igor-stuff/IGOR-CD/track_11.mp3'
+[2026-10-18 21:45:13] Opening hashed: track_11.mp3
+[2026-10-18 21:45:13] Skipping ID3 TAG (45 bytes)
+[2026-10-18 21:45:14] partMain _currentPart 61
+[2026-10-18 21:45:14] playMusic() 10
+[2026-10-18 21:45:14] Entering part6
+[2026-10-18 21:45:15] showCursor()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] startIgorDialogue()
+[2026-10-18 21:45:15] SdlEventSource: corrected stale mouse position (320,173) to (128,29)
+[2026-10-18 21:45:15] hideCursor()
+[2026-10-18 21:45:16] --- Log closed successfully.

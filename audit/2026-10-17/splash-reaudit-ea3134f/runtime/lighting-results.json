@@ -1,0 +1,13 @@
+{
+  "spanish-cd-lighting": {
+    "exit": 0,
+    "timeout": false,
+    "markers": [
+      "AUDIT_LIGHTING_COMPONENT index=46 actual=0 native=10",
+      "AUDIT_LIGHTING_COMPONENT index=47 actual=0 native=10",
+      "AUDIT_LIGHTING_INCOMPLETE matched=46 nativeComponents=48"
+    ],
+    "natural_state_61": true,
+    "dictionary_error": false
+  }
+}

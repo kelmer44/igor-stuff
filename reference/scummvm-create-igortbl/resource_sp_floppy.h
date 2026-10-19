@@ -692,6 +692,9 @@
 { TXT_OptionsSettings, 0xa2576b, 159 },
 { TXT_OptionsTitle, 0xa25df8, 17 },
 { TXT_OptionsQuit, 0xa26084, 46 },
+{ DAT_FloppyProtectionWords, 0xa24c90, 1400 },
+{ TXT_FloppyProtectionScreen, 0xa1b16a, 80 },
+{ TXT_FloppyProtectionReply, 0xa1bad5, 46 },
 // TODO: Identify the floppy counterpart for TXT_OptionsSaveTitle.
 // TODO: Identify the floppy counterpart for TXT_OptionsLoadTitle.
 // TODO: Identify the floppy counterpart for TXT_Credits1.

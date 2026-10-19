@@ -1,0 +1,12 @@
+{
+  "generated_sha256": "120873ccd7d190b66a74c9a2c9f5a0724a5afc28578bd165d805ecaea724940c",
+  "compiler_diagnostics": "In file included from /Users/gabriel/Desktop/source/igor-stuff/reference/scummvm-create-igortbl/create_igortbl.cpp:163:\n/Users/gabriel/Desktop/source/igor-stuff/reference/scummvm-create-igortbl/strings.h:15:47: warning: illegal character encoding in string literal [-Winvalid-source-encoding]\n   15 | { STR_EmptyBottle, STR_LANG_SPA, \" botella vac<A1>a\" },\n      |                                               ^~~~\n1 warning generated.\n",
+  "installed_copies": {
+    "/Users/gabriel/Desktop/source/igor-stuff/IGOR.TBL": true,
+    "/Users/gabriel/Desktop/source/igor-stuff/IGOR/IGOR.TBL": true,
+    "/Users/gabriel/Desktop/source/igor-stuff/IGOR-CD/IGOR.TBL": true,
+    "/Users/gabriel/Desktop/source/igor-stuff/igor-en/IGOR.TBL": true,
+    "/Users/gabriel/Desktop/source/igor-stuff/igor-demo/IGOR.TBL": true,
+    "/Users/gabriel/Desktop/source/igor-stuff/igor110/IGOR.TBL": true
+  }
+}

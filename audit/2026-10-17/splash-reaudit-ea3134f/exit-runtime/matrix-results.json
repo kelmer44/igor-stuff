@@ -1,0 +1,75 @@
+{
+  "demo100-matrix": {
+    "exit": 0,
+    "timeout": false,
+    "markers": [
+      "EXIT_PAGE=950",
+      "OPTIONS_STAGE=1",
+      "EXIT_PAGE=951",
+      "OPTIONS_STAGE=2",
+      "EXIT_PAGE=952",
+      "OPTIONS_STAGE=3",
+      "EXIT_PAGE=953",
+      "OPTIONS_STAGE=4",
+      "EXIT_PAGE=954",
+      "OPTIONS_STAGE=5",
+      "EXIT_PAGE=955",
+      "OPTIONS_STAGE=6",
+      "EXIT_PAGE=956",
+      "OPTIONS_STAGE=7",
+      "MUSIC_NONZERO_BYTES=225118 EXIT_MASK=127"
+    ],
+    "natural_state_61": true,
+    "dictionary_error": false
+  },
+  "demo110-matrix": {
+    "exit": 0,
+    "timeout": false,
+    "markers": [
+      "EXIT_PAGE=950",
+      "OPTIONS_STAGE=1",
+      "EXIT_PAGE=951",
+      "OPTIONS_STAGE=2",
+      "EXIT_PAGE=952",
+      "OPTIONS_STAGE=3",
+      "EXIT_PAGE=953",
+      "OPTIONS_STAGE=4",
+      "EXIT_PAGE=954",
+      "OPTIONS_STAGE=5",
+      "EXIT_PAGE=955",
+      "OPTIONS_STAGE=6",
+      "EXIT_PAGE=956",
+      "OPTIONS_STAGE=7",
+      "MUSIC_NONZERO_BYTES=214460 EXIT_MASK=127"
+    ],
+    "natural_state_61": true,
+    "dictionary_error": false
+  },
+  "english-floppy-matrix": {
+    "exit": 0,
+    "timeout": false,
+    "markers": [
+      "MUSIC_NONZERO_BYTES=0 EXIT_MASK=0"
+    ],
+    "natural_state_61": true,
+    "dictionary_error": false
+  },
+  "spanish-cd-matrix": {
+    "exit": 0,
+    "timeout": false,
+    "markers": [
+      "MUSIC_NONZERO_BYTES=1491046 EXIT_MASK=0"
+    ],
+    "natural_state_61": true,
+    "dictionary_error": false
+  },
+  "spanish-floppy-matrix": {
+    "exit": 0,
+    "timeout": false,
+    "markers": [
+      "MUSIC_NONZERO_BYTES=921558 EXIT_MASK=0"
+    ],
+    "natural_state_61": true,
+    "dictionary_error": false
+  }
+}

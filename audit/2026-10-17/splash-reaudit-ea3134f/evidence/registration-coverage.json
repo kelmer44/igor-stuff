@@ -1,0 +1,10 @@
+{
+  "rooms": {
+    "registrations": 469,
+    "missing_literal_switch_labels": []
+  },
+  "global": {
+    "registrations": 67,
+    "missing_literal_switch_labels": []
+  }
+}

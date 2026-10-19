@@ -1,0 +1,71 @@
+{
+  "demo100-matrix": {
+    "exit": 0,
+    "timeout": false,
+    "markers": [
+      "OPTIONS_STAGE=1",
+      "OPTIONS_STAGE=2",
+      "OPTIONS_STAGE=3",
+      "OPTIONS_STAGE=4",
+      "OPTIONS_STAGE=5",
+      "OPTIONS_STAGE=6",
+      "MUSIC_NONZERO_BYTES=403008"
+    ],
+    "natural_state_61": true,
+    "dictionary_error": false
+  },
+  "demo110-matrix": {
+    "exit": 0,
+    "timeout": false,
+    "markers": [
+      "OPTIONS_STAGE=1",
+      "OPTIONS_STAGE=2",
+      "OPTIONS_STAGE=3",
+      "OPTIONS_STAGE=4",
+      "OPTIONS_STAGE=5",
+      "OPTIONS_STAGE=6",
+      "MUSIC_NONZERO_BYTES=399924"
+    ],
+    "natural_state_61": true,
+    "dictionary_error": false
+  },
+  "english-floppy-matrix": {
+    "exit": 0,
+    "timeout": false,
+    "markers": [
+      "OPTIONS_STAGE=1",
+      "OPTIONS_STAGE=4",
+      "OPTIONS_STAGE=5",
+      "OPTIONS_STAGE=6",
+      "MUSIC_NONZERO_BYTES=193630"
+    ],
+    "natural_state_61": true,
+    "dictionary_error": false
+  },
+  "spanish-cd-matrix": {
+    "exit": 0,
+    "timeout": false,
+    "markers": [
+      "OPTIONS_STAGE=1",
+      "OPTIONS_STAGE=4",
+      "OPTIONS_STAGE=5",
+      "OPTIONS_STAGE=6",
+      "MUSIC_NONZERO_BYTES=1795539"
+    ],
+    "natural_state_61": true,
+    "dictionary_error": false
+  },
+  "spanish-floppy-matrix": {
+    "exit": 0,
+    "timeout": false,
+    "markers": [
+      "OPTIONS_STAGE=1",
+      "OPTIONS_STAGE=4",
+      "OPTIONS_STAGE=5",
+      "OPTIONS_STAGE=6",
+      "MUSIC_NONZERO_BYTES=1000010"
+    ],
+    "natural_state_61": true,
+    "dictionary_error": false
+  }
+}

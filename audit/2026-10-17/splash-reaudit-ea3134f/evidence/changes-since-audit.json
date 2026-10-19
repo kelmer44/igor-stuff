@@ -1,0 +1,19 @@
+{
+  "changed_since_previous_audit": [
+    "input.cpp",
+    "part_main.cpp",
+    "igor.h",
+    "room.cpp",
+    "sound.cpp",
+    "parts/part_50.cpp",
+    "parts/part_8.cpp",
+    "parts/part_19.cpp",
+    "parts/part_18.cpp",
+    "parts/part_32.cpp",
+    "parts/part_1.cpp",
+    "parts/part_0.cpp",
+    "parts/part_2.cpp",
+    "parts/part_14.cpp"
+  ],
+  "removed": []
+}

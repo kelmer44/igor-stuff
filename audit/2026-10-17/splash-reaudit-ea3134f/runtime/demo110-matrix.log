@@ -1,0 +1,107 @@
+[2026-10-17 22:17:00] ScummVM 2026.3.1git10599-gea3134f191a (Oct 17 2026 22:16:29)
+[2026-10-17 22:17:00] TAINTED Vorbis FLAC MP3 RGB zLib AAC A/52 FreeType2 FriBiDi JPEG PNG taskbar TTS SDL_net SDL2 OpenGL (with shaders) OpenGL desktop only RetroWave 
+[2026-10-17 22:17:00] --- Log opened.
+[2026-10-17 22:17:00] Using SDL Video Driver "dummy"
+[2026-10-17 22:17:00] SDL Video Detecting OpenGL Features...
+[2026-10-17 22:17:00] SDL Video Detecting Anti-aliasing Support...
+[2026-10-17 22:17:00] Checking SDL Antialiasing Support With 2 Samples... No Window
+[2026-10-17 22:17:00] Checking SDL Antialiasing Support With 4 Samples... No Window
+[2026-10-17 22:17:00] Checking SDL Antialiasing Support With 8 Samples... No Window
+[2026-10-17 22:17:00] Checking SDL Antialiasing Support With 16 Samples... No Window
+[2026-10-17 22:17:00] Checking SDL Antialiasing Support With 32 Samples... No Window
+[2026-10-17 22:17:00] SDL Video OpenGL Feature Detection Complete
+[2026-10-17 22:17:00] Invalid joystick: 0
+[2026-10-17 22:17:00] creating SurfaceSDL graphics manager
+[2026-10-17 22:17:00] creating OpenGL graphics manager
+[2026-10-17 22:17:00] creating SurfaceSDL graphics manager
+[2026-10-17 22:17:00] Using SDL Audio Driver "dummy"
+[2026-10-17 22:17:00] Output sample rate: 44100 Hz
+[2026-10-17 22:17:00] Output buffer size: 1024 samples
+[2026-10-17 22:17:00] Output channels: 2
+[2026-10-17 22:17:00] HardwareInput with ID 'JOY_START' not known
+[2026-10-17 22:17:00] HardwareInput with ID 'JOY_LEFT_STICK_Y-' not known
+[2026-10-17 22:17:00] HardwareInput with ID 'JOY_LEFT_STICK_Y+' not known
+[2026-10-17 22:17:00] HardwareInput with ID 'JOY_LEFT_STICK_X-' not known
+[2026-10-17 22:17:00] HardwareInput with ID 'JOY_LEFT_STICK_X+' not known
+[2026-10-17 22:17:00] HardwareInput with ID 'JOY_RIGHT_SHOULDER' not known
+[2026-10-17 22:17:00] CPU extensions:
+[2026-10-17 22:17:00] SSE2(not supported) AVX2(not supported) NEON(enabled)
+[2026-10-17 22:17:00] Running Igor: Objective Uikokahonia (Demo 1.10s/DOS/English)
+[2026-10-17 22:17:00] IGOR.DAT: a8a4d8979c43727e7689705e23fb1a20, 4094103 bytes.
+[2026-10-17 22:17:00] IGOR.FSD: 679d176c331247bc1b22151abe97f438, 462564 bytes.
+[2026-10-17 22:17:00] HardwareInput with ID 'JOY_A' not known
+[2026-10-17 22:17:00] HardwareInput with ID 'JOY_B' not known
+[2026-10-17 22:17:00] HardwareInput with ID 'JOY_LEFT_SHOULDER' not known
+[2026-10-17 22:17:00] HardwareInput with ID 'JOY_Y' not known
+[2026-10-17 22:17:00] HardwareInput with ID 'JOY_X' not known
+[2026-10-17 22:17:00] HardwareInput with ID 'JOY_UP' not known
+[2026-10-17 22:17:00] HardwareInput with ID 'JOY_DOWN' not known
+[2026-10-17 22:17:00] HardwareInput with ID 'JOY_LEFT' not known
+[2026-10-17 22:17:00] HardwareInput with ID 'JOY_RIGHT' not known
+[2026-10-17 22:17:00] Setting 640 x 480 -> 640 x 480 -- 1
+[2026-10-17 22:17:00] generateZipSet: Loaded pack file: gui-icons.dat
+[2026-10-17 22:17:00] Opening hashed: THEMERC
+[2026-10-17 22:17:00] Opening hashed: THEMERC
+[2026-10-17 22:17:00] Opening hashed: THEMERC
+[2026-10-17 22:17:00] Opening hashed: THEMERC
+[2026-10-17 22:17:00] Loading theme gui/themes/scummremastered.zip
+[2026-10-17 22:17:00] Opening hashed: THEMERC
+[2026-10-17 22:17:00] Finished loading theme gui/themes/scummremastered.zip
+[2026-10-17 22:17:01] FSDirectory::createReadStreamForMember('IGOR.DAT') -> '/Users/gabriel/Desktop/source/igor-stuff/igor110/IGOR.DAT'
+[2026-10-17 22:17:01] Opening hashed: IGOR.DAT
+[2026-10-17 22:17:01] FSDirectory::createReadStreamForMember('IGOR.FSD') -> '/Users/gabriel/Desktop/source/igor-stuff/igor110/IGOR.FSD'
+[2026-10-17 22:17:01] Opening hashed: IGOR.FSD
+[2026-10-17 22:17:01] FSDirectory::createReadStreamForMember('IGOR.TBL') -> '/Users/gabriel/Desktop/source/igor-stuff/igor110/IGOR.TBL'
+[2026-10-17 22:17:01] Opening hashed: IGOR.TBL
+[2026-10-17 22:17:01] partMain _currentPart 900
+[2026-10-17 22:17:01] Ctrl+F: fast mode 4 (6 ms per tick)
+[2026-10-17 22:17:04] partMain _currentPart 901
+[2026-10-17 22:17:05] partMain _currentPart 902
+[2026-10-17 22:17:06] partMain _currentPart 903
+[2026-10-17 22:17:09] partMain _currentPart 904
+[2026-10-17 22:17:12] partMain _currentPart 850
+[2026-10-17 22:17:12] playMusic() 2
+[2026-10-17 22:17:13] partMain _currentPart 61
+[2026-10-17 22:17:13] Entering part6
+[2026-10-17 22:17:13] showCursor()
+[2026-10-17 22:17:13] SdlEventSource: corrected stale mouse position (320,173) to (128,29)
+[2026-10-17 22:17:13] startIgorDialogue()
+[2026-10-17 22:17:13] startIgorDialogue()
+[2026-10-17 22:17:14] playMusic() 2
+[2026-10-17 22:17:14] showCursor()
+[2026-10-17 22:17:14] showCursor()
+[2026-10-17 22:17:14] showCursor()
+[2026-10-17 22:17:14] startIgorDialogue()
+[2026-10-17 22:17:14] showCursor()
+[2026-10-17 22:17:14] startIgorDialogue()
+[2026-10-17 22:17:14] playMusic() 2
+[2026-10-17 22:17:16] startMusic() cue 2 segment 1 resource 307
+[2026-10-17 22:17:16] startMusic() cue 2 segment 2 resource 308
+[2026-10-17 22:17:16] startMusic() cue 2 segment 4 resource 310
+[2026-10-17 22:17:16] startMusic() cue 2 segment 3 resource 309
+[2026-10-17 22:17:16] startMusic() cue 2 segment 2 resource 308
+[2026-10-17 22:17:16] startMusic() cue 2 segment 1 resource 307
+[2026-10-17 22:17:16] startMusic() cue 2 segment 2 resource 308
+[2026-10-17 22:17:17] startMusic() cue 2 segment 4 resource 310
+[2026-10-17 22:17:17] startMusic() cue 2 segment 1 resource 307
+[2026-10-17 22:17:17] startMusic() cue 2 segment 4 resource 310
+[2026-10-17 22:17:17] startMusic() cue 2 segment 1 resource 307
+[2026-10-17 22:17:17] startMusic() cue 2 segment 3 resource 309
+[2026-10-17 22:17:17] startMusic() cue 2 segment 1 resource 307
+[2026-10-17 22:17:17] playMusic() 7
+[2026-10-17 22:17:17] startMusic() cue 7 segment 1 resource 313
+[2026-10-17 22:17:17] startMusic() cue 7 segment 2 resource 314
+[2026-10-17 22:17:17] startMusic() cue 7 segment 3 resource 315
+[2026-10-17 22:17:17] startMusic() cue 7 segment 4 resource 316
+[2026-10-17 22:17:17] startMusic() cue 7 segment 1 resource 313
+[2026-10-17 22:17:17] startMusic() cue 7 segment 2 resource 314
+[2026-10-17 22:17:17] startMusic() cue 7 segment 3 resource 315
+[2026-10-17 22:17:17] startMusic() cue 7 segment 4 resource 316
+[2026-10-17 22:17:17] startMusic() cue 7 segment 1 resource 313
+[2026-10-17 22:17:17] startMusic() cue 7 segment 2 resource 314
+[2026-10-17 22:17:17] startMusic() cue 7 segment 3 resource 315
+[2026-10-17 22:17:17] startMusic() cue 7 segment 4 resource 316
+[2026-10-17 22:17:17] startMusic() cue 7 segment 1 resource 313
+[2026-10-17 22:17:17] playMusic() 0
+[2026-10-17 22:17:17] hideCursor()
+[2026-10-17 22:17:18] --- Log closed successfully.

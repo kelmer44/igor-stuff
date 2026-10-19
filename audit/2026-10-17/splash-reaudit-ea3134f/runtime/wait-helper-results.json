@@ -1,0 +1,59 @@
+{
+  "demo100-wait-helper": {
+    "exit": 0,
+    "timeout": false,
+    "markers": [
+      "AUDIT_CLICK_WAIT_PASS kind=0 elapsedMs=202",
+      "AUDIT_CLICK_WAIT_PASS kind=1 elapsedMs=201",
+      "AUDIT_CLICK_HELPER_COMPLETE"
+    ],
+    "natural_state_61": true,
+    "dictionary_error": false
+  },
+  "demo110-wait-helper": {
+    "exit": 0,
+    "timeout": false,
+    "markers": [
+      "AUDIT_CLICK_WAIT_PASS kind=0 elapsedMs=202",
+      "AUDIT_CLICK_WAIT_PASS kind=1 elapsedMs=201",
+      "AUDIT_CLICK_HELPER_COMPLETE"
+    ],
+    "natural_state_61": true,
+    "dictionary_error": false
+  },
+  "english-floppy-wait-helper": {
+    "exit": 0,
+    "timeout": false,
+    "markers": [
+      "AUDIT_CLICK_WAIT_PASS kind=0 elapsedMs=201",
+      "AUDIT_CLICK_WAIT_PASS kind=1 elapsedMs=202",
+      "AUDIT_CLICK_HELPER_COMPLETE"
+    ],
+    "natural_state_61": true,
+    "dictionary_error": false
+  },
+  "spanish-cd-wait-helper": {
+    "exit": 0,
+    "timeout": false,
+    "markers": [
+      "AUDIT_CLICK_WAIT_PASS kind=0 elapsedMs=203",
+      "AUDIT_CLICK_WAIT_PASS kind=1 elapsedMs=202",
+      "AUDIT_CLICK_HELPER_COMPLETE"
+    ],
+    "natural_state_61": true,
+    "dictionary_error": false
+  },
+  "spanish-floppy-wait-helper": {
+    "exit": 0,
+    "timeout": false,
+    "markers": [
+      "AUDIT_CLICK_WAIT_PASS kind=0 elapsedMs=203",
+      "AUDIT_CLICK_WAIT_PASS kind=1 elapsedMs=202",
+      "AUDIT_CLICK_WAIT_PASS kind=2 elapsedMs=203",
+      "AUDIT_CLICK_WAIT_PASS kind=3 elapsedMs=202",
+      "AUDIT_CLICK_HELPER_COMPLETE"
+    ],
+    "natural_state_61": true,
+    "dictionary_error": false
+  }
+}
